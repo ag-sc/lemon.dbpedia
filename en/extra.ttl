@@ -1,0 +1,137 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon: <http://www.monnet-project.eu/lemon#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: < http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+
+
+:lexicon a lemon:Lexicon ;
+    lemon:language "en" ;
+    lemon:entry :record,
+                :interpreter,
+                :haveInhabitants,
+                :haveMusicBy,
+                :writeTheMusicFor .
+
+
+
+## artist ## 
+
+:record a lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "record"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
+                      lexinfo:subject :arg1record ;
+                      lexinfo:directObject :arg2record ; ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/artist>;
+                lemon:subjOfProp :arg2record;
+                lemon:objOfProp  :arg1record;
+                lemon:propertyDomain [ owl:unionOf (<http://dbpedia.org/ontology/Album> <http://dbpedia.org/ontology/Song>) ] ] .
+
+:interpreter a lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm [ lemon:writtenRep "interpreter"@en ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/artist> ;
+                lemon:subjOfProp :arg1interpreter ;
+                lemon:objOfProp  :arg2interpreter ] ;
+  lemon:synBehavior [ rdf:type lexinfo:NounPPFrame ;
+                      lexinfo:copulativeArg :arg2interpreter ;
+                      lexinfo:prepositionalObject :arg1interpreter ] .
+:arg1interpreter lemon:marker :of .
+
+
+## totalPopulation ##
+
+:haveInhabitant a lemon:LexicalEntry ;
+  lemon:phraseRoot [ 
+        :root  [ lemon:leaf :have ;
+                 :nsubj [ lemon:leaf :arg1haveInhabitant ] ;
+                 :dobj  [ lemon:leaf :inhabitant ; 
+                          :num [ lemon:leaf :arg2haveInhabitant ] ] ] ] ; 
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/populationTotal> ;
+                lemon:subjOfProp :arg1haveInhabitant ;
+                lemon:objOfProp  :arg2haveInhabitant ] .
+
+:have a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "have"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:inhabitant a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "inhabitant"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+
+## musicBy ##
+
+:haveMusicBy a lemon:LexicalEntry ;
+  lemon:decomposition ( :have :music :by ) ;
+  lemon:phraseRoot [ 
+        :root  [ lemon:leaf :have ;
+                 :nsubj [ lemon:leaf :arg1haveMusicBy ] ;
+                 :dobj  [ lemon:leaf :music ; 
+                          :prep [ lemon:leaf :by ;
+                                  :pobj [ lemon:leaf :arg2haveMusicBy ] ] ] ] ] ; 
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/musicBy>;
+                lemon:subjOfProp :arg1haveMusicBy;
+                lemon:objOfProp  :arg2haveMusicBy ] .
+
+:writeTheMusicFor a lemon:LexicalEntry ;
+  lemon:decomposition ( :write :the :music :for );
+  lemon:phraseRoot [ 
+        :root  [ lemon:leaf :write ;
+                 :nsubj [ lemon:leaf :arg2writeTheMusicFor ] ;
+                 :dobj  [ lemon:leaf :music ; 
+                          :det [ lemon:leaf :the ] ] ;
+                 :prep  [ lemon:leaf :for ;
+                          :pobj [ lemon:leaf :arg1writeTheMusicFor ] ] ] ] ; 
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/musicBy> ;
+                lemon:subjOfProp :arg1writeTheMusicFor ;
+                lemon:objOfProp  :arg2writeTheMusicFor ] .
+
+:write a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "write"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:have a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "have"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:the a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "the"@en ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+:music a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "music"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:for a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "for"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+:by a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "by"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+
+
+#### Subproperties ####
+
+:root  rdfs:subPropertyOf lemon:edge .
+:nsubj rdfs:subPropertyOf lemon:edge .
+:dobj  rdfs:subPropertyOf lemon:edge .
+:pobj  rdfs:subPropertyOf lemon:edge .
+:prep  rdfs:subPropertyOf lemon:edge .
+:det   rdfs:subPropertyOf lemon:edge .
+:num   rdfs:subPropertyOf lemon:edge .
+
+
+#### Marker ####
+
+:in   lemon:canonicalForm [ lemon:writtenRep "in"@en ] .
+:on   lemon:canonicalForm [ lemon:writtenRep "on"@en ] .
+:of   lemon:canonicalForm [ lemon:writtenRep "of"@en ] .
+:to   lemon:canonicalForm [ lemon:writtenRep "to"@en ] .
+:into lemon:canonicalForm [ lemon:writtenRep "into"@en ] .
+:from lemon:canonicalForm [ lemon:writtenRep "from"@en ] .
+

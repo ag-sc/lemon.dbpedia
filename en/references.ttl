@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: < http://www.w3.org/2001/XMLSchema#> .
+
+@prefix dbpedia:  <http://dbpedia.org/ontology/> .
+@prefix resource: <http://dbpedia.org/resource/> .
+
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+
+
+## body_health ##
+
+lex:BloodVessel owl:unionOf (dbpedia:Artery dbpedia:Vein) .
+
+
+## arts_entertainment ##
+
+lex:Character owl:unionOf (dbpedia:FictionalCharacter dbpedia:ComicsCharacter) .
+lex:Festival  owl:unionOf (dbpedia:MusicFestival dbpedia:FilmFestival) .
+
+lex:Actress owl:unionOf (dbpedia:Actor lex:Female) .
+lex:VoiceActress owl:unionOf (dbpedia:VoiceActor lex:Female) .
+
+lex:Female rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:gender ;
+   owl:hasValue   resource:Female .
+
