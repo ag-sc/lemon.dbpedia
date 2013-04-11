@@ -9,12 +9,21 @@
 
 :lexicon a lemon:Lexicon ;
     lemon:language "en" ;
-    lemon:entry :record,
+    lemon:entry :people,
+                :record,
                 :interpreter,
                 :haveInhabitants,
                 :haveMusicBy,
                 :writeTheMusicFor .
 
+
+## Person ##
+
+:People a lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm [ lemon:writtenRep "people"@en ; 
+                        lexinfo:number lexinfo:plural ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Person> ] .
 
 
 ## artist ## 

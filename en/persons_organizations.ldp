@@ -1,0 +1,74 @@
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
+
+  // Classes
+
+  ClassNoun("organisation",dbpedia:Organisation),
+  ClassNoun(["non-profit"/adjective "organisation"/noun],<http://dbpedia.org/ontology/Non-ProfitOrganisation>),
+  ClassNoun("company",dbpedia:Company),
+  ClassNoun(["political"/adjective "party"/noun],dbpedia:PoliticalParty),
+  ClassNoun("party",dbpedia:PoliticalParty),
+  ClassNoun(["trade"/noun "union"/noun],dbpedia:TradeUnion),
+  ClassNoun(["labor"/noun "union"/noun],dbpedia:TradeUnion),
+  ClassNoun("newspaper",dbpedia:Newspaper),
+  ClassNoun("paper",dbpedia:Newspaper),
+  ClassNoun("journal",dbpedia:Newspaper),
+  ClassNoun("magazine",dbpedia:Magazine),
+  ClassNoun("periodical",dbpedia:Magazine),
+
+  ClassNoun("person",dbpedia:Person),
+
+  ClassNoun(["ethnic"/adjective "group"/noun],dbpedia:EthnicGroup),
+
+  ClassNoun("scientist",dbpedia:Scientist),
+  ClassNoun("researcher",dbpedia:Scientist),
+  ClassNoun("historian",lex:Historian),
+  ClassNoun("chemist",lex:Chemist),
+  ClassNoun("biologist",lex:Biologist),
+  ClassNoun("economist",lex:Economist),
+  ClassNoun("teacher",lex:Teacher),
+  ClassNoun("surfer",lex:Surfer),
+  ClassNoun("revolutionary",lex:Revolutionary),
+  ClassNoun("poet",lex:Poet),
+  ClassNoun("architect",dbpedia:Architect),
+  ClassNoun("journalist",dbpedia:Journalist),
+  ClassNoun("model",dbpedia:Model),
+  ClassNoun("celebrity",dbpedia:Celebrity),
+  ClassNoun("philosopher",dbpedia:Philosopher),
+
+  ClassNoun("Jew",lex:Jew),
+  IntersectiveAdjective("Jewish",lex:Jew),
+  ClassNoun(["African"/adjective "American"/adjective],lex:AfricanAmerican),
+  IntersectiveAdjective(["African"/adjective "American"/adjective],lex:AfricanAmerican),
+
+  ClassNoun("Protestant",lex:Protestant),
+  IntersectiveAdjective("Protestant",lex:Protestant),
+
+  ClassNoun("politician",dbpedia:Politician),
+  ClassNoun("governor",dbpedia:Governor),
+  ClassNoun("president",dbpedia:President),
+  ClassNoun(["vice"/noun "president"/noun],dbpedia:VicePresident),
+  ClassNoun("monarch",dbpedia:Monarch),
+  ClassNoun(["prime"/adjective "minister"/noun],dbpedia:PrimeMinister),
+  ClassNoun("premier",dbpedia:PrimeMinister),
+  ClassNoun("chancellor",dbpedia:Chancellor),
+  ClassNoun("mayor",dbpedia:Mayor),
+  ClassNoun("senator",dbpedia:Senator),
+  ClassNoun("ambassador",dbpedia:Ambassador),
+
+  ClassNoun("bishop",dbpedia:ChristianBishop),
+  ClassNoun("cleric",dbpedia:Cleric),
+  ClassNoun("clerk",dbpedia:Cleric),
+  ClassNoun("saint",dbpedia:Saint),
+  ClassNoun("cardinal",dbpedia:Cardinal),
+  ClassNoun("pope",dbpedia:Pope),
+  ClassNoun("priest",dbpedia:Priest),
+
+  ClassNoun("criminal",dbpedia:Criminal),
+  ClassNoun("thug",dbpedia:Criminal),
+  ClassNoun("judge",dbpedia:Judge),
+  ClassNoun("magistrate",dbpedia:Judge)
+
+)

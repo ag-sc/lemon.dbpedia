@@ -9,6 +9,59 @@
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
 
 
+## persons_organizations ##
+
+lex:Historian     owl:unionOf (dbpedia:Person lex:professionHistorian) .
+lex:Chemist       owl:unionOf (dbpedia:Person lex:professionChemist) .
+lex:Biologist     owl:unionOf (dbpedia:Person lex:professionBiologist) .
+lex:Economist     owl:unionOf (dbpedia:Person lex:professionEconomist) .
+lex:Teacher       owl:unionOf (dbpedia:Person lex:professionTeacher) .
+lex:Surfer        owl:unionOf (dbpedia:Person lex:professionSurfing) .
+lex:Revolutionary owl:unionOf (dbpedia:Person lex:professionRevolutionary) .
+lex:Poet          owl:unionOf (dbpedia:Person lex:professionPoet) .
+
+lex:professionHistorian rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Historian .
+lex:professionChemist rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Chemist .
+lex:professionBiologist rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Biologist .
+lex:professionEconomist rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Economist .
+lex:professionTeacher rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Teacher .
+lex:professionSurfing rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Surfing .
+lex:professionRevolutionary rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Revolutionary .
+lex:professionPoet rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Poet .
+
+lex:Jew             owl:unionOf (dbpedia:Person lex:ethnicityJews) .
+lex:AfricanAmerican owl:unionOf (dbpedia:Person lex:ethnicityAfricanAmerican) .
+
+lex:ethnicityJews rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:ethnicity ;
+   owl:hasValue   resource:Jews .
+lex:ethnicityAfricanAmerican rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:ethnicity ;
+   owl:hasValue   resource:AfricanAmerican .
+
+lex:Protestant owl:unionOf (dbpedia:Person lex:religionProtestantism) .
+
+lex:religionProtestantism rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:religion ;
+   owl:hasValue   resource:Protestantism .
+
+
 ## body_health ##
 
 lex:BloodVessel owl:unionOf (dbpedia:Artery dbpedia:Vein) .

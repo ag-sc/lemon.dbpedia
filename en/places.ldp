@@ -1,4 +1,5 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
@@ -114,9 +115,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
     propSubj=PossessiveAdjunct,
     propObj=CopulativeArg),
 
-//  ConsequenceVerb("open",dbpedia:dateUse,
-//    propSubj=Subject,
-//    propObj=PrepositionalObject("in"))
-
+  ConsequenceVerb("open",dbpedia:dateUse,
+     propSubj=lex:canal as Subject, 
+     propObj=lex:dateOpened as PrepositionalObject("in")),
 )
 

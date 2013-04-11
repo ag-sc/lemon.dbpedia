@@ -1,4 +1,5 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
@@ -129,9 +130,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
                propSubj=PrepositionalObject("of"),
                propObj=CopulativeArg),
 
-//  ConsequenceVerb("release",dbpedia:releaseDate,
-//               propSubj=Subject,
-//               propObj=PrepositionalObject("on")),
+  ConsequenceVerb("release",dbpedia:releaseDate,
+               propSubj=lex:pieceOfWork as Subject, 
+               propObj=lex:dateReleased as PrepositionalObject("on")),
 
   StateVerb(["come"/verb "out"/particle],dbpedia:releaseDate,
                propSubj=Subject,
@@ -151,9 +152,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
                propSubj=Subject,
                propObj=DirectObject),
 
-//  ConsequenceVerb("award",dbpedia:award,
-//               propSubj=Subject,
-//               propObj=PrepositionalObject("to"))
+  ConsequenceVerb("award",dbpedia:award,
+               propSubj=lex:person as Subject,
+               propObj=lex:prizeAwarded as DirectObject)
 
 )
 

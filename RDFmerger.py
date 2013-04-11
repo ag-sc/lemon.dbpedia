@@ -11,7 +11,8 @@ for a in argv[1:-1]:
         files.append(a)
      else: 
         for f in listdir(a):
-            files.append(a+f)
+            if not f.endswith("gitignore"):
+               files.append(a+f)
 
 graph = rdf.Graph()
 for f in files:
