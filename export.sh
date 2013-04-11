@@ -6,11 +6,11 @@ then
   exit 1
 fi
 
-for file in $1/*.scala
+for file in $1/*.ldp
 do 
     echo 'Converting patterns in '$file'...' 
     name=${file#*\/}
-    lemonpatterns $file target/tmp/${name/.scala/.rdf}
+    lemonpatterns $file target/tmp/${name/.ldp/.rdf}
 done
 
 python RDFmerger.py en/extra.ttl en/references.ttl target/tmp/ 'target/dbpedia_'$1'.rdf'
