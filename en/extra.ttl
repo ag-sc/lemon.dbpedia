@@ -50,6 +50,26 @@
                       lexinfo:prepositionalObject :arg1interpreter ] .
 :arg1interpreter lemon:marker :of .
 
+:haveInfluenceOn a lemon:LexicalEntry ;
+  lemon:decomposition ( :have :influence );
+  lemon:phraseRoot [ 
+        :root  [ lemon:leaf :have ;
+                 :nsubj [ lemon:leaf :arg1haveInfluence ] ;
+                 :dobj  [ lemon:leaf :influence ; 
+                          :prep [ lemon:leaf :on ;
+                                  :pobj [ lemon:leaf :arg2haveInfluence ] ] ] ] ] ; 
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/influenced> ;
+                lemon:subjOfProp :arg1haveInfluence ;
+                lemon:objOfProp  :arg2haveInfluence ] .
+
+:have a lemon:LexicalEntry ;
+  lemon:canonicalForm [ lemon:writtenRep "have"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:influence a lemon:LexicalEntry ;
+  lemon:canonicalForm [ lemon:writtenRep "influence"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
 
 ## totalPopulation ##
 

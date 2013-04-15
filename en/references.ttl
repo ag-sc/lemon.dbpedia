@@ -61,6 +61,7 @@ lex:religionProtestantism rdf:type owl:Restriction ;
    owl:onProperty dbpedia:religion ;
    owl:hasValue   resource:Protestantism .
 
+lex:birthCountry owl:propertyChainAxiom ( <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/ontology/country> ) .
 
 ## body_health ##
 
