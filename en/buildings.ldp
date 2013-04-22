@@ -2,7 +2,7 @@
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
-  // Classes
+  //// Classes
   
   ClassNoun("building",dbpedia:Building),
   ClassNoun(["historic"/adjective "building"/noun],dbpedia:HistoricBuilding),
@@ -32,7 +32,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun("lighthouse",dbpedia:Lighthouse),
   ClassNoun("beacon",dbpedia:Lighthouse),
 
-  // Properties
+  //// Properties
 
   RelationalNoun(["structural"/adjective "system"/noun],dbpedia:structuralSystem,
     propSubj=PrepositionalObject("of"),

@@ -3,7 +3,7 @@
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
-  // Classes
+  //// Classes
   
   ClassNoun("artist",dbpedia:Artist),
   ClassNoun("work",dbpedia:Work),
@@ -52,7 +52,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun("genre",dbpedia:MusicGenre), 
 
 
-  // Properties
+  //// Properties
 
   // writer
 

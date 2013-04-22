@@ -3,7 +3,7 @@
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
-  // Classes
+  //// Classes
 
   ClassNoun("place",dbpedia:Place),
   ClassNoun("location",dbpedia:Place),
@@ -34,7 +34,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun(["ski"/noun "region"/noun],dbpedia:SkiArea),
   ClassNoun(["wine"/noun "region"/noun],dbpedia:WineRegion),
   
-  // Properties
+  //// Properties
 
   RelationalAdjective("located",dbpedia:country,
     relationalArg=PrepositionalObject("in")),

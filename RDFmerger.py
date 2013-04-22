@@ -18,7 +18,7 @@ def run():
          files.append(a)
       else: 
          for f in listdir(a):
-             if not f.endswith("gitignore"):
+             if not f.endswith("gitignore") and not f.endswith("~"):
                 files.append(a+f)
 
   graph = rdf.Graph()

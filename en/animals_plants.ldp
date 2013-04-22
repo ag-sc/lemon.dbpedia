@@ -2,7 +2,7 @@
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
-  // Classes
+  //// Classes
 
   ClassNoun("species",dbpedia:Species) with plural "species",
   ClassNoun("animal",dbpedia:Animal),

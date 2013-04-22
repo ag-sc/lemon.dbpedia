@@ -3,7 +3,7 @@
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
-  // Classes
+  //// Classes
 
   ClassNoun("protein",dbpedia:Protein),
   ClassNoun(["chemical"/adjective "compound"/noun],dbpedia:ChemicalCompound),

@@ -3,7 +3,7 @@
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
-  // Classes
+  //// Classes
 
   ClassNoun("organisation",dbpedia:Organisation),
   ClassNoun(["non-profit"/adjective "organisation"/noun],<http://dbpedia.org/ontology/Non-ProfitOrganisation>),
@@ -72,7 +72,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun("magistrate",dbpedia:Judge), 
 
 
-  // Properties 
+  //// Properties 
 
   // birthDate, birthYear, birthPlace
 
