@@ -10,6 +10,9 @@
 :lexicon a lemon:Lexicon ;
     lemon:language "en" ;
     lemon:entry :people,
+                :athletics,
+                :Olympics,
+                :OlympicGames,
                 :record,
                 :interpreter,
                 :haveInhabitants,
@@ -19,12 +22,34 @@
 
 ## Person ##
 
-:People a lemon:LexicalEntry ;
+:people a lemon:LexicalEntry ;
   lexinfo:partOfSpeech lexinfo:noun ;
   lemon:canonicalForm [ lemon:writtenRep "people"@en ; 
                         lexinfo:number lexinfo:plural ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Person> ] .
 
+
+## Sport ##
+
+:athletics a lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm [ lemon:writtenRep "athletics"@en ; 
+                        lexinfo:number lexinfo:plural ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Sport> ] .
+
+## Olympics ##
+
+:Olympics a lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm [ lemon:writtenRep "olympics"@en ; 
+                        lexinfo:number lexinfo:plural ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Olympics> ] .
+
+:OlympicGames a lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm [ lemon:writtenRep "Olympic Games"@en ; 
+                        lexinfo:number lexinfo:plural ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Olympics> ] .
 
 ## artist ## 
 

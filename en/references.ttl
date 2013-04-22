@@ -9,6 +9,42 @@
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
 
 
+
+## body_health ##
+
+lex:BloodVessel owl:unionOf (dbpedia:Artery dbpedia:Vein) .
+
+
+## arts_entertainment ##
+
+lex:Character owl:unionOf (dbpedia:FictionalCharacter dbpedia:ComicsCharacter) .
+lex:Festival  owl:unionOf (dbpedia:MusicFestival dbpedia:FilmFestival) .
+
+lex:Actress owl:intersectionOf (dbpedia:Actor lex:Female) .
+lex:VoiceActress owl:intersectionOf (dbpedia:VoiceActor lex:Female) .
+
+lex:Female rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:gender ;
+   owl:hasValue   resource:Female .
+
+
+## sports ## 
+
+lex:FemaleAthlete owl:intersectionOf (dbpedia:Athlete lex:Female) .
+
+lex:FootballPlayer owl:unionOf (dbpedia:SoccerPlayer dbpedia:AmericanFootballPlayer dbpedia:GridironFootballPlayer) .
+lex:FootballTeam owl:unionOf (dbpedia:SoccerClub dbpedia:AmericanFootballTeam) .
+lex:FootballLeague owl:unionOf (dbpedia:SoccerLeague dbpedia:AmericanFootballLeague) .
+
+lex:Player owl:unionOf (dbpedia:SoccerPlayer dbpedia:BaseballPlayer dbpedia:IceHockeyPlayer dbpedia:BasketballPlayer dbpedia:AmericanFootballPlayer dbpedia:GridironFootballPlayer dbpedia:TennisPlayer dbpedia:GolfPlayer dbpedia:BadmintonPlayer dbpedia:RugbyPlayer dbpedia:PokerPlayer) .
+
+lex:HockeyLeague owl:unionOf (dbpedia:IceHockeyLeague dbpedia:FieldHockeyLeague dbpedia:InlineHockeyLeague) .
+
+lex:RaceDriver owl:unionOf (dbpedia:FormulaOneRacer dbpedia:NascarDriver) .
+
+lex:Racer owl:unionOf(dbpedia:Cyclist dbpedia:FormulaOneRacer dbpedia:NascarDriver) .
+
+
 ## persons_organizations ##
 
 lex:Historian     owl:unionOf (dbpedia:Person lex:professionHistorian) .
@@ -62,21 +98,4 @@ lex:religionProtestantism rdf:type owl:Restriction ;
    owl:hasValue   resource:Protestantism .
 
 lex:birthCountry owl:propertyChainAxiom ( <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/ontology/country> ) .
-
-## body_health ##
-
-lex:BloodVessel owl:unionOf (dbpedia:Artery dbpedia:Vein) .
-
-
-## arts_entertainment ##
-
-lex:Character owl:unionOf (dbpedia:FictionalCharacter dbpedia:ComicsCharacter) .
-lex:Festival  owl:unionOf (dbpedia:MusicFestival dbpedia:FilmFestival) .
-
-lex:Actress owl:unionOf (dbpedia:Actor lex:Female) .
-lex:VoiceActress owl:unionOf (dbpedia:VoiceActor lex:Female) .
-
-lex:Female rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:gender ;
-   owl:hasValue   resource:Female .
 
