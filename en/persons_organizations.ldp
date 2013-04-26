@@ -77,106 +77,98 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   // birthDate, birthYear, birthPlace
 
   RelationalNoun(["birth"/noun "date"/noun],dbpedia:birthDate,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg),  
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),  
   RelationalNoun(["date"/noun "of"/preposition "birth"/noun],dbpedia:birthDate,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg) with plural "dates of birth",
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) with plural "dates of birth",
     
   ConsequenceVerb("bear",dbpedia:birthDate,
-     propSubj=lex:child as Subject, 
-     propObj=lex:date as PrepositionalObject("on")),
+     propSubj = lex:child as Subject, 
+     propObj  = lex:date as PrepositionalObject("on")),
 
   ConsequenceVerb("bear",dbpedia:birthYear,
-     propSubj=lex:child as Subject, 
-     propObj=lex:year as PrepositionalObject("in")),
+     propSubj = lex:child as Subject, 
+     propObj  = lex:year as PrepositionalObject("in")),
   ConsequenceVerb("bear",dbpedia:birthPlace,
-     propSubj=lex:child as Subject, 
-     propObj=lex:place as PrepositionalObject("in")),
+     propSubj = lex:child as Subject, 
+     propObj  = lex:place as PrepositionalObject("in")),
   ConsequenceVerb("bear",dbpedia:birthPlace,
-     propSubj=lex:child as Subject, 
-     propObj=lex:birthCountry as PrepositionalObject("in")),
+     propSubj = lex:child as Subject, 
+     propObj  = lex:birthCountry as PrepositionalObject("in")),
 
   RelationalNoun(["birth"/noun "place"/noun],dbpedia:birthPlace,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg),  
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),  
   RelationalNoun(["place"/noun "of"/preposition "birth"/noun],dbpedia:birthPlace,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg) with plural "places of birth",
-
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) with plural "places of birth",
 
   // deathDate, deathYear, deathPlace
 
   RelationalNoun(["death"/noun "date"/noun],dbpedia:deathDate,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg),  
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),  
 
   StateVerb("die",dbpedia:deathDate,
-     propObj=PrepositionalObject("on")),
+     propObj = PrepositionalObject("on")),
   StateVerb("die",dbpedia:deathYear,
-     propObj=PrepositionalObject("in")),
+     propObj = PrepositionalObject("in")),
   StateVerb("die",dbpedia:deathPlace,
-     propObj=PrepositionalObject("in")),
+     propObj = PrepositionalObject("in")),
 
   RelationalNoun(["death"/noun "place"/noun],dbpedia:deathPlace,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
   RelationalNoun(["place"/noun "of"/preposition "death"/noun],dbpedia:deathPlace,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg) with plural "places of death",
-
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) with plural "places of death",
 
   // spouse
 
   RelationalNoun("spouse",dbpedia:spouse,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg),  
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),  
   RelationalNoun("wife",dbpedia:spouse,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
   RelationalNoun("husband",dbpedia:spouse,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
 
   StateVerb("marry",dbpedia:spouse),
 
   ConsequenceVerb("marry",dbpedia:spouse,
-     propSubj=lex:partner1 as Subject, 
-     propObj=lex:partner2 as PrepositionalObject("to")),
-
+     propSubj = lex:partner1 as Subject, 
+     propObj  = lex:partner2 as PrepositionalObject("to")),
 
   // influenced 
 
   StateVerb("influence",dbpedia:influenced),
 
-
   // board 
 
   RelationalNoun(["board"/noun "member"/noun],dbpedia:board,
-     propSubj=PrepositionalObject("at"),
-     propObj=CopulativeArg), 
-
+     propSubj = PrepositionalObject("at"),
+     propObj  = CopulativeArg), 
 
   // ethnicity 
 
   RelationalNoun("ethnicity",dbpedia:ethnicity,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg),   
-
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),   
 
   // religion
 
   RelationalNoun("religion",dbpedia:religion,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg),
-
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
 
   // runningMate 
 
   RelationalNoun(["running"/noun "mate"/noun],dbpedia:runningMate,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
-
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
 
   // university 
 
@@ -185,69 +177,63 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propObj=CopulativeArg), 
 
   StateVerb("study",dbpedia:university,
-     propObj=PrepositionalObject("at")),
-
+     propObj = PrepositionalObject("at")),
 
   // field 
 
   RelationalNoun("field",dbpedia:field,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
 
   StateVerb("work",dbpedia:field,
-     propObj=PrepositionalObject("on")),
-
+     propObj = PrepositionalObject("on")),
 
   // viceChancellor 
 
   RelationalNoun(["vice"/noun "chancellor"/noun],dbpedia:viceChancellor,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
-
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
 
   // formationDate 
 
   RelationalNoun(["formation"/noun "date"/noun],dbpedia:fromationDate,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
 
   ConsequenceVerb("form",dbpedia:formationDate,
-     propSubj=lex:organization as Subject, 
-     propObj=lex:date as PrepositionalObject("on")),
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("on")),
   ConsequenceVerb("found",dbpedia:formationDate,
-     propSubj=lex:organization as Subject, 
-     propObj=lex:date as PrepositionalObject("on")),
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("on")),
   ConsequenceVerb("establish",dbpedia:formationDate,
-     propSubj=lex:organization as Subject, 
-     propObj=lex:date as PrepositionalObject("on")),
-
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("on")),
 
   // profession, occupation 
 
   RelationalNoun("profession",dbpedia:profession,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
 
   RelationalNoun("occupation",dbpedia:occupation,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
 
   StateVerb("work",dbpedia:profession,
-     propObj=PrepositionalObject("as")),
+     propObj = PrepositionalObject("as")),
   StateVerb("work",dbpedia:occupation,
-     propObj=PrepositionalObject("as")),
-
+     propObj = PrepositionalObject("as")),
 
   // rector 
 
   RelationalNoun("rector",dbpedia:rector,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
 
   RelationalNoun("principal",dbpedia:rector,
-     propSubj=PossessiveAdjunct restrictedTo dbpedia:School,
-     propObj=CopulativeArg), 
-
+     propSubj = PossessiveAdjunct restrictedTo dbpedia:School,
+     propObj  = CopulativeArg), 
 
   // canonizedPlace 
 
@@ -255,39 +241,65 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propSubj=lex:person as Subject, 
      propObj=lex:place as PrepositionalObject("in")),
 
-
   // patron 
 
   RelationalNoun("patron",dbpedia:patron,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
   RelationalNoun(["patron"/noun "saint"/noun],dbpedia:patron,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
-
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
 
   // hometown, nationality 
 
   RelationalNoun(["home"/noun "town"/noun],dbpedia:homeTown,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
 
   RelationalNoun(["home"/noun "country"/noun],dbpedia:nationality,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg restrictedTo dbpedia:Country ), 
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo dbpedia:Country ), 
 
   StateVerb("come",dbpedia:homeTown,
-     propObj=PrepositionalObject("from")),
+     propObj = PrepositionalObject("from")),
   StateVerb("come",dbpedia:nationality,
-     propObj=PrepositionalObject("from") restrictedTo dbpedia:Place),
+     propObj = PrepositionalObject("from") restrictedTo dbpedia:Place),
 
+  // birthName, formerName
+
+  RelationalNoun(["birth"/noun "name"/noun],dbpedia:birthName,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  RelationalNoun(["former"/noun "name"/noun],dbpedia:formerName,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
 
   // weight 
 
   RelationalNoun("weight",dbpedia:weight,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg), 
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
 
-  StateVerb("weigh",dbpedia:weight)
+  StateVerb("weigh",dbpedia:weight),
+
+  // manufacturer 
+
+  RelationalNoun("manufacturer",dbpedia:manufacturer,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  StateVerb("manufacture",dbpedia:manufacturer,
+     propSubj = DirectObject,
+     propObj  = Subject), 
+  StateVerb("produce",dbpedia:manufacturer,
+     propSubj = DirectObject,
+     propObj  = Subject), 
+
+  // mascot 
+
+  RelationalNoun("mascot",dbpedia:mascot,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) 
 
 )

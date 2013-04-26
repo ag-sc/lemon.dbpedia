@@ -10,6 +10,9 @@
 :lexicon a lemon:Lexicon ;
     lemon:language "en" ;
     lemon:entry :people,
+                :high,
+                :long,
+                :tall,
                 :athletics,
                 :Olympics,
                 :OlympicGames,
@@ -29,6 +32,29 @@
   lemon:canonicalForm [ lemon:writtenRep "people"@en ; 
                         lexinfo:number lexinfo:plural ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Person> ] .
+
+
+## height, length ## 
+
+:high a lemon:lexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "high"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectiveScaleFrame ;
+                      lexinfo:copulativeSubject   :arg1high ;
+                      lexinfo:adverbialComplement :arg2high ];
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/height> ;
+                lemon:subjOfProp :arg1high ;
+                lemon:objOfProp  :arg2high ] .
+
+:long a lemon:lexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "long"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectiveScaleFrame ;
+                      lexinfo:copulativeSubject   :arg1long ;
+                      lexinfo:adverbialComplement :arg2long ];
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/length> ;
+                lemon:subjOfProp :arg1long ;
+                lemon:objOfProp  :arg2long ] .
 
 
 ## Sport ##

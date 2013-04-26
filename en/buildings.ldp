@@ -35,12 +35,18 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   //// Properties
 
   RelationalNoun(["structural"/adjective "system"/noun],dbpedia:structuralSystem,
-    propSubj=PrepositionalObject("of"),
-    propObj=CopulativeArg),
+    propSubj = PrepositionalObject("of"),
+    propObj  = CopulativeArg),
 
   RelationalAdjective("made",dbpedia:structuralSystem,
-    relationalArg=PrepositionalObject("of"))
+    relationalArg = PrepositionalObject("of")),
 
+  RelationalNoun("address",dbpedia:address,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  RelationalAdjective("located",dbpedia:address,
+    relationalArg = PrepositionalObject("in")),
 )
 
 

@@ -91,47 +91,47 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   // team
 
   RelationalNoun("team",dbpedia:team,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg),
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
 
   StateVerb("play",dbpedia:team,
-     propSubj=Subject restrictedTo lex:Player,
-     propObj=PrepositionalObject("for")),
+     propSubj = Subject restrictedTo lex:Player,
+     propObj  = PrepositionalObject("for")),
   
   RelationalNoun("player",dbpedia:team,
-     propSubj=CopulativeArg restrictedTo lex:Player,
-     propObj=PossessiveAdjunct),
+     propSubj = CopulativeArg restrictedTo lex:Player,
+     propObj  = PossessiveAdjunct),
 
   StateVerb("race",dbpedia:team,
-     propSubj=Subject restrictedTo lex:Racer,
-     propObj=PrepositionalObject("for")),
+     propSubj = Subject restrictedTo lex:Racer,
+     propObj  = PrepositionalObject("for")),
 
   RelationalNoun("manager",dbpedia:team,
-     propSubj=CopulativeArg restrictedTo dbpedia:SportsManager,
-     propObj=PossessiveAdjunct),
+     propSubj = CopulativeArg restrictedTo dbpedia:SportsManager,
+     propObj  = PossessiveAdjunct),
 
   StateVerb("manage",dbpedia:team,
-     propSubj=Subject restrictedTo dbpedia:SportsManager,
-     propObj=DirectObject),
+     propSubj = Subject restrictedTo dbpedia:SportsManager,
+     propObj  = DirectObject),
 
   // homeArena 
 
   RelationalNoun(["home"/noun "arena"/noun],dbpedia:homeArena,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg),
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
 
   // capacity 
 
   RelationalNoun("capacity",dbpedia:capacity,
-     propSubj=PossessiveAdjunct,
-     propObj=CopulativeArg),
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
   
   StateVerb("accommodate",dbpedia:capacity),
 
   // draftYear 
 
   ConsequenceVerb("draft",dbpedia:draftYear,
-     propSubj=lex:person as Subject,
-     propObj=lex:year as DirectObject)
+     propSubj = lex:person as Subject,
+     propObj  = lex:year as DirectObject)
 
 )

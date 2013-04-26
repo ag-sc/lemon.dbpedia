@@ -57,104 +57,109 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   // writer
 
   RelationalNoun("writer",dbpedia:writer,
-               propSubj=PrepositionalObject("of"),
-               propObj=CopulativeArg),
+        propSubj = PrepositionalObject("of"),
+        propObj  = CopulativeArg),
 
   RelationalNoun("author",dbpedia:writer,
-               propSubj=PrepositionalObject("of"),
-               propObj=Subject),
+        propSubj = PrepositionalObject("of"),
+        propObj  = Subject),
 
   StateVerb("write",dbpedia:writer,
-               propSubj=DirectObject,
-               propObj=Subject),
+        propSubj = DirectObject,
+        propObj  = Subject),
 
   // publisher
 
   RelationalNoun("publisher",dbpedia:publisher,
-               propSubj=PrepositionalObject("of"),
-               propObj=CopulativeArg),
+        propSubj = PrepositionalObject("of"),
+        propObj  = CopulativeArg),
 
   StateVerb("publish",dbpedia:publisher,
-               propSubj=DirectObject,
-               propObj=Subject),
+        propSubj = DirectObject,
+        propObj  = Subject),
 
   // starring
 
   StateVerb("star",dbpedia:starring,
-               propSubj=Subject,
-               propObj=DirectObject),
+        propSubj = Subject,
+        propObj  = DirectObject),
 
   StateVerb("feature",dbpedia:starring,
-               propSubj=Subject,
-               propObj=DirectObject),
+        propSubj = Subject,
+        propObj  = DirectObject),
 
   StateVerb("play",dbpedia:starring,
-               propSubj=PrepositionalObject("in"),
-               propObj=Subject),
+        propSubj = PrepositionalObject("in"),
+        propObj  = Subject),
 
   // instrument 
 
   RelationalNoun("instrument",dbpedia:instrument,
-               propSubj=PrepositionalObject("of"),
-               propObj=CopulativeArg),
+        propSubj = PrepositionalObject("of"),
+        propObj  = CopulativeArg),
 
   StateVerb("play",dbpedia:instrument,
-               propSubj=DirectObject,
-               propObj=Subject),
+        propSubj = DirectObject,
+        propObj  = Subject),
 
   // musicFusionGenre 
 
   StateVerb("fuse",dbpedia:musicFusionGenre,
-               propSubj=PrepositionalObject("into"),
-               propObj=Subject),
+        propSubj = PrepositionalObject("into"),
+        propObj  = Subject),
 
   // openingFilm 
 
   RelationalNoun(["opening"/adjective "film"/noun],dbpedia:openingFilm,
-               propSubj=PrepositionalObject("at"),
-               propObj=CopulativeArg),
+        propSubj = PrepositionalObject("at"),
+        propObj = CopulativeArg),
 
   // requirement 
 
   StateVerb("require",dbpedia:requirement,
-               propSubj=DirectObject,
-               propObj=Subject),
+        propSubj = DirectObject,
+        propObj  = Subject),
 
   RelationalNoun("requirement",dbpedia:requirement,
-               propSubj=PrepositionalObject("of"),
-               propObj=CopulativeArg),
+        propSubj = PrepositionalObject("of"),
+        propObj = CopulativeArg),
 
   // releaseDate 
 
   RelationalNoun(["release"/noun "date"/noun],dbpedia:releaseDate,
-               propSubj=PrepositionalObject("of"),
-               propObj=CopulativeArg),
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
 
   ConsequenceVerb("release",dbpedia:releaseDate,
-               propSubj=lex:pieceOfWork as Subject, 
-               propObj=lex:dateReleased as PrepositionalObject("on")),
+        propSubj = lex:pieceOfWork as Subject, 
+        propObj = lex:date as PrepositionalObject("on")),
 
   StateVerb(["come"/verb "out"/particle],dbpedia:releaseDate,
-               propSubj=Subject,
-               propObj=PrepositionalObject("on")),
+        propObj  = PrepositionalObject("on")),
+
+  // recordDate 
+
+  RelationalNoun(["record"/noun "date"/noun],dbpedia:recordDate,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  ConsequenceVerb("record",dbpedia:recordDate,
+        propSubj = lex:musicalWork as Subject, 
+        propObj  = lex:date as PrepositionalObject("on")),
 
   // award 
 
   RelationalNoun("award",dbpedia:award,
-               propSubj=PossessiveAdjunct,
-               propObj=CopulativeArg),
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
 
-  StateVerb("win",dbpedia:award,
-               propSubj=Subject,
-               propObj=DirectObject),
+  StateVerb("win",dbpedia:award),
 
-  StateVerb("receive",dbpedia:award,
-               propSubj=Subject,
-               propObj=DirectObject),
+  StateVerb("receive",dbpedia:award),
 
   ConsequenceVerb("award",dbpedia:award,
-               propSubj=lex:person as Subject,
-               propObj=lex:prizeAwarded as DirectObject)
+        propSubj = lex:person as Subject,
+        propObj  = lex:prizeAwarded as DirectObject)
 
 )
 

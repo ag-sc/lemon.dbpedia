@@ -27,28 +27,28 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   //// Properties 
 
   RelationalAdjective("similar",dbpedia:similar,
-       relationalArg=PrepositionalObject("to")), 
+       relationalArg = PrepositionalObject("to")), 
 
   RelationalAdjective("like",dbpedia:similar,
-       relationalArg=DirectObject), 
+       relationalArg = DirectObject), 
 
   RelationalNoun(["sublimation"/noun "point"/noun],dbpedia:sublimationPoint,
-       propSubj=PossessiveAdjunct,
-       propObj=CopulativeArg),
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
 
   StateVerb("sublime",dbpedia:sublimationPoint,
-       propObj=PrepositionalObject("at")),
+       propObj = PrepositionalObject("at")),
 
   RelationalNoun(["melting"/noun "point"/noun],dbpedia:meltingPoint,
-       propSubj=PossessiveAdjunct,
-       propObj=CopulativeArg),
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
 
   StateVerb("melt",dbpedia:meltingPoint,
-       propObj=PrepositionalObject("at")),
+       propObj = PrepositionalObject("at")),
 
   StateVerb("fight",dbpedia:battle,
-       propObj=PrepositionalObject("in")), 
+       propObj = PrepositionalObject("in")), 
   StateVerb("serve",dbpedia:battle,
-       propObj=PrepositionalObject("in"))
+       propObj = PrepositionalObject("in"))
 
 )

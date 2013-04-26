@@ -18,7 +18,6 @@ numberOfVisitors
 debutTeam
 visitorsTotal
 minorityLeader
-recordDate
 oversight
 CanadianFootballPlayer
 numberOfRestaurants
@@ -34,7 +33,6 @@ averageSpeed
 landingSite
 vehicleCode
 firstFlight
-formerName
 winsAtOtherTournaments
 transmission
 notes
@@ -81,11 +79,11 @@ introductionDate
 internationally
 component
 nutsRegion
-birthName
+grammyAward
 winsAtChallenges
 functionStartDate
 architecturalStyle
-address
+fastestLap
 spacewalkEnd
 ratio
 combatant
@@ -102,7 +100,6 @@ CanadianFootballTeam
 personFunction
 binomial
 MemberOfParliament
-fastestLap
 VideogamesLeague
 trainer
 diameter
@@ -132,7 +129,6 @@ noteOnRestingPlace
 leaderTitle
 vehicle
 battleHonours
-manufacturer
 type
 campusSize
 ethnicGroup
@@ -148,7 +144,6 @@ oldcode
 OfficeHolder
 distanceLaps
 FloweringPlant
-mascot
 firstWin
 slogan
 ceeb
@@ -177,7 +172,7 @@ cargoGas
 locationIdentifier
 numberOfOrbits
 extinctionYear
-length
+department
 teamName
 militaryUnit
 serviceStartYear
@@ -194,7 +189,7 @@ latestReleaseDate
 accessDate
 currentRecord
 orbits
-collection
+fansgroup
 membership
 fc
 nssdcId
@@ -221,7 +216,7 @@ numberOfCompetitors
 Congressman
 failedLaunches
 summerTemperature
-startDate
+connotation
 lunarSampleMass
 lunarModule
 demonym
@@ -234,7 +229,6 @@ committee
 shipBeam
 numberOfEntrances
 mayor
-developer
 dateConstruction
 barPassRate
 effectiveRadiatedPower
@@ -244,7 +238,6 @@ goyaAward
 YearInSpaceflight
 unknownOutcomes
 undraftedYear
-fansgroup
 derivative
 EurovisionSongContestEntry
 powerOutput
@@ -335,7 +328,7 @@ shipDraft
 throws
 orbitalFlights
 purpose
-connotation
+startDate
 noteOnPlaceOfBurial
 isbn
 revenue
@@ -406,7 +399,6 @@ aircraftTrainer
 welshName
 acceleration
 managementRegion
-grammyAward
 strength
 fcRuns
 draftPick
@@ -557,8 +549,8 @@ daylightSavingTimeZone
 productionStartDate
 federalState
 municipalityCode
+collection
 populationAsOf
-department
 genus
 pdb
 ComicsCreator
@@ -571,7 +563,6 @@ academyAward
 startYearOfInsertion
 cmpEvaDuration
 lastWin
-height
 winsAtMajors
 firstAscentYear
 numberOfSuites

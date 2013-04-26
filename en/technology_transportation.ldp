@@ -33,12 +33,24 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   //// Properties 
 
+  // developer
+
+  RelationalNoun("developer",dbpedia:developer,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  StateVerb("develop",dbpedia:developer,
+       propSubj = DirectObject,
+       propObj  = Subject), 
+
+  // programmingLanguage
+
   RelationalNoun(["programming"/noun "language"/noun],dbpedia:programmingLanguage,
-       propSubj=PossessiveAdjunct,
-       propObj=CopulativeArg),
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
 
   ConsequenceVerb("write",dbpedia:programmingLanguage,
-       propSubj=lex:software as Subject, 
-       propObj=lex:language as PrepositionalObject("in"))
+       propSubj = lex:software as Subject, 
+       propObj  = lex:language as PrepositionalObject("in"))
 
 )

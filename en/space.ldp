@@ -22,21 +22,21 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   //// Properties 
 
   RelationalNoun(["mean"/adjective "temperature"/noun],dbpedia:meanTemperature,
-       propSubj=PrepositionalObject("on"),
-       propObj=CopulativeArg),
+       propSubj = PrepositionalObject("on"),
+       propObj  = CopulativeArg),
 
   StateVerb(["launch"/verb "off"/particle],dbpedia:associatedRocket,
-       propSubj=PrepositionalObject("from"),
-       propObj=Subject),
+       propSubj = PrepositionalObject("from"),
+       propObj  = Subject),
   StateVerb(["take"/verb "off"/particle],dbpedia:associatedRocket,
-       propSubj=PrepositionalObject("from"),
-       propObj=Subject),
+       propSubj = PrepositionalObject("from"),
+       propObj  = Subject),
   StateVerb(["blast"/verb "off"/particle],dbpedia:associatedRocket,
-       propSubj=PrepositionalObject("from"),
-       propObj=Subject),
+       propSubj = PrepositionalObject("from"),
+       propObj  = Subject),
 
   ConsequenceVerb("launch",dbpedia:launchDate,
-       propSubj=lex:rocket as CopulativeSubject, 
-       propObj=lex:date as PrepositionalObject("on"))
+       propSubj = lex:rocket as CopulativeSubject, 
+       propObj  = lex:date as PrepositionalObject("on"))
 
 )
