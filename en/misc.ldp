@@ -1,0 +1,54 @@
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
+
+  //// Classes
+
+  ClassNoun("event",dbpedia:Event), 
+  ClassNoun("activity",dbpedia:Activity),
+  ClassNoun("language",dbpedia:Language),
+  ClassNoun("color",dbpedia:Colour),
+  ClassNoun("website",dbpedia:Website),
+  ClassNoun("homepage",dbpedia:Webiste),
+  ClassNoun(["web"/noun "page"/noun],dbpedia:Website),
+  ClassNoun(["legal"/adjective "case"/noun],dbpedia:LegalCase),
+  ClassNoun("case",dbpedia:LegalCase),
+  ClassNoun(["court"/noun "case"/noun],dbpedia:LegalCase),
+  ClassNoun(["law"/noun "case"/noun],dbpedia:LegalCase),
+  ClassNoun(["legal"/adjective "matter"/noun],dbpedia:LegalCase),
+  ClassNoun("game",dbpedia:Game),
+  ClassNoun("beverage",dbpedia:Beverage),
+  ClassNoun("drink",dbpedia:Beverage),
+  ClassNoun(["military"/adjective "conflict"/noun],dbpedia:MilitaryConflict),
+  ClassNoun("war",dbpedia:MilitaryConflict),
+  ClassNoun("battle",dbpedia:MilitaryConflict),
+  ClassNoun("weapon",dbpedia:Weapon),
+
+  //// Properties 
+
+  RelationalAdjective("similar",dbpedia:similar,
+       relationalArg=PrepositionalObject("to")), 
+
+  RelationalAdjective("like",dbpedia:similar,
+       relationalArg=DirectObject), 
+
+  RelationalNoun(["sublimation"/noun "point"/noun],dbpedia:sublimationPoint,
+       propSubj=PossessiveAdjunct,
+       propObj=CopulativeArg),
+
+  StateVerb("sublime",dbpedia:sublimationPoint,
+       propObj=PrepositionalObject("at")),
+
+  RelationalNoun(["melting"/noun "point"/noun],dbpedia:meltingPoint,
+       propSubj=PossessiveAdjunct,
+       propObj=CopulativeArg),
+
+  StateVerb("melt",dbpedia:meltingPoint,
+       propObj=PrepositionalObject("at")),
+
+  StateVerb("fight",dbpedia:battle,
+       propObj=PrepositionalObject("in")), 
+  StateVerb("serve",dbpedia:battle,
+       propObj=PrepositionalObject("in"))
+
+)

@@ -1,0 +1,42 @@
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
+
+  //// Classes
+
+  ClassNoun("planet",dbpedia:Planet),
+  ClassNoun(["lunar"/adjective "crater"/noun],dbpedia:LunarCrater),
+  ClassNoun(["moon"/noun "crater"/noun],dbpedia:LunarCrater),
+  ClassNoun("rocket",dbpedia:Rocket),
+  ClassNoun(["launch"/noun "pad"/noun],dbpedia:LaunchPad),
+  ClassNoun("spacecraft",dbpedia:Spacecraft),
+  ClassNoun("spaceship",dbpedia:Spacecraft),
+  ClassNoun(["space"/noun "station"/noun],dbpedia:SpaceStation),
+  ClassNoun(["space"/noun "shuttle"/noun],dbpedia:SpaceShuttle),
+  ClassNoun(["space"/noun "mission"/noun],dbpedia:SpaceMission),
+  ClassNoun("astronaut",dbpedia:Astronaut),
+  ClassNoun("cosmonaut",lex:Cosmonaut),
+  ClassNoun("taikonaut",lex:Taikonaut),
+
+  //// Properties 
+
+  RelationalNoun(["mean"/adjective "temperature"/noun],dbpedia:meanTemperature,
+       propSubj=PrepositionalObject("on"),
+       propObj=CopulativeArg),
+
+  StateVerb(["launch"/verb "off"/particle],dbpedia:associatedRocket,
+       propSubj=PrepositionalObject("from"),
+       propObj=Subject),
+  StateVerb(["take"/verb "off"/particle],dbpedia:associatedRocket,
+       propSubj=PrepositionalObject("from"),
+       propObj=Subject),
+  StateVerb(["blast"/verb "off"/particle],dbpedia:associatedRocket,
+       propSubj=PrepositionalObject("from"),
+       propObj=Subject),
+
+  ConsequenceVerb("launch",dbpedia:launchDate,
+       propSubj=lex:rocket as CopulativeSubject, 
+       propObj=lex:date as PrepositionalObject("on"))
+
+)

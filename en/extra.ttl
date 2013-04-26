@@ -15,6 +15,8 @@
                 :OlympicGames,
                 :record,
                 :interpreter,
+                :discover,
+                :discovery,
                 :haveInhabitants,
                 :haveMusicBy,
                 :writeTheMusicFor .
@@ -96,6 +98,45 @@
   lexinfo:partOfSpeech lexinfo:noun .
 
 
+## discover, discoverer ##
+
+:discover a lemon:LexicalEntry ;
+  lemon:canonicalForm [ lemon:writtenRep "discover"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
+		      lexinfo:subject      :arg1discover ;
+                      lexinfo:directObject :arg2discover ;
+                      lexinfo:prepositionalAdjunct :arg3discover ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/discoverer>;
+                                 lemon:subjOfProp :arg2discover;
+                                 lemon:objOfProp  :arg1discover ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/discovered>;
+                                 lemon:subjOfProp :arg2discover;
+                                 lemon:objOfProp  :arg3discover ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg3discover lemon:marker :on .
+:arg3discover lemon:optional "true"^^xsd:boolean .
+
+:discovery a lemon:LexicalEntry ;
+  lemon:canonicalForm [ lemon:writtenRep "discovery"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:NounPPFrame ;
+		      lexinfo:subject :discovery ;
+                      lexinfo:prepositionalObject  :arg1discovery ;
+                      lexinfo:prepositionalAdjunct :arg2discovery ;
+                      lexinfo:prepositionalAdjunct :arg3discovery ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/discoverer>;
+                                 lemon:subjOfProp :arg1discover;
+                                 lemon:objOfProp  :arg2discover ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/discovered>;
+                                 lemon:subjOfProp :arg1discover;
+                                 lemon:objOfProp  :arg3discover ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg1discovery lemon:marker :of .
+:arg2discovery lemon:marker :by .
+:arg2discovery lemon:optional "true"^^xsd:boolean .
+:arg3discovery lemon:marker :on .
+:arg3discovery lemon:optional "true"^^xsd:boolean .
+
+
 ## totalPopulation ##
 
 :haveInhabitant a lemon:LexicalEntry ;
@@ -167,6 +208,7 @@
 :by a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "by"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
+
 
 
 #### Subproperties ####

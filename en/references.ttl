@@ -15,6 +15,24 @@
 lex:BloodVessel owl:unionOf (dbpedia:Artery dbpedia:Vein) .
 
 
+## space ##
+
+lex:Cosmonaut owl:unionOf (dbpedia:Astronaut lex:Russian lex:Soviet) .
+lex:Taikonaut owl:unionOf (dbpedia:Astronaut lex:Chinese) .
+
+lex:Russian rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue dbpedia:Russia .
+
+lex:Soviet rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue dbpedia:Soviet_people .
+
+lex:Chinese rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue dbpedia:China .
+
+
 ## arts_entertainment ##
 
 lex:Character owl:unionOf (dbpedia:FictionalCharacter dbpedia:ComicsCharacter) .
