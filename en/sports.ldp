@@ -132,6 +132,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   ConsequenceVerb("draft",dbpedia:draftYear,
      propSubj = lex:person as Subject,
-     propObj  = lex:year as DirectObject)
+     propObj  = lex:year as DirectObject),
+
+  // plays 
+
+  IntersectiveDataPropertyAdjective("right-handed",dbpedia:plays,"Right-handed"),
+  IntersectiveDataPropertyAdjective("left-handed",dbpedia:plays,"Left-handed"),
+  IntersectiveDataPropertyAdjective("ambidextrous",dbpedia:plays,"Ambidextrous")
+  // TODO: there are a lot of different literals used ("left-handed", "Left Handed", "Left-handed (two-handed backhand)", etc.)
 
 )

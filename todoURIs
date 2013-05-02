@@ -60,7 +60,6 @@ clubsRecordGoalscorer
 secondTeam
 crownDependency
 numberOfParticipatingNations
-plays
 lunarOrbitTime
 originalStartPoint
 airportUsing
@@ -72,7 +71,6 @@ officialOpenedBy
 poles
 maximumDischarge
 supplies
-staff
 frazioni
 specialist
 introductionDate
@@ -858,7 +856,6 @@ fuelType
 dissolutionYear
 film
 regime
-boilingPoint
 modelEndYear
 numberOfParticipatingAthletes
 dissolved
@@ -870,16 +867,13 @@ imdbId
 floorArea
 endYearOfSales
 iucnCategory
-pseudonym
 distanceToDouglas
 beatifiedDate
-numberOfEmployees
 gross
 personName
 symbol
 whaDraftYear
 surfaceFormOccurrenceOffset
-foundationPlace
 supplementalDraftYear
 meaning
 lowestPlace

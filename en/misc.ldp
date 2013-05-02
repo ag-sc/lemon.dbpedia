@@ -24,6 +24,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun("battle",dbpedia:MilitaryConflict),
   ClassNoun("weapon",dbpedia:Weapon),
 
+
   //// Properties 
 
   RelationalAdjective("similar",dbpedia:similar,
@@ -45,6 +46,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   StateVerb("melt",dbpedia:meltingPoint,
        propObj = PrepositionalObject("at")),
+
+  RelationalNoun(["boiling"/noun "point"/noun],dbpedia:boilingPoint,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  StateVerb("boil",dbpedia:boilingPoint,
+       propObj = PrepositionalObject("at")),
+
 
   StateVerb("fight",dbpedia:battle,
        propObj = PrepositionalObject("in")), 

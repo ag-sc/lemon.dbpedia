@@ -20,7 +20,8 @@
                 :interpreter,
                 :discover,
                 :discovery,
-                :haveInhabitants,
+                :haveInhabitant,
+                :haveEmployee,
                 :haveMusicBy,
                 :writeTheMusicFor .
 
@@ -163,17 +164,19 @@
 :arg3discovery lemon:optional "true"^^xsd:boolean .
 
 
-## totalPopulation ##
+## totalPopulation, staff, numberOfEmployees ##
 
 :haveInhabitant a lemon:LexicalEntry ;
-  lemon:phraseRoot [ 
-        :root  [ lemon:leaf :have ;
-                 :nsubj [ lemon:leaf :arg1haveInhabitant ] ;
-                 :dobj  [ lemon:leaf :inhabitant ; 
-                          :num [ lemon:leaf :arg2haveInhabitant ] ] ] ] ; 
+  lemon:decomposition ( :have :numInhabitants :inhabitant ) ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/populationTotal> ;
-                lemon:subjOfProp :arg1haveInhabitant ;
-                lemon:objOfProp  :arg2haveInhabitant ] .
+                lemon:objOfProp  :numInhabitants ] .
+
+:haveEmployee a lemon:LexicalEntry ;
+  lemon:decomposition ( :have :numEmployees :employee ) ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfEmployees> ;
+                lemon:objOfProp  :numEmployees ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/staff> ;
+                lemon:objOfProp  :numEmployees ] .
 
 :have a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "have"@en ] ;
@@ -183,32 +186,21 @@
   lemon:canonicalForm [ lemon:writtenRep "inhabitant"@en ] ;
   lexinfo:partOfSpeech lexinfo:noun .
 
+:employee a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "employee"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
 
 ## musicBy ##
 
 :haveMusicBy a lemon:LexicalEntry ;
-  lemon:decomposition ( :have :music :by ) ;
-  lemon:phraseRoot [ 
-        :root  [ lemon:leaf :have ;
-                 :nsubj [ lemon:leaf :arg1haveMusicBy ] ;
-                 :dobj  [ lemon:leaf :music ; 
-                          :prep [ lemon:leaf :by ;
-                                  :pobj [ lemon:leaf :arg2haveMusicBy ] ] ] ] ] ; 
+  lemon:decomposition ( :have :music :by :arg2haveMusicBy ) ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/musicBy>;
-                lemon:subjOfProp :arg1haveMusicBy;
                 lemon:objOfProp  :arg2haveMusicBy ] .
 
 :writeTheMusicFor a lemon:LexicalEntry ;
-  lemon:decomposition ( :write :the :music :for );
-  lemon:phraseRoot [ 
-        :root  [ lemon:leaf :write ;
-                 :nsubj [ lemon:leaf :arg2writeTheMusicFor ] ;
-                 :dobj  [ lemon:leaf :music ; 
-                          :det [ lemon:leaf :the ] ] ;
-                 :prep  [ lemon:leaf :for ;
-                          :pobj [ lemon:leaf :arg1writeTheMusicFor ] ] ] ] ; 
+  lemon:decomposition ( :write :the :music :for :arg2writeTheMusicFor );
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/musicBy> ;
-                lemon:subjOfProp :arg1writeTheMusicFor ;
                 lemon:objOfProp  :arg2writeTheMusicFor ] .
 
 :write a lemon:Word ;
@@ -234,18 +226,6 @@
 :by a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "by"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-
-
-
-#### Subproperties ####
-
-:root  rdfs:subPropertyOf lemon:edge .
-:nsubj rdfs:subPropertyOf lemon:edge .
-:dobj  rdfs:subPropertyOf lemon:edge .
-:pobj  rdfs:subPropertyOf lemon:edge .
-:prep  rdfs:subPropertyOf lemon:edge .
-:det   rdfs:subPropertyOf lemon:edge .
-:num   rdfs:subPropertyOf lemon:edge .
 
 
 #### Marker ####

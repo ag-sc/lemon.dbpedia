@@ -124,6 +124,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg) with plural "places of death",
 
+
   // spouse
 
   RelationalNoun("spouse",dbpedia:spouse,
@@ -142,33 +143,22 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propSubj = lex:partner1 as Subject, 
      propObj  = lex:partner2 as PrepositionalObject("to")),
 
+
   // influenced 
 
   StateVerb("influence",dbpedia:influenced),
 
-  // board 
 
-  RelationalNoun(["board"/noun "member"/noun],dbpedia:board,
-     propSubj = PrepositionalObject("at"),
-     propObj  = CopulativeArg), 
-
-  // ethnicity 
+  // ethnicity, religion 
 
   RelationalNoun("ethnicity",dbpedia:ethnicity,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),   
 
-  // religion
-
   RelationalNoun("religion",dbpedia:religion,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
 
-  // runningMate 
-
-  RelationalNoun(["running"/noun "mate"/noun],dbpedia:runningMate,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg), 
 
   // university 
 
@@ -188,27 +178,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   StateVerb("work",dbpedia:field,
      propObj = PrepositionalObject("on")),
 
-  // viceChancellor 
-
-  RelationalNoun(["vice"/noun "chancellor"/noun],dbpedia:viceChancellor,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg), 
-
-  // formationDate 
-
-  RelationalNoun(["formation"/noun "date"/noun],dbpedia:fromationDate,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg), 
-
-  ConsequenceVerb("form",dbpedia:formationDate,
-     propSubj = lex:organization as Subject, 
-     propObj  = lex:date as PrepositionalObject("on")),
-  ConsequenceVerb("found",dbpedia:formationDate,
-     propSubj = lex:organization as Subject, 
-     propObj  = lex:date as PrepositionalObject("on")),
-  ConsequenceVerb("establish",dbpedia:formationDate,
-     propSubj = lex:organization as Subject, 
-     propObj  = lex:date as PrepositionalObject("on")),
 
   // profession, occupation 
 
@@ -225,7 +194,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   StateVerb("work",dbpedia:occupation,
      propObj = PrepositionalObject("as")),
 
-  // rector 
+
+  // rector, viceChancellor, runningMate
 
   RelationalNoun("rector",dbpedia:rector,
      propSubj = PossessiveAdjunct,
@@ -234,6 +204,21 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   RelationalNoun("principal",dbpedia:rector,
      propSubj = PossessiveAdjunct restrictedTo dbpedia:School,
      propObj  = CopulativeArg), 
+
+  RelationalNoun(["vice"/noun "chancellor"/noun],dbpedia:viceChancellor,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  RelationalNoun(["running"/noun "mate"/noun],dbpedia:runningMate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  // board 
+
+  RelationalNoun(["board"/noun "member"/noun],dbpedia:board,
+     propSubj = PrepositionalObject("at"),
+     propObj  = CopulativeArg), 
+
 
   // canonizedPlace 
 
@@ -250,6 +235,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg), 
 
+
   // hometown, nationality 
 
   RelationalNoun(["home"/noun "town"/noun],dbpedia:homeTown,
@@ -265,7 +251,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   StateVerb("come",dbpedia:nationality,
      propObj = PrepositionalObject("from") restrictedTo dbpedia:Place),
 
-  // birthName, formerName
+
+  // birthName, formerName, pseudonym
 
   RelationalNoun(["birth"/noun "name"/noun],dbpedia:birthName,
      propSubj = PossessiveAdjunct,
@@ -275,6 +262,11 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg), 
 
+  RelationalNoun("pseudonym",dbpedia:pseudonym,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
+
   // weight 
 
   RelationalNoun("weight",dbpedia:weight,
@@ -282,6 +274,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propObj  = CopulativeArg), 
 
   StateVerb("weigh",dbpedia:weight),
+
 
   // manufacturer 
 
@@ -296,10 +289,40 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propSubj = DirectObject,
      propObj  = Subject), 
 
+
+  // formationDate 
+
+  RelationalNoun(["formation"/noun "date"/noun],dbpedia:formationDate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  ConsequenceVerb("form",dbpedia:formationDate,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("on")),
+  ConsequenceVerb("found",dbpedia:formationDate,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("on")),
+  ConsequenceVerb("establish",dbpedia:formationDate,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("on")),
+
+  // foundationPlace 
+
+  RelationalNoun(["foundation"/noun "place"/noun],dbpedia:foundationPlace,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  ConsequenceVerb("found",dbpedia:foundationPlace,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("in")),
+
+
   // mascot 
 
   RelationalNoun("mascot",dbpedia:mascot,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg) 
+
+
 
 )
