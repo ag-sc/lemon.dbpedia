@@ -13,7 +13,7 @@ def frag_uri(uri):
 def run():
 
   files = []
-  for a in argv[1:-1]:
+  for a in argv[2:-1]:
       if isfile(a):
          files.append(a)
       else: 
@@ -57,10 +57,10 @@ def run():
       if str(o).startswith('http://dbpedia.org') and frag_uri(o) in allURIs and not frag_uri(o) in doneURIs:
          doneURIs.append(frag_uri(o))
 
-  out_done = open('lexicalizedURIs','w')
+  out_done = open(argv[1]+'_lexicalizedURIs','w')
   for uri in doneURIs: out_done.write(uri+'\n')
   out_done.close()
-  out_todo = open('todoURIs','w')
+  out_todo = open(argv[1]+'_todoURIs','w')
   for uri in list(set(allURIs)-set(doneURIs)): out_todo.write(uri+'\n')
   out_todo.close()
 
