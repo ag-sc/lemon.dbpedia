@@ -61,9 +61,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
     
   RelationalNoun("source",dbpedia:source,
     propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg),
-    
+    propObj  = CopulativeArg), 
   StateVerb("originate",dbpedia:source,
+    propObj = PrepositionalObject("in")),
+  StateVerb("originate",dbpedia:sourceCountry,
     propObj = PrepositionalObject("in")),
     
   StateVerb("border",dbpedia:border),

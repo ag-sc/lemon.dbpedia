@@ -33,6 +33,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   //// Properties 
 
+  // averageSpeed
+
+  RelationalNoun(["average"/adjective "speed"/noun],dbpedia:averageSpeed,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
   // developer
 
   RelationalNoun("developer",dbpedia:developer,

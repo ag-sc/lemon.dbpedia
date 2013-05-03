@@ -134,6 +134,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propSubj = lex:person as Subject,
      propObj  = lex:year as DirectObject),
 
+  // formerCoach
+
+  RelationalNoun(["former"/adjective "coach"/noun],dbpedia:formerCoach,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),  
+
   // plays 
 
   IntersectiveDataPropertyAdjective("right-handed",dbpedia:plays,"Right-handed"),

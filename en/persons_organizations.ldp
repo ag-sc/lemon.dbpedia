@@ -321,8 +321,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   RelationalNoun("mascot",dbpedia:mascot,
      propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg) 
+     propObj  = CopulativeArg), 
 
 
+  // affiliation
+
+  RelationalAdjective("affiliated",dbpedia:affiliation, 
+     relationalArg = PrepositionalObject("with")),
+  RelationalAdjective("affiliated",dbpedia:affiliation, 
+     relationalArg = PrepositionalObject("to"))
 
 )

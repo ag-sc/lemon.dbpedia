@@ -6,7 +6,6 @@ amgid
 subsequentWork
 latestReleaseVersion
 numberOfPostgraduateStudents
-sourceCountry
 memberOfParliament
 areaLand
 stateDelegate
@@ -29,7 +28,6 @@ AutomobileEngine
 VicePrimeMinister
 philosophicalSchool
 artery
-averageSpeed
 landingSite
 vehicleCode
 firstFlight
@@ -40,7 +38,6 @@ sourceDistrict
 goldenGlobeAward
 drugbank
 presenter
-formerCoach
 majorityFloorLeader
 ageRange
 numberOfRooms
@@ -52,7 +49,6 @@ prominence
 hsvCoordinateValue
 oilSystem
 Sales
-affiliation
 cost
 GaelicGamesPlayer
 Embryology
@@ -92,7 +88,6 @@ cmykCoordinateYellow
 whaDraft
 peabodyAward
 dateAct
-precursor
 cargoFuel
 CanadianFootballTeam
 personFunction
@@ -249,7 +244,7 @@ material
 aSide
 MilitaryUnit
 managementCountry
-locusSupplementaryData
+band
 topSpeed
 lastFlightEndDate
 day
@@ -661,7 +656,7 @@ vicePrincipal
 certificationDate
 managementElevation
 publiclyAccessible
-band
+locusSupplementaryData
 regionType
 numberOfEpisodes
 command

@@ -25,7 +25,19 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun(["blood"/noun "vessel"/noun],lex:BloodVessel),
   ClassNoun("muscle",dbpedia:Muscle),
   ClassNoun("nerve",dbpedia:Nerve),
-  ClassNoun("lymph",dbpedia:Lymph)
+  ClassNoun("lymph",dbpedia:Lymph),
+
+
+  //// Properties 
+
+  RelationalNoun("precursor",dbpedia:precursor,
+       propSubj = PrepositionalObject("of"),
+       propObj  = CopulativeArg), 
+  StateVerb("precede",dbpedia:precursor,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("develop",dbpedia:precursor,
+       propObj  = PrepositionalObject("from"))
 
 )
 
