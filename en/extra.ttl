@@ -37,7 +37,7 @@
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Person> ] .
 
 
-## height, length ## 
+## height, length, area ## 
 
 :high a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:adjective ;
@@ -58,6 +58,25 @@
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/length> ;
                 lemon:subjOfProp :arg1long ;
                 lemon:objOfProp  :arg2long ] .
+
+:big a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "big"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectiveScaleFrame ;
+                      lexinfo:copulativeSubject   :arg1big ;
+                      lexinfo:adverbialComplement :arg2big ];
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/area> ;
+                lemon:subjOfProp :arg1big ;
+                lemon:objOfProp  :arg2big ],
+              [ lemon:reference <http://dbpedia.org/ontology/areaTotal> ;
+                lemon:subjOfProp :arg1big ;
+                lemon:objOfProp  :arg2big ],
+              [ lemon:reference <http://dbpedia.org/ontology/areaUrban> ;
+                lemon:subjOfProp :arg1big ;
+                lemon:objOfProp  :arg2big ],
+              [ lemon:reference <http://dbpedia.org/ontology/areaMetro> ;
+                lemon:subjOfProp :arg1big ;
+                lemon:objOfProp  :arg2big ] .
 
 
 ## Sport ##
@@ -157,6 +176,12 @@
 :haveInhabitant a lemon:Phrase ;
   lemon:decomposition ( :arg_place :have :arg_num :inhabitant ) ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/populationTotal> ;
+                lemon:subjOfProp :arg_place ;
+                lemon:objOfProp  :arg_num ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/totalPopulation> ;
+                lemon:subjOfProp :arg_place ;
+                lemon:objOfProp  :arg_num ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/populationUrban> ;
                 lemon:subjOfProp :arg_place ;
                 lemon:objOfProp  :arg_num ] .
 

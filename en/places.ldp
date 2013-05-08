@@ -33,6 +33,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun("park",dbpedia:Park),
   ClassNoun(["ski"/noun "region"/noun],dbpedia:SkiArea),
   ClassNoun(["wine"/noun "region"/noun],dbpedia:WineRegion),
+  ClassNoun(["protected"/adjective "area"/noun],dbpedia:ProtectedArea),
   
 
   //// Properties
@@ -91,21 +92,71 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
 
+  // population, area, and densities
+
   RelationalNoun("population",dbpedia:populationTotal,
     propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg),    
+    propObj  = CopulativeArg),
+  RelationalNoun("population",dbpedia:totalPopulation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("population",dbpedia:populationUrban,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("population",dbpedia:populationMetro,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
   RelationalNoun(["total"/adjective "population"/noun],dbpedia:populationTotal,
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
-  
+  RelationalNoun(["total"/adjective "population"/noun],dbpedia:totalPopulation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["urban"/adjective "population"/noun],dbpedia:populationUrban,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["metropolitan"/adjective "population"/noun],dbpedia:populationMetro,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  RelationalNoun("area",dbpedia:area,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),  
   RelationalNoun("area",dbpedia:areaTotal,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("area",dbpedia:areaUrban,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("area",dbpedia:areaMetro,
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
   RelationalNoun(["total"/adjective "area"/noun],dbpedia:areaTotal,
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
-    
+  RelationalNoun(["urban"/adjective "area"/noun],dbpedia:areaUrban,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  RelationalNoun(["population"/noun "density"/noun],dbpedia:populationDensity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["population"/noun "density"/noun],dbpedia:populationUrbanDensity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["population"/noun "density"/noun],dbpedia:populationMetroDensity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  //
+
   RelationalNoun(["highest"/adjective "region"/noun],dbpedia:highestRegion,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  // area code, postal code
+
+  RelationalNoun(["area"/noun "code"/noun],dbpedia:areaCode,
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
     
@@ -115,6 +166,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   RelationalNoun(["post"/adjective "code"/noun],dbpedia:postalCode,
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
+
+  // 
 
   ConsequenceVerb("open",dbpedia:dateUse,
      propSubj = lex:canal as Subject, 

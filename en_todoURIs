@@ -113,8 +113,6 @@ militaryBranch
 intercommunality
 rgbCoordinateRed
 coachedTeam
-populationMetroDensity
-areaCode
 upperAge
 nationalOlympicCommittee
 pubchem
@@ -125,7 +123,6 @@ battleHonours
 type
 campusSize
 ethnicGroup
-ProtectedArea
 lastSeason
 seatingCapacity
 netIncome
@@ -133,7 +130,7 @@ company
 numberOfSports
 jointCommunity
 sourceConfluence
-oldcode
+department
 OfficeHolder
 distanceLaps
 FloweringPlant
@@ -165,7 +162,6 @@ cargoGas
 locationIdentifier
 numberOfOrbits
 extinctionYear
-department
 teamName
 militaryUnit
 serviceStartYear
@@ -230,7 +226,7 @@ owningOrganisation
 goyaAward
 YearInSpaceflight
 unknownOutcomes
-undraftedYear
+production
 derivative
 EurovisionSongContestEntry
 powerOutput
@@ -268,7 +264,7 @@ dateCompleted
 lastLaunch
 series
 latestPreviewDate
-fees
+dockedTime
 editorTitle
 displacement
 related
@@ -309,7 +305,6 @@ pastMember
 distanceToDublin
 language
 launch
-area
 wheelbase
 redline
 Currency
@@ -329,7 +324,7 @@ aircraftTransport
 number
 co2Emission
 floorCount
-dockedTime
+fees
 Archaea
 dorlandsPrefix
 management
@@ -345,7 +340,6 @@ areaOfCatchment
 draft
 saint
 chairmanTitle
-areaUrban
 locatedInArea
 inflow
 hsvCoordinateSaturation
@@ -365,7 +359,6 @@ recentWinner
 distance
 functionEndYear
 distanceToEdinburgh
-totalPopulation
 leftTributary
 numberOfVineyards
 classes
@@ -402,7 +395,6 @@ Ginkgo
 graySubject
 commandModule
 mouthMountain
-populationDensity
 HistoricPlace
 Legislature
 added
@@ -445,7 +437,6 @@ podiums
 vicePresident
 disbanded
 portfolio
-populationUrbanDensity
 endowment
 totalTravellers
 ground
@@ -533,7 +524,7 @@ garrison
 buildingEndDate
 bowlRecord
 icd10
-density
+assetUnderManagement
 appearancesInNationalTeam
 WomensTennisAssociationTournament
 medlineplus
@@ -569,7 +560,7 @@ serviceNumber
 metropolitanBorough
 headLabel
 productionYears
-production
+undraftedYear
 interest
 reservations
 orderInOffice
@@ -610,7 +601,7 @@ afiAward
 voice
 lastPosition
 kingdom
-assetUnderManagement
+oldcode
 taoiseach
 voiceType
 partialFailedLaunches
@@ -621,7 +612,7 @@ aircraftHelicopterUtility
 minimumDischarge
 partner
 aircraftHelicopterCargo
-populationMetro
+id
 rgbCoordinateBlue
 maximumElevation
 cuisine
@@ -732,7 +723,7 @@ twinCountry
 fastestDriver
 abbreviation
 targetSpaceStation
-id
+firstFlightStartDate
 ascent
 mouthPosition
 episodeNumber
@@ -822,7 +813,6 @@ worstDefeat
 atcSuffix
 trackNumber
 dryCargo
-areaMetro
 percentageOfAreaWaterRound
 overallRecord
 torqueOutput
@@ -839,7 +829,6 @@ scottishName
 filmPolskiId
 modelEndDate
 lowestMountain
-firstFlightStartDate
 provost
 winsAtKLPGA
 PlayboyPlaymate
@@ -887,6 +876,5 @@ countryWithFirstAstronaut
 depth
 championships
 mass
-populationUrban
 resolution
 cpu
