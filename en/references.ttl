@@ -9,6 +9,18 @@
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
 
 
+## persons ##
+
+lex:Female rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:gender ;
+   owl:hasValue   resource:Female .
+
+lex:Male rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:gender ;
+   owl:hasValue   resource:Male .
+
+lex:grandchild owl:propertyChainAxiom ( <http://dbpedia.org/ontology/child> <http://dbpedia.org/ontology/child> ) .
+
 
 ## body_health ##
 
@@ -40,10 +52,6 @@ lex:Festival  owl:unionOf (dbpedia:MusicFestival dbpedia:FilmFestival) .
 
 lex:Actress owl:intersectionOf (dbpedia:Actor lex:Female) .
 lex:VoiceActress owl:intersectionOf (dbpedia:VoiceActor lex:Female) .
-
-lex:Female rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:gender ;
-   owl:hasValue   resource:Female .
 
 
 ## sports ## 

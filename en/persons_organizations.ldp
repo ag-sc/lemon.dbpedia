@@ -1,9 +1,14 @@
-@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix dbpedia:  <http://dbpedia.org/ontology/> .
+@prefix resource: <http://dbpedia.org/resource/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   //// Classes
+
+  ClassNoun("person",dbpedia:Person),
+  ClassNoun("woman",lex:Female) with plural "women",
+  ClassNoun("man",lex:Male) with plural "men",
 
   ClassNoun("organisation",dbpedia:Organisation),
   ClassNoun(["non-profit"/adjective "organisation"/noun],<http://dbpedia.org/ontology/Non-ProfitOrganisation>),
@@ -17,8 +22,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun("journal",dbpedia:Newspaper),
   ClassNoun("magazine",dbpedia:Magazine),
   ClassNoun("periodical",dbpedia:Magazine),
-
-  ClassNoun("person",dbpedia:Person),
 
   ClassNoun(["ethnic"/adjective "group"/noun],dbpedia:EthnicGroup),
 
@@ -124,6 +127,19 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg) with plural "places of death",
 
+  // gender 
+
+  IntersectiveObjectPropertyAdjective("female",dbpedia:gender,resource:Female),
+  IntersectiveObjectPropertyAdjective("male",dbpedia:gender,resource:Male),
+
+  // child
+
+  RelationalNoun("child",dbpedia:child,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun("parent",dbpedia:child,
+     propSubj = CopulativeArg,
+     propObj  = PossessiveAdjunct) with plural "parents", 
 
   // spouse
 
@@ -147,6 +163,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   // influenced 
 
   StateVerb("influence",dbpedia:influenced),
+  StateVerb("influence",dbpedia:influencedBy,
+     propSubj = DirectObject,
+     propObj  = Subject),
 
 
   // ethnicity, religion 
