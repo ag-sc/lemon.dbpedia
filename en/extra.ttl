@@ -2,6 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
 @prefix lemon: <http://www.monnet-project.eu/lemon#> .
+@prefix oils: <http://www.lemon-model.net/oils#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: < http://www.w3.org/2001/XMLSchema#> .
 @prefix : <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
@@ -13,6 +14,7 @@
                 :high,
                 :long,
                 :tall,
+                :big,
                 :athletics,
                 :Olympics,
                 :OlympicGames,
@@ -42,41 +44,76 @@
 :high a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:adjective ;
   lemon:canonicalForm [ lemon:writtenRep "high"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:AdjectiveScaleFrame ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
+                      lexinfo:copulativeSubject :arg1high ;
+                      lexinfo:attributiveArg    :arg1high ],                      
+                    [ rdf:type lexinfo:AdjectiveScaleFrame ;
                       lexinfo:copulativeSubject   :arg1high ;
                       lexinfo:adverbialComplement :arg2high ];
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/height> ;
+  lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/height> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1high  ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/height> ;
                 lemon:subjOfProp :arg1high ;
                 lemon:objOfProp  :arg2high ] .
+
+:tall a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "tall"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
+                      lexinfo:copulativeSubject :arg1tall ;
+                      lexinfo:attributiveArg    :arg1tall ],                      
+                    [ rdf:type lexinfo:AdjectiveScaleFrame ;
+                      lexinfo:copulativeSubject   :arg1tall ;
+                      lexinfo:adverbialComplement :arg2tall ];
+  lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/height> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1tall  ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/height> ;
+                lemon:subjOfProp :arg1tall ;
+                lemon:objOfProp  :arg2tall ] .
 
 :long a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:adjective ;
   lemon:canonicalForm [ lemon:writtenRep "long"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:AdjectiveScaleFrame ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
+                      lexinfo:copulativeSubject :arg1long ;
+                      lexinfo:attributiveArg    :arg1long ],                      
+                    [ rdf:type lexinfo:AdjectiveScaleFrame ;
                       lexinfo:copulativeSubject   :arg1long ;
                       lexinfo:adverbialComplement :arg2long ];
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/length> ;
+  lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/height> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1long  ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/length> ;
                 lemon:subjOfProp :arg1long ;
                 lemon:objOfProp  :arg2long ] .
 
 :big a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:adjective ;
   lemon:canonicalForm [ lemon:writtenRep "big"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:AdjectiveScaleFrame ;
-                      lexinfo:copulativeSubject   :arg1big ;
-                      lexinfo:adverbialComplement :arg2big ];
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/area> ;
-                lemon:subjOfProp :arg1big ;
-                lemon:objOfProp  :arg2big ],
-              [ lemon:reference <http://dbpedia.org/ontology/areaTotal> ;
-                lemon:subjOfProp :arg1big ;
-                lemon:objOfProp  :arg2big ],
-              [ lemon:reference <http://dbpedia.org/ontology/areaUrban> ;
-                lemon:subjOfProp :arg1big ;
-                lemon:objOfProp  :arg2big ],
-              [ lemon:reference <http://dbpedia.org/ontology/areaMetro> ;
-                lemon:subjOfProp :arg1big ;
-                lemon:objOfProp  :arg2big ] .
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
+                      lexinfo:copulativeSubject :arg1big ;
+                      lexinfo:attributiveArg    :arg2big ];
+  lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/area> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1big ] ,
+              [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/areaTotal> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1big ] ,
+              [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/areaUrban> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1big ] ,
+              [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/areaMetro> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1big ] .
 
 
 ## Sport ##
