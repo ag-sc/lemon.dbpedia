@@ -257,7 +257,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   // hometown, nationality 
 
-  RelationalNoun(["home"/noun "town"/noun],dbpedia:homeTown,
+  RelationalNoun(["home"/noun "town"/noun],dbpedia:hometown,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg), 
 
@@ -265,7 +265,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg restrictedTo dbpedia:Country ), 
 
-  StateVerb("come",dbpedia:homeTown,
+  StateVerb("come",dbpedia:hometown,
      propObj = PrepositionalObject("from")),
   StateVerb("come",dbpedia:nationality,
      propObj = PrepositionalObject("from") restrictedTo dbpedia:Place),

@@ -54,6 +54,18 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   //// Properties
 
+  // genre 
+
+  RelationalNoun("genre",dbpedia:genre,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  // runtime
+
+  RelationalNoun("runtime",dbpedia:runtime,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),  
+
   // writer
 
   RelationalNoun("writer",dbpedia:writer,

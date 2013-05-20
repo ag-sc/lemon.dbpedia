@@ -24,6 +24,8 @@
                 :OlympicGames,
                 :record,
                 :interpreter,
+                :make,
+                :write,
                 :discover,
                 :discovery,
                 :haveInhabitant,
@@ -133,10 +135,13 @@
                       lexinfo:copulativeSubject   :arg1long ;
                       lexinfo:adverbialComplement :arg2long ];
   lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
-                                  oils:boundTo <http://dbpedia.org/ontology/height> ;
+                                  oils:boundTo <http://dbpedia.org/ontology/length> ;
                                   oils:degree oils:strong ] ;
                 lemon:isA :arg1long  ] ,
               [ lemon:reference <http://dbpedia.org/ontology/length> ;
+                lemon:subjOfProp :arg1long ;
+                lemon:objOfProp  :arg2long ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/runtime> ;
                 lemon:subjOfProp :arg1long ;
                 lemon:objOfProp  :arg2long ] .
 
@@ -218,6 +223,30 @@
               [ lemon:reference <http://dbpedia.org/ontology/influencedBy> ;
                 lemon:subjOfProp :arg2 ;
                 lemon:objOfProp  :arg1 ] .
+
+## genre ##
+
+:make a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "make"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
+                      lexinfo:subject :arg1make ;
+                      lexinfo:directObject :arg2make ; ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/genre>;
+                lemon:subjOfProp :arg1record;
+                lemon:objOfProp  :arg2record;
+                lemon:propertyRange <http://dbpedia.org/ontology/MusicGenre> ] .
+
+:write a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "write"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
+                      lexinfo:subject :arg1write ;
+                      lexinfo:directObject :arg2write ; ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/genre>;
+                lemon:subjOfProp :arg1write;
+                lemon:objOfProp  :arg2write;
+                lemon:propertyDomain <http://dbpedia.org/ontology/Writer> ] .
 
 
 ## discover, discoverer ##
@@ -315,6 +344,14 @@
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
+## synonym ##
+
+:sameAs a lemon:Phrase ;
+  lemon:decomposition ( :arg2 :be :the :same :as :arg1 ) ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/synonym> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] .
+
 
 
 #### Phrase parts and markers ####
@@ -384,6 +421,10 @@
   lemon:canonicalForm [ lemon:writtenRep "average"@en ] ;
   lexinfo:partOfSpeech lexinfo:adjective .
 
+:same a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "same"@en ] ;
+  lexinfo:partOfSpeech lexinfo:adjective .
+
 ## Determiners ##
 
 :the a lemon:Word ;
@@ -423,4 +464,6 @@
 :to a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "to"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-
+:as a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "as"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

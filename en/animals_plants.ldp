@@ -22,6 +22,39 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun("arachnid",dbpedia:Arachnid), 
   ClassNoun("crustacean",dbpedia:Crustacean),
   ClassNoun("shellfish",dbpedia:Crustacean),
-  ClassNoun("mollusc",dbpedia:Mollusc) with plural "molluscs"
+  ClassNoun("mollusc",dbpedia:Mollusc) with plural "molluscs", 
+
+
+  //// Properties
+
+  // kingdom, phylum, genus
+
+  StateVerb("belong",dbpedia:kingdom,
+       propObj  = PrepositionalObject("to")),
+  StateVerb("belong",dbpedia:phylum,
+       propObj  = PrepositionalObject("to")),
+  StateVerb("belong",<http://dbpedia.org/ontology/class>,
+       propObj  = PrepositionalObject("to")),
+  StateVerb("belong",dbpedia:genus,
+       propObj  = PrepositionalObject("to")),
+
+  StateVerb("contain",dbpedia:kingdom,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("contain",dbpedia:phylum,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("contain",<http://dbpedia.org/ontology/class>,
+       propSubj = DirectObject,
+       propObj  = Subject),
+
+  RelationalNoun("member",dbpedia:kingdom,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("member",dbpedia:phylum,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("member",<http://dbpedia.org/ontology/class>,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("member",dbpedia:genus,
+       propObj  = PossessiveAdjunct)
 
 )

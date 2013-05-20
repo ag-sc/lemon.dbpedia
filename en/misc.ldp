@@ -33,6 +33,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   RelationalAdjective("like",dbpedia:similar,
        relationalArg = DirectObject), 
 
+  RelationalNoun("synonym",dbpedia:synonym,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
   RelationalNoun(["sublimation"/noun "point"/noun],dbpedia:sublimationPoint,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
