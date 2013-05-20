@@ -194,7 +194,6 @@ discontinued
 alias
 subdivisions
 callSign
-foundingPerson
 percentageOfAreaWater
 flyingHours
 musicalBand
@@ -349,7 +348,6 @@ successfulLaunches
 firstFlightEndDate
 principalArea
 prospectLeague
-numberOfStudents
 part
 suppreddedDate
 nutsCode
@@ -476,7 +474,7 @@ facilityId
 port1DockedTime
 choreographer
 foundationOrganisation
-foundingDate
+numberOfStudents
 administrator
 RadioControlledRacingLeague
 numberOfDoctoralStudents
@@ -674,7 +672,6 @@ conservationStatus
 formerCallsign
 summerTemperature
 grayPage
-foundingYear
 mouthElevation
 argueDate
 march
@@ -779,7 +776,6 @@ currentStatus
 distanceToCardiff
 registration
 shoots
-formationYear
 carNumber
 CanadianFootballLeague
 aircraftElectronic

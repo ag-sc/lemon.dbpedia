@@ -309,21 +309,57 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propObj  = Subject), 
 
 
-  // formationDate 
+  // formationDate, formationYear, foundingDate, foundingYear
 
   RelationalNoun(["formation"/noun "date"/noun],dbpedia:formationDate,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg), 
+  RelationalNoun(["formation"/noun "year"/noun],dbpedia:formationYear,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
+  RelationalNoun(["founding"/noun "date"/noun],dbpedia:foundingDate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun(["founding"/noun "year"/noun],dbpedia:foundingYear,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
 
   ConsequenceVerb("form",dbpedia:formationDate,
      propSubj = lex:organization as Subject, 
      propObj  = lex:date as PrepositionalObject("on")),
-  ConsequenceVerb("found",dbpedia:formationDate,
+  ConsequenceVerb("form",dbpedia:formationYear,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("in")),
+
+  ConsequenceVerb("found",dbpedia:foundingDate,
      propSubj = lex:organization as Subject, 
      propObj  = lex:date as PrepositionalObject("on")),
+  ConsequenceVerb("found",dbpedia:foundingYear,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("in")),
+
   ConsequenceVerb("establish",dbpedia:formationDate,
      propSubj = lex:organization as Subject, 
      propObj  = lex:date as PrepositionalObject("on")),
+  ConsequenceVerb("establish",dbpedia:formationYear,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("in")),
+  ConsequenceVerb("establish",dbpedia:foundingDate,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("on")),
+  ConsequenceVerb("establish",dbpedia:foundingYear,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("in")),
+
+  // foundingPerson
+
+  StateVerb("found",dbpedia:foundingPerson,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("establish",dbpedia:foundingPerson,
+     propSubj = DirectObject,
+     propObj  = Subject),
 
   // foundationPlace 
 
