@@ -34,15 +34,15 @@ lex:Taikonaut owl:unionOf (dbpedia:Astronaut lex:Chinese) .
 
 lex:Russian rdf:type owl:Restriction ;
    owl:onProperty dbpedia:nationality ;
-   owl:hasValue dbpedia:Russia .
+   owl:hasValue resource:Russia .
 
 lex:Soviet rdf:type owl:Restriction ;
    owl:onProperty dbpedia:nationality ;
-   owl:hasValue dbpedia:Soviet_people .
+   owl:hasValue resource:Soviet_people .
 
 lex:Chinese rdf:type owl:Restriction ;
    owl:onProperty dbpedia:nationality ;
-   owl:hasValue dbpedia:China .
+   owl:hasValue resource:China .
 
 
 ## arts_entertainment ##
@@ -68,7 +68,7 @@ lex:HockeyLeague owl:unionOf (dbpedia:IceHockeyLeague dbpedia:FieldHockeyLeague 
 
 lex:RaceDriver owl:unionOf (dbpedia:FormulaOneRacer dbpedia:NascarDriver) .
 
-lex:Racer owl:unionOf(dbpedia:Cyclist dbpedia:FormulaOneRacer dbpedia:NascarDriver) .
+lex:Racer owl:unionOf (dbpedia:Cyclist dbpedia:FormulaOneRacer dbpedia:NascarDriver) .
 
 
 ## persons_organizations ##
