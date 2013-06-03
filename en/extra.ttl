@@ -29,10 +29,13 @@
                 :write,
                 :discover,
                 :discovery,
+                :conservationStatus,
                 :haveInhabitant,
                 :haveEmployee,
+                :wearNumber,
                 :haveMusicBy,
                 :writeTheMusicFor,
+                :composeTheMusicFor,
                 :travelWithAnAverageSpeedOf,
                 :wasCoach .
 
@@ -218,6 +221,7 @@
                         lexinfo:number lexinfo:plural ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Olympics> ] .
 
+
 ## artist ## 
 
 :record a lemon:Word ;
@@ -297,7 +301,7 @@
 :discovery a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "discovery"@en ] ;
   lemon:synBehavior [ rdf:type lexinfo:NounPPFrame ;
-		      lexinfo:subject :discovery ;
+		      lexinfo:copulativeArg :discovery ;
                       lexinfo:prepositionalObject  :arg1discovery ;
                       lexinfo:prepositionalAdjunct :arg2discovery ;
                       lexinfo:prepositionalAdjunct :arg3discovery ] ;
@@ -313,6 +317,28 @@
 :arg2discovery lemon:optional "true"^^xsd:boolean .
 :arg3discovery lemon:marker :on .
 :arg3discovery lemon:optional "true"^^xsd:boolean .
+
+
+## conservationStatusSystem ##
+
+:conservationStatus a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm [ lemon:writtenRep "conservation status"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
+		      lexinfo:copulativeArg :arg1conservationStatus ;
+                      lexinfo:possessiveAdjunct :arg2conservationStatus ;
+                      lexinfo:prepositionalAdjunct :arg3conservationStatus ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/conservationStatus>;
+                                 lemon:subjOfProp :arg2conservationStatus;
+                                 lemon:objOfProp  :arg1conservationStatus ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/conservationStatus>;
+                                 lemon:subjOfProp :arg2conservationStatus ;
+                                 lemon:objOfProp  :arg3conservationStatus ] ] .
+
+:arg3conservationStatus lemon:marker [ lemon:canonicalForm [ lemon:writtenRep "according to"@en ] ] .
+
+
+#### Phrases ####
 
 
 ## totalPopulation, staff, numberOfEmployees ##
@@ -345,11 +371,26 @@
   lemon:decomposition ( :arg1 :have :music :by :arg2 ) ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/musicBy>;
                 lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/musicComposer>;
+                lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
 :writeTheMusicFor a lemon:Phrase ;
   lemon:decomposition ( :arg1 :write :the :music :for :arg2 );
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/musicBy> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/musicComposer> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] .
+
+:composeTheMusicFor a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :compose :the :music :for :arg2 );
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/musicBy> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/musicComposer> ;
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
@@ -370,6 +411,15 @@
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/formerCoach> ;
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
+
+## number ##
+
+:wearNumber a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :wear :number :arg2 ) ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/number> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] .
+
 
 ## synonym ##
 
@@ -416,8 +466,16 @@
   lemon:canonicalForm [ lemon:writtenRep "write"@en ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
+:compose a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "write"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
 :travel a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "travel"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:wear a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "wear"@en ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
 ## Nouns ##

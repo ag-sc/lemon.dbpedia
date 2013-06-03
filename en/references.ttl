@@ -21,6 +21,11 @@ lex:Male rdf:type owl:Restriction ;
 
 lex:grandchild owl:propertyChainAxiom ( <http://dbpedia.org/ontology/child> <http://dbpedia.org/ontology/child> ) .
 
+## places ## 
+
+:Department rdf:type owl:Restriction ;
+   owl:onProperty [ owl:inverseOf dbpedia:department ] ;
+   owl:someValuesFrom dbpedia:Place .
 
 ## body_health ##
 

@@ -46,7 +46,7 @@ currentSeason
 regionServed
 prominence
 hsvCoordinateValue
-oilSystem
+firstFlightEndDate
 Sales
 cost
 GaelicGamesPlayer
@@ -127,7 +127,7 @@ company
 numberOfSports
 jointCommunity
 sourceConfluence
-department
+championships
 OfficeHolder
 distanceLaps
 FloweringPlant
@@ -189,12 +189,12 @@ wins
 issn
 headquarters
 discontinued
-alias
+fcRuns
 subdivisions
 callSign
 percentageOfAreaWater
 flyingHours
-musicalBand
+operatingIncome
 unitCost
 numberOfCompetitors
 Congressman
@@ -208,7 +208,6 @@ years
 arm
 course
 alliance
-almaMater
 committee
 shipBeam
 numberOfEntrances
@@ -283,7 +282,7 @@ tournamentRecord
 homeStadium
 minimumTemperature
 completionDate
-musicComposer
+oilSystem
 numberOfParkingSpaces
 automobileModel
 associate
@@ -314,7 +313,6 @@ noteOnPlaceOfBurial
 isbn
 revenue
 aircraftTransport
-number
 co2Emission
 floorCount
 fees
@@ -341,7 +339,6 @@ arrondissement
 season
 relative
 successfulLaunches
-firstFlightEndDate
 principalArea
 prospectLeague
 part
@@ -378,7 +375,6 @@ welshName
 acceleration
 managementRegion
 strength
-fcRuns
 draftPick
 numberBuilt
 dressCode
@@ -404,7 +400,6 @@ torchBearer
 meanRadius
 salary
 diseasesdb
-operatingIncome
 rocketStages
 mouthDistrict
 shareDate
@@ -855,7 +850,6 @@ dissolutionDate
 sourceConfluenceCountry
 countryWithFirstAstronaut
 depth
-championships
 mass
 resolution
 cpu

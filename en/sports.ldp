@@ -134,6 +134,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
 
+  // number
+
+  RelationalNoun(["shirt"/noun "number"/noun],dbpedia:number,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["squad"/noun "number"/noun],dbpedia:number,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
   // draftYear 
 
   ConsequenceVerb("draft",dbpedia:draftYear,

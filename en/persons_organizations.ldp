@@ -179,14 +179,22 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propObj  = CopulativeArg),
 
 
-  // university 
+  // university, almaMater 
 
   RelationalNoun("university",dbpedia:university,
      propSubj=PossessiveAdjunct,
      propObj=CopulativeArg), 
+  RelationalNoun(["Alma"/adjective "Mater"/noun],dbpedia:almaMater,
+     propSubj=PossessiveAdjunct,
+     propObj=CopulativeArg),
 
   StateVerb("study",dbpedia:university,
      propObj = PrepositionalObject("at")),
+  StateVerb("study",dbpedia:almaMater,
+     propObj = PrepositionalObject("at")),
+  StateVerb("graduate",dbpedia:almaMater,
+     propObj = PrepositionalObject("from")),
+
 
   // field 
 
@@ -271,7 +279,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propObj = PrepositionalObject("from") restrictedTo dbpedia:Place),
 
 
-  // birthName, formerName, pseudonym
+  // birthName, formerName, pseudonym, alias
 
   RelationalNoun(["birth"/noun "name"/noun],dbpedia:birthName,
      propSubj = PossessiveAdjunct,
@@ -282,6 +290,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propObj  = CopulativeArg), 
 
   RelationalNoun("pseudonym",dbpedia:pseudonym,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
+  RelationalNoun("alias",dbpedia:alias,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
 

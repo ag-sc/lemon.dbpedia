@@ -15,6 +15,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun("LP",dbpedia:Album),
   ClassNoun("single",dbpedia:Single),
   ClassNoun("song",dbpedia:Song),
+  ClassNoun("track",dbpedia:Song),
   ClassNoun("film",dbpedia:Film),
   ClassNoun("movie",dbpedia:Film),
   ClassNoun("actor",dbpedia:Actor),
@@ -90,12 +91,19 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
         propSubj = DirectObject,
         propObj  = Subject),
 
+  // musicalBand
+
+ StateVerb("write",dbpedia:musicalBand,
+        propSubj = DirectObject,
+        propObj  = Subject),
+ StateVerb("record",dbpedia:musicalBand,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
   // starring
 
   StateVerb("star",dbpedia:starring),
-
   StateVerb("feature",dbpedia:starring),
-
   StateVerb("play",dbpedia:starring,
         propSubj = PrepositionalObject("in"),
         propObj  = Subject),
