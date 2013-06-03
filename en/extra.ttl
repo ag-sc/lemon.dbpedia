@@ -19,6 +19,7 @@
                 :long,
                 :tall,
                 :big,
+                :active,
                 :athletics,
                 :Olympics,
                 :OlympicGames,
@@ -167,6 +168,32 @@
                                   oils:boundTo <http://dbpedia.org/ontology/areaMetro> ;
                                   oils:degree oils:strong ] ;
                 lemon:isA :arg1big ] .
+
+
+## activeYears{Start|End}{Date|Year} ##
+
+:active a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "active"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePPFrame ;
+                      lexinfo:copulativeSubject :arg1active ;
+                      lexinfo:prepositionalAdjunct :arg2active ;
+                      lexinfo:prepositionalAdjunct :arg3active ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/activeYearsStartDate> ;
+                                 lemon:subjOfProp :arg1active ;
+                                 lemon:objOfProp  :arg2active ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/activeYearsEndDate> ;
+                                 lemon:subjOfProp :arg1active ;
+                                 lemon:objOfProp  :arg3active ] ] ,
+              [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/activeYearsStartYear> ;
+                                 lemon:subjOfProp :arg1active ;
+                                 lemon:objOfProp  :arg2active ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/activeYearsEndYear> ;
+                                 lemon:subjOfProp :arg1active ;
+                                 lemon:objOfProp  :arg3active ] ] .
+
+:arg2active lemon:marker :from ; lemon:optional "true"^^xsd:boolean .
+:arg3active lemon:marker :to   ; lemon:optional "true"^^xsd:boolean .
 
 
 ## Sport ##

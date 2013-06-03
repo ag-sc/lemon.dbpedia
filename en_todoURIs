@@ -12,7 +12,6 @@ stateDelegate
 chain
 totalMass
 port2DockingDate
-activeYearsStartYear
 numberOfVisitors
 debutTeam
 visitorsTotal
@@ -240,7 +239,6 @@ band
 topSpeed
 lastFlightEndDate
 day
-activeYearsEndYear
 cmykCoordinateMagenta
 managerYears
 identificationSymbol
@@ -281,7 +279,6 @@ distanceTraveled
 aircraftHelicopterTransport
 stationVisitDuration
 contractAward
-activeYearsStartDate
 tournamentRecord
 homeStadium
 minimumTemperature
@@ -646,7 +643,6 @@ numberOfEpisodes
 command
 casSupplemental
 olivierAward
-position
 model
 nationalTopographicSystemMapNumber
 marketCapitalisation
@@ -667,7 +663,6 @@ eTeatrId
 mainOrgan
 photographer
 knownFor
-conservationStatus
 formerCallsign
 numberOfBronzeMedalsWon
 grayPage
@@ -858,7 +853,6 @@ starRating
 startYearOfSales
 dissolutionDate
 sourceConfluenceCountry
-activeYearsEndDate
 countryWithFirstAstronaut
 depth
 championships

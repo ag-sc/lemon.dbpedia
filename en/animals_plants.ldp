@@ -1,4 +1,5 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
@@ -55,6 +56,20 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   RelationalNoun("member",<http://dbpedia.org/ontology/class>,
        propObj  = PossessiveAdjunct),
   RelationalNoun("member",dbpedia:genus,
-       propObj  = PossessiveAdjunct)
+       propObj  = PossessiveAdjunct),
+
+  // conservationStatus
+
+  RelationalNoun(["conservation"/noun "status"/noun],dbpedia:conservationStatus,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  
+  IntersectiveDataPropertyAdjective("extinct",dbpedia:conservationStatus,"EX"),
+  IntersectiveDataPropertyAdjective(["extinct"/adjective "in"/preposition "the"/determiner "wild"/noun],dbpedia:conservationStatus,"EW"),
+  IntersectiveDataPropertyAdjective("vulnerable",dbpedia:conservationStatus,"VU"),
+  IntersectiveAdjective("threatened",lex:Threatened),
+  IntersectiveDataPropertyAdjective("endangered",dbpedia:conservationStatus,"EN"),
+  IntersectiveDataPropertyAdjective(["critically"/adverb "endangered"/adjective],dbpedia:conservationStatus,"CR"),
+  IntersectiveDataPropertyAdjective(["near"/adjective "threatened"/adjective],dbpedia:conservationStatus,"NT")
 
 )

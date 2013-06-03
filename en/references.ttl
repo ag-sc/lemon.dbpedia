@@ -27,6 +27,20 @@ lex:grandchild owl:propertyChainAxiom ( <http://dbpedia.org/ontology/child> <htt
 lex:BloodVessel owl:unionOf (dbpedia:Artery dbpedia:Vein) .
 
 
+## animals_plants ## 
+
+lex:Threatened owl:unionOf (lex:EX lex:EW lex:VU) .
+lex:EX rdf:type owl:Restriction ; 
+       owl:onProperty dbpedia:conservationStatus ;
+       owl:hasValue   "EX" .
+lex:EW rdf:type owl:Restriction ; 
+       owl:onProperty dbpedia:conservationStatus ;
+       owl:hasValue   "EW" .
+lex:VU rdf:type owl:Restriction ; 
+       owl:onProperty dbpedia:conservationStatus ;
+       owl:hasValue   "VU" .
+
+
 ## space ##
 
 lex:Cosmonaut owl:unionOf (dbpedia:Astronaut lex:Russian lex:Soviet) .
