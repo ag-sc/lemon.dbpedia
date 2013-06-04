@@ -20,6 +20,7 @@
                 :tall,
                 :big,
                 :active,
+                :serve,
                 :athletics,
                 :Olympics,
                 :OlympicGames,
@@ -197,6 +198,31 @@
 
 :arg2active lemon:marker :from ; lemon:optional "true"^^xsd:boolean .
 :arg3active lemon:marker :to   ; lemon:optional "true"^^xsd:boolean .
+
+## service{Start|End}{Date|Year} ##
+
+:serve a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "serve"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:IntransitivePPFrame ;
+                      lexinfo:copulativeSubject :arg1serve ;
+                      lexinfo:prepositionalAdjunct :arg2serve ;
+                      lexinfo:prepositionalAdjunct :arg3serve ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/serviceStartDate> ;
+                                 lemon:subjOfProp :arg1serve ;
+                                 lemon:objOfProp  :arg2serve ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/serviceEndDate> ;
+                                 lemon:subjOfProp :arg1serve ;
+                                 lemon:objOfProp  :arg3serve ] ] ,
+              [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/serviceStartYear> ;
+                                 lemon:subjOfProp :arg1serve ;
+                                 lemon:objOfProp  :arg2serve ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/serviceEndYear> ;
+                                 lemon:subjOfProp :arg1serve ;
+                                 lemon:objOfProp  :arg3serve ] ] .
+
+:arg2serve lemon:marker :from ; lemon:optional "true"^^xsd:boolean .
+:arg3serve lemon:marker :to   ; lemon:optional "true"^^xsd:boolean .
 
 
 ## Sport ##

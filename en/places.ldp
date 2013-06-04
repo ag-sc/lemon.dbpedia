@@ -11,6 +11,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun("country",dbpedia:Country),
   ClassNoun("nation",dbpedia:Country),
   ClassNoun("department",lex:Department),
+  ClassNoun("arrondissement",lex:Arrondissement),
   ClassNoun("city",dbpedia:City),
   ClassNoun("town",dbpedia:Town),
   ClassNoun("village",dbpedia:Village),
@@ -48,6 +49,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   RelationalAdjective("located",dbpedia:location,
     relationalArg = PrepositionalObject("in")),
   RelationalAdjective("located",dbpedia:department,
+    relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("located",dbpedia:arrondissement,
     relationalArg = PrepositionalObject("in")),
 
   RelationalNoun("part",dbpedia:range,
@@ -151,11 +154,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
 
-  //
-
-  RelationalNoun(["highest"/adjective "region"/noun],dbpedia:highestRegion,
-    propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg),
 
   // area code, postal code
 
@@ -170,7 +168,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
 
-  // 
+  // others
 
   ConsequenceVerb("open",dbpedia:dateUse,
      propSubj = lex:canal as Subject, 
@@ -178,7 +176,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   RelationalNoun("length",dbpedia:length,
      propSubj = PossessiveAdjunct,
-     propObj = CopulativeArg)
+     propObj = CopulativeArg), 
+
+  RelationalNoun(["highest"/adjective "region"/noun],dbpedia:highestRegion,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  RelationalNoun("motto",dbpedia:motto,
+    propSubj = PossessiveAdjunct,
+    propObj = CopulativeArg)
 
 )
 

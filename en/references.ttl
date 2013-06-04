@@ -27,6 +27,10 @@ lex:grandchild owl:propertyChainAxiom ( <http://dbpedia.org/ontology/child> <htt
    owl:onProperty [ owl:inverseOf dbpedia:department ] ;
    owl:someValuesFrom dbpedia:Place .
 
+:Arrondissement rdf:type owl:Restriction ;
+   owl:onProperty [ owl:inverseOf dbpedia:arrondissement ] ;
+   owl:someValuesFrom dbpedia:Place .
+
 ## body_health ##
 
 lex:BloodVessel owl:unionOf (dbpedia:Artery dbpedia:Vein) .

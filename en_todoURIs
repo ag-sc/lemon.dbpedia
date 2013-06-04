@@ -132,7 +132,6 @@ OfficeHolder
 distanceLaps
 FloweringPlant
 firstWin
-slogan
 ceeb
 detectionMethod
 wineProduced
@@ -161,7 +160,6 @@ numberOfOrbits
 extinctionYear
 teamName
 militaryUnit
-serviceStartYear
 latestPreviewVersion
 animal
 owningCompany
@@ -310,11 +308,10 @@ orbitalFlights
 purpose
 startDate
 noteOnPlaceOfBurial
-isbn
 revenue
 aircraftTransport
 co2Emission
-floorCount
+currentPartner
 fees
 Archaea
 dorlandsPrefix
@@ -324,7 +321,7 @@ district
 timeInSpace
 SupremeCourtOfTheUnitedStatesCase
 railwayPlatforms
-currentPartner
+floorCount
 numberOfUndergraduateStudents
 Lieutenant
 areaOfCatchment
@@ -335,7 +332,6 @@ locatedInArea
 inflow
 hsvCoordinateSaturation
 ClubMoss
-arrondissement
 season
 relative
 successfulLaunches
@@ -441,7 +437,6 @@ fuel
 winsAtLAGT
 electionMajority
 ranking
-serviceEndDate
 varietals
 numberOfWineries
 honours
@@ -458,7 +453,6 @@ watershed
 careerPrizeMoney
 missionDuration
 river
-creator
 nerve
 shareSource
 facilityId
@@ -490,7 +484,6 @@ atcPrefix
 highestState
 comparable
 functionEndDate
-parent
 leaderParty
 denomination
 manxName
@@ -500,7 +493,6 @@ fileSize
 distributingLabel
 winsAtMajors
 distanceToCharingCross
-motto
 espnId
 minorityFloorLeader
 ecNumber
@@ -537,7 +529,6 @@ firstAscentYear
 numberOfSuites
 modelStartYear
 productionEndYear
-serviceStartDate
 configuration
 playingTime
 satellitesDeployed
@@ -646,7 +637,6 @@ background
 riverBranchOf
 CollegeCoach
 firstWinner
-serviceEndYear
 programCost
 cylinderCount
 brainInfoNumber

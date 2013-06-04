@@ -132,14 +132,18 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   IntersectiveObjectPropertyAdjective("female",dbpedia:gender,resource:Female),
   IntersectiveObjectPropertyAdjective("male",dbpedia:gender,resource:Male),
 
-  // child
+  // child, parent
 
   RelationalNoun("child",dbpedia:child,
      propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg), 
+     propObj  = CopulativeArg) with plural "children", 
   RelationalNoun("parent",dbpedia:child,
-     propSubj = CopulativeArg,
-     propObj  = PossessiveAdjunct) with plural "parents", 
+     propObj  = PossessiveAdjunct), 
+  RelationalNoun("parent",dbpedia:parent,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun("child",dbpedia:parent,
+     propObj  = PossessiveAdjunct) with plural "children", 
 
   // spouse
 
@@ -384,11 +388,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propObj  = lex:date as PrepositionalObject("in")),
 
 
-  // mascot 
+  // mascot, slogan
 
   RelationalNoun("mascot",dbpedia:mascot,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg), 
+
+  RelationalNoun("slogan",dbpedia:slogan,
+    propSubj = PossessiveAdjunct,
+    propObj = CopulativeArg), 
 
 
   // affiliation

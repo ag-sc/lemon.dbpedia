@@ -91,6 +91,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
         propSubj = DirectObject,
         propObj  = Subject),
 
+  // creator 
+
+  RelationalNoun("creator",dbpedia:creator,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+  StateVerb("create",dbpedia:creator,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
   // musicalBand
 
  StateVerb("write",dbpedia:musicalBand,
@@ -175,7 +184,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   ConsequenceVerb("award",dbpedia:award,
         propSubj = lex:person as Subject,
-        propObj  = lex:prizeAwarded as DirectObject)
+        propObj  = lex:prizeAwarded as DirectObject),
+
+  // others 
+
+  RelationalNoun("ISBN",dbpedia:isbn,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg)
 
 )
 
