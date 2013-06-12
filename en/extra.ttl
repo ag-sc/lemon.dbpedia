@@ -17,6 +17,7 @@
                 :grandfather,
                 :high,
                 :long,
+                :wide,
                 :tall,
                 :big,
                 :active,
@@ -33,6 +34,8 @@
                 :conservationStatus,
                 :haveInhabitant,
                 :haveEmployee,
+                :haveSeat,
+                :holdSeat,
                 :wearNumber,
                 :haveMusicBy,
                 :writeTheMusicFor,
@@ -168,6 +171,23 @@
               [ lemon:reference <http://dbpedia.org/ontology/runtime> ;
                 lemon:subjOfProp :arg1long ;
                 lemon:objOfProp  :arg2long ] .
+
+:wide a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "wide"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
+                      lexinfo:copulativeSubject :arg1wide ;
+                      lexinfo:attributiveArg    :arg1wide ],                      
+                    [ rdf:type lexinfo:AdjectiveScaleFrame ;
+                      lexinfo:copulativeSubject   :arg1wide ;
+                      lexinfo:adverbialComplement :arg2wide ];
+  lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/width> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1wide  ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/width> ;
+                lemon:subjOfProp :arg1wide ;
+                lemon:objOfProp  :arg2wide ] .
 
 :big a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:adjective ;
@@ -386,7 +406,7 @@
 #### Phrases ####
 
 
-## totalPopulation, staff, numberOfEmployees ##
+## totalPopulation, staff, numberOfEmployees, seatingCapacity ##
 
 :haveInhabitant a lemon:Phrase ;
   lemon:decomposition ( :arg_place :have :arg_num :inhabitant ) ;
@@ -407,6 +427,18 @@
                 lemon:objOfProp  :arg_num ] ,
               [ lemon:reference <http://dbpedia.org/ontology/staff> ;
                 lemon:subjOfProp :arg_organization ;
+                lemon:objOfProp  :arg_num ] .
+
+:haveSeat a lemon:Phrase ;
+  lemon:decomposition ( :arg_place :have :arg_num :seat ) ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/seatingCapacity> ;
+                lemon:subjOfProp :arg_place ;
+                lemon:objOfProp  :arg_num ] .
+
+:holdSeat a lemon:Phrase ;
+  lemon:decomposition ( :arg_place :hold :arg_num :seat ) ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/seatingCapacity> ;
+                lemon:subjOfProp :arg_place ;
                 lemon:objOfProp  :arg_num ] .
 
 
@@ -574,6 +606,10 @@
   lemon:canonicalForm [ lemon:writtenRep "serve"@en ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
+:hold a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "hold"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
 ## Participles ## 
 
 :added  lexinfo:participleFormOf :add ;   lemon:canonicalForm [ lemon:writtenRep "added"@en ] .
@@ -611,6 +647,10 @@
 
 :episode a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "episode"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:seat a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "seat"@en ] ;
   lexinfo:partOfSpeech lexinfo:noun .
 
 ## Adjectives ##

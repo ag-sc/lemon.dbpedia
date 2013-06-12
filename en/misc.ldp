@@ -27,6 +27,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   //// Properties 
 
+  StateVerb(["take"/verb "place"/noun],dbpedia:date,
+       propObj = PrepositionalObject("on")),
+
+  RelationalAdjective("spoken",dbpedia:spokenIn,
+       relationalArg = PrepositionalObject("in")), 
+  RelationalNoun("language",dbpedia:spokenIn,
+       propSubj = CopulativeArg,
+       propObj  = PossessiveAdjunct),
+
   RelationalAdjective("similar",dbpedia:similar,
        relationalArg = PrepositionalObject("to")), 
 

@@ -47,7 +47,6 @@ regionServed
 prominence
 hsvCoordinateValue
 firstFlightEndDate
-Sales
 cost
 GaelicGamesPlayer
 Embryology
@@ -119,7 +118,6 @@ type
 campusSize
 ethnicGroup
 lastSeason
-seatingCapacity
 netIncome
 company
 numberOfSports
@@ -174,7 +172,6 @@ fansgroup
 membership
 fc
 nssdcId
-date
 causalties
 promotion
 numberOfGraduateStudents
@@ -204,7 +201,6 @@ arm
 course
 alliance
 committee
-shipBeam
 numberOfEntrances
 mayor
 dateConstruction
@@ -223,17 +219,16 @@ bustSize
 supplementalDraftRound
 notableCommander
 gaelicName
-PopulatedPlace
+aircraftHelicopterAttack
 GeopoliticalOrganisation
 material
 aSide
 MilitaryUnit
 managementCountry
 band
-topSpeed
+cmykCoordinateMagenta
 lastFlightEndDate
 day
-cmykCoordinateMagenta
 managerYears
 identificationSymbol
 firstLaunchDate
@@ -297,7 +292,6 @@ Currency
 omim
 musicians
 Comedian
-openingDate
 shipDraft
 throws
 orbitalFlights
@@ -342,7 +336,6 @@ distanceToEdinburgh
 leftTributary
 numberOfVineyards
 classes
-architect
 hgncid
 NationalCollegiateAthleticAssociationAthlete
 Settlement
@@ -356,7 +349,7 @@ alongside
 governmentPlace
 originalMaximumBoatLength
 lowestPosition
-width
+narrator
 publicationDate
 cosparId
 governmentType
@@ -416,7 +409,6 @@ disbanded
 portfolio
 endowment
 totalTravellers
-ground
 Infrastructure
 censusYear
 office
@@ -561,7 +553,7 @@ frozen
 launches
 mainspan
 cmykCoordinateBlack
-budget
+Sales
 canonizedDate
 crewMember
 teamSize
@@ -595,7 +587,6 @@ PersonFunction
 compressionRatio
 speaker
 chromosome
-aircraftHelicopterAttack
 games
 AustralianFootballLeague
 parentMountainPeak
@@ -658,7 +649,6 @@ tvComId
 lcc
 fuelConsumption
 port1DockingDate
-spokenIn
 suborbitalFlights
 poleDriverCountry
 shipDisplacement
@@ -705,7 +695,6 @@ lunarRover
 inclination
 facultySize
 cargoWater
-assembly
 officialLanguage
 compiler
 dcc
@@ -792,7 +781,6 @@ winsAtKLPGA
 PlayboyPlaymate
 wavelength
 hasVariant
-narrator
 irishName
 fuelType
 dissolutionYear

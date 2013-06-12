@@ -45,8 +45,28 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
 
+  RelationalNoun(["seating"/noun "capacity"/noun],dbpedia:seatingCapacity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("capacity",dbpedia:seatingCapacity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
   RelationalAdjective("located",dbpedia:address,
     relationalArg = PrepositionalObject("in")),
+
+  // architect 
+
+  RelationalNoun("architect",dbpedia:architect,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  StateVerb("design",dbpedia:architect, 
+    propSubj = DirectObject,
+    propObj  = Subject),
+  StateVerb("build",dbpedia:architect, 
+    propSubj = DirectObject,
+    propObj  = Subject)
+
 )
 
 

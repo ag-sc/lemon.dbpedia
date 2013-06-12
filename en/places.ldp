@@ -40,6 +40,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   //// Properties
 
+  // locations
+
   RelationalAdjective("located",dbpedia:country,
     relationalArg = PrepositionalObject("in")),
   RelationalAdjective("located",dbpedia:range,
@@ -58,6 +60,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   RelationalNoun("part",dbpedia:range,
     propObj = PossessiveAdjunct),
 
+  // crosses
+
   StateVerb("cross",dbpedia:crosses),  
   StateVerb("traverse",dbpedia:crosses),
   StateVerb("bridge",dbpedia:crosses),
@@ -68,6 +72,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   RelationalNoun("bridge",dbpedia:crosses,
     propObj = PrepositionalObject("over")),
     
+  // source(Country)
+
   RelationalNoun("source",dbpedia:source,
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg), 
@@ -76,8 +82,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   StateVerb("originate",dbpedia:sourceCountry,
     propObj = PrepositionalObject("in")),
     
+  // border
+
   StateVerb("border",dbpedia:border),
   
+  // residence
+
   RelationalNoun("residence",dbpedia:residence,
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
@@ -85,6 +95,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   StateVerb("reside",dbpedia:residence,
     propObj = PrepositionalObject("in")),
     
+  // elevations
+
   RelationalNoun(["highest"/adjective "mountain"/noun],dbpedia:highestMountain,
     propObj = PossessiveAdjunct),
   RelationalNoun(["highest"/adjective "mountain"/noun],dbpedia:highestMountain,
@@ -186,9 +198,16 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   ConsequenceVerb("open",dbpedia:dateUse,
      propSubj = lex:canal as Subject, 
-     propObj  = lex:dateOpened as PrepositionalObject("in")),
+     propObj  = lex:dateUsed as PrepositionalObject("in")),
+  ConsequenceVerb("open",dbpedia:openingDate,
+     propSubj = lex:place as Subject, 
+     propObj  = lex:dateOpened as PrepositionalObject("on")),
 
   RelationalNoun("length",dbpedia:length,
+     propSubj = PossessiveAdjunct,
+     propObj = CopulativeArg), 
+
+  RelationalNoun("width",dbpedia:width,
      propSubj = PossessiveAdjunct,
      propObj = CopulativeArg), 
 

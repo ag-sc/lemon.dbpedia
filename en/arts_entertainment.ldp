@@ -211,6 +211,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
         propObj  = CopulativeArg),
   RelationalNoun("sequel",dbpedia:subsequentWork,
         propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+
+  RelationalNoun("budget",dbpedia:budget,
+        propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg)
 
 )

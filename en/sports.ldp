@@ -114,10 +114,24 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propSubj = Subject restrictedTo dbpedia:SportsManager,
      propObj  = DirectObject),
 
-  // homeArena 
+  // homeArena, ground 
 
   RelationalNoun(["home"/noun "arena"/noun],dbpedia:homeArena,
      propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["home"/noun "stadium"/noun],dbpedia:homeArena,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["home"/noun "stadium"/noun],dbpedia:ground,
+     propSubj = PossessiveAdjunct restrictedTo dbpedia:Stadium,
+     propObj  = CopulativeArg),
+  RelationalAdjective("based",dbpedia:ground, 
+     relationalArg = PrepositionalObject("in") restrictedTo dbpedia:PopulatedPlace),
+  RelationalNoun("home",dbpedia:homeArena,
+     propSubj = PrepositionalObject("of"),
+     propObj  = CopulativeArg),
+  RelationalNoun("home",dbpedia:ground,
+     propSubj = PrepositionalObject("of"),
      propObj  = CopulativeArg),
 
   // capacity 
@@ -158,8 +172,11 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   // plays 
 
   IntersectiveDataPropertyAdjective("right-handed",dbpedia:plays,"Right-handed"),
+  IntersectiveDataPropertyAdjective("right-handed",dbpedia:plays,"Right-handed (two-handed backhand)"),
+  IntersectiveDataPropertyAdjective("right-handed",dbpedia:plays,"Right-handed (one-handed backhand)"),
   IntersectiveDataPropertyAdjective("left-handed",dbpedia:plays,"Left-handed"),
+  IntersectiveDataPropertyAdjective("left-handed",dbpedia:plays,"Left-handed (two-handed backhand)"),
+  IntersectiveDataPropertyAdjective("left-handed",dbpedia:plays,"Left-handed (one-handed backhand)"),
   IntersectiveDataPropertyAdjective("ambidextrous",dbpedia:plays,"Ambidextrous")
-  // TODO: there are a lot of different literals used ("left-handed", "Left Handed", "Left-handed (two-handed backhand)", etc.)
 
 )

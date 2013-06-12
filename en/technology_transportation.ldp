@@ -33,9 +33,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   //// Properties 
 
-  // averageSpeed
+  // averageSpeed, topSpeed
 
   RelationalNoun(["average"/adjective "speed"/noun],dbpedia:averageSpeed,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun(["top"/adjective "speed"/noun],dbpedia:topSpeed,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
 
@@ -57,6 +60,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   ConsequenceVerb("write",dbpedia:programmingLanguage,
        propSubj = lex:software as Subject, 
-       propObj  = lex:language as PrepositionalObject("in"))
+       propObj  = lex:language as PrepositionalObject("in")),
+
+  // others 
+
+  RelationalNoun("beam",dbpedia:shipBeam,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+
+  RelationalAdjective("assembled",dbpedia:assembly,
+       relationalArg = PrepositionalObject("in")), 
 
 )
