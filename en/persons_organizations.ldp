@@ -199,6 +199,16 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   StateVerb("graduate",dbpedia:almaMater,
      propObj = PrepositionalObject("from")),
 
+  // numberOfStudents 
+
+  RelationalNoun("enrollment",dbpedia:numberOfStudents,
+     propSubj = PrepositionalObject("of"),
+     propObj  = CopulativeArg),
+  RelationalNoun(["student"/noun "population"/noun],dbpedia:numberOfStudents,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  StateVerb("serve",dbpedia:numberOfStudents),
 
   // field 
 
@@ -393,7 +403,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   RelationalNoun("mascot",dbpedia:mascot,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg), 
-
   RelationalNoun("slogan",dbpedia:slogan,
     propSubj = PossessiveAdjunct,
     propObj = CopulativeArg), 
@@ -404,6 +413,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   RelationalAdjective("affiliated",dbpedia:affiliation, 
      relationalArg = PrepositionalObject("with")),
   RelationalAdjective("affiliated",dbpedia:affiliation, 
-     relationalArg = PrepositionalObject("to"))
+     relationalArg = PrepositionalObject("to")), 
+
+  // frequency 
+
+  RelationalNoun("frequency",dbpedia:frequency,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+
+  StateVerb("broadcast",dbpedia:frequency,
+    propObj = PrepositionalObject("on"))
 
 )

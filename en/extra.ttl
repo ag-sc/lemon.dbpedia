@@ -38,7 +38,12 @@
                 :writeTheMusicFor,
                 :composeTheMusicFor,
                 :travelWithAnAverageSpeedOf,
-                :wasCoach .
+                :wasCoach,
+                :addedToNRHP,
+                :placedOnNRHP,
+                :haveEnrollmentOf,
+                :withEnrollmentOf,
+                :runForEpisodes .
 
 
 ## Person ##
@@ -111,6 +116,13 @@
                 lemon:isA :arg1high  ] ,
               [ lemon:reference <http://dbpedia.org/ontology/height> ;
                 lemon:subjOfProp :arg1high ;
+                lemon:objOfProp  :arg2high ] , 
+              [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/elevation> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1high  ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/elevation> ;
+                lemon:subjOfProp :arg1high ;
                 lemon:objOfProp  :arg2high ] .
 
 :tall a lemon:Word ;
@@ -127,6 +139,13 @@
                                   oils:degree oils:strong ] ;
                 lemon:isA :arg1tall  ] ,
               [ lemon:reference <http://dbpedia.org/ontology/height> ;
+                lemon:subjOfProp :arg1tall ;
+                lemon:objOfProp  :arg2tall ] , 
+              [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/elevation> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1tall ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/elevation> ;
                 lemon:subjOfProp :arg1tall ;
                 lemon:objOfProp  :arg2tall ] .
 
@@ -446,7 +465,6 @@
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
-
 ## synonym ##
 
 :sameAs a lemon:Phrase ;
@@ -455,6 +473,46 @@
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
+
+## added ## 
+
+:addedToNRHP a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :be :added :to :the :NRHP :addedDate ) ;
+  lexinfo:tense lexinfo:past ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/added> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :addedDate ] .
+
+:placedOnNRHP a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :be :placed :on :the :NRHP :addedDate ) ;
+  lexinfo:tense lexinfo:past ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/added> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :addedDate ] .
+
+:addedDate lemon:marker :on ; 
+           lemon:optional "true"^^xsd:boolean .
+
+
+## numberOfStudents, numberOfEpisodes ## 
+
+:haveEnrollmentOf a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :have :an :enrollment :of :arg2 :student ) ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfStudents> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] .
+
+:withEnrollmentOf a lemon:Phrase ;
+  lemon:decomposition ( :with :an :enrollment :of :arg2 :student ) ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfStudents> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] .
+
+:runForEpisodes a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :run :for :arg2 :episode ) ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfStudents> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] .
 
 
 #### Phrase parts and markers ####
@@ -504,6 +562,23 @@
   lemon:canonicalForm [ lemon:writtenRep "wear"@en ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
+:add a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "add"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:place a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "place"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:serve a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "serve"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+## Participles ## 
+
+:added  lexinfo:participleFormOf :add ;   lemon:canonicalForm [ lemon:writtenRep "added"@en ] .
+:placed lexinfo:participleFormOf :place ; lemon:canonicalForm [ lemon:writtenRep "placed"@en ] .
+
 ## Nouns ##
 
 :influence a lemon:Word ;
@@ -526,6 +601,18 @@
   lemon:canonicalForm [ lemon:writtenRep "music"@en ] ;
   lexinfo:partOfSpeech lexinfo:noun .
 
+:enrollment a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "enrollment"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:student a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "student"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:episode a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "episode"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
 ## Adjectives ##
 
 :average a lemon:Word ;
@@ -542,9 +629,20 @@
   lemon:canonicalForm [ lemon:writtenRep "the"@en ] ;
   lexinfo:partOfSpeech lexinfo:article .
 
+:a a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "a"@en ] ;
+  lexinfo:partOfSpeech lexinfo:determiner .
+
 :an a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "an"@en ] ;
   lexinfo:partOfSpeech lexinfo:determiner .
+
+## Proper nouns ## 
+
+:NRHP a lemon:LexicalEntry ;
+  lemon:canonicalForm [ lemon:writtenRep "National Register of Historic Places"@en ] ;
+  lemon:otherForm [ lemon:writtenRep "NRHP"@en ] ;
+  lexinfo:partOfSpeech lexinfo:properNoun .
 
 ## Prepositions ##
 
@@ -577,4 +675,7 @@
   lexinfo:partOfSpeech lexinfo:preposition .
 :as a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "as"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+:with a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "with"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .

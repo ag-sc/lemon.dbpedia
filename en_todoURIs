@@ -3,7 +3,7 @@ nationalYears
 dorlandsSuffix
 conservationStatusSystem
 amgid
-subsequentWork
+decideDate
 latestReleaseVersion
 numberOfPostgraduateStudents
 memberOfParliament
@@ -100,10 +100,8 @@ retired
 classification
 productionStartYear
 setupTime
-winsAtJapan
 hipSize
 county
-waistSize
 cityType
 composer
 militaryBranch
@@ -138,7 +136,6 @@ wineProduced
 sourceConfluenceMountain
 AdministrativeRegion
 militaryCommand
-bSide
 GreenAlga
 era
 apoapsis
@@ -261,7 +258,6 @@ displacement
 related
 lunarLandingSite
 bedCount
-frequency
 MilitaryPerson
 originalEndPoint
 year
@@ -328,7 +324,6 @@ areaOfCatchment
 draft
 saint
 chairmanTitle
-locatedInArea
 inflow
 hsvCoordinateSaturation
 ClubMoss
@@ -381,7 +376,7 @@ commandModule
 mouthMountain
 HistoricPlace
 Legislature
-added
+twinCountry
 seasonNumber
 associatedBand
 sportGoverningBody
@@ -448,7 +443,7 @@ launchVehicle
 actingHeadteacher
 aircraftPatrol
 whaDraftTeam
-sisterStation
+waistSize
 watershed
 careerPrizeMoney
 missionDuration
@@ -459,7 +454,6 @@ facilityId
 port1DockedTime
 choreographer
 foundationOrganisation
-numberOfStudents
 administrator
 RadioControlledRacingLeague
 numberOfDoctoralStudents
@@ -590,7 +584,7 @@ partner
 aircraftHelicopterCargo
 id
 rgbCoordinateBlue
-maximumElevation
+winsAtJapan
 cuisine
 longtype
 education
@@ -672,7 +666,6 @@ regionalLanguage
 nationalRanking
 airDate
 meshName
-minimumElevation
 averageClassSize
 originalMaximumBoatBeam
 firstDriver
@@ -690,7 +683,6 @@ frequentlyUpdated
 largestWin
 subsequentInfrastructure
 sisterCollege
-twinCountry
 fastestDriver
 abbreviation
 targetSpaceStation
@@ -747,7 +739,6 @@ aspectRatio
 introduced
 fuelCapacity
 lunarEvaTime
-decideDate
 youthYears
 coProducer
 minimumInclination

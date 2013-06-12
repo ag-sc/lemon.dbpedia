@@ -190,6 +190,27 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   RelationalNoun("ISBN",dbpedia:isbn,
         propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  RelationalNoun("B-side",dbpedia:bSide,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  RelationalNoun(["sister"/noun "station"/noun],dbpedia:sisterStation,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun(["sister"/noun "channel"/noun],dbpedia:sisterStation,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun(["sister"/noun "network"/noun],dbpedia:sisterStation,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  RelationalNoun("follow-up",dbpedia:subsequentWork,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun("sequel",dbpedia:subsequentWork,
+        propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg)
 
 )
