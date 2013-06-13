@@ -102,7 +102,6 @@ setupTime
 hipSize
 county
 cityType
-composer
 militaryBranch
 intercommunality
 rgbCoordinateRed
@@ -243,7 +242,6 @@ bats
 athletics
 numberOfStaff
 OlympicResult
-dateCompleted
 lastLaunch
 series
 latestPreviewDate
@@ -270,7 +268,6 @@ contractAward
 tournamentRecord
 homeStadium
 minimumTemperature
-completionDate
 oilSystem
 numberOfParkingSpaces
 automobileModel

@@ -194,7 +194,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
 
-  // others
+  // openend and completed
 
   ConsequenceVerb("open",dbpedia:dateUse,
      propSubj = lex:canal as Subject, 
@@ -202,6 +202,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ConsequenceVerb("open",dbpedia:openingDate,
      propSubj = lex:place as Subject, 
      propObj  = lex:dateOpened as PrepositionalObject("on")),
+
+  ConsequenceVerb("complete",dbpedia:completionDate,
+     propSubj = lex:place as Subject, 
+     propObj  = lex:dateCompleted as PrepositionalObject("on")),
+  ConsequenceVerb("complete",dbpedia:dateCompleted,
+     propSubj = lex:place as Subject, 
+     propObj  = lex:dateCompleted as PrepositionalObject("on")),
+
+  // others
 
   RelationalNoun("length",dbpedia:length,
      propSubj = PossessiveAdjunct,

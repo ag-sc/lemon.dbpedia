@@ -100,6 +100,18 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
         propSubj = DirectObject,
         propObj  = Subject),
 
+  // composer 
+
+  RelationalNoun("composer",dbpedia:composer,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+  StateVerb("compose",dbpedia:composer,
+        propSubj = DirectObject,
+        propObj  = Subject),
+  StateVerb("write",dbpedia:composer,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
   // musicalBand
 
  StateVerb("write",dbpedia:musicalBand,
@@ -149,7 +161,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
         propSubj = PrepositionalObject("of"),
         propObj = CopulativeArg),
 
-  // releaseDate 
+  // releaseDate, completionDate
 
   RelationalNoun(["release"/noun "date"/noun],dbpedia:releaseDate,
         propSubj = PossessiveAdjunct,
@@ -157,10 +169,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   ConsequenceVerb("release",dbpedia:releaseDate,
         propSubj = lex:pieceOfWork as Subject, 
-        propObj = lex:date as PrepositionalObject("on")),
+        propObj  = lex:date as PrepositionalObject("on")),
 
   StateVerb(["come"/verb "out"/particle],dbpedia:releaseDate,
         propObj  = PrepositionalObject("on")),
+
+  StateVerb("air",dbpedia:completionDate,
+        propSubj = Subject restrictedTo dbpedia:TelevisionShow,
+        propObj  = PrepositionalObject("until")),
 
   // recordDate 
 

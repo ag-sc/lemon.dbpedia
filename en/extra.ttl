@@ -31,6 +31,7 @@
                 :write,
                 :discover,
                 :discovery,
+                :air,
                 :conservationStatus,
                 :haveInhabitant,
                 :haveEmployee,
@@ -385,6 +386,26 @@
 :arg3discovery lemon:optional "true"^^xsd:boolean .
 
 
+## releaseDate, completionDate ## 
+
+:air a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "air"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:IntransitivePPFrame ;
+		      lexinfo:subject              :arg1air ;
+                      lexinfo:prepositionalAdjunct :arg2air ;
+                      lexinfo:prepositionalAdjunct :arg3air ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/releaseDate>;
+                                 lemon:subjOfProp :arg1air;
+                                 lemon:objOfProp  :arg2air ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/completionDate>;
+                                 lemon:subjOfProp :arg1air;
+                                 lemon:objOfProp  :arg3air;
+                                 lemon:propertyDomain <http://dbpedia.org/ontology/TelevisionShow> ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg2air lemon:marker :from .
+:arg3air lemon:marker :to .
+
+
 ## conservationStatusSystem ##
 
 :conservationStatus a lemon:Word ;
@@ -450,7 +471,7 @@
 ## musicBy ##
 
 :haveMusicBy a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_have :component_music :component_by :arg2 ) ;
+  lemon:decomposition ( :arg1 :component_have :component_music :by :arg2 ) ;
   lemon:canonicalForm [ lemon:writtenRep "have music by"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/musicBy>;
                 lemon:subjOfProp :arg1 ;
@@ -460,7 +481,7 @@
                 lemon:objOfProp  :arg2 ] .
 
 :writeTheMusicFor a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_write :component_the :component_music :component_for :arg2 );
+  lemon:decomposition ( :arg1 :component_write :component_the :component_music :for :arg2 );
   lemon:canonicalForm [ lemon:writtenRep "write the music for"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/musicBy> ;
                 lemon:subjOfProp :arg1 ;
@@ -470,7 +491,7 @@
                 lemon:objOfProp  :arg2 ] .
 
 :composeTheMusicFor a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_compose :component_the :component_music :component_for :arg2 );
+  lemon:decomposition ( :arg1 :component_compose :component_the :component_music :for :arg2 );
   lemon:canonicalForm [ lemon:writtenRep "compose the music for"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/musicBy> ;
                 lemon:subjOfProp :arg1 ;
@@ -483,7 +504,7 @@
 ## averageSpeed ##
 
 :travelWithAnAverageSpeedOf a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_travel :component_with :component_an :component_average :component_speed :component_of :arg2 ) ;
+  lemon:decomposition ( :arg1 :component_travel :component_with :component_an :component_average :component_speed :of :arg2 ) ;
   lemon:canonicalForm [ lemon:writtenRep "travel with an average speed of"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/averageSpeed> ;
                 lemon:subjOfProp :arg1 ;
@@ -492,7 +513,7 @@
 ## formerCoach ##
 
 :wasCoach a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_be :component_coach :component_of :arg2 ) ;
+  lemon:decomposition ( :arg1 :component_be :component_coach :of :arg2 ) ;
   lemon:canonicalForm [ lemon:writtenRep "was coach of"@en ] ;
   lexinfo:tense lexinfo:past ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/formerCoach> ;
@@ -511,7 +532,7 @@
 ## synonym ##
 
 :sameAs a lemon:Phrase ;
-  lemon:decomposition ( :arg2 :component_be :component_the :component_same :component_as :arg1 ) ;
+  lemon:decomposition ( :arg2 :component_be :component_the :component_same :as :arg1 ) ;
   lemon:canonicalForm [ lemon:writtenRep "be the same as"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/synonym> ;
                 lemon:subjOfProp :arg1 ;
@@ -521,7 +542,7 @@
 ## added ## 
 
 :addedToNRHP a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_be :component_added :component_to :component_the :component_NRHP :addedDate ) ;
+  lemon:decomposition ( :arg1 :component_be :component_added :to :component_the :component_NRHP :addedDate ) ;
   lemon:canonicalForm [ lemon:writtenRep "be added to the NRHP"@en ] ;
   lexinfo:tense lexinfo:past ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/added> ;
@@ -529,7 +550,7 @@
                 lemon:objOfProp  :addedDate ] .
 
 :placedOnNRHP a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_be :component_placed :component_on :component_the :component_NRHP :addedDate ) ;
+  lemon:decomposition ( :arg1 :component_be :component_placed :on :component_the :component_NRHP :addedDate ) ;
   lemon:canonicalForm [ lemon:writtenRep "be placed on the NRHP"@en ] ;
   lexinfo:tense lexinfo:past ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/added> ;
@@ -703,34 +724,34 @@
 
 ## Prepositions ##
 
-:component_for a lemon:Word ;
+:for a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "for"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-:component_by a lemon:Word ;
+:by a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "by"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-:component_from a lemon:Word ;
+:from a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "from"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-:component_with a lemon:Word ;
+:with a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "with"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-:component_in a lemon:Word ;
+:in a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "in"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-:component_into a lemon:Word ;
+:into a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "into"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-:component_on a lemon:Word ;
+:on a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "on"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-:component_of a lemon:Word ;
+:of a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "of"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-:component_to a lemon:Word ;
+:to a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "to"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-:component_as a lemon:Word ;
+:as a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "as"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
 
