@@ -25,9 +25,9 @@ def run():
   for f in files:
       print 'Loading ' + str(f) + '...'
       if f.endswith('.owl') or f.endswith('.rdf'):
-         graph.parse(f)
+         graph = graph.parse(f)
       elif f.endswith('.ttl') or f[:-3] in ('.n3','.nt'):
-         graph.parse(f,format='n3') 
+         graph = graph.parse(f,format='n3') 
       else: 
          print 'Unknown format: '+f
          exit(1)

@@ -15,4 +15,4 @@ done
 
 python RDFmerger.py $1 $1/extra.ttl $1/references.ttl target/tmp/ 'target/dbpedia_'$1'.rdf'
 
-# rm target/tmp/*
+rm target/tmp/*
