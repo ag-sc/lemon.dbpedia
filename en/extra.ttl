@@ -58,50 +58,6 @@
                         lexinfo:number lexinfo:plural ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Person> ] .
 
-:mother a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm [ lemon:writtenRep "mother"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
-                      lexinfo:copulativeArg     :arg1mother ;
-                      lexinfo:possessiveAdjunct :arg2mother ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/child> ;
-                lemon:subjOfProp :arg1mother ;
-                lemon:objOfProp  :arg2mother ;
-                lemon:propertyDomain <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#Female> ] .
-
-:father a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm [ lemon:writtenRep "father"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
-                      lexinfo:copulativeArg     :arg1father ;
-                      lexinfo:possessiveAdjunct :arg2father ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/child> ;
-                lemon:subjOfProp :arg1father ;
-                lemon:objOfProp  :arg2father ;
-                lemon:propertyDomain <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#Male> ] .
-
-:grandmother a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm [ lemon:writtenRep "grandmother"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
-                      lexinfo:copulativeArg     :arg1grandmother ;
-                      lexinfo:possessiveAdjunct :arg2grandmother ] ;
-  lemon:sense [ lemon:reference <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#grandchild> ;
-                lemon:subjOfProp :arg1grandmother ;
-                lemon:objOfProp  :arg2grandmother ;
-                lemon:propertyDomain <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#Female> ] .
-
-:grandfather a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm [ lemon:writtenRep "grandfather"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
-                      lexinfo:copulativeArg     :arg1grandfather ;
-                      lexinfo:possessiveAdjunct :arg2grandfather ] ;
-  lemon:sense [ lemon:reference <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#grandchild> ;
-                lemon:subjOfProp :arg1grandfather ;
-                lemon:objOfProp  :arg2grandfather ;
-                lemon:propertyDomain <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#Male> ] .
-
 
 ## height, length, area ## 
 
@@ -295,7 +251,7 @@
   lemon:canonicalForm [ lemon:writtenRep "record"@en ] ;
   lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
                       lexinfo:subject :arg1record ;
-                      lexinfo:directObject :arg2record ; ] ;
+                      lexinfo:directObject :arg2record ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/artist>;
                 lemon:subjOfProp :arg2record;
                 lemon:objOfProp  :arg1record;
@@ -331,8 +287,8 @@
                       lexinfo:subject :arg1make ;
                       lexinfo:directObject :arg2make ; ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/genre>;
-                lemon:subjOfProp :arg1record;
-                lemon:objOfProp  :arg2record;
+                lemon:subjOfProp :arg1make;
+                lemon:objOfProp  :arg2make;
                 lemon:propertyRange <http://dbpedia.org/ontology/MusicGenre> ] .
 
 :write a lemon:Word ;

@@ -1,6 +1,6 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
 
   //// Classes
 

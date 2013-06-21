@@ -2,7 +2,7 @@
 @prefix resource: <http://dbpedia.org/resource/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
 
   //// Classes
 
@@ -143,6 +143,50 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
      propObj  = CopulativeArg), 
   RelationalNoun("child",dbpedia:parent,
      propObj  = PossessiveAdjunct) with plural "children", 
+
+  RelationalNoun("daugther",dbpedia:child,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Female), 
+  RelationalNoun("daugther",dbpedia:parent,
+     propSubj = CopulativeArg restrictedTo lex:Female,
+     propObj  = PossessiveAdjunct), 
+  RelationalNoun("son",dbpedia:child,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Male), 
+  RelationalNoun("son",dbpedia:parent,
+     propSubj = CopulativeArg restrictedTo lex:Male,
+     propObj  = PossessiveAdjunct), 
+
+  RelationalNoun("mother",dbpedia:child,
+     propSubj = CopulativeArg restrictedTo lex:Female,
+     propObj  = PossessiveAdjunct), 
+  RelationalNoun("mother",dbpedia:parent,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Female), 
+  RelationalNoun("father",dbpedia:child,
+     propSubj = CopulativeArg restrictedTo lex:Male,
+     propObj  = PossessiveAdjunct), 
+  RelationalNoun("father",dbpedia:parent,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Male), 
+
+  RelationalNoun("grandmother",lex:grandchild,
+     propSubj = CopulativeArg restrictedTo lex:Female,
+     propObj  = PossessiveAdjunct), 
+  RelationalNoun("grandfather",lex:grandchild,
+     propSubj = CopulativeArg restrictedTo lex:Male,
+     propObj  = PossessiveAdjunct), 
+
+  RelationalNoun("grandchild",lex:grandchild,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) with plural "grandchildren", 
+  RelationalNoun("granddaughter",lex:grandchild,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Female), 
+  RelationalNoun("grandson",lex:grandchild,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Male), 
+
 
   // spouse
 
