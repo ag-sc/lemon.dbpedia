@@ -231,6 +231,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   RelationalNoun("budget",dbpedia:budget,
         propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  RelationalNoun("review",dbpedia:review,
+        propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg)
 
 )

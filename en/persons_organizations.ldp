@@ -50,13 +50,16 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
 
   ClassNoun("politician",dbpedia:Politician),
   ClassNoun("governor",dbpedia:Governor),
+  ClassNoun("governor",lex:Governor),
   ClassNoun("president",dbpedia:President),
+  ClassNoun("president",lex:President),
   ClassNoun(["vice"/noun "president"/noun],dbpedia:VicePresident),
   ClassNoun("monarch",dbpedia:Monarch),
   ClassNoun(["prime"/adjective "minister"/noun],dbpedia:PrimeMinister),
   ClassNoun("premier",dbpedia:PrimeMinister),
   ClassNoun("chancellor",dbpedia:Chancellor),
   ClassNoun("mayor",dbpedia:Mayor),
+  ClassNoun("mayor",lex:Mayor),
   ClassNoun("senator",dbpedia:Senator),
   ClassNoun("ambassador",dbpedia:Ambassador),
 
@@ -441,14 +444,17 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
      propObj  = lex:date as PrepositionalObject("in")),
 
 
-  // mascot, slogan
+  // mascot, slogan, title
 
   RelationalNoun("mascot",dbpedia:mascot,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg), 
   RelationalNoun("slogan",dbpedia:slogan,
     propSubj = PossessiveAdjunct,
-    propObj = CopulativeArg), 
+    propObj  = CopulativeArg), 
+
+  RelationalAdjective("known",dbpedia:title,
+    relationalArg = PrepositionalObject("as")),
 
 
   // affiliation
@@ -465,6 +471,26 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
     propObj  = CopulativeArg), 
 
   StateVerb("broadcast",dbpedia:frequency,
-    propObj = PrepositionalObject("on"))
+    propObj = PrepositionalObject("on")),
+
+
+  // status 
+
+  RelationalNoun("status",dbpedia:status,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+  IntersectiveDataPropertyAdjective("active",dbpedia:status,"Active"),
+  IntersectiveDataPropertyAdjective("retired",dbpedia:status,"Retired"),
+  IntersectiveDataPropertyAdjective("operational",dbpedia:status,"Operational"),
+  IntersectiveDataPropertyAdjective("scrapped",dbpedia:status,"Scrapped"), 
+
+  // product 
+
+  RelationalNoun("product",dbpedia:product,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  StateVerb("produce",dbpedia:product), 
+  StateVerb("create",dbpedia:product), 
+  StateVerb("develop",dbpedia:product)
 
 )

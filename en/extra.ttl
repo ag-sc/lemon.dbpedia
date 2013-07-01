@@ -5,16 +5,16 @@
 @prefix oils: <http://www.lemon-model.net/oils#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
 
+@prefix : <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
 
 :lexicon a lemon:Lexicon ;
     lemon:language "en" ;
     lemon:entry :people,
-                :mother,
-                :father,
-                :grandmother,
-                :grandfather,
+                :mayor,
+                :governor,
+                :president,
                 :high,
                 :long,
                 :wide,
@@ -57,6 +57,44 @@
   lemon:canonicalForm [ lemon:writtenRep "people"@en ; 
                         lexinfo:number lexinfo:plural ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Person> ] .
+
+## Mayor, Governor, President
+
+:mayor a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm [ lemon:writtenRep "mayor"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
+		      lexinfo:copulativeArg :arg1mayor ;
+                      lexinfo:possessiveAdjunct :arg2mayor ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference lex:Mayor;
+                                 lemon:isA :arg1mayor ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/leader>;
+                                 lemon:subjOfProp :arg2mayor ;
+                                 lemon:objOfProp  :arg1mayor ] ] .
+
+:governor a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm [ lemon:writtenRep "governor"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
+		      lexinfo:copulativeArg :arg1governor ;
+                      lexinfo:possessiveAdjunct :arg2governor ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference lex:Governor;
+                                 lemon:isA :arg1governor ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/leader>;
+                                 lemon:subjOfProp :arg2governor ;
+                                 lemon:objOfProp  :arg1governor ] ] .
+
+:president a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm [ lemon:writtenRep "president"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
+		      lexinfo:copulativeArg :arg1president ;
+                      lexinfo:possessiveAdjunct :arg2president ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference lex:President;
+                                 lemon:isA :arg1president ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/leader>;
+                                 lemon:subjOfProp :arg2president ;
+                                 lemon:objOfProp  :arg1president ] ] .
 
 
 ## height, length, area ## 

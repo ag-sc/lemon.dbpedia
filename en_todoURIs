@@ -87,7 +87,6 @@ whaDraft
 peabodyAward
 dateAct
 cargoFuel
-CanadianFootballTeam
 personFunction
 binomial
 MemberOfParliament
@@ -110,7 +109,6 @@ upperAge
 nationalOlympicCommittee
 pubchem
 noteOnRestingPlace
-leaderTitle
 vehicle
 battleHonours
 type
@@ -161,7 +159,7 @@ dateOfBurial
 landingVehicle
 maximumTemperature
 statisticValue
-product
+administrator
 sheading
 latestReleaseDate
 accessDate
@@ -319,7 +317,6 @@ inflow
 hsvCoordinateSaturation
 ClubMoss
 season
-relative
 successfulLaunches
 principalArea
 prospectLeague
@@ -410,7 +407,7 @@ Infrastructure
 censusYear
 office
 lunarSurfaceTime
-title
+CanadianFootballTeam
 faaLocationIdentifier
 sourceConfluenceElevation
 state
@@ -443,7 +440,7 @@ facilityId
 port1DockedTime
 choreographer
 foundationOrganisation
-administrator
+relative
 RadioControlledRacingLeague
 numberOfDoctoralStudents
 college
@@ -455,7 +452,6 @@ valvetrain
 screenActorsGuildAward
 brainInfoType
 nationalTeam
-review
 colours
 rankInFinalMedalCount
 eruptionYear
@@ -587,7 +583,6 @@ chromosome
 games
 AustralianFootballLeague
 parentMountainPeak
-status
 commune
 sixthFormStudents
 uniprot
@@ -687,7 +682,6 @@ productionEndDate
 militaryUnitSize
 mirDockings
 GovernmentType
-leader
 lunarRover
 inclination
 facultySize

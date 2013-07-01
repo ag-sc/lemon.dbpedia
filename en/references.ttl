@@ -21,6 +21,16 @@ lex:Male rdf:type owl:Restriction ;
 
 lex:grandchild owl:propertyChainAxiom ( <http://dbpedia.org/ontology/child> <http://dbpedia.org/ontology/child> ) .
 
+lex:Mayor rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:leaderTitle ;
+   owl:hasValue   "Mayor" .
+lex:Governor rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:leaderTitle ;
+   owl:hasValue   "Governor" .
+lex:President rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:leaderTitle ;
+   owl:hasValue   "President" .
+
 ## places ## 
 
 :Department rdf:type owl:Restriction ;
