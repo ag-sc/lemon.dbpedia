@@ -14,6 +14,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun(["generating"/noun "plant"/noun],dbpedia:PowerStation),
   ClassNoun(["generating"/noun "station"/noun],dbpedia:PowerStation),
   ClassNoun(["power"/noun "plant"/noun],dbpedia:PowerStation),
+  ClassNoun(["automobile"/noun "engine"/noun],dbpedia:AutomobileEngine),
 
   // Transportation
 
@@ -30,6 +31,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun("vehicle",dbpedia:Automobile),
   ClassNoun("locomotive",dbpedia:Locomotive),
   ClassNoun("engine",dbpedia:Locomotive),
+  ClassNoun("infrastructure",dbpedia:Infrastructure),  
+
 
   //// Properties 
 

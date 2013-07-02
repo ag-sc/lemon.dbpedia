@@ -3,12 +3,13 @@
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_4#>,"en",
 
   //// Classes
-  
+
   ClassNoun("building",dbpedia:Building),
   ClassNoun(["historic"/adjective "building"/noun],dbpedia:HistoricBuilding),
   ClassNoun(["historical"/adjective "building"/noun],dbpedia:HistoricBuilding),
   ClassNoun("stadium",dbpedia:Stadium),
   ClassNoun("arena",dbpedia:Arena),
+  ClassNoun(["educational"/adjective "institution"/noun],dbpedia:EducationalInstitution),
   ClassNoun("school",dbpedia:School),
   ClassNoun("college",dbpedia:College),
   ClassNoun("bridge",dbpedia:Bridge),

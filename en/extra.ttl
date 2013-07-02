@@ -18,10 +18,13 @@
                 :high,
                 :long,
                 :wide,
+                :deep,
                 :tall,
                 :big,
                 :populationAsOf,
                 :active,
+                :activeSince,
+                :activeUntil,
                 :serve,
                 :athletics,
                 :Olympics,
@@ -173,7 +176,7 @@
   lemon:canonicalForm [ lemon:writtenRep "wide"@en ] ;
   lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
                       lexinfo:copulativeSubject :arg1wide ;
-                      lexinfo:attributiveArg    :arg1wide ],                      
+                      lexinfo:attributiveArg    :arg2wide ],                      
                     [ rdf:type lexinfo:AdjectiveScaleFrame ;
                       lexinfo:copulativeSubject   :arg1wide ;
                       lexinfo:adverbialComplement :arg2wide ];
@@ -184,6 +187,23 @@
               [ lemon:reference <http://dbpedia.org/ontology/width> ;
                 lemon:subjOfProp :arg1wide ;
                 lemon:objOfProp  :arg2wide ] .
+
+:deep a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "deep"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
+                      lexinfo:copulativeSubject :arg1deep ;
+                      lexinfo:attributiveArg    :arg2deep ],                      
+                    [ rdf:type lexinfo:AdjectiveScaleFrame ;
+                      lexinfo:copulativeSubject   :arg1deep ;
+                      lexinfo:adverbialComplement :arg2deep ];
+  lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/depth> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1deep  ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/depth> ;
+                lemon:subjOfProp :arg1deep ;
+                lemon:objOfProp  :arg2deep ] .
 
 :big a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:adjective ;
@@ -250,8 +270,39 @@
                                  lemon:subjOfProp :arg1active ;
                                  lemon:objOfProp  :arg3active ] ] .
 
-:arg2active lemon:marker :from ; lemon:optional "true"^^xsd:boolean .
-:arg3active lemon:marker :to   ; lemon:optional "true"^^xsd:boolean .
+:arg2active lemon:marker :from .
+:arg3active lemon:marker :to .
+
+:activeSince a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "active"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePPFrame ;
+                      lexinfo:copulativeSubject    :arg1activeSince ;
+                      lexinfo:prepositionalAdjunct :arg2activeSince ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/activeYearsStartDate> ;
+                lemon:subjOfProp :arg1activeSince ;
+                lemon:objOfProp  :arg2activeSince ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/activeYearsStartYear> ;
+                lemon:subjOfProp :arg1activeSince ;
+                lemon:objOfProp  :arg2activeSince ] .
+
+:arg2activeSince lemon:marker :since .
+
+:activeUntil a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "active"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePPFrame ;
+                      lexinfo:copulativeSubject    :arg1activeUntil ;
+                      lexinfo:prepositionalAdjunct :arg2activeUntil ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/activeYearsEndDate> ;
+                lemon:subjOfProp :arg1activeUntil ;
+                lemon:objOfProp  :arg2activeUntil ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/activeYearsEndYear> ;
+                lemon:subjOfProp :arg1activeUntil ;
+                lemon:objOfProp  :arg2activeUntil ] .
+
+:arg2activeUntil lemon:marker :until .
+
 
 ## service{Start|End}{Date|Year} ##
 
@@ -275,8 +326,8 @@
                                  lemon:subjOfProp :arg1serve ;
                                  lemon:objOfProp  :arg3serve ] ] .
 
-:arg2serve lemon:marker :from ; lemon:optional "true"^^xsd:boolean .
-:arg3serve lemon:marker :to   ; lemon:optional "true"^^xsd:boolean .
+:arg2serve lemon:marker :from .
+:arg3serve lemon:marker :to .
 
 
 ## Sport ##
@@ -768,4 +819,9 @@
 :as a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "as"@en ] ;
   lexinfo:partOfSpeech lexinfo:preposition .
-
+:since a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "since"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+:until a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "until"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

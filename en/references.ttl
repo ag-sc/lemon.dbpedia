@@ -91,11 +91,11 @@ lex:VoiceActress owl:intersectionOf (dbpedia:VoiceActor lex:Female) .
 
 lex:FemaleAthlete owl:intersectionOf (dbpedia:Athlete lex:Female) .
 
-lex:FootballPlayer owl:unionOf (dbpedia:SoccerPlayer dbpedia:AmericanFootballPlayer dbpedia:GridironFootballPlayer) .
-lex:FootballTeam owl:unionOf (dbpedia:SoccerClub dbpedia:AmericanFootballTeam) .
-lex:FootballLeague owl:unionOf (dbpedia:SoccerLeague dbpedia:AmericanFootballLeague) .
+lex:FootballPlayer owl:unionOf (dbpedia:AmericanFootballPlayer dbpedia:GridironFootballPlayer dbpedia:CanadianFootballPlayer) .
+lex:FootballTeam owl:unionOf (dbpedia:CanadianFootballTeam dbpedia:AmericanFootballTeam) .
+lex:FootballLeague owl:unionOf (dbpedia:AmericanFootballLeague dbpedia:CanadianFootballLeague dbpedia:AustralianFootballLeague) .
 
-lex:Player owl:unionOf (dbpedia:SoccerPlayer dbpedia:BaseballPlayer dbpedia:IceHockeyPlayer dbpedia:BasketballPlayer dbpedia:AmericanFootballPlayer dbpedia:GridironFootballPlayer dbpedia:TennisPlayer dbpedia:GolfPlayer dbpedia:BadmintonPlayer dbpedia:RugbyPlayer dbpedia:PokerPlayer) .
+lex:Player owl:unionOf (dbpedia:SoccerPlayer dbpedia:BaseballPlayer dbpedia:IceHockeyPlayer dbpedia:BasketballPlayer dbpedia:AmericanFootballPlayer dbpedia:GridironFootballPlayer  dbpedia:CanadianFootballPlayer dbpedia:TennisPlayer dbpedia:GolfPlayer dbpedia:BadmintonPlayer dbpedia:RugbyPlayer dbpedia:PokerPlayer) .
 
 lex:HockeyLeague owl:unionOf (dbpedia:IceHockeyLeague dbpedia:FieldHockeyLeague dbpedia:InlineHockeyLeague) .
 

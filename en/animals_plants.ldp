@@ -7,11 +7,18 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#>,"en",
 
   ClassNoun("species",dbpedia:Species) with plural "species",
   ClassNoun("animal",dbpedia:Animal),
+  ClassNoun("eukaryote",dbpedia:Eukaryote),
+  IntersectiveAdjective("eukaryotic",dbpedia:Eukaryote),
   ClassNoun("insect",dbpedia:Insect),
   ClassNoun("plant",dbpedia:Plant),
+  ClassNoun(["flowering"/adjective "plant"/noun],dbpedia:FloweringPlant),
+  ClassNoun("gnetophyte",dbpedia:Gnetophytes) with plural "gnetophytes", 
   ClassNoun("fern",dbpedia:Fern),
   ClassNoun("moss",dbpedia:Moss),
+  ClassNoun(["club"/noun "moss"/noun],dbpedia:ClubMoss),
+  ClassNoun(["green"/adjective "alga"/noun],dbpedia:GreenAlga) with plural "green algae",
   ClassNoun("conifer",dbpedia:Conifer),
+  ClassNoun("ginkgo",dbpedia:Ginkgo),
   ClassNoun("grape",dbpedia:Grape),
   ClassNoun("mammal",dbpedia:Mammal),
   ClassNoun("fish",dbpedia:Fish) with plural "fish",
@@ -24,7 +31,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#>,"en",
   ClassNoun("crustacean",dbpedia:Crustacean),
   ClassNoun("shellfish",dbpedia:Crustacean),
   ClassNoun("mollusc",dbpedia:Mollusc) with plural "molluscs", 
-
 
   //// Properties
 

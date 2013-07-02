@@ -26,6 +26,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_3#>,"en",
   ClassNoun("muscle",dbpedia:Muscle),
   ClassNoun("nerve",dbpedia:Nerve),
   ClassNoun("lymph",dbpedia:Lymph),
+  ClassNoun("embryology",dbpedia:Embryology),
 
 
   //// Properties 

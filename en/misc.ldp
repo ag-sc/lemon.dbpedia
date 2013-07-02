@@ -11,18 +11,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
   ClassNoun("website",dbpedia:Website),
   ClassNoun("homepage",dbpedia:Webiste),
   ClassNoun(["web"/noun "page"/noun],dbpedia:Website),
-  ClassNoun(["legal"/adjective "case"/noun],dbpedia:LegalCase),
-  ClassNoun("case",dbpedia:LegalCase),
-  ClassNoun(["court"/noun "case"/noun],dbpedia:LegalCase),
-  ClassNoun(["law"/noun "case"/noun],dbpedia:LegalCase),
-  ClassNoun(["legal"/adjective "matter"/noun],dbpedia:LegalCase),
   ClassNoun("game",dbpedia:Game),
   ClassNoun("beverage",dbpedia:Beverage),
   ClassNoun("drink",dbpedia:Beverage),
-  ClassNoun(["military"/adjective "conflict"/noun],dbpedia:MilitaryConflict),
-  ClassNoun("war",dbpedia:MilitaryConflict),
-  ClassNoun("battle",dbpedia:MilitaryConflict),
-  ClassNoun("weapon",dbpedia:Weapon),
+
+  ClassNoun("currency",dbpedia:Currency),
+  ClassNoun("sales",dbpedia:Sales),
 
 
   //// Properties 
@@ -65,12 +59,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
        propObj  = CopulativeArg),
 
   StateVerb("boil",dbpedia:boilingPoint,
-       propObj = PrepositionalObject("at")),
-
-
-  StateVerb("fight",dbpedia:battle,
-       propObj = PrepositionalObject("in")), 
-  StateVerb("serve",dbpedia:battle,
-       propObj = PrepositionalObject("in"))
+       propObj = PrepositionalObject("at"))
 
 )

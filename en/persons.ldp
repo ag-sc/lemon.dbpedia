@@ -2,27 +2,13 @@
 @prefix resource: <http://dbpedia.org/resource/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
 
   //// Classes
 
   ClassNoun("person",dbpedia:Person),
   ClassNoun("woman",lex:Female) with plural "women",
   ClassNoun("man",lex:Male) with plural "men",
-
-  ClassNoun("organisation",dbpedia:Organisation),
-  ClassNoun(["non-profit"/adjective "organisation"/noun],<http://dbpedia.org/ontology/Non-ProfitOrganisation>),
-  ClassNoun("company",dbpedia:Company),
-  ClassNoun(["political"/adjective "party"/noun],dbpedia:PoliticalParty),
-  ClassNoun("party",dbpedia:PoliticalParty),
-  ClassNoun(["trade"/noun "union"/noun],dbpedia:TradeUnion),
-  ClassNoun(["labor"/noun "union"/noun],dbpedia:TradeUnion),
-  ClassNoun("newspaper",dbpedia:Newspaper),
-  ClassNoun("paper",dbpedia:Newspaper),
-  ClassNoun("journal",dbpedia:Newspaper),
-  ClassNoun("magazine",dbpedia:Magazine),
-  ClassNoun("periodical",dbpedia:Magazine),
-
   ClassNoun(["ethnic"/adjective "group"/noun],dbpedia:EthnicGroup),
 
   ClassNoun("scientist",dbpedia:Scientist),
@@ -48,21 +34,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
   ClassNoun("Protestant",lex:Protestant),
   IntersectiveAdjective("Protestant",lex:Protestant),
 
-  ClassNoun("politician",dbpedia:Politician),
-  ClassNoun("governor",dbpedia:Governor),
-  ClassNoun("governor",lex:Governor),
-  ClassNoun("president",dbpedia:President),
-  ClassNoun("president",lex:President),
-  ClassNoun(["vice"/noun "president"/noun],dbpedia:VicePresident),
-  ClassNoun("monarch",dbpedia:Monarch),
-  ClassNoun(["prime"/adjective "minister"/noun],dbpedia:PrimeMinister),
-  ClassNoun("premier",dbpedia:PrimeMinister),
-  ClassNoun("chancellor",dbpedia:Chancellor),
-  ClassNoun("mayor",dbpedia:Mayor),
-  ClassNoun("mayor",lex:Mayor),
-  ClassNoun("senator",dbpedia:Senator),
-  ClassNoun("ambassador",dbpedia:Ambassador),
-
   ClassNoun("bishop",dbpedia:ChristianBishop),
   ClassNoun("cleric",dbpedia:Cleric),
   ClassNoun("clerk",dbpedia:Cleric),
@@ -71,13 +42,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
   ClassNoun("pope",dbpedia:Pope),
   ClassNoun("priest",dbpedia:Priest),
 
-  ClassNoun("criminal",dbpedia:Criminal),
-  ClassNoun("thug",dbpedia:Criminal),
-  ClassNoun("judge",dbpedia:Judge),
-  ClassNoun("magistrate",dbpedia:Judge), 
 
-
-  //// Properties 
+  //// Properties
 
   // birthDate, birthYear, birthPlace
 
@@ -245,17 +211,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
   StateVerb("graduate",dbpedia:almaMater,
      propObj = PrepositionalObject("from")),
 
-  // numberOfStudents 
-
-  RelationalNoun("enrollment",dbpedia:numberOfStudents,
-     propSubj = PrepositionalObject("of"),
-     propObj  = CopulativeArg),
-  RelationalNoun(["student"/noun "population"/noun],dbpedia:numberOfStudents,
-    propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg),
-
-  StateVerb("serve",dbpedia:numberOfStudents),
-
   // field 
 
   RelationalNoun("field",dbpedia:field,
@@ -282,7 +237,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
      propObj = PrepositionalObject("as")),
 
 
-  // rector, viceChancellor, runningMate
+  // rector
 
   RelationalNoun("rector",dbpedia:rector,
      propSubj = PossessiveAdjunct,
@@ -290,20 +245,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
 
   RelationalNoun("principal",dbpedia:rector,
      propSubj = PossessiveAdjunct restrictedTo dbpedia:School,
-     propObj  = CopulativeArg), 
-
-  RelationalNoun(["vice"/noun "chancellor"/noun],dbpedia:viceChancellor,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg), 
-
-  RelationalNoun(["running"/noun "mate"/noun],dbpedia:runningMate,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg), 
-
-  // board 
-
-  RelationalNoun(["board"/noun "member"/noun],dbpedia:board,
-     propSubj = PrepositionalObject("at"),
      propObj  = CopulativeArg), 
 
 
@@ -364,133 +305,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg), 
 
-  StateVerb("weigh",dbpedia:weight),
-
-
-  // manufacturer 
-
-  RelationalNoun("manufacturer",dbpedia:manufacturer,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg), 
-
-  StateVerb("manufacture",dbpedia:manufacturer,
-     propSubj = DirectObject,
-     propObj  = Subject), 
-  StateVerb("produce",dbpedia:manufacturer,
-     propSubj = DirectObject,
-     propObj  = Subject), 
-
-
-  // formationDate, formationYear, foundingDate, foundingYear
-
-  RelationalNoun(["formation"/noun "date"/noun],dbpedia:formationDate,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg), 
-  RelationalNoun(["formation"/noun "year"/noun],dbpedia:formationYear,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg),
-
-  RelationalNoun(["founding"/noun "date"/noun],dbpedia:foundingDate,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg), 
-  RelationalNoun(["founding"/noun "year"/noun],dbpedia:foundingYear,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg),
-
-  ConsequenceVerb("form",dbpedia:formationDate,
-     propSubj = lex:organization as Subject, 
-     propObj  = lex:date as PrepositionalObject("on")),
-  ConsequenceVerb("form",dbpedia:formationYear,
-     propSubj = lex:organization as Subject, 
-     propObj  = lex:date as PrepositionalObject("in")),
-
-  ConsequenceVerb("found",dbpedia:foundingDate,
-     propSubj = lex:organization as Subject, 
-     propObj  = lex:date as PrepositionalObject("on")),
-  ConsequenceVerb("found",dbpedia:foundingYear,
-     propSubj = lex:organization as Subject, 
-     propObj  = lex:date as PrepositionalObject("in")),
-
-  ConsequenceVerb("establish",dbpedia:formationDate,
-     propSubj = lex:organization as Subject, 
-     propObj  = lex:date as PrepositionalObject("on")),
-  ConsequenceVerb("establish",dbpedia:formationYear,
-     propSubj = lex:organization as Subject, 
-     propObj  = lex:date as PrepositionalObject("in")),
-  ConsequenceVerb("establish",dbpedia:foundingDate,
-     propSubj = lex:organization as Subject, 
-     propObj  = lex:date as PrepositionalObject("on")),
-  ConsequenceVerb("establish",dbpedia:foundingYear,
-     propSubj = lex:organization as Subject, 
-     propObj  = lex:date as PrepositionalObject("in")),
-
-  // foundingPerson
-
-  StateVerb("found",dbpedia:foundingPerson,
-     propSubj = DirectObject,
-     propObj  = Subject),
-  StateVerb("establish",dbpedia:foundingPerson,
-     propSubj = DirectObject,
-     propObj  = Subject),
-
-  // foundationPlace 
-
-  RelationalNoun(["foundation"/noun "place"/noun],dbpedia:foundationPlace,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg), 
-
-  ConsequenceVerb("found",dbpedia:foundationPlace,
-     propSubj = lex:organization as Subject, 
-     propObj  = lex:date as PrepositionalObject("in")),
-
-
-  // mascot, slogan, title
-
-  RelationalNoun("mascot",dbpedia:mascot,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg), 
-  RelationalNoun("slogan",dbpedia:slogan,
-    propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg), 
-
-  RelationalAdjective("known",dbpedia:title,
-    relationalArg = PrepositionalObject("as")),
-
-
-  // affiliation
-
-  RelationalAdjective("affiliated",dbpedia:affiliation, 
-     relationalArg = PrepositionalObject("with")),
-  RelationalAdjective("affiliated",dbpedia:affiliation, 
-     relationalArg = PrepositionalObject("to")), 
-
-  // frequency 
-
-  RelationalNoun("frequency",dbpedia:frequency,
-    propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg), 
-
-  StateVerb("broadcast",dbpedia:frequency,
-    propObj = PrepositionalObject("on")),
-
-
-  // status 
-
-  RelationalNoun("status",dbpedia:status,
-    propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg), 
-  IntersectiveDataPropertyAdjective("active",dbpedia:status,"Active"),
-  IntersectiveDataPropertyAdjective("retired",dbpedia:status,"Retired"),
-  IntersectiveDataPropertyAdjective("operational",dbpedia:status,"Operational"),
-  IntersectiveDataPropertyAdjective("scrapped",dbpedia:status,"Scrapped"), 
-
-  // product 
-
-  RelationalNoun("product",dbpedia:product,
-    propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg),
-  StateVerb("produce",dbpedia:product), 
-  StateVerb("create",dbpedia:product), 
-  StateVerb("develop",dbpedia:product)
+  StateVerb("weigh",dbpedia:weight)
 
 )

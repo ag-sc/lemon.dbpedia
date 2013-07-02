@@ -1,0 +1,65 @@
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
+
+  //// Classes
+
+  ClassNoun("election",dbpedia:Election),
+  ClassNoun("legislature",dbpedia:Legislature),
+
+  ClassNoun(["government"/noun "type"/noun],dbpedia:GovernmentType),
+  ClassNoun("monarch",dbpedia:Monarch),
+  ClassNoun(["British"/adjective "royalty"/noun],dbpedia:BritishRoyalty),
+
+  ClassNoun(["office"/noun "holder"/noun],dbpedia:OfficeHolder),
+  ClassNoun(["member"/noun "of"/preposition "parliament"/noun],dbpedia:MemberOfParliament),
+  ClassNoun(["congress"/noun "man"/noun],dbpedia:Congressman) with plural "congress men",
+  ClassNoun("politician",dbpedia:Politician),
+  ClassNoun("governor",dbpedia:Governor),
+  ClassNoun("governor",lex:Governor),
+  ClassNoun("president",dbpedia:President),
+  ClassNoun("president",lex:President),
+  ClassNoun(["vice"/noun "president"/noun],dbpedia:VicePresident),
+  ClassNoun(["prime"/adjective "minister"/noun],dbpedia:PrimeMinister),
+  ClassNoun("premier",dbpedia:PrimeMinister),
+  ClassNoun(["vice"/noun "prime"/adjective "minister"/noun],dbpedia:VicePrimeMinister),
+  ClassNoun("chancellor",dbpedia:Chancellor),
+  ClassNoun("mayor",dbpedia:Mayor),
+  ClassNoun("mayor",lex:Mayor),
+  ClassNoun("senator",dbpedia:Senator),
+  ClassNoun("ambassador",dbpedia:Ambassador),
+
+  ClassNoun(["legal"/adjective "case"/noun],dbpedia:LegalCase),
+  ClassNoun("case",dbpedia:LegalCase),
+  ClassNoun(["court"/noun "case"/noun],dbpedia:LegalCase),
+  ClassNoun(["law"/noun "case"/noun],dbpedia:LegalCase),
+  ClassNoun(["legal"/adjective "matter"/noun],dbpedia:LegalCase),
+  ClassNoun(["Supreme Court of the United States"/noun "case"/noun],dbpedia:SupremeCourtOfTheUnitedStatesCase),
+
+  ClassNoun("criminal",dbpedia:Criminal),
+  ClassNoun("thug",dbpedia:Criminal),
+  ClassNoun("judge",dbpedia:Judge),
+  ClassNoun("magistrate",dbpedia:Judge), 
+  ClassNoun("deputy",dbpedia:Deputy),
+
+
+  //// Properties
+
+  // viceChancellor, runningMate
+
+  RelationalNoun(["vice"/noun "chancellor"/noun],dbpedia:viceChancellor,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  RelationalNoun(["running"/noun "mate"/noun],dbpedia:runningMate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  // board 
+
+  RelationalNoun(["board"/noun "member"/noun],dbpedia:board,
+     propSubj = PrepositionalObject("at"),
+     propObj  = CopulativeArg)
+
+)
