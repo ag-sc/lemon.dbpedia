@@ -1,13 +1,11 @@
 code
 nationalYears
 dorlandsSuffix
-conservationStatusSystem
 amgid
 decideDate
 latestReleaseVersion
 numberOfPostgraduateStudents
 memberOfParliament
-areaLand
 stateDelegate
 chain
 totalMass
@@ -99,7 +97,6 @@ classification
 productionStartYear
 setupTime
 hipSize
-county
 cityType
 militaryBranch
 intercommunality
@@ -365,7 +362,6 @@ HistoricPlace
 Legislature
 twinCountry
 seasonNumber
-associatedBand
 sportGoverningBody
 ethnicGroupsInYear
 goldenCalfAward
@@ -389,7 +385,7 @@ Election
 dateClosed
 goalsInNationalTeam
 firstLaunch
-region
+port2DockedTime
 ordination
 rating
 numberOfSilverMedalsWon
@@ -410,7 +406,6 @@ lunarSurfaceTime
 CanadianFootballTeam
 faaLocationIdentifier
 sourceConfluenceElevation
-state
 headChef
 coastLine
 equity
@@ -491,7 +486,6 @@ productionStartDate
 federalState
 municipalityCode
 collection
-populationAsOf
 pdb
 ComicsCreator
 pistonStroke
@@ -540,7 +534,7 @@ fourthCommander
 partOfWineRegion
 missions
 aircraftHelicopterObservation
-areaWater
+starRating
 orbitalPeriod
 frozen
 launches
@@ -802,9 +796,7 @@ governmentRegion
 discharge
 lowerAge
 building
-port2DockedTime
 assets
-starRating
 startYearOfSales
 dissolutionDate
 sourceConfluenceCountry

@@ -235,6 +235,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   RelationalNoun("review",dbpedia:review,
         propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+
+  RelationalNoun(["associated"/adjective "act"/noun],dbpedia:associatedBand,
+        propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg)
 
 )

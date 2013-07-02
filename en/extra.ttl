@@ -20,6 +20,7 @@
                 :wide,
                 :tall,
                 :big,
+                :populationAsOf,
                 :active,
                 :serve,
                 :athletics,
@@ -206,6 +207,25 @@
                                   oils:boundTo <http://dbpedia.org/ontology/areaMetro> ;
                                   oils:degree oils:strong ] ;
                 lemon:isA :arg1big ] .
+
+
+## populationAsOf ##
+
+:populationAsOf a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm [ lemon:writtenRep "population"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
+		      lexinfo:copulativeArg        :arg1populationAsOf ;
+                      lexinfo:possessiveAdjunct    :arg2populationAsOf ;
+                      lexinfo:prepositionalAdjunct :arg3populationAsOf ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/populationTotal>;
+                                 lemon:subjOfProp :arg2populationAsOf ;
+                                 lemon:objOfProp  :arg1populationAsOf ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/populationAsOf>;
+                                 lemon:subjOfProp :arg2populationAsOf ;
+                                 lemon:objOfProp  :arg3populationAsOf ] ] .
+
+:arg3populationAsOf lemon:marker [ lemon:canonicalForm [ lemon:writtenRep "as of"@en ] ] .
 
 
 ## activeYears{Start|End}{Date|Year} ##
@@ -412,7 +432,7 @@
   lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/conservationStatus>;
                                  lemon:subjOfProp :arg2conservationStatus;
                                  lemon:objOfProp  :arg1conservationStatus ] ,
-                               [ lemon:reference <http://dbpedia.org/ontology/conservationStatus>;
+                               [ lemon:reference <http://dbpedia.org/ontology/conservationStatusSystem>;
                                  lemon:subjOfProp :arg2conservationStatus ;
                                  lemon:objOfProp  :arg3conservationStatus ] ] .
 
