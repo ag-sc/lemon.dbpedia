@@ -11,22 +11,38 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
   ClassNoun("man",lex:Male) with plural "men",
   ClassNoun(["ethnic"/adjective "group"/noun],dbpedia:EthnicGroup),
 
+  ClassNoun("name",<http://dbpedia.org/ontology/Name>),
+  ClassNoun(["given"/noun "name"/noun],dbpedia:GivenName),
+  ClassNoun(["first"/noun "name"/noun],dbpedia:GivenName),
+  ClassNoun("surname",dbpedia:Surname),
+  ClassNoun(["last"/noun "name"/noun],dbpedia:Surname),
+
   // Occupations
+
+  ClassNoun(["career"/noun "station"/noun],dbpedia:CareerStation),
 
   ClassNoun("scientist",dbpedia:Scientist),
   ClassNoun("researcher",dbpedia:Scientist),
+  ClassNoun("medician",dbpedia:Medician),
+  ClassNoun("professor",dbpedia:Professor),
   ClassNoun("historian",lex:Historian),
   ClassNoun("chemist",lex:Chemist),
   ClassNoun("biologist",lex:Biologist),
   ClassNoun("economist",lex:Economist),
+  ClassNoun("engineer",dbpedia:Engineer),
   ClassNoun("teacher",lex:Teacher),
   ClassNoun("revolutionary",lex:Revolutionary),
   ClassNoun("poet",lex:Poet),
   ClassNoun("architect",dbpedia:Architect),
   ClassNoun("journalist",dbpedia:Journalist),
-  ClassNoun("model",dbpedia:Model),
-  ClassNoun("celebrity",dbpedia:Celebrity),
   ClassNoun("philosopher",dbpedia:Philosopher),
+  ClassNoun("aristocrat",dbpedia:Aristocrat),
+  ClassNoun("chef",dbpedia:Chef),
+  ClassNoun(["horse"/noun "trainer"/noun],dbpedia:HorseTrainer),
+  ClassNoun("model",dbpedia:Model),
+
+  ClassNoun("celebrity",dbpedia:Celebrity),
+  ClassNoun(["beauty"/noun "queen"/noun],dbpedia:BeautyQueen),
 
   // Nationalities
 
@@ -68,10 +84,24 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
 
   // Religion 
 
+  ClassNoun("religious",dbpedia:Religious),
+
+  ClassNoun("Christian",lex:Christian),
+  IntersectiveAdjective("Christian",lex:Christian),
   ClassNoun("Protestant",lex:Protestant),
   IntersectiveAdjective("Protestant",lex:Protestant),
+  ClassNoun("Catholic",lex:Catholic),
+  IntersectiveAdjective("Catholic",lex:Catholic),
+  ClassNoun("Hinduist",lex:Hinduist),
+  IntersectiveAdjective("Hinduistic",lex:Hinduistic),
+  ClassNoun("Muslim",lex:Muslim),
+  ClassNoun("Islamist",lex:Islamist),
+  IntersectiveAdjective("Islamistic",lex:Muslim),
 
+  ClassNoun(["Christian"/adjective "bishop"/noun],dbpedia:ChristianBishop),
   ClassNoun("bishop",dbpedia:ChristianBishop),
+  ClassNoun(["Christian"/adjective "patriarch"/noun],dbpedia:ChristianPatriarch),
+  ClassNoun("patriarch",dbpedia:ChristianPatriarch),
   ClassNoun("cleric",dbpedia:Cleric),
   ClassNoun("clerk",dbpedia:Cleric),
   ClassNoun("saint",dbpedia:Saint),

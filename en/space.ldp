@@ -5,7 +5,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
 
   //// Classes
 
+  ClassNoun(["celestial"/adjective "body"/noun],dbpedia:CelestialBody),
+  ClassNoun("star",dbpedia:Star),
+  ClassNoun("sun",dbpedia:Star),
   ClassNoun("planet",dbpedia:Planet),
+  ClassNoun("galaxy",dbpedia:Galaxy),
+  ClassNoun("asteroid",dbpedia:Asteroid),
+  ClassNoun("constellation",dbpedia:Constellation),
+
   ClassNoun(["lunar"/adjective "crater"/noun],dbpedia:LunarCrater),
   ClassNoun(["moon"/noun "crater"/noun],dbpedia:LunarCrater),
   ClassNoun("rocket",dbpedia:Rocket),

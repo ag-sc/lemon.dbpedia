@@ -7,18 +7,28 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
   //// Classes
 
   ClassNoun("organisation",dbpedia:Organisation),
+  ClassNoun(["organisation"/noun "member"/noun],dbpedia:OrganisationMember),
   ClassNoun(["non-profit"/adjective "organisation"/noun],<http://dbpedia.org/ontology/Non-ProfitOrganisation>),
   ClassNoun(["geopolitical"/adjective "organisation"/noun],<http://dbpedia.org/ontology/GeopoliticalOrganisation>),
+  ClassNoun(["government"/noun "agency"/noun],dbpedia:GovernmentAgency),
+
+  ClassNoun("group",dbpedia:Group),
   ClassNoun("company",dbpedia:Company),
+  ClassNoun("airline",dbpedia:Airline),
+
+  ClassNoun(["educational"/adjective "institution"/noun],dbpedia:EducationalInstitution),
+  ClassNoun("school",dbpedia:School),
+  ClassNoun(["samba"/noun "school"/noun],dbpedia:SambaSchool),
+  ClassNoun("college",dbpedia:College),
+  ClassNoun("university",dbpedia:University),
+  ClassNoun("library",dbpedia:Library),
+
   ClassNoun(["political"/adjective "party"/noun],dbpedia:PoliticalParty),
   ClassNoun("party",dbpedia:PoliticalParty),
   ClassNoun(["trade"/noun "union"/noun],dbpedia:TradeUnion),
   ClassNoun(["labor"/noun "union"/noun],dbpedia:TradeUnion),
-  ClassNoun("newspaper",dbpedia:Newspaper),
-  ClassNoun("paper",dbpedia:Newspaper),
-  ClassNoun("journal",dbpedia:Newspaper),
-  ClassNoun("magazine",dbpedia:Magazine),
-  ClassNoun("periodical",dbpedia:Magazine),
+
+  ClassNoun(["clerical"/adjective "order"/noun],dbpedia:ClericalOrder),
 
 
   //// Properties 

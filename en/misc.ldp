@@ -6,17 +6,57 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
 
   ClassNoun("event",dbpedia:Event), 
   ClassNoun("activity",dbpedia:Activity),
+  ClassNoun("holiday",dbpedia:Holiday),
   ClassNoun("language",dbpedia:Language),
-  ClassNoun("color",dbpedia:Colour),
+  ClassNoun("letter",dbpedia:Letter),
+  ClassNoun("colour",dbpedia:Colour),
   ClassNoun("website",dbpedia:Website),
   ClassNoun("homepage",dbpedia:Webiste),
   ClassNoun(["web"/noun "page"/noun],dbpedia:Website),
-  ClassNoun("game",dbpedia:Game),
+
+  ClassNoun("food",dbpedia:Food),
   ClassNoun("beverage",dbpedia:Beverage),
   ClassNoun("drink",dbpedia:Beverage),
+  ClassNoun("beer",dbpedia:Beer),
+  ClassNoun("wine",dbpedia:Wine),
+  ClassNoun("cheese",dbpedia:Cheese),
+
+  ClassNoun("agent",dbpedia:Agent),
+  ClassNoun("deity",dbpedia:Deity),
+  ClassNoun("family",dbpedia:Family),
 
   ClassNoun("currency",dbpedia:Currency),
+  ClassNoun("tax",dbpedia:Tax),
+
+  ClassNoun("flag",dbpedia:Flag),
+
+  ClassNoun("community",dbpedia:Community),
+
   ClassNoun("sales",dbpedia:Sales),
+  ClassNoun("fashion",dbpedia:Fashion),
+  ClassNoun(["line"/noun "of"/preposition "fashion"/noun],dbpedia:LineOfFashion),
+
+  ClassNoun(["public"/noun "service"/noun],dbpedia:PublicService),
+  ClassNoun(["public"/noun "service"/noun "input"/noun],dbpedia:PublicServiceInput),
+  ClassNoun(["public"/noun "service"/noun "output"/noun],dbpedia:PublicServiceOutput),
+
+  ClassNoun("polyhedron",dbpedia:Polyhedron),
+
+  ClassNoun(["time"/noun "period"/noun],dbpedia:TimePeriod),
+  ClassNoun(["geological"/adjective "period"/noun],dbpedia:GeologicalPeriod),
+  ClassNoun(["historical"/adjective "period"/noun],dbpedia:HistoricalPeriod),
+  ClassNoun(["prehistorical"/adjective "period"/noun],dbpedia:PrehistoricalPeriod),
+  ClassNoun(["protohistorical"/adjective "period"/noun],dbpedia:ProtohistoricalPeriod),
+  ClassNoun(["art"/noun "period"/noun],dbpedia:PeriodOfArtisticStyle),
+  ClassNoun("year",dbpedia:Year),
+
+  ClassNoun(["topical"/noun "concept"/noun],dbpedia:TopicalConcept),
+  ClassNoun(["Christian"/noun "doctrine"/noun],dbpedia:ChristianDoctrine),
+  ClassNoun("ideology",dbpedia:Ideology),
+
+  ClassNoun(["unit"/noun "of"/preposition "work"/noun],dbpedia:UnitOfWork),
+  ClassNoun("project",dbpedia:Project),
+  ClassNoun(["research"/noun "project"/noun],dbpedia:ResearchProject),
 
 
   //// Properties 

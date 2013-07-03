@@ -33,10 +33,6 @@ lex:President rdf:type owl:Restriction ;
 
 ## places ## 
 
-:Department rdf:type owl:Restriction ;
-   owl:onProperty [ owl:inverseOf dbpedia:department ] ;
-   owl:someValuesFrom dbpedia:Place .
-
 :Arrondissement rdf:type owl:Restriction ;
    owl:onProperty [ owl:inverseOf dbpedia:arrondissement ] ;
    owl:someValuesFrom dbpedia:Place .
@@ -64,6 +60,124 @@ lex:VU rdf:type owl:Restriction ;
 
 lex:Cosmonaut owl:unionOf (dbpedia:Astronaut lex:Russian lex:Soviet) .
 lex:Taikonaut owl:unionOf (dbpedia:Astronaut lex:Chinese) .
+
+
+## arts_entertainment ##
+
+lex:Festival  owl:unionOf (dbpedia:MusicFestival dbpedia:FilmFestival) .
+
+lex:Actress owl:intersectionOf (dbpedia:Actor lex:Female) .
+lex:VoiceActress owl:intersectionOf (dbpedia:VoiceActor lex:Female) .
+lex:AdultActress owl:intersectionOf (dbpedia:AdultActor lex:Female) .
+lex:PornActress  owl:intersectionOf (dbpedia:Pornstar lex:Female) .
+
+
+## sports ## 
+
+lex:FemaleAthlete owl:intersectionOf (dbpedia:Athlete lex:Female) .
+
+lex:FootballPlayer owl:unionOf (dbpedia:AmericanFootballPlayer dbpedia:GridironFootballPlayer dbpedia:CanadianFootballPlayer dbpedia:AustralianRulesFootballPlayer) .
+lex:FootballTeam owl:unionOf (dbpedia:CanadianFootballTeam dbpedia:AmericanFootballTeam) .
+lex:FootballLeague owl:unionOf (dbpedia:AmericanFootballLeague dbpedia:CanadianFootballLeague dbpedia:AustralianFootballLeague) .
+
+lex:Player owl:unionOf (dbpedia:SoccerPlayer dbpedia:BaseballPlayer dbpedia:IceHockeyPlayer dbpedia:BasketballPlayer dbpedia:AmericanFootballPlayer dbpedia:GridironFootballPlayer  dbpedia:CanadianFootballPlayer dbpedia:TennisPlayer dbpedia:GolfPlayer dbpedia:BadmintonPlayer dbpedia:RugbyPlayer dbpedia:PokerPlayer) .
+
+lex:HockeyLeague owl:unionOf (dbpedia:IceHockeyLeague dbpedia:FieldHockeyLeague dbpedia:InlineHockeyLeague) .
+
+lex:RaceDriver owl:unionOf (dbpedia:RacingDriver dbpedia:FormulaOneRacer dbpedia:NascarDriver) .
+lex:Racer owl:unionOf (dbpedia:Cyclist dbpedia:FormulaOneRacer dbpedia:NascarDriver) .
+
+lex:Race owl:unionOf ( dbpedia:Race dbpedia:CyclingCompetition ) .
+
+
+## persons ##
+
+lex:birthCountry owl:propertyChain ( <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/ontology/country> ) .
+
+## profession
+
+lex:Historian     owl:unionOf (dbpedia:Person lex:professionHistorian) .
+lex:Chemist       owl:unionOf (dbpedia:Person lex:professionChemist) .
+lex:Biologist     owl:unionOf (dbpedia:Person lex:professionBiologist) .
+lex:Economist     owl:unionOf (dbpedia:Person lex:professionEconomist) .
+lex:Teacher       owl:unionOf (dbpedia:Person lex:professionTeacher) .
+lex:Surfer        owl:unionOf (dbpedia:Person lex:professionSurfing) .
+lex:Revolutionary owl:unionOf (dbpedia:Person lex:professionRevolutionary) .
+lex:Poet          owl:unionOf (dbpedia:Person lex:professionPoet) .
+
+lex:professionHistorian rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Historian .
+lex:professionChemist rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Chemist .
+lex:professionBiologist rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Biologist .
+lex:professionEconomist rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Economist .
+lex:professionTeacher rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Teacher .
+lex:professionSurfing rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Surfing .
+lex:professionRevolutionary rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Revolutionary .
+lex:professionPoet rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:profession ;
+   owl:hasValue   resource:Poet .
+
+## ethnicity
+
+lex:AfricanAmerican rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:ethnicity ;
+   owl:hasValue   resource:AfricanAmerican .
+lex:Jew owl:unionOf ( lex:ethnicityJews lex:ethnicityJewish ) .
+lex:ethnicityJews rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:ethnicity ;
+   owl:hasValue   resource:Jews .
+lex:ethnicityJewish rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:ethnicity ;
+   owl:hasValue   resource:Jewish .
+
+## religion
+
+lex:Christian owl:unionOf ( lex:religionChristian lex:religionChristianity ) .
+lex:religionChristian rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:religion ;
+   owl:hasValue   resource:Christian .
+lex:religionChristianity rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:religion ;
+   owl:hasValue   resource:Christianity .
+lex:Protestant owl:unionOf (dbpedia:Person lex:religionProtestantism) .
+lex:religionProtestantism rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:religion ;
+   owl:hasValue   resource:Protestantism .
+lex:Catholic owl:unionOf (lex:religionCatholic lex:religionCatholicChurch) .
+lex:religionCatholic rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:religion ;
+   owl:hasValue   resource:Catholic .
+lex:religionCatholicChurch rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:religion ;
+   owl:hasValue   resource:Catholic_Church .
+
+lex:Hinduist owl:unionOf ( lex:Hinduist1 lex:Hinduist2 ) .
+lex:Hinduist1 rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:religion ;
+   owl:hasValue   resource:Hindu .
+lex:Hinduist2 rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:religion ;
+   owl:hasValue   resource:Hinduism .
+
+lex:Islamist rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:religion ;
+   owl:hasValue   resource:Islam .
+lex:Muslim rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:religion ;
+   owl:hasValue   resource:Muslim .
 
 ## nationalities ## 
 
@@ -158,84 +272,4 @@ lex:Irish3 rdf:type owl:Restriction ;
    owl:hasValue   resource:Irish_people .
 lex:Irish owl:unionOf ( lex:Irish1 lex:Irish2 ) .
 
-
-## arts_entertainment ##
-
-lex:Character owl:unionOf (dbpedia:FictionalCharacter dbpedia:ComicsCharacter) .
-lex:Festival  owl:unionOf (dbpedia:MusicFestival dbpedia:FilmFestival) .
-
-lex:Actress owl:intersectionOf (dbpedia:Actor lex:Female) .
-lex:VoiceActress owl:intersectionOf (dbpedia:VoiceActor lex:Female) .
-
-
-## sports ## 
-
-lex:FemaleAthlete owl:intersectionOf (dbpedia:Athlete lex:Female) .
-
-lex:FootballPlayer owl:unionOf (dbpedia:AmericanFootballPlayer dbpedia:GridironFootballPlayer dbpedia:CanadianFootballPlayer) .
-lex:FootballTeam owl:unionOf (dbpedia:CanadianFootballTeam dbpedia:AmericanFootballTeam) .
-lex:FootballLeague owl:unionOf (dbpedia:AmericanFootballLeague dbpedia:CanadianFootballLeague dbpedia:AustralianFootballLeague) .
-
-lex:Player owl:unionOf (dbpedia:SoccerPlayer dbpedia:BaseballPlayer dbpedia:IceHockeyPlayer dbpedia:BasketballPlayer dbpedia:AmericanFootballPlayer dbpedia:GridironFootballPlayer  dbpedia:CanadianFootballPlayer dbpedia:TennisPlayer dbpedia:GolfPlayer dbpedia:BadmintonPlayer dbpedia:RugbyPlayer dbpedia:PokerPlayer) .
-
-lex:HockeyLeague owl:unionOf (dbpedia:IceHockeyLeague dbpedia:FieldHockeyLeague dbpedia:InlineHockeyLeague) .
-
-lex:RaceDriver owl:unionOf (dbpedia:FormulaOneRacer dbpedia:NascarDriver) .
-
-lex:Racer owl:unionOf (dbpedia:Cyclist dbpedia:FormulaOneRacer dbpedia:NascarDriver) .
-
-
-## persons_organizations ##
-
-lex:Historian     owl:unionOf (dbpedia:Person lex:professionHistorian) .
-lex:Chemist       owl:unionOf (dbpedia:Person lex:professionChemist) .
-lex:Biologist     owl:unionOf (dbpedia:Person lex:professionBiologist) .
-lex:Economist     owl:unionOf (dbpedia:Person lex:professionEconomist) .
-lex:Teacher       owl:unionOf (dbpedia:Person lex:professionTeacher) .
-lex:Surfer        owl:unionOf (dbpedia:Person lex:professionSurfing) .
-lex:Revolutionary owl:unionOf (dbpedia:Person lex:professionRevolutionary) .
-lex:Poet          owl:unionOf (dbpedia:Person lex:professionPoet) .
-
-lex:professionHistorian rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Historian .
-lex:professionChemist rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Chemist .
-lex:professionBiologist rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Biologist .
-lex:professionEconomist rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Economist .
-lex:professionTeacher rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Teacher .
-lex:professionSurfing rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Surfing .
-lex:professionRevolutionary rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Revolutionary .
-lex:professionPoet rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Poet .
-
-lex:Jew             owl:unionOf (dbpedia:Person lex:ethnicityJews) .
-lex:AfricanAmerican owl:unionOf (dbpedia:Person lex:ethnicityAfricanAmerican) .
-
-lex:ethnicityJews rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:ethnicity ;
-   owl:hasValue   resource:Jews .
-lex:ethnicityAfricanAmerican rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:ethnicity ;
-   owl:hasValue   resource:AfricanAmerican .
-
-lex:Protestant owl:unionOf (dbpedia:Person lex:religionProtestantism) .
-
-lex:religionProtestantism rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:religion ;
-   owl:hasValue   resource:Protestantism .
-
-lex:birthCountry owl:propertyChain ( <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/ontology/country> ) .
 

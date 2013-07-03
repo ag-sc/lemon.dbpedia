@@ -10,10 +10,11 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
   ClassNoun(["military"/adjective "personnel"/noun],dbpedia:MilitaryPerson),
   ClassNoun(["military"/adjective "unit"/noun],dbpedia:MilitaryUnit),
   ClassNoun(["military"/adjective "conflict"/noun],dbpedia:MilitaryConflict),
-  ClassNoun("lieutenant",dbpedia:Lieutenant),
+  ClassNoun(["military"/adjective "structure"/noun],dbpedia:MilitaryStructure),
   ClassNoun("war",dbpedia:MilitaryConflict),
   ClassNoun("battle",dbpedia:MilitaryConflict),
   ClassNoun("weapon",dbpedia:Weapon),
+  ClassNoun("blazon",dbpedia:Blazon),
 
   //// Properties 
 
