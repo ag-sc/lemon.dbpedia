@@ -16,7 +16,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   ClassNoun("single",dbpedia:Single),
   ClassNoun("song",dbpedia:Song),
   ClassNoun("track",dbpedia:Song),
-  ClassNoun(["Eurovision"/noun "song"/noun "contest"/noun "entry"/noun],dbpedia:Eurovision song contest entry),
+  ClassNoun(["Eurovision"/noun "song"/noun "contest"/noun "entry"/noun],dbpedia:EurovisionSongContestEntry),
   ClassNoun("film",dbpedia:Film),
   ClassNoun("movie",dbpedia:Film),
   ClassNoun("actor",dbpedia:Actor),
@@ -86,13 +86,19 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = DirectObject,
         propObj  = Subject),
 
-  // publisher
+  // publisher, distibutor
 
   RelationalNoun("publisher",dbpedia:publisher,
-        propSubj = PrepositionalObject("of"),
+        propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-
   StateVerb("publish",dbpedia:publisher,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
+  RelationalNoun("distributor",dbpedia:distributor,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  StateVerb("distribute",dbpedia:distributor,
         propSubj = DirectObject,
         propObj  = Subject),
 
@@ -117,12 +123,18 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = DirectObject,
         propObj  = Subject),
 
-  // musicalBand
+  // musical{Band|Artist}
 
  StateVerb("write",dbpedia:musicalBand,
         propSubj = DirectObject,
         propObj  = Subject),
+ StateVerb("write",dbpedia:musicalArtist,
+        propSubj = DirectObject,
+        propObj  = Subject),
  StateVerb("record",dbpedia:musicalBand,
+        propSubj = DirectObject,
+        propObj  = Subject),
+ StateVerb("record",dbpedia:musicalArtist,
         propSubj = DirectObject,
         propObj  = Subject),
 
@@ -183,7 +195,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = Subject restrictedTo dbpedia:TelevisionShow,
         propObj  = PrepositionalObject("until")),
 
-  // recordDate 
+  // recordDate, recordedIn
 
   RelationalNoun(["record"/noun "date"/noun],dbpedia:recordDate,
         propSubj = PossessiveAdjunct,
@@ -192,6 +204,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   ConsequenceVerb("record",dbpedia:recordDate,
         propSubj = lex:musicalWork as Subject, 
         propObj  = lex:date as PrepositionalObject("on")),
+
+  ConsequenceVerb("record",dbpedia:recordedIn,
+        propSubj = lex:musicalWork as Subject, 
+        propObj  = lex:place as PrepositionalObject("in")),
 
   // award 
 
@@ -206,6 +222,29 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   ConsequenceVerb("award",dbpedia:award,
         propSubj = lex:person as Subject,
         propObj  = lex:prizeAwarded as DirectObject),
+
+  // previous and subsequent work
+
+  RelationalNoun("follow-up",dbpedia:subsequentWork,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun("sequel",dbpedia:subsequentWork,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun("prequel",dbpedia:previousWork,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+
+  RelationalAdjective("written",dbpedia:previousWork,
+        relationalArg = PrepositionalObject("before") restrictedTo dbpedia:Book), 
+  RelationalAdjective("written",dbpedia:subsequentWork,
+        relationalArg = PrepositionalObject("after") restrictedTo dbpedia:Book), 
+
+  RelationalAdjective("record",dbpedia:previousWork,
+        relationalArg = PrepositionalObject("before") restrictedTo dbpedia:Album), 
+  RelationalAdjective("record",dbpedia:subsequentWork,
+        relationalArg = PrepositionalObject("after") restrictedTo dbpedia:Album), 
+
 
   // others 
 
@@ -227,13 +266,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  RelationalNoun("follow-up",dbpedia:subsequentWork,
-        propSubj = PossessiveAdjunct,
-        propObj  = CopulativeArg),
-  RelationalNoun("sequel",dbpedia:subsequentWork,
-        propSubj = PossessiveAdjunct,
-        propObj  = CopulativeArg), 
-
   RelationalNoun("budget",dbpedia:budget,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
@@ -244,7 +276,11 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   RelationalNoun(["associated"/adjective "act"/noun],dbpedia:associatedBand,
         propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun(["associated"/adjective "act"/noun],dbpedia:associatedMusicalArtist,
+        propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg)
+
 
 )
 

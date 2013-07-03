@@ -109,12 +109,11 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
 
   //// Properties
 
-  // team
+  // team, manager
 
   RelationalNoun("team",dbpedia:team,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
-
   StateVerb("play",dbpedia:team,
      propSubj = Subject restrictedTo lex:Player,
      propObj  = PrepositionalObject("for")),
@@ -122,7 +121,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
   RelationalNoun("player",dbpedia:team,
      propSubj = CopulativeArg restrictedTo lex:Player,
      propObj  = PossessiveAdjunct),
-
   StateVerb("race",dbpedia:team,
      propSubj = Subject restrictedTo lex:Racer,
      propObj  = PrepositionalObject("for")),
@@ -130,10 +128,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
   RelationalNoun("manager",dbpedia:team,
      propSubj = CopulativeArg restrictedTo dbpedia:SportsManager,
      propObj  = PossessiveAdjunct),
-
   StateVerb("manage",dbpedia:team,
      propSubj = Subject restrictedTo dbpedia:SportsManager,
      propObj  = DirectObject),
+
+  RelationalNoun("manager",dbpedia:managerClub,
+     propObj  = PossessiveAdjunct),
+  StateVerb("manage",dbpedia:managerClub),
 
   // homeArena, ground 
 
@@ -169,14 +170,21 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
 
-  // number
+  // number, squadNumber
 
   RelationalNoun(["shirt"/noun "number"/noun],dbpedia:number,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["shirt"/noun "number"/noun],dbpedia:squadNumber,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
   RelationalNoun(["squad"/noun "number"/noun],dbpedia:number,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
+  RelationalNoun(["squad"/noun "number"/noun],dbpedia:squadNumber,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
 
   // draftYear 
 

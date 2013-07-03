@@ -34,7 +34,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#>,"en",
 
   //// Properties
 
-  // kingdom, phylum, genus
+  // kingdom, phylum, genus, family, order
 
   StateVerb("belong",dbpedia:kingdom,
        propObj  = PrepositionalObject("to")),
@@ -43,6 +43,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#>,"en",
   StateVerb("belong",<http://dbpedia.org/ontology/class>,
        propObj  = PrepositionalObject("to")),
   StateVerb("belong",dbpedia:genus,
+       propObj  = PrepositionalObject("to")),
+  StateVerb("belong",dbpedia:family,
+       propObj  = PrepositionalObject("to")),
+  StateVerb("belong",dbpedia:order,
        propObj  = PrepositionalObject("to")),
 
   StateVerb("contain",dbpedia:kingdom,
@@ -54,6 +58,31 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#>,"en",
   StateVerb("contain",<http://dbpedia.org/ontology/class>,
        propSubj = DirectObject,
        propObj  = Subject),
+  StateVerb("contain",dbpedia:family,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("contain",dbpedia:order,
+       propSubj = DirectObject,
+       propObj  = Subject),
+
+  RelationalNoun("kingdom",dbpedia:kingdom,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("phylum",dbpedia:phylum,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("class",<http://dbpedia.org/ontology/class>,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("genus",dbpedia:genus,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("family",dbpedia:family,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("order",dbpedia:order,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
 
   RelationalNoun("member",dbpedia:kingdom,
        propObj  = PossessiveAdjunct),
@@ -63,6 +92,11 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#>,"en",
        propObj  = PossessiveAdjunct),
   RelationalNoun("member",dbpedia:genus,
        propObj  = PossessiveAdjunct),
+  RelationalNoun("member",dbpedia:family,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("member",dbpedia:order,
+       propObj  = PossessiveAdjunct),
+
 
   // conservationStatus
 

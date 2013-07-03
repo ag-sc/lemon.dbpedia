@@ -11,6 +11,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
   ClassNoun("man",lex:Male) with plural "men",
   ClassNoun(["ethnic"/adjective "group"/noun],dbpedia:EthnicGroup),
 
+  // Occupations
+
   ClassNoun("scientist",dbpedia:Scientist),
   ClassNoun("researcher",dbpedia:Scientist),
   ClassNoun("historian",lex:Historian),
@@ -26,10 +28,45 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
   ClassNoun("celebrity",dbpedia:Celebrity),
   ClassNoun("philosopher",dbpedia:Philosopher),
 
+  // Nationalities
+
+  ClassNoun("Russian",lex:Russian),
+  IntersectiveAdjective("Russian",lex:Russian),
+  ClassNoun("Chinese",lex:Chinese),
+  IntersectiveAdjective("Chinese",lex:Chinese),
+  ClassNoun("US American",lex:USAmerican),
+  IntersectiveAdjective("USAmerican",lex:USAmerican),
+  ClassNoun("American",lex:American),
+  IntersectiveAdjective("American",lex:American),
+  IntersectiveAdjective("British",lex:British),
+  IntersectiveAdjective("English",lex:English),
+  IntersectiveAdjective("Irish",lex:Irish),
+  IntersectiveAdjective("Japanese",lex:Japanese),
+  ClassNoun("Indian",lex:Indian),
+  IntersectiveAdjective("Indian",lex:Indian),
+  ClassNoun("German",lex:German),
+  IntersectiveAdjective("German",lex:German),
+  ClassNoun("French",lex:French),
+  IntersectiveAdjective("French",lex:French),
+  ClassNoun("Canadian",lex:Canadian),
+  IntersectiveAdjective("Canadian",lex:Canadian),
+  ClassNoun("Italian",lex:Italian),
+  IntersectiveAdjective("Italian",lex:Italian),
+  ClassNoun("Belgian",lex:Belgian),
+  IntersectiveAdjective("Belgian",lex:Belgian),
+  ClassNoun("Pole",lex:Polish),
+  IntersectiveAdjective("Polish",lex:Polish),
+  ClassNoun("Dutch",lex:Dutch),
+  IntersectiveAdjective("Dutch",lex:Dutch),
+
+  // Ethnicities
+
   ClassNoun("Jew",lex:Jew),
   IntersectiveAdjective("Jewish",lex:Jew),
   ClassNoun(["African"/adjective "American"/adjective],lex:AfricanAmerican),
   IntersectiveAdjective(["African"/adjective "American"/adjective],lex:AfricanAmerican),
+
+  // Religion 
 
   ClassNoun("Protestant",lex:Protestant),
   IntersectiveAdjective("Protestant",lex:Protestant),
@@ -184,6 +221,17 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
      propObj  = Subject),
 
 
+  // successor
+
+  RelationalNoun("successor",dbpedia:successor,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
+  StateVerb("succeed",dbpedia:successor,
+     propSubj = DirectObject,
+     propObj  = Subject),
+
+
   // ethnicity, religion 
 
   RelationalNoun("ethnicity",dbpedia:ethnicity,
@@ -280,13 +328,17 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
      propObj = PrepositionalObject("from") restrictedTo dbpedia:Place),
 
 
-  // birthName, formerName, pseudonym, alias
+  // birthName, formerName, commonName, pseudonym, alias
 
   RelationalNoun(["birth"/noun "name"/noun],dbpedia:birthName,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg), 
 
-  RelationalNoun(["former"/noun "name"/noun],dbpedia:formerName,
+  RelationalNoun(["former"/adjective "name"/noun],dbpedia:formerName,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  RelationalNoun(["common"/adjective "name"/noun],dbpedia:commonName,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg), 
 
@@ -297,6 +349,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
   RelationalNoun("alias",dbpedia:alias,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
+
+  RelationalAdjective("called",dbpedia:pseudonym,
+     relationalArg = DirectObject), 
+  RelationalAdjective("called",dbpedia:alias,
+     relationalArg = DirectObject), 
+  RelationalAdjective("called",dbpedia:commonName,
+     relationalArg = DirectObject), 
 
 
   // weight 

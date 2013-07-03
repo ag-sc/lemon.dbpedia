@@ -19,7 +19,7 @@ lex:Male rdf:type owl:Restriction ;
    owl:onProperty dbpedia:gender ;
    owl:hasValue   resource:Male .
 
-lex:grandchild owl:propertyChainAxiom ( <http://dbpedia.org/ontology/child> <http://dbpedia.org/ontology/child> ) .
+lex:grandchild owl:propertyChain ( <http://dbpedia.org/ontology/child> <http://dbpedia.org/ontology/child> ) .
 
 lex:Mayor rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:leaderTitle ;
@@ -65,17 +65,98 @@ lex:VU rdf:type owl:Restriction ;
 lex:Cosmonaut owl:unionOf (dbpedia:Astronaut lex:Russian lex:Soviet) .
 lex:Taikonaut owl:unionOf (dbpedia:Astronaut lex:Chinese) .
 
+## nationalities ## 
+
 lex:Russian rdf:type owl:Restriction ;
    owl:onProperty dbpedia:nationality ;
    owl:hasValue resource:Russia .
 
 lex:Soviet rdf:type owl:Restriction ;
    owl:onProperty dbpedia:nationality ;
-   owl:hasValue resource:Soviet_people .
+   owl:hasValue   resource:Soviet_people .
 
 lex:Chinese rdf:type owl:Restriction ;
    owl:onProperty dbpedia:nationality ;
-   owl:hasValue resource:China .
+   owl:hasValue   resource:China .
+
+lex:USAmerican rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:United_States .
+
+lex:American rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Americans .
+
+lex:British1 rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:United_Kingdom .
+lex:British2 rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:British_people .
+lex:British owl:unionOf ( lex:British1 lex:British2 ) .
+
+lex:Australian rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Australian .
+
+lex:Indian rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Indian .
+
+lex:German rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Germany .
+
+lex:Janpanese1 rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Japan .
+lex:Japanese2 rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Japanese_people .
+lex:Japanese owl:unionOf ( lex:Japanese1 lex:Japanese2 ) .
+
+lex:French rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:France .
+
+lex:Canadian1 rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Canada .
+lex:Canadian2 rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Canadians .
+lex:Canadian owl:unionOf ( lex:Canadian1 lex:Canadian2 ) .
+
+lex:English rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:English .
+
+lex:Italian rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Italian .
+
+lex:Belgian rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Belgium .
+
+lex:Polish rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Polish .
+
+lex:Dutch rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Netherlands .
+
+lex:Irish1 rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Ireland .
+lex:Irish2 rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Republic_of_Ireland .
+lex:Irish3 rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Irish_people .
+lex:Irish owl:unionOf ( lex:Irish1 lex:Irish2 ) .
 
 
 ## arts_entertainment ##
@@ -156,5 +237,5 @@ lex:religionProtestantism rdf:type owl:Restriction ;
    owl:onProperty dbpedia:religion ;
    owl:hasValue   resource:Protestantism .
 
-lex:birthCountry owl:propertyChainAxiom ( <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/ontology/country> ) .
+lex:birthCountry owl:propertyChain ( <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/ontology/country> ) .
 

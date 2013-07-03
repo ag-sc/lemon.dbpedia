@@ -66,7 +66,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_4#>,"en",
     propObj  = Subject),
   StateVerb("build",dbpedia:architect, 
     propSubj = DirectObject,
-    propObj  = Subject)
+    propObj  = Subject), 
+
+  // yearOfConstruction 
+
+  RelationalAdjective("constructed",dbpedia:yearOfConstruction,
+    relationalArg = PrepositionalObject("in"))
 
 )
 

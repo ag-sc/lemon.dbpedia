@@ -218,6 +218,21 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
 
+
+  // timezone, UTC offset
+
+  RelationalNoun(["time"/noun "zone"/noun],dbpedia:timeZone,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  RelationalNoun(["UTC"/noun "offset"/noun],dbpedia:utcOffset,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["time"/noun "zone"/noun "offset"/noun],dbpedia:utcOffset,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+
   // openend and completed
 
   ConsequenceVerb("open",dbpedia:dateUse,
@@ -226,6 +241,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
   ConsequenceVerb("open",dbpedia:openingDate,
      propSubj = lex:place as Subject, 
      propObj  = lex:dateOpened as PrepositionalObject("on")),
+  ConsequenceVerb("open",dbpedia:openingYear,
+     propSubj = lex:place as Subject, 
+     propObj  = lex:yearOpened as PrepositionalObject("in")),
 
   ConsequenceVerb("complete",dbpedia:completionDate,
      propSubj = lex:place as Subject, 
@@ -250,7 +268,17 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
 
   RelationalNoun("motto",dbpedia:motto,
     propSubj = PossessiveAdjunct,
-    propObj = CopulativeArg)
+    propObj = CopulativeArg), 
+
+  RelationalNoun(["NRHP"/noun "reference"/noun "number"/noun],dbpedia:nrhpReferenceNumber,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["National Register"/noun "reference"/noun "number"/noun],dbpedia:nrhpReferenceNumber,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["reference"/noun "number"/noun],dbpedia:nrhpReferenceNumber,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg)
 
 )
 

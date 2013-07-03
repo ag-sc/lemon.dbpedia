@@ -160,8 +160,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
   StateVerb("create",dbpedia:product), 
   StateVerb("develop",dbpedia:product), 
 
-  // owningCompany
+  // owningCompany, owner
 
+  RelationalNoun("owner",dbpedia:owner,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  StateVerb("own",dbpedia:owner,
+     propSubj = DirectObject,
+     propObj  = Subject), 
   StateVerb("own",dbpedia:owningCompany,
      propSubj = DirectObject,
      propObj  = Subject), 

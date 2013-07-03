@@ -21,6 +21,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
 
   //// Properties 
 
+  RelationalNoun("part",dbpedia:isPartOf,
+       propObj  = PrepositionalObject("of")),
+
   StateVerb(["take"/verb "place"/noun],dbpedia:date,
        propObj = PrepositionalObject("on")),
 

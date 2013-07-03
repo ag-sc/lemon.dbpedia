@@ -45,7 +45,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
 
-  // developer
+  // developer, computingPlatform
 
   RelationalNoun("developer",dbpedia:developer,
        propSubj = PossessiveAdjunct,
@@ -54,6 +54,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   StateVerb("develop",dbpedia:developer,
        propSubj = DirectObject,
        propObj  = Subject), 
+
+  RelationalAdjective("developed",dbpedia:computingPlatform,
+       relationalArg = PrepositionalObject("for")), 
+  RelationalAdjective("ported",dbpedia:computingPlatform,
+       relationalArg = PrepositionalObject("to")), 
+
 
   // programmingLanguage
 

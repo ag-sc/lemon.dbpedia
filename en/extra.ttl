@@ -416,7 +416,7 @@
 
 :discover a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "discover"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
 		      lexinfo:subject      :arg1discover ;
                       lexinfo:directObject :arg2discover ;
                       lexinfo:prepositionalAdjunct :arg3discover ] ;
@@ -428,7 +428,6 @@
                                  lemon:objOfProp  :arg3discover ] ];
   lexinfo:partOfSpeech lexinfo:verb .
 :arg3discover lemon:marker :on .
-:arg3discover lemon:optional "true"^^xsd:boolean .
 
 :discovery a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "discovery"@en ] ;
@@ -575,13 +574,21 @@
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
-## formerCoach ##
+## formerCoach, formerTeam ##
 
 :wasCoach a lemon:Phrase ;
   lemon:decomposition ( :arg1 :component_be :component_coach :of :arg2 ) ;
   lemon:canonicalForm [ lemon:writtenRep "was coach of"@en ] ;
   lexinfo:tense lexinfo:past ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/formerCoach> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] .
+
+:playedFor a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :component_play :for :arg2 ) ;
+  lemon:canonicalForm [ lemon:writtenRep "played for"@en ] ;
+  lexinfo:tense lexinfo:past ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/formerTeam> ;
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
@@ -711,6 +718,10 @@
 
 :component_hold a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "hold"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
+:component_play a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "play"@en ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
 ## Participles ## 
