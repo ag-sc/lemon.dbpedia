@@ -179,6 +179,10 @@ lex:Muslim rdf:type owl:Restriction ;
    owl:onProperty dbpedia:religion ;
    owl:hasValue   resource:Muslim .
 
+lex:Buddhist rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:religion ;
+   owl:hasValue   resource:Buddhism .
+
 ## nationalities ## 
 
 lex:Russian rdf:type owl:Restriction ;
