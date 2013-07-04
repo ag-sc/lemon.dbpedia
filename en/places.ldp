@@ -117,19 +117,31 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
   RelationalNoun("bridge",dbpedia:crosses,
     propObj = PrepositionalObject("over")),
     
-  // source(Country)
+  // source(Country), origin, riverMouth
 
   RelationalNoun("source",dbpedia:source,
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg), 
   StateVerb("originate",dbpedia:source,
-    propObj = PrepositionalObject("in")),
+    propObj  = PrepositionalObject("in")),
   StateVerb("originate",dbpedia:sourceCountry,
-    propObj = PrepositionalObject("in")),
+    propObj  = PrepositionalObject("in")),
+  StateVerb("originate",dbpedia:origin,
+    propSubj = Subject restrictedTo dbpedia:Stream,
+    propObj  = PrepositionalObject("in")),
+
+  StateVerb("flow",dbpedia:riverMouth,
+    propObj  = PrepositionalObject("into")),
+  StateVerb("run",dbpedia:riverMouth,
+    propObj  = PrepositionalObject("into")),
     
-  // border
+  // border, neighbors
 
   StateVerb("border",dbpedia:border),
+
+  RelationalNoun(["neighboring"/adjective "municipality"/noun],dbpedia:neighboringMunicipality,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
   
   // residence
 
@@ -292,11 +304,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
 
   RelationalNoun("length",dbpedia:length,
      propSubj = PossessiveAdjunct,
-     propObj = CopulativeArg), 
+     propObj  = CopulativeArg), 
 
   RelationalNoun("width",dbpedia:width,
      propSubj = PossessiveAdjunct,
-     propObj = CopulativeArg), 
+     propObj  = CopulativeArg), 
+
+  RelationalNoun(["grid"/noun "reference"/noun],dbpedia:gridReference,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
 
   RelationalNoun(["highest"/adjective "region"/noun],dbpedia:highestRegion,
     propSubj = PossessiveAdjunct,

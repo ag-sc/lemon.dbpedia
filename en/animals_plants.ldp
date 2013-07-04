@@ -124,7 +124,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#>,"en",
   IntersectiveAdjective("threatened",lex:Threatened),
   IntersectiveDataPropertyAdjective("endangered",dbpedia:conservationStatus,"EN"),
   IntersectiveDataPropertyAdjective(["critically"/adverb "endangered"/adjective],dbpedia:conservationStatus,"CR"),
-  IntersectiveDataPropertyAdjective(["near"/adjective "threatened"/adjective],dbpedia:conservationStatus,"NT")
+  IntersectiveDataPropertyAdjective(["near"/adjective "threatened"/adjective],dbpedia:conservationStatus,"NT"),
 
   // binomialAuthority
 
@@ -134,6 +134,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#>,"en",
 
   StateVerb(["first"/adverb "describe"/verb],dbpedia:binomialAuthority,
        propSubj = DirectObject,
-       propObj  = Subject), 
+       propObj  = Subject)
 
 )

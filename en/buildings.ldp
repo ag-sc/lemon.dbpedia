@@ -1,4 +1,5 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix resource: <http://dbpedia.org/resource/> .
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_4#>,"en",
 
@@ -101,7 +102,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_4#>,"en",
   RelationalAdjective("located",dbpedia:address,
     relationalArg = PrepositionalObject("in")),
 
-  // architect 
+  // architect, architecturalStyle 
 
   RelationalNoun("architect",dbpedia:architect,
     propSubj = PossessiveAdjunct,
@@ -113,12 +114,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_4#>,"en",
     propSubj = DirectObject,
     propObj  = Subject), 
 
+  IntersectiveObjectPropertyAdjective("Gothic",dbpedia:architecturalStyle,resource:Gothic_architecture),
+  IntersectiveObjectPropertyAdjective("Neo-Gothic",dbpedia:architecturalStyle,resource:Gothic_Revival_achitecture),
+  IntersectiveObjectPropertyAdjective("Victorian Gothic",dbpedia:architecturalStyle,resource:Gothic_Revival_achitecture),
+  IntersectiveObjectPropertyAdjective("Greek Revival",dbpedia:architecturalStyle,resource:Greek_Revival_achitecture),
+  IntersectiveObjectPropertyAdjective("Art Deco",dbpedia:architecturalStyle,resource:Art_Deco),
+
   // yearOfConstruction 
 
   RelationalAdjective("constructed",dbpedia:yearOfConstruction,
     relationalArg = PrepositionalObject("in"))
 
 )
-
-
-

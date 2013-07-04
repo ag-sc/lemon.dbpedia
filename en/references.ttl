@@ -9,50 +9,6 @@
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
 
 
-## persons ##
-
-lex:Female rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:gender ;
-   owl:hasValue   resource:Female .
-
-lex:Male rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:gender ;
-   owl:hasValue   resource:Male .
-
-lex:grandchild owl:propertyChain ( <http://dbpedia.org/ontology/child> <http://dbpedia.org/ontology/child> ) .
-
-lex:Mayor rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:leaderTitle ;
-   owl:hasValue   "Mayor" .
-lex:Governor rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:leaderTitle ;
-   owl:hasValue   "Governor" .
-lex:President rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:leaderTitle ;
-   owl:hasValue   "President" .
-
-lex:MemberOfParliament rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Member of Parliament" .
-lex:MemberOfTheEuropeanParliament rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Member of the European Parliament" .
-lex:MinisterOfForgeinAffairs rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Minister of Foreign Affairs" .
-lex:MinisterOfJustice rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Minister of Justice" .
-lex:MinisterOfDefence rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Minister of Defence" .
-lex:MinisterOfEducation rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Minister of Education" .
-lex:Senator rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Senator" .
-
 ## places ## 
 
 :Arrondissement rdf:type owl:Restriction ;
@@ -83,6 +39,20 @@ lex:VU rdf:type owl:Restriction ;
 lex:Cosmonaut owl:unionOf (dbpedia:Astronaut lex:Russian lex:Soviet) .
 lex:Taikonaut owl:unionOf (dbpedia:Astronaut lex:Chinese) .
 
+## sports ##
+
+lex:batLeft rdf:type owl:Restriction ; 
+       owl:onProperty dbpedia:battingSide ;
+       owl:hasValue   "Left" .
+lex:batRight rdf:type owl:Restriction ; 
+       owl:onProperty dbpedia:battingSide ;
+       owl:hasValue   "Right" .
+lex:throwLeft rdf:type owl:Restriction ; 
+       owl:onProperty dbpedia:throwingSide ;
+       owl:hasValue   "Left" .
+lex:throwRight rdf:type owl:Restriction ; 
+       owl:onProperty dbpedia:throwingSide ;
+       owl:hasValue   "Right" .
 
 ## arts_entertainment ##
 
@@ -93,6 +63,18 @@ lex:VoiceActress owl:intersectionOf (dbpedia:VoiceActor lex:Female) .
 lex:AdultActress owl:intersectionOf (dbpedia:AdultActor lex:Female) .
 lex:PornActress  owl:intersectionOf (dbpedia:Pornstar lex:Female) .
 
+:Hardcover rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:mediaType ;
+   owl:hasValue   resource:Hardcover .
+:Paperback rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:mediaType ;
+   owl:hasValue   resource:Paperback .
+:EBook rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:mediaType ;
+   owl:hasValue   resource:E-book .
+:Audiobook rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:mediaType ;
+   owl:hasValue   resource:Audiobook .
 
 ## sports ## 
 
@@ -112,9 +94,32 @@ lex:Racer owl:unionOf (dbpedia:Cyclist dbpedia:FormulaOneRacer dbpedia:NascarDri
 lex:Race owl:unionOf ( dbpedia:Race dbpedia:CyclingCompetition ) .
 
 
+## politics ##
+
+lex:Monarchy rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:governmentType ;
+   owl:hasValue   resource:Monarchy .
+lex:ConstitutionalMonarchy rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:governmentType ;
+   owl:hasValue   resource:ConstitutionalMonarchy .
+lex:Republic rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:governmentType ;
+   owl:hasValue   resource:Republic .
+
+
 ## persons ##
 
 lex:birthCountry owl:propertyChain ( <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/ontology/country> ) .
+
+lex:Female rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:gender ;
+   owl:hasValue   resource:Female .
+
+lex:Male rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:gender ;
+   owl:hasValue   resource:Male .
+
+lex:grandchild owl:propertyChain ( <http://dbpedia.org/ontology/child> <http://dbpedia.org/ontology/child> ) .
 
 ## profession
 
@@ -151,6 +156,38 @@ lex:professionRevolutionary rdf:type owl:Restriction ;
 lex:professionPoet rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:profession ;
    owl:hasValue   resource:Poet .
+
+lex:Mayor rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:leaderTitle ;
+   owl:hasValue   "Mayor" .
+lex:Governor rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:leaderTitle ;
+   owl:hasValue   "Governor" .
+lex:President rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:leaderTitle ;
+   owl:hasValue   "President" .
+
+lex:MemberOfParliament rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Member of Parliament" .
+lex:MemberOfTheEuropeanParliament rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Member of the European Parliament" .
+lex:MinisterOfForgeinAffairs rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Minister of Foreign Affairs" .
+lex:MinisterOfJustice rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Minister of Justice" .
+lex:MinisterOfDefence rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Minister of Defence" .
+lex:MinisterOfEducation rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Minister of Education" .
+lex:Senator rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Senator" .
 
 ## ethnicity
 

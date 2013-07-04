@@ -33,6 +33,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
 
   //// Properties 
 
+  RelationalAdjective("located",dbpedia:locationCity,
+    relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("located",dbpedia:locationCountry,
+    relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("based",dbpedia:locationCountry,
+    relationalArg = PrepositionalObject("in")),
+
   // numberOfStudents 
 
   RelationalNoun("enrollment",dbpedia:numberOfStudents,
@@ -179,6 +186,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
      propSubj = DirectObject,
      propObj  = Subject), 
   StateVerb("own",dbpedia:owningCompany,
+     propSubj = DirectObject,
+     propObj  = Subject), 
+  StateVerb("own",dbpedia:owningOrganization,
      propSubj = DirectObject,
      propObj  = Subject), 
   RelationalNoun(["parent"/noun "company"/noun],dbpedia:owningCompany,

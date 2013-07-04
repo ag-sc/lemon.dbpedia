@@ -61,17 +61,20 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
 
   //// Properties 
 
+  StateVerb(["take"/verb "place"/noun],dbpedia:place,
+       propObj  = PrepositionalObject("in")),
+
   RelationalNoun("part",dbpedia:isPartOf,
        propObj  = PrepositionalObject("of")),
 
   StateVerb(["take"/verb "place"/noun],dbpedia:date,
        propObj = PrepositionalObject("on")),
 
-  RelationalAdjective("spoken",dbpedia:spokenIn,
-       relationalArg = PrepositionalObject("in")), 
-  RelationalNoun("language",dbpedia:spokenIn,
-       propSubj = CopulativeArg,
-       propObj  = PossessiveAdjunct),
+  StateVerb("belong",dbpedia:division,
+       propObj = PrepositionalObject("to")),
+
+
+  // similar, synonym, abbreviation
 
   RelationalAdjective("similar",dbpedia:similar,
        relationalArg = PrepositionalObject("to")), 
@@ -82,6 +85,18 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
   RelationalNoun("synonym",dbpedia:synonym,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
+
+  RelationalNoun("abbreviation",dbpedia:abbreviation,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  StateVerb("abbreviate",dbpedia:abbreviation,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  RelationalAdjective("abbreviated",dbpedia:abbreviation,
+       relationalArg = PrepositionalObject("as")),
+
+
+  // melting, boiling and sublimation point
 
   RelationalNoun(["sublimation"/noun "point"/noun],dbpedia:sublimationPoint,
        propSubj = PossessiveAdjunct,
@@ -101,8 +116,20 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
   StateVerb("boil",dbpedia:boilingPoint,
        propObj = PrepositionalObject("at")), 
 
-  StateVerb("belong",dbpedia:division,
-       propObj = PrepositionalObject("to")),
+
+  // spokenIn, languageFamily
+
+  StateVerb("belong",dbpedia:languageFamily,
+       propObj = PossessiveAdjunct),
+  RelationalNoun(["language"/noun "family"/noun],dbpedia:languageFamily,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalAdjective("spoken",dbpedia:spokenIn,
+       relationalArg = PrepositionalObject("in)),
+  RelationalNoun("language",dbpedia:spokenIn,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
 
 
   // languages 

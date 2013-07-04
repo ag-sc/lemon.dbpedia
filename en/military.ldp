@@ -24,18 +24,20 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
        propObj = PrepositionalObject("in")), 
 
   RelationalNoun("commander",dbpedia:commander,
-       propSubj = PropositionalObject("in"),
+       propSubj = PrepositionalObject("in"),
        propObj  = CopulativeArg), 
   RelationalNoun("leader",dbpedia:commander,
-       propSubj = PropositionalObject("in"),
+       propSubj = PrepositionalObject("in"),
        propObj  = CopulativeArg), 
 
   StateVerb("command",dbpedia:commander,
-       propSubj = PrepositionalObject("during")
+       propSubj = PrepositionalObject("during"),
        propObj  = Subject), 
   StateVerb("command",dbpedia:militaryCommand),
 
   StateVerb("serve",dbpedia:militaryBranch,
+       propObj = PrepositionalObject("in")),
+  StateVerb("serve",dbpedia:militaryUnit,
        propObj = PrepositionalObject("in"))
 
 )

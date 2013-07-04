@@ -114,7 +114,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
 
   //// Properties
 
-  // birthDate, birthYear, birthPlace
+  // birthDate, birthYear, birthPlace, stateOfOrigin
 
   RelationalNoun(["birth"/noun "date"/noun],dbpedia:birthDate,
      propSubj = PossessiveAdjunct,
@@ -133,9 +133,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
   ConsequenceVerb("bear",dbpedia:birthPlace,
      propSubj = lex:child as Subject, 
      propObj  = lex:place as PrepositionalObject("in")),
-  ConsequenceVerb("bear",dbpedia:birthPlace,
+  ConsequenceVerb("bear",lex:birthCountry,
      propSubj = lex:child as Subject, 
-     propObj  = lex:birthCountry as PrepositionalObject("in")),
+     propObj  = lex:country as PrepositionalObject("in")),
+
+  ConsequenceVerb("bear",dbpedia:stateOfOrigin,
+     propSubj = lex:child as Subject, 
+     propObj  = lex:state as PrepositionalObject("in")),
+  StateVerb("come",dbpedia:stateOfOrigin,
+     propObj  = PrepositionalObject("from")),
 
   RelationalNoun(["birth"/noun "place"/noun],dbpedia:birthPlace,
      propSubj = PossessiveAdjunct,
@@ -144,7 +150,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg) with plural "places of birth",
 
-  // deathDate, deathYear, deathPlace
+  // deathDate, deathYear, deathPlace, restingPLace
 
   RelationalNoun(["death"/noun "date"/noun],dbpedia:deathDate,
      propSubj = PossessiveAdjunct,
@@ -163,6 +169,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
   RelationalNoun(["place"/noun "of"/preposition "death"/noun],dbpedia:deathPlace,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg) with plural "places of death",
+
+  RelationalNoun(["resting"/noun "place"/noun],dbpedia:restingPlace,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalAdjective("buried",dbpedia:restingPlace,
+     relationalArg = PrepositionalObject("in")),
 
   // gender 
 
@@ -253,15 +265,27 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
      propObj  = Subject),
 
 
-  // successor
+  // successor, predecessor
 
   RelationalNoun("successor",dbpedia:successor,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
-
   StateVerb("succeed",dbpedia:successor,
      propSubj = DirectObject,
      propObj  = Subject),
+  StateVerb("preceed",dbpedia:successor),
+  RelationalNoun("predecessor",dbpedia:successor,
+     propObj = PossessiveAdjunct),
+
+  RelationalNoun("predecessor",dbpedia:predecessor,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  StateVerb("preceed",dbpedia:predecessor,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("succeed",dbpedia:predecessor),
+  RelationalNoun("successor",dbpedia:predecessor,
+     propObj = PossessiveAdjunct),
 
 
   // ethnicity, religion 

@@ -49,6 +49,11 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   ClassNoun(["academical"/adjective "journal"/noun],dbpedia:AcademicalJournal),
   ClassNoun("journal",dbpedia:AcademicJournal),
 
+  ClassNoun("hardcover",lex:Hardcover),
+  ClassNoun("paperback",lex:Paperback),
+  ClassNoun("e-book",lex:EBook),
+  ClassNoun("audiobook",lex:Audiobook),
+
   // Music 
 
   ClassNoun(["musical"/adjective "work"/noun],dbpedia:MusicalWork),
@@ -169,7 +174,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = DirectObject,
         propObj  = Subject),
 
-  // publisher, distibutor
+  // publisher, distibutor, oclc
 
   RelationalNoun("publisher",dbpedia:publisher,
         propSubj = PossessiveAdjunct,
@@ -184,6 +189,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   StateVerb("distribute",dbpedia:distributor,
         propSubj = DirectObject,
         propObj  = Subject),
+
+  RelationalNoun(["OCLC"/noun "number"/noun],dbpedia:oclc,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
 
   // creator 
 
@@ -387,6 +396,36 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   StateVerb("edit",dbpedia:editing,
         propSubj = DirectObject,
-        propObj  = Subject)
+        propObj  = Subject), 
+
+  RelationalNoun(["former"/adjective "band"/noun "member"/noun],dbpedia:formerBandMember,
+     propSubj = PrepositionalObject("of"),
+     propObj  = CopulativeArg),  
+
+  StateVerb("play",dbpedia:programmeFormat), 
+
+  ConsequenceVerb("broadcast",dbpedia:broadcastArea,
+     propSubj = lex:station as Subject, 
+     propObj  = lex:area as PrepositionalObject("in")),
+  StateVerb("cover",dbpedia:broadcastArea),
+
+  ConsequenceVerb("broadcast",dbpedia:network,
+     propSubj = lex:station as Subject, 
+     propObj  = lex:area as PrepositionalObject("on")),
+  ConsequenceVerb("air",dbpedia:network,
+     propSubj = lex:show as Subject, 
+     propObj  = lex:network as PrepositionalObject("on")),
+
+  RelationalNoun("episode",dbpedia:series,
+        propSubj = PrepositionalObject("of") restrictedTo dbpedia:TelevisionEpisode,
+        propObj  = CopulativeArg), 
+  RelationalNoun("part",dbpedia:series,
+        propSubj = PrepositionalObject("of"),
+        propObj  = CopulativeArg), 
+
+  IntersectiveDataPropertyAdjective("class A",dbpedia:braodcastStationClass,"A"), 
+  IntersectiveDataPropertyAdjective("class B",dbpedia:braodcastStationClass,"B"), 
+  IntersectiveDataPropertyAdjective("class C",dbpedia:braodcastStationClass,"C"), 
+  IntersectiveDataPropertyAdjective("class D",dbpedia:braodcastStationClass,"D"), 
 
 )

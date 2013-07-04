@@ -34,6 +34,7 @@
                 :make,
                 :write,
                 :writtenIn,
+                :madeIn,
                 :discover,
                 :discovery,
                 :air,
@@ -43,7 +44,12 @@
                 :haveEmployee,
                 :haveSeat,
                 :holdSeat,
+                :havePages,
+                :haveEpisodes,
+                :haveTracks,
                 :wearNumber,
+                :battingAverage,
+                :winGames,
                 :haveMusicBy,
                 :writeTheMusicFor,
                 :composeTheMusicFor,
@@ -425,9 +431,22 @@
                 lemon:subjOfProp :arg1write;
                 lemon:objOfProp  :arg2write;
                 lemon:propertyDomain <http://dbpedia.org/ontology/WrittenWork> ] .
-
 :arg2writtenIn lemon:marker :in .
 
+
+## origin ##
+
+:madeIn a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "made"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePPFrame ;
+                      lexinfo:copulativeArg :arg1madeIn ;
+                      lexinfo:prepositionalObject :arg2madeIn ; ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/origin>;
+                lemon:subjOfProp :arg1madeIn;
+                lemon:objOfProp  :arg2madeIn;
+                lemon:propertyDomain <http://dbpedia.org/ontology/Device> ] .
+:arg2madeIn lemon:marker :in .
 
 ## discover, discoverer ##
 
@@ -528,7 +547,7 @@
 #### Phrases ####
 
 
-## totalPopulation, staff, numberOfEmployees, seatingCapacity ##
+## totalPopulation, staff, numberOfEmployees, seatingCapacity, numberOf{Pages|Episodes|Tracks} ##
 
 :haveInhabitant a lemon:Phrase ;
   lemon:decomposition ( :arg_place :component_have :arg_num :component_inhabitant ) ;
@@ -565,6 +584,34 @@
   lemon:canonicalForm [ lemon:writtenRep "hold seats"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/seatingCapacity> ;
                 lemon:subjOfProp :arg_place ;
+                lemon:objOfProp  :arg_num ] .
+
+:havePages a lemon:Phrase ;
+  lemon:decomposition ( :arg_book :component_have :arg_num :component_page ) ;
+  lemon:canonicalForm [ lemon:writtenRep "have pages"@en ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfPages> ;
+                lemon:subjOfProp :arg_book ;
+                lemon:objOfProp  :arg_num ] .
+
+:haveEpisodes a lemon:Phrase ;
+  lemon:decomposition ( :arg_series :component_have :arg_num :component_episode ) ;
+  lemon:canonicalForm [ lemon:writtenRep "have episodes"@en ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfEpisodes> ;
+                lemon:subjOfProp :arg_series ;
+                lemon:objOfProp  :arg_num ] .
+
+:runForEpisodes a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :component_run :component_for :arg2 :component_episode ) ;
+  lemon:canonicalForm [ lemon:writtenRep "run for episodes"@en ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfStudents> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] .
+
+:haveTracks a lemon:Phrase ;
+  lemon:decomposition ( :arg_station :component_have :arg_num :component_track ) ;
+  lemon:canonicalForm [ lemon:writtenRep "have tracks"@en ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfTracks> ;
+                lemon:subjOfProp :arg_station ;
                 lemon:objOfProp  :arg_num ] .
 
 
@@ -636,7 +683,7 @@
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
-## number ##
+## number, statisticValue ##
 
 :wearNumber a lemon:Phrase ;
   lemon:decomposition ( :arg1 :component_wear :component_number :arg2 ) ;
@@ -644,6 +691,29 @@
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/number> ;
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
+
+:battingAverage a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm [ lemon:writtenRep "batting average"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
+		      lexinfo:copulativeArg :arg2battingAverage ;
+                      lexinfo:possessiveAdjunct :arg1battingAverage ] ;
+    lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/statisticValue> ;
+                                   lemon:subjOfProp :arg1battingAverage ;
+                                   lemon:objOfProp  :arg2battingAverage  ] , 
+                                 [ lemon:reference <http://dbpedia.org/ontology/statisticLabel> ;
+                                   lemon:subjOfProp :arg1battingAverage ;
+                                   lemon:objOfProp  <http://dbpedia.org/resource/battingAverage> ] ] .
+
+:winGames a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :component_win :arg2 :component_game ) ;
+  lemon:canonicalForm [ lemon:writtenRep "win games"@en ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/statisticValue> ;
+                                 lemon:subjOfProp :arg1 ;
+                                 lemon:objOfProp  :arg2 ] , 
+                               [ lemon:reference <http://dbpedia.org/ontology/statisticLabel> ;
+                                 lemon:subjOfProp :arg1 ;
+                                 lemon:objOfProp  <http://dbpedia.org/resource/Win-loss_record_(pitching)> ] ] .
 
 ## synonym ##
 
@@ -677,7 +747,7 @@
            lemon:optional "true"^^xsd:boolean .
 
 
-## numberOfStudents, numberOfEpisodes ## 
+## numberOfStudents ## 
 
 :haveEnrollmentOf a lemon:Phrase ;
   lemon:decomposition ( :arg1 :component_have :component_an :component_enrollment :component_of :arg2 :component_student ) ;
@@ -689,13 +759,6 @@
 :withEnrollmentOf a lemon:Phrase ;
   lemon:decomposition ( :component_with :component_an :component_enrollment :component_of :arg2 :component_student ) ;
   lemon:canonicalForm [ lemon:writtenRep "with an enrollment of"@en ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfStudents> ;
-                lemon:subjOfProp :arg1 ;
-                lemon:objOfProp  :arg2 ] .
-
-:runForEpisodes a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_run :component_for :arg2 :component_episode ) ;
-  lemon:canonicalForm [ lemon:writtenRep "run for episodes"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfStudents> ;
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
@@ -811,8 +874,20 @@
   lemon:canonicalForm [ lemon:writtenRep "seat"@en ] ;
   lexinfo:partOfSpeech lexinfo:noun .
 
+:component_page a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "page"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
 :component_member a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "member"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:component_track a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "member"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:component_game a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "game"@en ] ;
   lexinfo:partOfSpeech lexinfo:noun .
 
 ## Adjectives ##

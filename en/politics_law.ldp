@@ -15,6 +15,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
   ClassNoun(["British"/adjective "royalty"/noun],dbpedia:BritishRoyalty),
   ClassNoun(["Polish"/adjective "king"/noun],dbpedia:PolishKing),
 
+  ClassNoun("monarchy",lex:Monarchy),
+  ClassNoun(["constitutional"/adjective "monarchy"/noun],lex:ConstitutionalMonarchy),
+  ClassNoun("republic",lex:Republic),
+
   ClassNoun(["office"/noun "holder"/noun],dbpedia:OfficeHolder),
   ClassNoun(["member"/noun "of"/preposition "parliament"/noun],dbpedia:MemberOfParliament),
   ClassNoun(["member"/noun "of"/preposition "parliament"/noun],lex:MemberOfParliament),
