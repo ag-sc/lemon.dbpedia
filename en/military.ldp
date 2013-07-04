@@ -38,6 +38,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
   StateVerb("serve",dbpedia:militaryBranch,
        propObj = PrepositionalObject("in")),
   StateVerb("serve",dbpedia:militaryUnit,
-       propObj = PrepositionalObject("in"))
+       propObj = PrepositionalObject("in")),
+
+  RelationalNoun("casualties",dbpedia:causalties,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+
+  RelationalNoun("result",dbpedia:result,
+       propSubj = PrepositionalObject("of"),
+       propObj  = CopulativeArg)
 
 )

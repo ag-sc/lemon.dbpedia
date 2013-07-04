@@ -37,6 +37,28 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
 
+  RelationalNoun(["orbital"/adjective "period"/noun],dbpedia:orbitalPeriod,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("periapsis",dbpedia:periapsis,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("apoapsis",dbpedia:apoapsis,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("epoch",dbpedia:epoch,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun(["absolute"/adjective "magnitude"/noun],dbpedia:absoluteMagnitude,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("magnitude",dbpedia:madgnitude,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
   StateVerb(["launch"/verb "off"/particle],dbpedia:associatedRocket,
        propSubj = PrepositionalObject("from"),
        propObj  = Subject),

@@ -54,7 +54,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_3#>,"en",
        propSubj = DirectObject,
        propObj  = Subject),
   StateVerb("develop",dbpedia:precursor,
-       propObj  = PrepositionalObject("from"))
+       propObj  = PrepositionalObject("from")), 
+
+  RelationalNoun(["Entrez Gene"/noun "ID"/noun],dbpedia:entrezgene,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun(["Entrez"/noun "ID"/noun],dbpedia:entrezgene,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg)
 
 )
 

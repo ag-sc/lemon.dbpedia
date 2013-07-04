@@ -39,20 +39,6 @@ lex:VU rdf:type owl:Restriction ;
 lex:Cosmonaut owl:unionOf (dbpedia:Astronaut lex:Russian lex:Soviet) .
 lex:Taikonaut owl:unionOf (dbpedia:Astronaut lex:Chinese) .
 
-## sports ##
-
-lex:batLeft rdf:type owl:Restriction ; 
-       owl:onProperty dbpedia:battingSide ;
-       owl:hasValue   "Left" .
-lex:batRight rdf:type owl:Restriction ; 
-       owl:onProperty dbpedia:battingSide ;
-       owl:hasValue   "Right" .
-lex:throwLeft rdf:type owl:Restriction ; 
-       owl:onProperty dbpedia:throwingSide ;
-       owl:hasValue   "Left" .
-lex:throwRight rdf:type owl:Restriction ; 
-       owl:onProperty dbpedia:throwingSide ;
-       owl:hasValue   "Right" .
 
 ## arts_entertainment ##
 
@@ -92,6 +78,19 @@ lex:RaceDriver owl:unionOf (dbpedia:RacingDriver dbpedia:FormulaOneRacer dbpedia
 lex:Racer owl:unionOf (dbpedia:Cyclist dbpedia:FormulaOneRacer dbpedia:NascarDriver) .
 
 lex:Race owl:unionOf ( dbpedia:Race dbpedia:CyclingCompetition ) .
+
+lex:batLeft rdf:type owl:Restriction ; 
+       owl:onProperty dbpedia:battingSide ;
+       owl:hasValue   "Left" .
+lex:batRight rdf:type owl:Restriction ; 
+       owl:onProperty dbpedia:battingSide ;
+       owl:hasValue   "Right" .
+lex:throwLeft rdf:type owl:Restriction ; 
+       owl:onProperty dbpedia:throwingSide ;
+       owl:hasValue   "Left" .
+lex:throwRight rdf:type owl:Restriction ; 
+       owl:onProperty dbpedia:throwingSide ;
+       owl:hasValue   "Right" .
 
 
 ## politics ##

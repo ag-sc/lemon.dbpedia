@@ -103,7 +103,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
     relationalArg = PrepositionalObject("in")),
 
   RelationalNoun("part",dbpedia:range,
-    propObj = PossessiveAdjunct),
+    propObj  = PrepositionalObject("of")),
+  RelationalNoun("part",dbpedia:range,
+    propSubj = PrepositionalObject("of"),
+    propObj  = CopulativeArg),
 
   // crosses
 

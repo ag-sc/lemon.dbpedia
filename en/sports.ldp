@@ -195,7 +195,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
      propObj  = PossessiveAdjunct),
   StateVerb("manage",dbpedia:managerClub),
 
-  // homeArena, ground 
+  // homeArena, ground, tenant 
 
   RelationalNoun(["home"/noun "arena"/noun],dbpedia:homeArena,
      propSubj = PossessiveAdjunct,
@@ -214,6 +214,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
   RelationalNoun("home",dbpedia:ground,
      propSubj = PrepositionalObject("of"),
      propObj  = CopulativeArg),
+
+  StateVerb("play",dbpedia:tenant, 
+     propSubj = PrepositionalObject("in"),
+     propObj  = Subject restrictedTo dbpedia:Organization), 
+  StateVerb("host",dbpedia:tenant, 
+     propObj  = DirectObject restrictedTo dbpedia:Event), 
+
 
   // capacity 
 

@@ -52,7 +52,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
 
-  // developer, computingPlatform
+  // developer, computingPlatform, computingMedia
 
   RelationalNoun("developer",dbpedia:developer,
        propSubj = PossessiveAdjunct,
@@ -66,6 +66,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
        relationalArg = PrepositionalObject("for")), 
   RelationalAdjective("ported",dbpedia:computingPlatform,
        relationalArg = PrepositionalObject("to")), 
+  RelationalAdjective("released",dbpedia:computingMedia,
+       relationalArg = PrepositionalObject("on")),
 
 
   // programmingLanguage
@@ -108,8 +110,19 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   IntersectiveObjectPropertyAdjective("stereo",dbpedia:format,resource:Stereophonic_sound),
   IntersectiveObjectPropertyAdjective("stereo",dbpedia:format,resource:Dolby_Stereo),
 
+  IntersectiveDataPropertyAdjective("straight-four",dbpedia:configuration,"straight-four"),
+  IntersectiveDataPropertyAdjective("inline-four",dbpedia:configuration,"straight-four"),
+  IntersectiveDataPropertyAdjective("straight-six",dbpedia:configuration,"straight-six"),
+  IntersectiveDataPropertyAdjective("inline-six",dbpedia:configuration,"straight-six"),
+  IntersectiveDataPropertyAdjective("V6",dbpedia:configuration,"V6"),
+  IntersectiveDataPropertyAdjective("V8",dbpedia:configuration,"V8"),
+
   RelationalAdjective("assembled",dbpedia:assembly,
        relationalArg = PrepositionalObject("in")), 
+
+  ConsequenceVerb("commission",dbpedia:commissioningDate,
+     propSubj = lex:ship as Subject, 
+     propObj  = lex:date as PrepositionalObject("on")),
 
   StateVerb("build",dbpedia:builder,
        propSubj = DirectObject,

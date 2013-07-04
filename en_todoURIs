@@ -56,7 +56,6 @@ Planet/surfaceArea
 diameter
 classification
 distanceLaps
-spokenIn
 handedness
 pubchem
 issDockings
@@ -84,7 +83,6 @@ MeanOfTransportation/mass
 hubAirport
 vicePrincipalLabel
 PopulatedPlace/areaMetro
-place
 sheading
 description
 digitalSubChannel
@@ -145,14 +143,12 @@ dockedTime
 Automobile/wheelbase
 individualisedPnd
 yearOfElectrification
-Website
 hasJunctionWith
 service
 SpaceMission/stationVisitDuration
 starRating
 inflow
 AutomobileEngine/height
-chairmanTitle
 countySeat
 distance
 soocerLeaguePromoted
@@ -204,7 +200,6 @@ nonFictionSubject
 statisticYear
 spokesperson
 grades
-Agent
 careerPrizeMoney
 Spacecraft/dockedTime
 originalName
@@ -213,7 +208,6 @@ torchBearer
 iso6392Code
 coronationDate
 sourceRegion
-result
 branchFrom
 hsvCoordinateHue
 drainsTo
@@ -224,10 +218,9 @@ numberOfLaps
 lieutenancyArea
 rankInFinalMedalCount
 closingDate
-functionEndDate
+AutomobileEngine/powerOutput
 eyeColor
 fileSize
-periapsis
 climate
 buildingStartDate
 productionStartDate
@@ -252,7 +245,6 @@ icaoLocationIdentifier
 crewSize
 fourthCommander
 isoCodeRegion
-lowestPosition
 launches
 illiteracy
 SoccerLeagueSeason
@@ -262,7 +254,6 @@ availableSmartCard
 largestCity
 alpsSection
 numberOfPeopleAttending
-absoluteMagnitude
 elementAbove
 id
 trustee
@@ -291,14 +282,13 @@ elo
 photographer
 managementMountain
 hasSurfaceForm
-Colour
 maximumInclination
 totalTracks
 lcc
 background
 virtualChannel
 meshName
-minimumInclination
+nameDay
 endPoint
 dean
 winsInEurope
@@ -331,8 +321,7 @@ grossDomesticProduct
 capitalMountain
 riverBranch
 nerve
-nameDay
-computingMedia
+minimumInclination
 premiereDate
 shoots
 highschool
@@ -346,7 +335,6 @@ flagBearer
 lowest
 head
 titleDate
-Ideology
 maximumBoatLength
 bodyStyle
 chorusCharacterInPlay
@@ -395,11 +383,9 @@ podiums
 nationalFilmAward
 visitorsTotal
 oversight
-division
 School/campusSize
 sourceConfluenceState
 sourceDistrict
-Tax
 gun
 presenter
 numberOfRooms
@@ -408,7 +394,7 @@ numberOfCrew
 numberOfAlbums
 apparentMagnitude
 cost
-portfolio
+namedAfter
 routeEndLocation
 SpaceMission/stationEvaDuration
 placeOfBurial
@@ -434,7 +420,7 @@ extinctionDate
 leaderName
 numberOfStateDeputies
 associateStar
-chairLabel
+firstPopularVote
 organSystem
 intercommunality
 formerChoreographer
@@ -446,7 +432,6 @@ club
 wineRegion
 silCode
 fuel
-Beverage
 creationYear
 distanceToCapital
 ceeb
@@ -466,7 +451,6 @@ designer
 explorer
 membership
 wikiPageRedirects
-date
 associatedAct
 subdivisions
 notableIdea
@@ -475,7 +459,6 @@ mouthState
 sourceConfluenceElevation
 demonym
 years
-weddingParentsDate
 course
 visitorsPerDay
 longName
@@ -497,13 +480,11 @@ raceLength
 rebuildingDate
 filmFareAward
 numberOfStaff
-Event
 domain
 firstDriverCountry
 lunarLandingSite
 year
 wavelength
-album
 Planet/apoapsis
 Spacecraft/totalCargo
 typeOfElectrification
@@ -529,7 +510,7 @@ numberOfUndergraduateStudents
 areaOfCatchment
 populationRuralDensity
 draft
-commissioningDate
+chairmanTitle
 silverMedalist
 welshName
 winterAppearances
@@ -543,7 +524,7 @@ languageCode
 doctoralAdvisor
 numberOfLines
 governmentPlace
-orbitalPeriod
+lowestPosition
 publicationDate
 borough
 albedo
@@ -633,7 +614,6 @@ filmPolskiId
 countryOrigin
 engine
 timeshiftChannel
-meltingPoint
 dissolutionDate
 premiereYear
 missions
@@ -653,7 +633,6 @@ colourName
 longtype
 participant
 author
-epoch
 railwayRollingStock
 congressionalDistrict
 sixthFormStudents
@@ -686,16 +665,14 @@ orderInOffice
 sisterNewspaper
 geneLocation
 broadcastRepeater
-Project
 genomeDB
 regionalLanguage
 parkingInformation
 firstDriver
 casNumber
 superintendent
-ResearchProject
+populationPlace
 numberOfStars
-abbreviation
 duration
 ascent
 gross
@@ -731,14 +708,13 @@ nrhpType
 crownDependency
 aircraftElectronic
 isPartOfRoute
-Letter
 canonizedBy
 lengthReference
 astrologicalSign
 officialSchoolColour
 geneLocationEnd
 lymph
-parentCompany
+closingFilm
 illustrator
 Galaxy/temperature
 circulation
@@ -752,7 +728,6 @@ numberOfVisitorsAsOf
 sales
 dissolutionYear
 film
-boilingPoint
 firstDriverTeam
 basedOn
 landingDate
@@ -766,7 +741,6 @@ winsAtLPGA
 assets
 sourceConfluenceCountry
 mass
-Year
 numberOfCounties
 resolution
 cpu
@@ -852,7 +826,6 @@ plant
 distributingCompany
 orbits
 fc
-causalties
 runwayDesignation
 majorShrine
 RoadJunction
@@ -900,9 +873,7 @@ trackLength
 distanceTraveled
 aircraftHelicopterTransport
 stationVisitDuration
-Flag
 tournamentRecord
-isPartOf
 areaOfSearch
 oilSystem
 automobileModel
@@ -936,7 +907,6 @@ saint
 numberOfBombs
 passengersPerDay
 isPeerReviewed
-Language
 mouthMountain
 successfulLaunches
 prospectLeague
@@ -958,7 +928,6 @@ alongside
 originalMaximumBoatLength
 routeDirection
 Canal/maximumBoatBeam
-Food
 currentProduction
 passengersPerYear
 graySubject
@@ -1001,7 +970,6 @@ fastestDriverTeam
 whaDraftTeam
 missionDuration
 river
-facilityId
 specialEffects
 choreographer
 sex
@@ -1048,7 +1016,6 @@ highestPosition
 races
 frozen
 cmykCoordinateBlack
-Sales
 governor
 associateEditor
 partialFailedLaunches
@@ -1062,12 +1029,10 @@ Weapon/weight
 Planet/maximumTemperature
 SpaceMission/mass
 commune
-sublimationPoint
 lastFlight
 firstPublicationYear
 leftChild
 purpose
-Activity
 certificationDate
 tvComId
 analogChannel
@@ -1126,7 +1091,7 @@ eurobabeIndexId
 youthYears
 serviceModule
 Software/fileSize
-populationPlace
+weddingParentsDate
 carNumber
 egafdId
 maximumDepth
@@ -1149,7 +1114,6 @@ showJudge
 ChemicalSubstance/boilingPoint
 icdo
 Weapon/diameter
-similar
 orderDate
 freeFlightTime
 scottishName
@@ -1223,7 +1187,6 @@ capital
 politicalPartyInLegislature
 escapeVelocity
 goldMedalist
-apoapsis
 fastestLap
 assistantPrincipal
 associationOfLocalGovernment
@@ -1242,7 +1205,6 @@ vehicle
 relatedMeanOfTransportation
 premierePlace
 currentRank
-TopicalConcept
 appointer
 firstPublicationDate
 projectBudgetFunding
@@ -1319,9 +1281,7 @@ secondTeam
 cesarAward
 playerInTeam
 refseq
-tenant
 Galaxy/volume
-Currency
 museum
 dubber
 terytCode
@@ -1329,7 +1289,6 @@ noteOnPlaceOfBurial
 SpaceShuttle/distance
 management
 executiveProducer
-railwayPlatforms
 launchSite
 Planet/temperature
 numberOfGraduateStudents
@@ -1342,7 +1301,6 @@ canBaggageChecked
 wikiPageDisambiguates
 distanceToEdinburgh
 numberOfVineyards
-languageFamily
 buriedPlace
 heightAboveAverageTerrain
 electionDate
@@ -1368,19 +1326,19 @@ selection
 appearancesInLeague
 religiousHead
 disbanded
-namedAfter
+portfolio
 olympicOathSwornByJudge
 principal
 alpsMajorSector
 lunarSurfaceTime
-firstPopularVote
+chairLabel
 employer
 SpaceStation/volume
 pictureFormat
 broadcastTranslator
 winsAtLAGT
 mountainRange
-closingFilm
+parentCompany
 webcast
 actScore
 usSales
@@ -1390,7 +1348,7 @@ actingHeadteacher
 watershed
 alpsGroup
 port1DockedTime
-AutomobileEngine/powerOutput
+functionEndDate
 valvetrain
 eruptionYear
 closed
@@ -1399,7 +1357,6 @@ comparable
 coverArtist
 sourceElevation
 distributingLabel
-configuration
 otherWins
 largestCountry
 bowlRecord
@@ -1416,7 +1373,6 @@ lastWin
 broadcastNetwork
 SpaceMission/lunarOrbitTime
 productionEndYear
-Holiday
 Stream/dischargeAverage
 alpsSubsection
 alpsSupergroup
@@ -1431,7 +1387,6 @@ aircraftHelicopterObservation
 mainspan
 canonizedDate
 crewMember
-entrezgene
 lastPosition
 numberOfLawyers
 assetUnderManagement

@@ -358,8 +358,19 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
+  RelationalNoun(["facility"/noun "ID"/noun],dbpedia:facilityId,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
   RelationalNoun("B-side",dbpedia:bSide,
         propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  RelationalNoun("song",dbpedia:album,
+        propSubj = PrepositionalObject("on"),
+        propObj  = CopulativeArg),
+  RelationalNoun("track",dbpedia:album,
+        propSubj = PrepositionalObject("on"),
         propObj  = CopulativeArg),
 
   RelationalNoun(["sister"/noun "station"/noun],dbpedia:sisterStation,

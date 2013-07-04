@@ -47,6 +47,7 @@
                 :havePages,
                 :haveEpisodes,
                 :haveTracks,
+                :havePlatforms,
                 :wearNumber,
                 :battingAverage,
                 :winGames,
@@ -547,7 +548,7 @@
 #### Phrases ####
 
 
-## totalPopulation, staff, numberOfEmployees, seatingCapacity, numberOf{Pages|Episodes|Tracks} ##
+## totalPopulation, staff, numberOfEmployees, seatingCapacity, numberOf{Pages|Episodes|Tracks}, railwayPlatforms ##
 
 :haveInhabitant a lemon:Phrase ;
   lemon:decomposition ( :arg_place :component_have :arg_num :component_inhabitant ) ;
@@ -611,6 +612,13 @@
   lemon:decomposition ( :arg_station :component_have :arg_num :component_track ) ;
   lemon:canonicalForm [ lemon:writtenRep "have tracks"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfTracks> ;
+                lemon:subjOfProp :arg_station ;
+                lemon:objOfProp  :arg_num ] .
+
+:havePlatforms a lemon:Phrase ;
+  lemon:decomposition ( :arg_station :component_have :arg_num :component_platform ) ;
+  lemon:canonicalForm [ lemon:writtenRep "have tracks"@en ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/railwayPlatforms> ;
                 lemon:subjOfProp :arg_station ;
                 lemon:objOfProp  :arg_num ] .
 
@@ -883,7 +891,11 @@
   lexinfo:partOfSpeech lexinfo:noun .
 
 :component_track a lemon:Word ;
-  lemon:canonicalForm [ lemon:writtenRep "member"@en ] ;
+  lemon:canonicalForm [ lemon:writtenRep "track"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:component_platform a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "platform"@en ] ;
   lexinfo:partOfSpeech lexinfo:noun .
 
 :component_game a lemon:Word ;
