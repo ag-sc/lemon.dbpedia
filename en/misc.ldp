@@ -86,22 +86,61 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
   RelationalNoun(["sublimation"/noun "point"/noun],dbpedia:sublimationPoint,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
-
   StateVerb("sublime",dbpedia:sublimationPoint,
        propObj = PrepositionalObject("at")),
 
   RelationalNoun(["melting"/noun "point"/noun],dbpedia:meltingPoint,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
-
   StateVerb("melt",dbpedia:meltingPoint,
        propObj = PrepositionalObject("at")),
 
   RelationalNoun(["boiling"/noun "point"/noun],dbpedia:boilingPoint,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
-
   StateVerb("boil",dbpedia:boilingPoint,
-       propObj = PrepositionalObject("at"))
+       propObj = PrepositionalObject("at")), 
+
+  StateVerb("belong",dbpedia:division,
+       propObj = PrepositionalObject("to")),
+
+
+  // languages 
+
+  IntersectiveObjectPropertyAdjective("English",dbpedia:language,resource:English_language),
+  IntersectiveObjectPropertyAdjective("Hindi",dbpedia:language,resource:Standard_Hindi),
+  IntersectiveObjectPropertyAdjective("Spanish",dbpedia:language,resource:Spanish_language),
+  IntersectiveObjectPropertyAdjective("French",dbpedia:language,resource:French_language),
+  IntersectiveObjectPropertyAdjective("Japanese",dbpedia:language,resource:Japanese_language),
+  IntersectiveObjectPropertyAdjective("German",dbpedia:language,resource:German_language),
+  IntersectiveObjectPropertyAdjective("Tamil",dbpedia:language,resource:Tamil_language),
+  IntersectiveObjectPropertyAdjective("Italian",dbpedia:language,resource:Italian_language),
+  IntersectiveObjectPropertyAdjective("Portuguese",dbpedia:language,resource:Portuguese_language),
+  IntersectiveObjectPropertyAdjective("Russian",dbpedia:language,resource:Russian_language),
+  IntersectiveObjectPropertyAdjective("Dutch",dbpedia:language,resource:Dutch_language),
+  IntersectiveObjectPropertyAdjective("Korean",dbpedia:language,resource:Korean_language),
+  IntersectiveObjectPropertyAdjective("Arabic",dbpedia:language,resource:Arabic_language),
+  IntersectiveObjectPropertyAdjective("Chinese",dbpedia:language,resource:Standard_Chinese),
+  IntersectiveObjectPropertyAdjective("Chinese",dbpedia:language,resource:Chinese_language),
+  IntersectiveObjectPropertyAdjective("Chinese",dbpedia:language,resource:Mandarin_Chinese),
+  IntersectiveObjectPropertyAdjective("Cantonese",dbpedia:language,resource:Cantonese_language),
+  IntersectiveObjectPropertyAdjective("Swedish",dbpedia:language,resource:Swedish_language),
+  IntersectiveObjectPropertyAdjective("Polish",dbpedia:language,resource:Polish_language),
+  IntersectiveObjectPropertyAdjective("Greek",dbpedia:language,resource:Greek_language),
+  IntersectiveObjectPropertyAdjective("Hebrew",dbpedia:language,resource:Hebrew_language),
+  IntersectiveObjectPropertyAdjective("Turkish",dbpedia:language,resource:Turkish_language),
+  IntersectiveObjectPropertyAdjective("Danish",dbpedia:language,resource:Danish_language),
+  IntersectiveObjectPropertyAdjective("Finnish",dbpedia:language,resource:Finnish_language),
+  IntersectiveObjectPropertyAdjective("Norwegian",dbpedia:language,resource:Norwegian_language),
+  IntersectiveObjectPropertyAdjective("Croatian",dbpedia:language,resource:Croatian_language),
+  IntersectiveObjectPropertyAdjective("Romanian",dbpedia:language,resource:Romanian_language),
+  IntersectiveObjectPropertyAdjective("Thai",dbpedia:language,resource:Thai_language),
+  IntersectiveObjectPropertyAdjective("Hungarian",dbpedia:language,resource:Hungarian_language),
+  IntersectiveObjectPropertyAdjective("Serbian",dbpedia:language,resource:Serbian_language),
+  IntersectiveObjectPropertyAdjective("Slovene",dbpedia:language,resource:Slovene_language),
+  IntersectiveObjectPropertyAdjective("Punjabi",dbpedia:language,resource:Punjabi_language),
+  IntersectiveObjectPropertyAdjective("Albanian",dbpedia:language,resource:Albanian_language),
+  IntersectiveObjectPropertyAdjective("Indonesian",dbpedia:language,resource:Indonesian_language),
+  IntersectiveObjectPropertyAdjective("Estonian",dbpedia:language,resource:Estonian_language)
 
 )

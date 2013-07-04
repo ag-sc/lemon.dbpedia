@@ -33,9 +33,11 @@
                 :interpreter,
                 :make,
                 :write,
+                :writtenIn,
                 :discover,
                 :discovery,
                 :air,
+                :link,
                 :conservationStatus,
                 :haveInhabitant,
                 :haveEmployee,
@@ -47,6 +49,8 @@
                 :composeTheMusicFor,
                 :travelWithAnAverageSpeedOf,
                 :wasCoach,
+                :playedFor,
+                :wasMember,
                 :addedToNRHP,
                 :placedOnNRHP,
                 :haveEnrollmentOf,
@@ -387,7 +391,7 @@
                 lemon:subjOfProp :arg2 ;
                 lemon:objOfProp  :arg1 ] .
 
-## genre ##
+## genre, language ##
 
 :make a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:verb ;
@@ -410,6 +414,19 @@
                 lemon:subjOfProp :arg1write;
                 lemon:objOfProp  :arg2write;
                 lemon:propertyDomain <http://dbpedia.org/ontology/Writer> ] .
+
+:writtenIn a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "written"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePPFrame ;
+                      lexinfo:copulativeArg :arg1writtenIn ;
+                      lexinfo:prepositionalObject :arg2writtenIn ; ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/language>;
+                lemon:subjOfProp :arg1write;
+                lemon:objOfProp  :arg2write;
+                lemon:propertyDomain <http://dbpedia.org/ontology/WrittenWork> ] .
+
+:arg2writtenIn lemon:marker :in .
 
 
 ## discover, discoverer ##
@@ -487,6 +504,25 @@
                                  lemon:objOfProp  :arg3conservationStatus ] ] .
 
 :arg3conservationStatus lemon:marker [ lemon:canonicalForm [ lemon:writtenRep "according to"@en ] ] .
+
+
+## route{Start|End}
+
+:link a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "link"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
+		      lexinfo:subject      :arg1link ;
+                      lexinfo:directObject :arg2link ;
+                      lexinfo:prepositionalObject :arg3link ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/routeStart>;
+                                 lemon:subjOfProp :arg1link;
+                                 lemon:objOfProp  :arg2link ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/routeEnd>;
+                                 lemon:subjOfProp :arg1link;
+                                 lemon:objOfProp  :arg3link ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg3discover lemon:marker :to .
+
 
 
 #### Phrases ####
@@ -574,7 +610,7 @@
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
-## formerCoach, formerTeam ##
+## formerCoach, formerTeam, formerBandMember ##
 
 :wasCoach a lemon:Phrase ;
   lemon:decomposition ( :arg1 :component_be :component_coach :of :arg2 ) ;
@@ -589,6 +625,14 @@
   lemon:canonicalForm [ lemon:writtenRep "played for"@en ] ;
   lexinfo:tense lexinfo:past ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/formerTeam> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] .
+
+:wasMember a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :component_be :component_member :of :arg2 ) ;
+  lemon:canonicalForm [ lemon:writtenRep "was member of"@en ] ;
+  lexinfo:tense lexinfo:past ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/formerBandMember> ;
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
@@ -765,6 +809,10 @@
 
 :component_seat a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "seat"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:component_member a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "member"@en ] ;
   lexinfo:partOfSpeech lexinfo:noun .
 
 ## Adjectives ##

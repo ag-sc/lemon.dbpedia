@@ -31,6 +31,28 @@ lex:President rdf:type owl:Restriction ;
    owl:onProperty dbpedia:leaderTitle ;
    owl:hasValue   "President" .
 
+lex:MemberOfParliament rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Member of Parliament" .
+lex:MemberOfTheEuropeanParliament rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Member of the European Parliament" .
+lex:MinisterOfForgeinAffairs rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Minister of Foreign Affairs" .
+lex:MinisterOfJustice rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Minister of Justice" .
+lex:MinisterOfDefence rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Minister of Defence" .
+lex:MinisterOfEducation rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Minister of Education" .
+lex:Senator rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:office ;
+   owl:hasValue "Senator" .
+
 ## places ## 
 
 :Arrondissement rdf:type owl:Restriction ;

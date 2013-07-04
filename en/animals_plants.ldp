@@ -112,7 +112,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#>,"en",
   RelationalNoun("member",dbpedia:order,
        propObj  = PossessiveAdjunct),
 
-
   // conservationStatus
 
   RelationalNoun(["conservation"/noun "status"/noun],dbpedia:conservationStatus,
@@ -126,5 +125,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#>,"en",
   IntersectiveDataPropertyAdjective("endangered",dbpedia:conservationStatus,"EN"),
   IntersectiveDataPropertyAdjective(["critically"/adverb "endangered"/adjective],dbpedia:conservationStatus,"CR"),
   IntersectiveDataPropertyAdjective(["near"/adjective "threatened"/adjective],dbpedia:conservationStatus,"NT")
+
+  // binomialAuthority
+
+  StateVerb("name",dbpedia:binomialAuthority,
+       propSubj = DirectObject,
+       propObj  = Subject), 
+
+  StateVerb(["first"/adverb "describe"/verb],dbpedia:binomialAuthority,
+       propSubj = DirectObject,
+       propObj  = Subject), 
 
 )

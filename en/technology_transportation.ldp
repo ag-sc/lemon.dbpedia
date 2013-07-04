@@ -70,13 +70,41 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
        propSubj = lex:software as Subject, 
        propObj  = lex:language as PrepositionalObject("in")),
 
+  // route{Junction|Start|End}
+
+  StateVerb("intersect",dbpedia:routeJunction,
+       propObj  = PrepositionalObject("with")),
+  StateVerb("cross",dbpedia:routeJunction), 
+
+  StateVerb("begin",dbpedia:routeStart,
+       propObj  = PrepositionalObject("at") restrictedTo dbpedia:Road),
+  StateVerb("begin",dbpedia:routeStart,
+       propObj  = PrepositionalObject("in") restrictedTo dbpedia:PopulatedPlace),
+  StateVerb("end",dbpedia:routeEnd,
+       propObj  = PrepositionalObject("at") restrictedTo dbpedia:Road),
+  StateVerb("end",dbpedia:routeEnd,
+       propObj  = PrepositionalObject("in") restrictedTo dbpedia:PopulatedPlace),
+
+
   // others 
 
   RelationalNoun("beam",dbpedia:shipBeam,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg), 
 
+  RelationalNoun("format",dbpedia:format,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+  IntersectiveObjectPropertyAdjective("color",dbpedia:format,resource:Color),
+  IntersectiveObjectPropertyAdjective("black-and-white",dbpedia:format,resource:Black-and-white),
+  IntersectiveObjectPropertyAdjective("stereo",dbpedia:format,resource:Stereophonic_sound),
+  IntersectiveObjectPropertyAdjective("stereo",dbpedia:format,resource:Dolby_Stereo),
+
   RelationalAdjective("assembled",dbpedia:assembly,
        relationalArg = PrepositionalObject("in")), 
+
+  StateVerb("build",dbpedia:builder,
+       propSubj = DirectObject,
+       propObj  = Subject)
 
 )

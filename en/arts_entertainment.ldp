@@ -140,9 +140,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   //// Properties
 
-  // genre 
+  // (literary) genre 
 
   RelationalNoun("genre",dbpedia:genre,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun("genre",dbpedia:literaryGenre,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
@@ -218,13 +221,21 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = DirectObject,
         propObj  = Subject),
 
-  // starring
+  // starring, guest
 
   StateVerb("star",dbpedia:starring),
   StateVerb("feature",dbpedia:starring),
   StateVerb("play",dbpedia:starring,
         propSubj = PrepositionalObject("in"),
         propObj  = Subject),
+  StateVerb("feature",dbpedia:guest),
+  StateVerb("appear",dbpedia:guest,
+        propSubj = PrepositionalObject("in"),
+        propObj  = Subject),
+  RelationalNoun(["guest"/noun "star"/noun],dbpedia:guest,
+        propSubj = PrepositionalObject("in"),
+        propObj  = CopulativeArg),
+
 
   // instrument 
 
@@ -325,6 +336,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   RelationalAdjective("record",dbpedia:subsequentWork,
         relationalArg = PrepositionalObject("after") restrictedTo dbpedia:Album), 
 
+  // (former) band member
+
+  RelationalNoun("member",dbpedia:bandMember,
+        propSubj = PrepositionalObject("of"),
+        propObj  = CopulativeArg),
+
 
   // others 
 
@@ -359,6 +376,17 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propObj  = CopulativeArg),
   RelationalNoun(["associated"/adjective "act"/noun],dbpedia:associatedMusicalArtist,
         propSubj = PossessiveAdjunct,
-        propObj  = CopulativeArg)
+        propObj  = CopulativeArg), 
+
+  RelationalNoun("cinematographer",dbpedia:cinematography,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+  StateVerb("shoot",dbpedia:cinematographer,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
+  StateVerb("edit",dbpedia:editing,
+        propSubj = DirectObject,
+        propObj  = Subject)
 
 )

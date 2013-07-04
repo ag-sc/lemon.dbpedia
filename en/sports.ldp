@@ -165,7 +165,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
 
   //// Properties
 
-  // team, manager
+  // team, manager, league
 
   RelationalNoun("team",dbpedia:team,
      propSubj = PossessiveAdjunct,
@@ -173,6 +173,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
   StateVerb("play",dbpedia:team,
      propSubj = Subject restrictedTo lex:Player,
      propObj  = PrepositionalObject("for")),
+
+  StateVerb("play",dbpedia:league,
+     propObj  = PrepositionalObject("in")),
   
   RelationalNoun("player",dbpedia:team,
      propSubj = CopulativeArg restrictedTo lex:Player,

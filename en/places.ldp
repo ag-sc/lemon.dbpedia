@@ -283,6 +283,11 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
      propSubj = lex:place as Subject, 
      propObj  = lex:dateCompleted as PrepositionalObject("on")),
 
+  // headquarter 
+
+  RelationalAdjective("based",dbpedia:headquarter,
+     relationalArg = PrepositionalObject("in")), 
+
   // others
 
   RelationalNoun("length",dbpedia:length,

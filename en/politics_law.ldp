@@ -17,6 +17,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
 
   ClassNoun(["office"/noun "holder"/noun],dbpedia:OfficeHolder),
   ClassNoun(["member"/noun "of"/preposition "parliament"/noun],dbpedia:MemberOfParliament),
+  ClassNoun(["member"/noun "of"/preposition "parliament"/noun],lex:MemberOfParliament),
+  ClassNoun(["member"/noun "of"/preposition "the"/determiner "European"/adjective "parliament"/noun],lex:MemberOfTheEuropeanParliament),
+  ClassNoun(["minister"/noun "of"/preposition "foreign"/adjective "affairs"/noun],lex:MinisterOfForeignAffairs),
+  ClassNoun(["minister"/noun "of"/preposition "justice"/noun],lex:MinisterOfJustice),
+  ClassNoun(["minister"/noun "of"/preposition "defence"/noun],lex:MinisterOfDefence),
+  ClassNoun(["minister"/noun "of"/preposition "education"/noun],lex:MinisterOfEducation),
   ClassNoun(["congress"/noun "man"/noun],dbpedia:Congressman) with plural "congress men",
   ClassNoun("politician",dbpedia:Politician),
   ClassNoun("governor",dbpedia:Governor),
@@ -32,6 +38,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
   ClassNoun("mayor",dbpedia:Mayor),
   ClassNoun("mayor",lex:Mayor),
   ClassNoun("senator",dbpedia:Senator),
+  ClassNoun("senator",lex:Senator),
   ClassNoun("ambassador",dbpedia:Ambassador),
 
   ClassNoun(["law"/noun "firm"/noun],dbpedia:LawFirm),
@@ -68,6 +75,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
 
   RelationalNoun(["board"/noun "member"/noun],dbpedia:board,
      propSubj = PrepositionalObject("at"),
+     propObj  = CopulativeArg), 
+
+  // office
+
+  RelationalNoun("position",dbpedia:office,
+     propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg)
 
 )
