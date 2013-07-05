@@ -20,6 +20,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
   ClassNoun("drink",dbpedia:Beverage),
   ClassNoun("beer",dbpedia:Beer),
   ClassNoun("wine",dbpedia:Wine),
+  ClassNoun(["quality"/noun "wine"/noun],dbpedia:ControlledDesignationOfOriginWine),
   ClassNoun("cheese",dbpedia:Cheese),
 
   ClassNoun("agent",dbpedia:Agent),

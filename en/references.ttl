@@ -317,7 +317,7 @@ lex:German rdf:type owl:Restriction ;
    owl:onProperty dbpedia:nationality ;
    owl:hasValue   resource:Germany .
 
-lex:Janpanese1 rdf:type owl:Restriction ;
+lex:Japanese1 rdf:type owl:Restriction ;
    owl:onProperty dbpedia:nationality ;
    owl:hasValue   resource:Japan .
 lex:Japanese2 rdf:type owl:Restriction ;
