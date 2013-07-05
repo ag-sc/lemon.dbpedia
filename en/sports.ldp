@@ -165,7 +165,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
 
   //// Properties
 
-  // team, manager, league
+  // team, college, manager, league
 
   RelationalNoun("team",dbpedia:team,
      propSubj = PossessiveAdjunct,
@@ -176,6 +176,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
 
   StateVerb("play",dbpedia:league,
      propObj  = PrepositionalObject("in")),
+
+  StateVerb("play",dbpedia:college,
+     propObj  = PrepositionalObject("for")),
+  StateVerb("graduate",dbpedia:college,
+     propObj  = PrepositionalObject("from")),
+  StateVerb("attend",dbpedia:college),
   
   RelationalNoun("player",dbpedia:team,
      propSubj = CopulativeArg restrictedTo lex:Player,
@@ -194,8 +200,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
   RelationalNoun("manager",dbpedia:managerClub,
      propObj  = PossessiveAdjunct),
   StateVerb("manage",dbpedia:managerClub),
+  RelationalNoun("manager",dbpedia:manager,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  StateVerb("manage",dbpedia:manager,
+     propSubj = DirectObject,
+     propObj  = Subject),
 
-  // homeArena, ground, tenant 
+  // homeArena, ground, tenant, operator
 
   RelationalNoun(["home"/noun "arena"/noun],dbpedia:homeArena,
      propSubj = PossessiveAdjunct,
@@ -220,6 +232,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
      propObj  = Subject restrictedTo dbpedia:Organization), 
   StateVerb("host",dbpedia:tenant, 
      propObj  = DirectObject restrictedTo dbpedia:Event), 
+
+  RelationalNoun("home",dbpedia:operator,
+     propObj  = PrepositionalObject("of")),
 
 
   // capacity 
@@ -252,19 +267,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
      propObj  = CopulativeArg),
 
 
-  // draftYear 
-
-  ConsequenceVerb("draft",dbpedia:draftYear,
-     propSubj = lex:person as Subject,
-     propObj  = lex:year as DirectObject),
-
   // formerCoach
 
   RelationalNoun(["former"/adjective "coach"/noun],dbpedia:formerCoach,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),  
 
-  // {throwing|batting}Side
+  // {throwing|batting}Side, shoots
 
   StateVerb(["throw"/verb "left-handed"/adverb],lex:throwLeft), 
   StateVerb(["throw"/verb "left"/adverb],lex:throwLeft), 
@@ -275,6 +284,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
   StateVerb(["bat"/verb "right-handed"/adverb],lex:batRight), 
   StateVerb(["bat"/verb "right"/adverb],lex:batRight), 
 
+  StateVerb(["shoot"/verb "right"/adverb],lex:shootRight), 
+  StateVerb(["shoot"/verb "left"/adverb],lex:shootLeft), 
+  IntersectiveDataPropertyAdjective("ambidextrous",dbpedia:shoots,"Ambidextrous"),
+
   // plays 
 
   IntersectiveDataPropertyAdjective("right-handed",dbpedia:plays,"Right-handed"),
@@ -283,6 +296,16 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
   IntersectiveDataPropertyAdjective("left-handed",dbpedia:plays,"Left-handed"),
   IntersectiveDataPropertyAdjective("left-handed",dbpedia:plays,"Left-handed (two-handed backhand)"),
   IntersectiveDataPropertyAdjective("left-handed",dbpedia:plays,"Left-handed (one-handed backhand)"),
-  IntersectiveDataPropertyAdjective("ambidextrous",dbpedia:plays,"Ambidextrous")
+  IntersectiveDataPropertyAdjective("ambidextrous",dbpedia:plays,"Ambidextrous"), 
+
+  // others 
+ 
+  RelationalNoun("chairman",dbpedia:chairman,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) with plural "chairmen",
+
+  StateVerb("debut",dbpedia:debutTeam,
+     propObj = PrepositionalObject("for"))
+
 
 )

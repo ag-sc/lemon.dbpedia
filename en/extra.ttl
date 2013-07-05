@@ -26,9 +26,12 @@
                 :activeSince,
                 :activeUntil,
                 :serve,
+                :play,
+                :haveRoleIn,
                 :athletics,
                 :Olympics,
                 :OlympicGames,
+                :draft,
                 :record,
                 :interpreter,
                 :make,
@@ -38,6 +41,11 @@
                 :discover,
                 :discovery,
                 :air,
+                :produce,
+                :manufacture,
+                :launchProduct,
+                :produceUntil,
+                :manufactureUntil,
                 :link,
                 :conservationStatus,
                 :haveInhabitant,
@@ -55,6 +63,7 @@
                 :writeTheMusicFor,
                 :composeTheMusicFor,
                 :travelWithAnAverageSpeedOf,
+                :consistOfWater,
                 :wasCoach,
                 :playedFor,
                 :wasMember,
@@ -280,7 +289,6 @@
                                [ lemon:reference <http://dbpedia.org/ontology/activeYearsEndYear> ;
                                  lemon:subjOfProp :arg1active ;
                                  lemon:objOfProp  :arg3active ] ] .
-
 :arg2active lemon:marker :from .
 :arg3active lemon:marker :to .
 
@@ -296,7 +304,6 @@
               [ lemon:reference <http://dbpedia.org/ontology/activeYearsStartYear> ;
                 lemon:subjOfProp :arg1activeSince ;
                 lemon:objOfProp  :arg2activeSince ] .
-
 :arg2activeSince lemon:marker :since .
 
 :activeUntil a lemon:Word ;
@@ -311,7 +318,6 @@
               [ lemon:reference <http://dbpedia.org/ontology/activeYearsEndYear> ;
                 lemon:subjOfProp :arg1activeUntil ;
                 lemon:objOfProp  :arg2activeUntil ] .
-
 :arg2activeUntil lemon:marker :until .
 
 
@@ -341,15 +347,22 @@
 :arg3serve lemon:marker :to .
 
 
+## Technology ##
+
+:play a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "play"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
+                      lexinfo:subject             :arg1play ;
+                      lexinfo:directObject        :arg2play ;
+                      lexinfo:prepositionalObject :arg3play ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/computingInput> ;
+                lemon:subjOfProp :arg2play ;
+                lemon:objOfProp  :arg3play ] .
+:arg3play lemon:marker :with .
+
+
 ## Sport ##
-
-:athletics a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm [ lemon:writtenRep "athletics"@en ; 
-                        lexinfo:number lexinfo:plural ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Sport> ] .
-
-## Olympics ##
 
 :Olympics a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:noun ;
@@ -362,6 +375,27 @@
   lemon:canonicalForm [ lemon:writtenRep "Olympic Games"@en ; 
                         lexinfo:number lexinfo:plural ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Olympics> ] .
+
+:athletics a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm [ lemon:writtenRep "athletics"@en ; 
+                        lexinfo:number lexinfo:plural ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Sport> ] .
+
+:draft a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "draft"@en ] ;   
+  lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
+                      lexinfo:subject              :arg1draft ;
+                      lexinfo:directObject         :arg2draft ;
+                      lexinfo:prepositionalAdjunct :arg3draft ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/draftTeam> ;
+                                 lemon:subjOfProp :arg2draft ;
+                                 lemon:objOfProp  :arg1draft ] , 
+                               [ lemon:reference <http://dbpedia.org/ontology/draftYear> ;
+                                 lemon:subjOfProp :arg2draft ;
+                                 lemon:objOfProp  :arg3draft ] ] .
+:arg3draft lemon:marker :in .
 
 
 ## artist ## 
@@ -389,7 +423,7 @@
 :arg1interpreter lemon:marker :of .
 
 :haveInfluenceOn a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_have :component_influence :component_on :arg2 );
+  lemon:decomposition ( :arg1 :component_have :component_influence :on :arg2 );
   lemon:canonicalForm [ lemon:writtenRep "have influence on"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/influenced> ;
                 lemon:subjOfProp :arg1 ;
@@ -434,6 +468,18 @@
                 lemon:propertyDomain <http://dbpedia.org/ontology/WrittenWork> ] .
 :arg2writtenIn lemon:marker :in .
 
+## starring, voice ##
+
+:haveRoleIn a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :component_have :component_a :component_role :in :arg2 );
+  lemon:canonicalForm [ lemon:writtenRep "have a role in"@en ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/starring> ;
+                lemon:subjOfProp :arg2 ;
+                lemon:objOfProp  :arg1 ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/voice> ;
+                lemon:subjOfProp :arg2 ;
+                lemon:objOfProp  :arg1 ] .
+
 
 ## origin ##
 
@@ -442,7 +488,7 @@
   lemon:canonicalForm [ lemon:writtenRep "made"@en ] ;
   lemon:synBehavior [ rdf:type lexinfo:AdjectivePPFrame ;
                       lexinfo:copulativeArg :arg1madeIn ;
-                      lexinfo:prepositionalObject :arg2madeIn ; ] ;
+                      lexinfo:prepositionalObject :arg2madeIn ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/origin>;
                 lemon:subjOfProp :arg1madeIn;
                 lemon:objOfProp  :arg2madeIn;
@@ -487,7 +533,7 @@
 :arg3discovery lemon:optional "true"^^xsd:boolean .
 
 
-## releaseDate, completionDate ## 
+## releaseDate, completionDate, production{Start|End}{Date|Year} ## 
 
 :air a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "air"@en ] ;
@@ -501,10 +547,116 @@
                                [ lemon:reference <http://dbpedia.org/ontology/completionDate>;
                                  lemon:subjOfProp :arg1air;
                                  lemon:objOfProp  :arg3air;
-                                 lemon:propertyDomain <http://dbpedia.org/ontology/TelevisionShow> ] ];
+                                 lemon:propertyDomain <http://dbpedia.org/ontology/TelevisionShow> ] ],
+              [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/firstAirDate>;
+                                 lemon:subjOfProp :arg1air;
+                                 lemon:objOfProp  :arg2air ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/lastAirDate>;
+                                 lemon:subjOfProp :arg1air;
+                                 lemon:objOfProp  :arg3air ] ];
   lexinfo:partOfSpeech lexinfo:verb .
 :arg2air lemon:marker :from .
 :arg3air lemon:marker :to .
+
+:produce a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "produce"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
+		      lexinfo:subject              :arg1produce ;
+                      lexinfo:directObject         :arg2produce ;
+                      lexinfo:prepositionalAdjunct :arg3produce ;
+                      lexinfo:prepositionalAdjunct :arg4produce ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/product>;
+                                 lemon:subjOfProp :arg1produce;
+                                 lemon:objOfProp  :arg2produce ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionStartYear>;
+                                 lemon:subjOfProp :arg2produce;
+                                 lemon:objOfProp  :arg3produce ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionEndYear>;
+                                 lemon:subjOfProp :arg2produce;
+                                 lemon:objOfProp  :arg4produce ] ], 
+              [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/product>;
+                                 lemon:subjOfProp :arg1produce;
+                                 lemon:objOfProp  :arg2produce ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionStartDate>;
+                                 lemon:subjOfProp :arg2produce;
+                                 lemon:objOfProp  :arg3produce ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionEndDate>;
+                                 lemon:subjOfProp :arg2produce;
+                                 lemon:objOfProp  :arg4produce ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg3produce lemon:marker :from .
+:arg4produce lemon:marker :to .
+
+:manufacture a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "manufacture"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
+		      lexinfo:subject              :arg1manufacture ;
+                      lexinfo:directObject         :arg2manufacture ;
+                      lexinfo:prepositionalAdjunct :arg3manufacture ;
+                      lexinfo:prepositionalAdjunct :arg4manufacture ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/product>;
+                                 lemon:subjOfProp :arg1manufacture;
+                                 lemon:objOfProp  :arg2manufacture ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionStartYear>;
+                                 lemon:subjOfProp :arg2manufacture;
+                                 lemon:objOfProp  :arg3manufacture ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionEndYear>;
+                                 lemon:subjOfProp :arg2manufacture;
+                                 lemon:objOfProp  :arg4manufacture ] ], 
+              [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/product>;
+                                 lemon:subjOfProp :arg1manufacture;
+                                 lemon:objOfProp  :arg2manufacture ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionStartDate>;
+                                 lemon:subjOfProp :arg2manufacture;
+                                 lemon:objOfProp  :arg3manufacture ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionEndDate>;
+                                 lemon:subjOfProp :arg2manufacture;
+                                 lemon:objOfProp  :arg4manufacture ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg3manufacture lemon:marker :from .
+:arg4manufacture lemon:marker :to .
+
+:launchProduct a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "launch"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
+		      lexinfo:subject              :arg1launchProduct ;
+                      lexinfo:directObject         :arg2launchProduct ;
+                      lexinfo:prepositionalAdjunct :arg3launchProduct ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/product>;
+                                 lemon:subjOfProp :arg1launchProduct;
+                                 lemon:objOfProp  :arg2launchProduct ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionStartYear>;
+                                 lemon:subjOfProp :arg2launchProduct;
+                                 lemon:objOfProp  :arg3launchProduct ] ] . 
+:arg3launchProduct lemon:marker :in .
+
+:produceUntil a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "produce"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
+		      lexinfo:subject              :arg1produceUntil ;
+                      lexinfo:directObject         :arg2produceUntil ;
+                      lexinfo:prepositionalAdjunct :arg3produceUntil ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/product>;
+                                 lemon:subjOfProp :arg1produceUntil ;
+                                 lemon:objOfProp  :arg2produceUntil ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionEndYear>;
+                                 lemon:subjOfProp :arg2produceUntil ;
+                                 lemon:objOfProp  :arg3produceUntil ] ] . 
+:arg3produceUntil lemon:marker :until .
+
+:manufactureUntil a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "manufacture"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
+		      lexinfo:subject              :arg1manufactureUntil ;
+                      lexinfo:directObject         :arg2manufactureUntil ;
+                      lexinfo:prepositionalAdjunct :arg3manufactureUntil ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/product>;
+                                 lemon:subjOfProp :arg1manufactureUntil ;
+                                 lemon:objOfProp  :arg2manufactureUntil ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionEndYear>;
+                                 lemon:subjOfProp :arg2manufactureUntil ;
+                                 lemon:objOfProp  :arg3manufactureUntil ] ] .
+:arg3manufactureUntil lemon:marker :until .
 
 
 ## conservationStatusSystem ##
@@ -604,7 +756,21 @@
 :runForEpisodes a lemon:Phrase ;
   lemon:decomposition ( :arg1 :component_run :component_for :arg2 :component_episode ) ;
   lemon:canonicalForm [ lemon:writtenRep "run for episodes"@en ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfStudents> ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfEpisodes> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] .
+
+:haveSeasons a lemon:Phrase ;
+  lemon:decomposition ( :arg_series :component_have :arg_num :component_season ) ;
+  lemon:canonicalForm [ lemon:writtenRep "have seasons"@en ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfSeasons> ;
+                lemon:subjOfProp :arg_series ;
+                lemon:objOfProp  :arg_num ] .
+
+:runForSeasons a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :component_run :component_for :arg2 :component_season ) ;
+  lemon:canonicalForm [ lemon:writtenRep "run for seasons"@en ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfSeasons> ;
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
@@ -659,7 +825,7 @@
 ## averageSpeed ##
 
 :travelWithAnAverageSpeedOf a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_travel :component_with :component_an :component_average :component_speed :of :arg2 ) ;
+  lemon:decomposition ( :arg1 :component_travel :with :component_an :component_average :component_speed :of :arg2 ) ;
   lemon:canonicalForm [ lemon:writtenRep "travel with an average speed of"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/averageSpeed> ;
                 lemon:subjOfProp :arg1 ;
@@ -758,18 +924,28 @@
 ## numberOfStudents ## 
 
 :haveEnrollmentOf a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_have :component_an :component_enrollment :component_of :arg2 :component_student ) ;
+  lemon:decomposition ( :arg1 :component_have :component_an :component_enrollment :of :arg2 :component_student ) ;
   lemon:canonicalForm [ lemon:writtenRep "have an enrollment of"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfStudents> ;
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
 :withEnrollmentOf a lemon:Phrase ;
-  lemon:decomposition ( :component_with :component_an :component_enrollment :component_of :arg2 :component_student ) ;
+  lemon:decomposition ( :with :component_an :component_enrollment :of :arg2 :component_student ) ;
   lemon:canonicalForm [ lemon:writtenRep "with an enrollment of"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfStudents> ;
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
+
+
+## percentageOfAreaWater ##
+
+:consistOfWater a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :component_consist :to :arg_num :component_percent :of :component_water ) ;
+  lemon:canonicalForm [ lemon:writtenRep "consists to percent of water"@en ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/percentageOfAreaWater> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg_num ] .
 
 
 #### Phrase parts and markers ####
@@ -839,6 +1015,10 @@
   lemon:canonicalForm [ lemon:writtenRep "play"@en ] ;
   lexinfo:partOfSpeech lexinfo:verb .
 
+:component_consist a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "consist"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb .
+
 ## Participles ## 
 
 :component_added  lexinfo:participleFormOf :add ;   lemon:canonicalForm [ lemon:writtenRep "added"@en ] .
@@ -878,6 +1058,14 @@
   lemon:canonicalForm [ lemon:writtenRep "episode"@en ] ;
   lexinfo:partOfSpeech lexinfo:noun .
 
+:component_role a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "role"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
+:component_season a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "season"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
 :component_seat a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "seat"@en ] ;
   lexinfo:partOfSpeech lexinfo:noun .
@@ -901,6 +1089,11 @@
 :component_game a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "game"@en ] ;
   lexinfo:partOfSpeech lexinfo:noun .
+
+:component_percent a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "percent"@en ] ;
+  lexinfo:partOfSpeech lexinfo:noun .
+
 
 ## Adjectives ##
 

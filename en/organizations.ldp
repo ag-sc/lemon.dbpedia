@@ -40,7 +40,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
   RelationalAdjective("based",dbpedia:locationCountry,
     relationalArg = PrepositionalObject("in")),
 
-  // numberOfStudents 
+  // numberOfStudents, facultySize
 
   RelationalNoun("enrollment",dbpedia:numberOfStudents,
      propSubj = PrepositionalObject("of"),
@@ -50,8 +50,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
     propObj  = CopulativeArg),
 
   StateVerb("serve",dbpedia:numberOfStudents),
+  StateVerb("employ",dbpedia:facultySize),
 
-  // manufacturer 
+  RelationalNoun(["faculty"/noun "size"/noun],dbpedia:facultySize,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  // manufacturer, company 
 
   RelationalNoun("manufacturer",dbpedia:manufacturer,
      propSubj = PossessiveAdjunct,
@@ -63,6 +68,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
   StateVerb("produce",dbpedia:manufacturer,
      propSubj = DirectObject,
      propObj  = Subject), 
+
+  StateVerb("construct",dbpedia:company,
+     propSubj = DirectObject restrictedTo dbpedia:Canal,
+     propObj  = Subject), 
+  StateVerb("build",dbpedia:company,
+     propSubj = DirectObject restrictedTo dbpedia:Canal,
+     propObj  = Subject),
 
 
   // formationDate, formationYear, foundingDate, foundingYear
@@ -108,7 +120,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
      propSubj = lex:organization as Subject, 
      propObj  = lex:date as PrepositionalObject("in")),
 
-  // foundingPerson
+  // foundingPerson, foundedBy
 
   StateVerb("found",dbpedia:foundingPerson,
      propSubj = DirectObject,
@@ -116,6 +128,18 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
   StateVerb("establish",dbpedia:foundingPerson,
      propSubj = DirectObject,
      propObj  = Subject),
+  StateVerb("found",dbpedia:foundedBy,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("establish",dbpedia:foundedBy,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  RelationalNoun("founder",dbpedia:foundedBy,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun("founder",dbpedia:foundingPerson,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
 
   // foundationPlace 
 
@@ -177,7 +201,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
   StateVerb("create",dbpedia:product), 
   StateVerb("develop",dbpedia:product), 
 
-  // owningCompany, owner
+  // {owning|parent}Company, owner
 
   RelationalNoun("owner",dbpedia:owner,
     propSubj = PossessiveAdjunct,
@@ -198,12 +222,36 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
     propObj  = PossessiveAdjunct),
   RelationalNoun("subsidiary",dbpedia:owningCompany,
     propObj  = PossessiveAdjunct), 
+  RelationalNoun(["parent"/noun "company"/noun],dbpedia:parentCompany,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["daughter"/noun "company"/noun],dbpedia:parentCompany,
+    propObj  = PossessiveAdjunct),
+  RelationalNoun("subsidiary",dbpedia:parentCompany,
+    propObj  = PossessiveAdjunct), 
 
 
   // others
 
   RelationalNoun("revenue",dbpedia:revenue,
     propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg)
+    propObj  = CopulativeArg), 
+
+  RelationalNoun(["official"/adjective "color"/noun],dbpedia:officialSchoolColour,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+
+  StateVerb("operate",dbpedia:regionServed, 
+    propObj  = PrepositionalObject("in")), 
+
+  IntersectiveObjectPropertyAdjective("social-democratic",dbpedia:ideology,resource:Social_democracy), 
+  IntersectiveObjectPropertyAdjective("conservatist",dbpedia:ideology,resource:Conservatism), 
+  IntersectiveObjectPropertyAdjective("liberal",dbpedia:ideology,resource:Liberalism), 
+  IntersectiveObjectPropertyAdjective("communist",dbpedia:ideology,resource:Communism), 
+  IntersectiveObjectPropertyAdjective("socialist",dbpedia:ideology,resource:Socialism), 
+  IntersectiveObjectPropertyAdjective("christian democratic",dbpedia:ideology,resource:Christian_democracy), 
+  IntersectiveObjectPropertyAdjective("nationalistic",dbpedia:ideology,resource:Nationalism), 
+  IntersectiveObjectPropertyAdjective("Marxist-Leninist",dbpedia:ideology,resource:Marxism_Leninism), 
+  IntersectiveObjectPropertyAdjective("Marxist",dbpedia:ideology,resource:Marxism)
 
 )

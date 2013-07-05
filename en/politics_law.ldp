@@ -65,7 +65,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
 
   //// Properties
 
-  // viceChancellor, runningMate
+  // viceChancellor, runningMate, president
 
   RelationalNoun(["vice"/noun "chancellor"/noun],dbpedia:viceChancellor,
      propSubj = PossessiveAdjunct,
@@ -73,7 +73,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
 
   RelationalNoun(["running"/noun "mate"/noun],dbpedia:runningMate,
      propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg), 
+     propObj  = CopulativeArg),
+
+  StateVerb("serve",dbpedia:president,
+     propObj  = PrepositionalObject("under")), 
 
   // board 
 

@@ -46,6 +46,20 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
 
   RelationalNoun("result",dbpedia:result,
        propSubj = PrepositionalObject("of"),
-       propObj  = CopulativeArg)
+       propObj  = CopulativeArg),
+
+  RelationalNoun("part",dbpedia:isPartOfMilitaryConflict,
+      propObj  = PrepositionalObject("of")), 
+  RelationalNoun("part",dbpedia:commandStructure,
+      propObj  = PrepositionalObject("of")), 
+  RelationalAdjective("subordinate",dbpedia:commandStructure,
+       relationalArg = PrepositionalObject("to")),
+
+  RelationalAdjective("based",dbpedia:garrison,
+       relationalArg = PrepositionalObject("at") restrictedTo lex:Building_or_Infrastructure),
+  RelationalAdjective("based",dbpedia:garrison,
+       relationalArg = PrepositionalObject("in") restrictedTo dbpedia:PopulatedPlace)
+
+
 
 )

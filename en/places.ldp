@@ -101,12 +101,45 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
     relationalArg = PrepositionalObject("in")),
   RelationalAdjective("located",dbpedia:arrondissement,
     relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("located",dbpedia:canton,
+    relationalArg = PrepositionalObject("in")),
+
+  RelationalAdjective("located",dbpedia:region,
+    relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("situated",dbpedia:state,
+    relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("situated",dbpedia:county,
+    relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("situated",dbpedia:district,
+    relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("situated",dbpedia:province,
+    relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("situated",dbpedia:department,
+    relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("situated",dbpedia:arrondissement,
+    relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("situated",dbpedia:canton,
+    relationalArg = PrepositionalObject("in")),
 
   RelationalNoun("part",dbpedia:range,
     propObj  = PrepositionalObject("of")),
-  RelationalNoun("part",dbpedia:range,
+  RelationalNoun("part",dbpedia:mountainRange,
+    propObj  = PrepositionalObject("of")),
+
+  RelationalAdjective("close",dbpedia:nearestCity,
+    relationalArg = PrepositionalObject("to")),
+  RelationalAdjective("located",dbpedia:closestCity,
+    relationalArg = PrepositionalObject("near")),
+  RelationalAdjective("situated",dbpedia:closestCity,
+    relationalArg = PrepositionalObject("near")),
+
+  RelationalNoun("part",dbpedia:intercommunality,
     propSubj = PrepositionalObject("of"),
     propObj  = CopulativeArg),
+  RelationalNoun("suburb",dbpedia:intercommunality,
+    propSubj = PrepositionalObject("of"),
+    propObj  = CopulativeArg),
+
 
   // crosses
 
@@ -120,7 +153,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
   RelationalNoun("bridge",dbpedia:crosses,
     propObj = PrepositionalObject("over")),
     
-  // source(Country), origin, riverMouth
+  // source(Country), origin, riverMouth, mouthMountain, mouthPlace
 
   RelationalNoun("source",dbpedia:source,
     propSubj = PossessiveAdjunct,
@@ -136,6 +169,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
   StateVerb("flow",dbpedia:riverMouth,
     propObj  = PrepositionalObject("into")),
   StateVerb("run",dbpedia:riverMouth,
+    propObj  = PrepositionalObject("into")),
+  StateVerb("flow",dbpedia:mouthMountain,
+    propObj  = PrepositionalObject("into")),
+  StateVerb("run",dbpedia:mouthMountain,
+    propObj  = PrepositionalObject("into")),
+  StateVerb("flow",dbpedia:mouthPlace,
+    propObj  = PrepositionalObject("into")),
+  StateVerb("run",dbpedia:mouthPlace,
     propObj  = PrepositionalObject("into")),
     
   // border, neighbors

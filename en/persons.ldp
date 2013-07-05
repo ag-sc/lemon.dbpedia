@@ -181,7 +181,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
   IntersectiveObjectPropertyAdjective("female",dbpedia:gender,resource:Female),
   IntersectiveObjectPropertyAdjective("male",dbpedia:gender,resource:Male),
 
-  // child, parent
+  // relative, child, parent
+
+  RelationalNoun("relative",dbpedia:relative,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalAdjective("related",dbpedia:relative,
+     relationalArg = PrepositionalObject("to")), 
 
   RelationalNoun("child",dbpedia:child,
      propSubj = PossessiveAdjunct,
@@ -288,7 +294,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
      propObj = PossessiveAdjunct),
 
 
-  // ethnicity, religion 
+  // ethnicity, religion, related, populationPlace 
 
   RelationalNoun("ethnicity",dbpedia:ethnicity,
      propSubj = PossessiveAdjunct,
@@ -298,8 +304,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
 
+  RelationalAdjective("related",dbpedia:related,
+     relationalArg = PrepositionalObject("to") restrictedTo dbpedia:EthnicGroup),
 
-  // university, almaMater 
+  StateVerb("live",dbpedia:populationPlace,
+     propObj = PrepositionalObject("in")),
+
+
+  // university, almaMater, education
 
   RelationalNoun("university",dbpedia:university,
      propSubj=PossessiveAdjunct,
@@ -314,6 +326,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
      propObj = PrepositionalObject("at")),
   StateVerb("graduate",dbpedia:almaMater,
      propObj = PrepositionalObject("from")),
+
+  StateVerb("attend",dbpedia:education,
+     propObj  = DirectObject restrictedTo dbpedia:EducationalInstitution),
+  StateVerb("study",dbpedia:education,
+     propObj  = PrepositionalObject("at") restrictedTo dbpedia:EducationalInstitution),
+  StateVerb("go",dbpedia:education,
+     propObj  = PrepositionalObject("to") restrictedTo dbpedia:EducationalInstitution),
+
 
   // field 
 

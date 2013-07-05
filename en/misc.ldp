@@ -74,6 +74,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
   StateVerb("belong",dbpedia:division,
        propObj = PrepositionalObject("to")),
 
+  RelationalNoun("color",dbpedia:colourName,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
 
   // similar, synonym, abbreviation
 

@@ -230,7 +230,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = DirectObject,
         propObj  = Subject),
 
-  // starring, guest
+  // starring, guest ,presenter
 
   StateVerb("star",dbpedia:starring),
   StateVerb("feature",dbpedia:starring),
@@ -245,6 +245,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = PrepositionalObject("in"),
         propObj  = CopulativeArg),
 
+  RelationalNoun("presenter",dbpedia:presenter,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
 
   // instrument 
 
@@ -278,7 +281,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = PrepositionalObject("of"),
         propObj = CopulativeArg),
 
-  // releaseDate, completionDate
+  // releaseDate, completionDate, channel, company
 
   RelationalNoun(["release"/noun "date"/noun],dbpedia:releaseDate,
         propSubj = PossessiveAdjunct,
@@ -294,6 +297,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   StateVerb("air",dbpedia:completionDate,
         propSubj = Subject restrictedTo dbpedia:TelevisionShow,
         propObj  = PrepositionalObject("until")),
+  StateVerb("air",dbpedia:channel,
+        propObj  = PrepositionalObject("on")),
+
+  StateVerb("produce",dbpedia:company,
+        propSubj = DirectObject restrictedTo dbpedia:TelevisionShow,
+        propObj  = Subject),
 
   // recordDate, recordedIn
 
@@ -357,6 +366,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   RelationalNoun("ISBN",dbpedia:isbn,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
+  RelationalNoun("ISSN",dbpedia:issn,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
 
   RelationalNoun(["facility"/noun "ID"/noun],dbpedia:facilityId,
         propSubj = PossessiveAdjunct,
@@ -386,10 +398,18 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   RelationalNoun("budget",dbpedia:budget,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
+  RelationalNoun("gross",dbpedia:gross,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  StateVerb("make",dbpedia:gross),
+  StateVerb(["take"/verb "in"/preposition],dbpedia:gross),
+  StateVerb(["take"/verb "over"/preposition],dbpedia:gross),
 
   RelationalNoun("review",dbpedia:review,
         propSubj = PossessiveAdjunct,
-        propObj  = CopulativeArg), 
+        propObj  = CopulativeArg),
+  RelationalAdjective("reviewed",dbpedia:review,
+        relationalArg = PrepositionalObject("at")),
 
   RelationalNoun(["associated"/adjective "act"/noun],dbpedia:associatedBand,
         propSubj = PossessiveAdjunct,
@@ -405,20 +425,29 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = DirectObject,
         propObj  = Subject),
 
+  RelationalNoun(["executive"/adjective "producer"/noun],dbpedia:executiveProducer,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+
   StateVerb("edit",dbpedia:editing,
         propSubj = DirectObject,
         propObj  = Subject), 
 
   RelationalNoun(["former"/adjective "band"/noun "member"/noun],dbpedia:formerBandMember,
-     propSubj = PrepositionalObject("of"),
-     propObj  = CopulativeArg),  
+       propSubj = PrepositionalObject("of"),
+       propObj  = CopulativeArg),  
 
   StateVerb("play",dbpedia:programmeFormat), 
 
   ConsequenceVerb("broadcast",dbpedia:broadcastArea,
-     propSubj = lex:station as Subject, 
-     propObj  = lex:area as PrepositionalObject("in")),
+       propSubj = lex:station as Subject, 
+       propObj  = lex:area as PrepositionalObject("in")),
   StateVerb("cover",dbpedia:broadcastArea),
+  StateVerb("operate",dbpedia:broadcastNetwork,
+        propSubj = DirectObject,
+        propObj  = Subject),
+  RelationalNoun("part",dbpedia:broadcastNetwork,
+        propObj  = PrepositionalObject("of")), 
 
   ConsequenceVerb("broadcast",dbpedia:network,
      propSubj = lex:station as Subject, 
@@ -438,5 +467,20 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   IntersectiveDataPropertyAdjective("class B",dbpedia:braodcastStationClass,"B"), 
   IntersectiveDataPropertyAdjective("class C",dbpedia:braodcastStationClass,"C"), 
   IntersectiveDataPropertyAdjective("class D",dbpedia:braodcastStationClass,"D"), 
+
+  StateVerb("mean",dbpedia:callsignMeaning), 
+  StateVerb("stand",dbpedia:callsignMeaning,
+        propObj = PrepositionalObject("for")),
+
+  RelationalNoun("spin-off",dbpedia:related,
+        propSubj = PossessiveAdjunct restrictedTo dbpedia:TelevisionSeries,
+        propObj  = CopulativeArg), 
+
+  RelationalNoun(["LC"/noun "classification"/noun],dbpedia:lcc,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+  RelationalNoun(["Dewey"/noun "classification"/noun],dbpedia:dcc,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg)
 
 )

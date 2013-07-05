@@ -13,6 +13,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun("software",dbpedia:Software),
   ClassNoun(["piece"/noun "of"/preposition "software"/noun],dbpedia:Software) with plural "pieces of software",
   ClassNoun(["programming"/noun "language"/noun],dbpedia:ProgrammingLanguage),
+  ClassNoun("freeware",lex:Freeware),
+  ClassNoun("shareware",lex:Shareware),
   ClassNoun(["video"/noun "game"/noun],dbpedia:VideoGame),
   ClassNoun(["automobile"/noun "engine"/noun],dbpedia:AutomobileEngine),
 
@@ -29,6 +31,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ClassNoun("auto",dbpedia:Automobile),
   ClassNoun("car",dbpedia:Automobile),
   ClassNoun("vehicle",dbpedia:Automobile),
+  ClassNoun("coupé",lex:Coupe),
+  ClassNoun("hatchback",lex:Hatchback),
+  ClassNoun("convertible",lex:Convertible),
+  ClassNoun(["station"/noun "wagon"/noun],lex:StationWagon),
+  ClassNoun("pickup",lex:Pickup),
+  ClassNoun(["pickup"/noun "truck"/noun],lex:Pickup),
   ClassNoun("locomotive",dbpedia:Locomotive),
   ClassNoun("engine",dbpedia:Locomotive),
   ClassNoun("train",dbpedia:Train),
@@ -52,7 +60,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
 
-  // developer, computingPlatform, computingMedia
+  // developer, computingPlatform, computingMedia, computingInput, operatingSystem
 
   RelationalNoun("developer",dbpedia:developer,
        propSubj = PossessiveAdjunct,
@@ -69,16 +77,24 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   RelationalAdjective("released",dbpedia:computingMedia,
        relationalArg = PrepositionalObject("on")),
 
+  StateVerb("use",dbpedia:computingInput),
 
-  // programmingLanguage
+  StateVerb("run",dbpedia:operatingSystem,
+       propObj  = PrepositionalObject("under")),
+
+  // programmingLanguage, license
 
   RelationalNoun(["programming"/noun "language"/noun],dbpedia:programmingLanguage,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
 
-  ConsequenceVerb("write",dbpedia:programmingLanguage,
-       propSubj = lex:software as Subject, 
-       propObj  = lex:language as PrepositionalObject("in")),
+  RelationalAdjective("written",dbpedia:programmingLanguage,
+       relationalArg = PrepositionalObject("in")),
+
+  RelationalAdjective("licensed",dbpedia:license,
+       relationalArg = PrepositionalObject("under")),
+  IntersectiveObjectPropertyAdjective("proprietary",dbpedia:license,resource:Proprietary_software),
+  IntersectiveObjectPropertyAdjective("open source",dbpedia:license,resource:Open_source),
 
   // route{Junction|Start|End}
 
@@ -101,6 +117,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   RelationalNoun("beam",dbpedia:shipBeam,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg), 
+  RelationalNoun("draft",dbpedia:shipDraft,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
 
   RelationalNoun("format",dbpedia:format,
        propSubj = PossessiveAdjunct,
@@ -123,13 +142,73 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   ConsequenceVerb("commission",dbpedia:commissioningDate,
      propSubj = lex:ship as Subject, 
      propObj  = lex:date as PrepositionalObject("on")),
+  ConsequenceVerb("decommission",dbpedia:decommissioningDate,
+     propSubj = lex:ship as Subject, 
+     propObj  = lex:date as PrepositionalObject("on")),
 
   StateVerb("build",dbpedia:builder,
        propSubj = DirectObject,
        propObj  = Subject),
 
+  StateVerb("design",dbpedia:designer,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("develop",dbpedia:designer,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("create",dbpedia:designer,
+       propSubj = DirectObject,
+       propObj  = Subject),
+
+  RelationalAdjective("based",dbpedia:relatedMeanOfTransportation,
+       relationalArg = PrepositionalObject("on")), 
+
+  StateVerb("operate",dbpedia:operatedBy,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("operate",dbpedia:operator,
+       propSubj = Subject restrictedTo lex:Infrastructure_or_MeanOfTransportation,
+       propObj  = DirectObject),
+
+  StateVerb("serve",dbpedia:servingRailwayLine,
+       propSubj = DirectObject,
+       propObj  = Subject),
+
+  ConsequenceVerb(["lay"/verb "down"/preposition],dbpedia:layingDown,
+       propSubj = lex:ship as CopulativeSubject, 
+       propObj  = lex:date as PrepositionalObject("on")),
   ConsequenceVerb("launch",dbpedia:shipLaunch,
        propSubj = lex:ship as CopulativeSubject, 
-       propObj  = lex:date as PrepositionalObject("on"))
+       propObj  = lex:date as PrepositionalObject("on")),
+
+  RelationalNoun(["ICAO"/noun "identifier"/noun],dbpedia:icaoLocationIdentifier,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun(["ICAO"/noun "code"/noun],dbpedia:icaoLocationIdentifier,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun(["location"/noun "indicator"/noun],dbpedia:icaoLocationIdentifier,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+  RelationalNoun(["IATA"/noun "location"/noun "identifier"/noun],dbpedia:iataLocationIdentifier,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun(["IATA"/noun "identifier"/noun],dbpedia:iataLocationIdentifier,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun(["IATA"/noun "code"/noun],dbpedia:iataLocationIdentifier,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun(["current"/adjective "release"/noun],dbpedia:latestReleaseVersion,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+  RelationalNoun(["latest"/adjective "version"/noun],dbpedia:latestReleaseVersion,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+
+  RelationalNoun(["station"/noun "code"/noun],dbpedia:agencyStationCode,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg)
 
 )

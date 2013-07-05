@@ -39,6 +39,34 @@ lex:VU rdf:type owl:Restriction ;
 lex:Cosmonaut owl:unionOf (dbpedia:Astronaut lex:Russian lex:Soviet) .
 lex:Taikonaut owl:unionOf (dbpedia:Astronaut lex:Chinese) .
 
+## technology ##
+
+lex:Infrastructure_or_MeanOfTransportation owl:unionOf (dbpedia:Infrastructure dbpedia:MeanOfTransportation) .
+lex:Building_or_Infrastructure owl:unionOf (dbpedia:Building dbpedia:Infrastructure) .
+
+lex:Freeware rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:license ;
+   owl:hasValue   resource:Freeware .
+lex:Shareware rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:license ;
+   owl:hasValue   resource:Shareware .
+
+lex:Convertible rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:bodyStyle ;
+   owl:hasValue   resource:Convertible .
+lex:Pickup rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:bodyStyle ;
+   owl:hasValue   resource:Pickup_truck .
+lex:StationWagon rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:bodyStyle ;
+   owl:hasValue   resource:Station_wagon .
+lex:Coupe rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:bodyStyle ;
+   owl:hasValue   <http://dbpedia.org/resource/Coupé> .
+lex:Hatchback rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:bodyStyle ;
+   owl:hasValue   resource:Hatchback .
+
 
 ## arts_entertainment ##
 
@@ -91,6 +119,12 @@ lex:throwLeft rdf:type owl:Restriction ;
 lex:throwRight rdf:type owl:Restriction ; 
        owl:onProperty dbpedia:throwingSide ;
        owl:hasValue   "Right" .
+lex:shootRight rdf:type owl:Restriction ; 
+       owl:onProperty dbpedia:shoots ;
+       owl:hasValue   "Right" .
+lex:shootLeft rdf:type owl:Restriction ; 
+       owl:onProperty dbpedia:shoots ;
+       owl:hasValue   "Left" .
 
 
 ## politics ##
