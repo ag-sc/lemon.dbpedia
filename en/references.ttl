@@ -11,7 +11,7 @@
 
 ## places ## 
 
-:Arrondissement rdf:type owl:Restriction ;
+lex:Arrondissement rdf:type owl:Restriction ;
    owl:onProperty [ owl:inverseOf dbpedia:arrondissement ] ;
    owl:someValuesFrom dbpedia:Place .
 
@@ -105,7 +105,7 @@ lex:HockeyLeague owl:unionOf (dbpedia:IceHockeyLeague dbpedia:FieldHockeyLeague 
 lex:RaceDriver owl:unionOf (dbpedia:RacingDriver dbpedia:FormulaOneRacer dbpedia:NascarDriver) .
 lex:Racer owl:unionOf (dbpedia:Cyclist dbpedia:FormulaOneRacer dbpedia:NascarDriver) .
 
-lex:Race owl:unionOf ( dbpedia:Race dbpedia:CyclingCompetition ) .
+lex:Race owl:unionOf (dbpedia:Race dbpedia:CyclingCompetition) .
 
 lex:batLeft rdf:type owl:Restriction ; 
        owl:onProperty dbpedia:battingSide ;
