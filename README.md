@@ -24,7 +24,7 @@ with only a few exceptions).
 * Class lexicalizations: 443 (1.3 entries per class)
 * Property lexicalizations: 773 (2.4 entries per property)
 
-Published on: <a href="http://lemon-model.net/">lemon-model.net</a>
+Published on: <a href="http://lemon-model.net/lexica/dbpedia_en/Lexicon">lemon-model.net/lexica/dbpedia_en/Lexicon</a>
 
 
 ## Want to contribute?
