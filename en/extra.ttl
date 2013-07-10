@@ -11,7 +11,8 @@
 
 :lexicon a lemon:Lexicon ;
     lemon:language "en" ;
-    lemon:entry :people,
+    lemon:entry :like,
+                :people,
                 :mayor,
                 :governor,
                 :president,
@@ -23,8 +24,6 @@
                 :big,
                 :populationAsOf,
                 :active,
-                :activeSince,
-                :activeUntil,
                 :serve,
                 :play,
                 :haveRoleIn,
@@ -72,6 +71,19 @@
                 :haveEnrollmentOf,
                 :withEnrollmentOf,
                 :runForEpisodes .
+
+
+## Misc ##
+
+:like a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:preposition ;
+  lemon:canonicalForm [ lemon:writtenRep "like"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:PrepositionalPhraseFrame ;
+                      lexinfo:copulativeSubject :arg1like;
+                      lexinfo:complement :arg2like ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/similar>;
+                lemon:subjOfProp :arg1like ;
+                lemon:objOfProp  :arg2like ] .
 
 
 ## Person ##
@@ -274,9 +286,9 @@
   lexinfo:partOfSpeech lexinfo:adjective ;
   lemon:canonicalForm [ lemon:writtenRep "active"@en ] ;
   lemon:synBehavior [ rdf:type lexinfo:AdjectivePPFrame ;
-                      lexinfo:copulativeSubject :arg1active ;
-                      lexinfo:prepositionalAdjunct :arg2active ;
-                      lexinfo:prepositionalAdjunct :arg3active ] ;
+                      lexinfo:copulativeSubject   :arg1active ;
+                      lexinfo:prepositionalObject :arg2active ;
+                      lexinfo:prepositionalObject :arg3active ] ;
   lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/activeYearsStartDate> ;
                                  lemon:subjOfProp :arg1active ;
                                  lemon:objOfProp  :arg2active ] ,
@@ -292,34 +304,6 @@
 :arg2active lemon:marker :from .
 :arg3active lemon:marker :to .
 
-:activeSince a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:adjective ;
-  lemon:canonicalForm [ lemon:writtenRep "active"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:AdjectivePPFrame ;
-                      lexinfo:copulativeSubject    :arg1activeSince ;
-                      lexinfo:prepositionalAdjunct :arg2activeSince ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/activeYearsStartDate> ;
-                lemon:subjOfProp :arg1activeSince ;
-                lemon:objOfProp  :arg2activeSince ] ,
-              [ lemon:reference <http://dbpedia.org/ontology/activeYearsStartYear> ;
-                lemon:subjOfProp :arg1activeSince ;
-                lemon:objOfProp  :arg2activeSince ] .
-:arg2activeSince lemon:marker :since .
-
-:activeUntil a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:adjective ;
-  lemon:canonicalForm [ lemon:writtenRep "active"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:AdjectivePPFrame ;
-                      lexinfo:copulativeSubject    :arg1activeUntil ;
-                      lexinfo:prepositionalAdjunct :arg2activeUntil ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/activeYearsEndDate> ;
-                lemon:subjOfProp :arg1activeUntil ;
-                lemon:objOfProp  :arg2activeUntil ] ,
-              [ lemon:reference <http://dbpedia.org/ontology/activeYearsEndYear> ;
-                lemon:subjOfProp :arg1activeUntil ;
-                lemon:objOfProp  :arg2activeUntil ] .
-:arg2activeUntil lemon:marker :until .
-
 
 ## service{Start|End}{Date|Year} ##
 
@@ -327,9 +311,9 @@
   lexinfo:partOfSpeech lexinfo:verb ;
   lemon:canonicalForm [ lemon:writtenRep "serve"@en ] ;
   lemon:synBehavior [ rdf:type lexinfo:IntransitivePPFrame ;
-                      lexinfo:copulativeSubject :arg1serve ;
-                      lexinfo:prepositionalAdjunct :arg2serve ;
-                      lexinfo:prepositionalAdjunct :arg3serve ] ;
+                      lexinfo:subject             :arg1serve ;
+                      lexinfo:prepositionalObject :arg2serve ;
+                      lexinfo:prepositionalObject :arg3serve ] ;
   lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/serviceStartDate> ;
                                  lemon:subjOfProp :arg1serve ;
                                  lemon:objOfProp  :arg2serve ] ,
@@ -633,9 +617,9 @@
 :produceUntil a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "produce"@en ] ;
   lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
-		      lexinfo:subject              :arg1produceUntil ;
-                      lexinfo:directObject         :arg2produceUntil ;
-                      lexinfo:prepositionalAdjunct :arg3produceUntil ] ;
+		      lexinfo:subject             :arg1produceUntil ;
+                      lexinfo:directObject        :arg2produceUntil ;
+                      lexinfo:prepositionalObject :arg3produceUntil ] ;
   lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/product>;
                                  lemon:subjOfProp :arg1produceUntil ;
                                  lemon:objOfProp  :arg2produceUntil ] ,
@@ -647,9 +631,9 @@
 :manufactureUntil a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "manufacture"@en ] ;
   lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
-		      lexinfo:subject              :arg1manufactureUntil ;
-                      lexinfo:directObject         :arg2manufactureUntil ;
-                      lexinfo:prepositionalAdjunct :arg3manufactureUntil ] ;
+		      lexinfo:subject             :arg1manufactureUntil ;
+                      lexinfo:directObject        :arg2manufactureUntil ;
+                      lexinfo:prepositionalObject :arg3manufactureUntil ] ;
   lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/product>;
                                  lemon:subjOfProp :arg1manufactureUntil ;
                                  lemon:objOfProp  :arg2manufactureUntil ] ,

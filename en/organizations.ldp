@@ -77,7 +77,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
      propObj  = Subject),
 
 
-  // formationDate, formationYear, foundingDate, foundingYear
+  // formationDate, formationYear, foundingDate, foundingYear, activeYears{Start|End}{Date|Year}
 
   RelationalNoun(["formation"/noun "date"/noun],dbpedia:formationDate,
      propSubj = PossessiveAdjunct,
@@ -119,6 +119,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
   ConsequenceVerb("establish",dbpedia:foundingYear,
      propSubj = lex:organization as Subject, 
      propObj  = lex:date as PrepositionalObject("in")),
+
+  RelationalAdjective("active",dbpedia:activeYearsStartDate, 
+     relationalArg = PrepositionalObject("since")), 
+  RelationalAdjective("active",dbpedia:activeYearsStartYear, 
+     relationalArg = PrepositionalObject("since")), 
+  RelationalAdjective("active",dbpedia:activeYearsEndDate, 
+     relationalArg = PrepositionalObject("until")), 
+  RelationalAdjective("active",dbpedia:activeYearsEndYear, 
+     relationalArg = PrepositionalObject("until")), 
 
   // foundingPerson, foundedBy
 

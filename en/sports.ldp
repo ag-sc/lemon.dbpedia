@@ -230,7 +230,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
 
   StateVerb("play",dbpedia:tenant, 
      propSubj = PrepositionalObject("in"),
-     propObj  = Subject restrictedTo dbpedia:Organization), 
+     propObj  = Subject restrictedTo dbpedia:Organisation), 
   StateVerb("host",dbpedia:tenant, 
      propObj  = DirectObject restrictedTo dbpedia:Event), 
 

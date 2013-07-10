@@ -84,9 +84,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
   RelationalAdjective("similar",dbpedia:similar,
        relationalArg = PrepositionalObject("to")), 
 
-  RelationalAdjective("like",dbpedia:similar,
-       relationalArg = DirectObject), 
-
   RelationalNoun("synonym",dbpedia:synonym,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),

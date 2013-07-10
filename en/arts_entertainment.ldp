@@ -473,7 +473,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propObj = PrepositionalObject("for")),
 
   RelationalNoun("spin-off",dbpedia:related,
-        propSubj = PossessiveAdjunct restrictedTo dbpedia:TelevisionSeries,
+        propSubj = PossessiveAdjunct restrictedTo dbpedia:TelevisionShow,
         propObj  = CopulativeArg), 
 
   RelationalNoun(["LC"/noun "classification"/noun],dbpedia:lcc,

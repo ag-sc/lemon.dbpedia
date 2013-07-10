@@ -427,12 +427,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
 
-  RelationalAdjective("called",dbpedia:pseudonym,
-     relationalArg = DirectObject), 
-  RelationalAdjective("called",dbpedia:alias,
-     relationalArg = DirectObject), 
-  RelationalAdjective("called",dbpedia:commonName,
-     relationalArg = DirectObject), 
+  ConsequenceVerb("call",dbpedia:pseudonym,
+     propSubj = lex:callee as Subject, 
+     propObj  = lex:callname as DirectObject),
+  ConsequenceVerb("call",dbpedia:alias,
+     propSubj = lex:callee as Subject, 
+     propObj  = lex:callname as DirectObject),
+  ConsequenceVerb("call",dbpedia:commonName,
+     propSubj = lex:callee as Subject, 
+     propObj  = lex:callname as DirectObject),
 
 
   // weight 
