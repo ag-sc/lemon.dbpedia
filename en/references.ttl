@@ -72,6 +72,8 @@ lex:Hatchback rdf:type owl:Restriction ;
 
 lex:Festival  owl:unionOf (dbpedia:MusicFestival dbpedia:FilmFestival) .
 
+lex:Album_or_Song owl:unionOf (dbpedia:Album dbpedia:Song) .
+
 lex:Actress owl:intersectionOf (dbpedia:Actor lex:Female) .
 lex:VoiceActress owl:intersectionOf (dbpedia:VoiceActor lex:Female) .
 lex:AdultActress owl:intersectionOf (dbpedia:AdultActor lex:Female) .

@@ -13,9 +13,6 @@
     lemon:language "en" ;
     lemon:entry :like,
                 :people,
-                :mayor,
-                :governor,
-                :president,
                 :high,
                 :long,
                 :wide,
@@ -31,11 +28,7 @@
                 :Olympics,
                 :OlympicGames,
                 :draft,
-                :record,
-                :interpreter,
-                :make,
-                :write,
-                :writtenIn,
+                :wriitenIn,
                 :madeIn,
                 :discover,
                 :discovery,
@@ -93,44 +86,6 @@
   lemon:canonicalForm [ lemon:writtenRep "people"@en ; 
                         lexinfo:number lexinfo:plural ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/Person> ] .
-
-## Mayor, Governor, President
-
-:mayor a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm [ lemon:writtenRep "mayor"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
-		      lexinfo:copulativeArg :arg1mayor ;
-                      lexinfo:possessiveAdjunct :arg2mayor ] ;
-  lemon:sense [ lemon:subsense [ lemon:reference lex:Mayor;
-                                 lemon:isA :arg1mayor ] ,
-                               [ lemon:reference <http://dbpedia.org/ontology/leader>;
-                                 lemon:subjOfProp :arg2mayor ;
-                                 lemon:objOfProp  :arg1mayor ] ] .
-
-:governor a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm [ lemon:writtenRep "governor"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
-		      lexinfo:copulativeArg :arg1governor ;
-                      lexinfo:possessiveAdjunct :arg2governor ] ;
-  lemon:sense [ lemon:subsense [ lemon:reference lex:Governor;
-                                 lemon:isA :arg1governor ] ,
-                               [ lemon:reference <http://dbpedia.org/ontology/leader>;
-                                 lemon:subjOfProp :arg2governor ;
-                                 lemon:objOfProp  :arg1governor ] ] .
-
-:president a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm [ lemon:writtenRep "president"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
-		      lexinfo:copulativeArg :arg1president ;
-                      lexinfo:possessiveAdjunct :arg2president ] ;
-  lemon:sense [ lemon:subsense [ lemon:reference lex:President;
-                                 lemon:isA :arg1president ] ,
-                               [ lemon:reference <http://dbpedia.org/ontology/leader>;
-                                 lemon:subjOfProp :arg2president ;
-                                 lemon:objOfProp  :arg1president ] ] .
 
 
 ## height, length, area ## 
@@ -382,76 +337,6 @@
 :arg3draft lemon:marker :in .
 
 
-## artist ## 
-
-:record a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:verb ;
-  lemon:canonicalForm [ lemon:writtenRep "record"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
-                      lexinfo:subject :arg1record ;
-                      lexinfo:directObject :arg2record ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/artist>;
-                lemon:subjOfProp :arg2record;
-                lemon:objOfProp  :arg1record;
-                lemon:propertyDomain [ owl:unionOf (<http://dbpedia.org/ontology/Album> <http://dbpedia.org/ontology/Song>) ] ] .
-
-:interpreter a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:noun ;
-  lemon:canonicalForm [ lemon:writtenRep "interpreter"@en ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/artist> ;
-                lemon:subjOfProp :arg1interpreter ;
-                lemon:objOfProp  :arg2interpreter ] ;
-  lemon:synBehavior [ rdf:type lexinfo:NounPPFrame ;
-                      lexinfo:copulativeArg :arg2interpreter ;
-                      lexinfo:prepositionalObject :arg1interpreter ] .
-:arg1interpreter lemon:marker :of .
-
-:haveInfluenceOn a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_have :component_influence :on :arg2 );
-  lemon:canonicalForm [ lemon:writtenRep "have influence on"@en ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/influenced> ;
-                lemon:subjOfProp :arg1 ;
-                lemon:objOfProp  :arg2 ] ,
-              [ lemon:reference <http://dbpedia.org/ontology/influencedBy> ;
-                lemon:subjOfProp :arg2 ;
-                lemon:objOfProp  :arg1 ] .
-
-## genre, language ##
-
-:make a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:verb ;
-  lemon:canonicalForm [ lemon:writtenRep "make"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
-                      lexinfo:subject :arg1make ;
-                      lexinfo:directObject :arg2make ; ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/genre>;
-                lemon:subjOfProp :arg1make;
-                lemon:objOfProp  :arg2make;
-                lemon:propertyRange <http://dbpedia.org/ontology/MusicGenre> ] .
-
-:write a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:verb ;
-  lemon:canonicalForm [ lemon:writtenRep "write"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
-                      lexinfo:subject :arg1write ;
-                      lexinfo:directObject :arg2write ; ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/genre>;
-                lemon:subjOfProp :arg1write;
-                lemon:objOfProp  :arg2write;
-                lemon:propertyDomain <http://dbpedia.org/ontology/Writer> ] .
-
-:writtenIn a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:adjective ;
-  lemon:canonicalForm [ lemon:writtenRep "written"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:AdjectivePPFrame ;
-                      lexinfo:copulativeArg :arg1writtenIn ;
-                      lexinfo:prepositionalObject :arg2writtenIn ; ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/language>;
-                lemon:subjOfProp :arg1write;
-                lemon:objOfProp  :arg2write;
-                lemon:propertyDomain <http://dbpedia.org/ontology/WrittenWork> ] .
-:arg2writtenIn lemon:marker :in .
-
 ## starring, voice ##
 
 :haveRoleIn a lemon:Phrase ;
@@ -465,7 +350,19 @@
                 lemon:objOfProp  :arg1 ] .
 
 
-## origin ##
+## language, origin ##
+
+:writtenIn a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "written"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePPFrame ;
+                      lexinfo:copulativeArg :arg1writtenIn ;
+                      lexinfo:prepositionalObject :arg2writtenIn ; ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/language>;
+                lemon:subjOfProp :arg1write;
+                lemon:objOfProp  :arg2write;
+                lemon:propertyDomain <http://dbpedia.org/ontology/WrittenWork> ] .
+:arg2writtenIn lemon:marker :in .
 
 :madeIn a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:adjective ;
@@ -686,6 +583,17 @@
 
 #### Phrases ####
 
+## influenced ## 
+
+:haveInfluenceOn a lemon:Phrase ;
+  lemon:decomposition ( :arg1 :component_have :component_influence :on :arg2 );
+  lemon:canonicalForm [ lemon:writtenRep "have influence on"@en ] ;
+  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/influenced> ;
+                lemon:subjOfProp :arg1 ;
+                lemon:objOfProp  :arg2 ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/influencedBy> ;
+                lemon:subjOfProp :arg2 ;
+                lemon:objOfProp  :arg1 ] .
 
 ## totalPopulation, staff, numberOfEmployees, seatingCapacity, numberOf{Pages|Episodes|Tracks}, railwayPlatforms ##
 

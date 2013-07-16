@@ -145,7 +145,16 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   //// Properties
 
-  // (literary) genre 
+  // artist 
+
+  StateVerb("record",dbpedia:artist,
+        propSubj = DirectObject restrictedTo lex:Album_or_Song,
+        propObj  = Subject),
+  RelationalNoun("interpreter",dbpedia:artist,
+        propSubj = PrepositionalObject("of") restrictedTo lex:Album_or_Song,
+        propObj  = CopulativeArg),
+
+  // (literary) genre
 
   RelationalNoun("genre",dbpedia:genre,
         propSubj = PossessiveAdjunct,
@@ -153,6 +162,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   RelationalNoun("genre",dbpedia:literaryGenre,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
+
+  StateVerb("make",dbpedia:genre,
+        propObj  = DirectObject restrictedTo dbpedia:MusicGenre),
+  StateVerb("write",dbpedia:genre,
+        propSubj = Subject restrictedTo dbpedia:Writer,
+        propObj  = DirectObject),
 
   // runtime
 
@@ -217,18 +232,23 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   // musical{Band|Artist}
 
- StateVerb("write",dbpedia:musicalBand,
+  StateVerb("write",dbpedia:musicalBand,
         propSubj = DirectObject,
         propObj  = Subject),
- StateVerb("write",dbpedia:musicalArtist,
+  StateVerb("write",dbpedia:musicalArtist,
         propSubj = DirectObject,
         propObj  = Subject),
- StateVerb("record",dbpedia:musicalBand,
+
+  StateVerb("record",dbpedia:musicalBand,
         propSubj = DirectObject,
         propObj  = Subject),
- StateVerb("record",dbpedia:musicalArtist,
+  StateVerb("record",dbpedia:musicalArtist,
         propSubj = DirectObject,
         propObj  = Subject),
+
+  RelationalNoun("interpreter",dbpedia:musicalArtist,
+        propSubj = PrepositionalObject("of"),
+        propObj  = CopulativeArg),
 
   // starring, guest ,presenter
 
