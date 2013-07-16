@@ -1,6 +1,6 @@
-# <a href="http://lemon-model.net/">lemon</a> lexica for the <a href="http://dbpedia.org">DBpedia</a> 3.8 ontology
+# <a href="http://lemon-model.net/">lemon</a> lexica for <a href="http://dbpedia.org">DBpedia</a> 
 
-The folder `en` contains the development version of an English lexicon for DBpedia. 
+The folder `en` contains the development version of an English lexicon for the DBpedia 3.8 ontology. 
 It comprises several LDP files with entries using the <a href="https://github.com/jmccrae/lemon.patterns">lemon design patterns</a>
 and pooled by domain (person, organizations, arts and entertainment, animals and plants, etc.), 
 together with a file containing all entries that could not be created using those patterns 
