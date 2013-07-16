@@ -2,7 +2,7 @@
 
 The folder `en` contains the development version of an English lexicon for the DBpedia 3.8 ontology. 
 It comprises several LDP files with entries using the <a href="https://github.com/jmccrae/lemon.patterns">lemon design patterns</a>
-and pooled by domain (person, organizations, arts and entertainment, animals and plants, etc.), 
+and pooled by domain (persons, organizations, arts and entertainment, animals and plants, etc.), 
 together with a file containing all entries that could not be created using those patterns 
 but only by writing lemon RDF triples (`extra.ttl`), as well as a file that defines classes and properties 
 that are not part of the DBpedia ontology but are used in the lexicalizations (`references.ttl`). 

@@ -602,6 +602,7 @@
 
 :launchProduct a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "launch"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
   lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
 		      lexinfo:subject              :arg1launchProduct ;
                       lexinfo:directObject         :arg2launchProduct ;
@@ -616,6 +617,7 @@
 
 :produceUntil a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "produce"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
   lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
 		      lexinfo:subject             :arg1produceUntil ;
                       lexinfo:directObject        :arg2produceUntil ;
@@ -630,6 +632,7 @@
 
 :manufactureUntil a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "manufacture"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ;
   lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
 		      lexinfo:subject             :arg1manufactureUntil ;
                       lexinfo:directObject        :arg2manufactureUntil ;
