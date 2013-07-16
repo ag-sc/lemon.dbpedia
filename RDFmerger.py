@@ -1,8 +1,14 @@
+
 import rdflib as rdf
+from   rdflib import Namespace, RDF, URIRef
+
 from sys import argv,exit
 from os  import listdir
 from os.path import isfile
 import re
+
+
+lemon = Namespace("http://www.monnet-project.eu/lemon#")
 
 
 def frag_uri(uri):
@@ -31,6 +37,20 @@ def run():
       else: 
          print 'Unknown format: '+f
          exit(1)
+
+  lexicon = URIRef("http://github.com/cunger/lemon.dbpedia/target/dbpedia_"+argv[1]+"#")
+
+  print 'Merging lexica into <'+str(lexicon)+'>...'
+
+  for l,_,_ in graph.triples((None,RDF.type,lemon.Lexicon)):
+      if l != lexicon:
+         for s,p,o in graph.triples((l,RDF.type,lemon.Lexicon)):
+             graph.remove((s,p,o))
+         for s,p,o in graph.triples((l,lemon.language,None)):
+             graph.remove((s,p,o))
+         for s,p,o in graph.triples((l,lemon.entry,None)):
+             graph.remove((s,p,o))
+             graph.add((lexicon,p,o))
 
   print 'Serializing...'
 
