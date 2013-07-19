@@ -340,7 +340,7 @@
 ## starring, voice ##
 
 :haveRoleIn a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_have :component_a :component_role :in :arg2 );
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_have :component_a :component_role [ lemon:element :in ] [ lemon:element :arg2 ] );
   lemon:canonicalForm [ lemon:writtenRep "have a role in"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/starring> ;
                 lemon:subjOfProp :arg2 ;
@@ -586,7 +586,7 @@
 ## influenced ## 
 
 :haveInfluenceOn a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_have :component_influence :on :arg2 );
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_have :component_influence [ lemon:element :on ] [ lemon:element :arg2 ] );
   lemon:canonicalForm [ lemon:writtenRep "have influence on"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/influenced> ;
                 lemon:subjOfProp :arg1 ;
@@ -598,7 +598,7 @@
 ## totalPopulation, staff, numberOfEmployees, seatingCapacity, numberOf{Pages|Episodes|Tracks}, railwayPlatforms ##
 
 :haveInhabitant a lemon:Phrase ;
-  lemon:decomposition ( :arg_place :component_have :arg_num :component_inhabitant ) ;
+  lemon:decomposition ( [ lemon:element :arg_place ] :component_have [ lemon:element :arg_num ] :component_inhabitant ) ;
   lemon:canonicalForm [ lemon:writtenRep "have inhabitants"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/populationTotal> ;
                 lemon:subjOfProp :arg_place ;
@@ -611,7 +611,7 @@
                 lemon:objOfProp  :arg_num ] .
 
 :haveEmployee a lemon:Phrase ;
-  lemon:decomposition ( :arg_organization :component_have :arg_num :component_employee ) ;
+  lemon:decomposition ( [ lemon:element :arg_organization ] :component_have [ lemon:element :arg_num ] :component_employee ) ;
   lemon:canonicalForm [ lemon:writtenRep "have employees"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfEmployees> ;
                 lemon:subjOfProp :arg_organization ;
@@ -621,63 +621,63 @@
                 lemon:objOfProp  :arg_num ] .
 
 :haveSeat a lemon:Phrase ;
-  lemon:decomposition ( :arg_place :component_have :arg_num :component_seat ) ;
+  lemon:decomposition ( [ lemon:element :arg_place ] :component_have [ lemon:element :arg_num ] :component_seat ) ;
   lemon:canonicalForm [ lemon:writtenRep "have seats"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/seatingCapacity> ;
                 lemon:subjOfProp :arg_place ;
                 lemon:objOfProp  :arg_num ] .
 
 :holdSeat a lemon:Phrase ;
-  lemon:decomposition ( :arg_place :component_hold :arg_num :component_seat ) ;
+  lemon:decomposition ( [ lemon:element :arg_place ] :component_hold [ lemon:element :arg_num ] :component_seat ) ;
   lemon:canonicalForm [ lemon:writtenRep "hold seats"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/seatingCapacity> ;
                 lemon:subjOfProp :arg_place ;
                 lemon:objOfProp  :arg_num ] .
 
 :havePages a lemon:Phrase ;
-  lemon:decomposition ( :arg_book :component_have :arg_num :component_page ) ;
+  lemon:decomposition ( [ lemon:element :arg_book ] :component_have [ lemon:element :arg_num ] :component_page ) ;
   lemon:canonicalForm [ lemon:writtenRep "have pages"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfPages> ;
                 lemon:subjOfProp :arg_book ;
                 lemon:objOfProp  :arg_num ] .
 
 :haveEpisodes a lemon:Phrase ;
-  lemon:decomposition ( :arg_series :component_have :arg_num :component_episode ) ;
+  lemon:decomposition ( [ lemon:element :arg_series ] :component_have [ lemon:element :arg_num ] :component_episode ) ;
   lemon:canonicalForm [ lemon:writtenRep "have episodes"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfEpisodes> ;
                 lemon:subjOfProp :arg_series ;
                 lemon:objOfProp  :arg_num ] .
 
 :runForEpisodes a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_run :component_for :arg2 :component_episode ) ;
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_run :component_for [ lemon:element :arg2 ] :component_episode ) ;
   lemon:canonicalForm [ lemon:writtenRep "run for episodes"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfEpisodes> ;
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
 :haveSeasons a lemon:Phrase ;
-  lemon:decomposition ( :arg_series :component_have :arg_num :component_season ) ;
+  lemon:decomposition ( [ lemon:element :arg_series ] :component_have [ lemon:element :arg_num ] :component_season ) ;
   lemon:canonicalForm [ lemon:writtenRep "have seasons"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfSeasons> ;
                 lemon:subjOfProp :arg_series ;
                 lemon:objOfProp  :arg_num ] .
 
 :runForSeasons a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_run :component_for :arg2 :component_season ) ;
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_run :component_for [ lemon:element :arg2 ] :component_season ) ;
   lemon:canonicalForm [ lemon:writtenRep "run for seasons"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfSeasons> ;
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
 :haveTracks a lemon:Phrase ;
-  lemon:decomposition ( :arg_station :component_have :arg_num :component_track ) ;
+  lemon:decomposition ( [ lemon:element :arg_station ] :component_have [ lemon:element :arg_num ] :component_track ) ;
   lemon:canonicalForm [ lemon:writtenRep "have tracks"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfTracks> ;
                 lemon:subjOfProp :arg_station ;
                 lemon:objOfProp  :arg_num ] .
 
 :havePlatforms a lemon:Phrase ;
-  lemon:decomposition ( :arg_station :component_have :arg_num :component_platform ) ;
+  lemon:decomposition ( [ lemon:element :arg_station ] :component_have [ lemon:element :arg_num ] :component_platform ) ;
   lemon:canonicalForm [ lemon:writtenRep "have tracks"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/railwayPlatforms> ;
                 lemon:subjOfProp :arg_station ;
@@ -687,7 +687,7 @@
 ## musicBy ##
 
 :haveMusicBy a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_have :component_music :by :arg2 ) ;
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_have :component_music [ lemon:element :by ] [ lemon:element :arg2 ] ) ;
   lemon:canonicalForm [ lemon:writtenRep "have music by"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/musicBy>;
                 lemon:subjOfProp :arg1 ;
@@ -697,7 +697,7 @@
                 lemon:objOfProp  :arg2 ] .
 
 :writeTheMusicFor a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_write :component_the :component_music :for :arg2 );
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_write :component_the :component_music [ lemon:element :for ] [ lemon:element :arg2 ] );
   lemon:canonicalForm [ lemon:writtenRep "write the music for"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/musicBy> ;
                 lemon:subjOfProp :arg1 ;
@@ -707,7 +707,7 @@
                 lemon:objOfProp  :arg2 ] .
 
 :composeTheMusicFor a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_compose :component_the :component_music :for :arg2 );
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_compose :component_the :component_music [ lemon:element :for ] [ lemon:element :arg2 ] );
   lemon:canonicalForm [ lemon:writtenRep "compose the music for"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/musicBy> ;
                 lemon:subjOfProp :arg1 ;
@@ -720,7 +720,7 @@
 ## averageSpeed ##
 
 :travelWithAnAverageSpeedOf a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_travel :with :component_an :component_average :component_speed :of :arg2 ) ;
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_travel [ lemon:element :with ] :component_an :component_average :component_speed [ lemon:element :of ] [ lemon:element :arg2 ] ) ;
   lemon:canonicalForm [ lemon:writtenRep "travel with an average speed of"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/averageSpeed> ;
                 lemon:subjOfProp :arg1 ;
@@ -729,7 +729,7 @@
 ## formerCoach, formerTeam, formerBandMember ##
 
 :wasCoach a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_be :component_coach :of :arg2 ) ;
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_be :component_coach [ lemon:element :of ] [ lemon:element :arg2 ] ) ;
   lemon:canonicalForm [ lemon:writtenRep "was coach of"@en ] ;
   lexinfo:tense lexinfo:past ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/formerCoach> ;
@@ -737,7 +737,7 @@
                 lemon:objOfProp  :arg2 ] .
 
 :playedFor a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_play :for :arg2 ) ;
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_play [ lemon:element :for ] [ lemon:element :arg2 ] ) ;
   lemon:canonicalForm [ lemon:writtenRep "played for"@en ] ;
   lexinfo:tense lexinfo:past ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/formerTeam> ;
@@ -745,7 +745,7 @@
                 lemon:objOfProp  :arg2 ] .
 
 :wasMember a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_be :component_member :of :arg2 ) ;
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_be :component_member [ lemon:element :of ] [ lemon:element :arg2 ] ) ;
   lemon:canonicalForm [ lemon:writtenRep "was member of"@en ] ;
   lexinfo:tense lexinfo:past ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/formerBandMember> ;
@@ -755,7 +755,7 @@
 ## number, statisticValue ##
 
 :wearNumber a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_wear :component_number :arg2 ) ;
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_wear :component_number [ lemon:element :arg2 ] ) ;
   lemon:canonicalForm [ lemon:writtenRep "wear number"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/number> ;
                 lemon:subjOfProp :arg1 ;
@@ -775,7 +775,7 @@
                                    lemon:objOfProp  <http://dbpedia.org/resource/battingAverage> ] ] .
 
 :winGames a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_win :arg2 :component_game ) ;
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_win [ lemon:element :arg2 ] :component_game ) ;
   lemon:canonicalForm [ lemon:writtenRep "win games"@en ] ;
   lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/statisticValue> ;
                                  lemon:subjOfProp :arg1 ;
@@ -787,7 +787,7 @@
 ## synonym ##
 
 :sameAs a lemon:Phrase ;
-  lemon:decomposition ( :arg2 :component_be :component_the :component_same :as :arg1 ) ;
+  lemon:decomposition ( [ lemon:element :arg2 ] :component_be :component_the :component_same [ lemon:element :as ] [ lemon:element :arg1 ] ) ;
   lemon:canonicalForm [ lemon:writtenRep "be the same as"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/synonym> ;
                 lemon:subjOfProp :arg1 ;
@@ -797,7 +797,7 @@
 ## added ## 
 
 :addedToNRHP a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_be :component_added :to :component_the :component_NRHP :addedDate ) ;
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_be :component_added [ lemon:element :to ] :component_the :component_NRHP [ lemon:element :addedDate ] ) ;
   lemon:canonicalForm [ lemon:writtenRep "be added to the NRHP"@en ] ;
   lexinfo:tense lexinfo:past ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/added> ;
@@ -805,7 +805,7 @@
                 lemon:objOfProp  :addedDate ] .
 
 :placedOnNRHP a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_be :component_placed :on :component_the :component_NRHP :addedDate ) ;
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_be :component_placed [ lemon:element :on ] :component_the :component_NRHP [ lemon:element :addedDate ] ) ;
   lemon:canonicalForm [ lemon:writtenRep "be placed on the NRHP"@en ] ;
   lexinfo:tense lexinfo:past ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/added> ;
@@ -819,14 +819,14 @@
 ## numberOfStudents ## 
 
 :haveEnrollmentOf a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_have :component_an :component_enrollment :of :arg2 :component_student ) ;
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_have :component_an :component_enrollment [ lemon:element :of ] [ lemon:element :arg2 ] :component_student ) ;
   lemon:canonicalForm [ lemon:writtenRep "have an enrollment of"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfStudents> ;
                 lemon:subjOfProp :arg1 ;
                 lemon:objOfProp  :arg2 ] .
 
 :withEnrollmentOf a lemon:Phrase ;
-  lemon:decomposition ( :with :component_an :component_enrollment :of :arg2 :component_student ) ;
+  lemon:decomposition ( [ lemon:element :with ] :component_an :component_enrollment [ lemon:element :of ] [ lemon:element :arg2 ] :component_student ) ;
   lemon:canonicalForm [ lemon:writtenRep "with an enrollment of"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/numberOfStudents> ;
                 lemon:subjOfProp :arg1 ;
@@ -836,7 +836,7 @@
 ## percentageOfAreaWater ##
 
 :consistOfWater a lemon:Phrase ;
-  lemon:decomposition ( :arg1 :component_consist :to :arg_num :component_percent :of :component_water ) ;
+  lemon:decomposition ( [ lemon:element :arg1 ] :component_consist [ lemon:element :to ] [ lemon:element :arg_num ] :component_percent [ lemon:element :of ] :component_water ) ;
   lemon:canonicalForm [ lemon:writtenRep "consists to percent of water"@en ] ;
   lemon:sense [ lemon:reference <http://dbpedia.org/ontology/percentageOfAreaWater> ;
                 lemon:subjOfProp :arg1 ;
@@ -847,7 +847,7 @@
 
 ## Verbs ##
 
-:component_be a lemon:Word ;
+:component_be lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "be"@en ] ;
   lemon:otherForm     [ lemon:writtenRep "is"@en ;
                         lexinfo:tense lexinfo:present ;
@@ -868,158 +868,158 @@
   lemon:otherForm     [ lemon:writtenRep "been"@en ;
                         lexinfo:verbFormMood lexinfo:participle ;
                         lexinfo:aspect lexinfo:perfective ] ;
-  lexinfo:partOfSpeech lexinfo:verb .
+  lexinfo:partOfSpeech lexinfo:verb ] .
 
-:component_have a lemon:Word ;
+:component_have lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "have"@en ] ;
-  lexinfo:partOfSpeech lexinfo:verb .
+  lexinfo:partOfSpeech lexinfo:verb ] .
 
-:component_write a lemon:Word ;
+:component_write lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "write"@en ] ;
-  lexinfo:partOfSpeech lexinfo:verb .
+  lexinfo:partOfSpeech lexinfo:verb ] .
 
-:component_compose a lemon:Word ;
+:component_compose lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "write"@en ] ;
-  lexinfo:partOfSpeech lexinfo:verb .
+  lexinfo:partOfSpeech lexinfo:verb ] .
 
-:component_travel a lemon:Word ;
+:component_travel lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "travel"@en ] ;
-  lexinfo:partOfSpeech lexinfo:verb .
+  lexinfo:partOfSpeech lexinfo:verb ] .
 
-:component_wear a lemon:Word ;
+:component_wear lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "wear"@en ] ;
-  lexinfo:partOfSpeech lexinfo:verb .
+  lexinfo:partOfSpeech lexinfo:verb ] .
 
-:component_add a lemon:Word ;
+:component_add lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "add"@en ] ;
-  lexinfo:partOfSpeech lexinfo:verb .
+  lexinfo:partOfSpeech lexinfo:verb ] .
 
-:component_place a lemon:Word ;
+:component_place lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "place"@en ] ;
-  lexinfo:partOfSpeech lexinfo:verb .
+  lexinfo:partOfSpeech lexinfo:verb ] .
 
-:component_serve a lemon:Word ;
+:component_serve lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "serve"@en ] ;
-  lexinfo:partOfSpeech lexinfo:verb .
+  lexinfo:partOfSpeech lexinfo:verb ] .
 
-:component_hold a lemon:Word ;
+:component_hold lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "hold"@en ] ;
-  lexinfo:partOfSpeech lexinfo:verb .
+  lexinfo:partOfSpeech lexinfo:verb ] .
 
-:component_play a lemon:Word ;
+:component_play lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "play"@en ] ;
-  lexinfo:partOfSpeech lexinfo:verb .
+  lexinfo:partOfSpeech lexinfo:verb ] .
 
-:component_consist a lemon:Word ;
+:component_consist lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "consist"@en ] ;
-  lexinfo:partOfSpeech lexinfo:verb .
+  lexinfo:partOfSpeech lexinfo:verb ] .
 
 ## Participles ## 
 
-:component_added  lexinfo:participleFormOf :add ;   lemon:canonicalForm [ lemon:writtenRep "added"@en ] .
-:component_placed lexinfo:participleFormOf :place ; lemon:canonicalForm [ lemon:writtenRep "placed"@en ] .
+:component_added  lemon:element [ lexinfo:participleFormOf :add ;   lemon:canonicalForm [ lemon:writtenRep "added"@en ] ] .
+:component_placed lemon:element [ lexinfo:participleFormOf :place ; lemon:canonicalForm [ lemon:writtenRep "placed"@en ]  ].
 
 ## Nouns ##
 
-:component_influence a lemon:Word ;
+:component_influence lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "influence"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_inhabitant a lemon:Word ;
+:component_inhabitant lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "inhabitant"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_employee a lemon:Word ;
+:component_employee lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "employee"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_speed a lemon:Word ;
+:component_speed lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "speed"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_music a lemon:Word ;
+:component_music lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "music"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_enrollment a lemon:Word ;
+:component_enrollment lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "enrollment"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_student a lemon:Word ;
+:component_student lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "student"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_episode a lemon:Word ;
+:component_episode lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "episode"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_role a lemon:Word ;
+:component_role lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "role"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_season a lemon:Word ;
+:component_season lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "season"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_seat a lemon:Word ;
+:component_seat lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "seat"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_page a lemon:Word ;
+:component_page lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "page"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_member a lemon:Word ;
+:component_member lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "member"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_track a lemon:Word ;
+:component_track lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "track"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_platform a lemon:Word ;
+:component_platform lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "platform"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_game a lemon:Word ;
+:component_game lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "game"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
-:component_percent a lemon:Word ;
+:component_percent lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "percent"@en ] ;
-  lexinfo:partOfSpeech lexinfo:noun .
+  lexinfo:partOfSpeech lexinfo:noun ] .
 
 
 ## Adjectives ##
 
-:component_average a lemon:Word ;
+:component_average lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "average"@en ] ;
-  lexinfo:partOfSpeech lexinfo:adjective .
+  lexinfo:partOfSpeech lexinfo:adjective ] .
 
-:component_same a lemon:Word ;
+:component_same lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "same"@en ] ;
-  lexinfo:partOfSpeech lexinfo:adjective .
+  lexinfo:partOfSpeech lexinfo:adjective ] .
 
 ## Determiners ##
 
-:component_the a lemon:Word ;
+:component_the lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "the"@en ] ;
-  lexinfo:partOfSpeech lexinfo:article .
+  lexinfo:partOfSpeech lexinfo:article ] .
 
-:component_a a lemon:Word ;
+:component_a lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "a"@en ] ;
-  lexinfo:partOfSpeech lexinfo:determiner .
+  lexinfo:partOfSpeech lexinfo:determiner ] .
 
-:component_an a lemon:Word ;
+:component_an lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "an"@en ] ;
-  lexinfo:partOfSpeech lexinfo:determiner .
+  lexinfo:partOfSpeech lexinfo:determiner ] .
 
 ## Proper nouns ## 
 
-:component_NRHP a lemon:LexicalEntry ;
+:component_NRHP lemon:element [ a lemon:LexicalEntry ;
   lemon:canonicalForm [ lemon:writtenRep "National Register of Historic Places"@en ] ;
   lemon:otherForm [ lemon:writtenRep "NRHP"@en ] ;
-  lexinfo:partOfSpeech lexinfo:properNoun .
+  lexinfo:partOfSpeech lexinfo:properNoun ] .
 
 ## Prepositions ##
 
