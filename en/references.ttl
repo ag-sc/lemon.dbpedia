@@ -79,16 +79,16 @@ lex:VoiceActress owl:intersectionOf (dbpedia:VoiceActor lex:Female) .
 lex:AdultActress owl:intersectionOf (dbpedia:AdultActor lex:Female) .
 lex:PornActress  owl:intersectionOf (dbpedia:Pornstar lex:Female) .
 
-:Hardcover rdf:type owl:Restriction ;
+lex:Hardcover rdf:type owl:Restriction ;
    owl:onProperty dbpedia:mediaType ;
    owl:hasValue   resource:Hardcover .
-:Paperback rdf:type owl:Restriction ;
+lex:Paperback rdf:type owl:Restriction ;
    owl:onProperty dbpedia:mediaType ;
    owl:hasValue   resource:Paperback .
-:EBook rdf:type owl:Restriction ;
+lex:EBook rdf:type owl:Restriction ;
    owl:onProperty dbpedia:mediaType ;
    owl:hasValue   resource:E-book .
-:Audiobook rdf:type owl:Restriction ;
+lex:Audiobook rdf:type owl:Restriction ;
    owl:onProperty dbpedia:mediaType ;
    owl:hasValue   resource:Audiobook .
 
