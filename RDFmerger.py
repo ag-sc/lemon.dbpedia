@@ -32,7 +32,7 @@ def run():
       print 'Loading ' + str(f) + '...'
       if f.endswith('.owl') or f.endswith('.rdf'):
          graph = graph.parse(f)
-      elif f.endswith('.ttl') or f[:-3] in ('.n3','.nt'):
+      elif f.endswith('.ttl') or f.endswith('.n3') or f.endswith('.nt'):
          graph = graph.parse(f,format='n3') 
       else: 
          print 'Unknown format: '+f

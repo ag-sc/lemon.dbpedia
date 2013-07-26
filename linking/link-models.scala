@@ -60,7 +60,7 @@ for(key <- cowords.keys) {
   for(val1 <- cowords(key)) {
     for(val2 <- cowords(key)) {
       if(val1._1 != val2._1) {
-        println(val1._1 + " <http://www.w3.org/2000/01/rdf-schema#seeAlso> " + val2._1)
+        println(val1._1 + " <http://www.w3.org/2000/01/rdf-schema#seeAlso> " + val2._1 + " . ")
       }
     }
   }
