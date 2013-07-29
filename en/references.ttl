@@ -258,11 +258,11 @@ lex:religionCatholicChurch rdf:type owl:Restriction ;
    owl:onProperty dbpedia:religion ;
    owl:hasValue   resource:Catholic_Church .
 
-lex:Hinduist owl:unionOf ( lex:Hinduist1 lex:Hinduist2 ) .
-lex:Hinduist1 rdf:type owl:Restriction ; 
+lex:Hindu owl:unionOf ( lex:Hindu1 lex:Hindu2 ) .
+lex:Hindu rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:religion ;
    owl:hasValue   resource:Hindu .
-lex:Hinduist2 rdf:type owl:Restriction ; 
+lex:Hindu rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:religion ;
    owl:hasValue   resource:Hinduism .
 
