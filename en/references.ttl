@@ -266,10 +266,11 @@ lex:Hindu rdf:type owl:Restriction ;
    owl:onProperty dbpedia:religion ;
    owl:hasValue   resource:Hinduism .
 
-lex:Islamist rdf:type owl:Restriction ; 
+lex:Muslim owl:unionOf ( lex:Muslim1 lex:Muslim2 ) .
+lex:Muslim1 rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:religion ;
    owl:hasValue   resource:Islam .
-lex:Muslim rdf:type owl:Restriction ; 
+lex:Muslim2 rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:religion ;
    owl:hasValue   resource:Muslim .
 

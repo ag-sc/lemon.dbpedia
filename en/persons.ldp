@@ -97,8 +97,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
   IntersectiveAdjective("Hindu",lex:Hindu),
   ClassNoun("Muslim",lex:Muslim),
   IntersectiveAdjective("Muslim",lex:Muslim),
-  ClassNoun("Islamist",lex:Islamist),
-  IntersectiveAdjective("Islamist",lex:Islamist),
   ClassNoun("Buddhist",lex:Buddhist),
   IntersectiveAdjective("Buddhist",lex:Buddhist),
 
