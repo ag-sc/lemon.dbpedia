@@ -44,6 +44,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
 
   //// Properties 
 
+  // origin 
+
+  RelationalAdjective("made",dbpedia:origin,
+        propSubj = CopulativeArg restrictedTo dbpedia:Device,
+        propObj  = PrepositionalObject("in)),
+
   // averageSpeed, topSpeed, displacement
 
   RelationalNoun(["average"/adjective "speed"/noun],dbpedia:averageSpeed,
@@ -78,6 +84,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
        relationalArg = PrepositionalObject("on")),
 
   StateVerb("use",dbpedia:computingInput),
+  StateVerb("play",dbpedia:computingInput,
+       propSubj = DirectObject,
+       propObj  = PrepositionalObject("with")),
 
   StateVerb("run",dbpedia:operatingSystem,
        propObj  = PrepositionalObject("under")),

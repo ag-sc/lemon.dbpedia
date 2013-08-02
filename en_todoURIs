@@ -21,6 +21,7 @@ school
 numberOfAcademicStaff
 mouthCountry
 winsAtOtherTournaments
+agencyStationCode
 AutomobileEngine/weight
 ageRange
 zdb
@@ -106,6 +107,7 @@ highwaySystem
 MeanOfTransportation/diameter
 locusSupplementaryData
 infantMortality
+topSpeed
 impactFactor
 wikiPageExternalLink
 decideDate
@@ -116,6 +118,7 @@ curator
 maidenFlight
 Galaxy/mass
 latestPreviewDate
+displacement
 SpaceMission/distanceTraveled
 logo
 meetingBuilding
@@ -131,6 +134,7 @@ Person/weight
 redline
 musicians
 waterwayThroughTunnel
+shipDraft
 creatorOfDish
 AutomobileEngine/pistonStroke
 co2Emission
@@ -145,6 +149,7 @@ SpaceMission/stationVisitDuration
 starRating
 inflow
 AutomobileEngine/height
+chairmanTitle
 countySeat
 distance
 soocerLeaguePromoted
@@ -155,7 +160,7 @@ soccerTournamentTopScorer
 firstGame
 playingTime
 prospectTeam
-highestPlace
+Automobile
 soccerTournamentMostSuccesfull
 cosparId
 recommissioningDate
@@ -236,6 +241,7 @@ previousMission
 floodingDate
 previousEvent
 boilerPressure
+icaoLocationIdentifier
 crewSize
 fourthCommander
 isoCodeRegion
@@ -314,6 +320,7 @@ capitalMountain
 riverBranch
 nerve
 minimumInclination
+computingMedia
 premiereDate
 highschool
 winsInEurope
@@ -321,6 +328,7 @@ numberOfSpeakers
 runwayLength
 editor
 crews
+Device
 war
 flagBearer
 lowest
@@ -335,7 +343,7 @@ isil
 youthClub
 iso6393Code
 AutomobileEngine/cylinderBore
-abstract
+programmingLanguage
 Galaxy/meanTemperature
 classis
 goalsInLeague
@@ -372,6 +380,7 @@ podiums
 nationalFilmAward
 visitorsTotal
 oversight
+AutomobileEngine
 School/campusSize
 sourceConfluenceState
 sourceDistrict
@@ -434,12 +443,14 @@ extinctionYear
 lounge
 otherChannel
 map
+designer
 explorer
 membership
 wikiPageRedirects
 associatedAct
 subdivisions
 notableIdea
+Ship
 gameArtist
 mouthState
 sourceConfluenceElevation
@@ -496,7 +507,7 @@ numberOfUndergraduateStudents
 areaOfCatchment
 populationRuralDensity
 draft
-chairmanTitle
+commissioningDate
 silverMedalist
 welshName
 winterAppearances
@@ -545,6 +556,7 @@ countryWithFirstAstronaut
 ethnicGroup
 electionMajority
 ranking
+decommissioningDate
 mgiid
 numberOfWineries
 honours
@@ -565,6 +577,7 @@ SpaceMission/lunarSampleMass
 complexion
 lowerEarthOrbitPayload
 emedicineSubject
+frequencyOfPublication
 highestState
 numberOfSpans
 generalManager
@@ -591,7 +604,9 @@ schoolBoard
 metropolitanBorough
 headLabel
 countryWithFirstSpaceflight
+filmPolskiId
 countryOrigin
+abstract
 engine
 timeshiftChannel
 dissolutionDate
@@ -637,6 +652,7 @@ brainInfoNumber
 unicode
 recordLabel
 eTeatrId
+operatedBy
 numberOfBronzeMedalsWon
 orderInOffice
 sisterNewspaper
@@ -656,6 +672,7 @@ iftaAward
 GrandPrix/course
 mirDockings
 lunarRover
+assembly
 tuition
 careerPoints
 inseeCode
@@ -701,7 +718,7 @@ numberOfVisitorsAsOf
 sales
 dissolutionYear
 film
-numberOfParticipatingAthletes
+firstDriverTeam
 basedOn
 landingDate
 managerTitle
@@ -752,7 +769,7 @@ hairColor
 cmykCoordinateYellow
 peabodyAward
 numberOfFederalDeputies
-lastPosition
+personFunction
 trainer
 GrandPrix/distance
 currentlyUsedFor
@@ -761,6 +778,7 @@ cityType
 networth
 deathCause
 organisationMember
+ProgrammingLanguage
 destination
 upperAge
 nationalOlympicCommittee
@@ -809,7 +827,7 @@ mission
 committee
 humanDevelopmentIndexRankingCategory
 rebuilder
-frequencyOfPublication
+developer
 style
 dateConstruction
 goyaAward
@@ -824,7 +842,7 @@ notableCommander
 fuelSystem
 ceo
 managementCountry
-shuttle
+officerInCharge
 reopeningDate
 port1UndockingDate
 sessionNumber
@@ -870,6 +888,7 @@ dfE
 temperature
 coolingSystem
 currentPartner
+Aircraft
 saint
 numberOfBombs
 passengersPerDay
@@ -878,10 +897,11 @@ successfulLaunches
 prospectLeague
 part
 projectCoordinator
-managementElevation
+imageSize
 recentWinner
 Planet/volume
 uRN
+operatingSystem
 winsAtAus
 Spacecraft/periapsis
 nominee
@@ -906,13 +926,14 @@ sourcePosition
 dissolved
 port2DockedTime
 railGauge
+shipLaunch
 rankingWins
 relation
 rightAscension
 youthWing
 totalTravellers
 governmentMountain
-giniCoefficientAsOf
+rocket
 soccerTournamentLastChampion
 headChef
 equity
@@ -925,6 +946,7 @@ Drug/meltingPoint
 numberOfStations
 usingCountry
 compiler
+builder
 totalLaunches
 fastestDriverTeam
 whaDraftTeam
@@ -965,6 +987,7 @@ startYearOfSales
 Weapon/length
 coProducer
 serviceNumber
+highestPlace
 trackNumber
 territory
 isPartOfWineRegion
@@ -973,6 +996,7 @@ imdbId
 rebuildDate
 highestPosition
 races
+Software
 frozen
 cmykCoordinateBlack
 governor
@@ -1011,6 +1035,7 @@ formerBroadcastNetwork
 argueDate
 march
 meshId
+format
 bgafdId
 SpaceShuttle/timeInSpace
 port1DockingDate
@@ -1074,7 +1099,7 @@ Weapon/diameter
 orderDate
 freeFlightTime
 scottishName
-filmPolskiId
+alumni
 modelEndDate
 tatoo
 provost
@@ -1098,6 +1123,7 @@ meaning
 lowestPlace
 routeTypeAbbreviation
 neighbourConstellations
+computingPlatform
 Weapon/height
 declination
 code
@@ -1158,6 +1184,7 @@ hasNaturalBust
 AutomobileEngine/co2Emission
 fastestDriverCountry
 vehicle
+relatedMeanOfTransportation
 premierePlace
 currentRank
 appointer
@@ -1176,6 +1203,7 @@ governorGeneral
 deliveryDate
 Lake/shoreLength
 winsAtNWIDE
+servingRailwayLine
 Work/runtime
 vehiclesPerDay
 ascentDate
@@ -1203,12 +1231,13 @@ animal
 gaelicName
 managementPosition
 material
-capitalPlace
+aSide
 notableStudent
 cmykCoordinateMagenta
 day
 makeupArtist
 demolitionDate
+computingInput
 bloodType
 buildingEndYear
 projectStartDate
@@ -1219,6 +1248,7 @@ bedCount
 spacewalkBegin
 setDesigner
 rocketFunction
+routeJunction
 branchTo
 previousInfrastructure
 accessDate
@@ -1263,6 +1293,7 @@ HistoricPlace
 soocerLeagueWinner
 soocerLeagueRelegated
 sourceConfluencePlace
+Locomotive
 lowestMountain
 numberOfStudioAlbums
 unitCost
@@ -1293,6 +1324,7 @@ actingHeadteacher
 watershed
 alpsGroup
 port1DockedTime
+shipBeam
 functionEndDate
 valvetrain
 eruptionYear
@@ -1302,6 +1334,7 @@ comparable
 coverArtist
 sourceElevation
 distributingLabel
+configuration
 otherWins
 largestCountry
 bowlRecord
@@ -1312,6 +1345,7 @@ dischargeAverage
 uniprot
 numberOfPiersInWater
 aircraftAttack
+VideoGame
 subtitle
 cmpEvaDuration
 lastWin
@@ -1321,14 +1355,16 @@ alpsSubsection
 alpsSupergroup
 outflow
 ekatteCode
+iataLocationIdentifier
 endYearOfInsertion
 routeStartDirection
+latestReleaseVersion
 painter
 aircraftHelicopterObservation
 mainspan
 canonizedDate
 crewMember
-personFunction
+lastPosition
 numberOfLawyers
 assetUnderManagement
 campusSize
@@ -1336,25 +1372,26 @@ aircraftHelicopterUtility
 partner
 aircraftHelicopterCargo
 rgbCoordinateBlue
-numberOfCountries
+irishName
 soccerTournamentMostSteady
 PersonFunction
 rankingsDoubles
 speaker
 incumbent
-officerInCharge
+shuttle
 party
 hallOfFame
-aSide
+capitalPlace
 Galaxy/minimumTemperature
-imageSize
+managementElevation
 colour
 command
+layingDown
 primeMinister
 Stream/watershed
 MeanOfTransportation/weight
-rocket
-firstDriverTeam
+giniCoefficientAsOf
+numberOfParticipatingAthletes
 firstWinner
 waistSize
 lessPopulatedCountry
@@ -1388,7 +1425,6 @@ numberOfPads
 coachingRecord
 governingBody
 refseqmrna
-alumni
 SpaceMission/lunarEvaTime
 lieutenant
 numberOfFilms
@@ -1410,7 +1446,6 @@ fuelCapacity
 alliance
 colourHexCode
 lowestState
-broadcastStationClass
 distanceToCardiff
 shipCrew
 soocerLeagueSeason
@@ -1438,7 +1473,7 @@ bicycleInformation
 inn
 numberOfMinistries
 FormulaOneRacing
-irishName
+numberOfCountries
 campus
 chromosome
 thirdTeam

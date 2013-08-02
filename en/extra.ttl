@@ -12,6 +12,7 @@
 :lexicon a lemon:Lexicon ;
     lemon:language "en" ;
     lemon:entry :like,
+                :sameAs,
                 :people,
                 :high,
                 :long,
@@ -22,14 +23,12 @@
                 :populationAsOf,
                 :active,
                 :serve,
-                :play,
                 :haveRoleIn,
+                :haveInfluenceOn,
                 :athletics,
                 :Olympics,
                 :OlympicGames,
                 :draft,
-                :wriitenIn,
-                :madeIn,
                 :discover,
                 :discovery,
                 :air,
@@ -46,6 +45,9 @@
                 :holdSeat,
                 :havePages,
                 :haveEpisodes,
+                :runForEpisodes,
+                :haveSeasons,
+                :runForSeasons,
                 :haveTracks,
                 :havePlatforms,
                 :wearNumber,
@@ -62,8 +64,7 @@
                 :addedToNRHP,
                 :placedOnNRHP,
                 :haveEnrollmentOf,
-                :withEnrollmentOf,
-                :runForEpisodes .
+                :withEnrollmentOf .
 
 
 ## Misc ##
@@ -222,7 +223,7 @@
   lexinfo:partOfSpeech lexinfo:noun ;
   lemon:canonicalForm [ lemon:writtenRep "population"@en ] ;
   lemon:synBehavior [ rdf:type lexinfo:NounPossessiveFrame ;
-		      lexinfo:copulativeArg        :arg1populationAsOf ;
+		                  lexinfo:copulativeArg        :arg1populationAsOf ;
                       lexinfo:possessiveAdjunct    :arg2populationAsOf ;
                       lexinfo:prepositionalAdjunct :arg3populationAsOf ] ;
   lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/populationTotal>;
@@ -286,21 +287,6 @@
 :arg3serve lemon:marker :to .
 
 
-## Technology ##
-
-:play a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:verb ;
-  lemon:canonicalForm [ lemon:writtenRep "play"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
-                      lexinfo:subject             :arg1play ;
-                      lexinfo:directObject        :arg2play ;
-                      lexinfo:prepositionalObject :arg3play ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/computingInput> ;
-                lemon:subjOfProp :arg2play ;
-                lemon:objOfProp  :arg3play ] .
-:arg3play lemon:marker :with .
-
-
 ## Sport ##
 
 :Olympics a lemon:Word ;
@@ -349,32 +335,6 @@
                 lemon:subjOfProp :arg2 ;
                 lemon:objOfProp  :arg1 ] .
 
-
-## language, origin ##
-
-:writtenIn a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:adjective ;
-  lemon:canonicalForm [ lemon:writtenRep "written"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:AdjectivePPFrame ;
-                      lexinfo:copulativeArg :arg1writtenIn ;
-                      lexinfo:prepositionalObject :arg2writtenIn ; ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/language>;
-                lemon:subjOfProp :arg1write;
-                lemon:objOfProp  :arg2write;
-                lemon:propertyDomain <http://dbpedia.org/ontology/WrittenWork> ] .
-:arg2writtenIn lemon:marker :in .
-
-:madeIn a lemon:Word ;
-  lexinfo:partOfSpeech lexinfo:adjective ;
-  lemon:canonicalForm [ lemon:writtenRep "made"@en ] ;
-  lemon:synBehavior [ rdf:type lexinfo:AdjectivePPFrame ;
-                      lexinfo:copulativeArg :arg1madeIn ;
-                      lexinfo:prepositionalObject :arg2madeIn ] ;
-  lemon:sense [ lemon:reference <http://dbpedia.org/ontology/origin>;
-                lemon:subjOfProp :arg1madeIn;
-                lemon:objOfProp  :arg2madeIn;
-                lemon:propertyDomain <http://dbpedia.org/ontology/Device> ] .
-:arg2madeIn lemon:marker :in .
 
 ## discover, discoverer ##
 

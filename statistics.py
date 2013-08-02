@@ -1,5 +1,6 @@
 from __future__ import division
 import rdflib as rdf
+from   rdflib import URIRef
 import re
 
 
@@ -20,6 +21,8 @@ def run():
 
   number_cs = dict()
   number_ps = dict()
+
+  number_entries = 0
 
   uris = []
   for line in open('en_lexicalizedURIs','r').readlines():
@@ -79,6 +82,12 @@ def run():
   print 'Class    lexicalizations: ' + str(c_lex) + ' (' + str(c_lex/len(number_cs)) + ' per class)'
   print 'Property lexicalizations: ' + str(p_lex) + ' (' + str(p_lex/len(number_ps)) + ' per property)'
   print '---------------------------------------------'
+
+  # CHECK
+  for _,_,o in graph.triples((None,URIRef("http://www.monnet-project.eu/lemon#entry"),None)):
+      number_entries += 1
+
+  print 'Actually counted ' + str(number_entries) + ' entries...'
 
   print '\n'
   print 'DISTRIBUTION \n' 

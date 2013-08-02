@@ -169,6 +169,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = Subject restrictedTo dbpedia:Writer,
         propObj  = DirectObject),
 
+  // language
+
+  RelationalAdjective("written",dbpedia:language,
+  //    propSubj = CopulativeSubject restrictedTo dbpedia:WrittenWork,
+  //    propObj  = PrepositionalObject("in)),
+        relationalArg = PrepositionalObject("in")),
+
   // runtime
 
   RelationalNoun("runtime",dbpedia:runtime,
@@ -483,10 +490,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = PrepositionalObject("of"),
         propObj  = CopulativeArg), 
 
-  IntersectiveDataPropertyAdjective("class A",dbpedia:braodcastStationClass,"A"), 
-  IntersectiveDataPropertyAdjective("class B",dbpedia:braodcastStationClass,"B"), 
-  IntersectiveDataPropertyAdjective("class C",dbpedia:braodcastStationClass,"C"), 
-  IntersectiveDataPropertyAdjective("class D",dbpedia:braodcastStationClass,"D"), 
+  IntersectiveDataPropertyAdjective("class A",dbpedia:broadcastStationClass,"A"), 
+  IntersectiveDataPropertyAdjective("class B",dbpedia:broadcastStationClass,"B"), 
+  IntersectiveDataPropertyAdjective("class C",dbpedia:broadcastStationClass,"C"), 
+  IntersectiveDataPropertyAdjective("class D",dbpedia:broadcastStationClass,"D"), 
 
   StateVerb("mean",dbpedia:callsignMeaning), 
   StateVerb("stand",dbpedia:callsignMeaning,
