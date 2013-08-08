@@ -1,0 +1,76 @@
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
+
+  //// Classes
+
+  ClassNoun(["celestial"/adjective "organismo"/noun],dbpedia:CelestialBody),
+  ClassNoun("anís",dbpedia:Star),
+  ClassNoun("sol",dbpedia:Star),
+  ClassNoun("Planeta",dbpedia:Planet),
+  ClassNoun("Galaxy",dbpedia:Galaxy),
+  ClassNoun("asteroid",dbpedia:Asteroid),
+  ClassNoun("constelación",dbpedia:Constellation),
+
+  ClassNoun(["Lunar"/adjective "crater"/noun],dbpedia:LunarCrater),
+  ClassNoun(["Luna"/noun "crater"/noun],dbpedia:LunarCrater),
+  ClassNoun("propulsores",dbpedia:Rocket),
+  ClassNoun(["lanzamiento"/noun "socorro"/noun],dbpedia:LaunchPad),
+  ClassNoun("vehículo espacial",dbpedia:Spacecraft),
+  ClassNoun("spaceship",dbpedia:Spacecraft),
+  ClassNoun(["espaciales"/noun "estación"/noun],dbpedia:SpaceStation),
+  ClassNoun(["espaciales"/noun "lanzadera"/noun],dbpedia:SpaceShuttle),
+  ClassNoun(["espaciales"/noun "misión"/noun],dbpedia:SpaceMission),
+  ClassNoun(["año"/noun "en"/preposition "spaceflight"/noun],dbpedia:YearInSpaceflight),
+  ClassNoun("astronaut",dbpedia:Astronaut),
+  ClassNoun("cosmonaut",lex:Cosmonaut),
+  ClassNoun("taikonaut",lex:Taikonaut),
+
+  //// Properties 
+
+  RelationalNoun([":"/adjective "temperatura"/noun],dbpedia:meanTemperature,
+       propSubj = PrepositionalObject("sobre"),
+       propObj  = CopulativeArg),
+
+  RelationalNoun("densidad",dbpedia:density,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun(["orbitales"/adjective "período"/noun],dbpedia:orbitalPeriod,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("periapsis",dbpedia:periapsis,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("apoapsis",dbpedia:apoapsis,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("epoch",dbpedia:epoch,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun(["absolutos"/adjective "magnitud"/noun],dbpedia:absoluteMagnitude,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("magnitud",dbpedia:madgnitude,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  StateVerb(["lanzamiento"/verb "excepcionales"/particle],dbpedia:associatedRocket,
+       propSubj = PrepositionalObject("desde"),
+       propObj  = Subject),
+  StateVerb(["tener"/verb "excepcionales"/particle],dbpedia:associatedRocket,
+       propSubj = PrepositionalObject("desde"),
+       propObj  = Subject),
+  StateVerb(["altos"/verb "excepcionales"/particle],dbpedia:associatedRocket,
+       propSubj = PrepositionalObject("desde"),
+       propObj  = Subject),
+
+  ConsequenceVerb("lanzamiento",dbpedia:launchDate,
+       propSubj = lex:rocket as CopulativeSubject, 
+       propObj  = lex:date as PrepositionalObject("sobre"))
+
+)
