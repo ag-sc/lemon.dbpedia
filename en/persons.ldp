@@ -124,22 +124,17 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
      propObj  = CopulativeArg) with plural "dates of birth",
     
   ConsequenceVerb("bear",dbpedia:birthDate,
-     propSubj = lex:child as Subject, 
-     propObj  = lex:date as PrepositionalObject("on")),
+     propObj  = PrepositionalObject("on")),
 
   ConsequenceVerb("bear",dbpedia:birthYear,
-     propSubj = lex:child as Subject, 
-     propObj  = lex:year as PrepositionalObject("in")),
+     propObj  = PrepositionalObject("in")),
   ConsequenceVerb("bear",dbpedia:birthPlace,
-     propSubj = lex:child as Subject, 
-     propObj  = lex:place as PrepositionalObject("in")),
+     propObj  = PrepositionalObject("in")),
   ConsequenceVerb("bear",lex:birthCountry,
-     propSubj = lex:child as Subject, 
-     propObj  = lex:country as PrepositionalObject("in")),
+     propObj  = PrepositionalObject("in")),
 
   ConsequenceVerb("bear",dbpedia:stateOfOrigin,
-     propSubj = lex:child as Subject, 
-     propObj  = lex:state as PrepositionalObject("in")),
+     propObj  = PrepositionalObject("in")),
   StateVerb("come",dbpedia:stateOfOrigin,
      propObj  = PrepositionalObject("from")),
 
@@ -200,10 +195,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
   RelationalNoun("child",dbpedia:parent,
      propObj  = PossessiveAdjunct) with plural "children", 
 
-  RelationalNoun("daugther",dbpedia:child,
+  RelationalNoun("daughter",dbpedia:child,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg restrictedTo lex:Female), 
-  RelationalNoun("daugther",dbpedia:parent,
+  RelationalNoun("daughter",dbpedia:parent,
      propSubj = CopulativeArg restrictedTo lex:Female,
      propObj  = PossessiveAdjunct), 
   RelationalNoun("son",dbpedia:child,
@@ -375,8 +370,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
   // canonizedPlace 
 
   ConsequenceVerb("canonize",dbpedia:canonizedPlace,
-     propSubj=lex:person as Subject, 
-     propObj=lex:place as PrepositionalObject("in")),
+     propObj  = PrepositionalObject("in")),
 
   // patron 
 

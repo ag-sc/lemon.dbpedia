@@ -157,9 +157,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
      propObj  = CopulativeArg), 
 
   ConsequenceVerb("found",dbpedia:foundationPlace,
-     propSubj = lex:organization as Subject, 
-     propObj  = lex:date as PrepositionalObject("in")),
-
+     propObj  = PrepositionalObject("in")),
 
   // mascot, slogan, title
 

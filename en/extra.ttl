@@ -31,6 +31,8 @@
                 :draft,
                 :discover,
                 :discovery,
+                :foundIn,
+                :foundOn,
                 :air,
                 :produce,
                 :manufacture,
@@ -372,6 +374,45 @@
 :arg2discovery lemon:optional "true"^^xsd:boolean .
 :arg3discovery lemon:marker :on .
 :arg3discovery lemon:optional "true"^^xsd:boolean .
+
+
+## found
+
+:foundIn a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "found"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
+		      lexinfo:subject      :arg1foundIn ;
+                      lexinfo:directObject :arg2foundIn ;
+                      lexinfo:prepositionalAdjunct :arg3foundIn ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/foundingPerson>;
+                                 lemon:subjOfProp :arg2foundIn;
+                                 lemon:objOfProp  :arg1foundIn ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/foundingYear>;
+                                 lemon:subjOfProp :arg2foundIn;
+                                 lemon:objOfProp  :arg3foundIn ] ] ,
+                lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/foundingPerson>;
+                                 lemon:subjOfProp :arg2foundIn;
+                                 lemon:objOfProp  :arg1foundIn ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/foundationPlace>;
+                                 lemon:subjOfProp :arg2foundIn;
+                                 lemon:objOfProp  :arg3foundIn ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg3foundIn lemon:marker :in .
+
+:foundOn a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "found"@en ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
+		      lexinfo:subject      :arg1foundOn ;
+                      lexinfo:directObject :arg2foundOn ;
+                      lexinfo:prepositionalAdjunct :arg3foundOn ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/foundingPerson>;
+                                 lemon:subjOfProp :arg2foundOn;
+                                 lemon:objOfProp  :arg1foundOn ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/foundingDate>;
+                                 lemon:subjOfProp :arg2foundOn;
+                                 lemon:objOfProp  :arg3foundOn ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg3foundIn lemon:marker :on .
 
 
 ## releaseDate, completionDate, production{Start|End}{Date|Year} ## 
