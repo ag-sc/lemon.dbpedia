@@ -1,0 +1,76 @@
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
+
+  //// Classes
+
+  ClassNoun(["von"/adjective "Körper"/noun],dbpedia:CelestialBody),
+  ClassNoun("Star",dbpedia:Star),
+  ClassNoun("Sonne",dbpedia:Star),
+  ClassNoun("Planeten",dbpedia:Planet),
+  ClassNoun("Sternen",dbpedia:Galaxy),
+  ClassNoun("Moment",dbpedia:Asteroid),
+  ClassNoun("Sternbild",dbpedia:Constellation),
+
+  ClassNoun(["Lunar"/adjective "Ordnung"/noun],dbpedia:LunarCrater),
+  ClassNoun(["Venus"/noun "Ordnung"/noun],dbpedia:LunarCrater),
+  ClassNoun("Rocket",dbpedia:Rocket),
+  ClassNoun(["Lancierung"/noun "Heizkissen"/noun],dbpedia:LaunchPad),
+  ClassNoun("Raumfahrzeugen",dbpedia:Spacecraft),
+  ClassNoun("bar",dbpedia:Spacecraft),
+  ClassNoun(["all"/noun "Revier"/noun],dbpedia:SpaceStation),
+  ClassNoun(["all"/noun "Shuttle"/noun],dbpedia:SpaceShuttle),
+  ClassNoun(["all"/noun "Mission"/noun],dbpedia:SpaceMission),
+  ClassNoun(["Jahr"/noun "in"/preposition "spaceflight"/noun],dbpedia:YearInSpaceflight),
+  ClassNoun("Astronauten",dbpedia:Astronaut),
+  ClassNoun("cosmonaut",lex:Cosmonaut),
+  ClassNoun("taikonaut",lex:Taikonaut),
+
+  //// Properties 
+
+  RelationalNoun(["meine"/adjective "Temperatur"/noun],dbpedia:meanTemperature,
+       propSubj = PrepositionalObject("auf"),
+       propObj  = CopulativeArg),
+
+  RelationalNoun("Schwungrad",dbpedia:density,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun(["ehemalige"/adjective "Zeitraums"/noun],dbpedia:orbitalPeriod,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("periapsis",dbpedia:periapsis,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("apoapsis",dbpedia:apoapsis,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("Epoche",dbpedia:epoch,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun(["absolute"/adjective "Größe"/noun],dbpedia:absoluteMagnitude,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("Größe",dbpedia:madgnitude,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  StateVerb(["Lancierung"/verb "ab"/particle],dbpedia:associatedRocket,
+       propSubj = PrepositionalObject("von"),
+       propObj  = Subject),
+  StateVerb(["treffen"/verb "ab"/particle],dbpedia:associatedRocket,
+       propSubj = PrepositionalObject("von"),
+       propObj  = Subject),
+  StateVerb(["Hochofenkoks"/verb "ab"/particle],dbpedia:associatedRocket,
+       propSubj = PrepositionalObject("von"),
+       propObj  = Subject),
+
+  ConsequenceVerb("Lancierung",dbpedia:launchDate,
+       propSubj = lex:rocket as CopulativeSubject, 
+       propObj  = lex:date as PrepositionalObject("auf"))
+
+)

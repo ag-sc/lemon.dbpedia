@@ -1,0 +1,175 @@
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix resource: <http://dbpedia.org/resource/> .
+
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
+
+  //// Classes
+
+  ClassNoun("Tatbestand",dbpedia:Event), 
+  ClassNoun("Aktivität",dbpedia:Activity),
+  ClassNoun("Urlaub",dbpedia:Holiday),
+  ClassNoun("Sprache",dbpedia:Language),
+  ClassNoun("Brief",dbpedia:Letter),
+  ClassNoun("Farbe",dbpedia:Colour),
+  ClassNoun("Website",dbpedia:Website),
+  ClassNoun("Homepage",dbpedia:Webiste),
+  ClassNoun(["Netz"/noun "page"/noun],dbpedia:Website),
+
+  ClassNoun("Essen",dbpedia:Food),
+  ClassNoun("Getränks",dbpedia:Beverage),
+  ClassNoun("Getränks",dbpedia:Beverage),
+  ClassNoun("Bier",dbpedia:Beer),
+  ClassNoun("Wein",dbpedia:Wine),
+  ClassNoun(["Qualität"/noun "Wein"/noun],dbpedia:ControlledDesignationOfOriginWine),
+  ClassNoun("Käse",dbpedia:Cheese),
+
+  ClassNoun("Agent",dbpedia:Agent),
+  ClassNoun("Gottheit",dbpedia:Deity),
+  ClassNoun("Familie",dbpedia:Family),
+
+  ClassNoun("Währung",dbpedia:Currency),
+  ClassNoun("steuerliche",dbpedia:Tax),
+
+  ClassNoun("Fahne",dbpedia:Flag),
+
+  ClassNoun("Community",dbpedia:Community),
+
+  ClassNoun("Ausfuhrverkäufe",dbpedia:Sales),
+  ClassNoun("Mode-",dbpedia:Fashion),
+  ClassNoun(["Grenze"/noun "von"/preposition "Mode-"/noun],dbpedia:LineOfFashion),
+
+  ClassNoun(["öffentlichen"/noun "Zustellung"/noun],dbpedia:PublicService),
+  ClassNoun(["öffentlichen"/noun "Zustellung"/noun "Dateneingabe"/noun],dbpedia:PublicServiceInput),
+  ClassNoun(["öffentlichen"/noun "Zustellung"/noun "Output"/noun],dbpedia:PublicServiceOutput),
+
+  ClassNoun("polyeder",dbpedia:Polyhedron),
+
+  ClassNoun(["Zeit"/noun "Zeitraums"/noun],dbpedia:TimePeriod),
+  ClassNoun(["geologischen"/adjective "Zeitraums"/noun],dbpedia:GeologicalPeriod),
+  ClassNoun(["historischen"/adjective "Zeitraums"/noun],dbpedia:HistoricalPeriod),
+  ClassNoun(["prehistorical"/adjective "Zeitraums"/noun],dbpedia:PrehistoricalPeriod),
+  ClassNoun(["protohistorical"/adjective "Zeitraums"/noun],dbpedia:ProtohistoricalPeriod),
+  ClassNoun(["Art"/noun "Zeitraums"/noun],dbpedia:PeriodOfArtisticStyle),
+  ClassNoun("Jahr",dbpedia:Year),
+
+  ClassNoun(["topischen"/noun "Konzept"/noun],dbpedia:TopicalConcept),
+  ClassNoun(["Christian"/noun "Grundprinzips"/noun],dbpedia:ChristianDoctrine),
+  ClassNoun("Ideologie",dbpedia:Ideology),
+
+  ClassNoun(["Einheit"/noun "von"/preposition "Arbeit"/noun],dbpedia:UnitOfWork),
+  ClassNoun("Projekt",dbpedia:Project),
+  ClassNoun(["Forschung"/noun "Projekt"/noun],dbpedia:ResearchProject),
+
+
+  //// Properties 
+
+  StateVerb(["treffen"/verb "Ort"/noun],dbpedia:place,
+       propObj  = PrepositionalObject("in")),
+
+  RelationalNoun("Teil",dbpedia:isPartOf,
+       propObj  = PrepositionalObject("von")),
+
+  StateVerb(["treffen"/verb "Ort"/noun],dbpedia:date,
+       propObj = PrepositionalObject("auf")),
+
+  StateVerb("gehören",dbpedia:division,
+       propObj = PrepositionalObject("zu")),
+
+  RelationalNoun("Farbe",dbpedia:colourName,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  // similar, synonym, abbreviation
+
+  RelationalAdjective("ähnlicher",dbpedia:similar,
+       relationalArg = PrepositionalObject("zu")), 
+
+  RelationalNoun("Synonym",dbpedia:synonym,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("Zusatz",dbpedia:abbreviation,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  StateVerb("abbreviate",dbpedia:abbreviation,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  RelationalAdjective("verkürzter",dbpedia:abbreviation,
+       relationalArg = PrepositionalObject("as")),
+
+
+  // melting, boiling and sublimation point
+
+  RelationalNoun(["sublimation"/noun "Nummer"/noun],dbpedia:sublimationPoint,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  StateVerb("erhaben",dbpedia:sublimationPoint,
+       propObj = PrepositionalObject("at")),
+
+  RelationalNoun(["Schmelzen von"/noun "Nummer"/noun],dbpedia:meltingPoint,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  StateVerb("geschmolzen",dbpedia:meltingPoint,
+       propObj = PrepositionalObject("at")),
+
+  RelationalNoun(["Siedepunkt"/noun "Nummer"/noun],dbpedia:boilingPoint,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  StateVerb("zum Kochen",dbpedia:boilingPoint,
+       propObj = PrepositionalObject("at")), 
+
+
+  // spokenIn, languageFamily
+
+  StateVerb("gehören",dbpedia:languageFamily,
+       propObj = PossessiveAdjunct),
+  RelationalNoun(["Sprache"/noun "Familie"/noun],dbpedia:languageFamily,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalAdjective("gesprochen",dbpedia:spokenIn,
+       relationalArg = PrepositionalObject("in")),
+  RelationalNoun("Sprache",dbpedia:spokenIn,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+
+  // languages 
+
+  IntersectiveObjectPropertyAdjective("Englisch",dbpedia:language,resource:English_language),
+  IntersectiveObjectPropertyAdjective("Hindi",dbpedia:language,resource:Standard_Hindi),
+  IntersectiveObjectPropertyAdjective("Spanisch",dbpedia:language,resource:Spanish_language),
+  IntersectiveObjectPropertyAdjective("Französisch",dbpedia:language,resource:French_language),
+  IntersectiveObjectPropertyAdjective("japanischer",dbpedia:language,resource:Japanese_language),
+  IntersectiveObjectPropertyAdjective("deutscher",dbpedia:language,resource:German_language),
+  IntersectiveObjectPropertyAdjective("Tamil",dbpedia:language,resource:Tamil_language),
+  IntersectiveObjectPropertyAdjective("Italiener",dbpedia:language,resource:Italian_language),
+  IntersectiveObjectPropertyAdjective("portugiesische",dbpedia:language,resource:Portuguese_language),
+  IntersectiveObjectPropertyAdjective("russischer",dbpedia:language,resource:Russian_language),
+  IntersectiveObjectPropertyAdjective("niederländischen",dbpedia:language,resource:Dutch_language),
+  IntersectiveObjectPropertyAdjective("koreanische",dbpedia:language,resource:Korean_language),
+  IntersectiveObjectPropertyAdjective("Arabisch",dbpedia:language,resource:Arabic_language),
+  IntersectiveObjectPropertyAdjective("chinesischer",dbpedia:language,resource:Standard_Chinese),
+  IntersectiveObjectPropertyAdjective("chinesischer",dbpedia:language,resource:Chinese_language),
+  IntersectiveObjectPropertyAdjective("chinesischer",dbpedia:language,resource:Mandarin_Chinese),
+  IntersectiveObjectPropertyAdjective("Chinesen",dbpedia:language,resource:Cantonese_language),
+  IntersectiveObjectPropertyAdjective("schwedische",dbpedia:language,resource:Swedish_language),
+  IntersectiveObjectPropertyAdjective("polnischer",dbpedia:language,resource:Polish_language),
+  IntersectiveObjectPropertyAdjective("italienischer",dbpedia:language,resource:Greek_language),
+  IntersectiveObjectPropertyAdjective("hebräischer",dbpedia:language,resource:Hebrew_language),
+  IntersectiveObjectPropertyAdjective("türkische",dbpedia:language,resource:Turkish_language),
+  IntersectiveObjectPropertyAdjective("dänische",dbpedia:language,resource:Danish_language),
+  IntersectiveObjectPropertyAdjective("finnischer",dbpedia:language,resource:Finnish_language),
+  IntersectiveObjectPropertyAdjective("norwegische",dbpedia:language,resource:Norwegian_language),
+  IntersectiveObjectPropertyAdjective("kroatische",dbpedia:language,resource:Croatian_language),
+  IntersectiveObjectPropertyAdjective("rumänischer",dbpedia:language,resource:Romanian_language),
+  IntersectiveObjectPropertyAdjective("thailändischer",dbpedia:language,resource:Thai_language),
+  IntersectiveObjectPropertyAdjective("ungarischer",dbpedia:language,resource:Hungarian_language),
+  IntersectiveObjectPropertyAdjective("Serbiens",dbpedia:language,resource:Serbian_language),
+  IntersectiveObjectPropertyAdjective("slowenischer",dbpedia:language,resource:Slovene_language),
+  IntersectiveObjectPropertyAdjective("Punjabi",dbpedia:language,resource:Punjabi_language),
+  IntersectiveObjectPropertyAdjective("albanischen",dbpedia:language,resource:Albanian_language),
+  IntersectiveObjectPropertyAdjective("indonesische",dbpedia:language,resource:Indonesian_language),
+  IntersectiveObjectPropertyAdjective("estnische",dbpedia:language,resource:Estonian_language)
+
+)
