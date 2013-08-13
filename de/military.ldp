@@ -1,65 +1,13 @@
 @prefix dbpedia:  <http://dbpedia.org/ontology/> .
 @prefix resource: <http://dbpedia.org/resource/> .
-@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_7#>,"de",
 
   //// Classes
 
-  ClassNoun(["Militär"/adjective "Person"/noun],dbpedia:MilitaryPerson),
-  ClassNoun(["Militär"/adjective "personnel"/noun],dbpedia:MilitaryPerson),
-  ClassNoun(["Militär"/adjective "Einheit"/noun],dbpedia:MilitaryUnit),
-  ClassNoun(["Militär"/adjective "Konflikts"/noun],dbpedia:MilitaryConflict),
-  ClassNoun(["Militär"/adjective "Struktur"/noun],dbpedia:MilitaryStructure),
-  ClassNoun("Krieg",dbpedia:MilitaryConflict),
-  ClassNoun("SCHLACHT",dbpedia:MilitaryConflict),
-  ClassNoun("Waffe",dbpedia:Weapon),
-  ClassNoun("blazon",dbpedia:Blazon),
 
   //// Properties 
-
-  StateVerb("kämpfen",dbpedia:battle,
-       propObj = PrepositionalObject("in")), 
-  StateVerb("dienen",dbpedia:battle,
-       propObj = PrepositionalObject("in")), 
-
-  RelationalNoun("Commander",dbpedia:commander,
-       propSubj = PrepositionalObject("in"),
-       propObj  = CopulativeArg), 
-  RelationalNoun("Führer",dbpedia:commander,
-       propSubj = PrepositionalObject("in"),
-       propObj  = CopulativeArg), 
-
-  StateVerb("Kommando",dbpedia:commander,
-       propSubj = PrepositionalObject("während"),
-       propObj  = Subject), 
-  StateVerb("Kommando",dbpedia:militaryCommand),
-
-  StateVerb("dienen",dbpedia:militaryBranch,
-       propObj = PrepositionalObject("in")),
-  StateVerb("dienen",dbpedia:militaryUnit,
-       propObj = PrepositionalObject("in")),
-
-  RelationalNoun("Verluste",dbpedia:causalties,
-       propSubj = PossessiveAdjunct,
-       propObj  = CopulativeArg), 
-
-  RelationalNoun("Ergebnis",dbpedia:result,
-       propSubj = PrepositionalObject("von"),
-       propObj  = CopulativeArg),
-
-  RelationalNoun("Teil",dbpedia:isPartOfMilitaryConflict,
-      propObj  = PrepositionalObject("von")), 
-  RelationalNoun("Teil",dbpedia:commandStructure,
-      propObj  = PrepositionalObject("von")), 
-  RelationalAdjective("untergeordnete",dbpedia:commandStructure,
-       relationalArg = PrepositionalObject("zu")),
-
-  RelationalAdjective("basierend",dbpedia:garrison,
-       relationalArg = PrepositionalObject("at") restrictedTo lex:Building_or_Infrastructure),
-  RelationalAdjective("basierend",dbpedia:garrison,
-       relationalArg = PrepositionalObject("in") restrictedTo dbpedia:PopulatedPlace)
-
 
 
 )

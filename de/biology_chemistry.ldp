@@ -1,70 +1,10 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
-@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_3#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_3#>,"de",
 
   //// Classes
 
-  ClassNoun(["anatomische"/adjective "Struktur"/noun],dbpedia:AnatomicalStructure),
-  ClassNoun("Brain",dbpedia:Brain),
-  ClassNoun("Knochen",dbpedia:Bone),
-  ClassNoun("Arterie",dbpedia:Artery),
-  ClassNoun("vein",dbpedia:Vein),
-  ClassNoun(["Blut"/noun "Gefäß"/noun],lex:BloodVessel),
-  ClassNoun("Muskel-",dbpedia:Muscle),
-  ClassNoun("Nerven",dbpedia:Nerve),
-  ClassNoun("Lymphknoten",dbpedia:Lymph),
-  ClassNoun("embryology",dbpedia:Embryology),
-  ClassNoun("-Band vorbeigefahren",dbpedia:Ligament),
-
-  ClassNoun(["chemische"/adjective "Stoff"/noun],dbpedia:ChemicalSubstance),
-  ClassNoun(["chemische"/adjective "zusammengesetzten"/noun],dbpedia:ChemicalCompound),
-  ClassNoun(["chemische"/adjective "Element"/noun],dbpedia:ChemicalElement),
-  ClassNoun("mineralische",dbpedia:Mineral),
-  ClassNoun("biomolecule",dbpedia:Biomolecule),
-  ClassNoun("Enzyms",dbpedia:Enzyme),
-  ClassNoun("Gens",dbpedia:Gene),
-  ClassNoun(["menschlich"/adjective "Gens"/noun],dbpedia:HumanGene),
-  ClassNoun(["Maus"/noun "Gens"/noun],dbpedia:MouseGene),
-  ClassNoun(["Gens"/noun "Belegenheit"/noun],dbpedia:GeneLocation),
-  ClassNoun(["menschlich"/adjective "Gens"/noun "Belegenheit"/noun],dbpedia:HumanGeneLocation),
-  ClassNoun(["Maus"/noun "Gens"/noun "Belegenheit"/noun],dbpedia:MouseGeneLocation),
-  ClassNoun("Proteinen",dbpedia:Protein),
-
-  ClassNoun("Krankheit",dbpedia:Disease),
-  ClassNoun("Erkrankung",dbpedia:Disease),
-  ClassNoun("Krankheit",dbpedia:Disease),
-  ClassNoun("Medikament",dbpedia:Drug),
-  ClassNoun("Medizin",dbpedia:Drug),
-  ClassNoun("Arzneiware",dbpedia:Drug),
-  ClassNoun("pharmazeutischen",dbpedia:Drug),
-
-  ClassNoun(["Blut"/noun "Fahrzeugtyp"/noun],dbpedia:BloodType),
-
-  ClassNoun("Datenbank",dbpedia:Database),
-  ClassNoun(["biologische"/noun "Datenbank"/noun],dbpedia:BiologicalDatabase),
-
-
   //// Properties 
 
-  RelationalNoun("Vorprodukten",dbpedia:precursor,
-       propSubj = PrepositionalObject("von"),
-       propObj  = CopulativeArg), 
-  StateVerb("precede",dbpedia:precursor,
-       propSubj = DirectObject,
-       propObj  = Subject),
-  StateVerb("entwickeln",dbpedia:precursor,
-       propObj  = PrepositionalObject("von")), 
-
-  RelationalNoun(["Entrez Gene"/noun "Ausweis"/noun],dbpedia:entrezgene,
-       propSubj = PossessiveAdjunct,
-       propObj  = CopulativeArg),
-  RelationalNoun(["Entrez"/noun "Ausweis"/noun],dbpedia:entrezgene,
-       propSubj = PossessiveAdjunct,
-       propObj  = CopulativeArg), 
-  RelationalNoun(["EIUPAC"/noun "Namen"/noun],dbpedia:iupacName,
-       propSubj = PossessiveAdjunct,
-       propObj  = CopulativeArg),
-
 )
-

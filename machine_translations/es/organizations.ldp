@@ -1,0 +1,266 @@
+@prefix dbpedia:  <http://dbpedia.org/ontology/> .
+@prefix resource: <http://dbpedia.org/resource/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_6#>,"en",
+
+  //// Classes
+
+  ClassNoun("organización",dbpedia:Organisation),
+  ClassNoun(["organización"/noun "miembro"/noun],dbpedia:OrganisationMember),
+  ClassNoun(["non-profit"/adjective "organización"/noun],<http://dbpedia.org/ontology/Non-ProfitOrganisation>),
+  ClassNoun(["geopolíticos"/adjective "organización"/noun],<http://dbpedia.org/ontology/GeopoliticalOrganisation>),
+  ClassNoun(["Gobierno"/noun "organismo"/noun],dbpedia:GovernmentAgency),
+
+  ClassNoun("grupo",dbpedia:Group),
+  ClassNoun("empresa",dbpedia:Company),
+  ClassNoun("compañía",dbpedia:Airline),
+
+  ClassNoun(["educativos"/adjective "institución"/noun],dbpedia:EducationalInstitution),
+  ClassNoun("escolar",dbpedia:School),
+  ClassNoun(["Samba"/noun "escolar"/noun],dbpedia:SambaSchool),
+  ClassNoun("College",dbpedia:College),
+  ClassNoun("universidad",dbpedia:University),
+  ClassNoun("biblioteca",dbpedia:Library),
+
+  ClassNoun(["político"/adjective "partido"/noun],dbpedia:PoliticalParty),
+  ClassNoun("partido",dbpedia:PoliticalParty),
+  ClassNoun(["comercio"/noun "Unión"/noun],dbpedia:TradeUnion),
+  ClassNoun(["labor"/noun "Unión"/noun],dbpedia:TradeUnion),
+
+  ClassNoun(["administrativo"/adjective "fin"/noun],dbpedia:ClericalOrder),
+
+
+  //// Properties 
+
+  RelationalAdjective("situadas",dbpedia:locationCity,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situadas",dbpedia:locationCountry,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("basado",dbpedia:locationCountry,
+    relationalArg = PrepositionalObject("en")),
+
+  // numberOfStudents, facultySize
+
+  RelationalNoun("enrollment",dbpedia:numberOfStudents,
+     propSubj = PrepositionalObject("de"),
+     propObj  = CopulativeArg),
+  RelationalNoun(["estudiante"/noun "población"/noun],dbpedia:numberOfStudents,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  StateVerb("servir",dbpedia:numberOfStudents),
+  StateVerb("emplear",dbpedia:facultySize),
+
+  RelationalNoun(["Falcultad"/noun "tamaño"/noun],dbpedia:facultySize,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  // manufacturer, company 
+
+  RelationalNoun("fabricante",dbpedia:manufacturer,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  StateVerb("Fabricación",dbpedia:manufacturer,
+     propSubj = DirectObject,
+     propObj  = Subject), 
+  StateVerb("producir",dbpedia:manufacturer,
+     propSubj = DirectObject,
+     propObj  = Subject), 
+
+  StateVerb("construir",dbpedia:company,
+     propSubj = DirectObject restrictedTo dbpedia:Canal,
+     propObj  = Subject), 
+  StateVerb("construir",dbpedia:company,
+     propSubj = DirectObject restrictedTo dbpedia:Canal,
+     propObj  = Subject),
+
+
+  // formationDate, formationYear, foundingDate, foundingYear, activeYears{Start|End}{Date|Year}
+
+  RelationalNoun(["formation"/noun "fecha"/noun],dbpedia:formationDate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun(["formation"/noun "año"/noun],dbpedia:formationYear,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
+  RelationalNoun(["fundadores"/noun "fecha"/noun],dbpedia:foundingDate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun(["fundadores"/noun "año"/noun],dbpedia:foundingYear,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
+  ConsequenceVerb("forma",dbpedia:formationDate,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("sobre")),
+  ConsequenceVerb("forma",dbpedia:formationYear,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("en")),
+
+  ConsequenceVerb("constató",dbpedia:foundingDate,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("sobre")),
+  ConsequenceVerb("constató",dbpedia:foundingYear,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("en")),
+
+  ConsequenceVerb("establecer",dbpedia:formationDate,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("sobre")),
+  ConsequenceVerb("establecer",dbpedia:formationYear,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("en")),
+  ConsequenceVerb("establecer",dbpedia:foundingDate,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("sobre")),
+  ConsequenceVerb("establecer",dbpedia:foundingYear,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("en")),
+
+  RelationalAdjective("activa",dbpedia:activeYearsStartDate, 
+     relationalArg = PrepositionalObject("desde")), 
+  RelationalAdjective("activa",dbpedia:activeYearsStartYear, 
+     relationalArg = PrepositionalObject("desde")), 
+  RelationalAdjective("activa",dbpedia:activeYearsEndDate, 
+     relationalArg = PrepositionalObject("hasta")), 
+  RelationalAdjective("activa",dbpedia:activeYearsEndYear, 
+     relationalArg = PrepositionalObject("hasta")), 
+
+  // foundingPerson, foundedBy
+
+  StateVerb("constató",dbpedia:foundingPerson,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("establecer",dbpedia:foundingPerson,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("constató",dbpedia:foundedBy,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("establecer",dbpedia:foundedBy,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  RelationalNoun("fundadores",dbpedia:foundedBy,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun("fundadores",dbpedia:foundingPerson,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
+  // foundationPlace 
+
+  RelationalNoun(["Fundación"/noun "lugar"/noun],dbpedia:foundationPlace,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  ConsequenceVerb("constató",dbpedia:foundationPlace,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("en")),
+
+
+  // mascot, slogan, title
+
+  RelationalNoun("mascot",dbpedia:mascot,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun("lema",dbpedia:slogan,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+
+  RelationalAdjective("conocidos",dbpedia:title,
+    relationalArg = PrepositionalObject("como")),
+
+
+  // affiliation
+
+  RelationalAdjective("ligadas",dbpedia:affiliation, 
+     relationalArg = PrepositionalObject("con")),
+  RelationalAdjective("ligadas",dbpedia:affiliation, 
+     relationalArg = PrepositionalObject("a")), 
+
+  // frequency 
+
+  RelationalNoun("frecuencia",dbpedia:frequency,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+
+  StateVerb("radiodifusión",dbpedia:frequency,
+    propObj = PrepositionalObject("sobre")),
+
+
+  // status 
+
+  RelationalNoun("estatuto",dbpedia:status,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+  IntersectiveDataPropertyAdjective("activa",dbpedia:status,"active"),
+  IntersectiveDataPropertyAdjective("jubilados",dbpedia:status,"jubilados"),
+  IntersectiveDataPropertyAdjective("operativos",dbpedia:status,"operativo"),
+  IntersectiveDataPropertyAdjective("desecharse",dbpedia:status,"desecharse"), 
+
+  // product 
+
+  RelationalNoun("producto",dbpedia:product,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  StateVerb("producir",dbpedia:product), 
+  StateVerb("crear",dbpedia:product), 
+  StateVerb("desarrollar",dbpedia:product), 
+
+  // {owning|parent}Company, owner
+
+  RelationalNoun("propietario",dbpedia:owner,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  StateVerb("propios",dbpedia:owner,
+     propSubj = DirectObject,
+     propObj  = Subject), 
+  StateVerb("propios",dbpedia:owningCompany,
+     propSubj = DirectObject,
+     propObj  = Subject), 
+  StateVerb("propios",dbpedia:owningOrganization,
+     propSubj = DirectObject,
+     propObj  = Subject), 
+  RelationalNoun(["matriz"/noun "empresa"/noun],dbpedia:owningCompany,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["hija"/noun "empresa"/noun],dbpedia:owningCompany,
+    propObj  = PossessiveAdjunct),
+  RelationalNoun("filial",dbpedia:owningCompany,
+    propObj  = PossessiveAdjunct), 
+  RelationalNoun(["matriz"/noun "empresa"/noun],dbpedia:parentCompany,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["hija"/noun "empresa"/noun],dbpedia:parentCompany,
+    propObj  = PossessiveAdjunct),
+  RelationalNoun("filial",dbpedia:parentCompany,
+    propObj  = PossessiveAdjunct), 
+
+
+  // others
+
+  RelationalNoun("ingresos",dbpedia:revenue,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+
+  RelationalNoun(["oficial"/adjective "color"/noun],dbpedia:officialSchoolColour,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+
+  StateVerb("operar",dbpedia:regionServed, 
+    propObj  = PrepositionalObject("en")), 
+
+  IntersectiveObjectPropertyAdjective("social-democratic",dbpedia:ideology,resource:Social_democracy), 
+  IntersectiveObjectPropertyAdjective("conservatist",dbpedia:ideology,resource:Conservatism), 
+  IntersectiveObjectPropertyAdjective("liberales",dbpedia:ideology,resource:Liberalism), 
+  IntersectiveObjectPropertyAdjective("communist",dbpedia:ideology,resource:Communism), 
+  IntersectiveObjectPropertyAdjective("Socialista",dbpedia:ideology,resource:Socialism), 
+  IntersectiveObjectPropertyAdjective("Christian democrática",dbpedia:ideology,resource:Christian_democracy), 
+  IntersectiveObjectPropertyAdjective("nationalistic",dbpedia:ideology,resource:Nationalism), 
+  IntersectiveObjectPropertyAdjective("Marxist-Leninist",dbpedia:ideology,resource:Marxism_Leninism), 
+  IntersectiveObjectPropertyAdjective("Marxist",dbpedia:ideology,resource:Marxism)
+
+)

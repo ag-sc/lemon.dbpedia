@@ -5,7 +5,7 @@
 @prefix oils: <http://www.lemon-model.net/oils#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
 @prefix : <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
 

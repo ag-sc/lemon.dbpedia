@@ -1,107 +1,12 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
-@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_9#>,"de",
 
   //// Classes
 
-  ClassNoun("Wahlbeobachter",dbpedia:Election),
-  ClassNoun("legislative",dbpedia:Legislature),
-
-  ClassNoun(["Regierung"/noun "Fahrzeugtyp"/noun],dbpedia:GovernmentType),
-  ClassNoun("Monarch",dbpedia:Monarch),
-  ClassNoun("löblichen",dbpedia:Noble),
-  ClassNoun("Folgerechtsvergütung",dbpedia:Royalty),
-  ClassNoun(["Briten"/adjective "Folgerechtsvergütung"/noun],dbpedia:BritishRoyalty),
-  ClassNoun(["polnischer"/adjective "König"/noun],dbpedia:PolishKing),
-
-  ClassNoun("Monarchie",lex:Monarchy),
-  ClassNoun(["verfassungsrechtlichen"/adjective "Monarchie"/noun],lex:ConstitutionalMonarchy),
-  ClassNoun("Republiken",lex:Republic),
-
-  ClassNoun(["Büro"/noun "Inhaber"/noun],dbpedia:OfficeHolder),
-  ClassNoun(["Mitglied"/noun "von"/preposition "Parlament"/noun],dbpedia:MemberOfParliament),
-  ClassNoun(["Mitglied"/noun "von"/preposition "Parlament"/noun],lex:MemberOfParliament),
-  ClassNoun(["Mitglied"/noun "von"/preposition "die"/determiner "europäische"/adjective "Parlament"/noun],lex:MemberOfTheEuropeanParliament),
-  ClassNoun(["Minister"/noun "von"/preposition "Außen-"/adjective "Affären"/noun],lex:MinisterOfForeignAffairs),
-  ClassNoun(["Minister"/noun "von"/preposition "Gerechtigkeit"/noun],lex:MinisterOfJustice),
-  ClassNoun(["Minister"/noun "von"/preposition "Verteidigungs-"/noun],lex:MinisterOfDefence),
-  ClassNoun(["Minister"/noun "von"/preposition "Bildungs-"/noun],lex:MinisterOfEducation),
-  ClassNoun(["Kongress"/noun "Mann"/noun],dbpedia:Congressman) with plural "Kongress Männer",
-  ClassNoun("Politiker",dbpedia:Politician),
-  ClassNoun("Gouverneur",dbpedia:Governor),
-  ClassNoun("Gouverneur",lex:Governor),
-  ClassNoun("Präsidenten",dbpedia:President),
-  ClassNoun("Präsidenten",lex:President),
-  ClassNoun(["Vizepräsidenten"/noun "Präsidenten"/noun],dbpedia:VicePresident),
-  ClassNoun(["Prime"/adjective "Minister"/noun],dbpedia:PrimeMinister),
-  ClassNoun("premier",dbpedia:PrimeMinister),
-  ClassNoun(["Vizepräsidenten"/noun "Prime"/adjective "Minister"/noun],dbpedia:VicePrimeMinister),
-  ClassNoun("befördert",dbpedia:Lieutenant),
-  ClassNoun("Kanzler",dbpedia:Chancellor),
-  ClassNoun("Bürgermeister",dbpedia:Mayor),
-  ClassNoun("Bürgermeister",lex:Mayor),
-  ClassNoun("Senator",dbpedia:Senator),
-  ClassNoun("Senator",lex:Senator),
-  ClassNoun("Botschafter",dbpedia:Ambassador),
-
-  ClassNoun(["Gesetz"/noun "Wertpapierfirma"/noun],dbpedia:LawFirm),
-  ClassNoun("Fall",dbpedia:Case),
-  ClassNoun(["legal"/adjective "Fall"/noun],dbpedia:LegalCase),
-  ClassNoun(["Gericht"/noun "Fall"/noun],dbpedia:LegalCase),
-  ClassNoun(["Gesetz"/noun "Fall"/noun],dbpedia:LegalCase),
-  ClassNoun(["legal"/adjective "Rolle"/noun],dbpedia:LegalCase),
-  ClassNoun(["Obersten Gerichtshof, der USA"/noun "Fall"/noun],dbpedia:SupremeCourtOfTheUnitedStatesCase),
-  ClassNoun(["System"/noun "von"/preposition "Gesetz"/noun],dbpedia:SystemOfLaw),
-
-  ClassNoun("strafrechtliche",dbpedia:Criminal),
-  ClassNoun("Verbrecher",dbpedia:Criminal),
-  ClassNoun("bewege",dbpedia:Murderer),
-  ClassNoun("Täter",dbpedia:Murderer),
-  ClassNoun("Richter",dbpedia:Judge),
-  ClassNoun("Staatsanwalts",dbpedia:Judge), 
-  ClassNoun("Deputy",dbpedia:Deputy),
-
-
-  //// Properties
-
-  // mayor, president, governor
-
-  RelationalNoun("Bürgermeister",dbpedia:leader,
-     propSubj = PossessiveAdjunct,
-     propObj  = Subject restrictedTo lex:Mayor),
-
-  RelationalNoun("Präsidenten",dbpedia:leader,
-     propSubj = PossessiveAdjunct,
-     propObj  = Subject restrictedTo lex:President),
-
-  RelationalNoun("Gouverneur",dbpedia:leader,
-     propSubj = PossessiveAdjunct,
-     propObj  = Subject restrictedTo lex:Governor),
-
-  // viceChancellor, runningMate, president
-
-  RelationalNoun(["Vizepräsidenten"/noun "Kanzler"/noun],dbpedia:viceChancellor,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg), 
-
-  RelationalNoun(["running"/noun "mate"/noun],dbpedia:runningMate,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg),
-
-  StateVerb("dienen",dbpedia:president,
-     propObj  = PrepositionalObject("unter")), 
-
-  // board 
-
-  RelationalNoun(["Board"/noun "Mitglied"/noun],dbpedia:board,
-     propSubj = PrepositionalObject("at"),
-     propObj  = CopulativeArg), 
-
-  // office
-
-  RelationalNoun("Position",dbpedia:office,
-     propSubj = PossessiveAdjunct,
-     propObj  = CopulativeArg)
+  ClassNoun("Wahl",dbpedia:Election),
+  ClassNoun("Legislative",dbpedia:Legislature),
+  ClassNoun("Gesetzgebung",dbpedia:Legislature),
 
 )

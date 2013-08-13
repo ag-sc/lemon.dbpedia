@@ -1,128 +1,14 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
 @prefix resource: <http://dbpedia.org/resource/> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_4#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_4#>,"de",
 
   //// Classes
 
   ClassNoun("Gebäude",dbpedia:Building),
-  ClassNoun(["geschichtlichem"/adjective "Gebäude"/noun],dbpedia:HistoricBuilding),
-  ClassNoun(["historischen"/adjective "Gebäude"/noun],dbpedia:HistoricBuilding),
-  ClassNoun(["architektonischen"/adjective "Struktur"/noun],dbpedia:ArchitecturalStructure),
-  ClassNoun("Kasinobetrieb",dbpedia:Casino),
-  ClassNoun("schloss",dbpedia:Castle),
-  ClassNoun("Fabrik",dbpedia:Factory),
-  ClassNoun(["Supermarkt"/adjective "Mall"/noun],dbpedia:ShoppingMall),
-  ClassNoun("Mall",dbpedia:ShoppingMall),
-  ClassNoun(["Supermarkt"/adjective "Mittelpunkt"/noun],dbpedia:ShoppingMall),
-  ClassNoun("Krankenhaus",dbpedia:Hospital),
-  ClassNoun("Krankenhaus",dbpedia:Hospital),
-  ClassNoun("Gefängnis",dbpedia:Prison),
-  ClassNoun("Hotel",dbpedia:Hotel),
-  ClassNoun("Restaurant",dbpedia:Restaurant),
-  ClassNoun("Wolkenkratzer auf",dbpedia:Skyscraper),
-  ClassNoun("Denkmal",dbpedia:Monument),
-  ClassNoun("Gedenkstätte",dbpedia:Memorial),
-  ClassNoun("Leuchtturm",dbpedia:Lighthouse),
-  ClassNoun("erachteten",dbpedia:Lighthouse),
-  ClassNoun("Mühle",dbpedia:Mill),
-  ClassNoun("Luft",dbpedia:Treadmill),
-  ClassNoun("watermill",dbpedia:Watermill),
-  ClassNoun("windmill",dbpedia:Windmill),
-  ClassNoun(["Wind-"/noun "Kraftfahrzeuge"/noun],dbpedia:WindMotor),
-  ClassNoun(["Wasser"/noun "Turmwaagen"/noun],dbpedia:WaterTower),
-  ClassNoun(["religiöse"/adjective "Gebäude"/noun],dbpedia:ReligiousBuilding),
-  ClassNoun("Kloster",dbpedia:Abbey),
-  ClassNoun("Kirche",dbpedia:Church),
-  ClassNoun("Klosters",dbpedia:Monastery),
-  ClassNoun("Moschee",dbpedia:Mosque),
-  ClassNoun("Stätte",dbpedia:Shrine),
-  ClassNoun("in",dbpedia:Synagogue),
-  ClassNoun("Temple",dbpedia:Temple),
-
-  ClassNoun("Park",dbpedia:Park),
-  ClassNoun(["heiß"/adjective "Frühling"/noun],dbpedia:HotSpring),
-
-  ClassNoun("Handelsplatzes",dbpedia:Venue),
-  ClassNoun("Theater",dbpedia:Theatre),
-  ClassNoun("Museum",dbpedia:Museum),
-
-  ClassNoun(["Sports"/noun "Einrichtung"/noun],dbpedia:SportFacility),
-  ClassNoun("Stadium",dbpedia:Stadium),
-  ClassNoun("Arena",dbpedia:Arena),
-  ClassNoun(["Rennen"/noun "inhaltlichen"/noun],dbpedia:RaceTrack),
-  ClassNoun(["Rennen"/noun "Kurs"/noun],dbpedia:Racecourse),
-
-  ClassNoun("Infrastruktur",dbpedia:Infrastructure),  
-  ClassNoun("Revier",dbpedia:Station),
-  ClassNoun(["Eisenbahnunternehmen"/noun "Revier"/noun],dbpedia:RailwayStation),
-  ClassNoun("Flughafen",dbpedia:Airport),
-
-  ClassNoun(["Route"/noun "von"/preposition "Transport"/noun],dbpedia:RouteOfTransportation) with plural "Strecken von Transport",
-  ClassNoun("Brücke",dbpedia:Bridge),
-  ClassNoun(["öffentlichen"/adjective "Durchfuhr"/noun "System"/noun],dbpedia:PublicTransitSystem),
-  ClassNoun(["Eisenbahnunternehmen"/noun "Grenze"/noun],dbpedia:RailwayLine),
-  ClassNoun(["Eisenbahn"/noun "inhaltlichen"/noun],dbpedia:RailwayLine),
-  ClassNoun("Straßen-",dbpedia:Road),
-  ClassNoun("Straße",dbpedia:Road),
-  ClassNoun("Highway",dbpedia:Road),
-  ClassNoun("Route",dbpedia:Road),
-  ClassNoun("Tunnel",dbpedia:Tunnel),
-  ClassNoun(["Eisenbahnunternehmen"/noun "Tunnel"/noun],dbpedia:RailwayTunnel),
-  ClassNoun(["Straßen-"/noun "Tunnel"/noun],dbpedia:RoadTunnel),
-  ClassNoun(["Binnenschiffsverkehr"/noun "Tunnel"/noun],dbpedia:WaterwayTunnel),
-
-  ClassNoun(["macht"/noun "Revier"/noun],dbpedia:PowerStation),
-  ClassNoun(["Elektrizität"/noun "Revier"/noun],dbpedia:PowerStation),
-  ClassNoun(["generating"/noun "pflanzlichen"/noun],dbpedia:PowerStation),
-  ClassNoun(["generating"/noun "Revier"/noun],dbpedia:PowerStation),
-  ClassNoun(["macht"/noun "pflanzlichen"/noun],dbpedia:PowerStation),
 
 
   //// Properties
 
-  RelationalNoun(["strukturellen"/adjective "System"/noun],dbpedia:structuralSystem,
-    propSubj = PrepositionalObject("von"),
-    propObj  = CopulativeArg),
-
-  RelationalAdjective("vorgenommen",dbpedia:structuralSystem,
-    relationalArg = PrepositionalObject("von")),
-
-  RelationalNoun("Adresse",dbpedia:address,
-    propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg),
-
-  RelationalNoun(["Sitzen"/noun "Kapazitäten"/noun],dbpedia:seatingCapacity,
-    propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg),
-  RelationalNoun("Kapazitäten",dbpedia:seatingCapacity,
-    propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg),
-
-  RelationalAdjective("lokalisiert",dbpedia:address,
-    relationalArg = PrepositionalObject("in")),
-
-  // architect, architecturalStyle 
-
-  RelationalNoun("architect",dbpedia:architect,
-    propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg),
-  StateVerb("Gestaltung",dbpedia:architect, 
-    propSubj = DirectObject,
-    propObj  = Subject),
-  StateVerb("bauen",dbpedia:architect, 
-    propSubj = DirectObject,
-    propObj  = Subject), 
-
-  IntersectiveObjectPropertyAdjective("Gothic",dbpedia:architecturalStyle,resource:Gothic_architecture),
-  IntersectiveObjectPropertyAdjective("Neo-Gothic",dbpedia:architecturalStyle,resource:Gothic_Revival_achitecture),
-  IntersectiveObjectPropertyAdjective("Bundesstaates Victoria Gothic",dbpedia:architecturalStyle,resource:Gothic_Revival_achitecture),
-  IntersectiveObjectPropertyAdjective("italienischer Wiederbelebung",dbpedia:architecturalStyle,resource:Greek_Revival_achitecture),
-  IntersectiveObjectPropertyAdjective("Art Deco",dbpedia:architecturalStyle,resource:Art_Deco),
-
-  // yearOfConstruction 
-
-  RelationalAdjective("rechnerisch",dbpedia:yearOfConstruction,
-    relationalArg = PrepositionalObject("in"))
 
 )

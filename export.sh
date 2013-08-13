@@ -13,6 +13,12 @@ do
     lemonpatterns $file target/tmp/${name/.ldp/.rdf}
 done
 
-python RDFmerger.py $1 $1/extra.ttl $1/references.ttl linking/dbpedia_$1_wn.nt target/tmp/ 'target/dbpedia_'$1'.rdf'
+LINKS=linking/dbpedia_$1_wn.nt
+if [[ -f $LINKS ]];
+then
+   python RDFmerger.py $1 $1/extra.ttl references.ttl $LINKS target/tmp/ 'target/dbpedia_'$1'.rdf'
+else
+   python RDFmerger.py $1 $1/extra.ttl references.ttl target/tmp/ 'target/dbpedia_'$1'.rdf'
+fi
 
 rm target/tmp/*
