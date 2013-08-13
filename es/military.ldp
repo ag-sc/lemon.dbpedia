@@ -1,0 +1,65 @@
+@prefix dbpedia:  <http://dbpedia.org/ontology/> .
+@prefix resource: <http://dbpedia.org/resource/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
+
+  //// Classes
+
+  ClassNoun(["militar"/adjective "persona"/noun],dbpedia:MilitaryPerson),
+  ClassNoun(["militar"/adjective "personal"/noun],dbpedia:MilitaryPerson),
+  ClassNoun(["militar"/adjective "unidad"/noun],dbpedia:MilitaryUnit),
+  ClassNoun(["militar"/adjective "conflicto"/noun],dbpedia:MilitaryConflict),
+  ClassNoun(["militar"/adjective "estructura"/noun],dbpedia:MilitaryStructure),
+  ClassNoun("guerra",dbpedia:MilitaryConflict),
+  ClassNoun("batalla",dbpedia:MilitaryConflict),
+  ClassNoun("armas",dbpedia:Weapon),
+  ClassNoun("blazon",dbpedia:Blazon),
+
+  //// Properties 
+
+  StateVerb("lucha",dbpedia:battle,
+       propObj = PrepositionalObject("en")), 
+  StateVerb("servir",dbpedia:battle,
+       propObj = PrepositionalObject("en")), 
+
+  RelationalNoun("Comandante",dbpedia:commander,
+       propSubj = PrepositionalObject("en"),
+       propObj  = CopulativeArg), 
+  RelationalNoun("líder",dbpedia:commander,
+       propSubj = PrepositionalObject("en"),
+       propObj  = CopulativeArg), 
+
+  StateVerb("mando",dbpedia:commander,
+       propSubj = PrepositionalObject("durante"),
+       propObj  = Subject), 
+  StateVerb("mando",dbpedia:militaryCommand),
+
+  StateVerb("servir",dbpedia:militaryBranch,
+       propObj = PrepositionalObject("en")),
+  StateVerb("servir",dbpedia:militaryUnit,
+       propObj = PrepositionalObject("en")),
+
+  RelationalNoun("siniestros",dbpedia:causalties,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+
+  RelationalNoun("resultado",dbpedia:result,
+       propSubj = PrepositionalObject("de"),
+       propObj  = CopulativeArg),
+
+  RelationalNoun("parte",dbpedia:isPartOfMilitaryConflict,
+      propObj  = PrepositionalObject("de")), 
+  RelationalNoun("parte",dbpedia:commandStructure,
+      propObj  = PrepositionalObject("de")), 
+  RelationalAdjective("subordinadas",dbpedia:commandStructure,
+       relationalArg = PrepositionalObject("a")),
+
+  RelationalAdjective("basado",dbpedia:garrison,
+       relationalArg = PrepositionalObject("en") restrictedTo lex:Building_or_Infrastructure),
+  RelationalAdjective("basado",dbpedia:garrison,
+       relationalArg = PrepositionalObject("en") restrictedTo dbpedia:PopulatedPlace)
+
+
+
+)

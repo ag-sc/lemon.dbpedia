@@ -1,0 +1,312 @@
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
+
+  //// Classes
+
+  ClassNoun("deporte",dbpedia:Sport),
+  ClassNoun(["deportivos"/noun "caso"/noun],dbpedia:SportsEvent),
+  ClassNoun(["en bicicleta"/noun "competencia"/noun],dbpedia:CyclingCompetition),
+  ClassNoun(["futbolística"/noun "Match"/noun],dbpedia:FootballMatch),
+  ClassNoun("Match",dbpedia:FootballMatch),
+  ClassNoun("tournament",dbpedia:Tournament),
+  ClassNoun(["soccer"/noun "tournament"/noun],dbpedia:SoccerTournament),
+  ClassNoun(["tenis"/noun "tournament"/noun],dbpedia:TennisTournament),
+  ClassNoun(["Women's tenis asociación"/noun "tournament"/noun],dbpedia:WomensTennisAssociationTournament),
+  ClassNoun(["WTA"/noun "tournament"/noun],dbpedia:WomensTennisAssociationTournament),
+  ClassNoun(["wrestling"/noun "caso"/noun],dbpedia:WrestlingEvent),
+  ClassNoun(["mixto artes marciales"/noun "caso"/noun],dbpedia:MixedMartialArtsEvent),
+  ClassNoun(["MMA"/noun "caso"/noun],dbpedia:MixedMartialArtsEvent),
+  ClassNoun("gran premio de",dbpedia:GrandPrix),
+  ClassNoun("raza",dbpedia:Race),
+  ClassNoun("raza",lex:Race),
+  ClassNoun(["oplympic"/adjective "caso"/noun],dbpedia:OlympicEvent),
+  ClassNoun(["deporte"/noun "competencia"/noun "resultado"/noun],dbpedia:SportCompetitionResult),
+  ClassNoun("resultado",dbpedia:SportCompetitionResult),
+  ClassNoun(["oplympic"/adjective "resultado"/noun],dbpedia:OlympicResult),
+  ClassNoun(["sanción"/adjective "shootout"/noun],dbpedia:PenaltyShootout),
+  ClassNoun(["snooke"/noun "mundial"/noun "prelación"/noun],dbpedia:SnookerWorldRanking),
+
+  // Athletes and others
+
+  ClassNoun(["deportivos"/noun "administrador"/noun],dbpedia:SportsManager) with plural "deportivos administrador",
+  ClassNoun("administrador",dbpedia:SportsManager) with plural "administrador",
+  ClassNoun(["soccer"/noun "administrador"/noun],dbpedia:SoccerManager) with plural "soccer administrador",
+  ClassNoun(["College"/noun "autocar"/noun],dbpedia:CollegeCoach),
+  ClassNoun(["Voleibol"/noun "autocar"/noun],dbpedia:VolleyballCoach),
+  ClassNoun(["equipo"/noun "miembro"/noun],dbpedia:TeamMember),
+  ClassNoun(["deportivos"/noun "equipo"/noun "miembro"/noun],dbpedia:SportsTeamMember),
+  ClassNoun("arbitraje",dbpedia:Referee),
+
+  ClassNoun("athlete",dbpedia:Athlete),
+  ClassNoun("sportsman",dbpedia:Athlete) with plural "los deportistas",
+  ClassNoun("sportswoman",lex:FemaleAthlete) with plural "sportswomen",
+  ClassNoun(["National colegiado Athletic asociación"/noun "athlete"/noun],dbpedia:NationalCollegiateAthleticAssociationAthlete),
+  ClassNoun(["NCAA"/noun "athlete"/noun],dbpedia:NationalCollegiateAthleticAssociationAthlete),
+
+  ClassNoun(["American football"/noun "actor"/noun],dbpedia:AmericanFootballPlayer),
+  ClassNoun(["Gridiron football"/noun "actor"/noun],dbpedia:GridironFootballPlayer),
+  ClassNoun(["canadiense football"/noun "actor"/noun],dbpedia:CanadianFootballPlayer),
+  ClassNoun(["australiano"/noun "normas"/noun "futbolística"/noun "actor"/noun],dbpedia:AustralianRulesFootballPlayer),
+  ClassNoun(["futbolística"/noun "actor"/noun],lex:FootballPlayer),
+  ClassNoun(["badminton"/noun "actor"/noun],dbpedia:BadmintonPlayer),
+  ClassNoun(["baseball"/noun "actor"/noun],dbpedia:BaseballPlayer),
+  ClassNoun(["baloncesto"/noun "actor"/noun],dbpedia:BasketballPlayer),
+  ClassNoun(["organismo"/noun "constructor"/noun],dbpedia:BodyBuilder),
+  ClassNoun("boxer",dbpedia:Boxer),
+  ClassNoun(["aficionados"/noun "boxer"/noun],dbpedia:AmateurBoxer),
+  ClassNoun(["toro"/noun "fighter"/noun],dbpedia:BullFighter),
+  ClassNoun(["chess"/noun "actor"/noun],dbpedia:ChessPlayer),
+  ClassNoun("cricketer",dbpedia:Cricketer),
+  ClassNoun("curler",dbpedia:Curler),
+  ClassNoun("ciclista",dbpedia:Cyclist),
+  ClassNoun(["darts"/noun "actor"/noun],dbpedia:DartsPlayer),
+  ClassNoun(["cifra"/noun "Skater"/noun],dbpedia:FigureSkater),
+  ClassNoun(["irlandesa"/noun "juegos"/noun "actor"/noun],dbpedia:GaelicGamesPlayer),
+  ClassNoun(["Golf"/noun "actor"/noun],dbpedia:GolfPlayer),
+  ClassNoun("gymnast",dbpedia:Gymnast),
+  ClassNoun(["handball"/noun "actor"/noun],dbpedia:HandballPlayer),
+  ClassNoun(["caballo"/noun "jinete"/noun],dbpedia:HorseRider),
+  ClassNoun(["hielo"/noun "hockey sobre"/noun "actor"/noun],dbpedia:IceHockeyPlayer),
+  ClassNoun("Jockey",dbpedia:Jockey),
+  ClassNoun(["lacrosse"/noun "actor"/noun],dbpedia:LacrossePlayer),
+  ClassNoun(["Martial"/adjective "artista"/noun],dbpedia:MartialArtist),
+  ClassNoun(["motocicletas"/noun "jinete"/noun],dbpedia:MotorcycleRider),
+  ClassNoun("motorcyclist",dbpedia:MotorcycleRider),
+  ClassNoun(["speedway"/noun "jinete"/noun],dbpedia:SpeedwayRider),
+  ClassNoun(["netball"/noun "actor"/noun],dbpedia:NetballPlayer),
+  ClassNoun(["poker"/noun "actor"/noun],dbpedia:PokerPlayer),
+  ClassNoun(["fórmula uno"/noun "racer"/noun],dbpedia:FormulaOneRacer),
+  ClassNoun(["NASCAR"/noun "conductor"/noun],dbpedia:NascarDriver),
+  ClassNoun(["Racing"/noun "conductor"/noun],dbpedia:RacingDriver),
+  ClassNoun(["raza"/noun "conductor"/noun],dbpedia:RacingDriver),
+  ClassNoun(["raza"/noun "conductor"/noun],lex:RaceDriver),
+  ClassNoun(["Rugby"/noun "actor"/noun],dbpedia:RugbyPlayer),
+  ClassNoun("Skater",dbpedia:Skater),
+  ClassNoun("skier",dbpedia:Skier),
+  ClassNoun(["snooker"/noun "actor"/noun],dbpedia:SnookerPlayer),
+  ClassNoun(["snooker"/noun "champ"/noun],dbpedia:SnookerChamp),
+  ClassNoun(["soccer"/noun "actor"/noun],dbpedia:SoccerPlayer),
+  ClassNoun(["squash"/noun "actor"/noun],dbpedia:SquashPlayer),
+  ClassNoun("swimmer",dbpedia:Swimmer),
+  ClassNoun(["cuadro"/noun "tenis"/noun "actor"/noun],dbpedia:TableTennisPlayer),
+  ClassNoun(["tenis"/noun "actor"/noun],dbpedia:TennisPlayer),
+  ClassNoun(["Voleibol"/noun "actor"/noun],dbpedia:VolleyballPlayer),
+  ClassNoun(["Mhor"/noun "Voleibol"/noun "actor"/noun],dbpedia:BeachVolleyballPlayer),
+  ClassNoun("wrestler",dbpedia:Wrestler),
+  ClassNoun(["sumo"/noun "wrestler"/noun],dbpedia:SumoWrestler),
+
+  ClassNoun("surfer",lex:Surfer),
+
+  ClassNoun("actor",lex:Player),
+
+  // Teams
+
+  ClassNoun(["deportivos"/noun "equipo"/noun],dbpedia:SportsTeam),
+  ClassNoun("equipo",dbpedia:SportsTeam),
+
+  ClassNoun(["American football"/noun "equipo"/noun],dbpedia:AmericanFootballTeam),
+  ClassNoun(["futbolística"/noun "equipo"/noun],lex:FootballTeam),
+  ClassNoun(["baseball"/noun "equipo"/noun],dbpedia:BaseballTeam),
+  ClassNoun(["baloncesto"/noun "equipo"/noun],dbpedia:BasketballTeam),
+  ClassNoun(["canadiense football"/noun "equipo"/noun],dbpedia:CanadianFootballTeam),
+  ClassNoun(["en bicicleta"/noun "equipo"/noun],dbpedia:CyclingTeam),
+  ClassNoun(["hockey sobre"/noun "equipo"/noun],dbpedia:HockeyTeam),
+  ClassNoun(["Rugby"/noun "Club"/noun],dbpedia:RugbyClub),
+  ClassNoun(["soccer"/noun "Club"/noun],dbpedia:SoccerClub),
+  ClassNoun(["soccer"/noun "equipo"/noun],dbpedia:SoccerClub),
+  ClassNoun(["nacionales"/adjective "soccer"/noun "Club"/noun],dbpedia:NationalSoccerClub),
+  ClassNoun(["nacionales"/adjective "soccer"/noun "equipo"/noun],dbpedia:NationalSoccerClub),
+  ClassNoun(["speedway"/noun "equipo"/noun],dbpedia:SpeedwayTeam),
+
+  // Leagues
+
+  ClassNoun(["deportivos"/noun "liga"/noun],dbpedia:SportsLeague),
+  ClassNoun("liga",dbpedia:SportsLeague),
+
+  ClassNoun(["American football"/noun "liga"/noun],dbpedia:AmericanFootballLeague),
+  ClassNoun(["australiano football"/noun "liga"/noun],dbpedia:AustralianFootballLeague),
+  ClassNoun(["futbolística"/noun "liga"/noun],lex:FootballLeague),
+  ClassNoun(["auto"/noun "Racing"/noun "liga"/noun],dbpedia:AutoRacingLeague),
+  ClassNoun(["car"/noun "Racing"/noun "liga"/noun],dbpedia:AutoRacingLeague),
+  ClassNoun(["Racing"/noun "liga"/noun],dbpedia:AutoRacingLeague),
+  ClassNoun(["baseball"/noun "liga"/noun],dbpedia:BaseballLeague),
+  ClassNoun(["baloncesto"/noun "liga"/noun],dbpedia:BasketballLeague),
+  ClassNoun(["bowling"/noun "liga"/noun],dbpedia:BowlingLeague),
+  ClassNoun(["boxing"/noun "liga"/noun],dbpedia:BoxingLeague),
+  ClassNoun(["canadiense football"/noun "liga"/noun],dbpedia:CanadianFootballLeague),
+  ClassNoun(["Cricket"/noun "liga"/noun],dbpedia:CricketLeague),
+  ClassNoun(["curling"/noun "liga"/noun],dbpedia:CurlingLeague),
+  ClassNoun(["en bicicleta"/noun "liga"/noun],dbpedia:CyclingLeague),
+  ClassNoun(["porteros"/noun "liga"/noun],dbpedia:FieldHockeyLeague),
+  ClassNoun(["fórmula uno"/noun "Racing"/noun "liga"/noun],dbpedia:FormulaOneRacingLeague),
+  ClassNoun(["Racing"/noun "liga"/noun],dbpedia:FormulaOneRacingLeague),
+  ClassNoun(["Golf"/noun "liga"/noun],dbpedia:GolfLeague),
+  ClassNoun(["handball"/noun "liga"/noun],dbpedia:HandballLeague),
+  ClassNoun(["hockey sobre hielo"/noun "liga"/noun],dbpedia:IceHockeyLeague),
+  ClassNoun(["inline hockey sobre"/noun "liga"/noun],dbpedia:InlineHockeyLeague),
+  ClassNoun(["hockey sobre"/noun "liga"/noun],lex:HockeyLeague),
+  ClassNoun(["lacrosse"/noun "liga"/noun],dbpedia:LacrosseLeague),
+  ClassNoun(["mezclados artes marciales"/noun "liga"/noun],dbpedia:MixedMartialArtsLeague),
+  ClassNoun(["MMA"/noun "liga"/noun],dbpedia:MixedMartialArtsLeague),
+  ClassNoun(["artes marciales"/noun "liga"/noun],dbpedia:MixedMartialArtsLeague),
+  ClassNoun(["motocicletas"/noun "Racing"/noun "liga"/noun],dbpedia:MotorcycleRacingLeague),
+  ClassNoun(["paintball"/noun "liga"/noun],dbpedia:PaintballLeague),
+  ClassNoun(["polo"/noun "liga"/noun],dbpedia:PoloLeague),
+  ClassNoun(["radio-controlled"/adjective "Racing"/noun "liga"/noun],dbpedia:RadioControlledRacingLeague),
+  ClassNoun(["Rugby"/noun "liga"/noun],dbpedia:RugbyLeague),
+  ClassNoun(["soccer"/noun "liga"/noun],dbpedia:SoccerLeague),
+  ClassNoun(["softball"/noun "liga"/noun],dbpedia:SoftballLeague),
+  ClassNoun(["speedway"/noun "liga"/noun],dbpedia:SpeedwayLeague),
+  ClassNoun(["tenis"/noun "liga"/noun],dbpedia:TennisLeague),
+  ClassNoun(["vídeo"/noun "juegos"/noun "liga"/noun],dbpedia:VideoGamesLeague),
+  ClassNoun(["Voleibol"/noun "liga"/noun],dbpedia:VolleyballLeague),
+
+
+  //// Properties
+
+  // team, college, manager, league
+
+  RelationalNoun("equipo",dbpedia:team,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  StateVerb("desempeñar",dbpedia:team,
+     propSubj = Subject restrictedTo lex:Player,
+     propObj  = PrepositionalObject("para")),
+
+  StateVerb("desempeñar",dbpedia:league,
+     propObj  = PrepositionalObject("en")),
+
+  StateVerb("desempeñar",dbpedia:college,
+     propObj  = PrepositionalObject("para")),
+  StateVerb("graduate",dbpedia:college,
+     propObj  = PrepositionalObject("desde")),
+  StateVerb("asistir",dbpedia:college),
+  
+  RelationalNoun("actor",dbpedia:team,
+     propSubj = CopulativeArg restrictedTo lex:Player,
+     propObj  = PossessiveAdjunct),
+  StateVerb("raza",dbpedia:team,
+     propSubj = Subject restrictedTo lex:Racer,
+     propObj  = PrepositionalObject("para")),
+
+  RelationalNoun("administrador",dbpedia:team,
+     propSubj = CopulativeArg restrictedTo dbpedia:SportsManager,
+     propObj  = PossessiveAdjunct),
+  StateVerb("gestionar",dbpedia:team,
+     propSubj = Subject restrictedTo dbpedia:SportsManager,
+     propObj  = DirectObject),
+
+  RelationalNoun("administrador",dbpedia:managerClub,
+     propObj  = PossessiveAdjunct),
+  StateVerb("gestionar",dbpedia:managerClub),
+  RelationalNoun("administrador",dbpedia:manager,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  StateVerb("gestionar",dbpedia:manager,
+     propSubj = DirectObject,
+     propObj  = Subject),
+
+  // homeArena, ground, tenant, operator
+
+  RelationalNoun(["origen"/noun "escenario"/noun],dbpedia:homeArena,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["origen"/noun "stadium"/noun],dbpedia:homeArena,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["origen"/noun "stadium"/noun],dbpedia:ground,
+     propSubj = PossessiveAdjunct restrictedTo dbpedia:Stadium,
+     propObj  = CopulativeArg),
+  RelationalAdjective("basado",dbpedia:ground, 
+     relationalArg = PrepositionalObject("en") restrictedTo dbpedia:PopulatedPlace),
+  RelationalNoun("origen",dbpedia:homeArena,
+     propSubj = PrepositionalObject("de"),
+     propObj  = CopulativeArg),
+  RelationalNoun("origen",dbpedia:ground,
+     propSubj = PrepositionalObject("de"),
+     propObj  = CopulativeArg),
+
+  StateVerb("desempeñar",dbpedia:tenant, 
+     propSubj = PrepositionalObject("en"),
+     propObj  = Subject restrictedTo dbpedia:Organisation), 
+  StateVerb("acogida",dbpedia:tenant, 
+     propObj  = DirectObject restrictedTo dbpedia:Event), 
+
+  RelationalNoun("origen",dbpedia:operator,
+     propObj  = PrepositionalObject("de")),
+
+
+  // capacity 
+
+  RelationalNoun("capacidad",dbpedia:capacity,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  
+  StateVerb("acoger",dbpedia:capacity),
+
+  // position
+
+  RelationalNoun("posición",dbpedia:position,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
+  // number, squadNumber
+
+  RelationalNoun(["shirt"/noun "número"/noun],dbpedia:number,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["shirt"/noun "número"/noun],dbpedia:squadNumber,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["squad"/noun "número"/noun],dbpedia:number,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["squad"/noun "número"/noun],dbpedia:squadNumber,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
+
+  // formerCoach
+
+  RelationalNoun(["antigua"/adjective "autocar"/noun],dbpedia:formerCoach,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),  
+
+  // {throwing|batting}Side, shoots
+
+  StateVerb(["aclarar muchos"/verb "left-handed"/adverb],lex:throwLeft), 
+  StateVerb(["aclarar muchos"/verb "salido"/adverb],lex:throwLeft), 
+  StateVerb(["aclarar muchos"/verb "right-handed"/adverb],lex:throwRight), 
+  StateVerb(["aclarar muchos"/verb "derecho"/adverb],lex:throwRight), 
+  StateVerb(["bat"/verb "left-handed"/adverb],lex:batLeft), 
+  StateVerb(["bat"/verb "salido"/adverb],lex:batLeft), 
+  StateVerb(["bat"/verb "right-handed"/adverb],lex:batRight), 
+  StateVerb(["bat"/verb "derecho"/adverb],lex:batRight), 
+
+  StateVerb(["sarmientos"/verb "derecho"/adverb],lex:shootRight), 
+  StateVerb(["sarmientos"/verb "salido"/adverb],lex:shootLeft), 
+  IntersectiveDataPropertyAdjective("ambidextrous",dbpedia:shoots,"Ambidextrous"),
+
+  // plays 
+
+  IntersectiveDataPropertyAdjective("right-handed",dbpedia:plays,"Right-handed"),
+  IntersectiveDataPropertyAdjective("right-handed",dbpedia:plays,"Right-handed (two-handed backhand)"),
+  IntersectiveDataPropertyAdjective("right-handed",dbpedia:plays,"Right-handed (one-handed backhand)"),
+  IntersectiveDataPropertyAdjective("left-handed",dbpedia:plays,"Left-handed"),
+  IntersectiveDataPropertyAdjective("left-handed",dbpedia:plays,"Left-handed (two-handed backhand)"),
+  IntersectiveDataPropertyAdjective("left-handed",dbpedia:plays,"Left-handed (one-handed backhand)"),
+  IntersectiveDataPropertyAdjective("ambidextrous",dbpedia:plays,"Ambidextrous"), 
+
+  // others 
+ 
+  RelationalNoun("Presidente",dbpedia:chairman,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) with plural "presidentes",
+
+  StateVerb("début",dbpedia:debutTeam,
+     propObj = PrepositionalObject("para"))
+
+
+)

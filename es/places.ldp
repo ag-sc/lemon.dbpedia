@@ -1,0 +1,380 @@
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
+
+  //// Classes
+
+  ClassNoun("lugar",dbpedia:Place),
+  ClassNoun("localización",dbpedia:Place),
+
+  ClassNoun(["pobladas"/adjective "lugar"/noun],dbpedia:PopulatedPlace),
+  ClassNoun("continente",dbpedia:Continent),
+  ClassNoun("país",dbpedia:Country),
+  ClassNoun("nación",dbpedia:Country),
+  ClassNoun("State",dbpedia:State),
+  ClassNoun("departamento",dbpedia:Department),
+  ClassNoun(["franceses"/adjective "departamento"/noun],dbpedia:OverseasDepartment),
+  ClassNoun("intercommunality",dbpedia:Intercommunality),
+  ClassNoun("localidad",dbpedia:Locality),
+  ClassNoun(["francesa"/adjective "localidad"/noun],dbpedia:FrenchLocality),
+  ClassNoun("arrondissement",lex:Arrondissement),
+  ClassNoun("provincia",dbpedia:Prefecture),
+  ClassNoun("liquidación",dbpedia:Settlement),
+  ClassNoun(["irán"/noun "liquidación"/noun],dbpedia:IranSettlement),
+  ClassNoun("ciudad",dbpedia:City),
+  ClassNoun(["ciudad"/noun "distrito"/noun],dbpedia:CityDistrict),
+  ClassNoun("ciudad",dbpedia:Town),
+  ClassNoun("efectos",dbpedia:Village),
+
+  ClassNoun("región",dbpedia:Region),
+  ClassNoun(["administrativas"/adjective "región"/noun],dbpedia:AdministrativeRegion),
+  ClassNoun(["administrativo"/adjective "administrativas"/adjective "región"/noun],dbpedia:ClericalAdministrativeRegion),
+  ClassNoun("deanery",dbpedia:Deanary),
+  ClassNoun("diocese",dbpedia:Diocese),
+  ClassNoun("freguesia",dbpedia:Parish),
+  ClassNoun(["gubernamentales"/adjective "administrativas"/adjective "región"/noun],dbpedia:GovernmentalAdministrativeRegion),
+  ClassNoun("distrito",dbpedia:District),
+  ClassNoun(["distrito"/noun "agua"/noun "bordo"/noun],dbpedia:DistrictWaterBoard),
+  ClassNoun(["agua"/noun "bordo"/noun],dbpedia:DistrictWaterBoard),
+  ClassNoun("municipio",dbpedia:Municipality),
+  ClassNoun("sub-municipality",dbpedia:SubMunicipality),
+  ClassNoun("provincia",dbpedia:Province),
+  ClassNoun("Regency",dbpedia:Regency),
+  ClassNoun("territorio",dbpedia:Territory),
+  ClassNoun(["antiguos"/adjective "territorio"/noun],dbpedia:OldTerritory),
+
+  ClassNoun(["naturales"/adjective "región"/noun],dbpedia:NaturalRegion),
+  ClassNoun(["pistas"/noun "región"/noun],dbpedia:SkiArea),
+  ClassNoun(["pistas"/noun "recurrir"/noun],dbpedia:SkiResort),
+  ClassNoun(["vino"/noun "región"/noun],dbpedia:WineRegion),
+  ClassNoun(["protegidas"/adjective "espacio"/noun],dbpedia:ProtectedArea),
+
+  ClassNoun(["naturales"/adjective "lugar"/noun],dbpedia:NaturalPlace),
+  ClassNoun(["organismo"/noun "de"/preposition "agua"/noun],dbpedia:BodyOfWater),
+  ClassNoun("flujo",dbpedia:Stream),
+  ClassNoun("río",dbpedia:River),
+  ClassNoun("canal",dbpedia:Canal),
+  ClassNoun("lacustres",dbpedia:Lake),
+  ClassNoun("isla",dbpedia:Island),
+  ClassNoun("Atoll",dbpedia:Atoll),
+  ClassNoun("montaña",dbpedia:Mountain),
+  ClassNoun(["montaña"/noun "gama"/noun],dbpedia:MountainRange),
+  ClassNoun(["montaña"/noun "cadena"/noun],dbpedia:MountainRange),
+  ClassNoun("caballón donde",dbpedia:MountainRange),
+  ClassNoun(["montaña"/noun "tarjeta"/noun],dbpedia:MountainPass),
+  ClassNoun("cave",dbpedia:Cave),
+  ClassNoun("cavern",dbpedia:Cave),
+  ClassNoun("grotto",dbpedia:Cave),
+  ClassNoun("Valle",dbpedia:Valley),
+  ClassNoun("volcano",dbpedia:Volcano),
+
+  ClassNoun(["mundial"/noun "patrimonio"/noun "emplazamiento"/noun],dbpedia:WorldHeritageSite),
+  ClassNoun(["emplazamiento"/noun "de"/preposition "especiales"/adjective "científicos"/adjective "interés"/noun],dbpedia:SiteOfSpecialScientificInterest),
+  
+
+  //// Properties
+
+  // locations
+
+  RelationalAdjective("situadas",dbpedia:country,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situadas",dbpedia:range,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situadas",dbpedia:city,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situadas",dbpedia:location,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situadas",dbpedia:locatedInArea,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situadas",dbpedia:region,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situadas",dbpedia:state,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situadas",dbpedia:county,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situadas",dbpedia:district,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situadas",dbpedia:province,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situadas",dbpedia:department,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situadas",dbpedia:arrondissement,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situadas",dbpedia:canton,
+    relationalArg = PrepositionalObject("en")),
+
+  RelationalAdjective("situadas",dbpedia:region,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situada",dbpedia:state,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situada",dbpedia:county,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situada",dbpedia:district,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situada",dbpedia:province,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situada",dbpedia:department,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situada",dbpedia:arrondissement,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situada",dbpedia:canton,
+    relationalArg = PrepositionalObject("en")),
+
+  RelationalNoun("parte",dbpedia:range,
+    propObj  = PrepositionalObject("de")),
+  RelationalNoun("parte",dbpedia:mountainRange,
+    propObj  = PrepositionalObject("de")),
+
+  RelationalAdjective("estrecha",dbpedia:nearestCity,
+    relationalArg = PrepositionalObject("a")),
+  RelationalAdjective("situadas",dbpedia:closestCity,
+    relationalArg = PrepositionalObject("próximo")),
+  RelationalAdjective("situada",dbpedia:closestCity,
+    relationalArg = PrepositionalObject("próximo")),
+
+  RelationalNoun("parte",dbpedia:intercommunality,
+    propSubj = PrepositionalObject("de"),
+    propObj  = CopulativeArg),
+  RelationalNoun("suburb",dbpedia:intercommunality,
+    propSubj = PrepositionalObject("de"),
+    propObj  = CopulativeArg),
+
+
+  // crosses
+
+  StateVerb("cruz",dbpedia:crosses),  
+  StateVerb("desplazamiento",dbpedia:crosses),
+  StateVerb("puente",dbpedia:crosses),
+  StateVerb("esperanza",dbpedia:crosses),
+  
+  RelationalNoun("cruce",dbpedia:crosses,
+    propObj = PossessiveAdjunct),
+  RelationalNoun("puente",dbpedia:crosses,
+    propObj = PrepositionalObject("durante")),
+    
+  // source(Country), origin, riverMouth, mouthMountain, mouthPlace
+
+  RelationalNoun("fuente",dbpedia:source,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+  StateVerb("proceden",dbpedia:source,
+    propObj  = PrepositionalObject("en")),
+  StateVerb("proceden",dbpedia:sourceCountry,
+    propObj  = PrepositionalObject("en")),
+  StateVerb("proceden",dbpedia:origin,
+    propSubj = Subject restrictedTo dbpedia:Stream,
+    propObj  = PrepositionalObject("en")),
+
+  StateVerb("flujo",dbpedia:riverMouth,
+    propObj  = PrepositionalObject("en")),
+  StateVerb("run",dbpedia:riverMouth,
+    propObj  = PrepositionalObject("en")),
+  StateVerb("flujo",dbpedia:mouthMountain,
+    propObj  = PrepositionalObject("en")),
+  StateVerb("run",dbpedia:mouthMountain,
+    propObj  = PrepositionalObject("en")),
+  StateVerb("flujo",dbpedia:mouthPlace,
+    propObj  = PrepositionalObject("en")),
+  StateVerb("run",dbpedia:mouthPlace,
+    propObj  = PrepositionalObject("en")),
+    
+  // border, neighbors
+
+  StateVerb("fronterizos",dbpedia:border),
+
+  RelationalNoun(["neighboring"/adjective "municipio"/noun],dbpedia:neighboringMunicipality,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  
+  // residence
+
+  RelationalNoun("residencia",dbpedia:residence,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+    
+  StateVerb("residir",dbpedia:residence,
+    propObj = PrepositionalObject("en")),
+    
+  // elevations, depth
+
+  RelationalNoun(["mayor"/adjective "montaña"/noun],dbpedia:highestMountain,
+    propObj = PossessiveAdjunct),
+  RelationalNoun(["mayor"/adjective "montaña"/noun],dbpedia:highestMountain,
+    propObj = PrepositionalObject("en")),
+    
+  RelationalNoun("cota",dbpedia:elevation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("altitud",dbpedia:elevation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["máxima"/noun "altitud"/noun],dbpedia:maximumElevation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["mínimo"/noun "altitud"/noun],dbpedia:minimumElevation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("altura",dbpedia:elevation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  StateVerb("stand",dbpedia:elevation,
+    propObj  = PrepositionalObject("en")),
+  StateVerb("lugar",dbpedia:elevation,
+    propObj  = PrepositionalObject("a")),
+  StateVerb("lugar",dbpedia:maximumElevation,
+    propObj  = PrepositionalObject("a")),
+
+  RelationalNoun("profundidad",dbpedia:depth,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  // population, area, and densities
+
+  RelationalNoun("población",dbpedia:populationTotal,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("población",dbpedia:totalPopulation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("población",dbpedia:populationUrban,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("población",dbpedia:populationMetro,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+  RelationalNoun(["total"/adjective "población"/noun],dbpedia:populationTotal,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["total"/adjective "población"/noun],dbpedia:totalPopulation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["urbano"/adjective "población"/noun],dbpedia:populationUrban,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["metropolitanas"/adjective "población"/noun],dbpedia:populationMetro,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  RelationalNoun("espacio",dbpedia:area,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),  
+  RelationalNoun("espacio",dbpedia:areaTotal,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("espacio",dbpedia:areaUrban,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("espacio",dbpedia:areaMetro,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["total"/adjective "espacio"/noun],dbpedia:areaTotal,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["urbano"/adjective "espacio"/noun],dbpedia:areaUrban,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["tierras"/noun "espacio"/noun],dbpedia:areaLand,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+  RelationalNoun(["agua"/noun "espacio"/noun],dbpedia:areaWater,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+
+  RelationalNoun(["población"/noun "densidad"/noun],dbpedia:populationDensity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["población"/noun "densidad"/noun],dbpedia:populationUrbanDensity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["población"/noun "densidad"/noun],dbpedia:populationMetroDensity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+
+  // area code, postal code
+
+  RelationalNoun(["espacio"/noun "código"/noun],dbpedia:areaCode,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+    
+  RelationalNoun(["postales"/adjective "código"/noun],dbpedia:postalCode,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["correo"/adjective "código"/noun],dbpedia:postalCode,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+
+  // timezone, UTC offset
+
+  RelationalNoun(["tiempo"/noun "zona"/noun],dbpedia:timeZone,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  RelationalNoun(["UTC"/noun "compensar"/noun],dbpedia:utcOffset,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["tiempo"/noun "zona"/noun "compensar"/noun],dbpedia:utcOffset,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+
+  // openend and completed
+
+  ConsequenceVerb("abierto",dbpedia:dateUse,
+     propSubj = lex:canal as Subject, 
+     propObj  = lex:dateUsed as PrepositionalObject("en")),
+  ConsequenceVerb("abierto",dbpedia:openingDate,
+     propSubj = lex:place as Subject, 
+     propObj  = lex:dateOpened as PrepositionalObject("sobre")),
+  ConsequenceVerb("abierto",dbpedia:openingYear,
+     propSubj = lex:place as Subject, 
+     propObj  = lex:yearOpened as PrepositionalObject("en")),
+
+  ConsequenceVerb("completa",dbpedia:completionDate,
+     propSubj = lex:place as Subject, 
+     propObj  = lex:dateCompleted as PrepositionalObject("sobre")),
+  ConsequenceVerb("completa",dbpedia:dateCompleted,
+     propSubj = lex:place as Subject, 
+     propObj  = lex:dateCompleted as PrepositionalObject("sobre")),
+
+  // headquarter 
+
+  RelationalAdjective("basado",dbpedia:headquarter,
+     relationalArg = PrepositionalObject("en")), 
+
+  // others
+
+  RelationalNoun("eslora",dbpedia:length,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  RelationalNoun("anchura",dbpedia:width,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  RelationalNoun(["cuadrícula"/noun "referencia"/noun],dbpedia:gridReference,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  RelationalNoun(["mayor"/adjective "región"/noun],dbpedia:highestRegion,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  RelationalNoun("Motto",dbpedia:motto,
+    propSubj = PossessiveAdjunct,
+    propObj = CopulativeArg), 
+
+  RelationalNoun(["NRHP"/noun "referencia"/noun "número"/noun],dbpedia:nrhpReferenceNumber,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["registro nacional"/noun "referencia"/noun "número"/noun],dbpedia:nrhpReferenceNumber,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["referencia"/noun "número"/noun],dbpedia:nrhpReferenceNumber,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg)
+
+)
+
