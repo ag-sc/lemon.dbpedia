@@ -6,6 +6,8 @@ then
   exit 1
 fi
 
+mkdir target/tmp
+
 for file in $1/*.ldp
 do 
     echo 'Converting patterns in '$file'...' 
@@ -22,3 +24,4 @@ else
 fi
 
 rm target/tmp/*
+rmdir target/tmp

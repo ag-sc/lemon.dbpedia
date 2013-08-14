@@ -390,7 +390,7 @@
                                [ lemon:reference <http://dbpedia.org/ontology/foundingYear>;
                                  lemon:subjOfProp :arg2foundIn;
                                  lemon:objOfProp  :arg3foundIn ] ] ,
-                lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/foundingPerson>;
+              [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/foundingPerson>;
                                  lemon:subjOfProp :arg2foundIn;
                                  lemon:objOfProp  :arg1foundIn ] ,
                                [ lemon:reference <http://dbpedia.org/ontology/foundationPlace>;
@@ -412,8 +412,7 @@
                                  lemon:subjOfProp :arg2foundOn;
                                  lemon:objOfProp  :arg3foundOn ] ];
   lexinfo:partOfSpeech lexinfo:verb .
-:arg3foundIn lemon:marker :on .
-
+:arg3foundOn lemon:marker :on .
 
 ## releaseDate, completionDate, production{Start|End}{Date|Year} ## 
 

@@ -47,8 +47,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   // origin 
 
   RelationalAdjective("made",dbpedia:origin,
-        propSubj = CopulativeArg restrictedTo dbpedia:Device,
-        propObj  = PrepositionalObject("in)),
+      relationalArg = PrepositionalObject("in")),
+  //  propSubj = CopulativeArg restrictedTo dbpedia:Device,
+  //  propObj  = PrepositionalObject("in)),
 
   // averageSpeed, topSpeed, displacement
 
