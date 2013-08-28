@@ -276,17 +276,17 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
 
   // {throwing|batting}Side, shoots
 
-  StateVerb(["throw"/verb "left-handed"/adverb],lex:throwLeft), 
-  StateVerb(["throw"/verb "left"/adverb],lex:throwLeft), 
-  StateVerb(["throw"/verb "right-handed"/adverb],lex:throwRight), 
-  StateVerb(["throw"/verb "right"/adverb],lex:throwRight), 
-  StateVerb(["bat"/verb "left-handed"/adverb],lex:batLeft), 
-  StateVerb(["bat"/verb "left"/adverb],lex:batLeft), 
-  StateVerb(["bat"/verb "right-handed"/adverb],lex:batRight), 
-  StateVerb(["bat"/verb "right"/adverb],lex:batRight), 
+  //StateVerb(["throw"/verb "left-handed"/adverb],lex:throwLeft), 
+  //StateVerb(["throw"/verb "left"/adverb],lex:throwLeft), 
+  //StateVerb(["throw"/verb "right-handed"/adverb],lex:throwRight), 
+  //StateVerb(["throw"/verb "right"/adverb],lex:throwRight), 
+  //StateVerb(["bat"/verb "left-handed"/adverb],lex:batLeft), 
+  //StateVerb(["bat"/verb "left"/adverb],lex:batLeft), 
+  //StateVerb(["bat"/verb "right-handed"/adverb],lex:batRight), 
+  //StateVerb(["bat"/verb "right"/adverb],lex:batRight), 
 
-  StateVerb(["shoot"/verb "right"/adverb],lex:shootRight), 
-  StateVerb(["shoot"/verb "left"/adverb],lex:shootLeft), 
+  //StateVerb(["shoot"/verb "right"/adverb],lex:shootRight), 
+  //StateVerb(["shoot"/verb "left"/adverb],lex:shootLeft), 
   IntersectiveDataPropertyAdjective("ambidextrous",dbpedia:shoots,"Ambidextrous"),
 
   // plays 
