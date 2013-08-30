@@ -35,7 +35,7 @@ def run():
       elif f.endswith('.ttl') or f.endswith('.n3') or f.endswith('.nt'):
          graph = graph.parse(f,format='n3') 
       else: 
-         print 'Unknown format: '+f
+         print 'Unknown format: ' + str(f)
          exit(1)
 
   lexicon = URIRef("http://github.com/cunger/lemon.dbpedia/target/dbpedia_"+argv[1]+"#")
@@ -60,7 +60,7 @@ def run():
   out.write(graph.serialize()+'\n\n')
   out.close()
 
-  print 'Done: ' + result_file
+  print 'Done: ' + str(result_file)
 
   print 'Generating URI list...' 
 

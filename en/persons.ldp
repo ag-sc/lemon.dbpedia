@@ -124,7 +124,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
      propObj  = CopulativeArg) with plural "dates of birth",
     
   ConsequenceVerb("bear",dbpedia:birthDate,
-     propObj  = PrepositionalObject("on")),
+      propObj  = PrepositionalObject("on")),
 
   ConsequenceVerb("bear",dbpedia:birthYear,
      propObj  = PrepositionalObject("in")),

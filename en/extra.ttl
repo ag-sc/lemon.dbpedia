@@ -66,7 +66,17 @@
                 :addedToNRHP,
                 :placedOnNRHP,
                 :haveEnrollmentOf,
-                :withEnrollmentOf .
+                :withEnrollmentOf,
+                :throwLeftHanded,
+                :throwLeft,
+                :throwRightHanded,
+                :throwRight,
+                :batLeftHanded,
+                :batLeft,
+                :batRightHanded,
+                :batRight,
+                :shootLeft,
+                :shootRight .
 
 
 ## Misc ##
@@ -324,6 +334,84 @@
                                  lemon:objOfProp  :arg3draft ] ] .
 :arg3draft lemon:marker :in .
 
+
+## {throwing|batting}Side, shoots ##
+
+:throwLeftHanded a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:decomposition ( :component_throw :component_lefthanded ) ;   
+  lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
+                      lexinfo:subject :arg_throw ] ;
+  lemon:sense [ lemon:reference lex:throwLeft ;
+                lemon:isA :arg_throw ] .
+:throwLeft a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:decomposition ( :component_throw :component_left ) ;   
+  lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
+                      lexinfo:subject :arg_throw ] ;
+  lemon:sense [ lemon:reference lex:throwLeft ;
+                lemon:isA :arg_throw ] .
+
+:throwRightHanded a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:decomposition ( :component_throw :component_righthanded ) ;   
+  lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
+                      lexinfo:subject :arg_throw ] ;
+  lemon:sense [ lemon:reference lex:throwRight ;
+                lemon:isA :arg_throw ] .
+:throwRight a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:decomposition ( :component_throw :component_right ) ;   
+  lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
+                      lexinfo:subject :arg_throw ] ;
+  lemon:sense [ lemon:reference lex:throwRight ;
+                lemon:isA :arg_throw ] .
+
+:batLeftHanded a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:decomposition ( :component_bat :component_lefthanded ) ;   
+  lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
+                      lexinfo:subject :arg_bat ] ;
+  lemon:sense [ lemon:reference lex:batLeft ;
+                lemon:isA :arg_bat ] .
+:batLeft a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:decomposition ( :component_bat :component_left ) ;   
+  lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
+                      lexinfo:subject :arg_bat ] ;
+  lemon:sense [ lemon:reference lex:batLeft ;
+                lemon:isA :arg_bat ] .
+
+:batRightHanded a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:decomposition ( :component_bat :component_righthanded ) ;   
+  lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
+                      lexinfo:subject :arg_bat ] ;
+  lemon:sense [ lemon:reference lex:batRight ;
+                lemon:isA :arg_bat ] .
+:batRight a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:decomposition ( :component_bat :component_right ) ;   
+  lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
+                      lexinfo:subject :arg_bat ] ;
+  lemon:sense [ lemon:reference lex:batRight ;
+                lemon:isA :arg_bat ] .
+
+:shootLeft a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:decomposition ( :component_shoot :component_left ) ;   
+  lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
+                      lexinfo:subject :arg_shoot ] ;
+  lemon:sense [ lemon:reference lex:shootLeft ;
+                lemon:isA :arg_shoot ] .
+:shootRight a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:decomposition ( :component_shoot :component_right ) ;   
+  lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
+                      lexinfo:subject :arg_shoot ] ;
+  lemon:sense [ lemon:reference lex:shootRight ;
+                lemon:isA :arg_shoot ] .
+ 
 
 ## starring, voice ##
 
@@ -914,6 +1002,18 @@
   lemon:canonicalForm [ lemon:writtenRep "consist"@en ] ;
   lexinfo:partOfSpeech lexinfo:verb ] .
 
+:component_throw lemon:element [ a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "throw"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ] .
+
+:component_bat lemon:element [ a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "bat"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ] .
+
+:component_shoot lemon:element [ a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "shoot"@en ] ;
+  lexinfo:partOfSpeech lexinfo:verb ] .
+
 ## Participles ## 
 
 :component_added  lemon:element [ lexinfo:participleFormOf :add ;   lemon:canonicalForm [ lemon:writtenRep "added"@en ] ] .
@@ -999,6 +1099,24 @@
 :component_same lemon:element [ a lemon:Word ;
   lemon:canonicalForm [ lemon:writtenRep "same"@en ] ;
   lexinfo:partOfSpeech lexinfo:adjective ] .
+
+## Adverbs ##
+
+:component_lefthanded lemon:element [ a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "left-handed"@en ] ;
+  lexinfo:partOfSpeech lexinfo:adverb ] .
+
+:component_righthanded lemon:element [ a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "right-handed"@en ] ;
+  lexinfo:partOfSpeech lexinfo:adverb ] .
+
+:component_left lemon:element [ a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "left"@en ] ;
+  lexinfo:partOfSpeech lexinfo:adverb ] .
+
+:component_right lemon:element [ a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "right"@en ] ;
+  lexinfo:partOfSpeech lexinfo:adverb ] .
 
 ## Determiners ##
 
