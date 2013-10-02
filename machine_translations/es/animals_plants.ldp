@@ -116,13 +116,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#>,"en",
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
   
-  IntersectiveDataPropertyAdjective("extinct",dbpedia:conservationStatus,"ex"),
-  IntersectiveDataPropertyAdjective(["extinct"/adjective "en"/preposition "la"/determiner "silvestres"/noun],dbpedia:conservationStatus,"EW"),
-  IntersectiveDataPropertyAdjective("vulnerables",dbpedia:conservationStatus,"vu"),
-  IntersectiveAdjective("amenazadas",lex:Threatened),
+  IntersectiveDataPropertyAdjective("extinto",dbpedia:conservationStatus,"ex"),
+  IntersectiveDataPropertyAdjective(["extinto"/adjective "en"/preposition "estado"/noun "silvestre"/adjective],dbpedia:conservationStatus,"EW"),
+  IntersectiveDataPropertyAdjective("vulnerable",dbpedia:conservationStatus,"vu"),
+  IntersectiveAdjective("amenazado",lex:Threatened),
   IntersectiveDataPropertyAdjective("amenazadas",dbpedia:conservationStatus,"en"),
-  IntersectiveDataPropertyAdjective(["cuidadosamente"/adverb "amenazadas"/adjective],dbpedia:conservationStatus,"CR"),
-  IntersectiveDataPropertyAdjective(["próximo"/adjective "amenazadas"/adjective],dbpedia:conservationStatus,"TN"),
+  IntersectiveDataPropertyAdjective(["en"/preposition "peligro"/noun "crítico"/adjective],dbpedia:conservationStatus,"CR"),
+  IntersectiveDataPropertyAdjective(["casi"/adverb "amenazado"/adjective],dbpedia:conservationStatus,"TN"),
 
   // binomialAuthority
 
