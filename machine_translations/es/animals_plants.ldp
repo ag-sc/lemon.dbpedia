@@ -112,7 +112,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#>,"en",
 
   // conservationStatus
 
-  RelationalNoun(["conservación"/noun "estatuto"/noun],dbpedia:conservationStatus,
+  RelationalNoun(["estado"/noun "de"/preposition "conservación"/noun ],dbpedia:conservationStatus,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
   
