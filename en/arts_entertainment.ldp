@@ -1,7 +1,7 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_3#>,"en",
 
   //// Classes
   
@@ -315,9 +315,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  ConsequenceVerb("release",dbpedia:releaseDate,
-        propSubj = lex:pieceOfWork as Subject, 
-        propObj  = lex:date as PrepositionalObject("on")),
+  RelationalAdjective("released",dbpedia:releaseDate,
+        relationalArg = PrepositionalObject("on")),
 
   StateVerb(["come"/verb "out"/particle],dbpedia:releaseDate,
         propObj  = PrepositionalObject("on")),
@@ -338,13 +337,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  ConsequenceVerb("record",dbpedia:recordDate,
-        propSubj = lex:musicalWork as Subject, 
-        propObj  = lex:date as PrepositionalObject("on")),
-
-  ConsequenceVerb("record",dbpedia:recordedIn,
-        propSubj = lex:musicalWork as Subject, 
-        propObj  = lex:place as PrepositionalObject("in")),
+  RelationalAdjective("recorded",dbpedia:recordDate,
+        relationalArg = PrepositionalObject("on")),
+  RelationalAdjective("recorded",dbpedia:recordedIn,
+        relationalArg = PrepositionalObject("in")),
 
   // award 
 
@@ -356,9 +352,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   StateVerb("receive",dbpedia:award),
 
-  ConsequenceVerb("award",dbpedia:award,
-        propSubj = lex:person as Subject,
-        propObj  = lex:prizeAwarded as DirectObject),
+  RelationalAdjective("awarded",dbpedia:award,
+        relationalArg = DirectObject),
 
   // previous and subsequent work
 
@@ -467,9 +462,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   StateVerb("play",dbpedia:programmeFormat), 
 
-  ConsequenceVerb("broadcast",dbpedia:broadcastArea,
-       propSubj = lex:station as Subject, 
-       propObj  = lex:area as PrepositionalObject("in")),
+  RelationalAdjective("broadcasted",dbpedia:broadcastArea,
+       relationalArg = PrepositionalObject("in")),
   StateVerb("cover",dbpedia:broadcastArea),
   StateVerb("operate",dbpedia:broadcastNetwork,
         propSubj = DirectObject,
@@ -477,12 +471,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   RelationalNoun("part",dbpedia:broadcastNetwork,
         propObj  = PrepositionalObject("of")), 
 
-  ConsequenceVerb("broadcast",dbpedia:network,
-     propSubj = lex:station as Subject, 
-     propObj  = lex:area as PrepositionalObject("on")),
-  ConsequenceVerb("air",dbpedia:network,
-     propSubj = lex:show as Subject, 
-     propObj  = lex:network as PrepositionalObject("on")),
+  RelationalAdjective("broadcasted",dbpedia:network,
+     relationalArg = PrepositionalObject("on")),
+  RelationalAdjective("aired",dbpedia:network,
+     relationalArg = PrepositionalObject("on")),
 
   RelationalNoun("episode",dbpedia:series,
         propSubj = PrepositionalObject("of") restrictedTo dbpedia:TelevisionEpisode,

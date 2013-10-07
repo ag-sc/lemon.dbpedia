@@ -43,14 +43,17 @@ def run():
   print 'Merging lexica into <'+str(lexicon)+'>...'
 
   for l,_,_ in graph.triples((None,RDF.type,lemon.Lexicon)):
-      if l != lexicon:
-         for s,p,o in graph.triples((l,RDF.type,lemon.Lexicon)):
-             graph.remove((s,p,o))
-         for s,p,o in graph.triples((l,lemon.language,None)):
-             graph.remove((s,p,o))
-         for s,p,o in graph.triples((l,lemon.entry,None)):
-             graph.remove((s,p,o))
-             graph.add((lexicon,p,o))
+      print l # DEBUG
+      for s,p,o in graph.triples((l,RDF.type,lemon.Lexicon)):
+          graph.remove((s,p,o))
+      for s,p,o in graph.triples((l,lemon.language,None)):
+          graph.remove((s,p,o))
+      for s,p,o in graph.triples((l,lemon.entry,None)):
+          graph.remove((s,p,o))
+          graph.add((lexicon,p,o))
+
+  graph.add((lexicon,RDF.type,lemon.Lexicon))
+  graph.add((lexicon,lemon.language,argv[1]))
 
   print 'Serializing...'
 

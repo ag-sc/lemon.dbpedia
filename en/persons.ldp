@@ -2,7 +2,7 @@
 @prefix resource: <http://dbpedia.org/resource/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
 
   //// Classes
 
@@ -123,18 +123,19 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg) with plural "dates of birth",
     
-  ConsequenceVerb("bear",dbpedia:birthDate,
-      propObj  = PrepositionalObject("on")),
+  RelationalAdjective("born",dbpedia:birthDate,
+     relationalArg = PrepositionalObject("on")),
 
-  ConsequenceVerb("bear",dbpedia:birthYear,
-     propObj  = PrepositionalObject("in")),
-  ConsequenceVerb("bear",dbpedia:birthPlace,
-     propObj  = PrepositionalObject("in")),
-  ConsequenceVerb("bear",lex:birthCountry,
-     propObj  = PrepositionalObject("in")),
+  RelationalAdjective("born",dbpedia:birthYear,
+     relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("born",dbpedia:birthPlace,
+     relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("born",lex:birthCountry,
+     relationalArg = PrepositionalObject("in")),
 
-  ConsequenceVerb("bear",dbpedia:stateOfOrigin,
-     propObj  = PrepositionalObject("in")),
+  RelationalAdjective("born",dbpedia:stateOfOrigin,
+     relationalArg = PrepositionalObject("in")),
+
   StateVerb("come",dbpedia:stateOfOrigin,
      propObj  = PrepositionalObject("from")),
 

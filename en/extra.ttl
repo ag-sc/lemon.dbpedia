@@ -7,7 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
-@prefix : <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+@prefix : <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#> .
 
 :lexicon a lemon:Lexicon ;
     lemon:language "en" ;
@@ -665,7 +665,7 @@
                                  lemon:subjOfProp :arg1link;
                                  lemon:objOfProp  :arg3link ] ];
   lexinfo:partOfSpeech lexinfo:verb .
-:arg3discover lemon:marker :to .
+:arg3link lemon:marker :to .
 
 
 

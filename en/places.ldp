@@ -1,7 +1,7 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_10#>,"en",
 
   //// Classes
 
@@ -322,17 +322,17 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
 
   // openend and completed
 
-  ConsequenceVerb("open",dbpedia:dateUse,
-     propObj  = PrepositionalObject("in")),
-  ConsequenceVerb("open",dbpedia:openingDate,
-     propObj  = PrepositionalObject("on")),
-  ConsequenceVerb("open",dbpedia:openingYear,
-     propObj  = PrepositionalObject("in")),
+  RelationalAdjective("opened",dbpedia:dateUse,
+     relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("opened",dbpedia:openingDate,
+     relationalArg = PrepositionalObject("on")),
+  RelationalAdjective("opened",dbpedia:openingYear,
+     relationalArg = PrepositionalObject("in")),
 
-  ConsequenceVerb("complete",dbpedia:completionDate,
-     propObj  = PrepositionalObject("on")),
-  ConsequenceVerb("complete",dbpedia:dateCompleted,
-     propObj  = PrepositionalObject("on")),
+  RelationalAdjective("completed",dbpedia:completionDate,
+     relationalArg = PrepositionalObject("on")),
+  RelationalAdjective("completed",dbpedia:dateCompleted,
+     relationalArg = PrepositionalObject("on")),
 
   // headquarter 
 
