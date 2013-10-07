@@ -2,6 +2,6 @@
 @prefix resource: <http://dbpedia.org/resource/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#>,"es",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_14#>,"es",
 
 )

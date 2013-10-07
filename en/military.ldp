@@ -2,7 +2,7 @@
 @prefix resource: <http://dbpedia.org/resource/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_5#>,"en",
 
   //// Classes
 
@@ -59,7 +59,5 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
        relationalArg = PrepositionalObject("at") restrictedTo lex:Building_or_Infrastructure),
   RelationalAdjective("based",dbpedia:garrison,
        relationalArg = PrepositionalObject("in") restrictedTo dbpedia:PopulatedPlace)
-
-
 
 )

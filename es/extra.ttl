@@ -7,7 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
-@prefix : <http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#> .
+@prefix : <http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_1#> .
 
 :lexicon a lemon:Lexicon ;
     lemon:language "es" .

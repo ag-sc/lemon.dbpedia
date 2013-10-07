@@ -2,7 +2,7 @@
 @prefix resource: <http://dbpedia.org/resource/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_13#>,"en",
 
   //// Classes
 
@@ -149,12 +149,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
   RelationalAdjective("assembled",dbpedia:assembly,
        relationalArg = PrepositionalObject("in")), 
 
-  ConsequenceVerb("commission",dbpedia:commissioningDate,
-     propSubj = lex:ship as Subject, 
-     propObj  = lex:date as PrepositionalObject("on")),
-  ConsequenceVerb("decommission",dbpedia:decommissioningDate,
-     propSubj = lex:ship as Subject, 
-     propObj  = lex:date as PrepositionalObject("on")),
+  RelationalAdjective("commissioned",dbpedia:commissioningDate,
+     relationalArg = PrepositionalObject("on")),
+  RelationalAdjective("decommissioned",dbpedia:decommissioningDate,
+     relationalArg = PrepositionalObject("on")),
 
   StateVerb("build",dbpedia:builder,
        propSubj = DirectObject,
@@ -184,12 +182,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#>,"en",
        propSubj = DirectObject,
        propObj  = Subject),
 
-  ConsequenceVerb(["lay"/verb "down"/preposition],dbpedia:layingDown,
-       propSubj = lex:ship as CopulativeSubject, 
-       propObj  = lex:date as PrepositionalObject("on")),
-  ConsequenceVerb("launch",dbpedia:shipLaunch,
-       propSubj = lex:ship as CopulativeSubject, 
-       propObj  = lex:date as PrepositionalObject("on")),
+  RelationalAdjective(["laid"/verb "down"/preposition],dbpedia:layingDown,
+       relationalArg = PrepositionalObject("on")),
+  RelationalAdjective("launched",dbpedia:shipLaunch,
+       relationalArg = PrepositionalObject("on")),
 
   RelationalNoun(["ICAO"/noun "identifier"/noun],dbpedia:icaoLocationIdentifier,
        propSubj = PossessiveAdjunct,

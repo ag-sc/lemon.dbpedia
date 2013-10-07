@@ -1,7 +1,7 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_11#>,"en",
 
   //// Classes
 
@@ -69,8 +69,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_8#>,"en",
        propSubj = PrepositionalObject("from"),
        propObj  = Subject),
 
-  ConsequenceVerb("launch",dbpedia:launchDate,
-       propSubj = lex:rocket as CopulativeSubject, 
-       propObj  = lex:date as PrepositionalObject("on"))
+  RelationalAdjective("launched",dbpedia:launchDate,
+       relationalArg = PrepositionalObject("on"))
 
 )
