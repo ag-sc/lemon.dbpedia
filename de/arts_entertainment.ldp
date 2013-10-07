@@ -146,6 +146,375 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_2#>,"de",
   ClassNoun("Musical",dbpedia:Musical) neuter with plural "Musicals",
   ClassNoun("Preis",dbpedia:Award) masculine with plural "Preise",
   ClassNoun("Auszeichnung",dbpedia:Award) feminine with plural "Auszeichnungen",
-  ClassNoun("Orden",dbpedia:Decoration) masculine with plural "Orden"
+  ClassNoun("Orden",dbpedia:Decoration) masculine with plural "Orden",
+
+
+  //// Properties
+
+  // artist 
+
+  StateVerb("aufnehmen",dbpedia:artist, // TODO "auf"/prefix "nehmen"/verb ?
+        propSubj = DirectObject restrictedTo lex:Album_or_Song,
+        propObj  = Subject),
+  RelationalNoun("Interpret",dbpedia:artist,
+        propSubj = PrepositionalObject("von") restrictedTo lex:Album_or_Song,
+        propObj  = CopulativeArg),
+
+  // (literary) genre
+
+  RelationalNoun("Genre",dbpedia:genre,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun("Genre",dbpedia:literaryGenre,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  StateVerb("machen",dbpedia:genre,
+        propObj  = DirectObject restrictedTo dbpedia:MusicGenre),
+  StateVerb("schreiben",dbpedia:genre,
+        propSubj = Subject restrictedTo dbpedia:Writer,
+        propObj  = DirectObject),
+
+  // language
+
+  RelationalAdjective("geschrieben",dbpedia:language,
+  //    propSubj = CopulativeSubject restrictedTo dbpedia:WrittenWork,
+  //    propObj  = PrepositionalObject("in)),
+        relationalArg = PrepositionalObject("in")),
+
+  // runtime
+
+  RelationalNoun("Laufzeit",dbpedia:runtime,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),  
+  // Adjective: num "lang"
+
+  // writer
+
+  RelationalNoun("autor",dbpedia:writer,
+        propSubj = PrepositionalObject("von"),
+        propObj  = CopulativeArg),
+
+  RelationalNoun("Urhebers",dbpedia:writer,
+        propSubj = PossessiveAdjunct,
+        propObj  = Subject),
+
+  StateVerb("Schreiben",dbpedia:writer,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
+  // publisher, distibutor, oclc
+
+  RelationalNoun("Verlags",dbpedia:publisher,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  StateVerb("veröffentlichen",dbpedia:publisher,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
+  RelationalNoun("Lieferant",dbpedia:distributor,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  StateVerb("Verteilung",dbpedia:distributor,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
+  RelationalNoun(["OCLC"/noun "Nummer"/noun],dbpedia:oclc,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  // creator 
+
+  RelationalNoun("Schöpfer",dbpedia:creator,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+  StateVerb("erschaffen",dbpedia:creator,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
+  // composer 
+
+  RelationalNoun("Komponist",dbpedia:composer,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+  StateVerb("compose",dbpedia:composer,
+        propSubj = DirectObject,
+        propObj  = Subject),
+  StateVerb("Schreiben",dbpedia:composer,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
+  // musical{Band|Artist}
+
+  StateVerb("Schreiben",dbpedia:musicalBand,
+        propSubj = DirectObject,
+        propObj  = Subject),
+  StateVerb("Schreiben",dbpedia:musicalArtist,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
+  StateVerb("Platte",dbpedia:musicalBand,
+        propSubj = DirectObject,
+        propObj  = Subject),
+  StateVerb("Platte",dbpedia:musicalArtist,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
+  RelationalNoun("Dolmetschers",dbpedia:musicalArtist,
+        propSubj = PrepositionalObject("von"),
+        propObj  = CopulativeArg),
+
+  // starring, guest ,presenter
+
+  StateVerb("Star",dbpedia:starring),
+  StateVerb("einzubringen",dbpedia:starring),
+  StateVerb("spielen",dbpedia:starring,
+        propSubj = PrepositionalObject("in"),
+        propObj  = Subject),
+  StateVerb("einzubringen",dbpedia:guest),
+  StateVerb("erscheinen",dbpedia:guest,
+        propSubj = PrepositionalObject("in"),
+        propObj  = Subject),
+  RelationalNoun(["Gast"/noun "Star"/noun],dbpedia:guest,
+        propSubj = PrepositionalObject("in"),
+        propObj  = CopulativeArg),
+
+  RelationalNoun("Laudator",dbpedia:presenter,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  // instrument 
+
+  RelationalNoun("Instrument",dbpedia:instrument,
+        propSubj = PrepositionalObject("von"),
+        propObj  = CopulativeArg),
+
+  StateVerb("spielen",dbpedia:instrument,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
+  // musicFusionGenre 
+
+  StateVerb("Sicherung",dbpedia:musicFusionGenre,
+        propSubj = PrepositionalObject("in"),
+        propObj  = Subject),
+
+  // openingFilm 
+
+  RelationalNoun(["Eröffnung"/adjective "Folien"/noun],dbpedia:openingFilm,
+        propSubj = PrepositionalObject("at"),
+        propObj = CopulativeArg),
+
+  // requirement 
+
+  StateVerb("vorschreiben",dbpedia:requirement,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
+  RelationalNoun("Erfordernis",dbpedia:requirement,
+        propSubj = PrepositionalObject("von"),
+        propObj = CopulativeArg),
+
+  // releaseDate, completionDate, channel, company
+
+  RelationalNoun(["Überführung"/noun "date"/noun],dbpedia:releaseDate,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  ConsequenceVerb("Überführung",dbpedia:releaseDate,
+        propSubj = lex:pieceOfWork as Subject, 
+        propObj  = lex:date as PrepositionalObject("auf")),
+
+  StateVerb(["come"/verb "raus"/particle],dbpedia:releaseDate,
+        propObj  = PrepositionalObject("auf")),
+
+  StateVerb("Luft",dbpedia:completionDate,
+        propSubj = Subject restrictedTo dbpedia:TelevisionShow,
+        propObj  = PrepositionalObject("bis")),
+  StateVerb("Luft",dbpedia:channel,
+        propObj  = PrepositionalObject("auf")),
+
+  StateVerb("produzieren",dbpedia:company,
+        propSubj = DirectObject restrictedTo dbpedia:TelevisionShow,
+        propObj  = Subject),
+
+  // recordDate, recordedIn
+
+  RelationalNoun(["Platte"/noun "date"/noun],dbpedia:recordDate,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  ConsequenceVerb("Platte",dbpedia:recordDate,
+        propSubj = lex:musicalWork as Subject, 
+        propObj  = lex:date as PrepositionalObject("auf")),
+
+  ConsequenceVerb("Platte",dbpedia:recordedIn,
+        propSubj = lex:musicalWork as Subject, 
+        propObj  = lex:place as PrepositionalObject("in")),
+
+  // award 
+
+  RelationalNoun("Einzelbeihilfe",dbpedia:award,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  StateVerb("gewinnen",dbpedia:award),
+
+  StateVerb("entgegenzunehmen",dbpedia:award),
+
+  ConsequenceVerb("Einzelbeihilfe",dbpedia:award,
+        propSubj = lex:person as Subject,
+        propObj  = lex:prizeAwarded as DirectObject),
+
+  // previous and subsequent work
+
+  RelationalNoun("follow-up",dbpedia:subsequentWork,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun("Fortsetzung",dbpedia:subsequentWork,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun("Prequel",dbpedia:previousWork,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+
+  RelationalAdjective("geschrieben",dbpedia:previousWork,
+        relationalArg = PrepositionalObject("bevor") restrictedTo dbpedia:Book), 
+  RelationalAdjective("geschrieben",dbpedia:subsequentWork,
+        relationalArg = PrepositionalObject("nachdem") restrictedTo dbpedia:Book), 
+
+  RelationalAdjective("Platte",dbpedia:previousWork,
+        relationalArg = PrepositionalObject("bevor") restrictedTo dbpedia:Album), 
+  RelationalAdjective("Platte",dbpedia:subsequentWork,
+        relationalArg = PrepositionalObject("nachdem") restrictedTo dbpedia:Album), 
+
+  // (former) band member
+
+  RelationalNoun("Mitglied",dbpedia:bandMember,
+        propSubj = PrepositionalObject("von"),
+        propObj  = CopulativeArg),
+
+
+  // others 
+
+  RelationalNoun("ISBN",dbpedia:isbn,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun("ISSN",dbpedia:issn,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  RelationalNoun(["Einrichtung"/noun "Ausweis"/noun],dbpedia:facilityId,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  RelationalNoun("B-side",dbpedia:bSide,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  RelationalNoun("Stück",dbpedia:album,
+        propSubj = PrepositionalObject("auf"),
+        propObj  = CopulativeArg),
+  RelationalNoun("inhaltlichen",dbpedia:album,
+        propSubj = PrepositionalObject("auf"),
+        propObj  = CopulativeArg),
+
+  RelationalNoun(["Schwester"/noun "Revier"/noun],dbpedia:sisterStation,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun(["Schwester"/noun "Kanal"/noun],dbpedia:sisterStation,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun(["Schwester"/noun "Netzes"/noun],dbpedia:sisterStation,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  RelationalNoun("Haushaltsmittel",dbpedia:budget,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun("brutto",dbpedia:gross,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  StateVerb("schaffen",dbpedia:gross),
+  StateVerb(["treffen"/verb "in"/preposition],dbpedia:gross),
+  StateVerb(["treffen"/verb "vorbei"/preposition],dbpedia:gross),
+
+  RelationalNoun("Überarbeitung",dbpedia:review,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalAdjective("überarbeitet",dbpedia:review,
+        relationalArg = PrepositionalObject("at")),
+
+  RelationalNoun(["assoziierten"/adjective "Rechtsakt"/noun],dbpedia:associatedBand,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun(["assoziierten"/adjective "Rechtsakt"/noun],dbpedia:associatedMusicalArtist,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+
+  RelationalNoun("Kameramann",dbpedia:cinematography,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+  StateVerb("grünen Trieben",dbpedia:cinematographer,
+        propSubj = DirectObject,
+        propObj  = Subject),
+
+  RelationalNoun(["Ratsmitglied"/adjective "Hersteller"/noun],dbpedia:executiveProducer,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+
+  StateVerb("edit",dbpedia:editing,
+        propSubj = DirectObject,
+        propObj  = Subject), 
+
+  RelationalNoun(["ehemaligen"/adjective "Band"/noun "Mitglied"/noun],dbpedia:formerBandMember,
+       propSubj = PrepositionalObject("von"),
+       propObj  = CopulativeArg),  
+
+  StateVerb("spielen",dbpedia:programmeFormat), 
+
+  ConsequenceVerb("ausgestrahlt",dbpedia:broadcastArea,
+       propSubj = lex:station as Subject, 
+       propObj  = lex:area as PrepositionalObject("in")),
+  StateVerb("cover",dbpedia:broadcastArea),
+  StateVerb("operieren",dbpedia:broadcastNetwork,
+        propSubj = DirectObject,
+        propObj  = Subject),
+  RelationalNoun("Teil",dbpedia:broadcastNetwork,
+        propObj  = PrepositionalObject("von")), 
+
+  ConsequenceVerb("ausgestrahlt",dbpedia:network,
+     propSubj = lex:station as Subject, 
+     propObj  = lex:area as PrepositionalObject("auf")),
+  ConsequenceVerb("Luft",dbpedia:network,
+     propSubj = lex:show as Subject, 
+     propObj  = lex:network as PrepositionalObject("auf")),
+
+  RelationalNoun("Episode",dbpedia:series,
+        propSubj = PrepositionalObject("von") restrictedTo dbpedia:TelevisionEpisode,
+        propObj  = CopulativeArg), 
+  RelationalNoun("Teil",dbpedia:series,
+        propSubj = PrepositionalObject("von"),
+        propObj  = CopulativeArg), 
+
+  IntersectiveDataPropertyAdjective("Güteklasse A",dbpedia:broadcastStationClass,"a"), 
+  IntersectiveDataPropertyAdjective("Klasse b",dbpedia:broadcastStationClass,"b"), 
+  IntersectiveDataPropertyAdjective("Klasse C",dbpedia:broadcastStationClass,"C"), 
+  IntersectiveDataPropertyAdjective("Klasse d",dbpedia:broadcastStationClass,"d"), 
+
+  StateVerb("meine",dbpedia:callsignMeaning), 
+  StateVerb("Erntebestand",dbpedia:callsignMeaning,
+        propObj = PrepositionalObject("für")),
+
+  RelationalNoun("spin-off",dbpedia:related,
+        propSubj = PossessiveAdjunct restrictedTo dbpedia:TelevisionShow,
+        propObj  = CopulativeArg), 
+
+  RelationalNoun(["LC"/noun "Einreihung"/noun],dbpedia:lcc,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg), 
+  RelationalNoun(["Dewey"/noun "Einreihung"/noun],dbpedia:dcc,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg)
 
 )
