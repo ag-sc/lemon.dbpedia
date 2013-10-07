@@ -43,7 +43,6 @@ clubsRecordGoalscorer
 schoolPatron
 circuitLength
 Person/height
-Game
 toll
 MotorcycleRacingLeague
 supplies
@@ -73,7 +72,6 @@ classification
 distanceLaps
 spokenIn
 county
-Book
 campusType
 handedness
 WrestlingEvent
@@ -96,7 +94,6 @@ restoreDate
 meshNumber
 Galaxy/periapsis
 blockAlloy
-Convention
 updated
 geminiAward
 currency
@@ -147,7 +144,6 @@ President
 infantMortality
 topSpeed
 impactFactor
-MusicalWork
 wikiPageExternalLink
 decideDate
 firstLaunchDate
@@ -170,12 +166,11 @@ network
 tonyAward
 Chancellor
 firstLeader
-BroadcastNetwork
+activeYearsStartDate
 soccerTournamentThisSeason
 minimumTemperature
 airportUsing
 GrandPrix
-Work
 notifyDate
 Planet
 thirdCommander
@@ -220,7 +215,7 @@ MilitaryConflict
 firstGame
 playingTime
 prospectTeam
-highestPlace
+Automobile
 draftYear
 soccerTournamentMostSuccesfull
 cosparId
@@ -229,7 +224,6 @@ iobdbId
 managementRegion
 strength
 marketCapitalisation
-Band
 season
 populationDensity
 originalLanguage
@@ -268,7 +262,6 @@ predecessor
 electionDateLeader
 winsAtChampionships
 nonFictionSubject
-TelevisionShow
 statisticYear
 spokesperson
 cylinderCount
@@ -309,13 +302,11 @@ productionStartDate
 jstor
 municipalityCode
 committeeInLegislature
-ComicsCreator
 startYearOfInsertion
 height
 numberOfPlatformLevels
 PaintballLeague
 modelStartYear
-activeYearsStartDate
 satellitesDeployed
 numberOfCapitalDeputies
 MeanOfTransportation/width
@@ -339,7 +330,7 @@ launches
 illiteracy
 SoccerLeagueSeason
 Spacecraft
-afiAward
+deathPlace
 voice
 Constellation
 largestCity
@@ -359,7 +350,6 @@ mostWins
 stateOfOrigin
 monarch
 parentMountainPeak
-ComicsCharacter
 satellite
 Rocket/mass
 numberOfRockets
@@ -374,7 +364,6 @@ Canal
 River
 aircraftHelicopter
 portrayer
-PeriodicalLiterature
 highestPosition
 port1DockingDate
 dressCode
@@ -384,7 +373,6 @@ elo
 photographer
 board
 managementMountain
-declination
 elevation
 hasSurfaceForm
 Restaurant
@@ -424,7 +412,7 @@ isHandicappedAccessible
 annualTemperature
 mostPopulatedCountry
 binomial
-Amphibian
+projectBudgetTotal
 starring
 nationalRanking
 giniCoefficientCategory
@@ -565,7 +553,8 @@ whaDraft
 usedInWar
 precursor
 acquirementDate
-projectBudgetTotal
+availableSmartCard
+Amphibian
 vicePrincipal
 nationalTopographicSystemMapNumber
 extinctionDate
@@ -593,7 +582,7 @@ Weapon
 recordedIn
 silCode
 fuel
-Broadcaster
+Beverage
 creationYear
 distanceToCapital
 mascot
@@ -646,7 +635,6 @@ serviceStartDate
 addressInRoad
 Galaxy/orbitalPeriod
 port2UndockingDate
-EurovisionSongContestEntry
 powerOutput
 supplementalDraftRound
 mapDescription
@@ -678,7 +666,7 @@ perCapitaIncome
 locatedInArea
 pastMember
 training
-Comedian
+dateOfBurial
 promotion
 discontinued
 origin
@@ -703,7 +691,6 @@ commissioningDate
 silverMedalist
 welshName
 winterAppearances
-TelevisionEpisode
 principalArea
 minorityFloorLeader
 isPartOfRoute
@@ -769,7 +756,6 @@ ranking
 serviceEndDate
 decommissioningDate
 mgiid
-Magazine
 numberOfWineries
 honours
 Muscle
@@ -843,6 +829,7 @@ dissolutionDate
 premiereYear
 neighboringMunicipality
 prominence
+wingspan
 teamSize
 principalEngineer
 governmentCountry
@@ -923,8 +910,7 @@ TeamMember
 iftaAward
 personName
 GrandPrix/course
-MusicalArtist
-availableSmartCard
+mirDockings
 lunarRover
 facultySize
 assembly
@@ -1000,7 +986,6 @@ circuitName
 Country
 symbol
 surfaceFormOccurrenceOffset
-RadioStation
 governmentRegion
 spouse
 MountainRange
@@ -1009,7 +994,6 @@ assets
 sourceConfluenceCountry
 Brain
 mass
-dateOfBurial
 Year
 numberOfCounties
 resolution
@@ -1061,14 +1045,12 @@ peabodyAward
 numberOfFederalDeputies
 personFunction
 MemberOfParliament
-deathPlace
 trainer
 GrandPrix/distance
 family
 productionStartYear
 currentlyUsedFor
 hipSize
-FictionalCharacter
 Cardinal
 cityType
 Animal
@@ -1130,7 +1112,6 @@ spurOf
 ensembl
 leaderFunction
 operatingIncome
-Film
 failedLaunches
 lessPopulousCountry
 mission
@@ -1150,7 +1131,7 @@ SpaceMission/cmpEvaDuration
 Spacecraft/cargoWater
 englishName
 port2
-wingspan
+costumeDesigner
 port1
 notableCommander
 fuelSystem
@@ -1164,7 +1145,6 @@ reopeningDate
 activeYearsEndYear
 capacity
 port1UndockingDate
-TelevisionStation
 sessionNumber
 athletics
 lastLaunch
@@ -1213,7 +1193,6 @@ connotation
 fundedBy
 aircraftTransport
 number
-MusicGenre
 fees
 dfE
 nearestCity
@@ -1229,7 +1208,6 @@ passengersPerDay
 ClubMoss
 Language
 mouthMountain
-costumeDesigner
 successfulLaunches
 prospectLeague
 part
@@ -1277,7 +1255,6 @@ Bridge
 rocketStages
 numberOfMembersAsOf
 sourcePosition
-AcademicJournal
 dissolved
 Conifer
 port2DockedTime
@@ -1314,7 +1291,6 @@ whaDraftTeam
 sisterStation
 missionDuration
 river
-Single
 facilityId
 specialEffects
 SportsTeamMember
@@ -1358,11 +1334,10 @@ capitalRegion
 firstAscentYear
 startYearOfSales
 Weapon/length
-Play
 coProducer
 serviceNumber
 Moss
-Automobile
+highestPlace
 trackNumber
 territory
 largestSettlement
@@ -1514,7 +1489,6 @@ modelEndDate
 duration
 provost
 Asteroid
-PlayboyPlaymate
 voiceType
 aircraftInterceptor
 hasVariant
@@ -1539,12 +1513,13 @@ meaning
 lowestPlace
 routeTypeAbbreviation
 neighbourConstellations
+afiAward
 computingPlatform
 routeStart
 grossDomesticProductAsOf
 Weapon/height
 depth
-Beverage
+declination
 Village
 activeYearsEndDate
 code
@@ -1554,7 +1529,6 @@ britishComedyAwards
 ChemicalSubstance
 Saint
 memberOfParliament
-TelevisionSeason
 port2DockingDate
 alpsSoiusaCode
 BasketballTeam
@@ -1567,7 +1541,6 @@ beltwayCity
 VicePrimeMinister
 trainerClub
 BaseballLeague
-mirDockings
 maidenFlightRocket
 artery
 PopulatedPlace/area
@@ -1677,7 +1650,6 @@ numberOfIslands
 currentMember
 issn
 twinCity
-Decoration
 LunarCrater
 populationTotalReference
 percentageOfAreaWater
@@ -1881,7 +1853,6 @@ latestReleaseVersion
 painter
 aircraftHelicopterObservation
 GeneLocation
-bicycleInformation
 mainspan
 canonizedDate
 crewMember
@@ -1947,7 +1918,6 @@ Drug
 allegiance
 bridgeCarries
 fuelConsumption
-Newspaper
 Volcano
 Spacecraft/cargoFuel
 winsAtAsia
@@ -2001,7 +1971,6 @@ Stadium
 soocerLeagueSeason
 winsAtAlpg
 giniCoefficientRanking
-Award
 populationTotal
 aircraftHelicopterMultirole
 Museum
@@ -2024,11 +1993,10 @@ thirdDriver
 lastAirDate
 firstLaunchRocket
 reservations
-Writer
 nextMission
 Lake
 Philosopher
-Instrument
+bicycleInformation
 inn
 numberOfMinistries
 budget
@@ -2038,7 +2006,6 @@ numberOfCountries
 campus
 chromosome
 thirdTeam
-RecordLabel
 modelEndYear
 owningOrganisation
 projectReferenceID
@@ -2051,7 +2018,6 @@ AutomobileEngine/length
 whaDraftYear
 Congressman
 simcCode
-Musical
 vein
 restingPlacePosition
 thirdDriverCountry

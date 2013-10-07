@@ -1,31 +1,151 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_2#>,"de",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_3#>,"de",
 
   //// Classes
   
-  ClassNoun("Künstler",dbpedia:Artist),
-  ClassNoun("Kunstwerk",dbpedia:Artwork),
+  ClassNoun("Künstler",dbpedia:Artist) masculine with plural "Künstler",
+  ClassNoun("Werk",dbpedia:Work) neuter with plural "Werke",
+  ClassNoun("Kunstwerk",dbpedia:Artwork) neuter with plural "Kunstwerke",
 
   // Fine arts
 
-  ClassNoun("Maler",dbpedia:Painter),
-  ClassNoun("Gemälde",dbpedia:Painting),
-  ClassNoun("Bildhauer",dbpedia:Sculptor),
-  ClassNoun("Plastik",dbpedia:Sculpture),
+  ClassNoun("Maler",dbpedia:Painter) masculine with plural "Maler",
+  ClassNoun("Gemälde",dbpedia:Painting) neuter with plural "Gemälde",
+  ClassNoun("Bildhauer",dbpedia:Sculptor) masculine with plural "Bildhauer",
+  ClassNoun("Plastik",dbpedia:Sculpture) feminine with plural "Plastiken",  
+  ClassNoun("Skulptur",dbpedia:Sculpture) feminine with plural "Skulpturen",
+
+  ClassNoun("Sammlung",dbpedia:CollectionOfValuables),
 
   // Print 
 
+  // ClassNoun(...,dbpedia:WrittenWork),
+  ClassNoun("Buch",dbpedia:Book) neuter with plural "Bücher",
+  ClassNoun("Roman",dbpedia:Novel) masculine with plural "Romane",
+  ClassNoun("Unterhaltungsroman",dbpedia:LightNovel) masculine with plural "Unterhaltungsromane",
+  ClassNoun("Drama",dbpedia:Drama) neuter with plural "Dramen",
+  ClassNoun("Theaterstück",dbpedia:Play) neuter with plural "Theaterstücke",
+  ClassNoun("Bühnenwerk",dbpedia:Play) neuter with plural "Bühnenwerke",
+  ClassNoun("Teil",dbpedia:Installment) feminine with plural "Teile",
+  ClassNoun(["mehrbändig"/adjective "Veröffentlichung"/noun],dbpedia:MultiVolumePublication) feminine with plural "Veröffentlichungen",
+  ClassNoun("Autor",dbpedia:Writer) masculine with plural "Autoren",
+  ClassNoun("Schriftsteller",dbpedia:Writer) masculine with plural "Schriftsteller",
+  ClassNoun("Autor",dbpedia:Author) masculine with plural "Autoren",
+  ClassNoun("Cartoon",dbpedia:Cartoon) with plural "Cartoons",
+  ClassNoun("Trickfilm",dbpedia:Cartoon) masculine with plural "Trickfilme",
+  ClassNoun("Zeichentrickfilm",dbpedia:Cartoon) masculine with plural "Zeichentrickfilme",
+  ClassNoun("Anime",dbpedia:Anime),
+  ClassNoun("Hollywood-Trickfilm",dbpedia:HollywoodCartoon) masculine with plural "Hollywood-Trickfilme",
+  ClassNoun("Comic",dbpedia:Comics) masculine with plural "Comics",
+  ClassNoun("Manga",dbpedia:Manga) with plural "Mangas",
+  ClassNoun("Manhua",dbpedia:Manhua),
+  ClassNoun("Manhwa",dbpedia:Manhwa),
+  ClassNoun("Comiczeichner",dbpedia:ComicsCreator) masculine with plural "Comiczeichner",
+  ClassNoun("Verlag",dbpedia:Publisher) masculine with plural "Verlage",
+  ClassNoun("Verleger",dbpedia:Publisher) masculine with plural "Verleger",
+  ClassNoun("Magazin",dbpedia:PeriodicalLiterature) neuter with plural "Magazine",
+  ClassNoun("Zeitschrift",dbpedia:PeriodicalLiterature) feminine with plural "Zeitschriften",
+  ClassNoun("Zeitung",dbpedia:Newspaper) feminine with plural "Zeitungen",
+  ClassNoun("Zeitschrift",dbpedia:Magazine) feminine with plural "Zeitschriften",
+  ClassNoun("Magazin",dbpedia:Magazine) feminine with plural "Magazine",
+  ClassNoun("Fachzeitschrift",dbpedia:AcademicJournal) feminine with plural "Fachzeitschriften",
+
+  ClassNoun(["gebunden"/adjective "Buch"/noun],lex:Hardcover) neuter with plural "Bücher",
+  ClassNoun(["gebunden"/adjective "Ausgabe"/noun],lex:Hardcover) feminine with plural "Ausgaben",
+  ClassNoun("Taschenbuch",lex:Paperback) neuter with plural "Taschenbücher",
+  ClassNoun("E-Book",lex:EBook) neuter with plural "E-Books",
+  ClassNoun("Hörbuch",lex:Audiobook) neuter with plural "Hörbücher",
+
   // Music 
+
+  ClassNoun(["musikalisch"/adjective "Werk"/noun],dbpedia:MusicalWork) neuter with plural "Werke",
+  ClassNoun("Musikstück",dbpedia:MusicalWork) neuter with plural "Musikstücke",
+  ClassNoun("Diskographie",dbpedia:ArtistDiscography) feminine with plural "Diskographien",
+  ClassNoun("Werkverzeichnis",dbpedia:ArtistDiscography) neuter with plural "Werkverzeichnisse",
+  ClassNoun("Album",dbpedia:Album) neuter with plural "Alben",
+  ClassNoun("CD",dbpedia:Album) feminine with plural "CDs",
+  ClassNoun("Platte",dbpedia:Album) feminine with plural "Platten",
+  ClassNoun("LP",dbpedia:Album) feminine with plural "LPs",
+  ClassNoun("Single",dbpedia:Single) feminine with plural "Singles",
+  ClassNoun("Lied",dbpedia:Song) neuter with plural "Lieder",
+  ClassNoun("Song",dbpedia:Song) masculine with plural "Songs",
+  ClassNoun("Liste",dbpedia:List) feminine ,
+  ClassNoun("Titelliste",dbpedia:TrackList) feminine with plural "Titellisten",
+  ClassNoun("Tracklist",dbpedia:TrackList) feminine with plural "Tracklisten",
+  ClassNoun(["Beitrag"/noun "zum"/preposition "Eurovision Song Contest"/noun],dbpedia:EurovisionSongContestEntry) masculine with plural "Beiträge",
+  ClassNoun("Oper",dbpedia:Opera) feminine with plural "Oper",
+  ClassNoun("Musiker",dbpedia:MusicalArtist) masculine with plural "Musiker",
+  ClassNoun("Band",dbpedia:Band) feminine with plural "Bands",
+  ClassNoun("Gruppe",dbpedia:Band) feminine with plural "Gruppen",
+  ClassNoun("Musikgruppe",dbpedia:Band) feminine with plural "Musikgruppen",
+  ClassNoun("Instrument",dbpedia:Instrument) neuter with plural "Instrumente",
+  ClassNoun("Plattenlabel",dbpedia:RecordLabel) neuter with plural "Plattenlabel", 
+  ClassNoun("Label",dbpedia:RecordLabel) neuter with plural "Label", 
+  ClassNoun("Genre",dbpedia:Genre) neuter with plural "Genres", 
+  ClassNoun("Musikrichtung",dbpedia:MusicGenre) feminine with plural "Musikrichtungen", 
 
   // Film, radio and television
 
+  ClassNoun("Film",dbpedia:Film) masculine with plural "Filme",
+  ClassNoun("Streifen",dbpedia:Film) masculine with plural "Streifen",
+  ClassNoun("Genre",dbpedia:MovieGenre) neuter with plural "Genres", 
+  ClassNoun("Schauspieler",dbpedia:Actor) masculine with plural "Schauspieler",
+  ClassNoun("Schauspielerin",lex:Actress) feminine with plural "Schauspielerinnen",
+  ClassNoun("Darsteller",dbpedia:Actor) masculine with plural "Darsteller",
+  ClassNoun("Darstellerin",lex:Actress) feminine with plural "Darstellerinnen", 
+  ClassNoun("Synchronsprecher",dbpedia:VoiceActor) masculine with plural "Synchronsprecher",
+  ClassNoun("Synchronsprecherin",lex:VoiceActress) feminine with plural "Synchronsprecherinnen",
+  ClassNoun("Pornodarsteller",dbpedia:AdultActor) masculine with plural "Pornodarsteller",
+  ClassNoun("Pornodarstellerin",lex:AdultActress) feminine with plural "Pornodarstellerin",
+  ClassNoun("Pornostar",dbpedia:Pornstar) masculine with plural "Pornostars",
+  ClassNoun("Playmate",dbpedia:PlayboyPlaymate) neuter with plural "Playmates",
+  ClassNoun("Fernsehserie",dbpedia:TelevisionShow) feminine with plural "Fernsehserien",
+  ClassNoun("Serie",dbpedia:TelevisionShow) feminine with plural "Serien",
+  ClassNoun("Staffel",dbpedia:TelevisionSeason) feminine with plural "Staffeln",
+  ClassNoun("Episode",dbpedia:TelevisionEpisode) feminine with plural "Episoden",
+  ClassNoun("Fernsehsender",dbpedia:TelevisionStation) masculine with plural "Fernsehsender",
+  ClassNoun("Sender",dbpedia:TelevisionStation) masculine with plural "Sender",
+  ClassNoun("Radiosender",dbpedia:RadioStation) masculine with plural "Radiosender",
+  ClassNoun("Sender",dbpedia:RadioStation) masculine with plural "Sender",
+  ClassNoun("Ausgestrahlung",dbpedia:Broadcast) feminine with plural "Ausstrahlungen",
+  ClassNoun("Rundfunksender",dbpedia:Broadcaster) masculine with plural "Rundfunksender",
+  ClassNoun("Rundfunknetz",dbpedia:BroadcastNetwork) masculine with plural "Rundfunknetze",
+  ClassNoun("Radiosendung",dbpedia:RadioProgram) feminine with plural "Radiosendungen",
+  ClassNoun("Sendung",dbpedia:RadioProgram) feminine with plural "Sendungen",
+  ClassNoun("Moderator",dbpedia:Presenter) masculine with plural "Moderatoren",
+  ClassNoun("Moderator",dbpedia:Host) masculine with plural "Moderatoren",
+  ClassNoun("Radiomoderator",dbpedia:RadioHost) masculine with plural "Radiomoderatoren",
+  ClassNoun("Fernsehmoderator",dbpedia:TelevisionHost) masculine with plural "Fernsehmoderatoren",
+
   // Games 
+
+  ClassNoun("Spiel",dbpedia:Game) neuter with plural "Spiele",
+  ClassNoun("Brettspiel",dbpedia:BoardGame) neuter with plural "Brettspiele",
 
   // Others
 
- 
-  //// Properties
+  ClassNoun("Komiker",dbpedia:Comedian) masculine with plural "Komiker",
+  ClassNoun("Komikergruppe",dbpedia:ComedyGroup) feminine with plural "Komikergruppen",
+  ClassNoun("Modedesigner",dbpedia:FashionDesigner) masculine with plural "Modedesigner",
+  ClassNoun("Modeschöpfer",dbpedia:FashionDesigner) masculine with plural "Modeschöpfer",
+
+  ClassNoun(["fiktiv"/adjective "Charakter"/noun],dbpedia:FictionalCharacter) masculine with plural "Charaktere",
+  ClassNoun("Charakter",dbpedia:FictionalCharacter) masculine with plural "Charaktere", 
+  ClassNoun("Figure",dbpedia:FictionalCharacter) masculine with plural "Figuren", 
+  ClassNoun("Comicfigur",dbpedia:ComicsCharacter) with plural "Comicfiguren",
+  ClassNoun("Animangafigure",dbpedia:AnimangaCharacter) with plural "Animangafiguren",
+  ClassNoun("Musikfestival",dbpedia:MusicFestival) neuter with plural "Musikfestivals",
+  ClassNoun("Festival",dbpedia:MusicFestival) neuter with plural "Festivals",
+  ClassNoun("Filmfestival",dbpedia:FilmFestival) neuter with plural "Filmfestivals",
+  ClassNoun("Festival",lex:Festival) neuter with plural "Festivals",
+  ClassNoun("Convention",dbpedia:Convention) feminine with plural "Conventions", 
+  ClassNoun("Tagung",dbpedia:Convention) feminine with plural "Tagungen",
+  ClassNoun("Kongress",dbpedia:Convention) masculine with plural "Kongresse",  
+  ClassNoun("Musical",dbpedia:Musical) neuter with plural "Musicals",
+  ClassNoun("Preis",dbpedia:Award) masculine with plural "Preise",
+  ClassNoun("Auszeichnung",dbpedia:Award) feminine with plural "Auszeichnungen",
+  ClassNoun("Orden",dbpedia:Decoration) masculine with plural "Orden"
 
 )
