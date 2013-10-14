@@ -146,6 +146,40 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_3#>,"de",
   ClassNoun("Musical",dbpedia:Musical) neuter with plural "Musicals",
   ClassNoun("Preis",dbpedia:Award) masculine with plural "Preise",
   ClassNoun("Auszeichnung",dbpedia:Award) feminine with plural "Auszeichnungen",
-  ClassNoun("Orden",dbpedia:Decoration) masculine with plural "Orden"
+  ClassNoun("Orden",dbpedia:Decoration) masculine with plural "Orden",
+
+
+  //// Properties
+
+  // artist 
+
+  StateVerb("aufnehmen",dbpedia:artist, // TODO "auf"/prefix "nehmen"/verb ?
+        propSubj = DirectObject restrictedTo lex:Album_or_Song,
+        propObj  = Subject),
+  RelationalNoun("Interpret",dbpedia:artist,
+        propSubj = PrepositionalObject("von") restrictedTo lex:Album_or_Song,
+        propObj  = CopulativeArg),
+
+  // (literary) genre
+
+  RelationalNoun("Genre",dbpedia:genre,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+  RelationalNoun("Genre",dbpedia:literaryGenre,
+        propSubj = PossessiveAdjunct,
+        propObj  = CopulativeArg),
+
+  StateVerb("machen",dbpedia:genre,
+        propObj  = DirectObject restrictedTo dbpedia:MusicGenre),
+  StateVerb("schreiben",dbpedia:genre,
+        propSubj = Subject restrictedTo dbpedia:Writer,
+        propObj  = DirectObject),
+
+  // language
+
+  RelationalAdjective("geschrieben",dbpedia:language,
+  //    propSubj = CopulativeSubject restrictedTo dbpedia:WrittenWork,
+  //    propObj  = PrepositionalObject("in)),
+        relationalArg = PrepositionalObject("in")),
 
 )
