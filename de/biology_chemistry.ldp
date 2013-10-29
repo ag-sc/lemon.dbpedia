@@ -5,6 +5,55 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_4#>,"de",
 
   //// Classes
 
+  ClassNoun(["anatomisch"/adjective "Struktur"/noun=head],dbpedia:AnatomicalStructure) feminine with plural "Strukturen",
+  ClassNoun("Gehirn",dbpedia:Brain) neuter with plural "Gehirne",
+  ClassNoun("Hirn",dbpedia:Brain) neuter with plural "Hirne",
+  ClassNoun("Knochen",dbpedia:Bone) masculine with plural "Knochen",
+  ClassNoun("Arterie",dbpedia:Artery) feminine with plural "Arterien",
+  ClassNoun("Pulsader",dbpedia:Artery) feminine with plural "Pulsadern",
+  ClassNoun("Schlagader",dbpedia:Artery) feminine with plural "Schlagadern",
+  ClassNoun("Vene",dbpedia:Vein) feminine with plural "Venen",
+  ClassNoun("Ader",dbpedia:Vein) feminine with plural "Adern",
+  ClassNoun("Blutgefäß",lex:BloodVessel) neuter with plural "Blutgefäße",
+  ClassNoun("Muskel",dbpedia:Muscle) masculine with plural "Muskeln",
+  ClassNoun("Nerv",dbpedia:Nerve) masculine with plural "Nerven",
+  ClassNoun("Lymphknoten",dbpedia:Lymph) masculine with plural "Lymphknoten",
+  ClassNoun("Embryologie",dbpedia:Embryology) feminine,
+  ClassNoun("Band",dbpedia:Ligament) neuter with plural "Bänder",
+  ClassNoun("Ligament",dbpedia:Ligament) neuter,
+
+  ClassNoun(["chemisch"/adjective "Stoff"/noun=head],dbpedia:ChemicalSubstance) masculine with plural "Stoffe",
+  ClassNoun(["chemisch"/adjective "Substanz"/noun=head],dbpedia:ChemicalSubstance) masculine with plural "Substanzen",
+  ClassNoun(["chemisch"/adjective "Verbindung"/noun=head],dbpedia:ChemicalCompound) feminine with plural "Verbindungen",
+  ClassNoun(["chemisch"/adjective "Element"/noun=head],dbpedia:ChemicalElement) neuter with plural "Elemente",
+  ClassNoun("Mineral",dbpedia:Mineral) neuter with plural "Mineralien",
+  ClassNoun("Biomolekül",dbpedia:Biomolecule) neuter with plural "Biomoleküle",
+  ClassNoun("Enzym",dbpedia:Enzyme) neuter with plural "Enzyme",
+  ClassNoun("Gen",dbpedia:Gene) neuter with plural "Gene",
+  ClassNoun(["menschlich"/adjective "Gen"/noun=head],dbpedia:HumanGene) neuter with plural "Gene",
+  ClassNoun("Mausgen",dbpedia:MouseGene) neuter with plural "Mausgene",
+  ClassNoun("Mäusegen",dbpedia:MouseGene) neuter with plural "Mäusegene",
+// TODO  ClassNoun(["Ort"/noun=head "des"/? "Gens"/noun],dbpedia:GeneLocation) masculine with plural "Orte",
+// TOTO  ClassNoun(["Ort"/noun=head "des"/? "menschlich"/adjective "Gens"/noun],dbpedia:HumanGeneLocation) masculine with plural "Orte",
+// TODO  ClassNoun(["Ort"/noun=head "des"/? "Mausgens/Mäusegens"/noun],dbpedia:MouseGeneLocation) masculine with plural "Orte",
+  ClassNoun("Protein",dbpedia:Protein) neuter with plural "Proteine",
+
+  ClassNoun("Krankheit",dbpedia:Disease) feminine with plural "Krankheiten",
+  ClassNoun("Erkrankung",dbpedia:Disease) feminine with plural "Erkrankungen",
+  ClassNoun("Medikament",dbpedia:Drug) neuter with plural "Medikamente",
+  ClassNoun("Medizin",dbpedia:Drug) feminine,
+  ClassNoun("Arznei",dbpedia:Drug) feminine with plural "Arzneien",
+  ClassNoun("Arzneimittel",dbpedia:Drug) neuter with plural "Arzneimittel",
+  ClassNoun("Pharmazeutikum",dbpedia:Drug) neuter with plural "Pharmazeutika",
+
+  ClassNoun("Blutgruppe",dbpedia:BloodType) feminine with plural "Blutgruppen",
+
+  ClassNoun("Datenbank",dbpedia:Database) feminine with plural "Datenbanken",
+  ClassNoun(["biologisch"/adjective "Datenbank"/noun=head],dbpedia:BiologicalDatabase) feminine with plural "Datenbanken",
+
+
   //// Properties 
 
+
 )
+

@@ -5,7 +5,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_7#>,"de",
 
   //// Classes
 
-  ClassNoun("Ereignis",dbpedia:Event), 
+  ClassNoun("Ereignis",dbpedia:Event) neuter with plural "Ereignisse", 
 
   //// Properties 
 

@@ -5,7 +5,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_10#>,"de",
 
   //// Classes
 
-  ClassNoun("Ort",dbpedia:Place),
+  ClassNoun("Ort",dbpedia:Place) masculine with plural "Orte",
 
 
   //// Properties

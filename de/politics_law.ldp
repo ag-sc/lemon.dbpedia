@@ -5,8 +5,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_11#>,"de",
 
   //// Classes
 
-  ClassNoun("Wahl",dbpedia:Election),
-  ClassNoun("Legislative",dbpedia:Legislature),
-  ClassNoun("Gesetzgebung",dbpedia:Legislature),
+  ClassNoun("Wahl",dbpedia:Election) feminine with plural "Wahlen",
+  ClassNoun("Legislative",dbpedia:Legislature) feminine with plural "Legislativen",
+  ClassNoun("Gesetzgebung",dbpedia:Legislature) feminine with plural "Gesetzgebungen",
 
 )

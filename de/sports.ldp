@@ -5,8 +5,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_13#>,"de",
 
   //// Classes
 
-  ClassNoun("Sport",dbpedia:Sport),
-  ClassNoun("Sportart",dbpedia:Sport),
+  ClassNoun("Sport",dbpedia:Sport) masculine,
+  ClassNoun("Sportart",dbpedia:Sport) feminine with plural "Sportarten",
  
   //// Properties
 
