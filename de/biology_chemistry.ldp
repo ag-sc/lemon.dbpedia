@@ -31,9 +31,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_4#>,"de",
   ClassNoun("Enzym",dbpedia:Enzyme) neuter with plural "Enzyme",
   ClassNoun("Gen",dbpedia:Gene) neuter with plural "Gene",
   ClassNoun(["menschlich"/adjective "Gen"/noun=head],dbpedia:HumanGene) neuter with plural "Gene",
-  ClassNoun("Mausgen",dbpedia:MouseGene) neuter with plural "Mausgene",
-  ClassNoun("Mäusegen",dbpedia:MouseGene) neuter with plural "Mäusegene",
-// TODO  ClassNoun(["Ort"/noun=head "des"/? "Gens"/noun],dbpedia:GeneLocation) masculine with plural "Orte",
+  ClassNoun("Menschen-Gen",dbpedia:HumanGene) neuter with plural "Menschen-Gene",
+  ClassNoun("Mäuse-Gen",dbpedia:MouseGene) neuter with plural "Mäuse-Gene",
+  ClassNoun("Genort",dbpedia:GeneLocation) masculine with plural "Genorte",
+  ClassNoun("Genlocus",dbpedia:GeneLocation) masculine with plural "Genloci",
 // TOTO  ClassNoun(["Ort"/noun=head "des"/? "menschlich"/adjective "Gens"/noun],dbpedia:HumanGeneLocation) masculine with plural "Orte",
 // TODO  ClassNoun(["Ort"/noun=head "des"/? "Mausgens/Mäusegens"/noun],dbpedia:MouseGeneLocation) masculine with plural "Orte",
   ClassNoun("Protein",dbpedia:Protein) neuter with plural "Proteine",
@@ -54,6 +55,21 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_4#>,"de",
 
   //// Properties 
 
+  RelationalNoun("Vorläufer",dbpedia:precursor,
+       propSubj = PrepositionalObject("von"),
+       propObj  = CopulativeArg) with plural "Vorläufer", 
+  StateVerb("entwickeln",dbpedia:precursor,
+       propObj  = PrepositionalObject("aus")), 
+
+  RelationalNoun("Entrez-Gene-ID",dbpedia:entrezgene,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg) with plural "Entrez-Gene-IDs",
+  RelationalNoun("Entrez-ID",dbpedia:entrezgene,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg) with plural "Entrez-IDs", 
+  RelationalNoun("IUPAC-Name",dbpedia:iupacName,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg) with plural "IUPAC-Namen",
 
 )
 

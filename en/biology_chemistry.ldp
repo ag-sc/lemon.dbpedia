@@ -62,7 +62,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_4#>,"en",
   RelationalNoun(["Entrez"/noun "ID"/noun],dbpedia:entrezgene,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg), 
-  RelationalNoun(["EIUPAC"/noun "name"/noun],dbpedia:iupacName,
+  RelationalNoun(["IUPAC"/noun "name"/noun],dbpedia:iupacName,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
 

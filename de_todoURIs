@@ -37,7 +37,7 @@ notableWine
 soccerTournamentClosingSeason
 chef
 educationSystem
-governor
+totalDiscs
 GaelicGamesPlayer
 clubsRecordGoalscorer
 schoolPatron
@@ -48,7 +48,7 @@ MotorcycleRacingLeague
 supplies
 secondDriver
 FigureSkater
-architectualBureau
+afiAward
 Non-ProfitOrganisation
 politicalPartyOfLeader
 introductionDate
@@ -67,7 +67,6 @@ Continent
 squadNumber
 Planet/surfaceArea
 diameter
-HistoricBuilding
 classification
 distanceLaps
 spokenIn
@@ -106,7 +105,7 @@ vicePrincipalLabel
 PopulatedPlace/areaMetro
 serviceStartYear
 place
-trustee
+maximumElevation
 sheading
 description
 digitalSubChannel
@@ -184,7 +183,7 @@ timeZone
 shipDraft
 creatorOfDish
 AutomobileEngine/pistonStroke
-Gnetophytes
+Activity
 co2Emission
 floorCount
 dockedTime
@@ -201,7 +200,6 @@ inflow
 AutomobileEngine/height
 chairmanTitle
 countySeat
-Gene
 distance
 totalPopulation
 soocerLeaguePromoted
@@ -235,7 +233,6 @@ translator
 lastFlightStartDate
 currentStatus
 secondCommander
-Bone
 muteCharacterInPlay
 NationalSoccerClub
 shareDate
@@ -264,7 +261,7 @@ winsAtChampionships
 nonFictionSubject
 statisticYear
 spokesperson
-cylinderCount
+grades
 Agent
 careerPrizeMoney
 Spacecraft/dockedTime
@@ -272,7 +269,6 @@ originalName
 trainerYears
 torchBearer
 iso6392Code
-Hospital
 coronationDate
 RadioControlledRacingLeague
 sourceRegion
@@ -289,7 +285,6 @@ lieutenancyArea
 rankInFinalMedalCount
 closingDate
 functionEndDate
-Tunnel
 eyeColor
 routeNumber
 populationAsOf
@@ -336,12 +331,11 @@ Constellation
 largestCity
 alpsSection
 numberOfPeopleAttending
-BiologicalDatabase
 GolfLeague
 absoluteMagnitude
 elementAbove
 id
-maximumElevation
+trustee
 sexualOrientation
 Valley
 Canal/originalMaximumBoatLength
@@ -375,11 +369,9 @@ board
 managementMountain
 elevation
 hasSurfaceForm
-Restaurant
 Colour
 maximumInclination
 totalTracks
-RoadTunnel
 lcc
 background
 virtualChannel
@@ -417,9 +409,8 @@ starring
 nationalRanking
 giniCoefficientCategory
 cylinderBore
-Nerve
 beatifiedPlace
-ChemicalCompound
+architectualBureau
 winsAtPGA
 Spacecraft/port1DockedTime
 grossDomesticProduct
@@ -438,7 +429,7 @@ completionDate
 finalPublicationDate
 numberOfSpeakers
 pubchem
-AnatomicalStructure
+class
 width
 runwayLength
 editor
@@ -480,7 +471,6 @@ foundationPlace
 supplementalDraftYear
 gridReference
 Airline
-Monument
 AutomobileEngine/diameter
 discharge
 lowerAge
@@ -496,7 +486,6 @@ coach
 railwayLineUsingTunnel
 chain
 goldenRaspberryAward
-ChemicalElement
 populationPlace
 manager
 battle
@@ -529,11 +518,10 @@ apparentMagnitude
 cost
 portfolio
 Monarch
-Embryology
+routeEndLocation
 SpaceMission/stationEvaDuration
 placeOfBurial
 lunarOrbitTime
-Theatre
 originalStartPoint
 demolitionYear
 projectObjective
@@ -541,7 +529,6 @@ followingEvent
 staff
 frazioni
 numberOfLanes
-Mineral
 GeopoliticalOrganisation/populationDensity
 sourcePlace
 address
@@ -551,7 +538,6 @@ combatant
 feastDay
 whaDraft
 usedInWar
-precursor
 acquirementDate
 availableSmartCard
 Amphibian
@@ -591,7 +577,6 @@ ceeb
 Pope
 winsAtLAGT
 VolleyballPlayer
-RailwayTunnel
 Fern
 vicePrimeMinister
 GreenAlga
@@ -693,6 +678,7 @@ welshName
 winterAppearances
 principalArea
 minorityFloorLeader
+cylinderCount
 isPartOfRoute
 americanComedyAward
 associatedMusicalArtist
@@ -721,7 +707,7 @@ equipment
 commandModule
 Lake/areaOfCatchment
 channel
-iafdId
+spurOf
 seasonNumber
 Name
 SportsTeam
@@ -758,9 +744,7 @@ decommissioningDate
 mgiid
 numberOfWineries
 honours
-Muscle
 launchVehicle
-artist
 lastAppearance
 aircraftPatrol
 religiousHeadLabel
@@ -834,7 +818,6 @@ teamSize
 principalEngineer
 governmentCountry
 poleDriverTeam
-Lighthouse
 buildingStartYear
 taoiseach
 significantProject
@@ -949,11 +932,9 @@ nrhpType
 crownDependency
 aircraftElectronic
 area
-Hotel
 Insect
 Letter
 rankingsSingles
-literaryGenre
 lengthReference
 astrologicalSign
 officialSchoolColour
@@ -992,7 +973,6 @@ MountainRange
 winsAtLPGA
 assets
 sourceConfluenceCountry
-Brain
 mass
 Year
 numberOfCounties
@@ -1002,7 +982,6 @@ VolleyballLeague
 Unknown
 month
 spacecraft
-Station
 ChemicalSubstance/density
 nationalYears
 areaLand
@@ -1022,7 +1001,6 @@ splitFromParty
 currentSeason
 regionServed
 endangeredSince
-ReligiousBuilding
 numberOfParticipatingNations
 productionCompany
 associate
@@ -1032,7 +1010,6 @@ numberOfVolunteers
 varietals
 christeningDate
 movement
-Arena
 component
 espnId
 winsAtChallenges
@@ -1108,7 +1085,7 @@ soccerTournamentMostSteady
 runwayDesignation
 majorShrine
 RoadJunction
-spurOf
+iafdId
 ensembl
 leaderFunction
 operatingIncome
@@ -1188,7 +1165,6 @@ SambaSchool
 BowlingLeague
 closingYear
 orbitalFlights
-RouteOfTransportation
 connotation
 fundedBy
 aircraftTransport
@@ -1213,7 +1189,6 @@ prospectLeague
 part
 projectCoordinator
 RugbyLeague
-Road
 imageSize
 recentWinner
 publiclyAccessible
@@ -1232,7 +1207,6 @@ originalMaximumBoatLength
 routeDirection
 Canal/maximumBoatBeam
 isPeerReviewed
-routeEndLocation
 Food
 currentProduction
 Ginkgo
@@ -1244,14 +1218,13 @@ richestCountry
 province
 added
 associatedBand
-PublicTransitSystem
 geneLocationStart
 Governor
 primeMinister
 SpaceMission/lunarSurfaceTime
 legislativePeriodName
 salary
-Bridge
+diseasesdb
 rocketStages
 numberOfMembersAsOf
 sourcePosition
@@ -1273,7 +1246,7 @@ rocket
 writer
 soccerTournamentLastChampion
 headChef
-Lymph
+equity
 firstAppearance
 commandStructure
 custodian
@@ -1304,14 +1277,12 @@ constellation
 arm
 administrativeCollectivity
 nationalTeam
-Park
 specialist
 atcPrefix
 afdbId
 Politician
 denomination
 mainInterest
-genre
 distanceToCharingCross
 shoeNumber
 league
@@ -1351,10 +1322,8 @@ Software
 frozen
 cmykCoordinateBlack
 Sales
-totalDiscs
+governor
 College
-Church
-RailwayLine
 City
 associateEditor
 partialFailedLaunches
@@ -1375,7 +1344,7 @@ previousWork
 firstPublicationYear
 leftChild
 purpose
-Activity
+Gnetophytes
 certificationDate
 tvComId
 analogChannel
@@ -1408,7 +1377,6 @@ bgafdId
 SpaceShuttle/timeInSpace
 draftRound
 suborbitalFlights
-Biomolecule
 airDate
 academicDiscipline
 legalForm
@@ -1454,7 +1422,6 @@ Swimmer
 hometown
 serviceModule
 Software/fileSize
-Skyscraper
 ResearchProject
 carNumber
 egafdId
@@ -1467,7 +1434,6 @@ firstAscentPerson
 opponent
 doctoralAdvisor
 narrator
-diseasesdb
 priceMoney
 royalAnthem
 atcSuffix
@@ -1495,14 +1461,12 @@ hasVariant
 otherAppearances
 GeopoliticalOrganisation/areaMetro
 serviceEndYear
-WaterwayTunnel
 department
 Infrastructure/length
 iucnCategory
 coden
 academicAdvisor
 approximateCalories
-appointer
 headteacher
 firstPublicationDate
 retirementDate
@@ -1513,10 +1477,8 @@ meaning
 lowestPlace
 routeTypeAbbreviation
 neighbourConstellations
-afiAward
 computingPlatform
 routeStart
-grossDomesticProductAsOf
 Weapon/height
 depth
 declination
@@ -1526,7 +1488,6 @@ code
 conservationStatusSystem
 amgid
 britishComedyAwards
-ChemicalSubstance
 Saint
 memberOfParliament
 port2DockingDate
@@ -1607,10 +1568,10 @@ relatedMeanOfTransportation
 premierePlace
 currentRank
 TopicalConcept
-equity
+appointer
 heir
 projectBudgetFunding
-grades
+grossDomesticProductAsOf
 billed
 majorIsland
 crosses
@@ -1641,7 +1602,6 @@ statisticValue
 administrator
 WrittenWork
 spurType
-Disease
 collection
 nssdcId
 winsAtLET
@@ -1723,11 +1683,9 @@ executiveProducer
 railwayPlatforms
 launchSite
 Planet/temperature
-HumanGene
 numberOfGraduateStudents
 managerTitle
 hsvCoordinateSaturation
-Database
 canonizedBy
 suppreddedDate
 nutsCode
@@ -1784,7 +1742,6 @@ broadcastTranslator
 TennisTournament
 mountainRange
 closingFilm
-MouseGene
 webcast
 illustrator
 actScore
@@ -1793,7 +1750,6 @@ lunarEvaTime
 wikiPageWikiLink
 actingHeadteacher
 watershed
-Protein
 alpsGroup
 requirement
 port1DockedTime
@@ -1810,7 +1766,6 @@ thumbnail
 formerName
 comparable
 coverArtist
-ArchitecturalStructure
 viceChancellor
 sourceElevation
 distributingLabel
@@ -1852,11 +1807,9 @@ routeStartDirection
 latestReleaseVersion
 painter
 aircraftHelicopterObservation
-GeneLocation
 mainspan
 canonizedDate
 crewMember
-entrezgene
 lastPosition
 numberOfLawyers
 assetUnderManagement
@@ -1879,7 +1832,6 @@ shuttle
 games
 hallOfFame
 capitalPlace
-Airport
 Galaxy/minimumTemperature
 BaseballTeam
 deathDate
@@ -1887,7 +1839,6 @@ genus
 managementElevation
 colour
 command
-otherServingLines
 layingDown
 position
 riverMouth
@@ -1914,7 +1865,6 @@ fate
 government
 chancellor
 worldChampion
-Drug
 allegiance
 bridgeCarries
 fuelConsumption
@@ -1967,13 +1917,11 @@ lowestState
 broadcastStationClass
 distanceToCardiff
 shipCrew
-Stadium
 soocerLeagueSeason
 winsAtAlpg
 giniCoefficientRanking
 populationTotal
 aircraftHelicopterMultirole
-Museum
 building
 orbitalInclination
 wikiPageID
@@ -1982,12 +1930,11 @@ brand
 partyNumber
 musicBy
 volume
-iupacName
 worstDefeat
 nndbId
 dryCargo
 editing
-ShoppingMall
+otherServingLines
 formerPartner
 thirdDriver
 lastAirDate
@@ -2001,7 +1948,6 @@ inn
 numberOfMinistries
 budget
 FormulaOneRacing
-PowerStation
 numberOfCountries
 campus
 chromosome
@@ -2013,7 +1959,6 @@ other
 poleDriverCountry
 category
 distanceToDouglas
-class
 AutomobileEngine/length
 whaDraftYear
 Congressman
