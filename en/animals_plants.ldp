@@ -7,8 +7,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   ClassNoun("species",dbpedia:Species) with plural "species",
   ClassNoun("bacteria",dbpedia:Bacteria),
-  ClassNoun("bacillus",dbpedia:Bacteria),
-  ClassNoun("germs",dbpedia:Bacteria),
   ClassNoun("archaea",dbpedia:Archaea),
   ClassNoun("animal",dbpedia:Animal),
   ClassNoun("amphibian",dbpedia:Amphibian),
@@ -41,7 +39,6 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   ClassNoun(["cultivated"/adjective "variety"/noun],dbpedia:CultivatedVariety),
   ClassNoun("cultivar",dbpedia:CultivatedVariety),
   ClassNoun("swarm",dbpedia:Swarm),
-  ClassNoun(["globular"/adjective "swarm"/noun],dbpedia:GlobularSwarm),
   ClassNoun(["open"/adjective "swarm"/noun],dbpedia:OpenSwarm),
 
 
