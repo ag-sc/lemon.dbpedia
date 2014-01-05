@@ -6,6 +6,18 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_6#>,"de",
 
   //// Classes
 
+  ClassNoun(["militärisch"/adjective "Person"/noun=head],dbpedia:MilitaryPerson) feminine with plural "Personen",
+  ClassNoun("Militärsangehörige",dbpedia:MilitaryPerson) feminine with plural "Militärsangehörigen",
+  ClassNoun("Militärpersonal",dbpedia:MilitaryPerson) neuter,
+  ClassNoun(["militärisch"/adjective "Einheit"/noun=head],dbpedia:MilitaryUnit) feminine with plural "Einheiten",
+  ClassNoun(["militärisch"/adjective "Konflikt"/noun=head],dbpedia:MilitaryConflict) masculine with plural "Konflikte",
+  ClassNoun("Krieg",dbpedia:MilitaryConflict) masculine with plural "Kriege",
+  ClassNoun("Schlacht",dbpedia:MilitaryConflict) feminine with plural "Schlachten",
+  ClassNoun(["militärisch"/adjective "Auseinandersetzung"/noun=head],dbpedia:MilitaryConflict) feminine with plural "Auseinandersetzungen",
+  ClassNoun(["militärisch"/adjective "Struktur"/noun=head],dbpedia:MilitaryStructure) feminine with plural "Strukturen",
+  ClassNoun("Waffe",dbpedia:Weapon) feminine with plural "Waffen",
+  ClassNoun("Blasonierung",dbpedia:Blazon) feminine with plural "Blasonierungen",
+  ClassNoun("Wappenschild",dbpedia:Blazon) masculine with plural "Wappenschilde",
 
   //// Properties 
 

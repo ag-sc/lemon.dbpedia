@@ -6,6 +6,41 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_8#>,"de",
 
   //// Classes
 
+  ClassNoun("Organisation",dbpedia:Organisation) feminine with plural "Organisationen",
+  ClassNoun("Organisationsmitglied",dbpedia:OrganisationMember) neuter with plural "Organisationsmitglieder",
+  ClassNoun(["Mitglied"/noun=head "der"/article "Organisation"/noun],dbpedia:OrganisationMember) neuter with plural "Mitglieder",
+  ClassNoun(["non-profit"/adjective "Organisation"/noun=head],<http://dbpedia.org/ontology/Non-ProfitOrganisation>) feminine with plural "Organisationen",
+  ClassNoun(["geopolitisch"/adjective "Organisation"/noun=head],<http://dbpedia.org/ontology/GeopoliticalOrganisation>) feminine with plural "Organisationen",
+  ClassNoun("Dienststelle",dbpedia:GovernmentAgency) feminine with plural "Dienststellen",
+  ClassNoun("Behörde",dbpedia:GovernmentAgency) feminine with plural "Behörden",
+  ClassNoun("Regierungsbehörde",dbpedia:GovernmentAgency) feminine with plural "Regierungsbehörden",
+  ClassNoun("Regierungsstelle",dbpedia:GovernmentAgency) feminine with plural "Regierungsstellen",
+
+  ClassNoun("Gruppe",dbpedia:Group) feminine with plural "Gruppen",
+  ClassNoun("Gesellschaft",dbpedia:Company) feminine with plural "Gesellschaften",
+  ClassNoun("Handelsgesellschaft",dbpedia:Company) feminine with plural "Handelsgesellschaften",
+  ClassNoun("Unternehmen",dbpedia:Company) neuter with plural "Unternehmen",
+  ClassNoun("Betrieb",dbpedia:Company) masculine with plural "Betriebe",
+  ClassNoun("Luftverkehrsgesellschaft",dbpedia:Airline) feminine with plural "Luftverkehrsgesellschaften",
+  ClassNoun("Fluggesellschaft",dbpedia:Airline) feminine with plural "Fluggesellschaften",
+
+  ClassNoun("Bildungseinrichtung",dbpedia:EducationalInstitution) feminine with plural "Bildungseinrichtungen",
+  ClassNoun("Bildungsstätte",dbpedia:EducationalInstitution) feminine with plural "Bildungsstätten",
+  ClassNoun("Schule",dbpedia:School) feminine with plural "Schulen",
+  ClassNoun(["Sambaschule"/noun],dbpedia:SambaSchool) feminine with plural "Sambaschulen",
+  ClassNoun("College",dbpedia:College) neuter with plural "Colleges",
+  ClassNoun("Akademie",dbpedia:College) feminine with plural "Akademien",
+  ClassNoun("Universität",dbpedia:University) feminine with plural "Universitäten",
+  ClassNoun("Hochschule",dbpedia:University) feminine with plural "Hochschulen",
+  ClassNoun("Bibliothek",dbpedia:Library) feminine with plural "Bibliotheken",
+
+  ClassNoun(["politisch"/adjective "Partei"/noun=head],dbpedia:PoliticalParty) feminine with plural "Parteien",
+  ClassNoun("Partei",dbpedia:PoliticalParty) feminine with plural "Parteien",
+  ClassNoun("Gewerkschaft",dbpedia:TradeUnion) feminine with plural "Gewerkschaften",
+
+  ClassNoun("Klosterorden",dbpedia:ClericalOrder) masculine with plural "Klosterorden",
+  ClassNoun("Orden",dbpedia:ClericalOrder) masculine with plural "Orden",
+  ClassNoun(["geistlich"/adjective "Orden"/noun=head],dbpedia:ClericalOrder) masculine with plural "Orden",
 
   //// Properties 
 

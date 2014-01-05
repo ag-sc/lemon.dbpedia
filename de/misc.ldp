@@ -5,7 +5,80 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_7#>,"de",
 
   //// Classes
 
-  ClassNoun("Ereignis",dbpedia:Event) neuter with plural "Ereignisse", 
+  ClassNoun("Ereignis",dbpedia:Event) neuter with plural "Ereignisse",
+  ClassNoun("Begebenheit",dbpedia:Event) feminine with plural "Begebenheiten",
+  ClassNoun("Geschehnis",dbpedia:Event) neuter with plural "Geschehnisse",
+  ClassNoun("Veranstaltung",dbpedia:Event) feminine with plural "Veranstaltungen",
+  ClassNoun("Aktivität",dbpedia:Activity) feminine with plural "Aktivitäten",
+  ClassNoun("Beschäftigung",dbpedia:Activity) feminine with plural "Beschäftigungen",
+  ClassNoun("Urlaub",dbpedia:Holiday) masculine with plural "Urlaube",
+  ClassNoun("Sprache",dbpedia:Language) feminine with plural "Sprachen",
+  ClassNoun("Brief",dbpedia:Letter) masculine with plural "Briefe",
+  ClassNoun("Farbe",dbpedia:Colour) feminine with plural "Farben",
+  ClassNoun("Website",dbpedia:Website) feminine with plural "Websites",
+  ClassNoun("Homepage",dbpedia:Webiste) feminine with plural "Homepages",
+
+  ClassNoun("Essen",dbpedia:Food) neuter with plural "Essen",
+  ClassNoun("Lebensmittel",dbpedia:Food) neuter with plural "Lebensmittel",
+  ClassNoun("Nahrung",dbpedia:Food) feminine with plural "Nahrungen",
+  ClassNoun("Nahrungsmittel",dbpedia:Food) neuter with plural "Nahrungsmittel",
+  ClassNoun("Getränk",dbpedia:Beverage) neuter with plural "Getränke",
+  ClassNoun("Bier",dbpedia:Beer) neuter with plural "Biere",
+  ClassNoun("Wein",dbpedia:Wine) masculine with plural "Weine",
+  ClassNoun("Qualitätswein",dbpedia:ControlledDesignationOfOriginWine) masculine with plural "Qualitätsweine",
+  ClassNoun("Käse",dbpedia:Cheese) masculine with plural "Käse",
+
+  ClassNoun("Agent",dbpedia:Agent) masculine with plural "Agenten",
+  ClassNoun("Gottheit",dbpedia:Deity) feminine with plural "Gottheiten",
+  ClassNoun(["göttlich"/adjective "Wesen"/noun=head],dbpedia:Deity) neuter with plural "Wesen",
+  ClassNoun("Familie",dbpedia:Family) feminine with plural "Familien",
+
+  ClassNoun("Währung",dbpedia:Currency) feminine with plural "Währungen",
+  ClassNoun("Steuer",dbpedia:Tax) feminine with plural "Steuern",
+  ClassNoun("Gebühr",dbpedia:Tax) feminine with plural "Gebühren",
+
+  ClassNoun("Fahne",dbpedia:Flag) feminine with plural "Fahnen",
+  ClassNoun("Flagge",dbpedia:Flag) feminine with plural "Flaggen",
+
+  ClassNoun("Community",dbpedia:Community) feminine with plural "Communities",
+  ClassNoun("Gemeinde",dbpedia:Community) feminine with plural "Gemeinden",
+  ClassNoun("Gemeinschaft",dbpedia:Community) feminine with plural "Gemeinschaften",
+  ClassNoun("Gesellschaft",dbpedia:Community) feminine with plural "Gesellschaften",
+
+  ClassNoun("Ausverkauf",dbpedia:Sales) masculine with plural "Ausverkäufe",
+  ClassNoun("Schlussverkauf",dbpedia:Sales) masculine with plural "Schlussverkäufe",
+  ClassNoun("Mode",dbpedia:Fashion) feminine with plural "Moden",
+  //TODO ClassNoun("Kleidungsstil",dbpedia:LineOfFashion) masculine with plural "Kleidungsstile",
+  //TODO ClassNoun("Moderichtung",dbpedia:LineOfFashion)feminine with plural "Moderichtungen",
+
+  ClassNoun(["öffentlich"/adjective "Verwaltung"/noun=head],dbpedia:PublicService) feminine with plural "Verwaltungen",
+  ClassNoun(["öffentlich"/adjective "Dienst"/noun=head],dbpedia:PublicService) masculine with plural "Dienste",
+  //TODO ClassNoun(["öffentlichen"/adjective "Zustellung"/noun "Dateneingabe"/noun],dbpedia:PublicServiceInput),
+  //TODO ClassNoun(["öffentlichen"/noun "Zustellung"/noun "Output"/noun],dbpedia:PublicServiceOutput),
+
+  ClassNoun("Polyeder",dbpedia:Polyhedron) neuter with plural "Polyeder",
+
+  ClassNoun("Zeitdauer",dbpedia:TimePeriod) feminine with plural "Zeitdauern",
+  ClassNoun("Zeitspanne",dbpedia:TimePeriod) feminine with plural "Zeitspannen",
+  ClassNoun(["geologisch"/adjective "Periode"/noun=head],dbpedia:GeologicalPeriod) feminine with plural "Perioden",
+  ClassNoun(["geologisch"/adjective "Zeitraum"/noun=head],dbpedia:GeologicalPeriod) masculine with plural "Zeiträume",
+  ClassNoun(["historisch"/adjective "Periode"/noun=head],dbpedia:HistoricalPeriod) feminine with plural "Perioden",
+  ClassNoun(["historisch"/adjective "Zeitraum"/noun=head],dbpedia:HistoricalPeriod) masculine with plural "Zeiträume",
+  ClassNoun(["prähistorisch"/adjective "Periode"/noun=head],dbpedia:PrehistoricalPeriod) feminine with plural "Perioden",
+  ClassNoun(["prähistorisch"/adjective "Zeitraum"/noun=head],dbpedia:PrehistoricalPeriod) masculine with plural "Zeiträume",
+  //TODO ClassNoun(["protohistorical"/adjective "Zeitraums"/noun],dbpedia:ProtohistoricalPeriod),
+  ClassNoun("Stilperiode",dbpedia:PeriodOfArtisticStyle)feminine with plural "Stilperioden",
+  ClassNoun("Jahr",dbpedia:Year) neuter with plural "Jahre",
+
+  ClassNoun(["thematisch"/noun "Konzept"/noun=head],dbpedia:TopicalConcept) neuter with plural "Konzepte",
+  ClassNoun(["christlich"/noun "Glaubenslehre"/noun=head],dbpedia:ChristianDoctrine) feminine with plural "Glaubenslehren",
+  ClassNoun(["christlich"/noun "Glaubenssatz"/noun=head],dbpedia:ChristianDoctrine) masculine with plural "Glaubenssätze",
+  ClassNoun("Ideologie",dbpedia:Ideology) feminine with plural "Ideologien",
+
+  ClassNoun("Arbeitseinheit",dbpedia:UnitOfWork) feminine with plural "Arbeitseinheiten",
+  ClassNoun("Projekt",dbpedia:Project) neuter with plural "Projekte",
+  ClassNoun("Forschungsprojekt",dbpedia:ResearchProject) neuter with plural "Forschungsprojekte",
+
 
   //// Properties 
 
