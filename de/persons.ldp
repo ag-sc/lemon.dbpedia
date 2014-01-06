@@ -52,9 +52,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_9#>,"de",
   ClassNoun("Modell",dbpedia:Model) neuter with plural "Modells",
 
   ClassNoun("Prominenter",dbpedia:Celebrity) masculine with plural "Prominenten",
-  ClassNoun("Berühmtheit",dbpedia:Celebrity) feminine with plural "Berühmtheiten,
-  ClassNoun(["berühmt"/article "Person"/noun=head],dbpedia:Celebrity) feminine with plural "Personen",
-  ClassNoun(["berühmt"/article "Persönlichkeit"/noun=head],dbpedia:Celebrity) feminine with plural "Persönlichkeiten",
+  ClassNoun("Berühmtheit",dbpedia:Celebrity) feminine with plural "Berühmtheiten",
+  ClassNoun(["berühmte"/"berühmt"/article "Person"/noun=head],dbpedia:Celebrity) feminine with plural "Personen",
+  ClassNoun(["berühmte"/"berühmt"/article "Persönlichkeit"/noun=head],dbpedia:Celebrity) feminine with plural "Persönlichkeiten",
   ClassNoun("Schönheitskönigin",dbpedia:BeautyQueen) feminine with plural "Schönheitsköniginnen",
 
   // Nationalities
