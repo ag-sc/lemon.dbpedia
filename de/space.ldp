@@ -5,6 +5,37 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_12#>,"de",
 
   //// Classes
 
+  ClassNoun("Himmelskörper",dbpedia:CelestialBody) masculine with plural "Himmelskörper",
+  ClassNoun("Gestirn",dbpedia:CelestialBody) neuter with plural "Gestirne",
+  ClassNoun("Stern",dbpedia:Star) masculine with plural "Sterne",
+  ClassNoun("Sonne",dbpedia:Star) feminine with plural "Sonnen",
+  ClassNoun("Gestirn",dbpedia:Star) neuter with plural "Gestirne",
+  ClassNoun("Planet",dbpedia:Planet) masculine with plural "Planeten",
+  ClassNoun("Galaxie",dbpedia:Galaxy) feminine with plural "Galaxien",
+  ClassNoun("Sternsystem",dbpedia:Galaxy) neuter with plural "Sternsysteme",
+  ClassNoun("Sternensystem",dbpedia:Galaxy) neuter with plural "Sternensysteme",
+  ClassNoun("Asteroid",dbpedia:Asteroid) masculine with plural "Asteroiden",
+  ClassNoun("Sternbild",dbpedia:Constellation) neuter with plural "Sternbilder",
+
+  ClassNoun("Mondkrater",dbpedia:LunarCrater) masculine with plural "Mondkrater",
+  ClassNoun("Rakete",dbpedia:Rocket) feminine with plural "Raketen",
+  ClassNoun("Abschussrampe",dbpedia:LaunchPad) feminine with plural "Abschussrampen",
+  ClassNoun("Startrampe",dbpedia:LaunchPad) feminine with plural "Startrampen",
+  ClassNoun("Startplatz",dbpedia:LaunchPad) masculine with plural "Startplätze",
+  ClassNoun("Raumfahrzeug",dbpedia:Spacecraft) neuter with plural "Raumfahrzeuge",
+  ClassNoun("Raumschiff",dbpedia:Spacecraft) neuter with plural "Raumschiffe",
+  ClassNoun("Weltraumfahrzeug",dbpedia:Spacecraft) neuter with plural "Weltraumfahrzeuge",
+  ClassNoun("Weltraumstation",dbpedia:SpaceStation) feminine with plural "Weltraumstationen",
+  ClassNoun("Raumstation",dbpedia:SpaceStation) feminine with plural "Raumstationen",
+  ClassNoun("Raumfähre",dbpedia:SpaceShuttle) feminine with plural "Raumfähren",
+  ClassNoun("Spaceshuttle",dbpedia:SpaceShuttle) feminine with plural "Spaceshuttles",
+  ClassNoun("Weltraummission",dbpedia:SpaceMission) feminine with plural "Weltraummissionen",
+// TODO  ClassNoun(["Jahr"/noun "in"/preposition "spaceflight"/noun],dbpedia:YearInSpaceflight),
+  ClassNoun("Astronaut",dbpedia:Astronaut) masculine with plural "Astronauten",
+  ClassNoun("Raumfahrer",dbpedia:Astronaut) masculine with plural "Raumfahrer",
+  ClassNoun("Weltraumfahrer",dbpedia:Astronaut) masculine with plural "Weltraumfahrer",
+  ClassNoun("Kosmonaut",lex:Cosmonaut) masculine with plural "Kosmonauten",
+  ClassNoun("Taikonaut",lex:Taikonaut) masculine with plural "Taikonauten",
 
   //// Properties 
 
