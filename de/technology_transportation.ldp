@@ -7,6 +7,57 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_14#>,"de",
   //// Classes
 
 
+  ClassNoun("Gerät",dbpedia:Device) neuter with plural "Geräte",
+  ClassNoun("Kamera",dbpedia:Camera) feminine with plural "Kameras",
+  ClassNoun("Digitalkamera",dbpedia:DigitalCamera) feminine with plural "Digitalkameras",
+  ClassNoun("Informationsverarbeitungsgerät",dbpedia:InformationAppliance) neuter with plural "Informationsverarbeitungsgeräte",
+  ClassNoun("Videokonsole",dbpedia:InformationAppliance) feminine with plural "Videokonsolen",
+  ClassNoun("Spielekonsole",dbpedia:InformationAppliance) feminine with plural "Spielekonsolen",
+  ClassNoun("PDA",dbpedia:InformationAppliance) masculine with plural "PDAs",
+  ClassNoun("Electronic Organizer",dbpedia:InformationAppliance) masculine with plural "Electronic Organizers",
+  ClassNoun("Software",dbpedia:Software) feminine with plural "Software",
+  ClassNoun("EDV-Programm",dbpedia:Software) neuter with plural "EDV-Programme",
+  ClassNoun("Computerprogramm",dbpedia:Software) neuter with plural "Computerprogramme",
+  ClassNoun("Programmiersprache",dbpedia:ProgrammingLanguage) feminine with plural "Programmiersprachen",
+  ClassNoun("Freeware",lex:Freeware) feminine with plural "Freeware",
+  ClassNoun(["lizenzfrei"/adjective "Software"/noun=head],lex:Freeware) feminine with plural "Software",
+  ClassNoun(["kostenlos"/adjective "Software"/noun=head],lex:Freeware) feminine with plural "Software",
+  ClassNoun("Shareware",lex:Shareware) feminine with plural "Shareware",
+  ClassNoun("Videospiel",dbpedia:VideoGame) neuter with plural "Videospiele",
+  ClassNoun("Fahrzeugmotor",dbpedia:AutomobileEngine) masculine with plural "Fahrzeugmotoren",
+
+  // Transportation
+
+  ClassNoun("Transportmittel",dbpedia:MeanOfTransportation) neuter with plural "Transportmittel",
+  ClassNoun("Schiff",dbpedia:Ship) neuter with plural "Schiffe",
+  ClassNoun("Boot",dbpedia:Ship) neuter with plural "Boote",
+  ClassNoun("Flugzeug",dbpedia:Aircraft) neuter with plural "Flugzeuge",
+  ClassNoun("Fluggesellschaft",dbpedia:Airline) feminine with plural "Fluggesellschaften",
+  ClassNoun("Airline",dbpedia:Airline) feminine with plural "Airlines",
+  ClassNoun("Automobil",dbpedia:Automobile) neuter with plural "Automobile",
+  ClassNoun("Auto",dbpedia:Automobile) neuter with plural "Autos",
+  ClassNoun("Fahrzeug",dbpedia:Automobile) neuter with plural "Fahrzeuge",
+  ClassNoun("Coupé",lex:Coupe) neuter with plural "Coupés",
+  ClassNoun(["geschlossen"/adjective "Zweisitzer"/noun=head],lex:Coupe) masculine with plural "Zweisitzer",
+  ClassNoun("Fließheck",lex:Hatchback) neuter with plural "Fließhecks",
+  ClassNoun("Fließhecklimousine",lex:Hatchback) feminine with plural "Fließhecklimousinen",
+  ClassNoun("Heckklappe",lex:Hatchback) neuter with plural "Heckklappen",
+  ClassNoun("Cabrio",lex:Convertible) neuter with plural "Cabrios",
+  ClassNoun("Kabrio",lex:Convertible) neuter with plural "Kabrios",
+  ClassNoun("Kombi-Limousine",lex:StationWagon) feminine with plural "Kombi-Limousinen",
+  ClassNoun("Kombi",lex:StationWagon) masculine with plural "Kombis",
+  ClassNoun("Kombiwagen",lex:StationWagon) masculine with plural "Kombiwagen",
+  ClassNoun("Pickup",lex:Pickup) masculine with plural "Pickups",
+  ClassNoun(["klein"/adjective "LKW"/noun=head],lex:Pickup) masculine with plural "LKWs",
+  ClassNoun(["klein"/adjective "Lastkraftwagen"/noun=head],lex:Pickup) masculine with plural "Lastkraftwagen",
+  ClassNoun("Lok",dbpedia:Locomotive) feminine with plural "Loks",
+  ClassNoun("Lokomotive",dbpedia:Locomotive) feminine with plural "Lokomotiven",
+  ClassNoun("Zug",dbpedia:Train) masculine with plural "Züge",
+  ClassNoun("Bahn",dbpedia:Train) feminine with plural "Bahnen",
+  ClassNoun("Eisenbahn",dbpedia:Train) feminine with plural "Eisenbahnen",
+  ClassNoun("Eisenbahnzug",dbpedia:Train) masculine with plural "Eisenbahnzüge",
+
+  
   //// Properties 
 
 
