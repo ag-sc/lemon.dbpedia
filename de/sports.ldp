@@ -194,5 +194,166 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_13#>,"de",
  
   //// Properties
 
+  // team, college, manager, league
+
+  RelationalNoun("Team",dbpedia:team,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Teams",
+  StateVerb("spielen",dbpedia:team,
+     propSubj = Subject restrictedTo lex:Player,
+     propObj  = PrepositionalObject("für")),
+
+  StateVerb("spielen",dbpedia:league,
+     propObj  = PrepositionalObject("in")),
+
+  StateVerb("spielen",dbpedia:college,
+     propObj  = PrepositionalObject("für")),
+  StateVerb("besuchen",dbpedia:college),
+  
+  RelationalNoun("Spieler",dbpedia:team,
+     propSubj = CopulativeArg restrictedTo lex:Player,
+     propObj  = PossessiveAdjunct) masculine with plural "Spieler",
+  StateVerb("fahren",dbpedia:team,
+     propSubj = Subject restrictedTo lex:Racer,
+     propObj  = PrepositionalObject("für")),
+
+  RelationalNoun("Manager",dbpedia:team,
+     propSubj = CopulativeArg restrictedTo dbpedia:SportsManager,
+     propObj  = PossessiveAdjunct) masculine with plural "Manager",
+  StateVerb("steuern",dbpedia:team,
+     propSubj = Subject restrictedTo dbpedia:SportsManager,
+     propObj  = DirectObject),
+
+  RelationalNoun("Manager",dbpedia:managerClub,
+     propObj  = PossessiveAdjunct) masculine with plural "Manager",
+  StateVerb("steuern",dbpedia:managerClub),
+  RelationalNoun("Manager",dbpedia:manager,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Manager",
+  StateVerb("steuern",dbpedia:manager,
+     propSubj = DirectObject,
+     propObj  = Subject),
+
+  // homeArena, ground, tenant, operator
+
+  RelationalNoun("Heim-Arena",dbpedia:homeArena,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Heim-Arenen",
+  RelationalNoun("Heim-Stadium",dbpedia:homeArena,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Heim-Stadien",
+  RelationalNoun("Heim-Stadium",dbpedia:ground,
+     propSubj = PossessiveAdjunct restrictedTo dbpedia:Stadium,
+     propObj  = CopulativeArg) neuter with plural "Heim-Stadien",
+  StateVerb("sitzen",dbpedia:ground, 
+     propObj = PrepositionalObject("in") restrictedTo dbpedia:PopulatedPlace),
+
+  StateVerb("spielen",dbpedia:tenant, 
+     propSubj = PrepositionalObject("in"),
+     propObj  = Subject restrictedTo dbpedia:Organisation), 
+  StateVerb("veranstalten",dbpedia:tenant, 
+     propObj  = DirectObject restrictedTo dbpedia:Event), 
+
+// TODO  RelationalNoun("Home",dbpedia:operator,
+//     propObj  = PrepositionalObject("von")),
+
+
+  // capacity 
+
+  RelationalNoun("Kapazität",dbpedia:capacity,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Kapazitäten",
+  RelationalNoun("Belastbarkeit",dbpedia:capacity,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine,
+  RelationalNoun("Leistungsfähigkeit",dbpedia:capacity,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Leistungsfähigkeiten",
+  
+  StateVerb("aufnehmen",dbpedia:capacity),
+
+  // position
+
+  RelationalNoun("Position",dbpedia:position,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Positionen",
+  RelationalNoun("Lage",dbpedia:position,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Lagen",
+  RelationalNoun("Situation",dbpedia:position,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Situationen",
+
+  // number, squadNumber
+
+  RelationalNoun("Shirtnummer",dbpedia:number,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Shirtnummern",
+  RelationalNoun("Shirtnummer",dbpedia:squadNumber,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Shirtnummern",
+  RelationalNoun("Gruppennummer",dbpedia:number,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Gruppennummern",
+  RelationalNoun("Gruppennummer",dbpedia:squadNumber,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Gruppennummern",
+  RelationalNoun("Mannschaftsnummer",dbpedia:number,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Mannschaftsnummern",
+  RelationalNoun("Mannschaftsnummer",dbpedia:squadNumber,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Mannschaftsnummern",
+
+  // formerCoach
+
+  RelationalNoun(["ehemalig"/adjective "Trainer"/noun=head],dbpedia:formerCoach,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Trainer",
+  RelationalNoun(["vorherig"/adjective "Trainer"/noun=head],dbpedia:formerCoach,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Trainer",
+
+  // {throwing|batting}Side, shoots
+
+  StateVerb(["linkshändig"/adverb "werfen"/verb=head],lex:throwLeft),
+  StateVerb(["links"/adverb "werfen"/verb=head],lex:throwLeft),
+  StateVerb(["rechtshändig"/adverb "werfen"/verb=head],lex:throwRight), 
+  StateVerb(["rechts"/adverb "werfen"/verb=head],lex:throwRight),
+  StateVerb(["linkshändig"/adverb "schlagen"/verb=head],lex:batLeft), 
+  StateVerb(["links"/adverb "schlagen"/verb=head],lex:batLeft), 
+  StateVerb(["rechtshändig"/adverb "schlagen"/verb=head],lex:batRight), 
+  StateVerb(["rechts"/adverb "schlagen"/verb=head],lex:batRight), 
+
+  StateVerb(["rechtshändig"/adverb "schießen"/verb=head],lex:shootRight), 
+  StateVerb(["linkshändig"/adverb "schießen"/verb=head],lex:shootLeft), 
+  IntersectiveDataPropertyAdjective("beidhändig",dbpedia:shoots,"beidhändig"),
+  IntersectiveDataPropertyAdjective("zweihändig",dbpedia:shoots,"zweihändig"),
+
+  // plays 
+
+  IntersectiveDataPropertyAdjective("rechtshändig",dbpedia:plays,"rechtshändig"),
+// TODO  IntersectiveDataPropertyAdjective("rechtshändig",dbpedia:plays,"rechtshändig (beidhändig Rückhand)"),
+// TODO  IntersectiveDataPropertyAdjective("rechtshändig",dbpedia:plays,"rechtshändig (zweihändig Rückhand)"),
+// TODO  IntersectiveDataPropertyAdjective("rechtshändig",dbpedia:plays,"rechtshändig (einhändig Rückhand)"),
+  IntersectiveDataPropertyAdjective("linkshändig",dbpedia:plays,"linkshändig"),
+// TODO  IntersectiveDataPropertyAdjective("linkshändig",dbpedia:plays,"linkshändig (beidhändig Rückhand)"),
+// TODO  IntersectiveDataPropertyAdjective("linkshändig",dbpedia:plays,"linkshändig (zweihändig Rückhand)"),
+// TODO  IntersectiveDataPropertyAdjective("linkshändig",dbpedia:plays,"linkshändig (einhändig Rückhand)"),
+  IntersectiveDataPropertyAdjective("beidhändig",dbpedia:plays,"beidhändig"),
+  IntersectiveDataPropertyAdjective("zweihändig",dbpedia:plays,"zweihändig"),
+
+  // others 
+ 
+  RelationalNoun("Vorsitzender",dbpedia:chairman,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Vorsitzenden",
+
+  StateVerb("debütieren",dbpedia:debutTeam,
+     propObj = PrepositionalObject("mit")),
+  StateVerb(["zum"/preposition "ersten"/adjective "Mal"/noun "spielen"/verb=head],dbpedia:debutTeam,
+     propObj = PrepositionalObject("für")),
+  StateVerb(["zum"/preposition "ersten"/adjective "Mal"/noun "auftreten"/verb=head],dbpedia:debutTeam,
+     propObj = PrepositionalObject("bei"))
 
 )

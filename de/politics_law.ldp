@@ -87,5 +87,65 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_11#>,"de",
   ClassNoun("Stellvertreter",dbpedia:Deputy) masculine with plural "Stellvertreter",
   ClassNoun("Abgeordneter",dbpedia:Deputy) masculine with plural "Abgeordneten",
   ClassNoun("Deputierter",dbpedia:Deputy) masculine with plural "Deputierten",
+  
+  
+  //// Properties
+  
+  // mayor, president, governor
+
+  RelationalNoun("Bürgermeister",dbpedia:leader,
+    propSubj = PossessiveAdjunct,
+    propObj  = Subject restrictedTo lex:Mayor) masculine with plural "Bürgermeister",
+
+  RelationalNoun("Präsident",dbpedia:leader,
+    propSubj = PossessiveAdjunct,
+    propObj  = Subject restrictedTo lex:President) masculine with plural "Präsidenten",
+
+  RelationalNoun("Gouverneur",dbpedia:leader,
+    propSubj = PossessiveAdjunct,
+    propObj  = Subject restrictedTo lex:Governor) masculine with plural "Gouverneure",
+  
+  StateVerb("regieren",dbpedia:leader,
+	propSubj = DirectObject,
+	propObj = Subject),
+
+
+  // viceChancellor, runningMate, president
+
+  RelationalNoun("Vizekanzler",dbpedia:viceChancellor,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Vizekanzler", 
+
+  RelationalNoun("Vizekandidat",dbpedia:runningMate,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Vizekandidaten",
+
+
+  // board 
+
+  RelationalNoun(["Mitglied"/noun=head "des"/determiner "Ausschusses"/noun],dbpedia:board,
+    propSubj = PrepositionalObject("at"),
+    propObj  = CopulativeArg) neuter with plural "Mitglieder",
+  RelationalNoun(["Mitglied"/noun=head "des"/determiner "Rates"/noun],dbpedia:board,
+    propSubj = PrepositionalObject("at"),
+    propObj  = CopulativeArg) neuter with plural "Mitglieder",
+  RelationalNoun("Ausschuss",dbpedia:board,
+    propSubj = PrepositionalObject("at"),
+    propObj  = CopulativeArg) masculine with plural "Ausschüsse",
+  RelationalNoun("Rat",dbpedia:board,
+    propSubj = PrepositionalObject("at"),
+    propObj  = CopulativeArg) masculine with plural "Räte",
+
+  // office
+
+  RelationalNoun("Büro",dbpedia:office,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) neuter with plural "Büros",
+  RelationalNoun("Amt",dbpedia:office,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) neuter with plural "Ämter",
+  RelationalNoun("Behörde",dbpedia:office,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Behörden"
 
 )

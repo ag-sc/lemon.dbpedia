@@ -39,5 +39,66 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_12#>,"de",
 
   //// Properties 
 
+  RelationalNoun("Durchschnittstemperatur",dbpedia:meanTemperature,
+    propSubj = PrepositionalObject("auf"),
+    propObj  = CopulativeArg) feminine with plural "Durchschnittstemperaturen",
+  StateVerb("betragen",dbpedia:meanTemperature,
+    propSubj = PrepositionalObject("auf"),
+    propObj = Subject),
+
+  RelationalNoun("Dichte",dbpedia:density,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Dichten",
+
+  RelationalNoun("Umlaufzeit",dbpedia:orbitalPeriod,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Umlaufszeiten",
+  StateVerb("betragen",dbpedia:orbitalPeriod,
+    propSubj = DirectObject,
+    propObj = Subject),
+
+  RelationalNoun("Periapside",dbpedia:periapsis,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Periapsiden",
+  RelationalNoun("Apoapside",dbpedia:apoapsis,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Apoapsiden",
+
+  RelationalNoun("Epoche",dbpedia:epoch,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Epochen",
+  RelationalNoun("Zeitraum",dbpedia:epoch,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Zeiträume",
+
+  RelationalNoun(["absolut"/adjective "Helligkeit"/noun=head],dbpedia:absoluteMagnitude,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Helligkeiten",
+  RelationalNoun("Größe",dbpedia:madgnitude,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Größen",
+  RelationalNoun("Absolutwert",dbpedia:madgnitude,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Absolutwerte",
+
+  StateVerb(["verbunden"/adjective "Rakete"/noun=head],dbpedia:associatedRocket,
+    propSubj = PrepositionalObject("von"),
+    propObj  = Subject),
+  StateVerb("gehören",dbpedia:associatedRocket,
+    propSubj = PrepositionalObject("zu"),
+    propObj  = Subject),
+  StateVerb("starten",dbpedia:associatedRocket,
+    propSubj = PrepositionalObject("von"),
+    propObj  = Subject),
+  StateVerb("abheben",dbpedia:associatedRocket,
+    propSubj = PrepositionalObject("von"),
+    propObj  = Subject),
+
+  RelationalAdjective("gestartet",dbpedia:launchDate,
+    relationalArg  = PrepositionalObject("am")),
+  StateVerb("starten",dbpedia:launchDate,
+    propObj  = PrepositionalObject("am"))
+    //propSubj = lex:rocket as CopulativeSubject, 
+    //propObj  = lex:date as PrepositionalObject("am"))
 
 )
