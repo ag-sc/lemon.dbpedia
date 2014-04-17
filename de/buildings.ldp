@@ -90,5 +90,98 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_5#>,"de",
 
 
   //// Properties
+  
+    
+  RelationalNoun(["baustatisch"/adjective "Skizze"/noun],dbpedia:structuralSystem,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Skizzen",
+  RelationalNoun(["bleibend"/adjective "Sicherung"/noun],dbpedia:structuralSystem,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Sicherungen",
+  RelationalNoun("Ausbau",dbpedia:structuralSystem,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Ausbauten",
+
+  RelationalAdjective("hergestellt",dbpedia:structuralSystem,
+    relationalArg = PrepositionalObject("aus")),
+  RelationalAdjective("besteht",dbpedia:structuralSystem,
+    relationalArg = PrepositionalObject("aus")),
+  StateVerb("bestehen",dbpedia:structuralSystem,
+	propObj = PrepositionalObject("aus")),
+
+  RelationalNoun("Adresse",dbpedia:address,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Adressen",
+  RelationalNoun("Anschrift",dbpedia:address,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Anschriften",
+
+  RelationalNoun(["Anzahl"/noun=head "Sitzplätze"/noun],dbpedia:seatingCapacity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Anzahlen",
+  RelationalNoun("Sitzplatzkapazität",dbpedia:seatingCapacity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Sitzplatzkapazitäten",
+
+  RelationalAdjective("lokalisiert",dbpedia:address,
+    relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("ansässig",dbpedia:address,
+    relationalArg = PrepositionalObject("in")),
+
+  // architect, architecturalStyle 
+
+  RelationalNoun("Architekt",dbpedia:architect,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Architekten",
+  RelationalNoun("Erbauer",dbpedia:architect,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Erbauer",
+  StateVerb("designen",dbpedia:architect, 
+    propSubj = DirectObject,
+    propObj  = Subject),
+  StateVerb("bauen",dbpedia:architect, 
+    propSubj = DirectObject,
+    propObj  = Subject),
+  StateVerb("erbauen",dbpedia:architect, 
+    propSubj = DirectObject,
+    propObj  = Subject),
+
+  RelationalNoun("Baustil",dbpedia:architecturalStyle,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Baustile",
+  RelationalNoun(["gotisch"/adjective "Baustil"/noun=head],dbpedia:architecturalStyle,//resource:Gothic_architecture,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Baustile",
+  RelationalNoun(["neo-gotisch"/adjective "Baustil"/noun=head],dbpedia:architecturalStyle,//resource:Gothic_Revival_achitecture,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Baustile",
+  RelationalNoun(["Art Deco"/adjective "Baustil"/noun=head],dbpedia:architecturalStyle,//resource:Gothic_architecture,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Baustile",
+
+  IntersectiveObjectPropertyAdjective("gothisch",dbpedia:architecturalStyle,resource:Gothic_architecture),
+  IntersectiveObjectPropertyAdjective("neo-gothisch",dbpedia:architecturalStyle,resource:Gothic_Revival_achitecture),
+  IntersectiveObjectPropertyAdjective("Art Deco",dbpedia:architecturalStyle,resource:Art_Deco),
+
+
+  // yearOfConstruction 
+
+
+  RelationalNoun("Baujahr",dbpedia:yearOfConstruction,
+    propSubj = PrepositionalObject("von"),
+    propObj  = CopulativeArg) neuter with plural "Baujahr",
+  RelationalAdjective("errichtet",dbpedia:yearOfConstruction,
+    relationalArg = PrepositionalObject("im")),
+  RelationalAdjective("erbaut",dbpedia:yearOfConstruction,
+    relationalArg = PrepositionalObject("im")),
+  RelationalAdjective("gebaut",dbpedia:yearOfConstruction,
+    relationalArg = PrepositionalObject("im")),
+  RelationalAdjective("fertiggestellt",dbpedia:yearOfConstruction,
+    relationalArg = PrepositionalObject("im"))
+
+
+  
+  
+  
 
 )
