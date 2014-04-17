@@ -1,0 +1,137 @@
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_1#>,"en",
+
+  //// Classes
+
+  ClassNoun("species",dbpedia:Species) with plural "Spezies",
+  ClassNoun("Bakterien",dbpedia:Bacteria),
+  ClassNoun("Bacillus",dbpedia:Bacteria),
+  ClassNoun("Keime",dbpedia:Bacteria),
+  ClassNoun("archaea",dbpedia:Archaea),
+  ClassNoun("Tier",dbpedia:Animal),
+  ClassNoun("amphibian",dbpedia:Amphibian),
+  ClassNoun("eukaryote",dbpedia:Eukaryote),
+  IntersectiveAdjective("eukaryotic",dbpedia:Eukaryote),
+  ClassNoun("Insekt",dbpedia:Insect),
+  ClassNoun("pflanzlichen",dbpedia:Plant),
+  ClassNoun(["flowering"/adjective "pflanzlichen"/noun],dbpedia:FloweringPlant),
+  ClassNoun("gnetophyte",dbpedia:Gnetophytes) with plural "gnetophytes", 
+  ClassNoun("Traube",dbpedia:Grape),
+  ClassNoun("cycad",dbpedia:Cycad),
+  ClassNoun("fern",dbpedia:Fern),
+  ClassNoun("Moos",dbpedia:Moss),
+  ClassNoun(["club"/noun "Moos"/noun],dbpedia:ClubMoss),
+  ClassNoun(["green"/adjective "alga"/noun],dbpedia:GreenAlga) with plural "grünen Algen",
+  ClassNoun("conifer",dbpedia:Conifer),
+  ClassNoun("Ginkgo",dbpedia:Ginkgo),
+  ClassNoun("Säugetier",dbpedia:Mammal),
+  ClassNoun("fish",dbpedia:Fish) with plural "Fisch",
+  ClassNoun("Vogel",dbpedia:Bird),
+  ClassNoun("Hund",dbpedia:Dog),
+  ClassNoun(["race"/noun "Pferd"/noun],dbpedia:RaceHorse),
+  ClassNoun("fungus",dbpedia:Fungus) with plural "Pilzen",
+  ClassNoun("Schaumweinstopfen",dbpedia:Fungus),
+  ClassNoun("Reptilien",dbpedia:Reptile),
+  ClassNoun("Spinnentier",dbpedia:Arachnid), 
+  ClassNoun("Krebstier",dbpedia:Crustacean),
+  ClassNoun("Schalentieren",dbpedia:Crustacean),
+  ClassNoun("mollusc",dbpedia:Mollusca) with plural "Weichtiere", 
+  ClassNoun(["cultivated"/adjective "Sorte"/noun],dbpedia:CultivatedVariety),
+  ClassNoun("Kulturform",dbpedia:CultivatedVariety),
+  ClassNoun("Wesen",dbpedia:Swarm),
+  ClassNoun(["globular"/adjective "Wesen"/noun],dbpedia:GlobularSwarm),
+  ClassNoun(["open"/adjective "Wesen"/noun],dbpedia:OpenSwarm),
+
+
+  //// Properties
+
+  // kingdom, phylum, genus, family, order
+
+  StateVerb("gehören",dbpedia:kingdom,
+       propObj  = PrepositionalObject("zu")),
+  StateVerb("gehören",dbpedia:phylum,
+       propObj  = PrepositionalObject("zu")),
+  StateVerb("gehören",<http://dbpedia.org/ontology/class>,
+       propObj  = PrepositionalObject("zu")),
+  StateVerb("gehören",dbpedia:genus,
+       propObj  = PrepositionalObject("zu")),
+  StateVerb("gehören",dbpedia:family,
+       propObj  = PrepositionalObject("zu")),
+  StateVerb("gehören",dbpedia:order,
+       propObj  = PrepositionalObject("zu")),
+
+  StateVerb("eindämmen",dbpedia:kingdom,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("eindämmen",dbpedia:phylum,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("eindämmen",<http://dbpedia.org/ontology/class>,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("eindämmen",dbpedia:family,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("eindämmen",dbpedia:order,
+       propSubj = DirectObject,
+       propObj  = Subject),
+
+  RelationalNoun("Königreich",dbpedia:kingdom,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("phylum",dbpedia:phylum,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("Unterricht",<http://dbpedia.org/ontology/class>,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("Gattungen",dbpedia:genus,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("Familie",dbpedia:family,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("bestellen",dbpedia:order,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("Mitglied",dbpedia:kingdom,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("Mitglied",dbpedia:phylum,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("Mitglied",<http://dbpedia.org/ontology/class>,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("Mitglied",dbpedia:genus,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("Mitglied",dbpedia:family,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("Mitglied",dbpedia:order,
+       propObj  = PossessiveAdjunct),
+
+  // conservationStatus
+
+  RelationalNoun(["conservation"/noun "Status"/noun],dbpedia:conservationStatus,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  
+  IntersectiveDataPropertyAdjective("extinct",dbpedia:conservationStatus,"ex"),
+  IntersectiveDataPropertyAdjective(["extinct"/adjective "in"/preposition "the"/determiner "wild"/noun],dbpedia:conservationStatus,"EW"),
+  IntersectiveDataPropertyAdjective("vulnerable",dbpedia:conservationStatus,"vu"),
+  IntersectiveAdjective("drohte",lex:Threatened),
+  IntersectiveDataPropertyAdjective("endangered",dbpedia:conservationStatus,"en"),
+  IntersectiveDataPropertyAdjective(["critically"/adverb "endangered"/adjective],dbpedia:conservationStatus,"CR"),
+  IntersectiveDataPropertyAdjective(["near"/adjective "threatened"/adjective],dbpedia:conservationStatus,"NT"),
+
+  // binomialAuthority
+
+  StateVerb("Namen",dbpedia:binomialAuthority,
+       propSubj = DirectObject,
+       propObj  = Subject), 
+
+  StateVerb(["first"/adverb "beschreiben"/verb],dbpedia:binomialAuthority,
+       propSubj = DirectObject,
+       propObj  = Subject)
+
+)

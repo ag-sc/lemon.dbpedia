@@ -57,19 +57,19 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_4#>,"de",
 
   RelationalNoun("Vorläufer",dbpedia:precursor,
        propSubj = PrepositionalObject("von"),
-       propObj  = CopulativeArg) with plural "Vorläufer", 
+       propObj  = CopulativeArg) masculine with plural "Vorläufer", 
   StateVerb("entwickeln",dbpedia:precursor,
        propObj  = PrepositionalObject("aus")), 
 
   RelationalNoun("Entrez-Gene-ID",dbpedia:entrezgene,
        propSubj = PossessiveAdjunct,
-       propObj  = CopulativeArg) with plural "Entrez-Gene-IDs",
+       propObj  = CopulativeArg) feminine with plural "Entrez-Gene-IDs",
   RelationalNoun("Entrez-ID",dbpedia:entrezgene,
        propSubj = PossessiveAdjunct,
-       propObj  = CopulativeArg) with plural "Entrez-IDs", 
+       propObj  = CopulativeArg) feminine with plural "Entrez-IDs", 
   RelationalNoun("IUPAC-Name",dbpedia:iupacName,
        propSubj = PossessiveAdjunct,
-       propObj  = CopulativeArg) with plural "IUPAC-Namen",
+       propObj  = CopulativeArg) masculine with plural "IUPAC-Namen",
 
 )
 

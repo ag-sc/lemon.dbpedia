@@ -99,7 +99,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_9#>,"de",
 
   ClassNoun("Jude",lex:Jew) masculine with plural "Juden",
   IntersectiveAdjective("jüdisch",lex:Jew),
-  ClassNoun("Afroamerikaner",lex:AfricanAmerican) masculine with plural "Afroamerikaner",
+  ClassNoun("Afro-Amerikaner",lex:AfricanAmerican) masculine with plural "Afro-Amerikaner",
   IntersectiveAdjective("afroamerikanisch",lex:AfricanAmerican),
 
   // Religion 
@@ -120,11 +120,11 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_9#>,"de",
   ClassNoun("Buddhist",lex:Buddhist) masculine with plural "Buddhisten",
   IntersectiveAdjective("buddhistisch",lex:Buddhist),
 
-  ClassNoun(["christlich"/adjective "Bischof"/noun],dbpedia:ChristianBishop) masculine with plural "Bischöfe",
+  ClassNoun(["christlich"/adjective "Bischof"/noun=head],dbpedia:ChristianBishop) masculine with plural "Bischöfe",
   ClassNoun("Bischof",dbpedia:ChristianBishop) masculine with plural "Bischöfe",
-  ClassNoun(["christlicher"/"christlich"/adjective "Anführer"/noun],dbpedia:ChristianPatriarch) masculine with plural "Anführer",
-  ClassNoun(["christlicher"/"christlich"/adjective "Oberhaupt"/noun],dbpedia:ChristianPatriarch) neuter with plural "Oberhäupter",
-  ClassNoun(["christlicher"/"christlich"/adjective "Patriarch"/noun],dbpedia:ChristianPatriarch) masculine with plural "Patriarchen",
+  ClassNoun(["christlich"/adjective "Anführer"/noun=head],dbpedia:ChristianPatriarch) masculine with plural "Anführer",
+  ClassNoun(["christlich"/adjective "Oberhaupt"/noun=head],dbpedia:ChristianPatriarch) neuter with plural "Oberhäupter",
+  ClassNoun(["christlich"/adjective "Patriarch"/noun=head],dbpedia:ChristianPatriarch) masculine with plural "Patriarchen",
   ClassNoun("Patriarch",dbpedia:ChristianPatriarch) masculine with plural "Patriarchen",
   ClassNoun("Geistlicher",dbpedia:Cleric) masculine with plural "Geistlichen",
   ClassNoun("Kleriker",dbpedia:Cleric) masculine with plural "Kleriker",
@@ -137,6 +137,481 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_9#>,"de",
 
   //// Properties
 
+  // birthDate, birthYear, birthPlace, stateOfOrigin
 
+  RelationalNoun("Geburtsdatum",dbpedia:birthDate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Geburtsdaten",
+   
+  ConsequenceVerb("gebären",dbpedia:birthDate,
+     propSubj = lex:child as Subject, 
+     propObj  = lex:date as PrepositionalObject("am")),
+
+  ConsequenceVerb("gebären",dbpedia:birthYear,
+     propSubj = lex:child as Subject, 
+     propObj  = lex:year as PrepositionalObject("in")),
+  ConsequenceVerb("gebären",dbpedia:birthPlace,
+     propSubj = lex:child as Subject, 
+     propObj  = lex:place as PrepositionalObject("in")),
+  ConsequenceVerb("gebären",lex:birthCountry,
+     propSubj = lex:child as Subject, 
+     propObj  = lex:country as PrepositionalObject("in")),
+
+  ConsequenceVerb("gebären",dbpedia:stateOfOrigin,
+     propSubj = lex:child as Subject, 
+     propObj  = lex:state as PrepositionalObject("in")),
+  StateVerb("kommen",dbpedia:stateOfOrigin,
+     propObj  = PrepositionalObject("aus")),
+
+  RelationalNoun("Geburtsort",dbpedia:birthPlace,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Geburtsorte",  
+  
+  RelationalNoun("Geburtsjahr",dbpedia:birthYear,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Geburtsjahre",
+
+  RelationalNoun("Herkunftsland",dbpedia:birthPlace,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Herkunftsländer",
+
+
+
+  // deathDate, deathYear, deathPlace, restingPLace
+
+  RelationalNoun("Sterbedatum",dbpedia:deathDate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Sterbedaten",  
+
+  StateVerb("sterben",dbpedia:deathDate,
+     propObj = PrepositionalObject("am")),
+  StateVerb("sterben",dbpedia:deathYear,
+     propObj = PrepositionalObject("in")),
+  StateVerb("sterben",dbpedia:deathPlace,
+     propObj = PrepositionalObject("in")),
+
+  RelationalNoun("Sterbeort",dbpedia:deathPlace,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Sterbeorte",
+
+  RelationalNoun("Ruhestätte",dbpedia:restingPlace,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Ruhestätten", 
+  RelationalAdjective("beerdigt",dbpedia:restingPlace,
+     relationalArg = PrepositionalObject("in")),
+
+  // gender 
+
+  IntersectiveObjectPropertyAdjective("weiblich",dbpedia:gender,resource:Female),
+  IntersectiveObjectPropertyAdjective("männlich",dbpedia:gender,resource:Male),
+
+  // relative, child, parent
+
+  RelationalNoun("Verwandter",dbpedia:relative,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Verwandten",
+  RelationalNoun("Angehöriger",dbpedia:relative,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Angehörigen",
+  RelationalAdjective("verwandt",dbpedia:relative,
+     relationalArg = PrepositionalObject("mit")),
+
+  RelationalNoun("Kind",dbpedia:child,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Kinder", 
+  RelationalNoun("Elternteil",dbpedia:child,
+     propObj  = PossessiveAdjunct) neuter with plural "Eltern", 
+  RelationalNoun("Elternteil",dbpedia:parent,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Eltern",
+  RelationalNoun("Kind",dbpedia:parent,
+     propObj  = PossessiveAdjunct) with plural "Kinder", 
+
+  RelationalNoun("Tochter",dbpedia:child,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Female) feminine with plural "Töchter",
+  RelationalNoun("Mädchen",dbpedia:child,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Female) feminine with plural "Mädchen", 
+  RelationalNoun("Tochter",dbpedia:parent,
+     propSubj = CopulativeArg restrictedTo lex:Female,
+     propObj  = PossessiveAdjunct) feminine with plural "Töchter",
+  RelationalNoun("Sohn",dbpedia:child,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Male) masculine with plural "Söhne",
+  RelationalNoun("Junge",dbpedia:child,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Male) masculine with plural "Jungen", 
+  RelationalNoun("Sohn",dbpedia:parent,
+     propSubj = CopulativeArg restrictedTo lex:Male,
+     propObj  = PossessiveAdjunct) masculine with plural "Söhne",
+
+  RelationalNoun("Mutter",dbpedia:child,
+     propSubj = CopulativeArg restrictedTo lex:Female,
+     propObj  = PossessiveAdjunct) feminine with plural "Mütter",
+  RelationalNoun("Mutter",dbpedia:parent,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Female) feminine with plural "Mütter",
+  RelationalNoun("Vater",dbpedia:child,
+     propSubj = CopulativeArg restrictedTo lex:Male,
+     propObj  = PossessiveAdjunct) masculine with plural "Väter",
+  RelationalNoun("Vater",dbpedia:parent,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Male) masculine with plural "Väter",
+
+  RelationalNoun("Großmutter",lex:grandchild,
+     propSubj = CopulativeArg restrictedTo lex:Female,
+     propObj  = PossessiveAdjunct) feminine with plural "Großmütter",
+  RelationalNoun("Oma",lex:grandchild,
+     propSubj = CopulativeArg restrictedTo lex:Female,
+     propObj  = PossessiveAdjunct) feminine with plural "Omas",
+  RelationalNoun("Großvater",lex:grandchild,
+     propSubj = CopulativeArg restrictedTo lex:Male,
+     propObj  = PossessiveAdjunct) masculine with plural "Großväter",
+  RelationalNoun("Opa",lex:grandchild,
+     propSubj = CopulativeArg restrictedTo lex:Male,
+     propObj  = PossessiveAdjunct) masculine with plural "Opas",
+
+  RelationalNoun("Enkel",lex:grandchild,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Enkel",
+  RelationalNoun("Enkelkind",lex:grandchild,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Enkelkinder",
+  RelationalNoun("Enkelin",lex:grandchild,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Female) feminine with plural "Enkelinnen",
+  RelationalNoun("Enkeltochter",lex:grandchild,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Female) feminine with plural "Enkeltöchter",
+  RelationalNoun("Enkel",lex:grandchild,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Male) masculine with plural "Enkel",
+  RelationalNoun("Enkelsohn",lex:grandchild,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Male) masculine with plural "Enkelsöhne",
+
+
+  // spouse
+
+  RelationalNoun("Ehegatte",dbpedia:spouse,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Male) masculine with plural "Ehegatten",
+  RelationalNoun("Ehegattin",dbpedia:spouse,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Female) masculine with plural "Ehegattinnen",
+  RelationalNoun("Ehemann",dbpedia:spouse,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Male) masculine with plural "Ehemänner",
+  RelationalNoun("Ehefrau",dbpedia:spouse,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Female) masculine with plural "Ehefrauen",  
+  RelationalNoun("Frau",dbpedia:spouse,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Frauen",
+  RelationalNoun("Mann",dbpedia:spouse,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Männer",
+
+  StateVerb("heiraten",dbpedia:spouse),
+
+  ConsequenceVerb("heiraten",dbpedia:spouse,
+     propSubj = lex:partner1 as Subject, 
+     propObj  = lex:partner2 as DirectObject),
+
+  RelationalAdjective("verheiratet",dbpedia:spouse,
+     relationalArg = PrepositionalObject("mit")),
+
+  // influenced 
+
+  StateVerb(["Einfluss"/noun "ausüben"/verb=head],dbpedia:influenced,
+     propObj = PrepositionalObject("auf")),
+  StateVerb("beeinflussen",dbpedia:influencedBy,
+     propSubj = DirectObject,
+     propObj  = Subject),
+
+
+  // successor, predecessor
+
+  RelationalNoun("Nachfolger",dbpedia:successor,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Nachfolger",
+  RelationalNoun("Amtsnachfolger",dbpedia:successor,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Amtsnachfolger",
+  StateVerb(["Nachfolge"/noun "antreten"/verb=head],dbpedia:successor,
+     propSubj = DirectObject,
+     propObj  = PossessiveAdjunct),
+  StateVerb("nachfolgen",dbpedia:successor,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("vorangehen",dbpedia:successor),
+  RelationalNoun("Vorgänger",dbpedia:successor,
+     propObj = PossessiveAdjunct) masculine with plural "Vorgänger",
+  RelationalNoun("Amtsvorgänger",dbpedia:successor,
+     propObj = PossessiveAdjunct) masculine with plural "Amtsvorgänger",
+
+  RelationalNoun("Vorgänger",dbpedia:predecessor,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Vorgänger",
+  RelationalNoun("Amtsvorgänger",dbpedia:predecessor,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Amtsvorgänger",
+  StateVerb("vorangehen",dbpedia:predecessor,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("nachfolgen",dbpedia:predecessor),
+  RelationalNoun("Nachfolger",dbpedia:predecessor,
+     propObj = PossessiveAdjunct) masculine with plural "Nachfolger",
+  RelationalNoun("Amtsnachfolger",dbpedia:predecessor,
+     propObj = PossessiveAdjunct) masculine with plural "Amtsnachfolger",
+
+
+  // ethnicity, religion, related, populationPlace 
+
+  RelationalNoun(["ethnisch"/adjective "Zugehörigkeit"/noun=head],dbpedia:ethnicity,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Zugehörgkeiten",
+  RelationalNoun("Volkszugehörigkeit",dbpedia:ethnicity,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Volkszugehörgkeiten",
+  RelationalNoun("Ethnizität",dbpedia:ethnicity,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine,
+
+  RelationalNoun("Religion",dbpedia:religion,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Religionen",
+  StateVerb("gehören",dbpedia:related,
+     propObj = PrepositionalObject("zu") restrictedTo dbpedia:EthnicGroup),
+
+  RelationalAdjective("zugehörig",dbpedia:related,
+     relationalArg = PrepositionalObject("zu") restrictedTo dbpedia:EthnicGroup),
+
+  StateVerb("leben",dbpedia:populationPlace,
+     propObj = PrepositionalObject("in")),
+
+
+  // university, almaMater, education
+
+  RelationalNoun("Universität",dbpedia:university,
+     propSubj=PossessiveAdjunct,
+     propObj=CopulativeArg) feminine with plural "Universitäten", 
+  RelationalNoun(["Alma"/adjective "Mater"/noun],dbpedia:almaMater,
+     propSubj=PossessiveAdjunct,
+     propObj=CopulativeArg) feminine,
+  RelationalNoun(["besucht"/adjective "Schule"/noun=head],dbpedia:almaMater,
+     propSubj=PossessiveAdjunct,
+     propObj=CopulativeArg) feminine with plural "Schulen",
+  RelationalNoun(["besucht"/adjective "College"/noun=head],dbpedia:almaMater,
+     propSubj=PossessiveAdjunct,
+     propObj=CopulativeArg) neuter with plural "Colleges",
+  RelationalNoun(["besucht"/adjective "Universität"/noun=head],dbpedia:almaMater,
+     propSubj=PossessiveAdjunct,
+     propObj=CopulativeArg) feminine with plural "Universitäten",
+
+  StateVerb("studieren",dbpedia:university,
+     propObj = PrepositionalObject("an")),
+  StateVerb("studieren",dbpedia:almaMater,
+     propObj = PrepositionalObject("an")),
+  StateVerb("graduieren",dbpedia:almaMater,
+     propObj = PrepositionalObject("an")),
+  RelationalNoun("Graduierter",dbpedia:almaMater,
+//     propSubj = PossessiveAdjunct,
+//     propObj = CopulativeArg) masculine with plural "Graduierten",
+     propObj = PossessiveAdjunct) masculine with plural "Graduierten",
+
+  StateVerb("genießen",dbpedia:education,
+     propObj  = DirectObject restrictedTo dbpedia:EducationalInstitution),
+  StateVerb("studieren",dbpedia:education,
+     propObj  = PrepositionalObject("at") restrictedTo dbpedia:EducationalInstitution),
+  StateVerb("gehen",dbpedia:education,
+     propObj  = PrepositionalObject("zu") restrictedTo dbpedia:EducationalInstitution),
+
+
+  // field 
+
+  RelationalNoun("Arbeitsbereich",dbpedia:field,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Arbeitsbereiche",
+  RelationalNoun("Fachbereich",dbpedia:field,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Fachbereiche",
+  RelationalNoun("Fachgebiet",dbpedia:field,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Fachgebiete",
+  RelationalNoun("Arbeitsfeld",dbpedia:field,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Arbeitsfelder",
+
+  StateVerb("arbeiten",dbpedia:field,
+     propObj = PrepositionalObject("auf")),
+
+
+  // profession, occupation 
+
+  RelationalNoun("Berufsstand",dbpedia:profession,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Berufsstände",
+  RelationalNoun("Beruf",dbpedia:profession,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Berufe",
+
+  RelationalNoun("Beschäftigung",dbpedia:occupation,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Beschäftigungen", 
+  RelationalNoun("Arbeit",dbpedia:occupation,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine,
+  RelationalNoun("Beruf",dbpedia:occupation,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Berufe",
+  RelationalNoun("Tätigkeit",dbpedia:occupation,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Tätigkeiten",
+
+  StateVerb("arbeiten",dbpedia:profession,
+     propObj = PrepositionalObject("als")),
+  StateVerb("arbeiten",dbpedia:occupation,
+     propObj = PrepositionalObject("als")),
+
+
+  // rector
+
+  RelationalNoun("Rektor",dbpedia:rector,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Rektoren",
+
+  RelationalNoun("Rektor",dbpedia:rector,
+     propSubj = PossessiveAdjunct restrictedTo dbpedia:School,
+     propObj  = CopulativeArg) masculine with plural "Rektoren",
+  RelationalNoun("Rektor",dbpedia:rector,
+     propSubj = PossessiveAdjunct restrictedTo dbpedia:University,
+     propObj  = CopulativeArg) masculine with plural "Rektoren",
+
+
+  // canonizedPlace 
+
+  ConsequenceVerb("heiligsprechen",dbpedia:canonizedPlace,
+     propSubj=lex:person as Subject, 
+     propObj=lex:place as PrepositionalObject("in")),
+  RelationalAdjective("heiliggesprochen",dbpedia:canonizedPlace,
+     relationalArg = PrepositionalObject("in")),
+  RelationalNoun(["heilig"/adjective "Ort"/noun=head],dbpedia:canonizedPlace,
+     propSubj = PossessiveAdjunct,
+     propObj = CopulativeArg) masculine with plural "Orte",
+  RelationalNoun(["heilig"/adjective "Stätte"/noun=head],dbpedia:canonizedPlace,
+     propSubj = PossessiveAdjunct,
+     propObj = CopulativeArg) feminine with plural "Stätten",
+  RelationalNoun("Stätte",dbpedia:canonizedPlace,
+     propSubj = PossessiveAdjunct,
+     propObj = CopulativeArg) feminine with plural "Stätte",
+
+  // patron 
+
+  RelationalNoun("Patron",dbpedia:patron,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Patrone", 
+  RelationalNoun("Schutzpatron",dbpedia:patron,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Schutzpatrone",
+  StateVerb("beschützen",dbpedia:patron,
+     propSubj = DirectObject,
+     propObj = Subject),
+
+
+  // hometown, nationality 
+
+  RelationalNoun("Heimatstadt",dbpedia:hometown,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Heimatstädte",
+  RelationalNoun("Heimatort",dbpedia:hometown,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Heimatorte",
+
+  RelationalNoun("Nationalität",dbpedia:nationality,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo dbpedia:Country) feminine with plural "Nationalitäten",
+  RelationalNoun("Staatsangehörigkeit",dbpedia:nationality,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo dbpedia:Country) feminine with plural "Staatsangehörigkeiten",
+
+  StateVerb("kommen",dbpedia:hometown,
+     propObj = PrepositionalObject("aus")),
+  StateVerb("kommen",dbpedia:nationality,
+     propObj = PrepositionalObject("aus") restrictedTo dbpedia:Place),
+
+
+  // birthName, formerName, commonName, pseudonym, alias
+
+  RelationalNoun("Geburtsname",dbpedia:birthName,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Geburtsnamen", 
+
+  RelationalNoun(["ehemalig"/adjective "Name"/noun=head],dbpedia:formerName,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Namen",
+  RelationalNoun(["früher"/adjective "Name"/noun=head],dbpedia:formerName,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Namen",
+  RelationalNoun("Geburtsname",dbpedia:formerName,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Geburtsnamen",
+
+  RelationalNoun(["üblich"/adjective "Name"/noun=head],dbpedia:commonName,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Namen", 
+  RelationalNoun(["gebräuchlich"/adjective "Name"/noun=head],dbpedia:commonName,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Namen",
+  RelationalNoun("Rufname",dbpedia:commonName,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Rufnamen",
+
+  RelationalNoun("Pseudonym",dbpedia:pseudonym,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Pseudonyme",
+  RelationalNoun("Künstlername",dbpedia:pseudonym,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Künstlernamen",
+
+  RelationalNoun("Alias",dbpedia:alias,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Aliasse",
+  RelationalNoun("Alias",dbpedia:alias,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Aliasse",
+  RelationalNoun("Deckname",dbpedia:alias,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Decknamen",
+
+// TODO "lex:callee as"
+//  StateVerb("nennen",dbpedia:pseudonym,
+//     propSubj = lex:callee as Subject, 
+//     propObj  = lex:callname as DirectObject),
+//  StateVerb("nennen",dbpedia:alias,
+//     propSubj = lex:callee as Subject, 
+//     propObj  = lex:callname as DirectObject),
+//  StateVerb("nennen",dbpedia:commonName,
+//     propSubj = lex:callee as Subject, 
+//     propObj  = lex:callname as DirectObject),
+//  StateVerb("rufen",dbpedia:pseudonym,
+//     propSubj = lex:callee as Subject, 
+//     propObj  = lex:callname as DirectObject),
+//  StateVerb("rufen",dbpedia:alias,
+//     propSubj = lex:callee as Subject, 
+//     propObj  = lex:callname as DirectObject),
+//  StateVerb("rufen",dbpedia:commonName,
+//     propSubj = lex:callee as Subject, 
+//     propObj  = lex:callname as DirectObject),
+
+
+  // weight 
+
+  RelationalNoun("Gewicht",dbpedia:weight,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Gewichte",
+
+  StateVerb("wiegen",dbpedia:weight)
 
 )

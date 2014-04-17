@@ -43,5 +43,285 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_8#>,"de",
   ClassNoun(["geistlich"/adjective "Orden"/noun=head],dbpedia:ClericalOrder) masculine with plural "Orden",
 
   //// Properties 
+  
+  RelationalAdjective("lokalisiert",dbpedia:locationCity,
+    relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("ansässig",dbpedia:locationCity,
+    relationalArg = PrepositionalObject("in")),
+  RelationalNoun("Stadt",dbpedia:locationCity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Städte",
+
+  RelationalAdjective("lokalisiert",dbpedia:locationCountry,
+    relationalArg = PrepositionalObject("in")),
+  RelationalAdjective("ansässig",dbpedia:locationCountry,
+    relationalArg = PrepositionalObject("in")),
+  RelationalNoun("Land",dbpedia:locationCountry,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) neuter with plural "Länder",
+
+  // numberOfStudents, facultySize
+
+  RelationalNoun("Einschreibung",dbpedia:numberOfStudents,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Einschreibungen",
+  RelationalNoun("Immatrikulation",dbpedia:numberOfStudents,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Immatrikulationen",
+  RelationalNoun(["Anzahl"/noun=head "Studenten"/noun],dbpedia:numberOfStudents,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Anzahlen",
+
+  StateVerb("versorgen",dbpedia:numberOfStudents),
+
+  StateVerb("beschäftigen",dbpedia:facultySize),
+
+  RelationalNoun("Fakultätsgröße",dbpedia:facultySize,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Fakultätsgrößen",
+  RelationalNoun(["Anzahl"/noun=head "Fakultätsbediensteter"/noun],dbpedia:facultySize,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Anzahlen",
+
+  // manufacturer, company 
+
+  RelationalNoun("Hersteller",dbpedia:manufacturer,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Hersteller",
+  RelationalNoun("Fertiger",dbpedia:manufacturer,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Fertiger",
+  RelationalNoun("Herstellerfirma",dbpedia:manufacturer,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Herstellerfirmen",
+  RelationalNoun("Herstellungsfirma",dbpedia:manufacturer,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Herstellungsfirmen",
+  RelationalNoun("Herstellungsbetrieb",dbpedia:manufacturer,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Herstellungsbetriebe",
+
+  StateVerb("produzieren",dbpedia:manufacturer,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("herstellen",dbpedia:manufacturer,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("anfertigen",dbpedia:manufacturer,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("fertigen",dbpedia:manufacturer,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("fabrizieren",dbpedia:manufacturer,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("erzeugen",dbpedia:manufacturer,
+     propSubj = DirectObject,
+     propObj  = Subject),
+
+  RelationalNoun("Firma",dbpedia:company,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "Firmen",
+  RelationalNoun("Betrieb",dbpedia:company,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Betriebe",
+  StateVerb("bauen",dbpedia:company,
+     propSubj = DirectObject restrictedTo dbpedia:Canal,
+     propObj  = Subject), 
+  StateVerb("erstellen",dbpedia:company,
+     propSubj = DirectObject restrictedTo dbpedia:Canal,
+     propObj  = Subject),
+
+	 
+  // formationDate, formationYear, foundingDate, foundingYear, activeYears{Start|End}{Date|Year}
+
+  RelationalNoun("Entstehungstag",dbpedia:formationDate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Entstehungstage",
+  RelationalNoun("Entstehungsahr",dbpedia:formationYear,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Entstehungsjahre",
+
+  RelationalNoun("Gründungsdatum",dbpedia:foundingDate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Gründungsdaten", 
+  RelationalNoun("Gründungstag",dbpedia:foundingDate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Gründungstage", 
+  RelationalNoun("Gründungsjahr",dbpedia:foundingYear,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Gründungsjahre",
+
+  ConsequenceVerb("entstehen",dbpedia:formationDate,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("am")),
+  ConsequenceVerb("entstehen",dbpedia:formationYear,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("in")),
+
+  ConsequenceVerb("gründen",dbpedia:foundingDate,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("am")),
+  ConsequenceVerb("gründen",dbpedia:foundingYear,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("in")),
+
+  RelationalAdjective("aktiv",dbpedia:activeYearsStartDate, 
+     relationalArg = PrepositionalObject("seit")), 
+  RelationalAdjective("aktiv",dbpedia:activeYearsStartYear, 
+     relationalArg = PrepositionalObject("seit")), 
+  RelationalAdjective("aktiv",dbpedia:activeYearsEndDate, 
+     relationalArg = PrepositionalObject("bis")), 
+  RelationalAdjective("aktiv",dbpedia:activeYearsEndYear, 
+     relationalArg = PrepositionalObject("bis")), 
+
+  // foundingPerson, foundedBy
+
+  StateVerb("gründen",dbpedia:foundingPerson,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  RelationalAdjective("gegründet",dbpedia:foundedBy,
+     relationalArg = PrepositionalObject("von")),
+  RelationalNoun("Gründer",dbpedia:foundedBy,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Gründer",
+  RelationalNoun("Gründer",dbpedia:foundingPerson,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Gründer",
+
+  // foundationPlace 
+
+  RelationalNoun("Gründungsort",dbpedia:foundationPlace,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Gründungsorte", 
+  RelationalNoun("Entstehungsort",dbpedia:foundationPlace,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "Entstehungsorte",
+
+  ConsequenceVerb("gründen",dbpedia:foundationPlace,
+     propSubj = lex:organization as Subject, 
+     propObj  = lex:date as PrepositionalObject("in")),
+
+
+  // mascot, slogan, title
+
+  RelationalNoun("Maskottchen",dbpedia:mascot,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) neuter with plural "Maskottchen", 
+  RelationalNoun("Slogan",dbpedia:slogan,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Slogans", 
+  RelationalNoun("Motto",dbpedia:slogan,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) neuter with plural "Mottos", 
+
+  RelationalAdjective("bekannt",dbpedia:title,
+    relationalArg = PrepositionalObject("als")),
+
+
+  // affiliation
+
+  RelationalAdjective("verbunden",dbpedia:affiliation, 
+     relationalArg = PrepositionalObject("mit")),
+  StateVerb("gehören",dbpedia:affiliation,
+    propObj = PrepositionalObject("zu")),
+
+  // frequency 
+
+  RelationalNoun("Frequenz",dbpedia:frequency,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Frequenzen", 
+
+  StateVerb("ausstrahlen",dbpedia:frequency,
+    propObj = PrepositionalObject("mit")),
+  RelationalAdjective("ausgestrahlt",dbpedia:frequency,
+	relationalArg = PrepositionalObject("mit")),
+
+
+  // status 
+
+  RelationalNoun("Status",dbpedia:status,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Status", 
+  IntersectiveDataPropertyAdjective("aktiv",dbpedia:status,"aktive"),
+  IntersectiveDataPropertyAdjective("pensioniert",dbpedia:status,"pensioniert"),
+  IntersectiveDataPropertyAdjective("einsatzfähig",dbpedia:status,"einsatzfähig"),
+  IntersectiveDataPropertyAdjective("ausgesondert",dbpedia:status,"ausgesondert"), 
+
+  // product 
+
+  RelationalNoun("Produkt",dbpedia:product,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) neuter with plural "Produkte",
+  StateVerb("produzieren",dbpedia:product), 
+  StateVerb("herstellen",dbpedia:product), 
+  StateVerb("entwickeln",dbpedia:product), 
+
+  // {owning|parent}Company, owner
+
+  RelationalNoun("Eigentümer",dbpedia:owner,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "Eigentümer",
+  StateVerb("besitzen",dbpedia:owner,
+     propSubj = DirectObject,
+     propObj  = Subject), 
+  StateVerb("haben",dbpedia:owner,
+     propSubj = DirectObject,
+     propObj  = Subject), 
+  StateVerb("besitzen",dbpedia:owningCompany,
+     propSubj = DirectObject,
+     propObj  = Subject), 
+  StateVerb("besitzen",dbpedia:owningOrganization,
+     propSubj = DirectObject,
+     propObj  = Subject), 
+// TODO  RelationalNoun(["Elternteil"/noun "Begünstigten"/noun],dbpedia:owningCompany,
+//    propSubj = PossessiveAdjunct,
+//    propObj  = CopulativeArg),
+  RelationalNoun("Dachgesellschaft",dbpedia:parentCompany,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Dachgestellschaften",
+  RelationalNoun("Gründerunternehmen",dbpedia:parentCompany,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) neuter with plural "Gründerunternehmen",
+  RelationalNoun("Mutterfirma",dbpedia:parentCompany,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Mutterfirma",
+  RelationalNoun("Muttergesellschaft",dbpedia:parentCompany,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Muttergestellschaften",
+  RelationalNoun("Mutterunternehmen",dbpedia:parentCompany,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) neuter with plural "Mutterunternehmen",
+
+  // others
+
+  RelationalNoun("Einnahmen",dbpedia:revenue,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine,
+  RelationalNoun("Betriebseinkommen",dbpedia:revenue,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) neuter with plural "Betriebseinkommen",
+  RelationalNoun("Einkommen",dbpedia:revenue,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) neuter with plural "Einkommen",
+
+  RelationalNoun(["offiziell"/adjective "Schulfarbe"/noun=head],dbpedia:officialSchoolColour,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "Schulfarben", 
+
+  StateVerb("bedienen",dbpedia:regionServed, 
+    propObj  = PrepositionalObject("in")), 
+
+  IntersectiveObjectPropertyAdjective("sozial-demokratisch",dbpedia:ideology,resource:Social_democracy), 
+  IntersectiveObjectPropertyAdjective("konservativ",dbpedia:ideology,resource:Conservatism), 
+  IntersectiveObjectPropertyAdjective("liberal",dbpedia:ideology,resource:Liberalism), 
+  IntersectiveObjectPropertyAdjective("kommunistisch",dbpedia:ideology,resource:Communism), 
+  IntersectiveObjectPropertyAdjective("sozialistisch",dbpedia:ideology,resource:Socialism), 
+  IntersectiveObjectPropertyAdjective("christlich demokratisch",dbpedia:ideology,resource:Christian_democracy), 
+  IntersectiveObjectPropertyAdjective("nationalistisch",dbpedia:ideology,resource:Nationalism), 
+  IntersectiveObjectPropertyAdjective("marxistisch-leninistisch",dbpedia:ideology,resource:Marxism_Leninism), 
+  IntersectiveObjectPropertyAdjective("marxistisch",dbpedia:ideology,resource:Marxism)
+
 
 )
