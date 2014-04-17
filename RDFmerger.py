@@ -8,7 +8,7 @@ from os.path import isfile
 import re
 
 
-lemon = Namespace("http://www.monnet-project.eu/lemon#")
+lemon = Namespace("http://lemon-model.net/lemon#")
 
 
 def frag_uri(uri):

@@ -255,8 +255,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_9#>,"en",
   StateVerb("marry",dbpedia:spouse),
 
   ConsequenceVerb("marry",dbpedia:spouse,
-     propSubj = lex:partner1 as Subject, 
-     propObj  = lex:partner2 as PrepositionalObject("to")),
+     propObj  = PrepositionalObject("to")),
 
 
   // influenced 

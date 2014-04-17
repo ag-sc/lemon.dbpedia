@@ -49,7 +49,6 @@ supplies
 secondDriver
 FigureSkater
 afiAward
-Non-ProfitOrganisation
 politicalPartyOfLeader
 introductionDate
 functionStartDate
@@ -118,7 +117,7 @@ aircraftType
 HandballLeague
 cmykCoordinateCyanic
 wins
-TradeUnion
+SportsTeamSeason
 fcRuns
 callSign
 order
@@ -135,11 +134,10 @@ Judge
 bustSize
 broadcastArea
 SpaceShuttle
-GeopoliticalOrganisation
 highwaySystem
 MeanOfTransportation/diameter
 locusSupplementaryData
-President
+monarch
 infantMortality
 topSpeed
 impactFactor
@@ -183,14 +181,12 @@ timeZone
 shipDraft
 creatorOfDish
 AutomobileEngine/pistonStroke
-Activity
 co2Emission
 floorCount
 dockedTime
 Automobile/wheelbase
 individualisedPnd
 yearOfElectrification
-Website
 hasJunctionWith
 service
 SpaceMission/stationVisitDuration
@@ -209,7 +205,6 @@ RugbyClub
 Galaxy
 atcSupplemental
 soccerTournamentTopScorer
-MilitaryConflict
 firstGame
 playingTime
 prospectTeam
@@ -259,10 +254,9 @@ predecessor
 electionDateLeader
 winsAtChampionships
 nonFictionSubject
-statisticYear
+programCost
 spokesperson
 grades
-Agent
 careerPrizeMoney
 Spacecraft/dockedTime
 originalName
@@ -342,7 +336,7 @@ Canal/originalMaximumBoatLength
 parish
 mostWins
 stateOfOrigin
-monarch
+President
 parentMountainPeak
 satellite
 Rocket/mass
@@ -359,7 +353,7 @@ River
 aircraftHelicopter
 portrayer
 highestPosition
-port1DockingDate
+draftRound
 dressCode
 keyPerson
 biome
@@ -369,7 +363,6 @@ board
 managementMountain
 elevation
 hasSurfaceForm
-Colour
 maximumInclination
 totalTracks
 lcc
@@ -396,7 +389,6 @@ dateUse
 militaryUnitSize
 GovernmentType
 winsAtProTournaments
-School
 cargoWater
 officialLanguage
 iso6391Code
@@ -417,7 +409,6 @@ grossDomesticProduct
 capitalMountain
 runtime
 riverBranch
-formerChannel
 nerve
 nameDay
 computingMedia
@@ -441,7 +432,6 @@ flagBearer
 lowest
 head
 titleDate
-Ideology
 maximumBoatLength
 chorusCharacterInPlay
 functionStartYear
@@ -466,11 +456,10 @@ pseudonym
 picture
 beatifiedDate
 numberOfEmployees
-University
+personName
 foundationPlace
 supplementalDraftYear
 gridReference
-Airline
 AutomobileEngine/diameter
 discharge
 lowerAge
@@ -486,10 +475,9 @@ coach
 railwayLineUsingTunnel
 chain
 goldenRaspberryAward
-populationPlace
 manager
 battle
-openAccessContent
+emedicineTopic
 stateDelegate
 discoverer
 technique
@@ -500,12 +488,11 @@ visitorsTotal
 oversight
 highestMountain
 division
-PoliticalParty
+BritishRoyalty
 AutomobileEngine
 School/campusSize
 sourceConfluenceState
 sourceDistrict
-Tax
 gun
 presenter
 team
@@ -548,7 +535,7 @@ leaderName
 numberOfStateDeputies
 associateStar
 WorldHeritageSite
-phylum
+organSystem
 intercommunality
 associatedRocket
 populationMetroDensity
@@ -564,17 +551,14 @@ lastSeason
 seatingCapacity
 club
 wineRegion
-Weapon
 recordedIn
 silCode
 fuel
-Beverage
 creationYear
 distanceToCapital
 mascot
 slogan
 ceeb
-Pope
 winsAtLAGT
 VolleyballPlayer
 Fern
@@ -597,7 +581,6 @@ explorer
 membership
 wikiPageRedirects
 date
-Model
 associatedAct
 bandMember
 nrhpReferenceNumber
@@ -634,7 +617,6 @@ rebuildingDate
 filmFareAward
 numberOfStaff
 domain
-Organisation
 firstDriverCountry
 lunarLandingSite
 year
@@ -687,11 +669,9 @@ rival
 leftTributary
 Settlement
 languageCode
-musicSubgenre
 Astronaut/timeInSpace
 numberOfLines
 governmentPlace
-SportsTeamSeason
 lowestPosition
 publicationDate
 borough
@@ -709,10 +689,9 @@ Lake/areaOfCatchment
 channel
 spurOf
 seasonNumber
-Name
 SportsTeam
 pastor
-EthnicGroup
+formerChannel
 flyingHours
 coExecutiveProducer
 meanRadius
@@ -783,7 +762,6 @@ foundedBy
 residence
 region
 compressionRatio
-ChristianBishop
 federalState
 sourceMountain
 senator
@@ -796,7 +774,6 @@ aircraftBomber
 humanDevelopmentIndex
 runningMate
 centuryBreaks
-Cleric
 shipDisplacement
 rgbCoordinateGreen
 schoolBoard
@@ -873,7 +850,6 @@ geneLocation
 broadcastRepeater
 Island
 CricketLeague
-Project
 genomeDB
 regionalLanguage
 parkingInformation
@@ -884,14 +860,11 @@ casNumber
 superintendent
 weddingParentsDate
 numberOfStars
-abbreviation
 tatoo
 ascent
 gross
-GivenName
 TeamMember
 iftaAward
-personName
 GrandPrix/course
 mirDockings
 lunarRover
@@ -913,7 +886,6 @@ industry
 capitalElevation
 callsignMeaning
 ideology
-Scientist
 ascentDate
 BoxingLeague
 cornishName
@@ -933,7 +905,6 @@ crownDependency
 aircraftElectronic
 area
 Insect
-Letter
 rankingsSingles
 lengthReference
 astrologicalSign
@@ -942,7 +913,7 @@ geneLocationEnd
 lymph
 areaMetro
 parentCompany
-Surname
+illustrator
 Galaxy/temperature
 circulation
 smallestCountry
@@ -974,7 +945,6 @@ winsAtLPGA
 assets
 sourceConfluenceCountry
 mass
-Year
 numberOfCounties
 resolution
 cpu
@@ -1028,7 +998,6 @@ family
 productionStartYear
 currentlyUsedFor
 hipSize
-Cardinal
 cityType
 Animal
 networth
@@ -1063,7 +1032,6 @@ endingTheme
 AutomobileEngine/torqueOutput
 wheelbase
 species
-BritishRoyalty
 influenced
 Cricketer
 locationIdentifier
@@ -1079,9 +1047,7 @@ distributingCompany
 missions
 orbits
 fc
-sourceState
 causalties
-soccerTournamentMostSteady
 runwayDesignation
 majorShrine
 RoadJunction
@@ -1114,7 +1080,6 @@ notableCommander
 fuelSystem
 ceo
 PopulatedPlace
-MilitaryUnit
 managementCountry
 officerInCharge
 party
@@ -1128,7 +1093,6 @@ lastLaunch
 notableFeatures
 weight
 house
-MilitaryPerson
 originalEndPoint
 seniority
 Criminal
@@ -1140,7 +1104,6 @@ Archaea
 distanceTraveled
 aircraftHelicopterTransport
 stationVisitDuration
-Flag
 tournamentRecord
 isPartOf
 areaOfSearch
@@ -1161,7 +1124,7 @@ MeanOfTransportation/height
 drainsFrom
 omim
 dateOfAbandonment
-SambaSchool
+sourceState
 BowlingLeague
 closingYear
 orbitalFlights
@@ -1182,7 +1145,6 @@ show
 numberOfBombs
 passengersPerDay
 ClubMoss
-Language
 mouthMountain
 successfulLaunches
 prospectLeague
@@ -1207,7 +1169,6 @@ originalMaximumBoatLength
 routeDirection
 Canal/maximumBoatBeam
 isPeerReviewed
-Food
 currentProduction
 Ginkgo
 passengersPerYear
@@ -1216,7 +1177,7 @@ chairman
 Arachnid
 richestCountry
 province
-added
+secondLeader
 associatedBand
 geneLocationStart
 Governor
@@ -1265,7 +1226,7 @@ sisterStation
 missionDuration
 river
 facilityId
-specialEffects
+FootballMatch
 SportsTeamMember
 choreographer
 creator
@@ -1321,9 +1282,8 @@ races
 Software
 frozen
 cmykCoordinateBlack
-Sales
+budget
 governor
-College
 City
 associateEditor
 partialFailedLaunches
@@ -1355,7 +1315,7 @@ CyclingLeague
 Atoll
 Galaxy/maximumTemperature
 Planet/minimumTemperature
-programCost
+abbreviation
 retired
 distanceToLondon
 SkiArea
@@ -1372,20 +1332,19 @@ argueDate
 march
 meshId
 format
-EducationalInstitution
 bgafdId
 SpaceShuttle/timeInSpace
-draftRound
+port1DockingDate
 suborbitalFlights
 airDate
 academicDiscipline
 legalForm
-organSystem
+phylum
 launchDate
 engineType
 SnookerChamp
 sisterCollege
-secondLeader
+added
 targetSpaceStation
 mouthPosition
 Stream/maximumDischarge
@@ -1393,7 +1352,7 @@ designCompany
 Galaxy/density
 schoolCode
 measurements
-emedicineTopic
+openAccessContent
 unloCode
 headAlloy
 characterInPlay
@@ -1415,14 +1374,13 @@ NaturalPlace
 offeredClasses
 aspectRatio
 block
-Journalist
 eurobabeIndexId
 youthYears
 Swimmer
 hometown
 serviceModule
 Software/fileSize
-ResearchProject
+populationPlace
 carNumber
 egafdId
 maximumDepth
@@ -1488,7 +1446,7 @@ code
 conservationStatusSystem
 amgid
 britishComedyAwards
-Saint
+sourceCountry
 memberOfParliament
 port2DockingDate
 alpsSoiusaCode
@@ -1496,7 +1454,6 @@ BasketballTeam
 capitalPosition
 ingredient
 significantBuilding
-Celebrity
 reopened
 beltwayCity
 VicePrimeMinister
@@ -1536,7 +1493,6 @@ poles
 maximumDischarge
 aircraftUser
 politicalPartyInLegislature
-ChristianPatriarch
 escapeVelocity
 goldMedalist
 birthName
@@ -1558,7 +1514,7 @@ composer
 AutomobileEngine/topSpeed
 rgbCoordinateRed
 coachedTeam
-FootballMatch
+musicSubgenre
 hasNaturalBust
 AutomobileEngine/co2Emission
 fastestDriverCountry
@@ -1567,7 +1523,6 @@ manufacturer
 relatedMeanOfTransportation
 premierePlace
 currentRank
-TopicalConcept
 appointer
 heir
 projectBudgetFunding
@@ -1579,13 +1534,13 @@ brainInfoType
 alpsSubgroup
 creativeDirector
 sourceConfluenceMountain
-Library
 stationEvaDuration
 bSide
 island
 sourceConfluencePosition
 governorGeneral
 patron
+statisticYear
 deliveryDate
 Lake/shoreLength
 winsAtNWIDE
@@ -1629,7 +1584,6 @@ managementPosition
 material
 aSide
 notableStudent
-Architect
 cmykCoordinateMagenta
 day
 successor
@@ -1668,7 +1622,6 @@ Senator
 refseq
 tenant
 Galaxy/volume
-Currency
 length
 openingDate
 museum
@@ -1676,6 +1629,7 @@ dubber
 terytCode
 noteOnPlaceOfBurial
 isbn
+specialEffects
 musicalArtist
 owner
 management
@@ -1689,7 +1643,6 @@ hsvCoordinateSaturation
 canonizedBy
 suppreddedDate
 nutsCode
-sourceCountry
 topLevelDomain
 canBaggageChecked
 wikiPageDisambiguates
@@ -1711,7 +1664,6 @@ Planet/mass
 reopeningYear
 HistoricPlace
 currentTeamMember
-Priest
 soocerLeagueWinner
 soocerLeagueRelegated
 sourceConfluencePlace
@@ -1743,7 +1695,6 @@ TennisTournament
 mountainRange
 closingFilm
 webcast
-illustrator
 actScore
 usSales
 lunarEvaTime
@@ -1779,7 +1730,6 @@ appearancesInNationalTeam
 dischargeAverage
 uniprot
 numberOfPiersInWater
-GovernmentAgency
 veneratedIn
 VideoGame
 recordLabel
@@ -1788,7 +1738,6 @@ lastWin
 broadcastNetwork
 SpaceMission/lunarOrbitTime
 productionEndYear
-Holiday
 Stream/dischargeAverage
 alpsSubsection
 SoccerLeague
@@ -1822,7 +1771,7 @@ isPartOfMilitaryConflict
 aircraftHelicopterCargo
 rgbCoordinateBlue
 irishName
-OrganisationMember
+soccerTournamentMostSteady
 commonName
 PersonFunction
 rankingsDoubles
@@ -1854,7 +1803,6 @@ startPoint
 gaudiAward
 winsAtSenEuro
 openingFilm
-Company
 riverBranchOf
 knownFor
 formerCallsign
@@ -1942,11 +1890,9 @@ firstLaunchRocket
 reservations
 nextMission
 Lake
-Philosopher
 bicycleInformation
 inn
 numberOfMinistries
-budget
 FormulaOneRacing
 numberOfCountries
 campus

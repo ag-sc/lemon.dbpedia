@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
-   xmlns:lemon="http://www.monnet-project.eu/lemon#"
+   xmlns:lemon="http://lemon-model.net/lemon#"
+   xmlns:lexinfo="http://www.lexinfo.net/ontology/2.0/lexinfo#"
+   xmlns:oils="http://lemon-model.net/oils#"
    xmlns:owl="http://www.w3.org/2002/07/owl#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:nodeID="ytIEWrTb49">
     <rdf:first rdf:resource="http://dbpedia.org/ontology/AmericanFootballPlayer"/>
@@ -92,7 +95,7 @@
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#">
-    <rdf:type rdf:resource="http://www.monnet-project.eu/lemon#Lexicon"/>
+    <rdf:type rdf:resource="http://lemon-model.net/lemon#Lexicon"/>
     <lemon:language>es</lemon:language>
   </rdf:Description>
   <rdf:Description rdf:nodeID="ytIEWrTb44">
