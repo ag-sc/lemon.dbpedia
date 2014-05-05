@@ -10,5 +10,283 @@
 @prefix : <http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_1#> .
 
 :lexicon a lemon:Lexicon ;
-    lemon:language "de" .
+    lemon:language "de" ;
+    lemon:entry :hoch,
+                :gross,
+                :lang,
+                :weit,
+                :tief,
+                :entdecken,
+                :entdeckung,
+                :gruenden,
+                :gruendenAm,
+                :produzieren,
+                :herstellen .
 
+
+## height, length, area ## 
+
+:hoch a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "hoch"@de ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
+                      lexinfo:copulativeSubject :arg1hoch ;
+                      lexinfo:attributiveArg    :arg1hoch ],                      
+                    [ rdf:type lexinfo:AdjectiveScaleFrame ;
+                      lexinfo:copulativeSubject   :arg1hoch ;
+                      lexinfo:adverbialComplement :arg2hoch ];
+  lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/height> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1hoch  ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/height> ;
+                lemon:subjOfProp :arg1hoch ;
+                lemon:objOfProp  :arg2hoch ] , 
+              [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/elevation> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1hoch  ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/elevation> ;
+                lemon:subjOfProp :arg1hoch ;
+                lemon:objOfProp  :arg2hoch ] .
+
+:gross a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "groß"@de ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
+                      lexinfo:copulativeSubject :arg1tall ;
+                      lexinfo:attributiveArg    :arg1tall ],                      
+                    [ rdf:type lexinfo:AdjectiveScaleFrame ;
+                      lexinfo:copulativeSubject   :arg1tall ;
+                      lexinfo:adverbialComplement :arg2tall ];
+  lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/height> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1gross  ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/height> ;
+                lemon:subjOfProp :arg1gross ;
+                lemon:objOfProp  :arg2gross ] , 
+              [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/elevation> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1gross ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/elevation> ;
+                lemon:subjOfProp :arg1gross ;
+                lemon:objOfProp  :arg2gross ],
+              [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/area> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1gross ] ,
+              [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/areaTotal> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1gross ] ,
+              [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/areaUrban> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1gross ] ,
+              [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/areaMetro> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1gross ] .
+
+:lang a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "lang"@de ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
+                      lexinfo:copulativeSubject :arg1lang ;
+                      lexinfo:attributiveArg    :arg1lang ],                      
+                    [ rdf:type lexinfo:AdjectiveScaleFrame ;
+                      lexinfo:copulativeSubject   :arg1lang ;
+                      lexinfo:adverbialComplement :arg2lang ];
+  lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/length> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1lang  ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/length> ;
+                lemon:subjOfProp :arg1lang ;
+                lemon:objOfProp  :arg2lang ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/runtime> ;
+                lemon:subjOfProp :arg1lang ;
+                lemon:objOfProp  :arg2lang ] .
+
+:weit a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "weit"@de ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
+                      lexinfo:copulativeSubject :arg1weit ;
+                      lexinfo:attributiveArg    :arg2weit ],                      
+                    [ rdf:type lexinfo:AdjectiveScaleFrame ;
+                      lexinfo:copulativeSubject   :arg1weit ;
+                      lexinfo:adverbialComplement :arg2weit ];
+  lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/width> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1weit  ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/width> ;
+                lemon:subjOfProp :arg1weit ;
+                lemon:objOfProp  :arg2weit ] .
+
+:tief a lemon:Word ;
+  lexinfo:partOfSpeech lexinfo:adjective ;
+  lemon:canonicalForm [ lemon:writtenRep "tief"@de ] ;
+  lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
+                      lexinfo:copulativeSubject :arg1tief ;
+                      lexinfo:attributiveArg    :arg2tief ],                      
+                    [ rdf:type lexinfo:AdjectiveScaleFrame ;
+                      lexinfo:copulativeSubject   :arg1tief ;
+                      lexinfo:adverbialComplement :arg2tief ];
+  lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
+                                  oils:boundTo <http://dbpedia.org/ontology/depth> ;
+                                  oils:degree oils:strong ] ;
+                lemon:isA :arg1tief  ] ,
+              [ lemon:reference <http://dbpedia.org/ontology/depth> ;
+                lemon:subjOfProp :arg1tief ;
+                lemon:objOfProp  :arg2tief ] .
+
+
+## discover, discoverer ##
+
+:entdecken a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "entdecken"@de ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
+		      		  lexinfo:subject      :arg1entdecken ;
+                      lexinfo:directObject :arg2entdecken ;
+                      lexinfo:prepositionalAdjunct :arg3entdecken ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/discoverer>;
+                                 lemon:subjOfProp :arg2entdecken;
+                                 lemon:objOfProp  :arg1entdecken ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/discovered>;
+                                 lemon:subjOfProp :arg2entdecken;
+                                 lemon:objOfProp  :arg3entdecken ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg3entdecken lemon:marker :am .
+
+:entdeckung a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "Entdeckung"@de ] ;
+  lemon:synBehavior [ rdf:type lexinfo:NounPPFrame ;
+		      		  lexinfo:copulativeArg :entdeckung ;
+                      lexinfo:prepositionalObject  :arg1entdeckung ;
+                      lexinfo:prepositionalAdjunct :arg2entdeckung ;
+                      lexinfo:prepositionalAdjunct :arg3entdeckung ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/discoverer>;
+                                 lemon:subjOfProp :arg1entdeckung;
+                                 lemon:objOfProp  :arg2entdeckung ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/discovered>;
+                                 lemon:subjOfProp :arg1entdeckung;
+                                 lemon:objOfProp  :arg3entdeckung ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg1entdeckung lemon:marker lexinfo:accusativeCase .
+:arg2entdeckung lemon:marker :von .
+:arg2entdeckung lemon:optional "true"^^xsd:boolean .
+:arg3entdeckung lemon:marker :am .
+:arg3entdeckung lemon:optional "true"^^xsd:boolean .
+
+
+## found
+
+:gruenden a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "gründen"@de ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
+		      		  lexinfo:subject      :arg1gruenden ;
+                      lexinfo:directObject :arg2gruenden ;
+                      lexinfo:prepositionalObject :arg3gruenden ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/foundingPerson>;
+                                 lemon:subjOfProp :arg2gruenden;
+                                 lemon:objOfProp  :arg1gruenden ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/foundationPlace>;
+                                 lemon:subjOfProp :arg2gruenden;
+                                 lemon:objOfProp  :arg3gruenden ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg3gruenden lemon:marker :in .
+
+:gruendenAm a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "gründen"@de ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitiveFrame ;
+		      		  lexinfo:subject      :arg1gruendenAm ;
+                      lexinfo:directObject :arg2gruendenAm ;
+                      lexinfo:prepositionalAdjunct :arg3gruendenAm ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/foundingPerson>;
+                                 lemon:subjOfProp :arg2gruendenAm;
+                                 lemon:objOfProp  :arg1gruendenAm ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/foundingDate>;
+                                 lemon:subjOfProp :arg2gruendenAm;
+                                 lemon:objOfProp  :arg3gruendenAm ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg3gruendenAm lemon:marker :am .
+
+
+## production{Start|End}{Date|Year} ## 
+
+:produzieren a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "produzieren"@de ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
+		      		  lexinfo:subject              :arg1produzieren ;
+                      lexinfo:directObject         :arg2produzieren ;
+                      lexinfo:prepositionalAdjunct :arg3produzieren ;
+                      lexinfo:prepositionalAdjunct :arg4produzieren ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/product>;
+                                 lemon:subjOfProp :arg1produzieren;
+                                 lemon:objOfProp  :arg2produzieren ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionStartYear>;
+                                 lemon:subjOfProp :arg2produzieren;
+                                 lemon:objOfProp  :arg3produzieren ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionEndYear>;
+                                 lemon:subjOfProp :arg2produzieren;
+                                 lemon:objOfProp  :arg4produzieren ] ], 
+              [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/product>;
+                                 lemon:subjOfProp :arg1produzieren;
+                                 lemon:objOfProp  :arg2produzieren ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionStartDate>;
+                                 lemon:subjOfProp :arg2produzieren;
+                                 lemon:objOfProp  :arg3produzieren ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionEndDate>;
+                                 lemon:subjOfProp :arg2produzieren;
+                                 lemon:objOfProp  :arg4produzieren ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg3produzieren lemon:marker :von .
+:arg4produzieren lemon:marker :bis .
+
+:herstellen a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "herstellen"@de ] ;
+  lemon:synBehavior [ rdf:type lexinfo:TransitivePPFrame ;
+		      		  lexinfo:subject              :arg1herstellen ;
+                      lexinfo:directObject         :arg2herstellen ;
+                      lexinfo:prepositionalAdjunct :arg3herstellen ;
+                      lexinfo:prepositionalAdjunct :arg4herstellen ] ;
+  lemon:sense [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/product>;
+                                 lemon:subjOfProp :arg1herstellen;
+                                 lemon:objOfProp  :arg2herstellen ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionStartYear>;
+                                 lemon:subjOfProp :arg2herstellen;
+                                 lemon:objOfProp  :arg3herstellen ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionEndYear>;
+                                 lemon:subjOfProp :arg2herstellen;
+                                 lemon:objOfProp  :arg4herstellen ] ], 
+              [ lemon:subsense [ lemon:reference <http://dbpedia.org/ontology/product>;
+                                 lemon:subjOfProp :arg1herstellen;
+                                 lemon:objOfProp  :arg2herstellen ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionStartDate>;
+                                 lemon:subjOfProp :arg2herstellen;
+                                 lemon:objOfProp  :arg3herstellen ] ,
+                               [ lemon:reference <http://dbpedia.org/ontology/productionEndDate>;
+                                 lemon:subjOfProp :arg2herstellen;
+                                 lemon:objOfProp  :arg4herstellen ] ];
+  lexinfo:partOfSpeech lexinfo:verb .
+:arg3herstellen lemon:marker :von .
+:arg4herstellen lemon:marker :bis .
+
+## Prepositions ##
+
+:am a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "am"@de ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+:von a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "von"@de ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+:in a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "in"@de ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+:bis a lemon:Word ;
+  lemon:canonicalForm [ lemon:writtenRep "bis"@de ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .

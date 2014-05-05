@@ -321,7 +321,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_10#>,"de",
     
   // border, neighbors
 
-  StateVerb("Grenze",dbpedia:border),
+  StateVerb("grenzen",dbpedia:border,
+    propObj = PrepositionalObject("an")),
 
   RelationalNoun(["benachbart"/adjective "Gemeinde"/noun],dbpedia:neighboringMunicipality,
     propSubj = PossessiveAdjunct,
