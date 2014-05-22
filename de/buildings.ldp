@@ -1,5 +1,6 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
 @prefix resource: <http://dbpedia.org/resource/> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_5#>,"de",
 
@@ -132,10 +133,16 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_5#>,"de",
 
   RelationalNoun("Architekt",dbpedia:architect,
     propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg) masculine with plural "Architekten",
+    propObj  = CopulativeArg restrictedTo lex:Male) masculine with plural "Architekten",
+  RelationalNoun("Architektin",dbpedia:architect,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg restrictedTo lex:Female) feminine with plural "Architektinnen",
   RelationalNoun("Erbauer",dbpedia:architect,
     propSubj = PossessiveAdjunct,
-    propObj  = CopulativeArg) masculine with plural "Erbauer",
+    propObj  = CopulativeArg restrictedTo lex:Male) masculine with plural "Erbauer",
+  RelationalNoun("Erbauerin",dbpedia:architect,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg restrictedTo lex:Female) feminine with plural "Erbauerinnen",
   StateVerb("designen",dbpedia:architect, 
     propSubj = DirectObject,
     propObj  = Subject),

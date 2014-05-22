@@ -32,10 +32,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_12#>,"de",
   ClassNoun("Weltraummission",dbpedia:SpaceMission) feminine with plural "Weltraummissionen",
 // TODO  ClassNoun(["Jahr"/noun "in"/preposition "spaceflight"/noun],dbpedia:YearInSpaceflight),
   ClassNoun("Astronaut",dbpedia:Astronaut) masculine with plural "Astronauten",
+  ClassNoun("Astronautin",dbpedia:Astronaut) feminine with plural "Astronautinnen",
   ClassNoun("Raumfahrer",dbpedia:Astronaut) masculine with plural "Raumfahrer",
+  ClassNoun("Raumfahrerin",dbpedia:Astronaut) feminine with plural "Raumfahrerinnen",
   ClassNoun("Weltraumfahrer",dbpedia:Astronaut) masculine with plural "Weltraumfahrer",
+  ClassNoun("Weltraumfahrerin",dbpedia:Astronaut) feminine with plural "Weltraumfahrerinnen",
   ClassNoun("Kosmonaut",lex:Cosmonaut) masculine with plural "Kosmonauten",
+  ClassNoun("Kosmonautin",lex:Cosmonaut) feminine with plural "Kosmonautinnen",
   ClassNoun("Taikonaut",lex:Taikonaut) masculine with plural "Taikonauten",
+  ClassNoun("Taikonautin",lex:Taikonaut) feminine with plural "Taikonautinnen",
 
   //// Properties 
 

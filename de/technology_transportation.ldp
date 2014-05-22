@@ -93,7 +93,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_14#>,"de",
 
   RelationalNoun("Entwickler",dbpedia:developer,
        propSubj = PossessiveAdjunct,
-       propObj  = CopulativeArg) masculine with plural "Entwickler",
+       propObj  = CopulativeArg restrictedTo lex:Male) masculine with plural "Entwickler",
+  RelationalNoun("Entwicklerin",dbpedia:developer,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg restrictedTo lex:Female) feminine with plural "Entwicklerinnen",
 
   StateVerb("entwickeln",dbpedia:developer,
        propSubj = DirectObject,
