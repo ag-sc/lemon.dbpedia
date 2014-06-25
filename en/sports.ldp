@@ -239,6 +239,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_13#>,"en",
   RelationalNoun("home",dbpedia:operator,
      propObj  = PrepositionalObject("of")),
 
+  // raceHorse
+
+  StateVerb("ride",dbpedia:raceHorse),
 
   // capacity 
 
