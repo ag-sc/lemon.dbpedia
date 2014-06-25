@@ -1965,4 +1965,4 @@
 <http://lemon-model.net/lexica/uby/wn/WN_LexicalEntry_103879> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://lemon-model.net/lexica/dbpedia_en/driver__noun> . 
 <http://lemon-model.net/lexica/dbpedia_en/driver__noun> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://lemon-model.net/lexica/uby/wn/WN_LexicalEntry_103879> . 
 <http://lemon-model.net/lexica/dbpedia_en/Buddhist__adjective> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://lemon-model.net/lexica/uby/wn/WN_LexicalEntry_75691> . 
-<http://lemon-model.net/lexica/uby/wn/WN_LexicalEntry_75691> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://lemon-model.net/lexica/dbpedia_en/Buddhist__adjective>
+<http://lemon-model.net/lexica/uby/wn/WN_LexicalEntry_75691> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://lemon-model.net/lexica/dbpedia_en/Buddhist__adjective> .

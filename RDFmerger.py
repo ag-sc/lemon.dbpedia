@@ -1,6 +1,6 @@
 
 import rdflib as rdf
-from   rdflib import Namespace, RDF, URIRef
+from   rdflib import URIRef, Literal, Namespace, RDF, XSD
 
 from sys import argv,exit
 from os  import listdir
@@ -12,8 +12,8 @@ lemon = Namespace("http://lemon-model.net/lemon#")
 
 
 def frag_uri(uri):
-    if not ':/' in str(uri): return str(uri)
-    else: return re.match('.*/([^/]+\#)?([^/]+)$',str(uri)).group(2)
+    if not ':/' in unicode(uri): return unicode(uri)
+    else: return re.match('.*/([^/]+\#)?([^/]+)$',unicode(uri)).group(2)
 
 
 def run():
@@ -53,7 +53,7 @@ def run():
           graph.add((lexicon,p,o))
 
   graph.add((lexicon,RDF.type,lemon.Lexicon))
-  graph.add((lexicon,lemon.language,argv[1]))
+  graph.add((lexicon,lemon.language,Literal(argv[1],datatype=XSD.string)))
 
   print 'Serializing...'
 
@@ -73,11 +73,11 @@ def run():
       allURIs.append(line.strip())
 
   for s,p,o in graph:
-      if str(s).startswith('http://dbpedia.org') and frag_uri(s) in allURIs and not frag_uri(s) in doneURIs:
+      if unicode(s).startswith('http://dbpedia.org') and frag_uri(s) in allURIs and not frag_uri(s) in doneURIs:
          doneURIs.append(frag_uri(s))
-      if str(p).startswith('http://dbpedia.org') and frag_uri(p) in allURIs and not frag_uri(p) in doneURIs:
+      if unicode(p).startswith('http://dbpedia.org') and frag_uri(p) in allURIs and not frag_uri(p) in doneURIs:
          doneURIs.append(frag_uri(p))
-      if str(o).startswith('http://dbpedia.org') and frag_uri(o) in allURIs and not frag_uri(o) in doneURIs:
+      if unicode(o).startswith('http://dbpedia.org') and frag_uri(o) in allURIs and not frag_uri(o) in doneURIs:
          doneURIs.append(frag_uri(o))
 
   out_done = open(argv[1]+'_lexicalizedURIs','w')
