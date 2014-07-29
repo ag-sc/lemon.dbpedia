@@ -1,6 +1,6 @@
 # <a href="http://lemon-model.net/">lemon</a> lexica for <a href="http://dbpedia.org">DBpedia</a> 
 
-The folders `en`, `de` and `es` contain the development versions of an English, German and Spanish lexicon for the DBpedia 3.8 ontology. 
+The folders `en`, `de`, `es` and `jp' contain the development versions of an English, German, Spanish and Japanese lexicon for the DBpedia ontology. 
 They comprise several LDP files with entries using the <a href="https://github.com/jmccrae/lemon.patterns">lemon design patterns</a>
 and pooled by domain (persons, organizations, arts and entertainment, animals and plants, etc.), 
 together with a file containing all entries that could not be created using those patterns 
