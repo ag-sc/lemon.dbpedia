@@ -345,6 +345,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_10#>,"de",
 
   StateVerb("wohnen",dbpedia:residence,
     propObj = PrepositionalObject("in")),
+  StateVerb("bewohnen",dbpedia:residence),
   RelationalAdjective("wohnhaft",dbpedia:residence,
     relationalArg = PrepositionalObject("in")),
 
