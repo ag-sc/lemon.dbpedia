@@ -85,9 +85,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_14#>,"en",
        relationalArg = PrepositionalObject("on")),
 
   StateVerb("use",dbpedia:computingInput),
-  StateVerb("play",dbpedia:computingInput,
-       propSubj = DirectObject,
-       propObj  = PrepositionalObject("with")),
+  // StateVerb("play",dbpedia:computingInput,
+  //      propSubj = DirectObject,
+  //      propObj  = PrepositionalObject("with")),
 
   StateVerb("run",dbpedia:operatingSystem,
        propObj  = PrepositionalObject("under")),

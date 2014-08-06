@@ -19,21 +19,6 @@ lex:Arrondissement rdf:type owl:Restriction ;
 
 lex:BloodVessel owl:unionOf (dbpedia:Artery dbpedia:Vein) .
 
-
-## animals_plants ## 
-
-lex:Threatened owl:unionOf (lex:EX lex:EW lex:VU) .
-lex:EX rdf:type owl:Restriction ; 
-       owl:onProperty dbpedia:conservationStatus ;
-       owl:hasValue   "EX" .
-lex:EW rdf:type owl:Restriction ; 
-       owl:onProperty dbpedia:conservationStatus ;
-       owl:hasValue   "EW" .
-lex:VU rdf:type owl:Restriction ; 
-       owl:onProperty dbpedia:conservationStatus ;
-       owl:hasValue   "VU" .
-
-
 ## space ##
 
 lex:Cosmonaut owl:unionOf (dbpedia:Astronaut lex:Russian lex:Soviet) .
@@ -259,10 +244,10 @@ lex:religionCatholicChurch rdf:type owl:Restriction ;
    owl:hasValue   resource:Catholic_Church .
 
 lex:Hindu owl:unionOf ( lex:Hindu1 lex:Hindu2 ) .
-lex:Hindu rdf:type owl:Restriction ; 
+lex:Hindu1 rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:religion ;
    owl:hasValue   resource:Hindu .
-lex:Hindu rdf:type owl:Restriction ; 
+lex:Hindu2 rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:religion ;
    owl:hasValue   resource:Hinduism .
 

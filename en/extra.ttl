@@ -176,7 +176,7 @@
   lemon:canonicalForm [ lemon:writtenRep "wide"@en ] ;
   lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
                       lexinfo:copulativeSubject :arg1wide ;
-                      lexinfo:attributiveArg    :arg2wide ],                      
+                      lexinfo:attributiveArg    :arg1wide ],                      
                     [ rdf:type lexinfo:AdjectiveScaleFrame ;
                       lexinfo:copulativeSubject   :arg1wide ;
                       lexinfo:adverbialComplement :arg2wide ];
@@ -193,14 +193,14 @@
   lemon:canonicalForm [ lemon:writtenRep "deep"@en ] ;
   lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
                       lexinfo:copulativeSubject :arg1deep ;
-                      lexinfo:attributiveArg    :arg2deep ],                      
+                      lexinfo:attributiveArg    :arg1deep ],                      
                     [ rdf:type lexinfo:AdjectiveScaleFrame ;
                       lexinfo:copulativeSubject   :arg1deep ;
                       lexinfo:adverbialComplement :arg2deep ];
   lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
                                   oils:boundTo <http://dbpedia.org/ontology/depth> ;
                                   oils:degree oils:strong ] ;
-                lemon:isA :arg1deep  ] ,
+                lemon:isA :arg1deep ] ,
               [ lemon:reference <http://dbpedia.org/ontology/depth> ;
                 lemon:subjOfProp :arg1deep ;
                 lemon:objOfProp  :arg2deep ] .
@@ -210,7 +210,7 @@
   lemon:canonicalForm [ lemon:writtenRep "big"@en ] ;
   lemon:synBehavior [ rdf:type lexinfo:AdjectivePredicateFrame ;
                       lexinfo:copulativeSubject :arg1big ;
-                      lexinfo:attributiveArg    :arg2big ];
+                      lexinfo:attributiveArg    :arg1big ];
   lemon:sense [ lemon:reference [ rdfs:subClassOf oils:CovariantScalar ;
                                   oils:boundTo <http://dbpedia.org/ontology/area> ;
                                   oils:degree oils:strong ] ;
@@ -339,6 +339,7 @@
 
 :throwLeftHanded a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "throw left-handed"@en ];
   lemon:decomposition ( :component_throw :component_lefthanded ) ;   
   lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
                       lexinfo:subject :arg_throw ] ;
@@ -346,6 +347,7 @@
                 lemon:isA :arg_throw ] .
 :throwLeft a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "throw left"@en ];
   lemon:decomposition ( :component_throw :component_left ) ;   
   lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
                       lexinfo:subject :arg_throw ] ;
@@ -354,6 +356,7 @@
 
 :throwRightHanded a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "throw right-handed"@en ];
   lemon:decomposition ( :component_throw :component_righthanded ) ;   
   lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
                       lexinfo:subject :arg_throw ] ;
@@ -361,6 +364,7 @@
                 lemon:isA :arg_throw ] .
 :throwRight a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "throw right"@en ];
   lemon:decomposition ( :component_throw :component_right ) ;   
   lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
                       lexinfo:subject :arg_throw ] ;
@@ -369,6 +373,7 @@
 
 :batLeftHanded a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "bat left-handed"@en ];
   lemon:decomposition ( :component_bat :component_lefthanded ) ;   
   lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
                       lexinfo:subject :arg_bat ] ;
@@ -376,6 +381,7 @@
                 lemon:isA :arg_bat ] .
 :batLeft a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "bat left"@en ];
   lemon:decomposition ( :component_bat :component_left ) ;   
   lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
                       lexinfo:subject :arg_bat ] ;
@@ -384,6 +390,7 @@
 
 :batRightHanded a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "bat right-handed"@en ];
   lemon:decomposition ( :component_bat :component_righthanded ) ;   
   lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
                       lexinfo:subject :arg_bat ] ;
@@ -391,6 +398,7 @@
                 lemon:isA :arg_bat ] .
 :batRight a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "bat right"@en ];
   lemon:decomposition ( :component_bat :component_right ) ;   
   lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
                       lexinfo:subject :arg_bat ] ;
@@ -399,6 +407,7 @@
 
 :shootLeft a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "shoot left"@en ];
   lemon:decomposition ( :component_shoot :component_left ) ;   
   lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
                       lexinfo:subject :arg_shoot ] ;
@@ -406,6 +415,7 @@
                 lemon:isA :arg_shoot ] .
 :shootRight a lemon:Word ;
   lexinfo:partOfSpeech lexinfo:verb ;
+  lemon:canonicalForm [ lemon:writtenRep "shoot right"@en ];
   lemon:decomposition ( :component_shoot :component_right ) ;   
   lemon:synBehavior [ rdf:type lexinfo:IntransitiveFrame ;
                       lexinfo:subject :arg_shoot ] ;
