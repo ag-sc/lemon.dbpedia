@@ -42,7 +42,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_4#>,"en",
 
   ClassNoun("parque",dbpedia:Park) masculine with plural "parques",
   //// Candidate for noplural
-  ClassNoun(["aguas"/noun "termales"/adjective],dbpedia:HotSpring),
+  ClassNoun(["aguas"/noun "termales"/adjective],dbpedia:HotSpring) feminine,
 
   ClassNoun("lugar",dbpedia:Venue) masculine with plural "lugares",
   ClassNoun("teatro",dbpedia:Theatre) masculine with plural "teatros",
