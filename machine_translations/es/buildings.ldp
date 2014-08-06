@@ -21,7 +21,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_4#>,"en",
   ClassNoun("rascacielos",dbpedia:Skyscraper) masculine with plural "rascacielos",
   ClassNoun("monumento",dbpedia:Monument) masculine with plural "monumentos",
   ClassNoun("memorial",dbpedia:Memorial) masculine with plural "memoriales",
-  ClassNoun(["monumento"/noun "conmemoriativo"/adjective],dbpedia:Memorial) masculine with plural "monumentos conmemorativos",
+  ClassNoun(["monumento"/noun "conmemorativo"/adjective],dbpedia:Memorial) masculine with plural "monumentos conmemorativos",
   ClassNoun("faro",dbpedia:Lighthouse) masculine with plural "faros",
   ClassNoun("molino",dbpedia:Mill) masculine with plural "molinos",
   ////Correct write it so?
