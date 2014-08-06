@@ -42,7 +42,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_4#>,"en",
 
   ClassNoun("parque",dbpedia:Park) masculine with plural "parques",
   //// Candidate for noplural
-  ClassNoun(["aguas"/noun "termales"/adjective],dbpedia:HotSpring),
+  ClassNoun(["aguas"/noun "termales"/adjective],dbpedia:HotSpring) feminine,
 
   ClassNoun("lugar",dbpedia:Venue) masculine with plural "lugares",
   ClassNoun("teatro",dbpedia:Theatre) masculine with plural "teatros",
@@ -72,8 +72,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_4#>,"en",
   ClassNoun(["túnel"/noun "de"/preposition "carretera"/noun ],dbpedia:RoadTunnel) masculine with plural "túneles de carretera",
   ClassNoun(["túnel"/noun "de"/preposition "vía"/noun  "navegable"/adjective],dbpedia:WaterwayTunnel) masculine with plural "túneles de vías navegables",
   ClassNoun(["túnel"/noun "fluvial"/adjective],dbpedia:WaterwayTunnel) masculine with plural "túneles fluviales",
-  ClassNoun(["estación"/noun "eléctrica"/adjective ],dbpedia:PowerStation) masculine with plural "estaciones eléctricas",
-  ClassNoun(["central"/noun "eléctrica"/adjective ],dbpedia:PowerStation) masculine with plural "centrales eléctricas",
+  ClassNoun(["estación"/noun "eléctrica"/adjective ],dbpedia:PowerStation) feminine with plural "estaciones eléctricas",
+  ClassNoun(["central"/noun "eléctrica"/adjective ],dbpedia:PowerStation) feminine with plural "centrales eléctricas",
 
   //// Properties
 
