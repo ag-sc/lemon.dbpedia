@@ -38,7 +38,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_4#>,"es",
   ClassNoun("mezquita",dbpedia:Mosque) feminine with plural "mezquitas",
   ClassNoun("santuario",dbpedia:Shrine) masculine with plural "santuarios",
   ClassNoun("sinagoga",dbpedia:Synagogue) feminine with plural "sinagogas",
-  ClassNoun("Temple",dbpedia:Temple) masculine with plural "templos",
+  ClassNoun("templo",dbpedia:Temple) masculine with plural "templos",
 
   ClassNoun("parque",dbpedia:Park) masculine with plural "parques",
   //// Candidate for noplural
