@@ -6,19 +6,12 @@ What we describe here is a procedure to detect errors in the .ldp files.
 ##Steps
 
 * Generate the RDF
+ * Follow the instructions in <a href="http://github.com/jmccrae/lemon.patterns">lemon.patters</a> to generate a file with triples in the RDF/XML format.
 * Store it in a SPARQL endpoint
+ *For instance, you can use <A HREF="http://jena.apache.org/documentation/serving_data/index.html">Fuseki</A> (part of Jena) due to its simplicity.
 * Send some SPARQL queries to the SPARQL endpoint and check the results
-
-## Learn by example
-This is an example for the Spanish lexicalization of DBpedia.
-
-### Generation of RDF
-
-### Storing the RDF in a SPARQL endpoint (by using Jena Fuseki)
-
-### Make some queries to find out errors
-
-This query shows the DBpedia Classes, its gender and its form (singular/plural). 
+  *the files in this folder provides SPARQL queries. E.g. the file verbs contains a SPARQL query that retrieves all the verbs (in lemos terminology) stored in the triple store.  
+  *This query shows, for each DBpedia Class (lemon:Reference), its gender and its number (singular/plural). 
 
 ```
 prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#>
