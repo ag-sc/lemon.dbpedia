@@ -146,14 +146,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   ClassNoun("convención",dbpedia:Convention) masculine with plural "convenciones",
   ClassNoun("musical",dbpedia:Musical) masculine with plural "musicales",
   ClassNoun("premio",dbpedia:Award) masculine with plural "premios",
-  ClassNoun("decoración",dbpedia:Decoration),
+//// See http://mappings.dbpedia.org/server/ontology/classes/Decoration
+  ClassNoun("condecoración",dbpedia:Decoration) feminime with plural "condecoraciones",
 
 
   //// Properties
 
   // artist 
 
-  StateVerb("registro",dbpedia:artist,
+  StateVerb("grabar",dbpedia:artist,
         propSubj = DirectObject restrictedTo lex:Album_or_Song,
         propObj  = Subject),
   RelationalNoun("intérprete",dbpedia:artist,
@@ -162,7 +163,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   // (literary) genre
 
-  RelationalNoun("genre",dbpedia:genre,
+  RelationalNoun("género",dbpedia:genre,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
   RelationalNoun("genre",dbpedia:literaryGenre,
@@ -171,7 +172,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   StateVerb("hacer",dbpedia:genre,
         propObj  = DirectObject restrictedTo dbpedia:MusicGenre),
-  StateVerb("condonación",dbpedia:genre,
+  StateVerb("escribir",dbpedia:genre,
         propSubj = Subject restrictedTo dbpedia:Writer,
         propObj  = DirectObject),
 
@@ -198,7 +199,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
         propSubj = PossessiveAdjunct,
         propObj  = Subject),
 
-  StateVerb("condonación",dbpedia:writer,
+  StateVerb("escribir",dbpedia:writer,
         propSubj = DirectObject,
         propObj  = Subject),
 
@@ -207,7 +208,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   RelationalNoun("editor",dbpedia:publisher,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  StateVerb("publicarán",dbpedia:publisher,
+  StateVerb("publicar",dbpedia:publisher,
         propSubj = DirectObject,
         propObj  = Subject),
 
@@ -236,26 +237,26 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   RelationalNoun("composer",dbpedia:composer,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
-  StateVerb("compose",dbpedia:composer,
+  StateVerb("componer",dbpedia:composer,
         propSubj = DirectObject,
         propObj  = Subject),
-  StateVerb("condonación",dbpedia:composer,
+  StateVerb("escribir",dbpedia:composer,
         propSubj = DirectObject,
         propObj  = Subject),
 
   // musical{Band|Artist}
 
-  StateVerb("condonación",dbpedia:musicalBand,
+  StateVerb("escribir",dbpedia:musicalBand,
         propSubj = DirectObject,
         propObj  = Subject),
-  StateVerb("condonación",dbpedia:musicalArtist,
+  StateVerb("escribir",dbpedia:musicalArtist,
         propSubj = DirectObject,
         propObj  = Subject),
 
-  StateVerb("registro",dbpedia:musicalBand,
+  StateVerb("grabar",dbpedia:musicalBand,
         propSubj = DirectObject,
         propObj  = Subject),
-  StateVerb("registro",dbpedia:musicalArtist,
+  StateVerb("grabar",dbpedia:musicalArtist,
         propSubj = DirectObject,
         propObj  = Subject),
 
@@ -265,13 +266,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   // starring, guest ,presenter
 
-  StateVerb("anís",dbpedia:starring),
-  StateVerb("característica",dbpedia:starring),
-  StateVerb("desempeñar",dbpedia:starring,
+  StateVerb("protagonizar",dbpedia:starring),
+  //// No equivalence StateVerb("caracterizar",dbpedia:starring),
+  StateVerb("actuar",dbpedia:starring,
         propSubj = PrepositionalObject("en"),
         propObj  = Subject),
-  StateVerb("característica",dbpedia:guest),
-  StateVerb("figurar",dbpedia:guest,
+  StateVerb("ofrecer",dbpedia:guest),
+  StateVerb("aparecer",dbpedia:guest,
         propSubj = PrepositionalObject("en"),
         propObj  = Subject),
   RelationalNoun(["invitados"/noun "anís"/noun],dbpedia:guest,
@@ -288,13 +289,13 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
         propSubj = PrepositionalObject("de"),
         propObj  = CopulativeArg),
 
-  StateVerb("desempeñar",dbpedia:instrument,
+  StateVerb("tocar",dbpedia:instrument,
         propSubj = DirectObject,
         propObj  = Subject),
 
   // musicFusionGenre 
 
-  StateVerb("fusibles",dbpedia:musicFusionGenre,
+  StateVerb("fisionar",dbpedia:musicFusionGenre,
         propSubj = PrepositionalObject("en"),
         propObj  = Subject),
 
@@ -306,7 +307,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   // requirement 
 
-  StateVerb("exigir",dbpedia:requirement,
+  StateVerb("requerir",dbpedia:requirement,
         propSubj = DirectObject,
         propObj  = Subject),
 
@@ -324,14 +325,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
         propSubj = lex:pieceOfWork as Subject, 
         propObj  = lex:date as PrepositionalObject("sobre")),
 
-  StateVerb(["come"/verb "figuran"/particle],dbpedia:releaseDate,
-        propObj  = PrepositionalObject("sobre")),
+  StateVerb("lanzar",dbpedia:releaseDate,
+        propObj  = PrepositionalObject("en")),
 
-  StateVerb("aéreos",dbpedia:completionDate,
+  StateVerb("emitir",dbpedia:completionDate,
         propSubj = Subject restrictedTo dbpedia:TelevisionShow,
         propObj  = PrepositionalObject("hasta")),
-  StateVerb("aéreos",dbpedia:channel,
-        propObj  = PrepositionalObject("sobre")),
+////Review this one
+  StateVerb("emitir",dbpedia:channel,
+        propObj  = PrepositionalObject("en")),
 
   StateVerb("producir",dbpedia:company,
         propSubj = DirectObject restrictedTo dbpedia:TelevisionShow,
@@ -434,7 +436,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   RelationalNoun("bruta",dbpedia:gross,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  StateVerb("hacer",dbpedia:gross),
+  StateVerb("generar",dbpedia:gross),
+////Review these two
   StateVerb(["tener"/verb "en"/preposition],dbpedia:gross),
   StateVerb(["tener"/verb "durante"/preposition],dbpedia:gross),
 
@@ -454,7 +457,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   RelationalNoun("cinematographer",dbpedia:cinematography,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
-  StateVerb("sarmientos",dbpedia:cinematographer,
+  StateVerb("filmar",dbpedia:cinematographer,
         propSubj = DirectObject,
         propObj  = Subject),
 
@@ -462,7 +465,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
 
-  StateVerb("edit",dbpedia:editing,
+  StateVerb("editar",dbpedia:editing,
         propSubj = DirectObject,
         propObj  = Subject), 
 
@@ -470,7 +473,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
        propSubj = PrepositionalObject("de"),
        propObj  = CopulativeArg),  
 
-  StateVerb("desempeñar",dbpedia:programmeFormat), 
+  StateVerb("visionar",dbpedia:programmeFormat), 
 
   ConsequenceVerb("radiodifusión",dbpedia:broadcastArea,
        propSubj = lex:station as Subject, 
@@ -501,9 +504,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   IntersectiveDataPropertyAdjective("categoría C",dbpedia:broadcastStationClass,"C"), 
   IntersectiveDataPropertyAdjective("clase d",dbpedia:broadcastStationClass,"d"), 
 
-  StateVerb(":",dbpedia:callsignMeaning), 
-  StateVerb("stand",dbpedia:callsignMeaning,
-        propObj = PrepositionalObject("para")),
+  StateVerb("significar",dbpedia:callsignMeaning), 
+  //// StateVerb("significar",dbpedia:callsignMeaning,
+  //// No equivalent      propObj = PrepositionalObject("para")),
+  //// May be "que" but, is a PrepositionaObject ?
 
   RelationalNoun("spin-off",dbpedia:related,
         propSubj = PossessiveAdjunct restrictedTo dbpedia:TelevisionShow,
