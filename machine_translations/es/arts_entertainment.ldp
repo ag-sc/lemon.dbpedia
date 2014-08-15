@@ -178,7 +178,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   // language
 
-  RelationalAdjective("escrita",dbpedia:language,
+  RelationalAdjective("escrito",dbpedia:language,
   //    propSubj = CopulativeSubject restrictedTo dbpedia:WrittenWork,
   //    propObj  = PrepositionalObject("in)),
         relationalArg = PrepositionalObject("en")),
@@ -321,9 +321,9 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  ConsequenceVerb("despacho",dbpedia:releaseDate,
+  ConsequenceVerb("lanzar",dbpedia:releaseDate,
         propSubj = lex:pieceOfWork as Subject, 
-        propObj  = lex:date as PrepositionalObject("sobre")),
+        propObj  = lex:date as PrepositionalObject("en")),
 
   StateVerb("lanzar",dbpedia:releaseDate,
         propObj  = PrepositionalObject("en")),
@@ -381,15 +381,18 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   RelationalNoun("antecedente",dbpedia:previousWork,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
-
-  RelationalAdjective("escrita",dbpedia:previousWork,
+//// It should be "antes de". Can we deal with it?
+  RelationalAdjective("escrito",dbpedia:previousWork,
         relationalArg = PrepositionalObject("antes") restrictedTo dbpedia:Book), 
-  RelationalAdjective("escrita",dbpedia:subsequentWork,
+//// It should be "después de". Can we deal with it?
+  RelationalAdjective("escrito",dbpedia:subsequentWork,
         relationalArg = PrepositionalObject("después") restrictedTo dbpedia:Book), 
 
-  RelationalAdjective("registro",dbpedia:previousWork,
-        relationalArg = PrepositionalObject("antes") restrictedTo dbpedia:Album), 
-  RelationalAdjective("registro",dbpedia:subsequentWork,
+//// It should be "antes de". Can we deal with it?
+  RelationalAdjective("grabado",dbpedia:previousWork,
+        relationalArg = PrepositionalObject("antes") restrictedTo dbpedia:Album),
+//// It should be "después de". Can we deal with it?
+  RelationalAdjective("grabado",dbpedia:subsequentWork,
         relationalArg = PrepositionalObject("después") restrictedTo dbpedia:Album), 
 
   // (former) band member
@@ -436,7 +439,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   RelationalNoun("presupuesto",dbpedia:budget,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun("bruta",dbpedia:gross,
+  RelationalNoun("bruto",dbpedia:gross,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
   StateVerb("generar",dbpedia:gross),
@@ -491,10 +494,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   ConsequenceVerb("radiodifusión",dbpedia:network,
      propSubj = lex:station as Subject, 
-     propObj  = lex:area as PrepositionalObject("sobre")),
-  ConsequenceVerb("aéreos",dbpedia:network,
+     propObj  = lex:area as PrepositionalObject("en")),
+  ConsequenceVerb("emitido",dbpedia:network,
      propSubj = lex:show as Subject, 
-     propObj  = lex:network as PrepositionalObject("sobre")),
+     propObj  = lex:network as PrepositionalObject("en")),
 
   RelationalNoun("episodio",dbpedia:series,
         propSubj = PrepositionalObject("de") restrictedTo dbpedia:TelevisionEpisode,
@@ -503,10 +506,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
         propSubj = PrepositionalObject("de"),
         propObj  = CopulativeArg), 
 
-  IntersectiveDataPropertyAdjective("clase a",dbpedia:broadcastStationClass,"a"), 
-  IntersectiveDataPropertyAdjective("clase b",dbpedia:broadcastStationClass,"b"), 
-  IntersectiveDataPropertyAdjective("categoría C",dbpedia:broadcastStationClass,"C"), 
-  IntersectiveDataPropertyAdjective("clase d",dbpedia:broadcastStationClass,"d"), 
+  IntersectiveDataPropertyAdjective("clase A",dbpedia:broadcastStationClass,"A"), 
+  IntersectiveDataPropertyAdjective("clase B",dbpedia:broadcastStationClass,"B"), 
+  IntersectiveDataPropertyAdjective("clase C",dbpedia:broadcastStationClass,"C"), 
+  IntersectiveDataPropertyAdjective("clase D",dbpedia:broadcastStationClass,"D"), 
 
   StateVerb("significar",dbpedia:callsignMeaning), 
   //// StateVerb("significar",dbpedia:callsignMeaning,
