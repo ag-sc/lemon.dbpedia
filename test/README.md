@@ -27,6 +27,7 @@ select ?dbres ?singular ?genero ?plural where {
   ?noun lemon:otherForm ?other .
   ?other lemon:writtenRep ?plural .
 }
+ORDER BY ASC(?dbres)
 ```
 
 
