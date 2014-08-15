@@ -166,7 +166,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   RelationalNoun("género",dbpedia:genre,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun("genre",dbpedia:literaryGenre,
+  RelationalNoun("género",dbpedia:literaryGenre,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
@@ -185,16 +185,16 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   // runtime
 
-  RelationalNoun("runtime",dbpedia:runtime,
+  RelationalNoun("duración",dbpedia:runtime,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),  
 
   // writer
 
-  RelationalNoun("writer",dbpedia:writer,
+  RelationalNoun("escritor",dbpedia:writer,
         propSubj = PrepositionalObject("de"),
         propObj  = CopulativeArg),
-
+////Review
   RelationalNoun("autor",dbpedia:writer,
         propSubj = PossessiveAdjunct,
         propObj  = Subject),
@@ -218,8 +218,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   StateVerb("distribuir",dbpedia:distributor,
         propSubj = DirectObject,
         propObj  = Subject),
-
-  RelationalNoun(["OCLC"/noun "número"/noun],dbpedia:oclc,
+//// oclc stands for Online Computer Library Center number
+  RelationalNoun(["código"/noun "OCLC"/noun],dbpedia:oclc,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
@@ -234,7 +234,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   // composer 
 
-  RelationalNoun("composer",dbpedia:composer,
+  RelationalNoun("compositor",dbpedia:composer,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
   StateVerb("componer",dbpedia:composer,
@@ -275,11 +275,11 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   StateVerb("aparecer",dbpedia:guest,
         propSubj = PrepositionalObject("en"),
         propObj  = Subject),
-  RelationalNoun(["invitados"/noun "anís"/noun],dbpedia:guest,
+  RelationalNoun(["artista"/noun "invitado"/noun],dbpedia:guest,
         propSubj = PrepositionalObject("en"),
         propObj  = CopulativeArg),
 
-  RelationalNoun("présenter",dbpedia:presenter,
+  RelationalNoun("presentador",dbpedia:presenter,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
@@ -301,8 +301,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   // openingFilm 
 
-  RelationalNoun(["apertura"/adjective "película"/noun],dbpedia:openingFilm,
-        propSubj = PrepositionalObject("en"),
+  RelationalNoun(["película"/noun "inaugural"/adjective],dbpedia:openingFilm,
+        propSubj = PrepositionalObject("de"),
         propObj = CopulativeArg),
 
   // requirement 
@@ -317,7 +317,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   // releaseDate, completionDate, channel, company
 
-  RelationalNoun(["despacho"/noun "fecha"/noun],dbpedia:releaseDate,
+  RelationalNoun(["fecha"/noun "de"/preposition "lanzamiento"/noun],dbpedia:releaseDate,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
@@ -341,7 +341,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   // recordDate, recordedIn
 
-  RelationalNoun(["registro"/noun "fecha"/noun],dbpedia:recordDate,
+  RelationalNoun(["fecha"/noun "de"/preposition "grabación"/noun ],dbpedia:recordDate,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
@@ -355,12 +355,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   // award 
 
-  RelationalNoun("adjudicación",dbpedia:award,
+  RelationalNoun("galardón",dbpedia:award,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
   StateVerb("ganar",dbpedia:award),
-
+  StateVerb("galardonar",dbpedia:award,
+            propSubj = Subject,
+            propObj = PrepositionalObject("con")),
   StateVerb("recibir",dbpedia:award),
 
   ConsequenceVerb("adjudicación",dbpedia:award,
@@ -369,13 +371,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   // previous and subsequent work
 
-  RelationalNoun("follow-up",dbpedia:subsequentWork,
+  RelationalNoun("continuación",dbpedia:subsequentWork,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun("sequel",dbpedia:subsequentWork,
+  RelationalNoun("secuela",dbpedia:subsequentWork,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun("prequel",dbpedia:previousWork,
+  ////Not in RAE
+  RelationalNoun("antecedente",dbpedia:previousWork,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
 
@@ -405,28 +408,28 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  RelationalNoun(["instalación"/noun "ID"/noun],dbpedia:facilityId,
+  RelationalNoun(["identificador"/noun "de"/proposition "instalación"/noun],dbpedia:facilityId,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  RelationalNoun("B-side",dbpedia:bSide,
+  RelationalNoun("cara B",dbpedia:bSide,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  RelationalNoun("referente",dbpedia:album,
+  RelationalNoun("canción",dbpedia:album,
         propSubj = PrepositionalObject("sobre"),
         propObj  = CopulativeArg),
-  RelationalNoun("vía",dbpedia:album,
+  RelationalNoun("pista",dbpedia:album,
         propSubj = PrepositionalObject("sobre"),
         propObj  = CopulativeArg),
 
-  RelationalNoun(["hermanas"/noun "estación"/noun],dbpedia:sisterStation,
+  RelationalNoun(["emisora"/noun "hermana"/noun],dbpedia:sisterStation,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun(["hermanas"/noun "canalizar"/noun],dbpedia:sisterStation,
+  RelationalNoun(["estación"/noun "hermanas"/noun],dbpedia:sisterStation,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun(["hermanas"/noun "red"/noun],dbpedia:sisterStation,
+  RelationalNoun(["red"/noun "hermana"/noun],dbpedia:sisterStation,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
@@ -441,27 +444,27 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   StateVerb(["tener"/verb "en"/preposition],dbpedia:gross),
   StateVerb(["tener"/verb "durante"/preposition],dbpedia:gross),
 
-  RelationalNoun("reconsideración",dbpedia:review,
+  RelationalNoun("revisión",dbpedia:review,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
   RelationalAdjective("revisado",dbpedia:review,
         relationalArg = PrepositionalObject("en")),
 
-  RelationalNoun(["asociados"/adjective "acto"/noun],dbpedia:associatedBand,
+  RelationalNoun(["banda"/noun"asociada"/adjective],dbpedia:associatedBand,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun(["asociados"/adjective "acto"/noun],dbpedia:associatedMusicalArtist,
+  RelationalNoun(["banda"/noun"asociada"/adjective],dbpedia:associatedMusicalArtist,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
 
-  RelationalNoun("cinematographer",dbpedia:cinematography,
+  RelationalNoun("cinematografía",dbpedia:cinematography,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
   StateVerb("filmar",dbpedia:cinematographer,
         propSubj = DirectObject,
         propObj  = Subject),
 
-  RelationalNoun(["ejecutiva"/adjective "productor"/noun],dbpedia:executiveProducer,
+  RelationalNoun(["productor"/noun "ejecutivo"/adjective],dbpedia:executiveProducer,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
 
@@ -469,11 +472,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
         propSubj = DirectObject,
         propObj  = Subject), 
 
-  RelationalNoun(["antigua"/adjective "banda"/noun "miembro"/noun],dbpedia:formerBandMember,
+  RelationalNoun(["miembro"/noun "fundador"/adjective],dbpedia:formerBandMember,
        propSubj = PrepositionalObject("de"),
        propObj  = CopulativeArg),  
 
-  StateVerb("visionar",dbpedia:programmeFormat), 
+  ///See http://mappings.dbpedia.org/index.php/OntologyProperty:ProgrammeFormat
+  StateVerb(["formato"/noun "de"/preposition "programación"/noun]",dbpedia:programmeFormat), 
 
   ConsequenceVerb("radiodifusión",dbpedia:broadcastArea,
        propSubj = lex:station as Subject, 
@@ -513,10 +517,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
         propSubj = PossessiveAdjunct restrictedTo dbpedia:TelevisionShow,
         propObj  = CopulativeArg), 
 
-  RelationalNoun(["LC"/noun "clasificación"/noun],dbpedia:lcc,
+  RelationalNoun(["clasificación"/noun "LC"/noun],dbpedia:lcc,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
-  RelationalNoun(["Dewey"/noun "clasificación"/noun],dbpedia:dcc,
+  RelationalNoun(["clasificación"/noun "Dewey"/noun],dbpedia:dcc,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg)
 
