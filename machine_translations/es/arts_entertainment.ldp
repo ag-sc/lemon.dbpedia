@@ -43,7 +43,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   ClassNoun("manhua",dbpedia:Manhua) masculine with plural "manhuas",
   //// Not in Spanish wikipedia ClassNoun("manhwa",dbpedia:Manhwa),
   //// del preposition? 
-  ClassNoun(["autor"/noun "del"/preposition "cómic"/noun],dbpedia:ComicsCreator) masculine with plural "autores de cómics",
+  ClassNoun(["autor"/noun "de"/preposition "cómic"/noun],dbpedia:ComicsCreator) masculine with plural "autores de cómics",
   ClassNoun("editor",dbpedia:Publisher) masculine with plural "editores",
   ClassNoun(["literatura"/noun "periódica"/adjective],dbpedia:PeriodicalLiterature) feminine with plural "literatura periódica",
   ClassNoun("periódico",dbpedia:Newspaper) masculine with plural "periódicos",
