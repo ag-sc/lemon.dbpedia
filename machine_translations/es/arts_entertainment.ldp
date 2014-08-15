@@ -295,7 +295,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   // musicFusionGenre 
 
-  StateVerb("fisionar",dbpedia:musicFusionGenre,
+  StateVerb("fusionar",dbpedia:musicFusionGenre,
         propSubj = PrepositionalObject("en"),
         propObj  = Subject),
 
@@ -345,11 +345,11 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  ConsequenceVerb("registro",dbpedia:recordDate,
+  ConsequenceVerb("grabar",dbpedia:recordDate,
         propSubj = lex:musicalWork as Subject, 
         propObj  = lex:date as PrepositionalObject("sobre")),
 
-  ConsequenceVerb("registro",dbpedia:recordedIn,
+  ConsequenceVerb("grabar",dbpedia:recordedIn,
         propSubj = lex:musicalWork as Subject, 
         propObj  = lex:place as PrepositionalObject("en")),
 
@@ -365,7 +365,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
             propObj = PrepositionalObject("con")),
   StateVerb("recibir",dbpedia:award),
 
-  ConsequenceVerb("adjudicación",dbpedia:award,
+  ConsequenceVerb("adjudicar",dbpedia:award,
         propSubj = lex:person as Subject,
         propObj  = lex:prizeAwarded as DirectObject),
 
@@ -484,7 +484,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   ///Unclear sense in Spanish
   StateVerb("programar",dbpedia:programmeFormat), 
 
-  ConsequenceVerb("radiodifusión",dbpedia:broadcastArea,
+  ConsequenceVerb("emitir",dbpedia:broadcastArea,
        propSubj = lex:station as Subject, 
        propObj  = lex:area as PrepositionalObject("en")),
   StateVerb("cubrir",dbpedia:broadcastArea),
@@ -497,7 +497,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   ConsequenceVerb("radiodifusión",dbpedia:network,
      propSubj = lex:station as Subject, 
      propObj  = lex:area as PrepositionalObject("en")),
-  ConsequenceVerb("emitido",dbpedia:network,
+  ConsequenceVerb("emitir",dbpedia:network,
      propSubj = lex:show as Subject, 
      propObj  = lex:network as PrepositionalObject("en")),
 
