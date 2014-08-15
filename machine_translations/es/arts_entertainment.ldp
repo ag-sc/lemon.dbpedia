@@ -8,8 +8,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   ClassNoun("artista",dbpedia:Artist) commonGender with plural "artistas",
   ClassNoun("trabajo",dbpedia:Work) masculine with plural "trabajos",
   ClassNoun("obra",dbpedia:Artwork) feminine with plural "obras",
-  ClassNoun("obra"/noun "de"/preposition "arte"/noun,dbpedia:Artwork) feminine with plural "obras de arte",
-  ClassNoun("obra"/noun "de"/preposition "arte"/noun,dbpedia:Artwork) feminine with plural "obras",
+  ClassNoun(["obra"/noun "de"/preposition "arte"/noun],dbpedia:Artwork) feminine with plural "obras de arte",
+  //// Duplication
   ClassNoun(["colección"/noun "valiosa"/adjective],dbpedia:CollectionOfValuables) feminine with plural "colecciones valiosas",
   
   // Fine arts
@@ -23,7 +23,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   // Print 
 
   ClassNoun(["trabajo"/noun "escrito"/adjective],dbpedia:WrittenWork) masculine with plural "trabajos escritos",
-  ClassNoun("libro",dbpedia:Book) maculine with plural "libros",
+  ClassNoun("libro",dbpedia:Book) masculine with plural "libros",
   ClassNoun("novela",dbpedia:Novel) feminine with plural "novelas",
   ClassNoun(["novela"/noun "ligera"/adjective],dbpedia:LightNovel),
   ClassNoun("drama",dbpedia:Drama) masculine with plural "dramas",
@@ -34,7 +34,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   ClassNoun("escritor",dbpedia:Writer) masculine with plural "escritores",
   ClassNoun("autor",dbpedia:Author) masculine with plural "autores",
   ClassNoun("historieta",dbpedia:Cartoon) feminine with plural "historietas",
-  ClassNoun(["dibujo" "animado"/adjective],dbpedia:Cartoon) masculine with plural "dibujos animados",
+  ClassNoun(["dibujo"/noun "animado"/adjective],dbpedia:Cartoon) masculine with plural "dibujos animados",
   ClassNoun("anime",dbpedia:Anime) masculine with plural "animes",
   ClassNoun(["historieta"/noun "de"/preposition "Hollywood"/noun],dbpedia:HollywoodCartoon),
   ClassNoun("cómic",dbpedia:Comic) masculine with plural "cómics",
@@ -55,7 +55,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   ClassNoun(["pasta"/noun "dura"/adjective],lex:Hardcover) feminine with plural "pastas duras",
   //// weird. It should be and adjective instead of a noun. what gender?, what number?
   ClassNoun(["en"/preposition "rústica"/adjective],lex:Paperback),
-  ClassNoun(["libro"/noun "de"/preposition "bolsillo"/noun],lex:Paperback) masculine with plural "libros de bolsillo"
+  ClassNoun(["libro"/noun "de"/preposition "bolsillo"/noun],lex:Paperback) masculine with plural "libros de bolsillo",
   //// weird. It should be and adjective instead of a noun
   ClassNoun(["pasta"/noun "dura"/adjective],lex:Hardcover) feminine with plural "pastas duras",
   ClassNoun("e-book",lex:EBook) masculine with plural "e-books",
@@ -77,7 +77,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   ClassNoun("lista",dbpedia:List) feminine with plural "listas",
   ClassNoun(["lista"/noun "de"/preposition "pistas"/noun ],dbpedia:TrackList) feminine with plural "listas de pistas",
   ////ClassNoun(["Eurovisión"/noun "referente"/noun "concurso"/noun "entrada"/noun],dbpedia:EurovisionSongContestEntry),
-  ClassNoun(["concurso"/noun "preposition"/de "Eurovisión"/noun],dbpedia:EurovisionSongContestEntry) masculine with plural "concursos de Eurovisión",
+  ClassNoun(["concurso"/noun "de"/preposition "Eurovisión"/noun],dbpedia:EurovisionSongContestEntry) masculine with plural "concursos de Eurovisión",
   ClassNoun("ópera",dbpedia:Opera) feminine with plural "óperas",
   ClassNoun(["artista"/noun "musical"/adjective],dbpedia:MusicalArtist) commonGender with plural "artistas musicales",
   ClassNoun("banda",dbpedia:Band) feminine with plural "bandas",
@@ -96,7 +96,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   ClassNoun(["actriz"/noun "de"/preposition "doblaje"/noun],lex:VoiceActress) feminine with plural "actrices de doblaje",
 //// Read http://mappings.dbpedia.org/server/ontology/classes/AdultActor
   ClassNoun(["actor"/noun "porno"/adjective],dbpedia:AdultActor) masculine with plural "actor porno",
-  ClassNoun(["actriz"/noun "porno"/adjective],lex:AdultActress) feminine wit plural "actriz porno",
+  ClassNoun(["actriz"/noun "porno"/adjective],lex:AdultActress) feminine with plural "actriz porno",
 //// del as preposition?  
   ClassNoun(["estrella"/noun "del"/preposition "porno"/adjective],dbpedia:Pornstar) commonGender with plural "estrellas del porno",
   ClassNoun(["estrella"/noun "del"/preposition "porno"/adjective],lex:PornActress) commonGender with plural "estrellas del porno",
@@ -130,8 +130,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   // Others
 
-  ClassNoun("cómico",dbpedia:Comedian) masculino with plural "cómicos",
-  ClassNoun("comediante",dbpedia:Comedian) masculino with plural "comediantes",
+  ClassNoun("cómico",dbpedia:Comedian) masculine with plural "cómicos",
+  ClassNoun("comediante",dbpedia:Comedian) masculine with plural "comediantes",
   ClassNoun(["grupo"/noun "cómico"/adjective],dbpedia:ComedyGroup) masculine with plural "grupos cómicos",
   ClassNoun(["diseñador"/noun "de"/preposition "moda"/noun],dbpedia:FashionDesigner) masculine with plural "diseñadores de moda",
   ClassNoun(["personaje"/noun "de"/preposition "ficción"/adjective],dbpedia:FictionalCharacter) masculine with plural "personajes de ficción",
@@ -139,7 +139,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   ClassNoun(["personaje"/noun "de"/preposition "animanga"/noun],dbpedia:AnimangaCharacter) masculine with plural "presonajes de animanga",
 //// See http://en.wikipedia.org/wiki/Soap_opera
   ClassNoun(["personaje"/noun "de"/preposition "culebrón"/noun],dbpedia:SoapCharacter) commonGender with plural "personajes de culebrón",
-  ClassNoun(["festival"/noun "de"/preposition "música"/noun],dbpedia:MusicFestival) masculino with plural "festivales de música",
+  ClassNoun(["festival"/noun "de"/preposition "música"/noun],dbpedia:MusicFestival) masculine with plural "festivales de música",
   ClassNoun(["festival"/noun "de"/preposition "cine"/noun],dbpedia:FilmFestival) masculine with plural "festivales de cine",
   ClassNoun("festival",lex:Festival) masculine with plural "festivales",
   ClassNoun("congreso",dbpedia:Convention) masculine with plural "congresos",
@@ -147,7 +147,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
   ClassNoun("musical",dbpedia:Musical) masculine with plural "musicales",
   ClassNoun("premio",dbpedia:Award) masculine with plural "premios",
 //// See http://mappings.dbpedia.org/server/ontology/classes/Decoration
-  ClassNoun("condecoración",dbpedia:Decoration) feminime with plural "condecoraciones",
+  ClassNoun("condecoración",dbpedia:Decoration) feminine with plural "condecoraciones",
 
 
   //// Properties
@@ -411,7 +411,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  RelationalNoun(["identificador"/noun "de"/proposition "instalación"/noun],dbpedia:facilityId,
+//// Review. I should say "identificador"/noun "de"/proposition "instalación"/noun but I get an error
+  RelationalNoun(["identificador"/noun "instalación"/noun],dbpedia:facilityId,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
@@ -480,7 +481,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
        propObj  = CopulativeArg),  
 
   ///See http://mappings.dbpedia.org/index.php/OntologyProperty:ProgrammeFormat
-  StateVerb(["formato"/noun "de"/preposition "programación"/noun]",dbpedia:programmeFormat), 
+  ///Unclear sense in Spanish
+  StateVerb("programar",dbpedia:programmeFormat), 
 
   ConsequenceVerb("radiodifusión",dbpedia:broadcastArea,
        propSubj = lex:station as Subject, 
