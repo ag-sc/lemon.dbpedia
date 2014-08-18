@@ -411,8 +411,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-//// Review. I should say "identificador"/noun "de"/proposition "instalación"/noun but I get an error
-  RelationalNoun(["identificador"/noun "instalación"/noun],dbpedia:facilityId,
+  RelationalNoun(["identificador"/noun  "de"/preposition "instalación"/noun],dbpedia:facilityId,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
