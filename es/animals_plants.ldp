@@ -1,7 +1,139 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
-@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_2#>,"es",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_1#>,"es",
 
+  //// Classes
+
+  ClassNoun("especie",dbpedia:Species) feminine with plural "especies",
+  ClassNoun("bacteria",dbpedia:Bacteria) feminine with plural "bacterias",
+  ClassNoun("Archaea",dbpedia:Archaea) masculine,
+  ClassNoun("arquea",dbpedia:Archaea) masculine,
+  ClassNoun("animal",dbpedia:Animal) masculine with plural "animales",
+  ClassNoun("anfibio",dbpedia:Amphibian) masculine with plural "anfibios",
+  ClassNoun("eucarionte",dbpedia:Eukaryote) masculine with plural "eucariontes",
+  ClassNoun("eukaryota",dbpedia:Eukaryote) masculine with plural "eukaryotas",
+  IntersectiveAdjective("eucariota",dbpedia:Eukaryote),
+  ClassNoun("insecto",dbpedia:Insect) masculine with plural "insectos",
+  ClassNoun("planta",dbpedia:Plant) feminine with plural "plantas",
+  ClassNoun(["planta"/noun "con"/preposition "flores"/noun],dbpedia:FloweringPlant),
+  ClassNoun("gnetophyte",dbpedia:Gnetophytes) feminine with plural "gnetophytes",
+  ClassNoun("gnetal",dbpedia:Gnetophytes) feminine with plural "gnetales", 
+  ClassNoun("genétida",dbpedia:Gnetophytes) feminine with plural "genétidas",
+  ClassNoun("gnetofita",dbpedia:Gnetophytes) feminine with plural "gnetofitas",
+  ClassNoun("uva",dbpedia:Grape) feminine with plural "uvas",
+  ClassNoun("cícada",dbpedia:Cycad) feminine with plural "cícadas",
+  ClassNoun("cicádida",dbpedia:Cycad) feminine with plural "cicádidas",
+  ClassNoun("helecho",dbpedia:Fern) masculine with plural "helechos",
+  ClassNoun("pteridófita",dbpedia:Fern) masculine with plural "pteridófitas",
+  ClassNoun("briofita",dbpedia:Moss) feminine with plural "briofitas",
+  ClassNoun("lycopsida",dbpedia:ClubMoss) feminine with plural "lycopsidas",
+  ClassNoun(["alga"/noun "verde"/adjective],dbpedia:GreenAlga) with plural "algas verdes",
+  ClassNoun("conífera",dbpedia:Conifer) feminine with plural "coníferas",
+  ClassNoun("ginkgo",dbpedia:Ginkgo) masculine with plural "ginkgos",
+  ClassNoun("mamífero",dbpedia:Mammal) masculine with plural "mamíferos",
+  ClassNoun("pez",dbpedia:Fish) masculine with plural "peces",
+  ClassNoun("ave",dbpedia:Bird) feminine with plural "aves",
+  ClassNoun("perro",dbpedia:Dog) masculine with plural "perros",
+  ClassNoun(["caballo"/noun "de"/preposition "carreras"/noun],dbpedia:RaceHorse) masculine with plural "caballos de carreras",
+  ClassNoun("hongo",dbpedia:Fungus) masculine with plural "hongos",
+  ClassNoun("seta",dbpedia:Fungus) feminine with plural "setas",
+  ClassNoun("reptil",dbpedia:Reptile) masculine with plural "reptiles",
+  ClassNoun("arácnido",dbpedia:Arachnid) masculine with plural "arácnidos", 
+  ClassNoun("crustáceo",dbpedia:Crustacean) masculine with plural "crustáceos",
+  ClassNoun("molusco",dbpedia:Mollusca) masculine with plural "moluscos", 
+  ClassNoun(["variedad"/noun "cultivada"/"cultivado"/adjective],dbpedia:CultivatedVariety) feminine with plural "variedades cultivadas",
+  ClassNoun("enjambre",dbpedia:Swarm) masculine with plural "enjambres",
+  ClassNoun(["enjambre"/noun "abierto"/adjective],dbpedia:OpenSwarm) masculine with plural "enjambre abierto",
+
+
+  //// Properties
+
+  // kingdom, phylum, genus, family, order
+
+  StateVerb("pertenecer",dbpedia:kingdom,
+       propObj  = PrepositionalObject("a")),
+  StateVerb("pertenecer",dbpedia:phylum,
+       propObj  = PrepositionalObject("a")),
+  StateVerb("pertenecer",<http://dbpedia.org/ontology/class>,
+       propObj  = PrepositionalObject("a")),
+  StateVerb("pertenecer",dbpedia:genus,
+       propObj  = PrepositionalObject("a")),
+  StateVerb("pertenecer",dbpedia:family,
+       propObj  = PrepositionalObject("a")),
+  StateVerb("pertenecer",dbpedia:order,
+       propObj  = PrepositionalObject("a")),
+
+  StateVerb("contener",dbpedia:kingdom,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("contener",dbpedia:phylum,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("contener",<http://dbpedia.org/ontology/class>,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("contener",dbpedia:family,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("contener",dbpedia:order,
+       propSubj = DirectObject,
+       propObj  = Subject),
+
+  RelationalNoun("Reino",dbpedia:kingdom,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("Phylum",dbpedia:phylum,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("clase",<http://dbpedia.org/ontology/class>,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("género",dbpedia:genus,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("familia",dbpedia:family,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("fin",dbpedia:order,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("miembro",dbpedia:kingdom,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("miembro",dbpedia:phylum,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("miembro",<http://dbpedia.org/ontology/class>,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("miembro",dbpedia:genus,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("miembro",dbpedia:family,
+       propObj  = PossessiveAdjunct),
+  RelationalNoun("miembro",dbpedia:order,
+       propObj  = PossessiveAdjunct),
+
+  // conservationStatus
+
+  RelationalNoun(["estado"/noun "de"/preposition "conservación"/noun ],dbpedia:conservationStatus,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  
+  IntersectiveDataPropertyAdjective("extinto",dbpedia:conservationStatus,"ex"),
+  IntersectiveDataPropertyAdjective(["extinto"/adjective "en"/preposition "estado"/noun "silvestre"/adjective],dbpedia:conservationStatus,"EW"),
+  IntersectiveDataPropertyAdjective("vulnerable",dbpedia:conservationStatus,"vu"),
+  IntersectiveAdjective("amenazado",lex:Threatened),
+  IntersectiveDataPropertyAdjective("amenazadas",dbpedia:conservationStatus,"en"),
+  IntersectiveDataPropertyAdjective(["en"/preposition "peligro"/noun "crítico"/adjective],dbpedia:conservationStatus,"CR"),
+  IntersectiveDataPropertyAdjective(["casi"/adverb "amenazado"/adjective],dbpedia:conservationStatus,"TN"),
+
+  // binomialAuthority
+
+  StateVerb("nombre",dbpedia:binomialAuthority,
+       propSubj = DirectObject,
+       propObj  = Subject), 
+
+  StateVerb(["primer"/adverb "describir"/verb],dbpedia:binomialAuthority,
+       propSubj = DirectObject,
+       propObj  = Subject)
 
 )
