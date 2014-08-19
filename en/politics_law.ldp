@@ -69,15 +69,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_11#>,"en",
 
   RelationalNoun("mayor",dbpedia:leader,
      propSubj = PossessiveAdjunct,
-     propObj  = Subject restrictedTo lex:Mayor),
+     propObj  = CopulativeArg restrictedTo lex:Mayor),
 
   RelationalNoun("president",dbpedia:leader,
      propSubj = PossessiveAdjunct,
-     propObj  = Subject restrictedTo lex:President),
+     propObj  = CopulativeArg restrictedTo lex:President),
 
   RelationalNoun("governor",dbpedia:leader,
      propSubj = PossessiveAdjunct,
-     propObj  = Subject restrictedTo lex:Governor),
+     propObj  = CopulativeArg restrictedTo lex:Governor),
 
   // viceChancellor, runningMate, president
 

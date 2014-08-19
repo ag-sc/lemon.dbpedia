@@ -122,7 +122,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_7#>,"en",
   // spokenIn, languageFamily
 
   StateVerb("belong",dbpedia:languageFamily,
-       propObj = PossessiveAdjunct),
+       propObj = PrepositionalObject("to")),
   RelationalNoun(["language"/noun "family"/noun],dbpedia:languageFamily,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),

@@ -191,7 +191,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_3#>,"en",
 
   RelationalNoun("author",dbpedia:writer,
         propSubj = PossessiveAdjunct,
-        propObj  = Subject),
+        propObj  = CopulativeArg),
 
   StateVerb("write",dbpedia:writer,
         propSubj = DirectObject,
