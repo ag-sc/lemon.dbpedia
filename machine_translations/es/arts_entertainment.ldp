@@ -1,153 +1,160 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
-@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_en#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"es",
 
   //// Classes
   
-  ClassNoun("artista",dbpedia:Artist),
-  ClassNoun("trabajos",dbpedia:Work),
-  ClassNoun("artísticos",dbpedia:Artwork),
-  ClassNoun(["recogida"/noun "de"/preposition "valores"/noun],dbpedia:CollectionOfValuables),
-  ClassNoun("recogida",dbpedia:CollectionOfValuables),
-
+  ClassNoun("artista",dbpedia:Artist) commonGender with plural "artistas",
+  ClassNoun("trabajo",dbpedia:Work) masculine with plural "trabajos",
+  ClassNoun("obra",dbpedia:Artwork) feminine with plural "obras",
+  ClassNoun(["obra"/noun "de"/preposition "arte"/noun],dbpedia:Artwork) feminine with plural "obras de arte",
+  //// Duplication
+  ClassNoun(["colección"/noun "valiosa"/adjective],dbpedia:CollectionOfValuables) feminine with plural "colecciones valiosas",
+  
   // Fine arts
 
-  ClassNoun("painter",dbpedia:Painter),
-  ClassNoun("pintura",dbpedia:Painting),
-  ClassNoun("sculptor",dbpedia:Sculptor),
-  ClassNoun("escultura",dbpedia:Sculpture),
+  ClassNoun("pintor",dbpedia:Painter) masculine with plural "pintores",
+  ClassNoun("pintura",dbpedia:Painting) feminine with plural "pinturas",
+  ClassNoun("cuadro",dbpedia:Painting) masculine with plural "cuadros",
+  ClassNoun("escultor",dbpedia:Sculptor) masculine with plural "escultores",
+  ClassNoun("escultura",dbpedia:Sculpture) feminine with plural "esculturas",
 
   // Print 
 
-  ClassNoun(["escrita"/adjective "trabajos"/noun],dbpedia:WrittenWork),
-  ClassNoun("Libro",dbpedia:Book),
-  ClassNoun("nuevos",dbpedia:Novel),
-  ClassNoun(["luz"/adjective "nuevos"/noun],dbpedia:LightNovel),
-  ClassNoun("Drama",dbpedia:Drama),
-  ClassNoun("desempeñar",dbpedia:Play),
-  ClassNoun("installment",dbpedia:Installment),
-  ClassNoun(["multi-volume"/adjective "publicación"/noun],dbpedia:MultiVolumePublication),
-  ClassNoun("writer",dbpedia:Writer),
-  ClassNoun("autor",dbpedia:Author),
-  ClassNoun("historieta",dbpedia:Cartoon),
-  ClassNoun("anime",dbpedia:Anime),
-  ClassNoun(["Hollywood"/noun "historieta"/noun],dbpedia:HollywoodCartoon),
-  ClassNoun("comic",dbpedia:Comic),
-  ClassNoun("comics",dbpedia:Comics),
-  ClassNoun("många",dbpedia:Manga),
-  ClassNoun("manhua",dbpedia:Manhua),
-  ClassNoun("manhwa",dbpedia:Manhwa),
-  ClassNoun(["comics"/noun "autor"/noun],dbpedia:ComicsCreator),
-  ClassNoun("editor",dbpedia:Publisher),
-  ClassNoun(["periódicas"/adjective "literatura"/noun],dbpedia:PeriodicalLiterature),
-  ClassNoun("periódicas",dbpedia:PeriodicalLiterature),
-  ClassNoun("periódicos",dbpedia:Newspaper),
-  ClassNoun("papel",dbpedia:Newspaper),
-  ClassNoun("diario",dbpedia:Newspaper),
-  ClassNoun("apilamiento",dbpedia:Magazine),
-  ClassNoun(["academical"/adjective "diario"/noun],dbpedia:AcademicalJournal),
-  ClassNoun("diario",dbpedia:AcademicJournal),
-
-  ClassNoun("hardcover",lex:Hardcover),
-  ClassNoun("paperback",lex:Paperback),
-  ClassNoun("e-book",lex:EBook),
-  ClassNoun("audiobook",lex:Audiobook),
+  ClassNoun(["trabajo"/noun "escrito"/adjective],dbpedia:WrittenWork) masculine with plural "trabajos escritos",
+  ClassNoun("libro",dbpedia:Book) masculine with plural "libros",
+  ClassNoun("novela",dbpedia:Novel) feminine with plural "novelas",
+  ClassNoun(["novela"/noun "ligera"/adjective],dbpedia:LightNovel),
+  ClassNoun("drama",dbpedia:Drama) masculine with plural "dramas",
+  ClassNoun("tragedia",dbpedia:Drama) masculine with plural "dramas",
+  ClassNoun("obra",dbpedia:Play) feminine with plural "obras",
+  ClassNoun("instalación",dbpedia:Installment) feminine with plural "instalaciones",
+  ClassNoun(["publicación"/noun "multivolumen"/adjective],dbpedia:MultiVolumePublication) feminine with plural "publicaciones multivolumen",
+  ClassNoun("escritor",dbpedia:Writer) masculine with plural "escritores",
+  ClassNoun("autor",dbpedia:Author) masculine with plural "autores",
+  ClassNoun("historieta",dbpedia:Cartoon) feminine with plural "historietas",
+  ClassNoun(["dibujo"/noun "animado"/adjective],dbpedia:Cartoon) masculine with plural "dibujos animados",
+  ClassNoun("anime",dbpedia:Anime) masculine with plural "animes",
+  ClassNoun(["historieta"/noun "de"/preposition "Hollywood"/noun],dbpedia:HollywoodCartoon),
+  ClassNoun("cómic",dbpedia:Comic) masculine with plural "cómics",
+  ClassNoun("cómic",dbpedia:Comics) masculine with plural "cómics",
+  ClassNoun("manga",dbpedia:Manga) masculine with plural "mangas",
+  ClassNoun("manhua",dbpedia:Manhua) masculine with plural "manhuas",
+  //// Not in Spanish wikipedia ClassNoun("manhwa",dbpedia:Manhwa),
+  //// del preposition? 
+  ClassNoun(["autor"/noun "de"/preposition "cómic"/noun],dbpedia:ComicsCreator) masculine with plural "autores de cómics",
+  ClassNoun("editor",dbpedia:Publisher) masculine with plural "editores",
+  ClassNoun(["literatura"/noun "periódica"/adjective],dbpedia:PeriodicalLiterature) feminine with plural "literatura periódica",
+  ClassNoun("periódico",dbpedia:Newspaper) masculine with plural "periódicos",
+  ClassNoun("diario",dbpedia:Newspaper) masculine with plural "diarios",
+  ClassNoun("revista",dbpedia:Magazine) feminine with plural "revistas",
+  ClassNoun(["publicación"/noun "académica"/adjective],dbpedia:AcademicalJournal) feminine with plural "publicaciones académicas",
+  ClassNoun(["revista"/noun "académica"/adjective],dbpedia:AcademicalJournal) feminine with plural "revistas académicas",
+  //// weird. It should be and adjective instead of a noun
+  ClassNoun(["pasta"/noun "dura"/adjective],lex:Hardcover) feminine with plural "pastas duras",
+  //// weird. It should be and adjective instead of a noun. what gender?, what number?
+  ClassNoun(["en"/preposition "rústica"/adjective],lex:Paperback),
+  ClassNoun(["libro"/noun "de"/preposition "bolsillo"/noun],lex:Paperback) masculine with plural "libros de bolsillo",
+  //// weird. It should be and adjective instead of a noun
+  ClassNoun(["pasta"/noun "dura"/adjective],lex:Hardcover) feminine with plural "pastas duras",
+  ClassNoun("e-book",lex:EBook) masculine with plural "e-books",
+  ClassNoun(["libro"/noun "electrónico"/adjective],lex:EBook) masculine with plural "libros electrónicos",
+  ClassNoun("audiolibro",lex:Audiobook) masculine with plural "audiolibros",
 
   // Music 
 
-  ClassNoun(["musicales"/adjective "trabajos"/noun],dbpedia:MusicalWork),
-  ClassNoun(["pieza"/noun "de"/preposition "trabajos"/noun],dbpedia:MusicalWork) with plural "trozos de trabajos",
-  ClassNoun("discography",dbpedia:ArtistDiscography),
-  ClassNoun("álbumes",dbpedia:Album),
-  ClassNoun("LP",dbpedia:Album),
-  ClassNoun("único",dbpedia:Single),
-  ClassNoun("referente",dbpedia:Song),
-  ClassNoun("vía",dbpedia:Song),
-  ClassNoun("lista",dbpedia:List),
-  ClassNoun(["vía"/noun "lista"/noun],dbpedia:TrackList),
-  ClassNoun(["Eurovisión"/noun "referente"/noun "concurso"/noun "entrada"/noun],dbpedia:EurovisionSongContestEntry),
-  ClassNoun("ópera",dbpedia:Opera),
-  ClassNoun("musician",dbpedia:MusicalArtist),
-  ClassNoun("banda",dbpedia:Band),
-  ClassNoun("instrumento",dbpedia:Instrument),
-  ClassNoun(["registro"/noun "etiqueta"/noun],dbpedia:RecordLabel), 
-  ClassNoun("etiqueta",dbpedia:RecordLabel), 
-  ClassNoun("genre",dbpedia:Genre), 
-  ClassNoun(["música"/noun "genre"/noun],dbpedia:MusicGenre), 
+  ClassNoun(["obra"/noun "musical"/adjective],dbpedia:MusicalWork) feminine with plural "obras musicales",
+  //// Where does this come from? ClassNoun(["pieza"/noun "de"/preposition "trabajos"/noun],dbpedia:MusicalWork) with plural "trozos de trabajos",
+  ClassNoun("discografía",dbpedia:ArtistDiscography) feminine with plural "discografías",
+  ClassNoun("álbum",dbpedia:Album) masculine with plural "álbumes",
+  //// The plural of LP is not LPs. See http://www.rae.es/consultas/plural-de-las-siglas-las-ong-unos-dvd
+  ClassNoun("LP",dbpedia:Album) masculine with plural "LP",
+  ClassNoun("elepé",dbpedia:Album) masculine with plural "elepés",
+  ClassNoun("sencillo",dbpedia:Single) masculine with plural "sencillos",
+  ClassNoun("canción",dbpedia:Song) feminine with plural "canciones",
+  //// ClassNoun("vía",dbpedia:Song),
+  ClassNoun("lista",dbpedia:List) feminine with plural "listas",
+  ClassNoun(["lista"/noun "de"/preposition "pistas"/noun ],dbpedia:TrackList) feminine with plural "listas de pistas",
+  ////ClassNoun(["Eurovisión"/noun "referente"/noun "concurso"/noun "entrada"/noun],dbpedia:EurovisionSongContestEntry),
+  ClassNoun(["concurso"/noun "de"/preposition "Eurovisión"/noun],dbpedia:EurovisionSongContestEntry) masculine with plural "concursos de Eurovisión",
+  ClassNoun("ópera",dbpedia:Opera) feminine with plural "óperas",
+  ClassNoun(["artista"/noun "musical"/adjective],dbpedia:MusicalArtist) commonGender with plural "artistas musicales",
+  ClassNoun("banda",dbpedia:Band) feminine with plural "bandas",
+  ClassNoun("instrumento",dbpedia:Instrument) masculine with plural "instrumentos",
+  ClassNoun(["sello"/noun "discográfico"/noun],dbpedia:RecordLabel) masculine with plural "sellos discográficos", 
+  ClassNoun("género",dbpedia:Genre) masculine with plural "géneros", 
+  ClassNoun(["género"/noun "musical"/adjective ],dbpedia:MusicGenre) masculine with plural "géneros musicales", 
 
   // Film, radio and television
 
-  ClassNoun("película",dbpedia:Film),
-  ClassNoun("movie",dbpedia:Film),
-  ClassNoun(["movie"/noun "genre"/noun],dbpedia:MovieGenre), 
-  ClassNoun("actor",dbpedia:Actor),
-  ClassNoun("actress",lex:Actress), 
-  ClassNoun(["voz"/noun "actor"/noun],dbpedia:VoiceActor),
-  ClassNoun(["voz"/noun "actress"/noun],lex:VoiceActress),
-  ClassNoun(["adultos"/noun "actor"/noun],dbpedia:AdultActor),
-  ClassNoun(["adultos"/noun "actress"/noun],lex:AdultActress),
-  ClassNoun(["porn"/noun "anís"/noun],dbpedia:Pornstar),
-  ClassNoun(["pornográficos"/noun "actor"/noun],dbpedia:Pornstar),
-  ClassNoun(["pornográficos"/noun "actress"/noun],lex:PornActress),
-  ClassNoun(["playboy"/noun "playmate"/noun],dbpedia:PlayboyPlaymate),
-  ClassNoun("playmate",dbpedia:PlayboyPlaymate),
-  ClassNoun(["televisión"/noun "muestran"/noun],dbpedia:TelevisionShow),
-  ClassNoun(["TV"/noun "muestran"/noun],dbpedia:TelevisionShow),
-  ClassNoun("muestran",dbpedia:TelevisionShow),
-  ClassNoun(["televisión"/noun "temporada"/noun],dbpedia:TelevisionSeason),
-  ClassNoun(["TV"/noun "temporada"/noun],dbpedia:TelevisionSeason),
-  ClassNoun("temporada",dbpedia:TelevisionSeason),
-  ClassNoun(["televisión"/noun "episodio"/noun],dbpedia:TelevisionEpisode),
-  ClassNoun(["TV"/noun "episodio"/noun],dbpedia:TelevisionEpisode),
-  ClassNoun("episodio",dbpedia:TelevisionEpisode),
-  ClassNoun(["televisión"/noun "estación"/noun],dbpedia:TelevisionStation),
-  ClassNoun(["TV"/noun "estación"/noun],dbpedia:TelevisionStation),
-  ClassNoun(["radio"/noun "estación"/noun],dbpedia:RadioStation),
-  ClassNoun(["radiodifusión"/noun "estación"/noun],dbpedia:RadioStation),
-  ClassNoun("radiodifusión",dbpedia:Broadcast),
-  ClassNoun("radiodifusión",dbpedia:Broadcaster),
-  ClassNoun(["radiodifusión"/noun "red"/noun],dbpedia:BroadcastNetwork),
-  ClassNoun("red",dbpedia:BroadcastNetwork),
-  ClassNoun(["radio"/noun "program"/noun],dbpedia:RadioProgram),
-  ClassNoun("présenter",dbpedia:Presenter),
-  ClassNoun("acogida",dbpedia:Host),
-  ClassNoun(["radio"/noun "acogida"/noun],dbpedia:RadioHost),
-  ClassNoun(["televisión"/noun "acogida"/noun],dbpedia:TelevisionHost),
-  ClassNoun(["TV"/noun "acogida"/noun],dbpedia:TelevisionHost),
-
+  ClassNoun("película",dbpedia:Film) feminine with plural "películas",
+  ClassNoun(["género"/noun "de"/preposition "película"/noun],dbpedia:MovieGenre) masculine with plural "género de película", 
+  ClassNoun("actor",dbpedia:Actor) masculine with plural "actores",
+  ClassNoun("actress",lex:Actress) feminine with plural "actrices", 
+  ClassNoun(["actor"/noun "de"/preposition "doblaje"/noun],dbpedia:VoiceActor) masculine with plural "actores de doblaje",
+  ClassNoun(["actriz"/noun "de"/preposition "doblaje"/noun],lex:VoiceActress) feminine with plural "actrices de doblaje",
+//// Read http://mappings.dbpedia.org/server/ontology/classes/AdultActor
+  ClassNoun(["actor"/noun "porno"/adjective],dbpedia:AdultActor) masculine with plural "actor porno",
+  ClassNoun(["actriz"/noun "porno"/adjective],lex:AdultActress) feminine with plural "actriz porno",
+//// del as preposition?  
+  ClassNoun(["estrella"/noun "del"/preposition "porno"/adjective],dbpedia:Pornstar) commonGender with plural "estrellas del porno",
+  ClassNoun(["estrella"/noun "del"/preposition "porno"/adjective],lex:PornActress) commonGender with plural "estrellas del porno",
+  ClassNoun(["chica"/noun "playboy"/adjective],dbpedia:PlayboyPlaymate) feminine with plural "chicas playboy",
+  ClassNoun("playmate",dbpedia:PlayboyPlaymate) feminine with plural "playmates",
+  ClassNoun(["programa"/noun "de"/preposition "televisión"/noun],dbpedia:TelevisionShow) masculine with plural "programas de televisión",
+  ClassNoun("temporada",dbpedia:TelevisionSeason) feminine with plural "temporadas",
+  ClassNoun(["temporada"/noun "de"/preposition "serie"/noun],dbpedia:TelevisionSeason) with plural "temporadas de series",
+  ClassNoun(["capítulo"/noun "de"/preposition "televisión"/noun],dbpedia:TelevisionEpisode) masculine with plural "capítulos de televisión",
+  ClassNoun("episodio",dbpedia:TelevisionEpisode) masculine with plural "episodios",
+  ClassNoun(["estación"/noun "de"/preposition "televisión"/noun],dbpedia:TelevisionStation) feminine with plural "estación de televisión",
+  ClassNoun(["emisora"/noun "de"/preposition "televisión"/noun],dbpedia:TelevisionStation) feminine with plural "emisoras de televisión",
+  ClassNoun(["estación"/noun "de"/preposition "radio"/noun],dbpedia:RadioStation) feminine with plural "estaciones de radio",
+  ClassNoun(["emisora"/noun "de"/preposition "radio"/noun],dbpedia:RadioStation) feminine with plural "emisoras de radio",
+  ClassNoun("emisión",dbpedia:Broadcast) masculine with plural "emisiones",
+  ClassNoun("emisor",dbpedia:Broadcaster) masculine with plural "emisores",
+  ClassNoun(["red"/noun "de"/preposition "emisoras"/noun ],dbpedia:BroadcastNetwork) feminine with plural "redes de emisoras",
+  ClassNoun(["program"/noun "de"/preposition "radio"/noun ],dbpedia:RadioProgram) masculine with plural "programas de radio",
+  ClassNoun("presentador",dbpedia:Presenter) masculine with plural "presentadores",
+  ClassNoun("presentadora",dbpedia:Presenter) feminine with plural "presentadoras",
+  ClassNoun("host",dbpedia:Host) commonGender with plural "hosts",
+  ClassNoun("hospedador",dbpedia:Host) masculine with plural "hospedadores",  
+//// See the redirection of http://en.wikipedia.org/w/index.php?title=Radio_Host
+  ClassNoun(["locutor"/noun "de"/preposition "radio"/noun ],dbpedia:RadioHost) masculine with plural "locutores de radio",
+  ClassNoun(["presentador"/noun "de"/preposition "televisión"/noun ],dbpedia:TelevisionHost) masculine with plural "presentadores de televisión",
+  
   // Games 
 
-  ClassNoun("caza",dbpedia:Game),
-  ClassNoun(["bordo"/noun "caza"/noun],dbpedia:BoardGame),
+  ClassNoun("juego",dbpedia:Game) masculine with plural "juegos",
+  ClassNoun(["juego"/noun "de"/preposition "tablero"/noun],dbpedia:BoardGame) masculine with plural "juegos de tablero",
 
   // Others
 
-  ClassNoun("comedian",dbpedia:Comedian),
-  ClassNoun(["comedy"/noun "grupo"/noun],dbpedia:ComedyGroup),
-  ClassNoun(["moda"/noun "diseñador"/noun],dbpedia:FashionDesigner),
-  ClassNoun("diseñador",dbpedia:FashionDesigner),
-
-  ClassNoun(["fictional"/adjective "carácter"/noun],dbpedia:FictionalCharacter),
-  ClassNoun("carácter",dbpedia:FictionalCharacter), 
-  ClassNoun(["comics"/noun "carácter"/noun],dbpedia:ComicsCharacter),
-  ClassNoun(["animanga"/noun "carácter"/noun],dbpedia:AnimangaCharacter),
-  ClassNoun(["jabón"/noun "carácter"/noun],dbpedia:SoapCharacter),
-  ClassNoun(["música"/noun "fiesta"/noun],dbpedia:MusicFestival),
-  ClassNoun(["película"/noun "fiesta"/noun],dbpedia:FilmFestival),
-  ClassNoun("fiesta",lex:Festival),
-  ClassNoun("Convenio",dbpedia:Convention), 
-  ClassNoun("musicales",dbpedia:Musical),
-  ClassNoun("adjudicación",dbpedia:Award),
-  ClassNoun("premio",dbpedia:Award),
-  ClassNoun("decoración",dbpedia:Decoration),
+  ClassNoun("cómico",dbpedia:Comedian) masculine with plural "cómicos",
+  ClassNoun("comediante",dbpedia:Comedian) masculine with plural "comediantes",
+  ClassNoun(["grupo"/noun "cómico"/adjective],dbpedia:ComedyGroup) masculine with plural "grupos cómicos",
+  ClassNoun(["diseñador"/noun "de"/preposition "moda"/noun],dbpedia:FashionDesigner) masculine with plural "diseñadores de moda",
+  ClassNoun(["personaje"/noun "de"/preposition "ficción"/adjective],dbpedia:FictionalCharacter) masculine with plural "personajes de ficción",
+  ClassNoun(["personaje"/noun "de"/preposition "cómic"/noun],dbpedia:ComicsCharacter) masculine with plural "personajes de cómic",
+  ClassNoun(["personaje"/noun "de"/preposition "animanga"/noun],dbpedia:AnimangaCharacter) masculine with plural "presonajes de animanga",
+//// See http://en.wikipedia.org/wiki/Soap_opera
+  ClassNoun(["personaje"/noun "de"/preposition "culebrón"/noun],dbpedia:SoapCharacter) commonGender with plural "personajes de culebrón",
+  ClassNoun(["festival"/noun "de"/preposition "música"/noun],dbpedia:MusicFestival) masculine with plural "festivales de música",
+  ClassNoun(["festival"/noun "de"/preposition "cine"/noun],dbpedia:FilmFestival) masculine with plural "festivales de cine",
+  ClassNoun("festival",lex:Festival) masculine with plural "festivales",
+  ClassNoun("congreso",dbpedia:Convention) masculine with plural "congresos",
+  ClassNoun("convención",dbpedia:Convention) masculine with plural "convenciones",
+  ClassNoun("musical",dbpedia:Musical) masculine with plural "musicales",
+  ClassNoun("premio",dbpedia:Award) masculine with plural "premios",
+//// See http://mappings.dbpedia.org/server/ontology/classes/Decoration
+  ClassNoun("condecoración",dbpedia:Decoration) feminine with plural "condecoraciones",
 
 
   //// Properties
 
   // artist 
 
-  StateVerb("registro",dbpedia:artist,
+  StateVerb("grabar",dbpedia:artist,
         propSubj = DirectObject restrictedTo lex:Album_or_Song,
         propObj  = Subject),
   RelationalNoun("intérprete",dbpedia:artist,
@@ -156,43 +163,43 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   // (literary) genre
 
-  RelationalNoun("genre",dbpedia:genre,
+  RelationalNoun("género",dbpedia:genre,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun("genre",dbpedia:literaryGenre,
+  RelationalNoun("género",dbpedia:literaryGenre,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
   StateVerb("hacer",dbpedia:genre,
         propObj  = DirectObject restrictedTo dbpedia:MusicGenre),
-  StateVerb("condonación",dbpedia:genre,
+  StateVerb("escribir",dbpedia:genre,
         propSubj = Subject restrictedTo dbpedia:Writer,
         propObj  = DirectObject),
 
   // language
 
-  RelationalAdjective("escrita",dbpedia:language,
+  RelationalAdjective("escrito",dbpedia:language,
   //    propSubj = CopulativeSubject restrictedTo dbpedia:WrittenWork,
   //    propObj  = PrepositionalObject("in)),
         relationalArg = PrepositionalObject("en")),
 
   // runtime
 
-  RelationalNoun("runtime",dbpedia:runtime,
+  RelationalNoun("duración",dbpedia:runtime,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),  
 
   // writer
 
-  RelationalNoun("writer",dbpedia:writer,
+  RelationalNoun("escritor",dbpedia:writer,
         propSubj = PrepositionalObject("de"),
         propObj  = CopulativeArg),
-
+////Review
   RelationalNoun("autor",dbpedia:writer,
         propSubj = PossessiveAdjunct,
         propObj  = Subject),
 
-  StateVerb("condonación",dbpedia:writer,
+  StateVerb("escribir",dbpedia:writer,
         propSubj = DirectObject,
         propObj  = Subject),
 
@@ -201,7 +208,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   RelationalNoun("editor",dbpedia:publisher,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  StateVerb("publicarán",dbpedia:publisher,
+  StateVerb("publicar",dbpedia:publisher,
         propSubj = DirectObject,
         propObj  = Subject),
 
@@ -211,8 +218,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
   StateVerb("distribuir",dbpedia:distributor,
         propSubj = DirectObject,
         propObj  = Subject),
-
-  RelationalNoun(["OCLC"/noun "número"/noun],dbpedia:oclc,
+//// oclc stands for Online Computer Library Center number
+  RelationalNoun(["código"/noun "OCLC"/noun],dbpedia:oclc,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
@@ -227,29 +234,29 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   // composer 
 
-  RelationalNoun("composer",dbpedia:composer,
+  RelationalNoun("compositor",dbpedia:composer,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
-  StateVerb("compose",dbpedia:composer,
+  StateVerb("componer",dbpedia:composer,
         propSubj = DirectObject,
         propObj  = Subject),
-  StateVerb("condonación",dbpedia:composer,
+  StateVerb("escribir",dbpedia:composer,
         propSubj = DirectObject,
         propObj  = Subject),
 
   // musical{Band|Artist}
 
-  StateVerb("condonación",dbpedia:musicalBand,
+  StateVerb("escribir",dbpedia:musicalBand,
         propSubj = DirectObject,
         propObj  = Subject),
-  StateVerb("condonación",dbpedia:musicalArtist,
+  StateVerb("escribir",dbpedia:musicalArtist,
         propSubj = DirectObject,
         propObj  = Subject),
 
-  StateVerb("registro",dbpedia:musicalBand,
+  StateVerb("grabar",dbpedia:musicalBand,
         propSubj = DirectObject,
         propObj  = Subject),
-  StateVerb("registro",dbpedia:musicalArtist,
+  StateVerb("grabar",dbpedia:musicalArtist,
         propSubj = DirectObject,
         propObj  = Subject),
 
@@ -259,20 +266,20 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   // starring, guest ,presenter
 
-  StateVerb("anís",dbpedia:starring),
-  StateVerb("característica",dbpedia:starring),
-  StateVerb("desempeñar",dbpedia:starring,
+  StateVerb("protagonizar",dbpedia:starring),
+  //// No equivalence StateVerb("caracterizar",dbpedia:starring),
+  StateVerb("actuar",dbpedia:starring,
         propSubj = PrepositionalObject("en"),
         propObj  = Subject),
-  StateVerb("característica",dbpedia:guest),
-  StateVerb("figurar",dbpedia:guest,
+  StateVerb("ofrecer",dbpedia:guest),
+  StateVerb("aparecer",dbpedia:guest,
         propSubj = PrepositionalObject("en"),
         propObj  = Subject),
-  RelationalNoun(["invitados"/noun "anís"/noun],dbpedia:guest,
+  RelationalNoun(["artista"/noun "invitado"/noun],dbpedia:guest,
         propSubj = PrepositionalObject("en"),
         propObj  = CopulativeArg),
 
-  RelationalNoun("présenter",dbpedia:presenter,
+  RelationalNoun("presentador",dbpedia:presenter,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
@@ -282,25 +289,25 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = PrepositionalObject("de"),
         propObj  = CopulativeArg),
 
-  StateVerb("desempeñar",dbpedia:instrument,
+  StateVerb("tocar",dbpedia:instrument,
         propSubj = DirectObject,
         propObj  = Subject),
 
   // musicFusionGenre 
 
-  StateVerb("fusibles",dbpedia:musicFusionGenre,
+  StateVerb("fusionar",dbpedia:musicFusionGenre,
         propSubj = PrepositionalObject("en"),
         propObj  = Subject),
 
   // openingFilm 
 
-  RelationalNoun(["apertura"/adjective "película"/noun],dbpedia:openingFilm,
-        propSubj = PrepositionalObject("en"),
+  RelationalNoun(["película"/noun "inaugural"/adjective],dbpedia:openingFilm,
+        propSubj = PrepositionalObject("de"),
         propObj = CopulativeArg),
 
   // requirement 
 
-  StateVerb("exigir",dbpedia:requirement,
+  StateVerb("requerir",dbpedia:requirement,
         propSubj = DirectObject,
         propObj  = Subject),
 
@@ -310,22 +317,23 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   // releaseDate, completionDate, channel, company
 
-  RelationalNoun(["despacho"/noun "fecha"/noun],dbpedia:releaseDate,
+  RelationalNoun(["fecha"/noun "de"/preposition "lanzamiento"/noun],dbpedia:releaseDate,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  ConsequenceVerb("despacho",dbpedia:releaseDate,
+  ConsequenceVerb("lanzar",dbpedia:releaseDate,
         propSubj = lex:pieceOfWork as Subject, 
-        propObj  = lex:date as PrepositionalObject("sobre")),
+        propObj  = lex:date as PrepositionalObject("en")),
 
-  StateVerb(["come"/verb "figuran"/particle],dbpedia:releaseDate,
-        propObj  = PrepositionalObject("sobre")),
+  StateVerb("lanzar",dbpedia:releaseDate,
+        propObj  = PrepositionalObject("en")),
 
-  StateVerb("aéreos",dbpedia:completionDate,
+  StateVerb("emitir",dbpedia:completionDate,
         propSubj = Subject restrictedTo dbpedia:TelevisionShow,
         propObj  = PrepositionalObject("hasta")),
-  StateVerb("aéreos",dbpedia:channel,
-        propObj  = PrepositionalObject("sobre")),
+////Review this one
+  StateVerb("emitir",dbpedia:channel,
+        propObj  = PrepositionalObject("en")),
 
   StateVerb("producir",dbpedia:company,
         propSubj = DirectObject restrictedTo dbpedia:TelevisionShow,
@@ -333,52 +341,58 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   // recordDate, recordedIn
 
-  RelationalNoun(["registro"/noun "fecha"/noun],dbpedia:recordDate,
+  RelationalNoun(["fecha"/noun "de"/preposition "grabación"/noun ],dbpedia:recordDate,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  ConsequenceVerb("registro",dbpedia:recordDate,
+  ConsequenceVerb("grabar",dbpedia:recordDate,
         propSubj = lex:musicalWork as Subject, 
         propObj  = lex:date as PrepositionalObject("sobre")),
 
-  ConsequenceVerb("registro",dbpedia:recordedIn,
+  ConsequenceVerb("grabar",dbpedia:recordedIn,
         propSubj = lex:musicalWork as Subject, 
         propObj  = lex:place as PrepositionalObject("en")),
 
   // award 
 
-  RelationalNoun("adjudicación",dbpedia:award,
+  RelationalNoun("galardón",dbpedia:award,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
   StateVerb("ganar",dbpedia:award),
-
+  StateVerb("galardonar",dbpedia:award,
+            propSubj = Subject,
+            propObj = PrepositionalObject("con")),
   StateVerb("recibir",dbpedia:award),
 
-  ConsequenceVerb("adjudicación",dbpedia:award,
+  ConsequenceVerb("adjudicar",dbpedia:award,
         propSubj = lex:person as Subject,
         propObj  = lex:prizeAwarded as DirectObject),
 
   // previous and subsequent work
 
-  RelationalNoun("follow-up",dbpedia:subsequentWork,
+  RelationalNoun("continuación",dbpedia:subsequentWork,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun("sequel",dbpedia:subsequentWork,
+  RelationalNoun("secuela",dbpedia:subsequentWork,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun("prequel",dbpedia:previousWork,
+  ////Not in RAE
+  RelationalNoun("antecedente",dbpedia:previousWork,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
-
-  RelationalAdjective("escrita",dbpedia:previousWork,
+//// It should be "antes de". Can we deal with it?
+  RelationalAdjective("escrito",dbpedia:previousWork,
         relationalArg = PrepositionalObject("antes") restrictedTo dbpedia:Book), 
-  RelationalAdjective("escrita",dbpedia:subsequentWork,
+//// It should be "después de". Can we deal with it?
+  RelationalAdjective("escrito",dbpedia:subsequentWork,
         relationalArg = PrepositionalObject("después") restrictedTo dbpedia:Book), 
 
-  RelationalAdjective("registro",dbpedia:previousWork,
-        relationalArg = PrepositionalObject("antes") restrictedTo dbpedia:Album), 
-  RelationalAdjective("registro",dbpedia:subsequentWork,
+//// It should be "antes de". Can we deal with it?
+  RelationalAdjective("grabado",dbpedia:previousWork,
+        relationalArg = PrepositionalObject("antes") restrictedTo dbpedia:Album),
+//// It should be "después de". Can we deal with it?
+  RelationalAdjective("grabado",dbpedia:subsequentWork,
         relationalArg = PrepositionalObject("después") restrictedTo dbpedia:Album), 
 
   // (former) band member
@@ -397,76 +411,79 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  RelationalNoun(["instalación"/noun "ID"/noun],dbpedia:facilityId,
+  RelationalNoun(["identificador"/noun  "de"/preposition "instalación"/noun],dbpedia:facilityId,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  RelationalNoun("B-side",dbpedia:bSide,
+  RelationalNoun("cara B",dbpedia:bSide,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
-  RelationalNoun("referente",dbpedia:album,
+  RelationalNoun("canción",dbpedia:album,
         propSubj = PrepositionalObject("sobre"),
         propObj  = CopulativeArg),
-  RelationalNoun("vía",dbpedia:album,
+  RelationalNoun("pista",dbpedia:album,
         propSubj = PrepositionalObject("sobre"),
         propObj  = CopulativeArg),
 
-  RelationalNoun(["hermanas"/noun "estación"/noun],dbpedia:sisterStation,
+  RelationalNoun(["emisora"/noun "hermana"/noun],dbpedia:sisterStation,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun(["hermanas"/noun "canalizar"/noun],dbpedia:sisterStation,
+  RelationalNoun(["estación"/noun "hermanas"/noun],dbpedia:sisterStation,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun(["hermanas"/noun "red"/noun],dbpedia:sisterStation,
+  RelationalNoun(["red"/noun "hermana"/noun],dbpedia:sisterStation,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
 
   RelationalNoun("presupuesto",dbpedia:budget,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun("bruta",dbpedia:gross,
+  RelationalNoun("bruto",dbpedia:gross,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  StateVerb("hacer",dbpedia:gross),
+  StateVerb("generar",dbpedia:gross),
+////Review these two
   StateVerb(["tener"/verb "en"/preposition],dbpedia:gross),
   StateVerb(["tener"/verb "durante"/preposition],dbpedia:gross),
 
-  RelationalNoun("reconsideración",dbpedia:review,
+  RelationalNoun("revisión",dbpedia:review,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
   RelationalAdjective("revisado",dbpedia:review,
         relationalArg = PrepositionalObject("en")),
 
-  RelationalNoun(["asociados"/adjective "acto"/noun],dbpedia:associatedBand,
+  RelationalNoun(["banda"/noun"asociada"/adjective],dbpedia:associatedBand,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg),
-  RelationalNoun(["asociados"/adjective "acto"/noun],dbpedia:associatedMusicalArtist,
+  RelationalNoun(["banda"/noun"asociada"/adjective],dbpedia:associatedMusicalArtist,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
 
-  RelationalNoun("cinematographer",dbpedia:cinematography,
+  RelationalNoun("cinematografía",dbpedia:cinematography,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
-  StateVerb("sarmientos",dbpedia:cinematographer,
+  StateVerb("filmar",dbpedia:cinematographer,
         propSubj = DirectObject,
         propObj  = Subject),
 
-  RelationalNoun(["ejecutiva"/adjective "productor"/noun],dbpedia:executiveProducer,
+  RelationalNoun(["productor"/noun "ejecutivo"/adjective],dbpedia:executiveProducer,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
 
-  StateVerb("edit",dbpedia:editing,
+  StateVerb("editar",dbpedia:editing,
         propSubj = DirectObject,
         propObj  = Subject), 
 
-  RelationalNoun(["antigua"/adjective "banda"/noun "miembro"/noun],dbpedia:formerBandMember,
+  RelationalNoun(["miembro"/noun "fundador"/adjective],dbpedia:formerBandMember,
        propSubj = PrepositionalObject("de"),
        propObj  = CopulativeArg),  
 
-  StateVerb("desempeñar",dbpedia:programmeFormat), 
+  ///See http://mappings.dbpedia.org/index.php/OntologyProperty:ProgrammeFormat
+  ///Unclear sense in Spanish
+  StateVerb("programar",dbpedia:programmeFormat), 
 
-  ConsequenceVerb("radiodifusión",dbpedia:broadcastArea,
+  ConsequenceVerb("emitir",dbpedia:broadcastArea,
        propSubj = lex:station as Subject, 
        propObj  = lex:area as PrepositionalObject("en")),
   StateVerb("cubrir",dbpedia:broadcastArea),
@@ -478,10 +495,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
 
   ConsequenceVerb("radiodifusión",dbpedia:network,
      propSubj = lex:station as Subject, 
-     propObj  = lex:area as PrepositionalObject("sobre")),
-  ConsequenceVerb("aéreos",dbpedia:network,
+     propObj  = lex:area as PrepositionalObject("en")),
+  ConsequenceVerb("emitir",dbpedia:network,
      propSubj = lex:show as Subject, 
-     propObj  = lex:network as PrepositionalObject("sobre")),
+     propObj  = lex:network as PrepositionalObject("en")),
 
   RelationalNoun("episodio",dbpedia:series,
         propSubj = PrepositionalObject("de") restrictedTo dbpedia:TelevisionEpisode,
@@ -490,23 +507,24 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_2#>,"en",
         propSubj = PrepositionalObject("de"),
         propObj  = CopulativeArg), 
 
-  IntersectiveDataPropertyAdjective("clase a",dbpedia:broadcastStationClass,"a"), 
-  IntersectiveDataPropertyAdjective("clase b",dbpedia:broadcastStationClass,"b"), 
-  IntersectiveDataPropertyAdjective("categoría C",dbpedia:broadcastStationClass,"C"), 
-  IntersectiveDataPropertyAdjective("clase d",dbpedia:broadcastStationClass,"d"), 
+  IntersectiveDataPropertyAdjective("clase A",dbpedia:broadcastStationClass,"A"), 
+  IntersectiveDataPropertyAdjective("clase B",dbpedia:broadcastStationClass,"B"), 
+  IntersectiveDataPropertyAdjective("clase C",dbpedia:broadcastStationClass,"C"), 
+  IntersectiveDataPropertyAdjective("clase D",dbpedia:broadcastStationClass,"D"), 
 
-  StateVerb(":",dbpedia:callsignMeaning), 
-  StateVerb("stand",dbpedia:callsignMeaning,
-        propObj = PrepositionalObject("para")),
+  StateVerb("significar",dbpedia:callsignMeaning), 
+  //// StateVerb("significar",dbpedia:callsignMeaning,
+  //// No equivalent      propObj = PrepositionalObject("para")),
+  //// May be "que" but, is a PrepositionaObject ?
 
   RelationalNoun("spin-off",dbpedia:related,
         propSubj = PossessiveAdjunct restrictedTo dbpedia:TelevisionShow,
         propObj  = CopulativeArg), 
 
-  RelationalNoun(["LC"/noun "clasificación"/noun],dbpedia:lcc,
+  RelationalNoun(["clasificación"/noun "LC"/noun],dbpedia:lcc,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg), 
-  RelationalNoun(["Dewey"/noun "clasificación"/noun],dbpedia:dcc,
+  RelationalNoun(["clasificación"/noun "Dewey"/noun],dbpedia:dcc,
         propSubj = PossessiveAdjunct,
         propObj  = CopulativeArg)
 

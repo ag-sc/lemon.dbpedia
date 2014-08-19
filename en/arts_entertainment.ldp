@@ -344,9 +344,10 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_3#>,"en",
 
   // award 
 
-  RelationalNoun("award",dbpedia:award,
-        propSubj = PossessiveAdjunct,
-        propObj  = CopulativeArg),
+  //// Probably wrong
+  ////RelationalNoun("award",dbpedia:award,
+  ////      propSubj = PossessiveAdjunct,
+  ////      propObj  = CopulativeArg),
   RelationalNoun("recipient",dbpedia:award,
         propSubj = CopulativeArg,
         propObj  = PossessiveAdjunct),

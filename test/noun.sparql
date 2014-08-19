@@ -1,0 +1,10 @@
+
+
+```
+select ?v where {
+  ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>  <http://lemon-model.net/lemon#LexicalEntry> .
+  ?s <http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech>  <http://www.lexinfo.net/ontology/2.0/lexinfo#noun> .
+  ?s <http://lemon-model.net/lemon#canonicalForm>  ?canonicalForm .
+  ?canonicalForm <http://lemon-model.net/lemon#writtenRep> ?v 
+}
+```
