@@ -161,7 +161,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_5#>,"es",
   // languages 
 
   IntersectiveObjectPropertyAdjective("inglés",dbpedia:language,resource:English_language),
-  IntersectiveObjectPropertyAdjective("indio",dbpedia:language,resource:Standard_Hindi),
+  IntersectiveObjectPropertyAdjective("hindi",dbpedia:language,resource:Standard_Hindi),
   IntersectiveObjectPropertyAdjective("español",dbpedia:language,resource:Spanish_language),
   IntersectiveObjectPropertyAdjective("francés",dbpedia:language,resource:French_language),
   IntersectiveObjectPropertyAdjective("japonés",dbpedia:language,resource:Japanese_language),
