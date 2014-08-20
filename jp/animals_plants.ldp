@@ -4,7 +4,7 @@
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_jp_2#>,"jp",
   // Classes
-  ClassNoun("種",dbpedia:Species) feminine,
+  ClassNoun("種",dbpedia:Species),
   ClassNoun("真正細菌",dbpedia:Bacteria), // technical register; "細菌" used more commonly, but actually means 'prokaryote'
   IntersectiveAdjective("細菌性",dbpedia:Bacteria), // na-adjective
   ClassNoun("古細菌",dbpedia:Archaea),
