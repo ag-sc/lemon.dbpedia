@@ -17,14 +17,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_5#>,"es",
   //// Typo in dbpedia property? 
   ClassNoun(["sitio"/noun "Web"/noun],dbpedia:Webiste) masculine with plural "sitios web",
 
-  ClassNoun("comida",dbpedia:Food) femenine with plural "comidas",
+  ClassNoun("comida",dbpedia:Food) feminine with plural "comidas",
   ClassNoun("bebida",dbpedia:Beverage) feminine with plural "bebidas",
   ClassNoun("cerveza",dbpedia:Beer) feminine with plural "cervezas",
   ClassNoun("vino",dbpedia:Wine) masculine with plural "vinos",
   ClassNoun(["vino"/noun "con"/preposition "denominación"/noun "de"/preposition "origen"/noun],dbpedia:ControlledDesignationOfOriginWine) masculine with plural "vinos con denominación de origen",
   ClassNoun("queso",dbpedia:Cheese) masculine with plural "quesos",
 
-  ClassNoun("agente",dbpedia:Agent) maculine with plural "agentes",
+  ClassNoun("agente",dbpedia:Agent) masculine with plural "agentes",
   ClassNoun("deidad",dbpedia:Deity) feminine with plural "deidades",
   ClassNoun("familia",dbpedia:Family) feminine with plural "familias",
 
@@ -41,8 +41,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_5#>,"es",
   ClassNoun(["línea"/noun "de"/preposition "moda"/noun],dbpedia:LineOfFashion) feminine with plural "líneas de moda",
 
   ClassNoun(["servicio"/noun "público"/adjective],dbpedia:PublicService) masculine with plural "servicios públicos",
-  ClassNoun(["entrada"/noun "de"/preposition "servicio"/noun "público"/adjective],dbpedia:PublicServiceInput) femenine with plural "entrada de servicio público",
-  ClassNoun(["salida"/noun "de"/preposition "servicio"/noun "público"/adjective],dbpedia:PublicServiceOutput) femenine with plural "salida de servicio público",
+  ClassNoun(["entrada"/noun "de"/preposition "servicio"/noun "público"/adjective],dbpedia:PublicServiceInput) feminine with plural "entrada de servicio público",
+  ClassNoun(["salida"/noun "de"/preposition "servicio"/noun "público"/adjective],dbpedia:PublicServiceOutput) feminine with plural "salida de servicio público",
 
   ClassNoun("poliedro",dbpedia:Polyhedron) masculine with plural "poliedros",
 
@@ -143,7 +143,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_5#>,"es",
 
   StateVerb("pertenecer",dbpedia:languageFamily,
        propObj = PrepositionalObject("a")),
-  RelationalNoun(["familia"/noun" "de"/preposition "lenguas"/noun],dbpedia:languageFamily,
+  RelationalNoun(["familia"/noun "de"/preposition "lenguas"/noun],dbpedia:languageFamily,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg),
 
