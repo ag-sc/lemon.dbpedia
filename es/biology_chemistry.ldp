@@ -27,8 +27,8 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_3#>,"es",
   ClassNoun("gen",dbpedia:Gene) masculine with plural "genes",
   ClassNoun(["gen"/noun "humano"/adjective],dbpedia:HumanGene) masculine with plural "genes humanos",
   ClassNoun(["gen"/noun "de"/preposition "ratón"/noun],dbpedia:MouseGene),
-  ClassNoun(["localización"/noun "del"/preposition "gen"/noun],dbpedia:GeneLocation) feminine with plural "las localizaciones del gen",
-  ClassNoun(["localización"/noun "del"/preposition "gen"/noun "humano"/adjective],dbpedia:HumanGeneLocation) feminine with plural "las localizaciones del gen humano",
+  ClassNoun(["localización"/noun "del"/preposition "gen"/noun],dbpedia:GeneLocation) feminine with plural "localizaciones del gen",
+  ClassNoun(["localización"/noun "del"/preposition "gen"/noun "humano"/adjective],dbpedia:HumanGeneLocation) feminine with plural "localizaciones del gen humano",
   ClassNoun(["localización"/noun "del"/preposition "gen"/noun "del"/preposition "ratón"/noun],dbpedia:MouseGeneLocation) feminine with plural "localizaciones del gen del ratón",
   ClassNoun("proteína",dbpedia:Protein) feminine with plural "proteínas",
 
@@ -67,5 +67,3 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_3#>,"es",
        propObj  = CopulativeArg),
 
 )
-
-
