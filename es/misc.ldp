@@ -1,6 +1,200 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
 @prefix resource: <http://dbpedia.org/resource/> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_7#>,"es",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_5#>,"es",
+
+  //// Classes
+
+  ClassNoun("evento",dbpedia:Event) masculine with plural "eventos", 
+  ClassNoun("actividad",dbpedia:Activity) feminine with plural "actividades",
+////Candidate for noplural/nosingular
+  ClassNoun("vacaciones",dbpedia:Holiday) feminine,
+  ClassNoun("idioma",dbpedia:Language) masculine with plural "idiomas",
+  ClassNoun("lengua",dbpedia:Language) feminine with plural "lenguas",
+  ClassNoun("carta",dbpedia:Letter) feminine with plural "cartas",
+  ClassNoun("color",dbpedia:Colour) masculine with plural "colores",
+  ClassNoun(["sitio"/noun "Web"/noun],dbpedia:Website) masculine with plural "sitios web",
+  //// Typo in dbpedia property? 
+  ClassNoun(["sitio"/noun "Web"/noun],dbpedia:Webiste) masculine with plural "sitios web",
+
+  ClassNoun("comida",dbpedia:Food) feminine with plural "comidas",
+  ClassNoun("bebida",dbpedia:Beverage) feminine with plural "bebidas",
+  ClassNoun("cerveza",dbpedia:Beer) feminine with plural "cervezas",
+  ClassNoun("vino",dbpedia:Wine) masculine with plural "vinos",
+  ClassNoun(["vino"/noun "con"/preposition "denominación"/noun "de"/preposition "origen"/noun],dbpedia:ControlledDesignationOfOriginWine) masculine with plural "vinos con denominación de origen",
+  ClassNoun("queso",dbpedia:Cheese) masculine with plural "quesos",
+
+  ClassNoun("agente",dbpedia:Agent) masculine with plural "agentes",
+  ClassNoun("deidad",dbpedia:Deity) feminine with plural "deidades",
+  ClassNoun("familia",dbpedia:Family) feminine with plural "familias",
+
+  ClassNoun("moneda",dbpedia:Currency) feminine with plural "monedas",
+  ClassNoun("impuesto",dbpedia:Tax) masculine with plural "impuestos",
+
+  ClassNoun("bandera",dbpedia:Flag) feminine with plural "banderas",
+
+  ClassNoun("comunidad",dbpedia:Community) feminine with plural "comunidades",
+
+////Candidate for noplural/singular
+  ClassNoun("ventas",dbpedia:Sales) feminine,
+  ClassNoun("moda",dbpedia:Fashion) feminine with plural "modas",
+  ClassNoun(["línea"/noun "de"/preposition "moda"/noun],dbpedia:LineOfFashion) feminine with plural "líneas de moda",
+
+  ClassNoun(["servicio"/noun "público"/adjective],dbpedia:PublicService) masculine with plural "servicios públicos",
+  ClassNoun(["entrada"/noun "de"/preposition "servicio"/noun "público"/adjective],dbpedia:PublicServiceInput) feminine with plural "entrada de servicio público",
+  ClassNoun(["salida"/noun "de"/preposition "servicio"/noun "público"/adjective],dbpedia:PublicServiceOutput) feminine with plural "salida de servicio público",
+
+  ClassNoun("poliedro",dbpedia:Polyhedron) masculine with plural "poliedros",
+
+  ClassNoun(["período"/noun "de"/preposition "tiempo"/noun],dbpedia:TimePeriod) masculine with plural "períodos de tiempo",
+  ClassNoun(["periodo"/noun "de"/preposition "tiempo"/noun],dbpedia:TimePeriod) masculine with plural "periodos de tiempo",
+
+  ClassNoun(["período"/noun "geológico"/adjective],dbpedia:GeologicalPeriod) masculine with plural "períodos geológicos",
+  ClassNoun(["periodo"/noun "geológico"/adjective],dbpedia:GeologicalPeriod) masculine with plural "periodos geológicos",
+
+  ClassNoun(["período"/noun "histórico"/adjective],dbpedia:HistoricalPeriod) masculine with plural "períodos históricos",
+  ClassNoun(["periodo"/noun "histórico"/adjective],dbpedia:HistoricalPeriod) masculine with plural "periodos históricos",
+  
+  ClassNoun(["período"/noun "prehistórico"/adjective],dbpedia:PrehistoricalPeriod) masculine with plural "períodos prehistóricos",
+  ClassNoun(["periodo"/noun "prehistórico"/adjective],dbpedia:PrehistoricalPeriod) masculine with plural "periodos prehistóricos",
+
+  ClassNoun(["período"/noun "protohistórico"/adjective],dbpedia:ProtohistoricalPeriod) masculine with plural "períodos protohistóricos",
+  ClassNoun(["periodo"/noun "protohistórico"/adjective],dbpedia:ProtohistoricalPeriod) masculine with plural "periodos protohistóricos",  
+  ClassNoun(["período"/noun "artístico"/adjective],dbpedia:PeriodOfArtisticStyle) masculine with plural "períodos artísticos",
+  ClassNoun(["periodo"/noun "artístico"/adjective],dbpedia:PeriodOfArtisticStyle) masculine with plural "periodos artísticos",
+  
+  ClassNoun("año",dbpedia:Year) masculine with plural "años",
+
+  ClassNoun(["concepto"/noun "actual"/adjective],dbpedia:TopicalConcept) masculine with plural "conceptos actuales",
+  ClassNoun(["doctrina"/noun "cristiana"/noun],dbpedia:ChristianDoctrine) feminine with plural "doctrinas cristianas",
+  ClassNoun("ideology",dbpedia:Ideology) feminine with plural "ideologías",
+
+  ClassNoun(["unidad"/noun "de"/preposition "trabajo"/noun],dbpedia:UnitOfWork) feminine with plural "unidades de trabajo",
+  ClassNoun("proyecto",dbpedia:Project) masculine with plural "proyectos",
+  ClassNoun(["proyecto"/noun "de"/preposition "investigación"/noun],dbpedia:ResearchProject) masculine with plural "proyectos de investigación",
+
+
+  //// Properties 
+
+  StateVerb(["tener"/verb "lugar"/noun],dbpedia:place,
+       propObj  = PrepositionalObject("en")),
+
+  RelationalNoun("parte",dbpedia:isPartOf,
+       propObj  = PrepositionalObject("de")),
+
+  StateVerb(["tener"/verb "lugar"/noun],dbpedia:date,
+       propObj = PrepositionalObject("en")),
+
+  StateVerb("pertenecer",dbpedia:division,
+       propObj = PrepositionalObject("a")),
+
+  RelationalNoun("color",dbpedia:colourName,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  // similar, synonym, abbreviation
+
+  RelationalAdjective("similar",dbpedia:similar,
+       relationalArg = PrepositionalObject("a")), 
+
+  RelationalNoun("sinónimo",dbpedia:synonym,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("abreviatura",dbpedia:abbreviation,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("abreviación",dbpedia:abbreviation,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+       
+  StateVerb("abreviar",dbpedia:abbreviation,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  RelationalAdjective("abreviado",dbpedia:abbreviation,
+       relationalArg = PrepositionalObject("como")),
+
+
+  // melting, boiling and sublimation point
+
+  RelationalNoun(["punto"/noun "de"/preposition "sublimación"/noun ],dbpedia:sublimationPoint,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  StateVerb("sublimar",dbpedia:sublimationPoint,
+       propObj = PrepositionalObject("a")),
+
+  RelationalNoun(["punto"/noun "de"/preposition "fusión"/noun],dbpedia:meltingPoint,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  StateVerb("fundir",dbpedia:meltingPoint,
+       propObj = PrepositionalObject("a")),
+
+  RelationalNoun(["punto"/noun "de"/preposition "ebullición"/noun],dbpedia:boilingPoint,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  StateVerb("hervir",dbpedia:boilingPoint,
+       propObj = PrepositionalObject("a")),
+//// RAE does not includes ebullir
+  StateVerb("bullir",dbpedia:boilingPoint,
+       propObj = PrepositionalObject("a")), 
+
+  // spokenIn, languageFamily
+
+  StateVerb("pertenecer",dbpedia:languageFamily,
+       propObj = PrepositionalObject("a")),
+  RelationalNoun(["familia"/noun "de"/preposition "lenguas"/noun],dbpedia:languageFamily,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalAdjective("hablada",dbpedia:spokenIn,
+       relationalArg = PrepositionalObject("en")),
+  RelationalNoun("lengua",dbpedia:spokenIn,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("idioma",dbpedia:spokenIn,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+
+
+  // languages 
+
+  IntersectiveObjectPropertyAdjective("inglés",dbpedia:language,resource:English_language),
+  IntersectiveObjectPropertyAdjective("hindi",dbpedia:language,resource:Standard_Hindi),
+  IntersectiveObjectPropertyAdjective("español",dbpedia:language,resource:Spanish_language),
+  IntersectiveObjectPropertyAdjective("francés",dbpedia:language,resource:French_language),
+  IntersectiveObjectPropertyAdjective("japonés",dbpedia:language,resource:Japanese_language),
+  IntersectiveObjectPropertyAdjective("alemán",dbpedia:language,resource:German_language),
+  IntersectiveObjectPropertyAdjective("tamil",dbpedia:language,resource:Tamil_language),
+  IntersectiveObjectPropertyAdjective("italiano",dbpedia:language,resource:Italian_language),
+  IntersectiveObjectPropertyAdjective("portugués",dbpedia:language,resource:Portuguese_language),
+  IntersectiveObjectPropertyAdjective("ruso",dbpedia:language,resource:Russian_language),
+  IntersectiveObjectPropertyAdjective("holandés",dbpedia:language,resource:Dutch_language),
+  IntersectiveObjectPropertyAdjective("coreano",dbpedia:language,resource:Korean_language),
+  IntersectiveObjectPropertyAdjective("árabe",dbpedia:language,resource:Arabic_language),
+  IntersectiveObjectPropertyAdjective("chino",dbpedia:language,resource:Standard_Chinese),
+  IntersectiveObjectPropertyAdjective("chino",dbpedia:language,resource:Chinese_language),
+  IntersectiveObjectPropertyAdjective("chino mandarín",dbpedia:language,resource:Mandarin_Chinese),
+  IntersectiveObjectPropertyAdjective("cantonés",dbpedia:language,resource:Cantonese_language),
+  IntersectiveObjectPropertyAdjective("sueco",dbpedia:language,resource:Swedish_language),
+  IntersectiveObjectPropertyAdjective("polaco",dbpedia:language,resource:Polish_language),
+  IntersectiveObjectPropertyAdjective("griego",dbpedia:language,resource:Greek_language),
+  IntersectiveObjectPropertyAdjective("hebreo",dbpedia:language,resource:Hebrew_language),
+  IntersectiveObjectPropertyAdjective("turco",dbpedia:language,resource:Turkish_language),
+  IntersectiveObjectPropertyAdjective("danés",dbpedia:language,resource:Danish_language),
+  IntersectiveObjectPropertyAdjective("finés",dbpedia:language,resource:Finnish_language),
+  IntersectiveObjectPropertyAdjective("noruego",dbpedia:language,resource:Norwegian_language),
+  IntersectiveObjectPropertyAdjective("croata",dbpedia:language,resource:Croatian_language),
+  IntersectiveObjectPropertyAdjective("rumano",dbpedia:language,resource:Romanian_language),
+  IntersectiveObjectPropertyAdjective("tailandés",dbpedia:language,resource:Thai_language),
+  IntersectiveObjectPropertyAdjective("húngaro",dbpedia:language,resource:Hungarian_language),
+  IntersectiveObjectPropertyAdjective("serbio",dbpedia:language,resource:Serbian_language),
+  IntersectiveObjectPropertyAdjective("esloveno",dbpedia:language,resource:Slovene_language),
+  IntersectiveObjectPropertyAdjective("panyabí",dbpedia:language,resource:Punjabi_language),
+  IntersectiveObjectPropertyAdjective("punyabí",dbpedia:language,resource:Punjabi_language),
+  IntersectiveObjectPropertyAdjective("albanés",dbpedia:language,resource:Albanian_language),
+  IntersectiveObjectPropertyAdjective("indonesio",dbpedia:language,resource:Indonesian_language),
+  IntersectiveObjectPropertyAdjective("estonio",dbpedia:language,resource:Estonian_language)
 
 )

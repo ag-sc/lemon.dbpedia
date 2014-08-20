@@ -1,6 +1,69 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
-@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_4#>,"es",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_3#>,"es",
+
+  //// Classes
+
+  ClassNoun(["estructura"/noun "anatómica"/adjective],dbpedia:AnatomicalStructure) feminine with plural "estructuras anatómicas",
+  ClassNoun("cerebro",dbpedia:Brain) masculine with plural "cerebros",
+  ClassNoun("hueso",dbpedia:Bone) masculine with plural "huesos",
+  ClassNoun("arteria",dbpedia:Artery) feminine with plural "arterias",
+  ClassNoun("vena",dbpedia:Vein) feminine with plural "venas",
+  ClassNoun(["vaso"/noun "sanguíneo"/adjective],lex:BloodVessel) masculine with plural "vasos sanguíneos",
+  ClassNoun("músculo",dbpedia:Muscle) masculine with plural "músculos",
+  ClassNoun("nervio",dbpedia:Nerve) masculine with plural "nervios",
+//// I guess it does not have plural. Do we have something to specify this? 
+  ClassNoun("linfa",dbpedia:Lymph) feminine,
+  ClassNoun("embriología",dbpedia:Embryology) feminine,
+  ClassNoun("ligamento",dbpedia:Ligament) masculine with plural "ligamentos",
+
+  ClassNoun(["sustancia"/noun" química"/adjective],dbpedia:ChemicalSubstance) feminine with plural "sustancias químicas",
+  ClassNoun(["compuesto"/noun" químico"/adjective],dbpedia:ChemicalCompound) masculine with plural "compuestos químicos",
+  ClassNoun(["elemento"/noun "químico"/adjective],dbpedia:ChemicalElement) masculine with plural "elementos químicos",
+  ClassNoun("mineral",dbpedia:Mineral) masculine with plural "minerales",
+  ClassNoun("biomolécula",dbpedia:Biomolecule) feminine with plural "biomoléculas",
+  ClassNoun("enzima",dbpedia:Enzyme) feminine with plural "enzimas",
+  ClassNoun("gen",dbpedia:Gene) masculine with plural "genes",
+  ClassNoun(["gen"/noun "humano"/adjective],dbpedia:HumanGene) masculine with plural "genes humanos",
+  ClassNoun(["gen"/noun "de"/preposition "ratón"/noun],dbpedia:MouseGene),
+  ClassNoun(["localización"/noun "del"/preposition "gen"/noun],dbpedia:GeneLocation) feminine with plural "localizaciones del gen",
+  ClassNoun(["localización"/noun "del"/preposition "gen"/noun "humano"/adjective],dbpedia:HumanGeneLocation) feminine with plural "localizaciones del gen humano",
+  ClassNoun(["localización"/noun "del"/preposition "gen"/noun "del"/preposition "ratón"/noun],dbpedia:MouseGeneLocation) feminine with plural "localizaciones del gen del ratón",
+  ClassNoun("proteína",dbpedia:Protein) feminine with plural "proteínas",
+
+  ClassNoun("dolencia",dbpedia:Disease) feminine with plural "dolencias",
+  ClassNoun("enfermedad",dbpedia:Disease) feminine with plural "enfermedades",
+  ClassNoun("mal",dbpedia:Disease) feminine with plural "males",
+  ClassNoun("medicina",dbpedia:Drug) feminine with plural "medicinas",
+  ClassNoun("medicamento",dbpedia:Drug) masculine with plural "medicamentos",
+  ClassNoun("remedio",dbpedia:Drug) masculine with plural "remedios",
+  
+  ClassNoun(["tipo"/noun "de"/preposition "sangre"/noun],dbpedia:BloodType) masculine with plural "tipos de sangre",
+
+  ClassNoun(["base"/noun "de"/preposition "datos"/noun],dbpedia:Database) feminine with plural "bases de datos",
+  ClassNoun(["base"/noun "de"/preposition "datos"/noun "biológica"/adjective],dbpedia:BiologicalDatabase) feminine with plural "bases de datos biológicas",
+
+
+  //// Properties 
+
+  RelationalNoun("precursor",dbpedia:precursor,
+       propSubj = PrepositionalObject("de"),
+       propObj  = CopulativeArg), 
+  StateVerb("precede",dbpedia:precursor,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("desarrolla",dbpedia:precursor,
+       propObj  = PrepositionalObject("de")), 
+
+  RelationalNoun(["Entrez"/noun "gen"/noun],dbpedia:entrezgene,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun(["Entrez"/noun "ID"/noun],dbpedia:entrezgene,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+  RelationalNoun(["nombre"/noun "EIUPAC"/noun],dbpedia:iupacName,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
 
 )
