@@ -3,6 +3,13 @@
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_jp_2#>,"jp",
-
+  // Classes
+  ClassNoun("種",dbpedia:Species) feminine,
+  ClassNoun("真正細菌",dbpedia:Bacteria), // technical register; "細菌" used more commonly, but actually means 'prokaryote'
+  IntersectiveAdjective("細菌性",dbpedia:Bacteria), // na-adjective
+  ClassNoun("古細菌",dbpedia:Archaea),
+  ClassNoun("動物",dbpedia:Animal),
+  ClassNoun("両生類",dbpedia:Amphibian),
+  ClassNoun("真核生物",dbpedia:Eukaryote),	// also 真核 ('true nucleus') as first part of compound
 
 )
