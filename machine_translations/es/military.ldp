@@ -6,41 +6,42 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_7#>,"es",
 
   //// Classes
 
-  ClassNoun(["militar"/adjective "persona"/noun],dbpedia:MilitaryPerson),
-  ClassNoun(["militar"/adjective "personal"/noun],dbpedia:MilitaryPerson),
-  ClassNoun(["militar"/adjective "unidad"/noun],dbpedia:MilitaryUnit),
-  ClassNoun(["militar"/adjective "conflicto"/noun],dbpedia:MilitaryConflict),
-  ClassNoun(["militar"/adjective "estructura"/noun],dbpedia:MilitaryStructure),
-  ClassNoun("guerra",dbpedia:MilitaryConflict),
-  ClassNoun("batalla",dbpedia:MilitaryConflict),
-  ClassNoun("armas",dbpedia:Weapon),
-  ClassNoun("blazon",dbpedia:Blazon),
+  ClassNoun(["militar"/noun],dbpedia:MilitaryPerson) masculine with plural "militar",
+  ////Candidate for noplural
+  ClassNoun(["personal"/noun "militar"/adjective],dbpedia:MilitaryPerson) masculine,
+  ClassNoun(["unidad"/noun "militar"/adjective],dbpedia:MilitaryUnit) feminine with plural "unidades militares",
+  ClassNoun(["conflicto"/noun "militar"/adjective],dbpedia:MilitaryConflict) masculine with plural "conflictos militares",
+  ClassNoun(["estructura"/noun "militar"/adjective],dbpedia:MilitaryStructure) feminine with plural "estructuras militares",
+  ClassNoun("guerra",dbpedia:MilitaryConflict) feminine with plural "guerras",
+  ClassNoun("batalla",dbpedia:MilitaryConflict) feminine with plural "batallas",
+  ClassNoun("arma",dbpedia:Weapon)  feminine with plural "armas",
+  ClassNoun("blasón",dbpedia:Blazon) masculine with plural "blasones",
 
   //// Properties 
 
-  StateVerb("lucha",dbpedia:battle,
+  StateVerb("luchar",dbpedia:battle,
        propObj = PrepositionalObject("en")), 
   StateVerb("servir",dbpedia:battle,
        propObj = PrepositionalObject("en")), 
 
-  RelationalNoun("Comandante",dbpedia:commander,
+  RelationalNoun("comandante",dbpedia:commander,
        propSubj = PrepositionalObject("en"),
        propObj  = CopulativeArg), 
   RelationalNoun("líder",dbpedia:commander,
        propSubj = PrepositionalObject("en"),
        propObj  = CopulativeArg), 
 
-  StateVerb("mando",dbpedia:commander,
-       propSubj = PrepositionalObject("durante"),
+  StateVerb("mandar",dbpedia:commander,
+       propSubj = PrepositionalObject("en"),
        propObj  = Subject), 
-  StateVerb("mando",dbpedia:militaryCommand),
+  StateVerb("mandar",dbpedia:militaryCommand),
 
   StateVerb("servir",dbpedia:militaryBranch,
        propObj = PrepositionalObject("en")),
   StateVerb("servir",dbpedia:militaryUnit,
        propObj = PrepositionalObject("en")),
-
-  RelationalNoun("siniestros",dbpedia:causalties,
+////Typo in English (it should be 'casualties')
+  RelationalNoun("bajas",dbpedia:causalties,
        propSubj = PossessiveAdjunct,
        propObj  = CopulativeArg), 
 
@@ -52,13 +53,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_7#>,"es",
       propObj  = PrepositionalObject("de")), 
   RelationalNoun("parte",dbpedia:commandStructure,
       propObj  = PrepositionalObject("de")), 
-  RelationalAdjective("subordinadas",dbpedia:commandStructure,
-       relationalArg = PrepositionalObject("a")),
+  RelationalAdjective("subordinado",dbpedia:commandStructure,
+       relationalArg = PrepositionalObject("de")),
 
-  RelationalAdjective("basado",dbpedia:garrison,
+  RelationalAdjective("guarnición",dbpedia:garrison,
        relationalArg = PrepositionalObject("en") restrictedTo lex:Building_or_Infrastructure),
-  RelationalAdjective("basado",dbpedia:garrison,
-       relationalArg = PrepositionalObject("en") restrictedTo dbpedia:PopulatedPlace)
+////There is no equivalence. It should be "con base en"
+  ////RelationalAdjective("basado",dbpedia:garrison,
+  ////     relationalArg = PrepositionalObject("en") restrictedTo dbpedia:PopulatedPlace)
 
 
 
