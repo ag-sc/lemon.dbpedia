@@ -1,8 +1,67 @@
 @prefix dbpedia:  <http://dbpedia.org/ontology/> .
 @prefix resource: <http://dbpedia.org/resource/> .
-@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_6#>,"es",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_7#>,"es",
+
+  //// Classes
+
+  ClassNoun(["militar"/noun],dbpedia:MilitaryPerson) masculine with plural "militar",
+  ////Candidate for noplural
+  ClassNoun(["personal"/noun "militar"/adjective],dbpedia:MilitaryPerson) masculine,
+  ClassNoun(["unidad"/noun "militar"/adjective],dbpedia:MilitaryUnit) feminine with plural "unidades militares",
+  ClassNoun(["conflicto"/noun "militar"/adjective],dbpedia:MilitaryConflict) masculine with plural "conflictos militares",
+  ClassNoun(["estructura"/noun "militar"/adjective],dbpedia:MilitaryStructure) feminine with plural "estructuras militares",
+  ClassNoun("guerra",dbpedia:MilitaryConflict) feminine with plural "guerras",
+  ClassNoun("batalla",dbpedia:MilitaryConflict) feminine with plural "batallas",
+  ClassNoun("arma",dbpedia:Weapon)  feminine with plural "armas",
+  ClassNoun("blasón",dbpedia:Blazon) masculine with plural "blasones",
+
+  //// Properties 
+
+  StateVerb("luchar",dbpedia:battle,
+       propObj = PrepositionalObject("en")), 
+  StateVerb("servir",dbpedia:battle,
+       propObj = PrepositionalObject("en")), 
+
+  RelationalNoun("comandante",dbpedia:commander,
+       propSubj = PrepositionalObject("en"),
+       propObj  = CopulativeArg), 
+  RelationalNoun("líder",dbpedia:commander,
+       propSubj = PrepositionalObject("en"),
+       propObj  = CopulativeArg), 
+
+  StateVerb("mandar",dbpedia:commander,
+       propSubj = PrepositionalObject("en"),
+       propObj  = Subject), 
+  StateVerb("mandar",dbpedia:militaryCommand),
+
+  StateVerb("servir",dbpedia:militaryBranch,
+       propObj = PrepositionalObject("en")),
+  StateVerb("servir",dbpedia:militaryUnit,
+       propObj = PrepositionalObject("en")),
+////Typo in English (it should be 'casualties')
+  RelationalNoun("bajas",dbpedia:causalties,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+
+  RelationalNoun("resultado",dbpedia:result,
+       propSubj = PrepositionalObject("de"),
+       propObj  = CopulativeArg),
+
+  RelationalNoun("parte",dbpedia:isPartOfMilitaryConflict,
+      propObj  = PrepositionalObject("de")), 
+  RelationalNoun("parte",dbpedia:commandStructure,
+      propObj  = PrepositionalObject("de")), 
+  RelationalAdjective("subordinado",dbpedia:commandStructure,
+       relationalArg = PrepositionalObject("de")),
+
+  RelationalAdjective("guarnición",dbpedia:garrison,
+       relationalArg = PrepositionalObject("en") restrictedTo lex:Building_or_Infrastructure),
+////There is no equivalence. It should be "con base en"
+  ////RelationalAdjective("basado",dbpedia:garrison,
+  ////     relationalArg = PrepositionalObject("en") restrictedTo dbpedia:PopulatedPlace)
+
 
 
 )
