@@ -48,7 +48,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_4#>,"es",
   ClassNoun("teatro",dbpedia:Theatre) masculine with plural "teatros",
   ClassNoun("museo",dbpedia:Museum) masculine with plural "museos",
 
-  ClassNoun(["instalación"/noun "deportive"/adjective],dbpedia:SportFacility) masculine with plural "instalaciones deportivas",
+  ClassNoun(["instalación"/noun "deportiva"/adjective],dbpedia:SportFacility) masculine with plural "instalaciones deportivas",
   ClassNoun("estadio",dbpedia:Stadium) masculine with plural "estadios",
   ClassNoun("estadio",dbpedia:Arena) masculine with plural "estadios",
   ClassNoun(["pista"/noun "de"/preposition "carreras"/noun],dbpedia:RaceTrack) masculine with plural "pistas de carreras",
