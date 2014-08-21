@@ -21,8 +21,8 @@ lex:BloodVessel owl:unionOf (dbpedia:Artery dbpedia:Vein) .
 
 ## space ##
 
-lex:Cosmonaut owl:unionOf (dbpedia:Astronaut lex:Russian lex:Soviet) .
-lex:Taikonaut owl:unionOf (dbpedia:Astronaut lex:Chinese) .
+lex:Cosmonaut owl:intersectionOf (dbpedia:Astronaut [ owl:unionOf (lex:Russian lex:Soviet) ] ) .
+lex:Taikonaut owl:intersectionOf (dbpedia:Astronaut lex:Chinese) .
 
 ## technology ##
 
@@ -55,11 +55,11 @@ lex:Hatchback rdf:type owl:Restriction ;
 
 ## arts_entertainment ##
 
-lex:Festival  owl:unionOf (dbpedia:MusicFestival dbpedia:FilmFestival) .
+lex:Festival owl:unionOf (dbpedia:MusicFestival dbpedia:FilmFestival) .
 
 lex:Album_or_Song owl:unionOf (dbpedia:Album dbpedia:Song) .
 
-lex:Actress owl:intersectionOf (dbpedia:Actor lex:Female) .
+lex:Actress      owl:intersectionOf (dbpedia:Actor lex:Female) .
 lex:VoiceActress owl:intersectionOf (dbpedia:VoiceActor lex:Female) .
 lex:AdultActress owl:intersectionOf (dbpedia:AdultActor lex:Female) .
 lex:PornActress  owl:intersectionOf (dbpedia:Pornstar lex:Female) .
@@ -143,37 +143,28 @@ lex:grandchild owl:propertyChain ( <http://dbpedia.org/ontology/child> <http://d
 
 ## profession
 
-lex:Historian     owl:unionOf (dbpedia:Person lex:professionHistorian) .
-lex:Chemist       owl:unionOf (dbpedia:Person lex:professionChemist) .
-lex:Biologist     owl:unionOf (dbpedia:Person lex:professionBiologist) .
-lex:Economist     owl:unionOf (dbpedia:Person lex:professionEconomist) .
-lex:Teacher       owl:unionOf (dbpedia:Person lex:professionTeacher) .
-lex:Surfer        owl:unionOf (dbpedia:Person lex:professionSurfing) .
-lex:Revolutionary owl:unionOf (dbpedia:Person lex:professionRevolutionary) .
-lex:Poet          owl:unionOf (dbpedia:Person lex:professionPoet) .
-
-lex:professionHistorian rdf:type owl:Restriction ; 
+lex:Historian rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:profession ;
    owl:hasValue   resource:Historian .
-lex:professionChemist rdf:type owl:Restriction ; 
+lex:Chemist rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:profession ;
    owl:hasValue   resource:Chemist .
-lex:professionBiologist rdf:type owl:Restriction ; 
+lex:Biologist rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:profession ;
    owl:hasValue   resource:Biologist .
-lex:professionEconomist rdf:type owl:Restriction ; 
+lex:Economist rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:profession ;
    owl:hasValue   resource:Economist .
-lex:professionTeacher rdf:type owl:Restriction ; 
+lex:Teacher rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:profession ;
    owl:hasValue   resource:Teacher .
-lex:professionSurfing rdf:type owl:Restriction ; 
+lex:Surfer rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:profession ;
    owl:hasValue   resource:Surfing .
-lex:professionRevolutionary rdf:type owl:Restriction ; 
+lex:Revolutionary rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:profession ;
    owl:hasValue   resource:Revolutionary .
-lex:professionPoet rdf:type owl:Restriction ; 
+lex:Poet rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:profession ;
    owl:hasValue   resource:Poet .
 
