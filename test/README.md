@@ -29,5 +29,37 @@ select ?dbres ?singular ?genero ?plural where {
 }
 ORDER BY ASC(?dbres)
 ```
+  * This query shows the stateVerbs in the dataset. Providing information about the subject and the object of the property
 
-
+```
+prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#>
+prefix lemon: <http://lemon-model.net/lemon#>
+select distinct ?stateVerbWrittenRep ?subProp_CanonicalFormWrittenVal  ?subProp_PartOfSpeechVal ?objProp_CanonicalFormWrittenVal ?objProp_PartOfSpeechVal where{
+{
+  ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>  lemon:LexicalEntry .
+  ?s lexinfo:partOfSpeech  lexinfo:verb .
+  ?s lemon:canonicalForm  ?canonicalFormVerb .
+  ?canonicalFormVerb lemon:writtenRep ?stateVerbWrittenRep .
+  ?s lemon:sense ?sense .
+  ?sense lemon:subjOfProp ?subOfProp .
+  ?subOfProp       lemon:marker ?subOfPropValue .
+  ?subOfPropValue  lexinfo:partOfSpeech ?subProp_PartOfSpeechVal .
+  ?subOfPropValue  lemon:canonicalForm ?subCanForm .
+  ?subCanForm       lemon:writtenRep ?subProp_CanonicalFormWrittenVal .
+}union
+{
+  ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>  lemon:LexicalEntry .
+  ?s lexinfo:partOfSpeech  lexinfo:verb .
+  ?s lemon:canonicalForm  ?canonicalFormVerb .
+  ?canonicalFormVerb lemon:writtenRep ?stateVerbWrittenRep .
+  ?s lemon:sense ?sense .
+  ?sense lemon:reference ?ref .
+  ?sense lemon:objOfProp ?objOfProp .
+  ?objOfProp       lemon:marker ?objOfPropValue .
+  ?objOfPropValue  lexinfo:partOfSpeech ?objProp_PartOfSpeechVal .
+  ?objOfPropValue  lemon:canonicalForm ?canForm .
+  ?canForm         lemon:writtenRep ?objProp_CanonicalFormWrittenVal 
+}
+}
+ORDER BY ASC (?stateVerbWrittenRep)
+```

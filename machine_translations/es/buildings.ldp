@@ -48,7 +48,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_4#>,"es",
   ClassNoun("teatro",dbpedia:Theatre) masculine with plural "teatros",
   ClassNoun("museo",dbpedia:Museum) masculine with plural "museos",
 
-  ClassNoun(["instalación"/noun "deportive"/adjective],dbpedia:SportFacility) masculine with plural "instalaciones deportivas",
+  ClassNoun(["instalación"/noun "deportiva"/adjective],dbpedia:SportFacility) masculine with plural "instalaciones deportivas",
   ClassNoun("estadio",dbpedia:Stadium) masculine with plural "estadios",
   ClassNoun("estadio",dbpedia:Arena) masculine with plural "estadios",
   ClassNoun(["pista"/noun "de"/preposition "carreras"/noun],dbpedia:RaceTrack) masculine with plural "pistas de carreras",
@@ -76,20 +76,19 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_4#>,"es",
   ClassNoun(["central"/noun "eléctrica"/adjective ],dbpedia:PowerStation) feminine with plural "centrales eléctricas",
 
   //// Properties
-
-//// Check from here on....
+  
   RelationalNoun(["sistema"/noun "estructural"/adjective],dbpedia:structuralSystem,
     propSubj = PrepositionalObject("de"),
     propObj  = CopulativeArg),
 
-  RelationalAdjective("haga",dbpedia:structuralSystem,
+  RelationalAdjective("hecho",dbpedia:structuralSystem,
     relationalArg = PrepositionalObject("de")),
 
   RelationalNoun("dirección",dbpedia:address,
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
 
-  RelationalNoun(["asientos"/noun "capacidad"/noun],dbpedia:seatingCapacity,
+  RelationalNoun(["número"/noun "de"/preposition "plazas"/noun],dbpedia:seatingCapacity,
     propSubj = PossessiveAdjunct,
     propObj  = CopulativeArg),
   RelationalNoun("capacidad",dbpedia:seatingCapacity,
@@ -112,14 +111,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_4#>,"es",
     propObj  = Subject), 
 
   IntersectiveObjectPropertyAdjective("gótico",dbpedia:architecturalStyle,resource:Gothic_architecture),
-  IntersectiveObjectPropertyAdjective("Neogótico",dbpedia:architecturalStyle,resource:Gothic_Revival_achitecture),
+  IntersectiveObjectPropertyAdjective("neogótico",dbpedia:architecturalStyle,resource:Gothic_Revival_achitecture),
   IntersectiveObjectPropertyAdjective("gótico victoriano",dbpedia:architecturalStyle,resource:Gothic_Revival_achitecture),
   IntersectiveObjectPropertyAdjective("renacimiento griego",dbpedia:architecturalStyle,resource:Greek_Revival_achitecture),
-  IntersectiveObjectPropertyAdjective("Art decó",dbpedia:architecturalStyle,resource:Art_Deco),
+  IntersectiveObjectPropertyAdjective("art decó",dbpedia:architecturalStyle,resource:Art_Deco),
 
   // yearOfConstruction 
 
-  RelationalAdjective("calculado",dbpedia:yearOfConstruction,
+  RelationalAdjective("construido",dbpedia:yearOfConstruction,
     relationalArg = PrepositionalObject("en"))
 
 )
