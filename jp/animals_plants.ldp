@@ -5,11 +5,52 @@
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_jp_2#>,"jp",
   // Classes
   ClassNoun("種",dbpedia:Species),
+  classnoun("生物種",dbpedia:species),
+  
   ClassNoun("真正細菌",dbpedia:Bacteria), // technical register; "細菌" used more commonly, but actually means 'prokaryote'
+  classnoun("細菌",dbpedia:bacteria),
   IntersectiveAdjective("細菌性",dbpedia:Bacteria), // na-adjective
+  classnoun("バクテリア",dbpedia:bacteria),
+  classnoun("バクテリウム",dbpedia:bacteria),
+  classnoun("細菌類",dbpedia:bacteria),
+  classnoun("真性細菌",dbpedia:bacteria),
+  classnoun("ユーバクテリウム",dbpedia:bacteria),
+  classnoun("ユーバクテリア",dbpedia:bacteria),
+  
   ClassNoun("古細菌",dbpedia:Archaea),
+  classnoun("メタバクテリア",dbpedia:archaea),
+  classnoun("アーキア",dbpedia:archaea),
+  classnoun("アーケア",dbpedia:archaea),
+  classnoun("始原菌",dbpedia:archaea),
+  
   ClassNoun("動物",dbpedia:Animal),
+  IntersectiveAdjective("動物的",dbpedia:animal), // na-adjective
+  
   ClassNoun("両生類",dbpedia:Amphibian),
+  
   ClassNoun("真核生物",dbpedia:Eukaryote),	// also 真核 ('true nucleus') as first part of compound
+  intersectiveadjective("真核"),dbpedia:eukaryote),
+  
+  classnoun("昆虫"),dbpedia:insect),
+  classnoun("昆虫綱"),dbpedia:insect), // categ of insects in biology
+  // classnoun("虫"),dbpedia:insect), // small, flying or terrestrial arthropods
+  // classnoun("虫けら"),dbpedia:insect),
+  // classnoun("虫螻"),dbpedia:insect),
+  
+  classnoun("植物"),dbpedia:plant),
+  classnoun("植物界"),dbpedia:plant), // categ of plants in biology
+  classnoun("草木"),dbpedia:plant), // close to 'vegetation'
+  
+  ClassNoun("被子植物",dbpedia:FloweringPlant),
+  
+  // different categ.s, none of which corresponds exactly to gnetophytes
+  classnoun("グネツム綱"),dbpedia:gnetophytes),
+  classnoun("グネツム類"),dbpedia:gnetophytes),
+  classnoun("グネツム目"),dbpedia:gnetophytes),
+  classnoun("グネツム亜門"),dbpedia:gnetophytes),
+  
+  classnoun("ブドウ"),dbpedia:grape),
+  classnoun("葡萄"),dbpedia:grape), // just writing variant of ブドウ
+  classnoun("ブドウ属"),dbpedia:grape), // categ of grapes in biology
 
 )
