@@ -104,7 +104,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_en_10#>,"en",
   RelationalAdjective("located",dbpedia:canton,
     relationalArg = PrepositionalObject("in")),
 
-  RelationalAdjective("located",dbpedia:region,
+  RelationalAdjective("situated",dbpedia:region,
     relationalArg = PrepositionalObject("in")),
   RelationalAdjective("situated",dbpedia:state,
     relationalArg = PrepositionalObject("in")),
