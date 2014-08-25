@@ -1,8 +1,493 @@
 @prefix dbpedia:  <http://dbpedia.org/ontology/> .
 @prefix resource: <http://dbpedia.org/resource/> .
-@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_9#>,"es",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_8#>,"es",
 
+  //// Classes
+
+  ClassNoun("persona",dbpedia:Person) feminine with plural "personas",
+  ClassNoun("mujer",lex:Female) feminine with plural "mujeres",
+  ClassNoun("hombre",lex:Male) masculine with plural "hombres",
+  ClassNoun(["grupo"/noun "étnico"/adjective],dbpedia:EthnicGroup) masculine with plural "grupos étnicos",
+
+  ClassNoun("nombre",<http://dbpedia.org/ontology/Name>) masculine with plural "nombres",
+ ////Review duplication ClassNoun(["dado"/noun "nombre"/noun],dbpedia:GivenName),
+  ClassNoun(["primer"/noun "apellido"/noun],dbpedia:GivenName),
+  ClassNoun("apellidos",dbpedia:Surname),
+  ClassNoun(["última"/noun "nombre"/noun],dbpedia:Surname),
+
+  // Occupations
+  ////From DBpedia definition http://mappings.dbpedia.org/index.php/OntologyProperty:CareerStation
+  //// It should be "hito en su carrera"
+//Review with John 
+  ClassNoun(["carrera"/noun "estación"/noun],dbpedia:CareerStation),
+
+////Question: some professions allow masculine and feminine (la médico, el médico)
+////          other no (el juez, la jueza)
+  ClassNoun("científico",dbpedia:Scientist) masculine with plural "científicos",
+  ClassNoun("investigador",dbpedia:Scientist) masculine with plural "invesigadores",
+  ClassNoun("médico",dbpedia:Medician) masculine with plural "médicos",
+  ClassNoun("profesor",dbpedia:Professor) masculine with plural "profesores",
+  ClassNoun("historiador",lex:Historian) masculine with plural "historiadores",
+  ClassNoun("químico",lex:Chemist) masculine with plural "químicos",
+  ClassNoun("biólogo",lex:Biologist) masculine with plural "biólogos",
+  ClassNoun("economista",lex:Economist) commonGender with plural "economistas",
+  ClassNoun("ingeniero",dbpedia:Engineer) masculine with plural "ingenieros",
+  ClassNoun("profesor",lex:Teacher) masculine with plural "profesores",
+  ClassNoun("revolucionario",lex:Revolutionary) masculine with plural "revolucionarios",
+  ClassNoun("poeta",lex:Poet) commonGender with plural "poetas",
+  ClassNoun("surfero",lex:Surfer) masculine with plural "surferos",
+  ClassNoun("arquitecto",dbpedia:Architect) masculine with plural "arquitectos",
+  ClassNoun("periodista",dbpedia:Journalist) commonGender with plural "periodistas",
+  ClassNoun("filósofo",dbpedia:Philosopher) masculine with plural "filósofos",
+  ClassNoun("aristócrata",dbpedia:Aristocrat) commonGender with plural "aristócratas",
+  ClassNoun("chef",dbpedia:Chef) masculine with plural "chefs",
+  ClassNoun(["entrenador"/noun "de"/preposition "caballo"/noun],dbpedia:HorseTrainer) masculine with plural "entrenadores de caballos",
+  ClassNoun("modelo",dbpedia:Model) commonGender with plural "modelos",
+
+  ClassNoun("famoso",dbpedia:Celebrity) masculine with plural "famosos",
+  ClassNoun(["reina"/noun "de"/preposition "belleza"/noun],dbpedia:BeautyQueen) feminine with plural "reinas de belleza",
+
+  // Nationalities
+
+  ClassNoun("ruso",lex:Russian) masculine with plural "rusos",
+  IntersectiveAdjective("ruso",lex:Russian),
+  ClassNoun("chino",lex:Chinese) masculine with plural "chinos",
+  IntersectiveAdjective("chino",lex:Chinese),
+  ClassNoun("estadounidense",lex:USAmerican) commonGender with plural "estadounidenses",
+  IntersectiveAdjective("estadounidense",lex:USAmerican),
+  ClassNoun("americano",lex:American) masculine with plural "amaricanos",
+  IntersectiveAdjective("americano",lex:American),
+  IntersectiveAdjective("británico",lex:British),
+  IntersectiveAdjective("inglés",lex:English),
+  IntersectiveAdjective("irlandés",lex:Irish),
+  IntersectiveAdjective("japonés",lex:Japanese),
+  ClassNoun("indio",lex:Indian) masculine with plural "indios",
+  IntersectiveAdjective("indio",lex:Indian),
+  ClassNoun("alemán",lex:German) masculine with plural "alemanes",
+  IntersectiveAdjective("alemán",lex:German),
+  ClassNoun("francés",lex:French) masculine with plural "franceses",
+  IntersectiveAdjective("francés",lex:French),
+  ClassNoun("canadiense",lex:Canadian) masculine with plural "canadienses",
+  IntersectiveAdjective("canadiense",lex:Canadian),
+  ClassNoun("italiano",lex:Italian) masculine with plural "italiano",
+  IntersectiveAdjective("italiano",lex:Italian),
+  ClassNoun("belga",lex:Belgian) commonGender with plural "belgas",
+  IntersectiveAdjective("belga",lex:Belgian),
+  ClassNoun("polaco",lex:Polish) masculine with plural "polacos",
+  IntersectiveAdjective("polaco",lex:Polish),
+  ClassNoun("holandés",lex:Dutch) masculine with plural "holandeses",
+  IntersectiveAdjective("holandés",lex:Dutch),
+
+  // Ethnicities
+
+  ClassNoun("judío",lex:Jew) masculine with plural "judíos",
+  IntersectiveAdjective("judío",lex:Jew),
+  ClassNoun("afroamericano",lex:AfricanAmerican) masculine with plural "afroamericanos",
+  IntersectiveAdjective("afroamericano",lex:AfricanAmerican),
+
+  // Religion 
+////rewiew
+  ClassNoun("religioso",dbpedia:Religious) masculine with plural "religiosos",
+
+  ClassNoun("cristiano",lex:Christian) masculine with plural "cristianos",
+  IntersectiveAdjective("cristiano",lex:Christian),
+  ClassNoun("protestante",lex:Protestant) commonGender with plural "protestantes",
+  IntersectiveAdjective("protestante",lex:Protestant),
+  ClassNoun("católico",lex:Catholic) masculine with plural "católicos",
+  IntersectiveAdjective("católico",lex:Catholic),
+  ClassNoun("hinduista",lex:Hindu) commonGender with plural "hinduistas",
+  IntersectiveAdjective("hindú",lex:Hindu),
+  ClassNoun("musulmán",lex:Muslim) commonGender with plural "musulmanes",
+  IntersectiveAdjective("musulmanes",lex:Muslim),
+  ClassNoun("budista",lex:Buddhist),
+  IntersectiveAdjective("budista",lex:Buddhist),
+
+  ClassNoun(["obispo"/noun "cristiano"/adjective],dbpedia:ChristianBishop) masculine with plural "obispos cristianos",
+  ClassNoun("obispo",dbpedia:ChristianBishop) masculine with plural "obispos",
+  ClassNoun(["patriarca"/noun "cristiano"/adjective],dbpedia:ChristianPatriarch) masculine with plural "patriarca cristiano",
+  ClassNoun("patriarca",dbpedia:ChristianPatriarch) masculine with plural "patriarcas",
+
+  ClassNoun("clérigo",dbpedia:Cleric) masculine with plural "clérigos",
+  ClassNoun("eclesiástico",dbpedia:Cleric) masculine with plural "eclesiásticos",
+  ClassNoun("santo",dbpedia:Saint) masculine with plural "santos",
+  ClassNoun("cardenal",dbpedia:Cardinal) masculine with plural "cardenales",
+  ClassNoun("papa",dbpedia:Pope) masculine with plural "papas",
+  ClassNoun("cura",dbpedia:Priest) masculine with plural "curas",
+
+
+  //// Properties
+
+  // birthDate, birthYear, birthPlace, stateOfOrigin
+
+  RelationalNoun(["fecha"/noun "de"/preposition "nacimiento"/noun],dbpedia:birthDate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "fechas de nacimiento",  
+  RelationalNoun(["día"/noun "de"/preposition "nacimiento"/noun],dbpedia:birthDate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "días de nacimiento",
+    
+  ConsequenceVerb("nacer",dbpedia:birthDate,
+     propSubj = lex:child as Subject, 
+     propObj  = lex:date as PrepositionalObject("en")),
+
+  ConsequenceVerb("nacer",dbpedia:birthYear,
+     propSubj = lex:child as Subject, 
+     propObj  = lex:year as PrepositionalObject("en")),
+  ConsequenceVerb("nacer",dbpedia:birthPlace,
+     propSubj = lex:child as Subject, 
+     propObj  = lex:place as PrepositionalObject("en")),
+  ConsequenceVerb("nacer",lex:birthCountry,
+     propSubj = lex:child as Subject, 
+     propObj  = lex:country as PrepositionalObject("en")),
+
+  ConsequenceVerb("nacer",dbpedia:stateOfOrigin,
+     propSubj = lex:child as Subject, 
+     propObj  = lex:state as PrepositionalObject("en")),
+  StateVerb("venir",dbpedia:stateOfOrigin,
+     propObj  = PrepositionalObject("de")),
+////Duplication
+//  RelationalNoun(["lugar"/noun "de"/preposition "nacimiento"/noun],dbpedia:birthPlace,
+//     propSubj = PossessiveAdjunct,
+//     propObj  = CopulativeArg),  
+  RelationalNoun(["lugar"/noun "de"/preposition "nacimiento"/noun],dbpedia:birthPlace,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "lugares de nacimiento",
+
+  // deathDate, deathYear, deathPlace, restingPLace
+
+  RelationalNoun(["fecha"/noun "de"/preposition "muerte"/noun],dbpedia:deathDate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),  
+
+  RelationalNoun(["fecha"/noun "de"/preposition "fallecimiento"/noun],dbpedia:deathDate,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),  
+
+  StateVerb("morir",dbpedia:deathDate,
+     propObj = PrepositionalObject("en")),
+  StateVerb("morir",dbpedia:deathYear,
+     propObj = PrepositionalObject("en")),
+  StateVerb("morir",dbpedia:deathPlace,
+     propObj = PrepositionalObject("en")),
+
+  StateVerb("fallecer",dbpedia:deathDate,
+     propObj = PrepositionalObject("en")),
+  StateVerb("fallecer",dbpedia:deathYear,
+     propObj = PrepositionalObject("en")),
+  StateVerb("fallecer",dbpedia:deathPlace,
+     propObj = PrepositionalObject("en")),
+
+  RelationalNoun(["lugar"/noun "de"/preposition "muerte"/noun],dbpedia:deathPlace,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun(["lugar"/noun "de"/preposition "muerte"/noun],dbpedia:deathPlace,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) with plural "lugares de muerte",
+
+  RelationalNoun(["lugar"/noun "de"/preposition "descanso"/noun],dbpedia:restingPlace,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalAdjective("enterrado",dbpedia:restingPlace,
+     relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("sepultado",dbpedia:restingPlace,
+     relationalArg = PrepositionalObject("en")),
+
+
+  // gender 
+
+  IntersectiveObjectPropertyAdjective("hembra",dbpedia:gender,resource:Female),
+  IntersectiveObjectPropertyAdjective("macho",dbpedia:gender,resource:Male),
+
+  // relative, child, parent
+
+  RelationalNoun("familiar",dbpedia:relative,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun("pariente",dbpedia:relative,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalAdjective("relacionado",dbpedia:relative,
+     relationalArg = PrepositionalObject("con")), 
+
+////Generic: hijo = child (hijo = hija) ==> commonGender
+  RelationalNoun("hijo",dbpedia:child,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) commonGender with plural "hijos", 
+////Make examples with all together
+  RelationalNoun("padre",dbpedia:child,
+     propObj  = PossessiveAdjunct), 
+  RelationalNoun("padre",dbpedia:parent,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun("hijo",dbpedia:parent,
+     propObj  = PossessiveAdjunct) commonGender with plural "hijos", 
+
+  RelationalNoun("hija",dbpedia:child,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Female), 
+  RelationalNoun("hija",dbpedia:parent,
+     propSubj = CopulativeArg restrictedTo lex:Female,
+     propObj  = PossessiveAdjunct), 
+////This is for child = son (male)
+  RelationalNoun("hijo",dbpedia:child,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Male) masculine with plural "hijos", 
+  RelationalNoun("hijo",dbpedia:parent,
+     propSubj = CopulativeArg restrictedTo lex:Male,
+     propObj  = PossessiveAdjunct) masculine with plural "hijos", 
+
+  RelationalNoun("madre",dbpedia:child,
+     propSubj = CopulativeArg restrictedTo lex:Female,
+     propObj  = PossessiveAdjunct), 
+  RelationalNoun("madre",dbpedia:parent,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Female), 
+  RelationalNoun("padre",dbpedia:child,
+     propSubj = CopulativeArg restrictedTo lex:Male,
+     propObj  = PossessiveAdjunct), 
+  RelationalNoun("padre",dbpedia:parent,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Male), 
+
+  RelationalNoun("abuela",lex:grandchild,
+     propSubj = CopulativeArg restrictedTo lex:Female,
+     propObj  = PossessiveAdjunct), 
+  RelationalNoun("abuelo",lex:grandchild,
+     propSubj = CopulativeArg restrictedTo lex:Male,
+     propObj  = PossessiveAdjunct), 
+
+  RelationalNoun("nieto",lex:grandchild,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "nietos", 
+  RelationalNoun("nieta",lex:grandchild,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Female) feminine with plural "nietas", 
+//// Generic (nieto  for male and female)
+  RelationalNoun("nieto",lex:grandchild,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo lex:Male) commonGender with plural "nietos", 
+
+
+  // spouse
+
+  RelationalNoun("cónyuge",dbpedia:spouse,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) commonGender with plural "cónyuges",  
+  RelationalNoun("esposa",dbpedia:spouse,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) feminine with plural "esposas", 
+  RelationalNoun("marido",dbpedia:spouse,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "esposos", 
+
+  StateVerb("casar",dbpedia:spouse),
+
+  ConsequenceVerb("casar",dbpedia:spouse,
+     propSubj = lex:partner1 as Subject, 
+     propObj  = lex:partner2 as PrepositionalObject("con")),
+
+
+  // influenced 
+
+  StateVerb("influir",dbpedia:influenced),
+  StateVerb("influir",dbpedia:influencedBy,
+     propSubj = DirectObject,
+     propObj  = Subject),
+
+
+  // successor, predecessor
+
+  RelationalNoun("sucesor",dbpedia:successor,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  StateVerb("sucesor",dbpedia:successor,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("predecer",dbpedia:successor),
+  RelationalNoun("antecesor",dbpedia:successor,
+     propObj = PossessiveAdjunct),
+  RelationalNoun("predecesor",dbpedia:successor,
+     propObj = PossessiveAdjunct),
+
+
+  RelationalNoun("antecesor",dbpedia:predecessor,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  StateVerb("preceder",dbpedia:predecessor,
+     propSubj = DirectObject,
+     propObj  = Subject),
+  StateVerb("anteceder",dbpedia:predecessor,
+     propSubj = DirectObject,
+     propObj  = Subject),
+ 
+ StateVerb("suceder",dbpedia:predecessor),
+  RelationalNoun("predecesor",dbpedia:predecessor,
+     propObj = PossessiveAdjunct),
+
+
+  // ethnicity, religion, related, populationPlace 
+
+  RelationalNoun("etnia",dbpedia:ethnicity,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),   
+
+  RelationalNoun("religión",dbpedia:religion,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
+  RelationalAdjective("relacionado",dbpedia:related,
+     relationalArg = PrepositionalObject("con") restrictedTo dbpedia:EthnicGroup),
+  RelationalAdjective("emparentado",dbpedia:related,
+     relationalArg = PrepositionalObject("con") restrictedTo dbpedia:EthnicGroup),
+
+
+  StateVerb("vivir",dbpedia:populationPlace,
+     propObj = PrepositionalObject("en")),
+
+
+  // university, almaMater, education
+
+  RelationalNoun("universidad",dbpedia:university,
+     propSubj=PossessiveAdjunct,
+     propObj=CopulativeArg), 
+  RelationalNoun(["alma"/adjective "mater"/noun],dbpedia:almaMater,
+     propSubj=PossessiveAdjunct,
+     propObj=CopulativeArg),
+
+  StateVerb("estudiar",dbpedia:university,
+     propObj = PrepositionalObject("en")),
+  StateVerb("estudiar",dbpedia:almaMater,
+     propObj = PrepositionalObject("en")),
+  StateVerb("graduar",dbpedia:almaMater,
+     propObj = PrepositionalObject("de")),
+
+  StateVerb("asistir",dbpedia:education,
+     propObj  = DirectObject restrictedTo dbpedia:EducationalInstitution),
+  StateVerb("estudiar",dbpedia:education,
+     propObj  = PrepositionalObject("en") restrictedTo dbpedia:EducationalInstitution),
+  StateVerb("ir",dbpedia:education,
+     propObj  = PrepositionalObject("a") restrictedTo dbpedia:EducationalInstitution),
+
+
+  // field 
+
+  RelationalNoun("ámbito",dbpedia:field,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun("campo",dbpedia:field,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun("área",dbpedia:field,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+
+  StateVerb("trabajar",dbpedia:field,
+     propObj = PrepositionalObject("en")),
+
+
+  // profession, occupation 
+
+  RelationalNoun("profesión",dbpedia:profession,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  RelationalNoun("ocupación",dbpedia:occupation,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  StateVerb("trabajar",dbpedia:profession,
+     propObj = PrepositionalObject("como")),
+  StateVerb("trabajar",dbpedia:occupation,
+     propObj = PrepositionalObject("de")),
+
+
+  // rector
+
+  RelationalNoun("rector",dbpedia:rector,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun("director",dbpedia:rector,
+     propSubj = PossessiveAdjunct restrictedTo dbpedia:School,
+     propObj  = CopulativeArg), 
+
+
+  // canonizedPlace 
+
+  ConsequenceVerb("canonizar",dbpedia:canonizedPlace,
+     propSubj=lex:person as Subject, 
+     propObj=lex:place as PrepositionalObject("en")),
+
+  // patron 
+
+  RelationalNoun("patrón",dbpedia:patron,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun(["saint"/adjective "patrón"/noun],dbpedia:patron,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "santos patrones", 
+
+
+  // hometown, nationality 
+
+  RelationalNoun(["ciudad"/noun "de"/preposition "origen"/noun],dbpedia:hometown,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  RelationalNoun(["país"/noun "de"/preposition "origen"/noun],dbpedia:nationality,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg restrictedTo dbpedia:Country), 
+  StateVerb("venir",dbpedia:hometown,
+     propObj = PrepositionalObject("de")),
+  StateVerb("venir",dbpedia:nationality,
+     propObj = PrepositionalObject("de") restrictedTo dbpedia:Place),
+
+
+  // birthName, formerName, commonName, pseudonym, alias
+
+  RelationalNoun(["nombre"/noun "de"/preposition "pila"/noun],dbpedia:birthName,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "nombres de pila", 
+
+  RelationalNoun(["nombre"/noun "anterior"/adjective],dbpedia:formerName,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "nombres anteriores", 
+
+  RelationalNoun(["nombre"/noun "común"/adjective],dbpedia:commonName,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "nombres comunes", 
+
+  RelationalNoun("seudónimo",dbpedia:pseudonym,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "seudónimos",
+////plural = singular
+  RelationalNoun("alias",dbpedia:alias,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "alias",
+
+  RelationalNoun("apodo",dbpedia:alias,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "apodos",
+
+  ConsequenceVerb("llamar",dbpedia:pseudonym,
+     propSubj = lex:callee as Subject, 
+     propObj  = lex:callname as DirectObject),
+  ConsequenceVerb("llamar",dbpedia:alias,
+     propSubj = lex:callee as Subject, 
+     propObj  = lex:callname as DirectObject),
+  ConsequenceVerb("llamar",dbpedia:commonName,
+     propSubj = lex:callee as Subject, 
+     propObj  = lex:callname as DirectObject),
+
+
+  // weight 
+
+  RelationalNoun("peso",dbpedia:weight,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) masculine with plural "pesos", 
+
+  StateVerb("pesar",dbpedia:weight)
 
 )
