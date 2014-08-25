@@ -53,7 +53,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_9#>,"es",
   ClassNoun(["causa"/noun "judicial"/noun],dbpedia:LegalCase) feminine with plural "causas judiciales",
   ClassNoun(["caso"/noun "judicial"/adjective],dbpedia:LegalCase) masculine with plural "casos judiciales",
 ////Candidate to nonplural   
-  ClassNoun(["Tribunal"/noun "Supremo"/adjective "de"/preposition "los"/determinant "Estados"/noun "Unidos"/adjective],dbpedia:SupremeCourtOfTheUnitedStatesCase) masculine,
+  ClassNoun(["Tribunal"/noun "Supremo"/adjective "de"/preposition "los"/determiner "Estados"/noun "Unidos"/adjective],dbpedia:SupremeCourtOfTheUnitedStatesCase) masculine,
   ClassNoun(["ordenamiento"/noun "jurídico"/adjective],dbpedia:SystemOfLaw) masculine with plural "ordenamientos jurídicos",
 
   ClassNoun("criminal",dbpedia:Criminal) masculine with plural "criminales",
