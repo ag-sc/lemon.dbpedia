@@ -1,7 +1,232 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
 @prefix resource: <http://dbpedia.org/resource/> .
-@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_14#>,"es",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#>,"es",
+
+  //// Classes
+
+  ClassNoun("dispositivo",dbpedia:Device) masculine with plural "dispositivos",
+  ClassNoun("cámara",dbpedia:Camera) feminine with plural "cámaras",
+  ClassNoun(["cámara"/noun "digital"/adjective],dbpedia:DigitalCamera) feminine with plural "cámaras digitales",
+  ClassNoun(["dispositivo"/noun "electrónico"/noun],dbpedia:InformationAppliance) masculine with plural "dispositivos electrónicos",
+////Candidate for noplural 
+  ClassNoun("software",dbpedia:Software) masculine,
+  ClassNoun(["programa"/noun "informático"/noun],dbpedia:Software) masculine with plural "programas informáticos",
+  ClassNoun(["lenguaje"/noun "de"/preposition "programación"/noun],dbpedia:ProgrammingLanguage) masculine with plural "programas informáticos",
+  ClassNoun("freeware",lex:Freeware),
+  ClassNoun(["software"/noun "gratuito"/adjective],lex:Freeware) masculine,
+  ClassNoun("shareware",lex:Shareware),
+  ClassNoun(["software"/noun "gratuito"/adjective],lex:Shareware) masculine,
+  ClassNoun("videojuego",dbpedia:VideoGame) masculine with plural "videojuegos",
+  ClassNoun(["motor"/noun "de"/preposition "automóvil"/noun],dbpedia:AutomobileEngine) masculine with plural "motores de automóvil",
+  ClassNoun(["motor"/noun "de"/preposition "coche"/noun],dbpedia:AutomobileEngine) masculine with plural "motores de coches",
+
+  // Transportation
+
+  ClassNoun(["medio"/noun "de"/preposition "transporte"/noun],dbpedia:MeanOfTransportation) with plural "medios de transporte",
+  ClassNoun("buque",dbpedia:Ship) masculine with plural "buques",
+  ClassNoun("barco",dbpedia:Ship) masculine with plural "barcos",
+  ClassNoun("embarcación",dbpedia:Ship) feminine with plural "embarcaciones",
+  ClassNoun("avión",dbpedia:Aircraft) masculine with plural "aviones",
+  ClassNoun("aeroplano",dbpedia:Aircraft) masculine with plural "aeroplanos",
+  ClassNoun("aeronave",dbpedia:Aircraft) feminine with plural "aeronaves",
+  ClassNoun(["compañía"/noun "aérea"/adjective],dbpedia:Airline) feminine with plural "compañías aéreas",
+  ClassNoun("automóvil",dbpedia:Automobile) masculine with plural "automóviles",
+  ClassNoun("auto",dbpedia:Automobile) masculine with plural "autos",
+  ClassNoun("coche",dbpedia:Automobile) masculine with plural "coches",
+  ClassNoun("vehículo",dbpedia:Automobile) masculine with plural "vehículos",
+  ClassNoun("cupé",lex:Coupe) masculine with plural "cupés",
+  
+////TODO: create a RelationalNoun
+  ClassNoun(["vehículo"/noun "con"/preposition "portón"/noun "trasero"/adjective],lex:Hatchback) masculine with plural "vehículos con portón trasero",
+  ////Seee http://es.wiktionary.org/wiki/hatchback
+  ClassNoun("hatchback",lex:Hatchback) masculine with plural "hatchback",
+
+  ClassNoun("descapotable",lex:Convertible) masculine with plural "descapotables",
+
+  ClassNoun(["coche"/noun "familiar"/adjective],lex:StationWagon) masculine with plural "coches familiares",
+  ClassNoun("familiar",lex:StationWagon) masculine with plural "familiares",
+
+  ClassNoun("camioneta",lex:Pickup) feminine with plural "camionetas",
+  ClassNoun("locomotora",dbpedia:Locomotive) feminine with plural "locomotoras",
+  ClassNoun("tren",dbpedia:Train) masculine with plural "trenes",
+
+
+  //// Properties 
+
+  // origin 
+
+  RelationalAdjective("hecho",dbpedia:origin,
+      relationalArg = PrepositionalObject("en")),
+
+  // averageSpeed, topSpeed, displacement
+
+  RelationalNoun(["velocidad"/noun "media"/adjective],dbpedia:averageSpeed,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun(["velocidad"/noun "máxima"/adjective],dbpedia:topSpeed,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("cilindrada",dbpedia:displacement,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun(["cilindrada"/noun "del"/preposition "motor"/noun],dbpedia:displacement,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  // developer, computingPlatform, computingMedia, computingInput, operatingSystem
+
+  RelationalNoun("desarrollador",dbpedia:developer,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  StateVerb("desarrollar",dbpedia:developer,
+       propSubj = DirectObject,
+       propObj  = Subject), 
+
+  RelationalAdjective("desarrollado",dbpedia:computingPlatform,
+       relationalArg = PrepositionalObject("para")), 
+  RelationalAdjective("portado",dbpedia:computingPlatform,
+       relationalArg = PrepositionalObject("a")),
+       
+////Review more datailed RelationalAdjective (or Noun) to cope with "en 2001", "en enero 2001", "el 5 de enero de 2001"
+  RelationalAdjective("lanzado",dbpedia:computingMedia,
+       relationalArg = PrepositionalObject("en")),
+
+  StateVerb("usar",dbpedia:computingInput),
+
+  StateVerb("ejecuta",dbpedia:operatingSystem,
+       propObj  = PrepositionalObject("bajo")),
+
+  // programmingLanguage, license
+
+  RelationalNoun(["lenguaje"/noun "de"/preposition "programación"/noun],dbpedia:programmingLanguage,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalAdjective("escrito",dbpedia:programmingLanguage,
+       relationalArg = PrepositionalObject("en")),
+
+  RelationalAdjective("licenciado",dbpedia:license,
+       relationalArg = PrepositionalObject("bajo")),
+  IntersectiveObjectPropertyAdjective("propietario",dbpedia:license,resource:Proprietary_software),
+  IntersectiveObjectPropertyAdjective("código abierto",dbpedia:license,resource:Open_source),
+
+  // route{Junction|Start|End}
+
+  StateVerb("cruza",dbpedia:routeJunction,
+       propObj  = PrepositionalObject("con")),
+  StateVerb("corta",dbpedia:routeJunction), 
+
+  StateVerb("empezar",dbpedia:routeStart,
+       propObj  = PrepositionalObject("en") restrictedTo dbpedia:Road),
+  StateVerb("empezar",dbpedia:routeStart,
+       propObj  = PrepositionalObject("en") restrictedTo dbpedia:PopulatedPlace),
+  StateVerb("acabar",dbpedia:routeEnd,
+       propObj  = PrepositionalObject("en") restrictedTo dbpedia:Road),
+  StateVerb("acabar",dbpedia:routeEnd,
+       propObj  = PrepositionalObject("en") restrictedTo dbpedia:PopulatedPlace),
+
+
+  // others 
+
+  RelationalNoun("haz",dbpedia:shipBeam,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+  RelationalNoun("borrador",dbpedia:shipDraft,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("formato",dbpedia:format,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+  IntersectiveObjectPropertyAdjective("color",dbpedia:format,resource:Color),
+  IntersectiveObjectPropertyAdjective("blanco y negro",dbpedia:format,<http://dbpedia.org/resource/Black-and-white>),
+  IntersectiveObjectPropertyAdjective("estereofónico",dbpedia:format,resource:Stereophonic_sound),
+  IntersectiveObjectPropertyAdjective("dolby estéreo",dbpedia:format,resource:Dolby_Stereo),
+
+  IntersectiveDataPropertyAdjective("cuatro cilindros en línea",dbpedia:configuration,"straight-four"),
+  IntersectiveDataPropertyAdjective("seis cilindros en línea",dbpedia:configuration,"straight-six"),
+  IntersectiveDataPropertyAdjective("V6",dbpedia:configuration,"V6"),
+  IntersectiveDataPropertyAdjective("V8",dbpedia:configuration,"V8"),
+
+  RelationalAdjective("montado",dbpedia:assembly,
+       relationalArg = PrepositionalObject("en")), 
+
+//// It should be ["poner"/verb "en"/preposition "servicio/noun"]
+  ConsequenceVerb("empezar",dbpedia:commissioningDate,
+     propSubj = lex:ship as Subject, 
+     propObj  = lex:date as PrepositionalObject("en")),
+//// It should be ["dar"/verb "de"/preposition "baja"/noun"]     
+  ConsequenceVerb("terminar",dbpedia:decommissioningDate,
+     propSubj = lex:ship as Subject, 
+     propObj  = lex:date as PrepositionalObject("en")),
+
+  StateVerb("construir",dbpedia:builder,
+       propSubj = DirectObject,
+       propObj  = Subject),
+
+  StateVerb("diseñar",dbpedia:designer,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("desarrollar",dbpedia:designer,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("crear",dbpedia:designer,
+       propSubj = DirectObject,
+       propObj  = Subject),
+
+  RelationalAdjective("basado",dbpedia:relatedMeanOfTransportation,
+       relationalArg = PrepositionalObject("en")), 
+
+  StateVerb("operar",dbpedia:operatedBy,
+       propSubj = DirectObject,
+       propObj  = Subject),
+  StateVerb("operar",dbpedia:operator,
+       propSubj = Subject restrictedTo lex:Infrastructure_or_MeanOfTransportation,
+       propObj  = DirectObject),
+
+  StateVerb("servir",dbpedia:servingRailwayLine,
+       propSubj = DirectObject,
+       propObj  = Subject),
+
+  ConsequenceVerb("colocar",dbpedia:layingDown,
+       propSubj = lex:ship as CopulativeSubject, 
+       propObj  = lex:date as PrepositionalObject("en")),
+  ConsequenceVerb("lanzar",dbpedia:shipLaunch,
+       propSubj = lex:ship as CopulativeSubject, 
+       propObj  = lex:date as PrepositionalObject("en")),
+
+  RelationalNoun(["identificador"/noun "OACI"/noun],dbpedia:icaoLocationIdentifier,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun(["código"/noun "OACI"/noun],dbpedia:icaoLocationIdentifier,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("localizador",dbpedia:icaoLocationIdentifier,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+  RelationalNoun(["identificador"/noun "de"/preposition "localización"/noun "IATA"/noun],dbpedia:iataLocationIdentifier,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun(["identificador"/noun "IATA"/noun],dbpedia:iataLocationIdentifier,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun(["código"/noun "IATA"/noun],dbpedia:iataLocationIdentifier,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun(["versión"/noun "actual"/adjective],dbpedia:latestReleaseVersion,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+  RelationalNoun(["última"/adjective "versión"/noun],dbpedia:latestReleaseVersion,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg), 
+
+  RelationalNoun(["código"/noun "de"/preposition "estación"/noun],dbpedia:agencyStationCode,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg)
 
 )
