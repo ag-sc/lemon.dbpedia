@@ -256,24 +256,25 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_9#>,"es",
   RelationalNoun(["estadio"/noun "local"/noun],dbpedia:ground,
      propSubj = PossessiveAdjunct restrictedTo dbpedia:Stadium,
      propObj  = CopulativeArg),
-  RelationalAdjective("basado",dbpedia:ground, 
+  RelationalAdjective("situado",dbpedia:ground, 
      relationalArg = PrepositionalObject("en") restrictedTo dbpedia:PopulatedPlace),
-  RelationalNoun("situado",dbpedia:homeArena,
-     propSubj = PrepositionalObject("en"),
+  RelationalNoun("casa",dbpedia:homeArena,
+     propSubj = PrepositionalObject("de"),
      propObj  = CopulativeArg),
-  RelationalNoun("origen",dbpedia:ground,
+  RelationalNoun("casa",dbpedia:ground,
      propSubj = PrepositionalObject("de"),
      propObj  = CopulativeArg),
 
-  StateVerb("desempeñar",dbpedia:tenant, 
+  StateVerb("juega",dbpedia:tenant, 
      propSubj = PrepositionalObject("en"),
      propObj  = Subject restrictedTo dbpedia:Organisation), 
-  StateVerb("acogida",dbpedia:tenant, 
+  StateVerb("recibir",dbpedia:tenant, 
      propObj  = DirectObject restrictedTo dbpedia:Event), 
 
-  RelationalNoun("origen",dbpedia:operator,
+  RelationalNoun("casa",dbpedia:operator,
      propObj  = PrepositionalObject("de")),
 
+////TODO add forms of "jugar en casa", "equipo local" and "equipo visitante" (tenant)
 
   // capacity 
 
@@ -282,6 +283,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_9#>,"es",
      propObj  = CopulativeArg),
   
   StateVerb("acoger",dbpedia:capacity),
+  StateVerb("albergar",dbpedia:capacity),
 
   // position
 
@@ -291,58 +293,55 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_9#>,"es",
 
   // number, squadNumber
 
-  RelationalNoun(["shirt"/noun "número"/noun],dbpedia:number,
+  RelationalNoun(["número"/noun "de"/preposition "camiseta"/noun],dbpedia:number,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
-  RelationalNoun(["shirt"/noun "número"/noun],dbpedia:squadNumber,
+  RelationalNoun(["número"/noun "de"/preposition "camiseta"/noun],dbpedia:squadNumber,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
-  RelationalNoun(["squad"/noun "número"/noun],dbpedia:number,
+  RelationalNoun(["número"/noun "de"/preposition "formación"/noun],dbpedia:number,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
-  RelationalNoun(["squad"/noun "número"/noun],dbpedia:squadNumber,
+  RelationalNoun(["número"/noun "de"/preposition "formación"/noun],dbpedia:squadNumber,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),
 
 
   // formerCoach
 
-  RelationalNoun(["antigua"/adjective "autocar"/noun],dbpedia:formerCoach,
+  RelationalNoun(["entrenador"/noun "anterior"/adjective ],dbpedia:formerCoach,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg),  
 
   // {throwing|batting}Side, shoots
 
-  StateVerb(["aclarar muchos"/verb "left-handed"/adverb],lex:throwLeft), 
-  StateVerb(["aclarar muchos"/verb "salido"/adverb],lex:throwLeft), 
-  StateVerb(["aclarar muchos"/verb "right-handed"/adverb],lex:throwRight), 
-  StateVerb(["aclarar muchos"/verb "derecho"/adverb],lex:throwRight), 
-  StateVerb(["bat"/verb "left-handed"/adverb],lex:batLeft), 
-  StateVerb(["bat"/verb "salido"/adverb],lex:batLeft), 
-  StateVerb(["bat"/verb "right-handed"/adverb],lex:batRight), 
-  StateVerb(["bat"/verb "derecho"/adverb],lex:batRight), 
-
-  StateVerb(["sarmientos"/verb "derecho"/adverb],lex:shootRight), 
-  StateVerb(["sarmientos"/verb "salido"/adverb],lex:shootLeft), 
-  IntersectiveDataPropertyAdjective("ambidextrous",dbpedia:shoots,"Ambidextrous"),
+  StateVerb("lanzar",lex:throwLeft), 
+  StateVerb("lanzar",lex:throwRight), 
+  StateVerb("batear",lex:batLeft), 
+  StateVerb("batear",lex:batRight), 
+  StateVerb("golpear",lex:batLeft), 
+  StateVerb("golpear",lex:batRight), 
+  StateVerb("lanzar",lex:shootRight), 
+  StateVerb("lanzar",lex:shootLeft), 
+  IntersectiveDataPropertyAdjective("ambidiestro",dbpedia:shoots,"Ambidextrous"),
 
   // plays 
 
-  IntersectiveDataPropertyAdjective("right-handed",dbpedia:plays,"Right-handed"),
-  IntersectiveDataPropertyAdjective("right-handed",dbpedia:plays,"Right-handed (two-handed backhand)"),
-  IntersectiveDataPropertyAdjective("right-handed",dbpedia:plays,"Right-handed (one-handed backhand)"),
-  IntersectiveDataPropertyAdjective("left-handed",dbpedia:plays,"Left-handed"),
-  IntersectiveDataPropertyAdjective("left-handed",dbpedia:plays,"Left-handed (two-handed backhand)"),
-  IntersectiveDataPropertyAdjective("left-handed",dbpedia:plays,"Left-handed (one-handed backhand)"),
-  IntersectiveDataPropertyAdjective("ambidextrous",dbpedia:plays,"Ambidextrous"), 
+  IntersectiveDataPropertyAdjective("diestro",dbpedia:plays,"Right-handed"),
+  IntersectiveDataPropertyAdjective("diestro",dbpedia:plays,"Right-handed (two-handed backhand)"),
+  IntersectiveDataPropertyAdjective("diestro",dbpedia:plays,"Right-handed (one-handed backhand)"),
+  IntersectiveDataPropertyAdjective("zurdo",dbpedia:plays,"Left-handed"),
+  IntersectiveDataPropertyAdjective("zurdo",dbpedia:plays,"Left-handed (two-handed backhand)"),
+  IntersectiveDataPropertyAdjective("zurdo",dbpedia:plays,"Left-handed (one-handed backhand)"),
+  IntersectiveDataPropertyAdjective("ambidiestro",dbpedia:plays,"Ambidextrous"), 
 
   // others 
  
-  RelationalNoun("Presidente",dbpedia:chairman,
+  RelationalNoun("presidente",dbpedia:chairman,
      propSubj = PossessiveAdjunct,
      propObj  = CopulativeArg) with plural "presidentes",
 
-  StateVerb("début",dbpedia:debutTeam,
+  StateVerb("debutar",dbpedia:debutTeam,
      propObj = PrepositionalObject("para"))
 
 
