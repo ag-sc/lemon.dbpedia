@@ -58,8 +58,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#>,"es",
   // origin 
 
   RelationalAdjective("hecho",dbpedia:origin,
-        propSubj = CopulativeArg restrictedTo dbpedia:Device,
-        propObj  = PrepositionalObject("en")),
+      relationalArg = PrepositionalObject("en")),
 
   // averageSpeed, topSpeed, displacement
 
@@ -156,10 +155,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#>,"es",
   RelationalAdjective("montado",dbpedia:assembly,
        relationalArg = PrepositionalObject("en")), 
 
-  ConsequenceVerb(["poner"/verb "en"/preposition "servicio/noun"],dbpedia:commissioningDate,
+//// It should be ["poner"/verb "en"/preposition "servicio/noun"]
+  ConsequenceVerb("empezar",dbpedia:commissioningDate,
      propSubj = lex:ship as Subject, 
      propObj  = lex:date as PrepositionalObject("en")),
-  ConsequenceVerb("dar"/verb "de"/preposition "baja"/noun",dbpedia:decommissioningDate,
+//// It should be ["dar"/verb "de"/preposition "baja"/noun"]     
+  ConsequenceVerb("terminar",dbpedia:decommissioningDate,
      propSubj = lex:ship as Subject, 
      propObj  = lex:date as PrepositionalObject("en")),
 
