@@ -26,10 +26,14 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_jp_2#>,"jp",
   ClassNoun("動物",dbpedia:Animal),
   IntersectiveAdjective("動物的",dbpedia:animal), // na-adjective
   
-  ClassNoun("両生類",dbpedia:Amphibian),
   
-  ClassNoun("真核生物",dbpedia:Eukaryote),	// also 真核 ('true nucleus') as first part of compound
-  intersectiveadjective("真核"),dbpedia:eukaryote),
+  ClassNoun("両生類",dbpedia:Amphibian),
+  ClassNoun("両生綱",dbpedia:Amphibian), // biol categ
+  ClassNoun("両棲類",dbpedia:Amphibian), // deprecated/older
+  ClassNoun("両棲綱",dbpedia:Amphibian), // older, biol categ
+  
+  ClassNoun("真核生物",dbpedia:Eukaryote),
+  intersectiveadjective("真核",dbpedia:eukaryote),
   
   classnoun("昆虫"),dbpedia:insect),
   classnoun("昆虫綱"),dbpedia:insect), // categ of insects in biology
@@ -43,14 +47,56 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_jp_2#>,"jp",
   
   ClassNoun("被子植物",dbpedia:FloweringPlant),
   
-  // different categ.s, none of which corresponds exactly to gnetophytes
-  classnoun("グネツム綱"),dbpedia:gnetophytes),
+  classnoun("グネツム綱"),dbpedia:gnetophytes), // gnetopsida, alternative classification to gnetophyta
   classnoun("グネツム類"),dbpedia:gnetophytes),
-  classnoun("グネツム目"),dbpedia:gnetophytes),
-  classnoun("グネツム亜門"),dbpedia:gnetophytes),
+  classnoun("グネツム目"),dbpedia:gnetophytes), // gnetales, alternative classification to gnetophyta
+  classnoun("グネツム亜門"),dbpedia:gnetophytes), // subphylum
   
   classnoun("ブドウ"),dbpedia:grape),
   classnoun("葡萄"),dbpedia:grape), // just writing variant of ブドウ
   classnoun("ブドウ属"),dbpedia:grape), // categ of grapes in biology
-
-)
+  
+  //classnoun("ソテツ"),dbpedia:Cycas_revoluta),
+  classnoun("ソテツ類"),dbpedia:cycad), 
+  //classnoun("ソテツ目"),dbpedia:cycad), // order Cycadales (not part of dbpedia(?))
+  //classnoun("ソテツ門"),dbpedia:Cycadophyta),
+  //classnoun("ソテツ綱"),dbpedia:cycad), // class Cycadopsida
+  //classnoun("ソテツ亜門"),dbpedia:cycad), // subclass Cycadophytina
+  
+  classnoun("シダ"),dbpedia:fern),
+  classnoun("しだ"),dbpedia:fern), // writing variant of first
+  classnoun("羊歯"),dbpedia:fern), // writing variant of first
+  classnoun("歯朶"),dbpedia:fern), // writing variant of first
+  ClassNoun("シダ類",dbpedia:Fern), // biol categ
+  //classnoun("シダ植物門"),dbpedia:fern), // actually Pteridophyta, which includes also fern-allies
+  //classnoun("シダ植物"),dbpedia:fern), // actually Pteridophyta, which includes also fern-allies
+  
+  classnoun("蘚類"),dbpedia:moss),
+  classnoun("セン類"),dbpedia:moss), // writing variant of former
+  classnoun("蘚植物門"),dbpedia:moss), // biol categ
+  classnoun("マゴケ植物門"),dbpedia:moss), // biol categ
+  //classnoun("苔"),dbpedia:moss), //denotes moss, lichens,liverwort,antlerwort,small ferns,fungi,...
+  //classnoun("コケ"),dbpedia:moss), // writing variant of previous
+  //classnoun("蘚綱"),dbpedia:moss), // bryopsida (comprises 95% of all mosses)
+  //classnoun("セン綱"),dbpedia:moss), // writing variant of former
+  //classnoun("蘚類綱"),dbpedia:moss),//bryopsida
+  
+  ClassNoun("ヒカゲノカズラ科",dbpedia:ClubMoss),
+  ClassNoun("日陰の蔓科"、dbpedia:ClubMoss), // writing variant of first
+  ClassNoun("日陰蔓科"、dbpedia:ClubMoss), // writing variant of first
+  ClassNoun("日陰の葛科"、dbpedia:ClubMoss), // writing variant of first
+  ClassNoun("日陰葛科"、dbpedia:ClubMoss), // writing variant of first
+  ClassNoun("日陰の鬘科"、dbpedia:ClubMoss), // writing variant of first
+  ClassNoun("日陰鬘科"、dbpedia:ClubMoss), // writing variant of first
+  
+  ClassNoun("緑藻",dbpedia:GreenAlga),
+  
+  classnoun("針葉樹"),dbpedia:conifer),
+  
+  classnoun("イチョウ属"),dbpedia:ginkgo), // class Ginkgo
+  classnoun("イチョウ"),dbpedia:ginkgo), // species G. biloba
+  classnoun("いちょう"),dbpedia:ginkgo), // writing variant of previous
+  classnoun("銀杏"),dbpedia:ginkgo),　// species; also the fruit
+  ClassNoun("ギンナン",dbpedia:ginkgo), // writing variant of previous
+  classnoun("公孫樹"),dbpedia:ginkgo), // species
+  classnoun("鴨脚樹"),dbpedia:ginkgo), // species
