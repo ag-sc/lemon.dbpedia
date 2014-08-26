@@ -72,7 +72,7 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_8#>,"es",
   StateVerb("despegar",dbpedia:associatedRocket,
        propSubj = PrepositionalObject("desde"),
        propObj  = Subject),
-  StateVerb(["enviar",dbpedia:associatedRocket,
+  StateVerb("enviar",dbpedia:associatedRocket,
        propSubj = PrepositionalObject("desde"),
        propObj  = Subject),
 

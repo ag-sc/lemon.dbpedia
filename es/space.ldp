@@ -1,7 +1,83 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
-@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_12#>,"es",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_8#>,"es",
 
+  //// Classes
+
+  ClassNoun(["cuerpo"/noun "celeste"/adjective],dbpedia:CelestialBody) masculine with plural "cuerpos celestes",
+  ClassNoun("estrella",dbpedia:Star) feminine with plural "estrellas",
+  ClassNoun("sol",dbpedia:Star) masculine with plural "soles",
+  ClassNoun("planeta",dbpedia:Planet) masculine with plural "planetas",
+  ClassNoun("galaxy",dbpedia:Galaxy) feminine with plural "galaxias",
+  ClassNoun("asteroide",dbpedia:Asteroid) masculine with plural "asteroides",
+  ClassNoun("constelación",dbpedia:Constellation) feminine with plural "constelaciones",
+
+  ClassNoun(["crater"/noun "lunar"/adjective],dbpedia:LunarCrater) masculine with plural "cráteres lunares",
+  ClassNoun("cohete",dbpedia:Rocket) masculine with plural "cohetes",
+  ClassNoun(["plataforma"/noun "de"/preposition "lanzamiento"/noun],dbpedia:LaunchPad) feminine with plural "plataformas de lanzamiento",
+  ClassNoun(["vehículo"/noun "espacial"/adjective],dbpedia:Spacecraft) masculine with plural "vehículos espaciales",
+  ClassNoun(["nave"/noun "espacial"/adjective],dbpedia:Spacecraft) feminine with plural "naves espaciales",
+  ClassNoun(["estación"/noun "espacial"/noun],dbpedia:SpaceStation) masculine with plural "estaciones espaciales",
+  ClassNoun(["transbordador"/noun "espacial"/noun],dbpedia:SpaceShuttle) masculine with plural "transbordadores espaciales",
+  ClassNoun(["misión"/noun "espacial"/noun],dbpedia:SpaceMission) feminine with plural "misiones espaciales",
+  ClassNoun(["año"/noun "del"/preposition "vuelo"/noun "espacial"/adjective],dbpedia:YearInSpaceflight) masculine with plural "años de los vuelos espaciales",
+  ClassNoun("astronauta",dbpedia:Astronaut) commonGender with plural "astronautas",
+  ClassNoun("cosmonauta",lex:Cosmonaut) commonGender with plural "cosmonautas",
+////Exists in spanish wikipedia but NOT in RAE
+  ClassNoun("taikonauta",lex:Taikonaut) masculine with plural "taikonautas",
+
+  //// Properties 
+
+  RelationalNoun(["temperatura"/noun "media"/adjective],dbpedia:meanTemperature,
+       propSubj = PrepositionalObject("de"),
+       propObj  = CopulativeArg),
+
+  RelationalNoun("densidad",dbpedia:density,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun(["periodo"/noun "orbital"/adjective],dbpedia:orbitalPeriod,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("periapsis",dbpedia:periapsis,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("periastro",dbpedia:periapsis,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("apoapsis",dbpedia:apoapsis,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("apoastro",dbpedia:apoapsis,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun("época",dbpedia:epoch,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  RelationalNoun(["magnitud"/noun "absoluta"/adjective],dbpedia:absoluteMagnitude,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+  RelationalNoun("magnitud",dbpedia:madgnitude,
+       propSubj = PossessiveAdjunct,
+       propObj  = CopulativeArg),
+
+  StateVerb("lanzar",dbpedia:associatedRocket,
+       propSubj = PrepositionalObject("desde"),
+       propObj  = Subject),
+  StateVerb("despegar",dbpedia:associatedRocket,
+       propSubj = PrepositionalObject("desde"),
+       propObj  = Subject),
+  StateVerb("enviar",dbpedia:associatedRocket,
+       propSubj = PrepositionalObject("desde"),
+       propObj  = Subject),
+
+  ConsequenceVerb("lanzado",dbpedia:launchDate,
+       propSubj = lex:rocket as CopulativeSubject, 
+       propObj  = lex:date as PrepositionalObject("en"))
 
 )

@@ -1,6 +1,384 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
-@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_10#>,"es",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_7#>,"es",
+
+  //// Classes
+
+  ClassNoun("lugar",dbpedia:Place) masculine with plural "lugares",
+  ClassNoun("localización",dbpedia:Place) feminine with plural "localizaciones",
+
+  ClassNoun(["lugar"/noun "habitado"/adjective],dbpedia:PopulatedPlace) masculine with plural "lugares habitados",
+  ClassNoun("continente",dbpedia:Continent) masculine with plural "continentes",
+  ClassNoun("país",dbpedia:Country) masculine with plural "países",
+  ClassNoun("nación",dbpedia:Country) feminine with plural "naciones",
+  ClassNoun("estado",dbpedia:State) masculine with plural "estados",
+  ClassNoun("departamento",dbpedia:Department) masculine with plural "departamentos",
+  ClassNoun(["departamento"/noun "de"/preposition "ultramar"/adjective],dbpedia:OverseasDepartment) masculine with plural "departamentos de ultramar",
+  ClassNoun("intercomunalidad",dbpedia:Intercommunality) feminine with plural "intercomunidades",
+  ClassNoun("localidad",dbpedia:Locality) feminine with plural "localidades",
+  ClassNoun(["localidad"/noun "francesa"/adjective],dbpedia:FrenchLocality) feminine with plural "localidades francesas",
+  ClassNoun("distrito",lex:Arrondissement) masculine with plural "distritos",
+  ClassNoun("prefectura",dbpedia:Prefecture) feminine with plural "prefectura",
+  ClassNoun("asentamiento",dbpedia:Settlement) masculine with plural "asentamientos",
+  ClassNoun(["asentamiento"/noun "iraní"/noun],dbpedia:IranSettlement) masculine with plural "asentamientos iraníes",
+  ClassNoun("urbe",dbpedia:City) feminine with plural "urbes",
+
+////Review "distrito de la ciudad". Is valid "la"/determinant ?
+  ClassNoun("distrito",dbpedia:CityDistrict) masculine with plural "distritos",
+  ClassNoun("ciudad",dbpedia:Town) feminine with plural "ciudad",
+  ClassNoun("pueblo",dbpedia:Village) masculine with plural "pueblos",
+
+  ClassNoun("región",dbpedia:Region) feminine with plural "regiones",
+  ClassNoun(["región"/noun" administrativa"/adjective],dbpedia:AdministrativeRegion) feminine with plural "regiones administrativas",
+  ClassNoun(["región"/noun "administrativa"/adjective "clerical"/adjective],dbpedia:ClericalAdministrativeRegion) feminine with plural "región administrativa clerical",
+  ClassNoun("decanato",dbpedia:Deanary) masculine with plural "decanatos",
+////Plural = singular
+  ClassNoun("diócesis",dbpedia:Diocese) feminine with plural "diócesis",
+  ClassNoun("parroquia",dbpedia:Parish) feminine with plural "parróquias",
+  ClassNoun(["región"/noun "administrativa"/adjective "gubernamental"/adjective],dbpedia:GovernmentalAdministrativeRegion) feminine with plural "regiones administrativas gubernamentales",
+  ClassNoun("distrito",dbpedia:District) masculine with plural "distritos",
+  ClassNoun(["junta"/noun "de"/preposition "aguas"/noun "del"/preposition "distrito"/noun ],dbpedia:DistrictWaterBoard) feminine with plural "justas de aguas de los distritos",
+  ClassNoun(["junta"/noun "de"/preposition "aguas"/noun],dbpedia:DistrictWaterBoard) feminine with plural "juntas de aguas",
+  ClassNoun("municipio",dbpedia:Municipality) masculine with plural "municipios",
+  ClassNoun("submunicipalidad",dbpedia:SubMunicipality) feminine with plural "submunicipalidades",
+  ClassNoun("provincia",dbpedia:Province) feminine with plural "provincias",
+  ClassNoun("regencia",dbpedia:Regency) feminine with plural "regencias",
+  ClassNoun("territorio",dbpedia:Territory) masculine with plural "territorios",
+  ClassNoun(["antiguo"/adjective "territorio"/noun],dbpedia:OldTerritory) masculine with plural "antiguos territorios",
+
+  ClassNoun(["región"/noun "natural"/adjective],dbpedia:NaturalRegion) masculine with plural "regiones naturales",
+  ClassNoun(["zona"/noun "de"/preposition "esquí"/noun],dbpedia:SkiArea) masculine with plural "zonas de esquí",
+  ClassNoun(["complejo"/noun "de"/preposition "esquí"/noun],dbpedia:SkiResort) masculine with plural "caomplejos de esquí",
+  ClassNoun(["región"/noun "vinícola"/adjective],dbpedia:WineRegion) feminine with plural "regiones vinícolas",
+  ClassNoun(["espacio"/noun "protegido"/adjective],dbpedia:ProtectedArea) masculine with plural "espacios protegidos",
+
+  ClassNoun(["paraje"/noun "natural"/adjective],dbpedia:NaturalPlace) masculine with plural "parajes naturales",
+  ClassNoun(["cuerpo"/noun "de"/preposition "agua"/noun],dbpedia:BodyOfWater) masculine with plural "cuerpos de agua",
+////See class hierarchy http://mappings.dbpedia.org/server/ontology/classes/#Stream
+  ClassNoun("corriente",dbpedia:Stream) masculine with plural "corrientes",
+  ClassNoun("río",dbpedia:River) masculine with plural "ríos",
+  ClassNoun("canal",dbpedia:Canal) masculine with plural "canales",
+  ClassNoun("lago",dbpedia:Lake) masculine with plural "lagos",
+  ClassNoun("isla",dbpedia:Island) feminine with plural "islas",
+  ClassNoun("atolón",dbpedia:Atoll) masculine with plural "atolones",
+  ClassNoun("montaña",dbpedia:Mountain) feminine with plural "montañas",
+  ClassNoun(["cadena"/noun "montañosa"/adjective],dbpedia:MountainRange) feminine with plural "cadenas montañosas",
+  ClassNoun("cordillera",dbpedia:MountainRange),
+  ClassNoun("sierra",dbpedia:MountainRange),
+  ClassNoun(["puerto"/noun "de"/preposition "montaña"/noun],dbpedia:MountainPass) masculine with plural "puertos de montaña",
+  ClassNoun("cueva",dbpedia:Cave) feminine with plural "cuevas",
+  ClassNoun("caverna",dbpedia:Cave) feminine with plural "cavernas",
+  ClassNoun("gruta",dbpedia:Cave) feminine with plural "grutas",
+  ClassNoun("valle",dbpedia:Valley) masculine with plural "valles",
+  ClassNoun("volcán",dbpedia:Volcano) masculine with plural "volcanes",
+
+  ClassNoun(["patrimonio"/noun "mundial"/adjective "de"/preposition "la"/determiner "humanidad"/noun],dbpedia:WorldHeritageSite) masculine with plural "patrimonios mundiales de la humanidad",
+  ClassNoun(["lugar"/noun "de"/preposition "especial"/adjective "interés"/noun "científico"/adjective],dbpedia:SiteOfSpecialScientificInterest) masculine with plural "lugares de especial interés científico",
+  
+
+  //// Properties
+
+  // locations
+
+////Question: Should be all this block copied for "situada"? 
+  RelationalAdjective("situado",dbpedia:country,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situado",dbpedia:range,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situado",dbpedia:city,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situado",dbpedia:location,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situado",dbpedia:locatedInArea,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situado",dbpedia:region,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situado",dbpedia:state,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situado",dbpedia:county,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situado",dbpedia:district,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situado",dbpedia:province,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situado",dbpedia:department,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situado",dbpedia:arrondissement,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("situado",dbpedia:canton,
+    relationalArg = PrepositionalObject("en")),
+
+
+////Question: Should be all this block copied for "ubicada"??
+  RelationalAdjective("ubicado",dbpedia:region,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("ubicado",dbpedia:state,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("ubicado",dbpedia:county,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("ubicado",dbpedia:district,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("ubicado",dbpedia:province,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("ubicado",dbpedia:department,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("ubicado",dbpedia:arrondissement,
+    relationalArg = PrepositionalObject("en")),
+  RelationalAdjective("ubicado",dbpedia:canton,
+    relationalArg = PrepositionalObject("en")),
+
+  RelationalNoun("parte",dbpedia:range,
+    propObj  = PrepositionalObject("de")),
+  RelationalNoun("parte",dbpedia:mountainRange,
+    propObj  = PrepositionalObject("de")),
+
+////Question: waht do we do with the opposite gender? reply?
+  RelationalAdjective("cercano",dbpedia:nearestCity,
+    relationalArg = PrepositionalObject("a")),
+  RelationalAdjective("situado",dbpedia:closestCity,
+    relationalArg = PrepositionalObject("cerca")),
+  RelationalAdjective("ubicada",dbpedia:closestCity,
+    relationalArg = PrepositionalObject("cerca")),
+
+  RelationalNoun("parte",dbpedia:intercommunality,
+    propSubj = PrepositionalObject("de"),
+    propObj  = CopulativeArg) masculine with plural "partes",
+  RelationalNoun("suburbio",dbpedia:intercommunality,
+    propSubj = PrepositionalObject("de"),
+    propObj  = CopulativeArg),
+
+
+  // crosses
+
+  StateVerb("cruzar",dbpedia:crosses),  
+  StateVerb("atravesar",dbpedia:crosses),
+  
+  RelationalNoun("cruce",dbpedia:crosses,
+    propObj = PossessiveAdjunct) masculine with plural "cruces",
+  RelationalNoun("cruza",dbpedia:crosses,
+    propObj = PrepositionalObject("sobre")),
+    
+  // source(Country), origin, riverMouth, mouthMountain, mouthPlace
+
+  RelationalNoun("nacimiento",dbpedia:source,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "nacimientos", 
+  StateVerb("nacer",dbpedia:source,
+    propObj  = PrepositionalObject("en")),
+  StateVerb("proceder",dbpedia:sourceCountry,
+    propObj  = PrepositionalObject("de")),
+  StateVerb("proceder",dbpedia:origin,
+    propSubj = Subject restrictedTo dbpedia:Stream,
+    propObj  = PrepositionalObject("de")),
+
+  StateVerb("desembocar",dbpedia:riverMouth,
+    propObj  = PrepositionalObject("en")),
+  StateVerb("encontrar",dbpedia:riverMouth,
+    propObj  = PrepositionalObject("con")),
+  StateVerb("desembocar",dbpedia:mouthMountain,
+    propObj  = PrepositionalObject("en")),
+  StateVerb("encontrar",dbpedia:mouthMountain,
+    propObj  = PrepositionalObject("con")),
+  StateVerb("desembocar",dbpedia:mouthPlace,
+    propObj  = PrepositionalObject("en")),
+  StateVerb("encontrar",dbpedia:mouthPlace,
+    propObj  = PrepositionalObject("con")),
+    
+  // border, neighbors
+
+  StateVerb("bordear",dbpedia:border),
+//// Question: Is this right? (composite verbs)
+  StateVerb(["ser"/verb "fronterizo"/adjective],dbpedia:border),
+
+
+  RelationalNoun(["municipio"/noun "vecino"/adjective],dbpedia:neighboringMunicipality,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) masculine with plural "municipios vecinos",
+  
+  // residence
+
+  RelationalNoun("residencia",dbpedia:residence,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+    
+  StateVerb("residir",dbpedia:residence,
+    propObj = PrepositionalObject("en")),
+    
+  // elevations, depth
+
+  RelationalNoun(["montaña"/noun "más"/adverb "alta"/adjective],dbpedia:highestMountain,
+    propObj = PossessiveAdjunct) feminine with plural "montañas más altas",
+  RelationalNoun(["mayor"/adjective "montaña"/noun],dbpedia:highestMountain,
+    propObj = PrepositionalObject("de")) feminine with plural "mayores montañas",
+    
+  RelationalNoun("cota",dbpedia:elevation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("altitud",dbpedia:elevation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["máxima"/noun "altitud"/noun],dbpedia:maximumElevation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["mínima"/noun "altitud"/noun],dbpedia:minimumElevation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("altura",dbpedia:elevation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  StateVerb("elevar",dbpedia:elevation,
+    propObj  = PrepositionalObject("en")),
+  StateVerb("alzar",dbpedia:elevation,
+    propObj  = PrepositionalObject("a")),
+  StateVerb("alzar",dbpedia:maximumElevation,
+    propObj  = PrepositionalObject("a")),
+
+  RelationalNoun("profundidad",dbpedia:depth,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  // population, area, and densities
+
+  RelationalNoun("población",dbpedia:populationTotal,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "poblaciones",
+  RelationalNoun("población",dbpedia:totalPopulation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "poblaciones",
+  RelationalNoun("población",dbpedia:populationUrban,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "poblaciones",
+  RelationalNoun("población",dbpedia:populationMetro,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "poblaciones", 
+  RelationalNoun(["población"/noun "total"/adjective],dbpedia:populationTotal,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "poblaciones totales",
+  RelationalNoun(["población"/noun "total"/adjective],dbpedia:totalPopulation,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "poblaciones totales",
+  RelationalNoun(["población"/noun "urbana"/adjective],dbpedia:populationUrban,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "poblaciones urbanas",
+  RelationalNoun(["población"/noun "metropolitana"/adjective],dbpedia:populationMetro,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg) feminine with plural "poblaciones metropolitanas",
+
+  RelationalNoun("área",dbpedia:area,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),  
+  RelationalNoun("área",dbpedia:areaTotal,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("área",dbpedia:areaUrban,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun("área",dbpedia:areaMetro,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["área"/noun "total"/adjective],dbpedia:areaTotal,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["área"/noun "urbana"/adjective],dbpedia:areaUrban,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["superficie"/noun "terrestre"/adjective],dbpedia:areaLand,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+  RelationalNoun(["superficie"/noun "con"/preposition "agua"/noun],dbpedia:areaWater,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg), 
+
+  RelationalNoun(["densidad"/noun "de"/preposition "población"/noun],dbpedia:populationDensity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["densidad"/noun "de"/preposition "población"/noun],dbpedia:populationUrbanDensity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+  RelationalNoun(["densidad"/noun "de"/preposition "población"/noun],dbpedia:populationMetroDensity,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+
+  // area code, postal code
+
+  RelationalNoun(["código"/noun "de"/preposition "área"/noun],dbpedia:areaCode,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+    
+  RelationalNoun(["código"/noun "postal"/adjective],dbpedia:postalCode,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+
+  // timezone, UTC offset
+
+  RelationalNoun(["zona"/noun "horaria"/noun],dbpedia:timeZone,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  RelationalNoun(["diferencia"/noun "con"/preposition "UTC"/noun],dbpedia:utcOffset,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+
+  // openend and completed
+
+  ConsequenceVerb("abrir",dbpedia:dateUse,
+     propSubj = lex:canal as Subject, 
+     propObj  = lex:dateUsed as PrepositionalObject("en")),
+  ConsequenceVerb("abrir",dbpedia:openingDate,
+     propSubj = lex:place as Subject, 
+     propObj  = lex:dateOpened as PrepositionalObject("en")),
+  ConsequenceVerb("abrir",dbpedia:openingYear,
+     propSubj = lex:place as Subject, 
+     propObj  = lex:yearOpened as PrepositionalObject("en")),
+
+  ConsequenceVerb("completar",dbpedia:completionDate,
+     propSubj = lex:place as Subject, 
+     propObj  = lex:dateCompleted as PrepositionalObject("en")),
+  ConsequenceVerb("completar",dbpedia:dateCompleted,
+     propSubj = lex:place as Subject, 
+     propObj  = lex:dateCompleted as PrepositionalObject("en")),
+
+  // headquarter 
+
+  RelationalAdjective(["con"/preposition "base"/noun],dbpedia:headquarter,
+     relationalArg = PrepositionalObject("en")), 
+
+  // others
+
+  RelationalNoun("longitud",dbpedia:length,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun("largo",dbpedia:length,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  RelationalNoun("anchura",dbpedia:width,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+  RelationalNoun("ancho",dbpedia:width,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+
+  RelationalNoun(["coordenadas"/noun "de"/preposition "referencia"/noun],dbpedia:gridReference,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg), 
+
+  RelationalNoun(["región"/noun "más"/adverb "alta"/adjective],dbpedia:highestRegion,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
+  RelationalNoun("lema",dbpedia:motto,
+    propSubj = PossessiveAdjunct,
+    propObj = CopulativeArg), 
+
+  RelationalNoun(["número"/noun "de"/preposition "referencia"/noun "NRHP"/noun],dbpedia:nrhpReferenceNumber,
+    propSubj = PossessiveAdjunct,
+    propObj  = CopulativeArg),
+
 
 )

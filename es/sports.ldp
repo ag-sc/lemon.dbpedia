@@ -1,6 +1,348 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
-@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
+@prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#> .
 
-Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_13#>,"es",
+Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_9#>,"es",
+
+  //// Classes
+
+  ClassNoun("deporte",dbpedia:Sport) masculine with plural "deportes",
+  ClassNoun(["evento"/noun "deportivos"/noun],dbpedia:SportsEvent) masculine with plural "eventos deportivos",
+  ClassNoun(["prueba"/noun "ciclista"/adjective],dbpedia:CyclingCompetition) feminine with plural "pruebas ciclistas",
+//// RAE say both are good: futbol and fútbol
+  ClassNoun(["partido"/noun "de"/preposition "futbol"/noun],dbpedia:FootballMatch) masculine with plural "partidos de futbol",
+  ClassNoun(["partido"/noun "de"/preposition "fútbol"/noun],dbpedia:FootballMatch) masculine with plural "partidos de fútbol",
+
+  ClassNoun("partido",dbpedia:FootballMatch) masculine with plural "partidos",
+  ClassNoun("torneo",dbpedia:Tournament) masculine with plural "torneos",
+//// RAE say both are good: futbol and fútbol
+  ClassNoun(["torneo"/noun "de"/preposition "futbol"/noun],dbpedia:SoccerTournament) masculine with plural "torneos de futbol",
+  ClassNoun(["torneo"/noun "de"/preposition "fútbol"/noun],dbpedia:SoccerTournament) masculine with plural "torneos de fútbol",
+
+  ClassNoun(["torneo"/noun "de"/preposition "tenis"/noun],dbpedia:TennisTournament) masculine with plural "torneos de tenis",
+  ClassNoun(["torneo"/noun "de"/preposition "la"/determiner "asociación"/noun "tenista"/adjective "de"/preposition "mujeres"/noun],dbpedia:WomensTennisAssociationTournament) feminine with plural "torneos de la asociación tenista de mujeres",
+  ClassNoun(["torneo"/noun "WTA"/noun],dbpedia:WomensTennisAssociationTournament) feminine with plural "torneos WTA",
+  ClassNoun(["evento"/noun "de"/preposition "lucha"/noun "libre"/adjective],dbpedia:WrestlingEvent) masculine with plural "eventos de lucha libre",
+  ClassNoun(["evento"/noun "de"/preposition "artes"/noun "marciales"/adjective "mixtas"/adjective],dbpedia:MixedMartialArtsEvent),
+  ClassNoun(["evento"/noun "MMA"/noun],dbpedia:MixedMartialArtsEvent) masculine with plural "eventos MMA",
+  ClassNoun(["gran"/adjective "premio"/noun],dbpedia:GrandPrix) masculine with plural "grandes premios",
+  ClassNoun("carrera",dbpedia:Race) feminine with plural "carreras",
+  ClassNoun("carrera",lex:Race) feminine with plural "carreras",
+  ClassNoun(["evento"/noun "olímpico"/adjective],dbpedia:OlympicEvent) masculine with plural "eventos olímpicos",
+  ClassNoun(["resultado"/noun "de"/preposition "evento"/noun "deportivo"/adjective],dbpedia:SportCompetitionResult) masculine with plural "resultados de eventos deportivos",
+  ClassNoun("resultado",dbpedia:SportCompetitionResult) masculine with plural "resultados",
+  ClassNoun(["resultado"/noun "olímpico"/adjective],dbpedia:OlympicResult) masculine with plural "resultados olímpicos",
+  ClassNoun(["tanda"/noun "de"/preposition "penaltis"/noun],dbpedia:PenaltyShootout) feminine with plural "tandas de penaltis",
+////Candidate for nonplural 
+  ClassNoun(["ranking"/noun "mundial"/noun "de"/preposition "billar"/noun],dbpedia:SnookerWorldRanking) masculine,
+
+  // Athletes and others
+
+  ClassNoun(["director"/noun "deportivo"/adjective],dbpedia:SportsManager) masculine with plural "directores deportivos",
+  ClassNoun("director",dbpedia:SportsManager) masculine with plural "director",
+  ClassNoun(["gerente"/noun "de"/preposition "fútbol"/noun],dbpedia:SoccerManager) commonGender with plural "gerentes de fútbol",
+  ClassNoun(["College"/noun "autocar"/noun],dbpedia:CollegeCoach),
+  ClassNoun(["entrenador"/noun "de"/preposition "voleibol"/noun],dbpedia:VolleyballCoach) masculine with plural "entrenadores de voleibol",
+  ClassNoun(["miembro"/noun "del"/preposition "equipo"/noun],dbpedia:TeamMember) masculine with plural "miembros del equipo",
+  ClassNoun(["miembro"/noun "del"/preposition "equipo"/noun "deportivo"/adjective],dbpedia:SportsTeamMember) masculine with plural "miembros del equipo deportivo",
+  ClassNoun("árbitro",dbpedia:Referee) masculine with plural "árbitros",
+
+  ClassNoun("atleta",dbpedia:Athlete) commonGender with plural "atletas",
+  ClassNoun("deportista",dbpedia:Athlete) with plural "deportistas",
+////  ClassNoun("sportswoman",lex:FemaleAthlete) with plural "sportswomen",
+  ClassNoun(["atleta"/noun "de"/preposition "la"/determiner "Asociación"/noun "de"/preposition "atletismo"/noun "nacional"/adjective],dbpedia:NationalCollegiateAthleticAssociationAthlete) commonGender with plural "atletas de la NCAA",
+  ClassNoun(["atleta"/noun "de"/preposition "la"/determiner "NCAA"/noun],dbpedia:NationalCollegiateAthleticAssociationAthlete) commonGender with plural "atletas de la NCAA",
+
+  ClassNoun(["jugador"/noun "de"/preposition "fútbol"/noun "americano"/adjective],dbpedia:AmericanFootballPlayer) masculine with plural "jugadores de fúltbol americano",
+  ClassNoun(["jugador"/noun "de"/preposition "fútbol"/noun "americano"/adjective],dbpedia:GridironFootballPlayer) masculine with plural "jugadores de fúltbol americano",
+  ClassNoun(["jugador"/noun "de"/preposition "fútbol"/noun "americano"/adjective],dbpedia:CanadianFootballPlayer) masculine with plural "jugadores de fúltbol americano",
+  ClassNoun(["australiano"/noun "normas"/noun "futbolística"/noun "actor"/noun],dbpedia:AustralianRulesFootballPlayer),
+  ClassNoun(["jugador"/noun "de"/preposition "fútbol"/noun],lex:FootballPlayer) masculine with plural "jugadores de fútbol",
+  ClassNoun(["jugador"/noun "de"/preposition "badminton"/noun],dbpedia:BadmintonPlayer) masculine with plural "jugadores de badminton",
+  ClassNoun(["jugador"/noun "de"/preposition  "baseball"/noun],dbpedia:BaseballPlayer) masculine with plural "jugadores de baseball",
+  ClassNoun(["jugador"/noun "de"/preposition  "baloncesto"/noun],dbpedia:BasketballPlayer) masculine with plural "jugadores de baloncesto",
+  ClassNoun("culturista",dbpedia:BodyBuilder) commonGender with plural "culturistas",
+  ClassNoun("boxeador",dbpedia:Boxer) masculine with plural "boxeadores",
+  ClassNoun(["boxeador"/noun "aficionado"/adjective],dbpedia:AmateurBoxer) masculine with plural "boxeadores aficionados",
+  ClassNoun("torero",dbpedia:BullFighter) masculine with plural "toreros",
+  ClassNoun(["jugador"/noun "de"/preposition "ajedrez"/noun],dbpedia:ChessPlayer) masculine with plural "jugadores de ajedrez",
+  ClassNoun(["jugador"/noun "de"/preposition "cricket"/noun],dbpedia:Cricketer) masculine with plural "jugadores de cricket",
+  ClassNoun(["jugador"/noun "de"/preposition "curling"/noun],dbpedia:Curler) masculine with plural "jugadores de curling",
+  ClassNoun("ciclista",dbpedia:Cyclist) masculine with plural "ciclistas",
+  ClassNoun(["jugador"/noun "de"/preposition "dardos"/noun],dbpedia:DartsPlayer) masculine with plural "jugadores de dardos",
+  ClassNoun(["patinador"/noun "artístico"/noun],dbpedia:FigureSkater) masculine with plural "patinadores artísticos",
+  ClassNoun(["jugador"/noun "de"/preposition "juegos"/noun "gaélicos"/adjective],dbpedia:GaelicGamesPlayer) masculine with plural "jugadores de juegos gaélicos",
+  ClassNoun(["golfista"/noun "actor"/noun],dbpedia:GolfPlayer) masculine with plural "jugadores de golf",
+  ClassNoun(["jugador"/noun "de"/preposition "golf"/noun],dbpedia:GolfPlayer) masculine with plural "jugadores de golf",
+  ClassNoun("gimnasta",dbpedia:Gymnast) commonGender with plural "gimnastas",
+  ClassNoun(["jugador"/noun "de"/preposition "balonmano"/noun],dbpedia:HandballPlayer) masculine with plural "jugadores de balonmano",
+  ClassNoun("jinete",dbpedia:HorseRider) masculine with plural "jinetes",
+  ClassNoun(["jugador"/noun "de"/preposition "hockey"/noun "sobre"/preposition "hielo"/noun],dbpedia:IceHockeyPlayer) masculine with plural "jugadores de hockey sobre hielo",
+////Candidate for noplural
+  ClassNoun("jockey",dbpedia:Jockey) masculine,
+  ClassNoun(["jugador"/noun "de"/preposition  "lacrosse"/noun],dbpedia:LacrossePlayer) masculine with plural "jugadores de lacrosse",
+  ClassNoun(["artista"/noun "marcial"/adjective],dbpedia:MartialArtist) commonGender with plural "artistas marciales",
+  ClassNoun("motociclista",dbpedia:MotorcycleRider) masculine with plural "motociclistas",
+  ClassNoun(["piloto"/noun "de"/preposition "motos"/noun],dbpedia:MotorcycleRider) masculine with plural "pilotos de motos",
+  ClassNoun(["piloto"/noun "de"/preposition "speedway"/noun],dbpedia:SpeedwayRider) masculine with plural "pilotos de speedway",
+  ClassNoun(["jugador"/noun "de"/preposition  "netball"/noun],dbpedia:NetballPlayer) masculine with plural "jugadores de netball",
+  ClassNoun(["jugador"/noun "de"/preposition  "póquer"/noun],dbpedia:PokerPlayer) masculine with plural "jugadores de póquer",
+//// Do we break "fórmula uno"?
+  ClassNoun(["corredor"/noun "de"/preposition "fórmula uno"/noun],dbpedia:FormulaOneRacer) masculine with plural "corredores de fórmula uno",
+  ClassNoun(["corredor"/noun "de"/preposition "NASCAR"/noun],dbpedia:NascarDriver) masculine with plural "corredores de NASCAR",
+  ClassNoun(["piloto"/noun "de"/preposition "carreras"/noun],dbpedia:RacingDriver) masculine with plural "pilotos de carreras",
+  ClassNoun(["piloto"/noun "de"/preposition "carreras"/noun],lex:RaceDriver) masculine with plural "pilotos de carreras",
+  ClassNoun(["jugador"/noun "de"/preposition  "rugby"/noun],dbpedia:RugbyPlayer) masculine with plural "jugadores de rugby",
+  ClassNoun("patinador",dbpedia:Skater) masculine with plural "patinadores",
+  ClassNoun("esquiador",dbpedia:Skier) masculine with plural "esquiadores",
+  ClassNoun(["jugador"/noun "de"/preposition  "billar"/noun],dbpedia:SnookerPlayer) masculine with plural "jugadores de billar",
+  ClassNoun(["campeón"/noun "de"/preposition  "billar"/noun],dbpedia:SnookerChamp) masculine with plural "campeones de billar",
+  ClassNoun(["jugador"/noun "de"/preposition "fútbol"/noun],dbpedia:SoccerPlayer) masculine with plural "jugadores de fútbol",
+  ClassNoun(["jugador"/noun "de"/preposition "squash"/noun],dbpedia:SquashPlayer) masculine with plural "jugadores de squash",
+  ClassNoun("nadador",dbpedia:Swimmer) masculine with plural "nadadores",
+  ClassNoun(["jugador"/noun "de"/preposition "tenis"/noun "de"/preposition "mesa"/noun],dbpedia:TableTennisPlayer) masculine with plural "jugadores de tenis de mesa",
+  ClassNoun(["jugador"/noun "de"/preposition "tenis"/noun],dbpedia:TennisPlayer) masculine with plural "jugadores de tenis de mesa",
+  ClassNoun(["jugador"/noun "de"/preposition "voleibol"/noun],dbpedia:VolleyballPlayer) masculine with plural "jugadores de voleibol",
+
+  ClassNoun(["jugador"/noun "de"/preposition "volebol"/noun "de"/preposition "playa"/noun],dbpedia:BeachVolleyballPlayer) masculine with plural "jugadores de voleibol de playa",
+  ClassNoun(["jugador"/noun "de"/preposition "voleiplaya"/noun],dbpedia:BeachVolleyballPlayer) masculine with plural "jugadores de voleyplaya",
+
+  ClassNoun("luchador",dbpedia:Wrestler) masculine with plural "luchadores",
+  ClassNoun(["luchador"/noun "de"/preposition "sumo"/noun],dbpedia:SumoWrestler) masculine with plural "luchadores de sumo",
+
+  ClassNoun("surfero",lex:Surfer) masculine with plural "surferos",
+
+  ClassNoun("jugador",lex:Player) masculine with plural "jugadores",
+
+  // Teams
+
+  ClassNoun(["equipo"/noun "deportivo"/adjective],dbpedia:SportsTeam) masculine with plural "equipos deportivos",
+  ClassNoun("equipo",dbpedia:SportsTeam) masculine with plural "equipos",
+
+  ClassNoun(["equipo"/noun "de"/preposition "fútbol"/noun "americano"/adjective],dbpedia:AmericanFootballTeam) masculine with plural "equipos de fútbol americano",
+  ClassNoun(["equipo"/noun "de"/preposition "futbol"/noun "americano"/adjective],dbpedia:AmericanFootballTeam) masculine with plural "equipos de futbol americano",
+
+  ClassNoun(["equipo"/noun "de"/preposition "fútbol"/noun],lex:FootballTeam)  masculine with plural "equipos de futbol americano",
+  ClassNoun(["equipo"/noun "de"/preposition "futbol"/noun],lex:FootballTeam) masculine with plural "equipos de futbol americano",
+
+  ClassNoun(["equipo"/noun "de"/preposition "baseball"/noun],dbpedia:BaseballTeam) masculine with plural "equipos de baseball",
+  ClassNoun(["equipo"/noun "de"/preposition "baloncesto"/noun],dbpedia:BasketballTeam) masculine with plural "equipos de baloncesto",
+  ClassNoun(["equipo"/noun "de"/preposition "futbol"/noun "americano"/adjective],dbpedia:CanadianFootballTeam)  masculine with plural "equipos de futbol americano",
+  ClassNoun(["equipo"/noun "ciclista"/adjective],dbpedia:CyclingTeam) masculine with plural "equipos de ciclismo",
+  ClassNoun(["equipo"/noun "de"/preposition "hockey"/noun],dbpedia:HockeyTeam) masculine with plural "equipos de hockey",
+  ClassNoun(["equipo"/noun "de"/preposition "rugby"/noun],dbpedia:RugbyClub) masculine with plural "equipos de rugby",
+
+  ClassNoun(["equipo"/noun "de"/preposition "fútbol"/noun],dbpedia:SoccerClub) masculine with plural "equipos de fútbol",
+  ClassNoun(["equipo"/noun "de"/preposition "futbol"/noun],dbpedia:SoccerClub) masculine with plural "equipos de futbol",
+
+  
+  ClassNoun(["club"/noun "de"/preposition "fútbol"/noun],dbpedia:SoccerClub) masculine with plural "clubes de fútbol",
+  ClassNoun(["club"/noun "de"/preposition "futbol"/noun],dbpedia:SoccerClub) masculine with plural "clubes de futbol",
+  
+  ClassNoun(["club"/noun "de"/preposition "fútbol"/noun "nacional"/adjective],dbpedia:NationalSoccerClub) masculine with plural "clubes de fútbol nacional",
+  ClassNoun(["club"/noun "de"/preposition "futbol"/noun "nacional"/adjective],dbpedia:NationalSoccerClub) masculine with plural "clubes de futbol nacional",
+
+  ClassNoun(["equipo"/noun "de"/preposition "speedway"/noun],dbpedia:SpeedwayTeam) masculine with plural "equipos de speedway",
+
+  // Leagues
+
+  ClassNoun(["liga"/noun "deportiva"/adjective],dbpedia:SportsLeague) feminine with plural "ligas deportivas",
+  ClassNoun("liga",dbpedia:SportsLeague) feminine with plural "ligas",
+
+  ClassNoun(["liga"/noun "de"/preposition "fútbol"/noun "americano"/adjective],dbpedia:AmericanFootballLeague) masculine with plural "ligas de fútbol americano",
+  ClassNoun(["liga"/noun "de"/preposition "futbol"/noun "americano"/adjective],dbpedia:AmericanFootballLeague) masculine with plural "ligas de futbol americano",
+
+  ClassNoun(["liga"/noun "de"/preposition "fútbol"/noun "australiano"/adjective],dbpedia:AustralianFootballLeague) masculine with plural "ligas de fútbol australiano",
+  ClassNoun(["liga"/noun "de"/preposition "futbol"/noun "australiano"/adjective],dbpedia:AustralianFootballLeague) masculine with plural "ligas de futbol australiano",
+
+  ClassNoun(["liga"/noun "de"/preposition "fútbol"/noun],lex:FootballLeague) masculine with plural "ligas de fútbol",
+  ClassNoun(["liga"/noun "de"/preposition "fútbol"/noun],lex:FootballLeague) masculine with plural "ligas de futbol",
+
+
+  ClassNoun(["campeonato"/noun "de"/preposition "carreras"/noun "de"/preposition  "coches"/noun],dbpedia:AutoRacingLeague) masculine with plural "campeonatos de carreras de coches",
+  ClassNoun(["campeonato"/noun "de"/preposition "carreras"/noun "de"/preposition  "automóviles"/noun],dbpedia:AutoRacingLeague) masculine with plural "campeonatos de carreras de automóviles",
+
+  ClassNoun(["liga"/noun "de"/preposition "baloncesto"/noun],dbpedia:BaseballLeague) feminine with plural "ligas de baloncesto",
+  ClassNoun(["campeonato"/noun "de"/preposition "baloncesto"/noun],dbpedia:BaseballLeague) masculine with plural "campeonato de baloncesto",
+
+  ClassNoun(["liga"/noun "de"/preposition "bolos"/noun],dbpedia:BowlingLeague) feminine with plural "ligas de bolos",
+  ClassNoun(["liga"/noun "de"/preposition "boxeo"/noun],dbpedia:BoxingLeague) feminine with plural "ligas de boxeo",
+
+  ClassNoun(["liga"/noun "de"/preposition "fútbol"/noun "americano"/adjective],dbpedia:CanadianFootballLeague) feminine with plural "ligas de fútbol americano",
+  ClassNoun(["liga"/noun "de"/preposition "futbol"/noun "americano"/adjective],dbpedia:CanadianFootballLeague) feminine with plural "ligas de futbol americano",
+
+  ClassNoun(["liga"/noun "de"/preposition "cricket"/noun],dbpedia:CricketLeague) feminine with plural "ligas de cricket",
+  ClassNoun(["liga"/noun "de"/preposition "curling"/noun],dbpedia:CurlingLeague) feminine with plural "ligas de curling",
+  ClassNoun(["liga"/noun "ciclista"/adjective],dbpedia:CyclingLeague) feminine with plural "ligas ciclistas",
+  ClassNoun(["liga"/noun "de"/preposition "hockey"/noun "sobre"/preposition "hierba"/noun],dbpedia:FieldHockeyLeague) feminine with plural "ligas de hockey sobre hierba",
+  ClassNoun(["campeonato"/noun "de"/preposition "fórmula uno"/noun],dbpedia:FormulaOneRacingLeague) masculine with plural "campeonatos de fórmula uno",
+  ClassNoun(["campeonato"/noun "de"/preposition "carreras"/noun],dbpedia:FormulaOneRacingLeague) masculine with plural "campeonatos de carreras",
+  ClassNoun(["liga"/noun "de"/preposition "golf"/noun],dbpedia:GolfLeague) feminine with plural "ligas de golf",
+  ClassNoun(["liga"/noun "de"/preposition "balonmano"/noun],dbpedia:HandballLeague) feminine with plural "ligas de balonmano",
+  ClassNoun(["liga"/noun "de"/preposition "hockey"/noun "sobre"/preposition "hielo"/noun],dbpedia:IceHockeyLeague) feminine with plural "ligas de hockey sobre hielo",
+  ClassNoun(["liga"/noun "de"/preposition "hockey"/noun "sobre"/preposition "patines"/noun "en"/preposition "línea"/adjective],dbpedia:InlineHockeyLeague) feminine with plural "ligas de hockey sobre patines en línea",
+  ClassNoun(["liga"/noun "de"/preposition "hockey"/noun],lex:HockeyLeague) feminine with plural "ligas de hockey",
+  ClassNoun(["liga"/noun "de"/preposition "lacrosse"/noun],dbpedia:LacrosseLeague) feminine with plural "ligas de lacrosse",
+  ClassNoun(["liga"/noun "de"/preposition "artes"/noun "marciales"/adjective "mixtas"/noun],dbpedia:MixedMartialArtsLeague) feminine with plural "ligas de artes marciales mixtas",
+  ClassNoun(["liga"/noun "MMA"/noun],dbpedia:MixedMartialArtsLeague) feminine with plural "ligas MMA",
+  ClassNoun(["liga"/noun "de"/preposition "artes"/noun "marciales"/adjective],dbpedia:MixedMartialArtsLeague) feminine with plural "ligas de artes marciales",
+  ClassNoun(["campeonato"/noun "de"/preposition "carreras"/noun "de"/preposition "motos"/noun],dbpedia:MotorcycleRacingLeague) masculine with plural "campeonatos de carreras de motos",
+  ClassNoun(["liga"/noun "de"/preposition "paintball"/noun],dbpedia:PaintballLeague) feminine with plural "ligas de paintball",
+  ClassNoun(["campeonato"/noun "de"/preposition "polo"/noun],dbpedia:PoloLeague) masculine with plural "campeonatos de polo",
+  ClassNoun(["campeonato"/noun "de"/preposition "radiocontrol"/adjective],dbpedia:RadioControlledRacingLeague) masculine with plural "campeonatos de radiocontrol",
+  ClassNoun(["liga"/noun "de"/preposition "rugby"/noun],dbpedia:RugbyLeague) feminine with plural "ligas de rugby",
+  
+  ClassNoun(["liga"/noun "de"/preposition "fútbol"/noun],dbpedia:SoccerLeague) feminine with plural "ligas de fútbol",
+  ClassNoun(["liga"/noun "de"/preposition "futbol"/noun],dbpedia:SoccerLeague) feminine with plural "ligas de futbol",
+  
+  ClassNoun(["liga"/noun "de"/preposition "softbol"/noun],dbpedia:SoftballLeague) feminine with plural "ligas de softbol",
+  ClassNoun(["liga"/noun "de"/preposition "speedway"/noun],dbpedia:SpeedwayLeague) feminine with plural "ligas de speedway",
+  ClassNoun(["capeonato"/noun "de"/preposition "tenis"/noun],dbpedia:TennisLeague) feminine with plural "capeonatos de tenis",
+  ClassNoun(["campeonato"/noun "de"/preposition "vídeojuegos"/noun],dbpedia:VideoGamesLeague) feminine with plural "campeonatos de videojuegos",
+  ClassNoun(["liga"/noun "de"/preposition "voleibol"/noun],dbpedia:VolleyballLeague) feminine with plural "ligas de voleibol",
+
+
+  //// Properties
+
+  // team, college, manager, league
+
+  RelationalNoun("equipo",dbpedia:team,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  StateVerb("jugar",dbpedia:team,
+     propSubj = Subject restrictedTo lex:Player,
+     propObj  = PrepositionalObject("en")),
+
+  StateVerb("jugar",dbpedia:league,
+     propObj  = PrepositionalObject("en")),
+
+  StateVerb("jugar",dbpedia:college,
+     propObj  = PrepositionalObject("en")),
+  StateVerb("graduar",dbpedia:college,
+     propObj  = PrepositionalObject("por")),
+  StateVerb("asistir",dbpedia:college),
+  
+  RelationalNoun("jugador",dbpedia:team,
+     propSubj = CopulativeArg restrictedTo lex:Player,
+     propObj  = PossessiveAdjunct),
+  StateVerb("competir",dbpedia:team,
+     propSubj = Subject restrictedTo lex:Racer,
+     propObj  = PrepositionalObject("por")),
+
+  RelationalNoun("director",dbpedia:team,
+     propSubj = CopulativeArg restrictedTo dbpedia:SportsManager,
+     propObj  = PossessiveAdjunct),
+  StateVerb("dirigir",dbpedia:team,
+     propSubj = Subject restrictedTo dbpedia:SportsManager,
+     propObj  = DirectObject),
+
+  RelationalNoun("director",dbpedia:managerClub,
+     propObj  = PossessiveAdjunct),
+  StateVerb("dirigir",dbpedia:managerClub),
+  RelationalNoun("gerente",dbpedia:manager,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  StateVerb("gestionar",dbpedia:manager,
+     propSubj = DirectObject,
+     propObj  = Subject),
+
+  // homeArena, ground, tenant, operator
+
+  RelationalNoun(["cancha"/noun "local"/noun],dbpedia:homeArena,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["estadio"/noun "local"/noun],dbpedia:homeArena,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["estadio"/noun "local"/noun],dbpedia:ground,
+     propSubj = PossessiveAdjunct restrictedTo dbpedia:Stadium,
+     propObj  = CopulativeArg),
+  RelationalAdjective("situado",dbpedia:ground, 
+     relationalArg = PrepositionalObject("en") restrictedTo dbpedia:PopulatedPlace),
+  RelationalNoun("casa",dbpedia:homeArena,
+     propSubj = PrepositionalObject("de"),
+     propObj  = CopulativeArg),
+  RelationalNoun("casa",dbpedia:ground,
+     propSubj = PrepositionalObject("de"),
+     propObj  = CopulativeArg),
+
+  StateVerb("juega",dbpedia:tenant, 
+     propSubj = PrepositionalObject("en"),
+     propObj  = Subject restrictedTo dbpedia:Organisation), 
+  StateVerb("recibir",dbpedia:tenant, 
+     propObj  = DirectObject restrictedTo dbpedia:Event), 
+
+  RelationalNoun("casa",dbpedia:operator,
+     propObj  = PrepositionalObject("de")),
+
+////TODO add forms of "jugar en casa", "equipo local" and "equipo visitante" (tenant)
+
+  // capacity 
+
+  RelationalNoun("capacidad",dbpedia:capacity,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  
+  StateVerb("acoger",dbpedia:capacity),
+  StateVerb("albergar",dbpedia:capacity),
+
+  // position
+
+  RelationalNoun("posición",dbpedia:position,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
+  // number, squadNumber
+
+  RelationalNoun(["número"/noun "de"/preposition "camiseta"/noun],dbpedia:number,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["número"/noun "de"/preposition "camiseta"/noun],dbpedia:squadNumber,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["número"/noun "de"/preposition "formación"/noun],dbpedia:number,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+  RelationalNoun(["número"/noun "de"/preposition "formación"/noun],dbpedia:squadNumber,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),
+
+
+  // formerCoach
+
+  RelationalNoun(["entrenador"/noun "anterior"/adjective ],dbpedia:formerCoach,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg),  
+
+  // {throwing|batting}Side, shoots
+
+  StateVerb("lanzar",lex:throwLeft), 
+  StateVerb("lanzar",lex:throwRight), 
+  StateVerb("batear",lex:batLeft), 
+  StateVerb("batear",lex:batRight), 
+  StateVerb("golpear",lex:batLeft), 
+  StateVerb("golpear",lex:batRight), 
+  StateVerb("lanzar",lex:shootRight), 
+  StateVerb("lanzar",lex:shootLeft), 
+  IntersectiveDataPropertyAdjective("ambidiestro",dbpedia:shoots,"Ambidextrous"),
+
+  // plays 
+
+  IntersectiveDataPropertyAdjective("diestro",dbpedia:plays,"Right-handed"),
+  IntersectiveDataPropertyAdjective("diestro",dbpedia:plays,"Right-handed (two-handed backhand)"),
+  IntersectiveDataPropertyAdjective("diestro",dbpedia:plays,"Right-handed (one-handed backhand)"),
+  IntersectiveDataPropertyAdjective("zurdo",dbpedia:plays,"Left-handed"),
+  IntersectiveDataPropertyAdjective("zurdo",dbpedia:plays,"Left-handed (two-handed backhand)"),
+  IntersectiveDataPropertyAdjective("zurdo",dbpedia:plays,"Left-handed (one-handed backhand)"),
+  IntersectiveDataPropertyAdjective("ambidiestro",dbpedia:plays,"Ambidextrous"), 
+
+  // others 
+ 
+  RelationalNoun("presidente",dbpedia:chairman,
+     propSubj = PossessiveAdjunct,
+     propObj  = CopulativeArg) with plural "presidentes",
+
+  StateVerb("debutar",dbpedia:debutTeam,
+     propObj = PrepositionalObject("para"))
+
 
 )
