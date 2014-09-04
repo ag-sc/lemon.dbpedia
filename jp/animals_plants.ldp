@@ -2,6 +2,7 @@
 @prefix resource: <http://dbpedia.org/resource/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
+// possibly all items ending with 類 denote clade and not individual
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_jp_2#>,"jp",
   // Classes
   ClassNoun("種",dbpedia:Species),
@@ -100,3 +101,42 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_jp_2#>,"jp",
   ClassNoun("ギンナン",dbpedia:ginkgo), // writing variant of previous
   classnoun("公孫樹"),dbpedia:ginkgo), // species
   classnoun("鴨脚樹"),dbpedia:ginkgo), // species
+  
+  classnoun("哺乳動物"),dbpedia:mammal),
+  classnoun("哺乳綱"),dbpedia:mammal), // class Mammalia
+  classnoun("ほ乳綱"),dbpedia:mammal), // writing variant of previous
+  classnoun("哺乳類綱"),dbpedia:mammal), // class Mammalia(?)
+  classnoun("哺乳類"),dbpedia:mammal),
+  classnoun("ホニュウ類"),dbpedia:mammal), // writing variant of previous
+  classnoun("ほ乳類"),dbpedia:mammal), // writing variant of previous
+  
+  classnoun("魚"),dbpedia:fish),
+  classnoun("うお"),dbpedia:fish),
+  classnoun("さかな"),dbpedia:fish), // originally used more for flesh than for animal; nowadays also used for animal (according to wiktionary)
+  classnoun("魚類"),dbpedia:fish), // more in context of biology; possible clade?
+  classnoun("フィッシュ"),dbpedia:fish),　// 'fish'; in foreign fish names
+  classnoun("魚綱"),dbpedia:fish), // obsolete taxonomic term (class Pisces)
+  
+  
+  classnoun("バード"),dbpedia:bird), // 'bird'; in loan words
+  classnoun("鳥"),dbpedia:bird),
+  classnoun("とり"),dbpedia:bird), // writing variant of previous; kunyomi
+  classnoun("鳥類"),dbpedia:bird), // technical register
+  classnoun("禽鳥"),dbpedia:bird), // seems old-fashioned(?)
+  classnoun("飛禽"),dbpedia:bird), // flying birds according to wiktionary
+  classnoun("鳥綱"),dbpedia:bird), // class Aves
+  
+  classnoun("犬"),dbpedia:dog),
+  classnoun("イヌ"),dbpedia:dog), // writing variant of previous
+  classnoun("いぬ"),dbpedia:dog), // writing variant of previous
+  classnoun("イエイヌ"),dbpedia:dog), // technical register
+  classnoun("ドッグ"),dbpedia:dog), // 'dog'; in loan words
+  //classnoun("洋犬"),dbpedia:dog), // western dog (in contrast to Japanese dog breed)
+  classnoun("飼い犬"),dbpedia:dog),　// pet dog
+  classnoun("飼犬"),dbpedia:dog), // variant of previous
+  //classnoun("こいぬ"),dbpedia:dog), // puppy
+  classnoun("わんちゃん"),dbpedia:dog),　// colloquial
+  classnoun("狗"),dbpedia:dog),
+  classnoun("ワン公"),dbpedia:dog),　// colloquial
+  classnoun("牡犬"),dbpedia:dog), // male dog
+  classnoun("雄犬"),dbpedia:dog), // male dog
