@@ -9,48 +9,60 @@
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
 
+
+## persons ##
+
+lex:birthCountry owl:propertyChain ( <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/ontology/country> ) .
+
+lex:grandchild owl:propertyChain ( <http://dbpedia.org/ontology/child> <http://dbpedia.org/ontology/child> ) .
+
+lex:Female rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:gender ;
+   owl:hasValue   resource:Female .
+
+lex:Male rdf:type owl:Restriction ; 
+   owl:onProperty dbpedia:gender ;
+   owl:hasValue   resource:Male .
+
+
 ## places ## 
 
 lex:Arrondissement rdf:type owl:Restriction ;
-   owl:onProperty [ owl:inverseOf dbpedia:arrondissement ] ;
+   owl:onProperty lex:arrondissement_1 ; 
    owl:someValuesFrom dbpedia:Place .
+
+lex:arrondissement_1 owl:inverseOf dbpedia:arrondissement .
+
 
 ## body_health ##
 
 lex:BloodVessel owl:unionOf (dbpedia:Artery dbpedia:Vein) .
 
+
 ## space ##
 
-lex:Cosmonaut owl:intersectionOf (dbpedia:Astronaut [ owl:unionOf (lex:Russian lex:Soviet) ] ) .
+lex:Cosmonaut owl:intersectionOf (dbpedia:Astronaut lex:Russian_or_Soviet ) .
 lex:Taikonaut owl:intersectionOf (dbpedia:Astronaut lex:Chinese) .
+
+lex:Russian_or_Soviet owl:unionOf (lex:Russian lex:Soviet) .
+
+lex:Russian rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue resource:Russia .
+
+lex:Soviet rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:Soviet_people .
+
+lex:Chinese rdf:type owl:Restriction ;
+   owl:onProperty dbpedia:nationality ;
+   owl:hasValue   resource:China .
+
 
 ## technology ##
 
 lex:Infrastructure_or_MeanOfTransportation owl:unionOf (dbpedia:Infrastructure dbpedia:MeanOfTransportation) .
 lex:Building_or_Infrastructure owl:unionOf (dbpedia:Building dbpedia:Infrastructure) .
-
-lex:Freeware rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:license ;
-   owl:hasValue   resource:Freeware .
-lex:Shareware rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:license ;
-   owl:hasValue   resource:Shareware .
-
-lex:Convertible rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:bodyStyle ;
-   owl:hasValue   resource:Convertible .
-lex:Pickup rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:bodyStyle ;
-   owl:hasValue   resource:Pickup_truck .
-lex:StationWagon rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:bodyStyle ;
-   owl:hasValue   resource:Station_wagon .
-lex:Coupe rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:bodyStyle ;
-   owl:hasValue   <http://dbpedia.org/resource/Coupé> .
-lex:Hatchback rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:bodyStyle ;
-   owl:hasValue   resource:Hatchback .
 
 
 ## arts_entertainment ##
@@ -64,18 +76,6 @@ lex:VoiceActress owl:intersectionOf (dbpedia:VoiceActor lex:Female) .
 lex:AdultActress owl:intersectionOf (dbpedia:AdultActor lex:Female) .
 lex:PornActress  owl:intersectionOf (dbpedia:Pornstar lex:Female) .
 
-lex:Hardcover rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:mediaType ;
-   owl:hasValue   resource:Hardcover .
-lex:Paperback rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:mediaType ;
-   owl:hasValue   resource:Paperback .
-lex:EBook rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:mediaType ;
-   owl:hasValue   resource:E-book .
-lex:Audiobook rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:mediaType ;
-   owl:hasValue   resource:Audiobook .
 
 ## sports ## 
 
@@ -94,25 +94,6 @@ lex:Racer owl:unionOf (dbpedia:Cyclist dbpedia:FormulaOneRacer dbpedia:NascarDri
 
 lex:Race owl:unionOf (dbpedia:Race dbpedia:CyclingCompetition) .
 
-lex:batLeft rdf:type owl:Restriction ; 
-       owl:onProperty dbpedia:battingSide ;
-       owl:hasValue   "Left" .
-lex:batRight rdf:type owl:Restriction ; 
-       owl:onProperty dbpedia:battingSide ;
-       owl:hasValue   "Right" .
-lex:throwLeft rdf:type owl:Restriction ; 
-       owl:onProperty dbpedia:throwingSide ;
-       owl:hasValue   "Left" .
-lex:throwRight rdf:type owl:Restriction ; 
-       owl:onProperty dbpedia:throwingSide ;
-       owl:hasValue   "Right" .
-lex:shootRight rdf:type owl:Restriction ; 
-       owl:onProperty dbpedia:shoots ;
-       owl:hasValue   "Right" .
-lex:shootLeft rdf:type owl:Restriction ; 
-       owl:onProperty dbpedia:shoots ;
-       owl:hasValue   "Left" .
-
 
 ## politics ##
 
@@ -126,48 +107,6 @@ lex:Republic rdf:type owl:Restriction ;
    owl:onProperty dbpedia:governmentType ;
    owl:hasValue   resource:Republic .
 
-
-## persons ##
-
-lex:birthCountry owl:propertyChain ( <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/ontology/country> ) .
-
-lex:Female rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:gender ;
-   owl:hasValue   resource:Female .
-
-lex:Male rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:gender ;
-   owl:hasValue   resource:Male .
-
-lex:grandchild owl:propertyChain ( <http://dbpedia.org/ontology/child> <http://dbpedia.org/ontology/child> ) .
-
-## profession
-
-lex:Historian rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Historian .
-lex:Chemist rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Chemist .
-lex:Biologist rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Biologist .
-lex:Economist rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Economist .
-lex:Teacher rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Teacher .
-lex:Surfer rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Surfing .
-lex:Revolutionary rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Revolutionary .
-lex:Poet rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:profession ;
-   owl:hasValue   resource:Poet .
-
 lex:Mayor rdf:type owl:Restriction ; 
    owl:onProperty dbpedia:leaderTitle ;
    owl:hasValue   "Mayor" .
@@ -178,173 +117,5 @@ lex:President rdf:type owl:Restriction ;
    owl:onProperty dbpedia:leaderTitle ;
    owl:hasValue   "President" .
 
-lex:MemberOfParliament rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Member of Parliament" .
-lex:MemberOfTheEuropeanParliament rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Member of the European Parliament" .
-lex:MinisterOfForgeinAffairs rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Minister of Foreign Affairs" .
-lex:MinisterOfJustice rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Minister of Justice" .
-lex:MinisterOfDefence rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Minister of Defence" .
-lex:MinisterOfEducation rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Minister of Education" .
-lex:Senator rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:office ;
-   owl:hasValue "Senator" .
-
-## ethnicity
-
-lex:AfricanAmerican rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:ethnicity ;
-   owl:hasValue   resource:AfricanAmerican .
-lex:Jew owl:unionOf ( lex:ethnicityJews lex:ethnicityJewish ) .
-lex:ethnicityJews rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:ethnicity ;
-   owl:hasValue   resource:Jews .
-lex:ethnicityJewish rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:ethnicity ;
-   owl:hasValue   resource:Jewish .
-
-## religion
-
-lex:Christian owl:unionOf ( lex:religionChristian lex:religionChristianity ) .
-lex:religionChristian rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:religion ;
-   owl:hasValue   resource:Christian .
-lex:religionChristianity rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:religion ;
-   owl:hasValue   resource:Christianity .
-lex:Protestant owl:unionOf (dbpedia:Person lex:religionProtestantism) .
-lex:religionProtestantism rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:religion ;
-   owl:hasValue   resource:Protestantism .
-lex:Catholic owl:unionOf (lex:religionCatholic lex:religionCatholicChurch) .
-lex:religionCatholic rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:religion ;
-   owl:hasValue   resource:Catholic .
-lex:religionCatholicChurch rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:religion ;
-   owl:hasValue   resource:Catholic_Church .
-
-lex:Hindu owl:unionOf ( lex:Hindu1 lex:Hindu2 ) .
-lex:Hindu1 rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:religion ;
-   owl:hasValue   resource:Hindu .
-lex:Hindu2 rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:religion ;
-   owl:hasValue   resource:Hinduism .
-
-lex:Muslim owl:unionOf ( lex:Muslim1 lex:Muslim2 ) .
-lex:Muslim1 rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:religion ;
-   owl:hasValue   resource:Islam .
-lex:Muslim2 rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:religion ;
-   owl:hasValue   resource:Muslim .
-
-lex:Buddhist rdf:type owl:Restriction ; 
-   owl:onProperty dbpedia:religion ;
-   owl:hasValue   resource:Buddhism .
-
-## nationalities ## 
-
-lex:Russian rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue resource:Russia .
-
-lex:Soviet rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Soviet_people .
-
-lex:Chinese rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:China .
-
-lex:USAmerican rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:United_States .
-
-lex:American rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Americans .
-
-lex:British1 rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:United_Kingdom .
-lex:British2 rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:British_people .
-lex:British owl:unionOf ( lex:British1 lex:British2 ) .
-
-lex:Australian rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Australian .
-
-lex:Indian rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Indian .
-
-lex:German rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Germany .
-
-lex:Japanese1 rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Japan .
-lex:Japanese2 rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Japanese_people .
-lex:Japanese owl:unionOf ( lex:Japanese1 lex:Japanese2 ) .
-
-lex:French rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:France .
-
-lex:Canadian1 rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Canada .
-lex:Canadian2 rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Canadians .
-lex:Canadian owl:unionOf ( lex:Canadian1 lex:Canadian2 ) .
-
-lex:English rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:English .
-
-lex:Italian rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Italian .
-
-lex:Belgian rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Belgium .
-
-lex:Polish rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Polish .
-
-lex:Dutch rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Netherlands .
-
-lex:Irish1 rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Ireland .
-lex:Irish2 rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Republic_of_Ireland .
-lex:Irish3 rdf:type owl:Restriction ;
-   owl:onProperty dbpedia:nationality ;
-   owl:hasValue   resource:Irish_people .
-lex:Irish owl:unionOf ( lex:Irish1 lex:Irish2 ) .
 
 

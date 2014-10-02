@@ -1,4 +1,5 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix resource: <http://dbpedia.org/resource/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_3#>,"de",
@@ -60,11 +61,11 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_de_3#>,"de",
   ClassNoun("Magazin",dbpedia:Magazine) feminine with plural "Magazine",
   ClassNoun("Fachzeitschrift",dbpedia:AcademicJournal) feminine with plural "Fachzeitschriften",
 
-  ClassNoun(["gebunden"/adjective "Buch"/noun=head],lex:Hardcover) neuter with plural "Bücher",
-  ClassNoun(["gebunden"/adjective "Ausgabe"/noun=head],lex:Hardcover) feminine with plural "Ausgaben",
-  ClassNoun("Taschenbuch",lex:Paperback) neuter with plural "Taschenbücher",
-  ClassNoun("E-Book",lex:EBook) neuter with plural "E-Books",
-  ClassNoun("Hörbuch",lex:Audiobook) neuter with plural "Hörbücher",
+  ObjectPropertyNoun(["gebunden"/adjective "Buch"/noun=head],dbpedia:mediaType,resource:Hardcover) neuter with plural "Bücher",
+  ObjectPropertyNoun(["gebunden"/adjective "Ausgabe"/noun=head],dbpedia:mediaType,resource:Hardcover) feminine with plural "Ausgaben",
+  ObjectPropertyNoun("Taschenbuch",dbpedia:mediaType,resource:Paperback) neuter with plural "Taschenbücher",
+  ObjectPropertyNoun("E-Book",dbpedia:mediaType,<http://dbpedia.org/resource/E-book>) neuter with plural "E-Books",
+  ObjectPropertyNoun("Hörbuch",dbpedia:mediaType,resource:Audiobook) neuter with plural "Hörbücher",
 
   // Music 
 

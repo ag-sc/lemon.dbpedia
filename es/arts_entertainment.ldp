@@ -1,4 +1,5 @@
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix resource: <http://dbpedia.org/resource/> .
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#> .
 
 Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_2#>,"es",
@@ -52,15 +53,15 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es_2#>,"es",
   ClassNoun(["publicación"/noun "académica"/adjective],dbpedia:AcademicalJournal) feminine with plural "publicaciones académicas",
   ClassNoun(["revista"/noun "académica"/adjective],dbpedia:AcademicalJournal) feminine with plural "revistas académicas",
   //// weird. It should be and adjective instead of a noun
-  ClassNoun(["pasta"/noun "dura"/adjective],lex:Hardcover) feminine with plural "pastas duras",
+
+  ObjectPropertyNoun(["pasta"/noun "dura"/adjective],dbpedia:mediaType,resource:Hardcover) feminine with plural "pastas duras",
   //// weird. It should be and adjective instead of a noun. what gender?, what number?
-  ClassNoun(["en"/preposition "rústica"/adjective],lex:Paperback),
-  ClassNoun(["libro"/noun "de"/preposition "bolsillo"/noun],lex:Paperback) masculine with plural "libros de bolsillo",
+  ObjectPropertyNoun(["en"/preposition "rústica"/adjective],dbpedia:mediaType,resource:Paperback),
   //// weird. It should be and adjective instead of a noun
-  ClassNoun(["pasta"/noun "dura"/adjective],lex:Hardcover) feminine with plural "pastas duras",
-  ClassNoun("e-book",lex:EBook) masculine with plural "e-books",
-  ClassNoun(["libro"/noun "electrónico"/adjective],lex:EBook) masculine with plural "libros electrónicos",
-  ClassNoun("audiolibro",lex:Audiobook) masculine with plural "audiolibros",
+  ObjectPropertyNoun(["libro"/noun "de"/preposition "bolsillo"/noun],dbpedia:mediaType,resource:Paperback),
+  ObjectPropertyNoun("e-book",dbpedia:mediaType,<http://dbpedia.org/resource/E-book>) masculine with plural "e-books",
+  ObjectPropertyNoun(["libro"/noun "electrónico"/adjective],dbpedia:mediaType,<http://dbpedia.org/resource/E-book>) masculine with plural "libros electrónicos",
+  ObjectPropertyNoun("audiolibro",dbpedia:mediaType,resource:Audiobook) masculine with plural "audiolibros",
 
   // Music 
 

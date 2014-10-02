@@ -466,7 +466,7 @@
                                [ lemon:reference <http://dbpedia.org/ontology/discovered>;
                                  lemon:subjOfProp :arg1discover;
                                  lemon:objOfProp  :arg3discover ] ];
-  lexinfo:partOfSpeech lexinfo:verb .
+  lexinfo:partOfSpeech lexinfo:noun .
 :arg1discovery lemon:marker :of .
 :arg2discovery lemon:marker :by .
 :arg2discovery lemon:optional "true"^^xsd:boolean .

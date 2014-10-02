@@ -36,22 +36,12 @@ Lexicon(<http://github.com/cunger/lemon.dbpedia/target/dbpedia_es#>,"es",
   ClassNoun("auto",dbpedia:Automobile) masculine with plural "autos",
   ClassNoun("coche",dbpedia:Automobile) masculine with plural "coches",
   ClassNoun("vehículo",dbpedia:Automobile) masculine with plural "vehículos",
-  ClassNoun("cupé",lex:Coupe) masculine with plural "cupés",
-  
-////TODO: create a RelationalNoun
-  ClassNoun(["vehículo"/noun "con"/preposition "portón"/noun "trasero"/adjective],lex:Hatchback) masculine with plural "vehículos con portón trasero",
-  ////Seee http://es.wiktionary.org/wiki/hatchback
-  ClassNoun("hatchback",lex:Hatchback) masculine with plural "hatchback",
-
-  ClassNoun("descapotable",lex:Convertible) masculine with plural "descapotables",
-
-  ClassNoun(["coche"/noun "familiar"/adjective],lex:StationWagon) masculine with plural "coches familiares",
-  ClassNoun("familiar",lex:StationWagon) masculine with plural "familiares",
-
-  ClassNoun("camioneta",lex:Pickup) feminine with plural "camionetas",
-  ClassNoun("locomotora",dbpedia:Locomotive) feminine with plural "locomotoras",
-  ClassNoun("tren",dbpedia:Train) masculine with plural "trenes",
-
+  ObjectPropertyNoun("cupé",dbpedia:bodyStyle,<http://dbpedia.org/resource/Coupé>) masculine with plural "cupés",
+  ObjectPropertyNoun(["vehículo"/noun "con"/preposition "portón"/noun "trasero"/adjective],dbpedia:bodyStyle,resource:Hatchback) masculine with plural "vehículos con portón trasero",
+  ObjectPropertyNoun("descapotable",dbpedia:bodyStyle,resource:Convertible) masculine with plural "descapotables",
+  ObjectPropertyNoun(["coche"/noun "familiar"/adjective],dbpedia:bodyStyle,resource:Station_wagon) masculine with plural "coches familiares",
+  ObjectPropertyNoun("familiar",dbpedia:bodyStyle,resource:Station_wagon) masculine with plural "familiares",
+  ObjectPropertyNoun("camioneta",dbpedia:bodyStyle,resource:Pickup_truck) feminine with plural "camionetas",
 
   //// Properties 
 

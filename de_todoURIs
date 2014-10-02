@@ -399,7 +399,7 @@ originalStartPoint
 demolitionYear
 projectObjective
 followingEvent
-principal
+staff
 frazioni
 numberOfLanes
 GeopoliticalOrganisation/populationDensity
@@ -1167,6 +1167,7 @@ poles
 maximumDischarge
 capital
 politicalPartyInLegislature
+battingSide
 escapeVelocity
 goldMedalist
 fastestLap
@@ -1175,6 +1176,7 @@ associationOfLocalGovernment
 stylisticOrigin
 winsAtSun
 NationalCollegiateAthleticAssociationAthlete
+throwingSide
 deputy
 setupTime
 AutomobileEngine/topSpeed
@@ -1306,7 +1308,7 @@ religiousHead
 disbanded
 portfolio
 olympicOathSwornByJudge
-staff
+principal
 alpsMajorSector
 lunarSurfaceTime
 chairLabel
