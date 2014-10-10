@@ -2,12 +2,49 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix oils: <http://lemon-model.net/oils#> .
 
 @prefix dbpedia:  <http://dbpedia.org/ontology/> .
 @prefix resource: <http://dbpedia.org/resource/> .
 
 @prefix lex: <http://github.com/cunger/lemon.dbpedia/target/dbpedia_all#> .
 
+
+
+## oils ## 
+
+lex:highThings rdfs:subClassOf oils:CovariantScalar ;
+               oils:boundTo <http://dbpedia.org/ontology/height> ;
+               oils:degree oils:strong . 
+
+lex:elevatedThings rdfs:subClassOf oils:CovariantScalar ;
+               oils:boundTo <http://dbpedia.org/ontology/elevation> ;
+               oils:degree oils:strong . 
+
+lex:longThings rdfs:subClassOf oils:CovariantScalar ;
+               oils:boundTo <http://dbpedia.org/ontology/length> ;
+               oils:degree oils:strong .
+
+lex:wideThings rdfs:subClassOf oils:CovariantScalar ;
+               oils:boundTo <http://dbpedia.org/ontology/width> ;
+               oils:degree oils:strong .
+
+lex:deepThings rdfs:subClassOf oils:CovariantScalar ;
+               oils:boundTo <http://dbpedia.org/ontology/depth> ;
+               oils:degree oils:strong .
+
+lex:areousThings rdfs:subClassOf oils:CovariantScalar ;
+               oils:boundTo <http://dbpedia.org/ontology/area> ;
+               oils:degree oils:strong .
+lex:totalareousThings rdfs:subClassOf oils:CovariantScalar ;
+               oils:boundTo <http://dbpedia.org/ontology/areaTotal> ;
+               oils:degree oils:strong .
+lex:urbanareousThings rdfs:subClassOf oils:CovariantScalar ;
+               oils:boundTo <http://dbpedia.org/ontology/areaUrban> ;
+               oils:degree oils:strong .
+lex:metroareousThings rdfs:subClassOf oils:CovariantScalar ;
+               oils:boundTo <http://dbpedia.org/ontology/areaMetro> ;
+               oils:degree oils:strong .
 
 
 ## persons ##
