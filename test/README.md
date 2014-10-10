@@ -6,7 +6,7 @@ What we describe here is a procedure to detect errors in the .ldp files.
 ##Steps
 
 * Generate the RDF
- * Follow the instructions in <a href="http://github.com/jmccrae/lemon.patterns">lemon.patters</a> to generate a file with triples in the RDF/XML format. You will get error massages if, for instance, you typed 'femenine' instead of 'feminine' in the .ldp file.
+ * Follow the instructions in <a href="http://github.com/jmccrae/lemon.patterns">lemon.patters</a> to generate a file with triples in the RDF/XML format. You will get error messages, for instance, if you typed 'femenine' instead of 'feminine' in the .ldp file.
 * Store it in a SPARQL endpoint
  * For instance, you can use <A HREF="http://jena.apache.org/documentation/serving_data/index.html">Fuseki</A> (part of Jena) due to its simplicity. In this case, take care of the management of 'empty tags' (you can get an error like this: "The attributes on this property element, are not permitted with any content; expecting end element tag"). You can solve it by transforming the RDF/XML file to N3. The command <a href="http://librdf.org/raptor/rapper.html">rapper<a> can do this. 
 * Send some SPARQL queries to the SPARQL endpoint and check the results
