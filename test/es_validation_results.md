@@ -1,9 +1,9 @@
 #Validator results 
-Execution date 2014-10-18 01:22:59 
+Execution date 2014-10-21 16:55:48 
 
 ##Entities with no instances (less than 2) 
 
-Number: 192 
+Number: 205 
 
 + http://dbpedia.org/ontology/Abbey
  + http://dbpedia.org/ontology/Ambassador
@@ -12,9 +12,11 @@ Number: 192
  + http://dbpedia.org/ontology/Anime
  + http://dbpedia.org/ontology/Arachnid
  + http://dbpedia.org/ontology/Architect
+ + http://dbpedia.org/ontology/Arena
  + http://dbpedia.org/ontology/ArtistDiscography
  + http://dbpedia.org/ontology/Asteroid
  + http://dbpedia.org/ontology/Atoll
+ + http://dbpedia.org/ontology/Author
  + http://dbpedia.org/ontology/Bacteria
  + http://dbpedia.org/ontology/Band
  + http://dbpedia.org/ontology/Beer
@@ -42,9 +44,12 @@ Number: 192
  + http://dbpedia.org/ontology/ChristianPatriarch
  + http://dbpedia.org/ontology/Church
  + http://dbpedia.org/ontology/City
+ + http://dbpedia.org/ontology/CityDistrict
  + http://dbpedia.org/ontology/ClubMoss
  + http://dbpedia.org/ontology/Comedian
  + http://dbpedia.org/ontology/Comedian
+ + http://dbpedia.org/ontology/Comic
+ + http://dbpedia.org/ontology/Comics
  + http://dbpedia.org/ontology/Community
  + http://dbpedia.org/ontology/Conifer
  + http://dbpedia.org/ontology/Constellation
@@ -62,6 +67,7 @@ Number: 192
  + http://dbpedia.org/ontology/Department
  + http://dbpedia.org/ontology/Deputy
  + http://dbpedia.org/ontology/Diocese
+ + http://dbpedia.org/ontology/District
  + http://dbpedia.org/ontology/Dog
  + http://dbpedia.org/ontology/Drama
  + http://dbpedia.org/ontology/Drama
@@ -91,6 +97,7 @@ Number: 192
  + http://dbpedia.org/ontology/Gnetophytes
  + http://dbpedia.org/ontology/Gnetophytes
  + http://dbpedia.org/ontology/Gnetophytes
+ + http://dbpedia.org/ontology/Governor
  + http://dbpedia.org/ontology/Grape
  + http://dbpedia.org/ontology/Group
  + http://dbpedia.org/ontology/HorseRider
@@ -114,6 +121,7 @@ Number: 192
  + http://dbpedia.org/ontology/Mammal
  + http://dbpedia.org/ontology/Manga
  + http://dbpedia.org/ontology/Manhua
+ + http://dbpedia.org/ontology/Mayor
  + http://dbpedia.org/ontology/Medician
  + http://dbpedia.org/ontology/Memorial
  + http://dbpedia.org/ontology/Mill
@@ -141,10 +149,12 @@ Number: 192
  + http://dbpedia.org/ontology/Philosopher
  + http://dbpedia.org/ontology/Planet
  + http://dbpedia.org/ontology/Plant
+ + http://dbpedia.org/ontology/Play
  + http://dbpedia.org/ontology/PlayboyPlaymate
  + http://dbpedia.org/ontology/Polyhedron
  + http://dbpedia.org/ontology/Pope
  + http://dbpedia.org/ontology/Prefecture
+ + http://dbpedia.org/ontology/Presenter
  + http://dbpedia.org/ontology/Presenter
  + http://dbpedia.org/ontology/Priest
  + http://dbpedia.org/ontology/PrimeMinister
@@ -152,6 +162,7 @@ Number: 192
  + http://dbpedia.org/ontology/Professor
  + http://dbpedia.org/ontology/Project
  + http://dbpedia.org/ontology/Province
+ + http://dbpedia.org/ontology/Publisher
  + http://dbpedia.org/ontology/Race
  + http://dbpedia.org/ontology/Racecourse
  + http://dbpedia.org/ontology/Regency
@@ -189,6 +200,7 @@ Number: 192
  + http://dbpedia.org/ontology/Train
  + http://dbpedia.org/ontology/Tunnel
  + http://dbpedia.org/ontology/Valley
+ + http://dbpedia.org/ontology/Venue
  + http://dbpedia.org/ontology/VicePresident
  + http://dbpedia.org/ontology/Village
  + http://dbpedia.org/ontology/Volcano
@@ -197,246 +209,41 @@ Number: 192
  + http://dbpedia.org/ontology/Year
  + http://dbpedia.org/ontology/crosses
  + http://dbpedia.org/ontology/source
+ + http://dbpedia.org/ontology/totalPopulation
 
 
 ##Contradictory info 
-
-Contradictory information for sg: alcalde 
-
-|    |dbEntity                           |sg      |pl       |gen       |
-|:---|:----------------------------------|:-------|:--------|:---------|
-|193 |http://dbpedia.org/ontology/Mayor  |alcalde |alcaldes |masculine |
-|423 |http://dbpedia.org/ontology/leader |alcalde |alcaldes |masculine |
-
-
-Contradictory information for sg: autor 
-
-|    |dbEntity                            |sg    |pl      |gen       |
-|:---|:-----------------------------------|:-----|:-------|:---------|
-|33  |http://dbpedia.org/ontology/Author  |autor |autores |masculine |
-|385 |http://dbpedia.org/ontology/creator |autor |autores |masculine |
-|539 |http://dbpedia.org/ontology/writer  |autor |autores |masculine |
-
-
-Contradictory information for sg: canción 
-
-|    |dbEntity                          |sg      |pl        |gen      |
-|:---|:---------------------------------|:-------|:---------|:--------|
-|290 |http://dbpedia.org/ontology/Song  |canción |canciones |feminine |
-|337 |http://dbpedia.org/ontology/album |canción |canciones |feminine |
-
-
-Contradictory information for sg: casa 
-
-|    |dbEntity                              |sg   |pl |gen |
-|:---|:-------------------------------------|:----|:--|:---|
-|411 |http://dbpedia.org/ontology/ground    |casa |   |    |
-|412 |http://dbpedia.org/ontology/homeArena |casa |   |    |
-|442 |http://dbpedia.org/ontology/operator  |casa |   |    |
-
-
-Contradictory information for sg: color 
-
-|    |dbEntity                               |sg    |pl      |gen       |
-|:---|:--------------------------------------|:-----|:-------|:---------|
-|82  |http://dbpedia.org/ontology/Colour     |color |colores |masculine |
-|380 |http://dbpedia.org/ontology/colourName |color |colores |masculine |
-
-
-Contradictory information for sg: cómic 
-
-|   |dbEntity                           |sg    |pl     |gen       |
-|:--|:----------------------------------|:-----|:------|:---------|
-|85 |http://dbpedia.org/ontology/Comic  |cómic |cómics |masculine |
-|87 |http://dbpedia.org/ontology/Comics |cómic |cómics |masculine |
-
 
 Contradictory information for sg: director 
 
 |    |dbEntity                                  |sg       |pl       |gen       |
 |:---|:-----------------------------------------|:--------|:--------|:---------|
 |295 |http://dbpedia.org/ontology/SportsManager |director |director |masculine |
-|433 |http://dbpedia.org/ontology/managerClub   |director |director |masculine |
 |496 |http://dbpedia.org/ontology/rector        |director |         |          |
-|527 |http://dbpedia.org/ontology/team          |director |director |masculine |
-
-
-Contradictory information for sg: distrito 
-
-|    |dbEntity                                 |sg       |pl        |gen       |
-|:---|:----------------------------------------|:--------|:---------|:---------|
-|74  |http://dbpedia.org/ontology/CityDistrict |distrito |distritos |masculine |
-|116 |http://dbpedia.org/ontology/District     |distrito |distritos |masculine |
-
-
-Contradictory information for sg: editor 
-
-|    |dbEntity                              |sg     |pl       |gen       |
-|:---|:-------------------------------------|:------|:--------|:---------|
-|256 |http://dbpedia.org/ontology/Publisher |editor |editores |masculine |
-|494 |http://dbpedia.org/ontology/publisher |editor |editores |masculine |
-
-
-Contradictory information for sg: episodio 
-
-|    |dbEntity                                      |sg       |pl        |gen       |
-|:---|:---------------------------------------------|:--------|:---------|:---------|
-|310 |http://dbpedia.org/ontology/TelevisionEpisode |episodio |episodios |masculine |
-|509 |http://dbpedia.org/ontology/series            |episodio |episodios |masculine |
-
-
-Contradictory information for sg: equipo 
-
-|    |dbEntity                               |sg     |pl      |gen       |
-|:---|:--------------------------------------|:------|:-------|:---------|
-|296 |http://dbpedia.org/ontology/SportsTeam |equipo |equipos |masculine |
-|528 |http://dbpedia.org/ontology/team       |equipo |equipos |masculine |
-
-
-Contradictory information for sg: escritor 
-
-|    |dbEntity                           |sg       |pl         |gen       |
-|:---|:----------------------------------|:--------|:----------|:---------|
-|332 |http://dbpedia.org/ontology/Writer |escritor |escritores |masculine |
-|540 |http://dbpedia.org/ontology/writer |escritor |escritores |masculine |
-
-
-Contradictory information for sg: estadio 
-
-|    |dbEntity                            |sg      |pl       |gen       |
-|:---|:-----------------------------------|:-------|:--------|:---------|
-|20  |http://dbpedia.org/ontology/Arena   |estadio |estadios |masculine |
-|297 |http://dbpedia.org/ontology/Stadium |estadio |estadios |masculine |
-
-
-Contradictory information for sg: gobernador 
-
-|    |dbEntity                             |sg         |pl           |gen       |
-|:---|:------------------------------------|:----------|:------------|:---------|
-|154 |http://dbpedia.org/ontology/Governor |gobernador |gobernadores |masculine |
-|425 |http://dbpedia.org/ontology/leader   |gobernador |gobernadores |masculine |
 
 
 Contradictory information for sg: género 
 
-|    |dbEntity                                  |sg     |pl      |gen       |
-|:---|:-----------------------------------------|:------|:-------|:---------|
-|148 |http://dbpedia.org/ontology/Genre         |género |géneros |masculine |
-|407 |http://dbpedia.org/ontology/genre         |género |géneros |masculine |
-|408 |http://dbpedia.org/ontology/genus         |género |        |          |
-|430 |http://dbpedia.org/ontology/literaryGenre |género |géneros |masculine |
+|    |dbEntity                          |sg     |pl      |gen       |
+|:---|:---------------------------------|:------|:-------|:---------|
+|148 |http://dbpedia.org/ontology/Genre |género |géneros |masculine |
+|408 |http://dbpedia.org/ontology/genus |género |        |          |
 
 
 Contradictory information for sg: hijo 
 
-|    |dbEntity                           |sg   |pl    |gen          |
-|:---|:----------------------------------|:----|:-----|:------------|
-|358 |http://dbpedia.org/ontology/child  |hijo |hijos |commonGender |
-|366 |http://dbpedia.org/ontology/child  |hijo |hijos |masculine    |
-|448 |http://dbpedia.org/ontology/parent |hijo |hijos |commonGender |
-|456 |http://dbpedia.org/ontology/parent |hijo |hijos |masculine    |
-
-
-Contradictory information for sg: idioma 
-
-|    |dbEntity                             |sg     |pl      |gen       |
-|:---|:------------------------------------|:------|:-------|:---------|
-|177 |http://dbpedia.org/ontology/Language |idioma |idiomas |masculine |
-|515 |http://dbpedia.org/ontology/spokenIn |idioma |idiomas |masculine |
-
-
-Contradictory information for sg: instrumento 
-
-|    |dbEntity                               |sg          |pl           |gen       |
-|:---|:--------------------------------------|:-----------|:------------|:---------|
-|169 |http://dbpedia.org/ontology/Instrument |instrumento |instrumentos |masculine |
-|414 |http://dbpedia.org/ontology/instrument |instrumento |instrumentos |masculine |
-
-
-Contradictory information for sg: lengua 
-
-|    |dbEntity                             |sg     |pl      |gen      |
-|:---|:------------------------------------|:------|:-------|:--------|
-|178 |http://dbpedia.org/ontology/Language |lengua |lenguas |feminine |
-|516 |http://dbpedia.org/ontology/spokenIn |lengua |lenguas |feminine |
-
-
-Contradictory information for sg: lugar 
-
-|    |dbEntity                          |sg    |pl      |gen       |
-|:---|:---------------------------------|:-----|:-------|:---------|
-|234 |http://dbpedia.org/ontology/Place |lugar |lugares |masculine |
-|323 |http://dbpedia.org/ontology/Venue |lugar |lugares |masculine |
-
-
-Contradictory information for sg: miembro 
-
-|    |dbEntity                               |sg      |pl |gen |
-|:---|:--------------------------------------|:-------|:--|:---|
-|351 |http://dbpedia.org/ontology/bandMember |miembro |   |    |
-|379 |http://dbpedia.org/ontology/class      |miembro |   |    |
-|399 |http://dbpedia.org/ontology/family     |miembro |   |    |
-|409 |http://dbpedia.org/ontology/genus      |miembro |   |    |
-|422 |http://dbpedia.org/ontology/kingdom    |miembro |   |    |
-|444 |http://dbpedia.org/ontology/order      |miembro |   |    |
-|472 |http://dbpedia.org/ontology/phylum     |miembro |   |    |
-
-
-Contradictory information for sg: obra 
-
-|    |dbEntity                            |sg   |pl    |gen      |
-|:---|:-----------------------------------|:----|:-----|:--------|
-|26  |http://dbpedia.org/ontology/Artwork |obra |obras |feminine |
-|237 |http://dbpedia.org/ontology/Play    |obra |obras |feminine |
+|    |dbEntity                          |sg   |pl    |gen          |
+|:---|:---------------------------------|:----|:-----|:------------|
+|358 |http://dbpedia.org/ontology/child |hijo |hijos |commonGender |
+|366 |http://dbpedia.org/ontology/child |hijo |hijos |masculine    |
 
 
 Contradictory information for sg: parte 
 
-|    |dbEntity                                             |sg    |pl     |gen       |
-|:---|:----------------------------------------------------|:-----|:------|:---------|
-|352 |http://dbpedia.org/ontology/broadcastNetwork         |parte |       |          |
-|381 |http://dbpedia.org/ontology/commandStructure         |parte |partes |masculine |
-|415 |http://dbpedia.org/ontology/intercommunality         |parte |partes |masculine |
-|417 |http://dbpedia.org/ontology/isPartOf                 |parte |       |          |
-|418 |http://dbpedia.org/ontology/isPartOfMilitaryConflict |parte |partes |masculine |
-|437 |http://dbpedia.org/ontology/mountainRange            |parte |partes |masculine |
-|495 |http://dbpedia.org/ontology/range                    |parte |partes |masculine |
-|510 |http://dbpedia.org/ontology/series                   |parte |       |          |
-
-
-Contradictory information for sg: partido 
-
-|    |dbEntity                                   |sg      |pl       |gen       |
-|:---|:------------------------------------------|:-------|:--------|:---------|
-|142 |http://dbpedia.org/ontology/FootballMatch  |partido |partidos |masculine |
-|240 |http://dbpedia.org/ontology/PoliticalParty |partido |partidos |masculine |
-
-
-Contradictory information for sg: población 
-
-|    |dbEntity                                    |sg        |pl          |gen      |
-|:---|:-------------------------------------------|:---------|:-----------|:--------|
-|473 |http://dbpedia.org/ontology/populationMetro |población |poblaciones |feminine |
-|477 |http://dbpedia.org/ontology/populationTotal |población |poblaciones |feminine |
-|481 |http://dbpedia.org/ontology/populationUrban |población |poblaciones |feminine |
-|530 |http://dbpedia.org/ontology/totalPopulation |población |poblaciones |feminine |
-
-
-Contradictory information for sg: presentador 
-
-|    |dbEntity                              |sg          |pl            |gen       |
-|:---|:-------------------------------------|:-----------|:-------------|:---------|
-|245 |http://dbpedia.org/ontology/Presenter |presentador |presentadores |masculine |
-|489 |http://dbpedia.org/ontology/presenter |presentador |presentadores |masculine |
-
-
-Contradictory information for sg: presidente 
-
-|    |dbEntity                              |sg         |pl          |gen       |
-|:---|:-------------------------------------|:----------|:-----------|:---------|
-|247 |http://dbpedia.org/ontology/President |presidente |presidentes |masculine |
-|356 |http://dbpedia.org/ontology/chairman  |presidente |presidentes |masculine |
-|427 |http://dbpedia.org/ontology/leader    |presidente |presidentes |masculine |
+|    |dbEntity                                     |sg    |pl     |gen       |
+|:---|:--------------------------------------------|:-----|:------|:---------|
+|352 |http://dbpedia.org/ontology/broadcastNetwork |parte |       |          |
+|381 |http://dbpedia.org/ontology/commandStructure |parte |partes |masculine |
 
 
 Contradictory information for sg: universidad 
@@ -444,19 +251,7 @@ Contradictory information for sg: universidad
 |    |dbEntity                               |sg          |pl            |gen      |
 |:---|:--------------------------------------|:-----------|:-------------|:--------|
 |80  |http://dbpedia.org/ontology/College    |universidad |universidades |feminine |
-|319 |http://dbpedia.org/ontology/University |universidad |universidades |feminine |
 |534 |http://dbpedia.org/ontology/university |universidad |              |         |
-
-
-Contradictory information for sg: área 
-
-|    |dbEntity                              |sg   |pl |gen |
-|:---|:-------------------------------------|:----|:--|:---|
-|344 |http://dbpedia.org/ontology/area      |área |   |    |
-|345 |http://dbpedia.org/ontology/areaMetro |área |   |    |
-|346 |http://dbpedia.org/ontology/areaTotal |área |   |    |
-|347 |http://dbpedia.org/ontology/areaUrban |área |   |    |
-|401 |http://dbpedia.org/ontology/field     |área |   |    |
 
 
 
@@ -549,6 +344,11 @@ http://dbpedia.org/ontology/Agent
 + Adela Pedrosa es un agente
 + Adela Pedrosa y Caroline Lake Quiner son agentes
 
+http://dbpedia.org/ontology/leader
+
++ <http://es.dbpedia.org/resource/HDZ> es un alcalde
++ <http://es.dbpedia.org/resource/HDZ> y <http://es.dbpedia.org/resource/HDZ> son alcaldes
+
 http://dbpedia.org/ontology/alias
 
 + Ciudad Universitaria es un alias
@@ -584,6 +384,16 @@ http://dbpedia.org/ontology/Automobile
 + automóvil1 es un automóvil
 + automóvil1 y automóvil2 son automóviles
 
+http://dbpedia.org/ontology/creator
+
++ <http://es.dbpedia.org/resource/David_Davis> es un autor
++ <http://es.dbpedia.org/resource/David_Davis> y <http://es.dbpedia.org/resource/Magnús_Scheving> son autores
+
+http://dbpedia.org/ontology/writer
+
++ <http://es.dbpedia.org/resource/Scott_Fellows> es un autor
++ <http://es.dbpedia.org/resource/Scott_Fellows> y <http://es.dbpedia.org/resource/Scott_Fellows> son autores
+
 http://dbpedia.org/ontology/Aircraft
 
 + avión1 es un avión
@@ -614,6 +424,16 @@ http://dbpedia.org/ontology/Ship
 + Cardenal Cisneros (1903) es un buque
 + Cardenal Cisneros (1903) y Almirante Lynch (PFG-07) son buques
 
+http://dbpedia.org/ontology/Song
+
++ canción1 es una canción
++ canción1 y canción2 son canciones
+
+http://dbpedia.org/ontology/album
+
++ canción1 es una canción
++ canción1 y canción2 son canciones
+
 http://dbpedia.org/ontology/Road
 
 + Autovía A-9 es una carretera
@@ -638,6 +458,16 @@ http://dbpedia.org/ontology/Automobile
 
 + Nissan Almera es un coche
 + Nissan Almera y Daihatsu Terios son coches
+
+http://dbpedia.org/ontology/Colour
+
++ Amarillo es un color
++ Amarillo y Azul son colores
+
+http://dbpedia.org/ontology/colourName
+
++ Fuchsia es un color
++ Fuchsia y Orange son colores
 
 http://dbpedia.org/ontology/Food
 
@@ -694,6 +524,11 @@ http://dbpedia.org/ontology/Building
 + Museo Nacional del Virreinato es un edificio
 + Museo Nacional del Virreinato y 311 South Wacker Drive son edificios
 
+http://dbpedia.org/ontology/publisher
+
++ <http://es.dbpedia.org/resource/John_Murray> es un editor
++ <http://es.dbpedia.org/resource/John_Murray> y <http://es.dbpedia.org/resource/John_Murray> son editores
+
 http://dbpedia.org/ontology/Album
 
 + elepé1 es un elepé
@@ -724,20 +559,60 @@ http://dbpedia.org/ontology/Hospital
 + enfermería1 es una enfermería
 + enfermería1 y enfermería2 son enfermerías
 
+http://dbpedia.org/ontology/TelevisionEpisode
+
++ Running to Stand Still (Desperate Housewives) es un episodio
++ Running to Stand Still (Desperate Housewives) y Field of Streams son episodios
+
+http://dbpedia.org/ontology/series
+
++ <http://es.dbpedia.org/resource/Mario> es un episodio
++ <http://es.dbpedia.org/resource/Mario> y <http://es.dbpedia.org/resource/Kirby> son episodios
+
+http://dbpedia.org/ontology/SportsTeam
+
++ Club Deportivo Luis Cruz Martínez es un equipo
++ Club Deportivo Luis Cruz Martínez y América S. A. son equipos
+
+http://dbpedia.org/ontology/team
+
++ <http://es.dbpedia.org/resource/Cruz_Azul> es un equipo
++ <http://es.dbpedia.org/resource/Cruz_Azul> y <http://es.dbpedia.org/resource/Club_Deportivo_Zamora> son equipos
+
+http://dbpedia.org/ontology/Writer
+
++ Susan Napier es un escritor
++ Susan Napier y Enrique Barrios son escritores
+
+http://dbpedia.org/ontology/writer
+
++ <http://es.dbpedia.org/resource/Scott_Fellows> es un escritor
++ <http://es.dbpedia.org/resource/Scott_Fellows> y <http://es.dbpedia.org/resource/Scott_Fellows> son escritores
+
 http://dbpedia.org/ontology/spouse
 
 + <http://es.dbpedia.org/resource/Charles_Phillip_Ingalls> es una esposa
-+ <http://es.dbpedia.org/resource/Charles_Phillip_Ingalls> y <http://es.dbpedia.org/resource/Alejandra> son esposas
++ <http://es.dbpedia.org/resource/Charles_Phillip_Ingalls> y <http://es.dbpedia.org/resource/Zéline_Trigant> son esposas
 
 http://dbpedia.org/ontology/Station
 
 + estación1 es una estación
 + estación1 y estación2 son estaciones
 
+http://dbpedia.org/ontology/Stadium
+
++ Allianz Arena es un estadio
++ Allianz Arena y Estadio Alberto Gallardo son estadios
+
 http://dbpedia.org/ontology/Event
 
 + Primera división mexicana 1963/64 es un evento
 + Primera división mexicana 1963/64 y Torneo de Verano 1997 (México) son eventos
+
+http://dbpedia.org/ontology/leader
+
++ <http://es.dbpedia.org/resource/HDZ> es un gobernador
++ <http://es.dbpedia.org/resource/HDZ> y <http://es.dbpedia.org/resource/HDZ> son gobernadores
 
 http://dbpedia.org/ontology/MilitaryConflict
 
@@ -754,6 +629,16 @@ http://dbpedia.org/ontology/Hotel
 + Hollywood Roosevelt Hotel es un hotel
 + Hollywood Roosevelt Hotel y Hotel Llao Llao son hoteles
 
+http://dbpedia.org/ontology/Language
+
++ Aragonés cheso es un idioma
++ Aragonés cheso e Aranés son idiomas
+
+http://dbpedia.org/ontology/spokenIn
+
++ <http://es.dbpedia.org/resource/Departamento_del_Ucayali> es un idioma
++ <http://es.dbpedia.org/resource/Departamento_del_Ucayali> e <http://es.dbpedia.org/resource/Polinesia_francesa> son idiomas
+
 http://dbpedia.org/ontology/Tax
 
 + Swietenia mahagoni es un impuesto
@@ -763,6 +648,16 @@ http://dbpedia.org/ontology/Infrastructure
 
 + Autovía A-9 es un infraestructura
 + Autovía A-9 e Estación Ingeniero Williams son infraestructuras
+
+http://dbpedia.org/ontology/Instrument
+
++ Acordeón es un instrumento
++ Acordeón e Bombo son instrumentos
+
+http://dbpedia.org/ontology/instrument
+
++ <http://es.dbpedia.org/resource/Hammond> es un instrumento
++ <http://es.dbpedia.org/resource/Hammond> e <http://es.dbpedia.org/resource/Slide> son instrumentos
 
 http://dbpedia.org/ontology/Scientist
 
@@ -784,6 +679,16 @@ http://dbpedia.org/ontology/Lake
 + Lago Enriquillo es un lago
 + Lago Enriquillo y Lago Espejo son lagos
 
+http://dbpedia.org/ontology/Language
+
++ Aragonés cheso es una lengua
++ Aragonés cheso y Aranés son lenguas
+
+http://dbpedia.org/ontology/spokenIn
+
++ <http://es.dbpedia.org/resource/Departamento_del_Ucayali> es una lengua
++ <http://es.dbpedia.org/resource/Departamento_del_Ucayali> y <http://es.dbpedia.org/resource/Polinesia_francesa> son lenguas
+
 http://dbpedia.org/ontology/Book
 
 + Inheritance (El legado) es un libro
@@ -794,6 +699,11 @@ http://dbpedia.org/ontology/Place
 + localización1 es una localización
 + localización1 y localización2 son localizaciones
 
+http://dbpedia.org/ontology/Place
+
++ Distrito de Acolla es un lugar
++ Distrito de Acolla y Montastruc (Altos Pirineos) son lugares
+
 http://dbpedia.org/ontology/Disease
 
 + Broncoespasmo es una mal
@@ -802,7 +712,7 @@ http://dbpedia.org/ontology/Disease
 http://dbpedia.org/ontology/spouse
 
 + <http://es.dbpedia.org/resource/Charles_Phillip_Ingalls> es un marido
-+ <http://es.dbpedia.org/resource/Charles_Phillip_Ingalls> y <http://es.dbpedia.org/resource/Alejandra> son esposos
++ <http://es.dbpedia.org/resource/Charles_Phillip_Ingalls> y <http://es.dbpedia.org/resource/Zéline_Trigant> son esposos
 
 http://dbpedia.org/ontology/Currency
 
@@ -819,10 +729,25 @@ http://dbpedia.org/ontology/Museum
 + Museo Nacional del Virreinato es un museo
 + Museo Nacional del Virreinato y Basketball Hall of Fame son museos
 
+http://dbpedia.org/ontology/Artwork
+
++ El enigma del deseo es una obra
++ El enigma del deseo y El hombre invisible (cuadro) son obras
+
 http://dbpedia.org/ontology/Organisation
 
 + organización1 es una organización
 + organización1 y organización2 son organizaciones
+
+http://dbpedia.org/ontology/FootballMatch
+
++ Primera división mexicana 1963/64 es un partido
++ Primera división mexicana 1963/64 y Torneo de Verano 1997 (México) son partidos
+
+http://dbpedia.org/ontology/PoliticalParty
+
++ Alianza Republicana Nacionalista es un partido
++ Alianza Republicana Nacionalista y Alianza de la Izquierda Democrática son partidos
 
 http://dbpedia.org/ontology/Film
 
@@ -849,6 +774,21 @@ http://dbpedia.org/ontology/Painting
 + El enigma del deseo es una pintura
 + El enigma del deseo y El hombre invisible (cuadro) son pinturas
 
+http://dbpedia.org/ontology/populationMetro
+
++ población1 es una población
++ población1 y población2 son poblaciones
+
+http://dbpedia.org/ontology/populationTotal
+
++ población1 es una población
++ población1 y población2 son poblaciones
+
+http://dbpedia.org/ontology/populationUrban
+
++ población1 es una población
++ población1 y población2 son poblaciones
+
 http://dbpedia.org/ontology/Politician
 
 + políticos1 es un políticos
@@ -858,6 +798,26 @@ http://dbpedia.org/ontology/Award
 
 + Dune es un premio
 + Dune y Fahrenheit 451 son premios
+
+http://dbpedia.org/ontology/presenter
+
++ <http://es.dbpedia.org/resource/Jorge_Rossi> es un presentador
++ <http://es.dbpedia.org/resource/Jorge_Rossi> y <http://es.dbpedia.org/resource/Patricia_Pérez> son presentadores
+
+http://dbpedia.org/ontology/President
+
++ Adela Pedrosa es un presidente
++ Adela Pedrosa y Eugène Jacques Pierre Louis Jungers son presidentes
+
+http://dbpedia.org/ontology/chairman
+
++ <http://es.dbpedia.org/resource/Capitán_de_Navío> es un presidente
++ <http://es.dbpedia.org/resource/Capitán_de_Navío> y <http://es.dbpedia.org/resource/Leo_O'Brien> son presidentes
+
+http://dbpedia.org/ontology/leader
+
++ <http://es.dbpedia.org/resource/HDZ> es un presidente
++ <http://es.dbpedia.org/resource/HDZ> y <http://es.dbpedia.org/resource/HDZ> son presidentes
 
 http://dbpedia.org/ontology/Protein
 
