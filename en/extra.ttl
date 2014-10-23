@@ -243,9 +243,9 @@
   lemon:synBehavior :populationAsOf__frame ;
   lemon:sense :populationAsOf__sense . 
 
-:populationAsOf__frame rdf:type lexinfo:NounPossessiveFrame ;
+:populationAsOf__frame rdf:type lexinfo:NounPPFrame ;
 		       lexinfo:copulativeArg        :arg1populationAsOf ;
-                       lexinfo:possessiveAdjunct    :arg2populationAsOf ;
+                       lexinfo:prepositionalObject  :arg2populationAsOf ;
                        lexinfo:prepositionalAdjunct :arg3populationAsOf .
 
 :populationAsOf__sense lemon:subsense :populationAsOf__subsense1, :populationAsOf__subsense2 . 
@@ -257,6 +257,7 @@
                            lemon:objOfProp  :arg3populationAsOf .
 
 :arg3populationAsOf lemon:marker [ lemon:canonicalForm [ lemon:writtenRep "as of"@en ] ] .
+:arg2populationAsOf lemon:marker [ lemon:canonicalForm [ lemon:writtenRep "of"@en ] ] .
 
 
 ## activeYears{Start|End}{Date|Year} ##
@@ -272,7 +273,7 @@
                lexinfo:prepositionalObject :arg2active ;
                lexinfo:prepositionalObject :arg3active .
 
-:active__sense1     lemon:subsense :active__subsense11, :active_subsense12 .
+:active__sense1     lemon:subsense :active__subsense11, :active__subsense12 .
 :active__subsense11 lemon:reference <http://dbpedia.org/ontology/activeYearsStartDate> ;
                     lemon:subjOfProp :arg1active ;
                     lemon:objOfProp  :arg2active .
@@ -629,7 +630,7 @@
                  lemon:objOfProp  :arg3air;
                  lemon:propertyDomain <http://dbpedia.org/ontology/TelevisionShow> .
 :air__sense2     lemon:subsense :air__subsense21, :air__subsense22 .
-:air__subsense12 lemon:reference <http://dbpedia.org/ontology/firstAirDate>;
+:air__subsense21 lemon:reference <http://dbpedia.org/ontology/firstAirDate>;
                  lemon:subjOfProp :arg1air;
                  lemon:objOfProp  :arg2air .
 :air__subsense22 lemon:reference <http://dbpedia.org/ontology/lastAirDate>;
