@@ -1,5 +1,7 @@
 # Lemonade tools
 
+Presentantion here: http://www.slideshare.net/marianorico/lemonade-49543443
+
 ##Lemon Assistant
 Web site:  http://lider2.dia.fi.upm.es:3838/lemonAssistant
 
