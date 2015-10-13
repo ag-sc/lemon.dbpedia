@@ -1,0 +1,1935 @@
+Senator	http://dbpedia.org/ontology/Senator	
+präsentieren	http://dbpedia.org/ontology/presenter	
+ICAO-Ortsidentifikator	http://dbpedia.org/ontology/icaoLocationIdentifier	
+Angehöriger	http://dbpedia.org/ontology/relative	
+Darsteller	http://dbpedia.org/ontology/Actor	
+Ehemann	http://dbpedia.org/ontology/spouse	
+Kind	http://dbpedia.org/ontology/child	
+Kind	http://dbpedia.org/ontology/parent	
+sitzen in	http://dbpedia.org/ontology/ground	
+Fußballmanagerin	http://dbpedia.org/ontology/SoccerManager	
+Ortsindikator	http://dbpedia.org/ontology/icaoLocationIdentifier	
+Schriftstellerin von	http://dbpedia.org/ontology/writer	
+Schriftstellerin von	http://dbpedia.org/ontology/Writer	
+Küchenchef	http://dbpedia.org/ontology/Chef	
+Gattung	http://dbpedia.org/ontology/genre	
+Beite	http://dbpedia.org/ontology/width	
+Siedegrad	http://dbpedia.org/ontology/boilingPoint	
+gestartet am	http://dbpedia.org/ontology/launchDate	
+Strom	http://dbpedia.org/ontology/Stream	
+Monarchin	http://dbpedia.org/ontology/Monarch	
+Verlag von	http://dbpedia.org/ontology/publisher	
+Verlag von	http://dbpedia.org/ontology/Publisher	
+fertiggestellt im	http://dbpedia.org/ontology/yearOfConstruction	
+Festival	http://dbpedia.org/ontology/MusicFestival	
+Frequenz	http://dbpedia.org/ontology/frequency	
+Ansager von	http://dbpedia.org/ontology/presenter	
+Radfahr-Liga	http://dbpedia.org/ontology/CyclingLeague	
+Liga	http://dbpedia.org/ontology/SportsLeague	
+Turnier	http://dbpedia.org/ontology/Tournament	
+Geburtsjahr	http://dbpedia.org/ontology/birthYear	
+königlich Person	http://dbpedia.org/ontology/Royalty	
+Gedenkstätte	http://dbpedia.org/ontology/Memorial	
+Entwickler	http://dbpedia.org/ontology/developer	
+Gottheit	http://dbpedia.org/ontology/Deity	
+Schiff	http://dbpedia.org/ontology/Ship	
+Schachspielerin	http://dbpedia.org/ontology/ChessPlayer	
+Zustand des Naturschutzes	http://dbpedia.org/ontology/conservationStatus	
+Sterbedatum	http://dbpedia.org/ontology/deathDate	
+Fahrbahn	http://dbpedia.org/ontology/Road	
+Naturschutzgebiet	http://dbpedia.org/ontology/ProtectedArea	
+Radiosendung	http://dbpedia.org/ontology/RadioProgram	
+Sendung	http://dbpedia.org/ontology/RadioProgram	
+Mitglied der Organisation	http://dbpedia.org/ontology/OrganisationMember	
+Dienststelle	http://dbpedia.org/ontology/Department	
+höchstgelegen Region	http://dbpedia.org/ontology/highestRegion	
+Komikerin	http://dbpedia.org/ontology/Comedian	
+chemisch Stoff	http://dbpedia.org/ontology/ChemicalSubstance	
+Figure	http://dbpedia.org/ontology/FictionalCharacter	
+Großstadt	http://dbpedia.org/ontology/City	
+Gymnast	http://dbpedia.org/ontology/Gymnast	
+Urlaub	http://dbpedia.org/ontology/Holiday	
+Plastik	http://dbpedia.org/ontology/Sculpture	
+Kamerafrau	http://dbpedia.org/ontology/cinematographer	
+stattfinden am	http://dbpedia.org/ontology/date	
+Golfspielerin	http://dbpedia.org/ontology/GolfPlayer	
+Enzym	http://dbpedia.org/ontology/Enzyme	
+Malerin	http://dbpedia.org/ontology/Painter	
+Platz	http://dbpedia.org/ontology/Place	
+abgekürzt zu	http://dbpedia.org/ontology/abbreviation	
+Wahl	http://dbpedia.org/ontology/Election	
+Hund	http://dbpedia.org/ontology/Dog	
+Gegend	http://dbpedia.org/ontology/Region	
+Gegend	http://dbpedia.org/ontology/Country	
+Sitzplatzkapazität	http://dbpedia.org/ontology/seatingCapacity	
+Bildhauerin	http://dbpedia.org/ontology/Sculptor	
+Vizeministerpräsidentin	http://dbpedia.org/ontology/VicePrimeMinister	
+Raumfahrzeug	http://dbpedia.org/ontology/Spacecraft	
+dazugehörig Künstler	http://dbpedia.org/ontology/associatedMusicalArtist	
+ehemalig Name	http://dbpedia.org/ontology/formerName	
+Mollusa	http://dbpedia.org/ontology/Mollusca	
+Amtsvorgängerin	http://dbpedia.org/ontology/predecessor	
+Amtsvorgängerin	http://dbpedia.org/ontology/successor	
+Vene	http://dbpedia.org/ontology/Vein	
+Insel	http://dbpedia.org/ontology/Island	
+Ortschaft	http://dbpedia.org/ontology/Locality	
+Himmelskörper	http://dbpedia.org/ontology/CelestialBody	
+bedienen	http://dbpedia.org/ontology/broadcastNetwork	
+fabrizieren	http://dbpedia.org/ontology/manufacturer	
+Boxer	http://dbpedia.org/ontology/Boxer	
+Lied auf	http://dbpedia.org/ontology/Song	
+Lied von	http://dbpedia.org/ontology/Song	
+Lied auf	http://dbpedia.org/ontology/album	
+Lied von	http://dbpedia.org/ontology/album	
+Hollywood-Trickfilm	http://dbpedia.org/ontology/HollywoodCartoon	
+dazugehörig Künstlerin	http://dbpedia.org/ontology/associatedMusicalArtist	
+Literaturgattung	http://dbpedia.org/ontology/literaryGenre	
+Bowling-Liga	http://dbpedia.org/ontology/BowlingLeague	
+Gebiet von besondere wissenschaftlich Interesse	http://dbpedia.org/ontology/SiteOfSpecialScientificInterest	
+Bezirk	http://dbpedia.org/ontology/Region	
+Bezirk	http://dbpedia.org/ontology/District	
+Beachvolleyballerin	http://dbpedia.org/ontology/BeachVolleyballPlayer	
+Playmate	http://dbpedia.org/ontology/PlayboyPlaymate	
+Auszeichnung	http://dbpedia.org/ontology/award	
+Auszeichnung	http://dbpedia.org/ontology/Award	
+Präsentator von	http://dbpedia.org/ontology/presenter	
+Bevölkerungsdichte	http://dbpedia.org/ontology/populationDensity	
+Rennpferd	http://dbpedia.org/ontology/RaceHorse	
+Prominenter	http://dbpedia.org/ontology/Celebrity	
+Diskographie	http://dbpedia.org/ontology/ArtistDiscography	
+Stand des Umweltschutzes	http://dbpedia.org/ontology/conservationStatus	
+Krankheit	http://dbpedia.org/ontology/Disease	
+Modell	http://dbpedia.org/ontology/Model	
+ehemalig Trainerin	http://dbpedia.org/ontology/formerCoach	
+Dartspielerin	http://dbpedia.org/ontology/DartsPlayer	
+Sumoringer	http://dbpedia.org/ontology/SumoWrestler	
+Spielkasino	http://dbpedia.org/ontology/Casino	
+Squashspielerin	http://dbpedia.org/ontology/SquashPlayer	
+herstellen	http://dbpedia.org/ontology/manufacturer	
+herstellen	http://dbpedia.org/ontology/product	
+Automobil	http://dbpedia.org/ontology/Automobile	
+Regierungsbehörde	http://dbpedia.org/ontology/GovernmentAgency	
+Sportveranstaltung	http://dbpedia.org/ontology/SportsEvent	
+dazugehörig Musiker	http://dbpedia.org/ontology/associatedMusicalArtist	
+Status des Umweltschutzes	http://dbpedia.org/ontology/conservationStatus	
+Belastbarkeit	http://dbpedia.org/ontology/capacity	
+Motorhubraum	http://dbpedia.org/ontology/displacement	
+Verbrecherin	http://dbpedia.org/ontology/Criminal	
+Amt	http://dbpedia.org/ontology/Department	
+Einfluss ausüben auf	http://dbpedia.org/ontology/influenced	
+Comiczeichner	http://dbpedia.org/ontology/ComicsCreator	
+Ort von besondere wissenschaftlich Interesse	http://dbpedia.org/ontology/SiteOfSpecialScientificInterest	
+Gründungstag	http://dbpedia.org/ontology/foundingDate	
+ehemalig Bandmitglied	http://dbpedia.org/ontology/formerBandMember	
+gegründet am	http://dbpedia.org/ontology/formationDate	
+gegründet in	http://dbpedia.org/ontology/formationDate	
+gegründet von	http://dbpedia.org/ontology/formationDate	
+gegründet am	http://dbpedia.org/ontology/foundedBy	
+gegründet in	http://dbpedia.org/ontology/foundedBy	
+gegründet von	http://dbpedia.org/ontology/foundedBy	
+Rufzeichen der Internationalen Fernmeldeunion von	http://dbpedia.org/ontology/callsignMeaning	
+enthalten	http://dbpedia.org/ontology/phylum	
+enthalten	http://dbpedia.org/ontology/class	
+enthalten	http://dbpedia.org/ontology/order	
+enthalten	http://dbpedia.org/ontology/family	
+enthalten	http://dbpedia.org/ontology/kingdom	
+geöffnet seit	http://dbpedia.org/ontology/dateUse	
+geöffnet seit	http://dbpedia.org/ontology/openingDate	
+geöffnet seit	http://dbpedia.org/ontology/openingYear	
+Transportmittel	http://dbpedia.org/ontology/MeanOfTransportation	
+Oberbürgermeister	http://dbpedia.org/ontology/Mayor	
+Kampfsportler	http://dbpedia.org/ontology/MartialArtist	
+bewohnt Ort	http://dbpedia.org/ontology/PopulatedPlace	
+Motorradrennen-Liga	http://dbpedia.org/ontology/MotorcycleRacingLeague	
+Canadian Football Spielerin	http://dbpedia.org/ontology/CanadianFootballPlayer	
+Erbauerin	http://dbpedia.org/ontology/architect	
+Hotel	http://dbpedia.org/ontology/Hotel	
+Rakete	http://dbpedia.org/ontology/Rocket	
+ausstrahlen in	http://dbpedia.org/ontology/broadcastArea	
+ausstrahlen auf	http://dbpedia.org/ontology/broadcastArea	
+ausstrahlen in	http://dbpedia.org/ontology/channel	
+ausstrahlen auf	http://dbpedia.org/ontology/channel	
+ausstrahlen in	http://dbpedia.org/ontology/network	
+ausstrahlen auf	http://dbpedia.org/ontology/network	
+ausstrahlen in	http://dbpedia.org/ontology/programmeFormat	
+ausstrahlen auf	http://dbpedia.org/ontology/programmeFormat	
+Curlerin	http://dbpedia.org/ontology/Curler	
+Nerv	http://dbpedia.org/ontology/Nerve	
+militärisch Struktur	http://dbpedia.org/ontology/MilitaryStructure	
+Ort der Aufzeichnung	http://dbpedia.org/ontology/recordedIn	
+E-Werk	http://dbpedia.org/ontology/PowerStation	
+Handelsgesellschaft	http://dbpedia.org/ontology/Company	
+benennen	http://dbpedia.org/ontology/binomialAuthority	
+früher Name	http://dbpedia.org/ontology/formerName	
+von der UNESCO anerkannt Weltkulturerbe	http://dbpedia.org/ontology/WorldHeritageSite	
+Amtsnachfolger	http://dbpedia.org/ontology/predecessor	
+Amtsnachfolger	http://dbpedia.org/ontology/successor	
+Kirche	http://dbpedia.org/ontology/Church	
+Fertiger	http://dbpedia.org/ontology/manufacturer	
+erbaut im	http://dbpedia.org/ontology/yearOfConstruction	
+Gaelic Games Spieler	http://dbpedia.org/ontology/GaelicGamesPlayer	
+Tiefe	http://dbpedia.org/ontology/depth	
+Entrez-Gene-ID	http://dbpedia.org/ontology/entrezgene	
+produzieren	http://dbpedia.org/ontology/company	
+produzieren	http://dbpedia.org/ontology/executiveProducer	
+Länge	http://dbpedia.org/ontology/length	
+Abgeordneter	http://dbpedia.org/ontology/MemberOfParliament	
+Abgeordneter	http://dbpedia.org/ontology/Deputy	
+Abgeordneter	http://dbpedia.org/ontology/Congressman	
+Trickfilm	http://dbpedia.org/ontology/Cartoon	
+Verfasserin von	http://dbpedia.org/ontology/writer	
+Infrastruktur	http://dbpedia.org/ontology/Infrastructure	
+Formel Eins Liga	http://dbpedia.org/ontology/FormulaOneRacingLeague	
+Radiomoderatorin	http://dbpedia.org/ontology/RadioHost	
+Kanzler	http://dbpedia.org/ontology/Chancellor	
+Museum	http://dbpedia.org/ontology/Museum	
+ansässig in	http://dbpedia.org/ontology/county	
+ansässig in	http://dbpedia.org/ontology/department	
+ansässig in	http://dbpedia.org/ontology/province	
+ansässig in	http://dbpedia.org/ontology/canton	
+ansässig in	http://dbpedia.org/ontology/arrondissement	
+ansässig in	http://dbpedia.org/ontology/district	
+ansässig in	http://dbpedia.org/ontology/location	
+ansässig in	http://dbpedia.org/ontology/region	
+ansässig in	http://dbpedia.org/ontology/range	
+ansässig in	http://dbpedia.org/ontology/locatedInArea	
+ansässig in	http://dbpedia.org/ontology/state	
+ansässig in	http://dbpedia.org/ontology/country	
+ansässig in	http://dbpedia.org/ontology/city	
+Beachvolleyballspielerin	http://dbpedia.org/ontology/BeachVolleyballPlayer	
+Künstler von	http://dbpedia.org/ontology/Artist	
+Künstler von	http://dbpedia.org/ontology/musicalArtist	
+groß	http://dbpedia.org/ontology/height	
+groß	http://dbpedia.org/ontology/elevation	
+Volleyballtrainer	http://dbpedia.org/ontology/VolleyballCoach	
+Radfahrer	http://dbpedia.org/ontology/Cyclist	
+Vorgänger	http://dbpedia.org/ontology/successor	
+Vorgänger	http://dbpedia.org/ontology/predecessor	
+Ginko	http://dbpedia.org/ontology/Ginkgo	
+Kommandantin in	http://dbpedia.org/ontology/commander	
+lokalisiert in	http://dbpedia.org/ontology/county	
+lokalisiert in	http://dbpedia.org/ontology/arrondissement	
+lokalisiert in	http://dbpedia.org/ontology/department	
+lokalisiert in	http://dbpedia.org/ontology/canton	
+lokalisiert in	http://dbpedia.org/ontology/district	
+lokalisiert in	http://dbpedia.org/ontology/province	
+lokalisiert in	http://dbpedia.org/ontology/state	
+lokalisiert in	http://dbpedia.org/ontology/country	
+lokalisiert in	http://dbpedia.org/ontology/locatedInArea	
+lokalisiert in	http://dbpedia.org/ontology/city	
+lokalisiert in	http://dbpedia.org/ontology/range	
+lokalisiert in	http://dbpedia.org/ontology/region	
+lokalisiert in	http://dbpedia.org/ontology/location	
+Label	http://dbpedia.org/ontology/RecordLabel	
+Schwimmerin	http://dbpedia.org/ontology/Swimmer	
+Einheit	http://dbpedia.org/ontology/militaryUnit	
+Autor von	http://dbpedia.org/ontology/Writer	
+Autor von	http://dbpedia.org/ontology/Author	
+Autor von	http://dbpedia.org/ontology/writer	
+Enddatum von	http://dbpedia.org/ontology/completionDate	
+Badmintonspieler	http://dbpedia.org/ontology/BadmintonPlayer	
+benachbart Gemeinde	http://dbpedia.org/ontology/neighboringMunicipality	
+American Football Liga	http://dbpedia.org/ontology/AmericanFootballLeague	
+gestalten	http://dbpedia.org/ontology/designer	
+Gebäude	http://dbpedia.org/ontology/Building	
+erbauen	http://dbpedia.org/ontology/architect	
+Standort	http://dbpedia.org/ontology/garrison	
+großstädtisch Bevölkerungsdichte	http://dbpedia.org/ontology/populationMetroDensity	
+münden in	http://dbpedia.org/ontology/riverMouth	
+münden in	http://dbpedia.org/ontology/mouthMountain	
+münden in	http://dbpedia.org/ontology/mouthPlace	
+Bedingung	http://dbpedia.org/ontology/requirement	
+Restaurant	http://dbpedia.org/ontology/Restaurant	
+Fußballer	http://dbpedia.org/ontology/SoccerPlayer	
+Rangstufe	http://dbpedia.org/ontology/class	
+Liste	http://dbpedia.org/ontology/List	
+Samenpflanze	http://dbpedia.org/ontology/FloweringPlant	
+Ortsnetzkennzahl	http://dbpedia.org/ontology/areaCode	
+Manager	http://dbpedia.org/ontology/team	
+Manager	http://dbpedia.org/ontology/SportsManager	
+Manager	http://dbpedia.org/ontology/manager	
+Manager	http://dbpedia.org/ontology/managerClub	
+starten von	http://dbpedia.org/ontology/launchDate	
+starten am	http://dbpedia.org/ontology/launchDate	
+starten von	http://dbpedia.org/ontology/associatedRocket	
+starten am	http://dbpedia.org/ontology/associatedRocket	
+Herkunftsland	http://dbpedia.org/ontology/sourceCountry	
+Hersteller	http://dbpedia.org/ontology/manufacturer	
+Snookerweltmeister	http://dbpedia.org/ontology/SnookerChamp	
+Volleyballspielerin	http://dbpedia.org/ontology/VolleyballPlayer	
+Titelliste	http://dbpedia.org/ontology/TrackList	
+B-Seite	http://dbpedia.org/ontology/bSide	
+Amtsinhaber	http://dbpedia.org/ontology/OfficeHolder	
+stehen für	http://dbpedia.org/ontology/callsignMeaning	
+Fußball-Liga	http://dbpedia.org/ontology/SoccerLeague	
+Mollusken	http://dbpedia.org/ontology/Mollusca	
+Tätigkeit	http://dbpedia.org/ontology/occupation	
+Startrampe	http://dbpedia.org/ontology/LaunchPad	
+Gewerkschaft	http://dbpedia.org/ontology/TradeUnion	
+neueste Version	http://dbpedia.org/ontology/latestReleaseVersion	
+in Benutzung seit	http://dbpedia.org/ontology/dateUse	
+Garnison	http://dbpedia.org/ontology/garrison	
+Charakter	http://dbpedia.org/ontology/FictionalCharacter	
+Menschen-Gen	http://dbpedia.org/ontology/HumanGene	
+eukaryotisch	http://dbpedia.org/ontology/Eukaryote	
+Eisenbahn	http://dbpedia.org/ontology/Train	
+Radfahrmannschaft	http://dbpedia.org/ontology/CyclingTeam	
+Durchschnittsgeschwindigkeit	http://dbpedia.org/ontology/averageSpeed	
+übergeordnet	http://dbpedia.org/ontology/commandStructure	
+Comiczeichnerin	http://dbpedia.org/ontology/ComicsCreator	
+American Football Spieler	http://dbpedia.org/ontology/AmericanFootballPlayer	
+Literaturgenre	http://dbpedia.org/ontology/literaryGenre	
+Polo-Liga	http://dbpedia.org/ontology/PoloLeague	
+Dewey Decimal Classification	http://dbpedia.org/ontology/dcc	
+Modedesigner	http://dbpedia.org/ontology/FashionDesigner	
+berühmte Persönlichkeit	http://dbpedia.org/ontology/Celebrity	
+Gelände von besondere wissenschaftlich Interesse	http://dbpedia.org/ontology/SiteOfSpecialScientificInterest	
+Frau	http://dbpedia.org/ontology/spouse	
+Curler	http://dbpedia.org/ontology/Curler	
+Sportereignis	http://dbpedia.org/ontology/SportsEvent	
+Magazin	http://dbpedia.org/ontology/PeriodicalLiterature	
+Magazin	http://dbpedia.org/ontology/Magazine	
+literarisch Gattung	http://dbpedia.org/ontology/literaryGenre	
+öffentlich Personenverkehrssystem	http://dbpedia.org/ontology/PublicTransitSystem	
+Betrieb	http://dbpedia.org/ontology/company	
+Betrieb	http://dbpedia.org/ontology/Company	
+absolut Helligkeit	http://dbpedia.org/ontology/absoluteMagnitude	
+Wrestlingveranstaltung	http://dbpedia.org/ontology/WrestlingEvent	
+Standort	http://dbpedia.org/ontology/Place	
+Volleyballerin	http://dbpedia.org/ontology/VolleyballPlayer	
+Dienststelle	http://dbpedia.org/ontology/GovernmentAgency	
+Kraftwerk	http://dbpedia.org/ontology/PowerStation	
+prähistorisch Periode	http://dbpedia.org/ontology/PrehistoricalPeriod	
+Bergkette	http://dbpedia.org/ontology/MountainRange	
+Tochter	http://dbpedia.org/ontology/child	
+Tochter	http://dbpedia.org/ontology/parent	
+Unternehmen	http://dbpedia.org/ontology/company	
+Zeitzone	http://dbpedia.org/ontology/timeZone	
+Kamera	http://dbpedia.org/ontology/Camera	
+Tennisspieler	http://dbpedia.org/ontology/TennisPlayer	
+Lacrosse-Liga	http://dbpedia.org/ontology/LacrosseLeague	
+zum ersten Mal spielen für	http://dbpedia.org/ontology/debutTeam	
+Embryologie	http://dbpedia.org/ontology/Embryology	
+Lacrossespieler	http://dbpedia.org/ontology/LacrossePlayer	
+löblich	http://dbpedia.org/ontology/Noble	
+veröffentlicht am	http://dbpedia.org/ontology/releaseDate	
+Krebstier	http://dbpedia.org/ontology/Crustacean	
+Dezernat	http://dbpedia.org/ontology/Department	
+Australian Football Liga	http://dbpedia.org/ontology/AustralianFootballLeague	
+Zeitschrift	http://dbpedia.org/ontology/PeriodicalLiterature	
+Zeitschrift	http://dbpedia.org/ontology/Magazine	
+Platz	http://dbpedia.org/ontology/Venue	
+Stierkämpfer	http://dbpedia.org/ontology/BullFighter	
+gemischt Kampfkunst-Liga	http://dbpedia.org/ontology/MixedMartialArtsLeague	
+Richterin	http://dbpedia.org/ontology/Judge	
+Traube	http://dbpedia.org/ontology/Grape	
+Ethnizität	http://dbpedia.org/ontology/ethnicity	
+Weite	http://dbpedia.org/ontology/width	
+Wassermühle	http://dbpedia.org/ontology/Watermill	
+Astronautin	http://dbpedia.org/ontology/Astronaut	
+benötigen	http://dbpedia.org/ontology/requirement	
+kürzen	http://dbpedia.org/ontology/abbreviation	
+Lokalität	http://dbpedia.org/ontology/Locality	
+Pokerspielerin	http://dbpedia.org/ontology/PokerPlayer	
+gehören	http://dbpedia.org/ontology/related	
+Hochschultrainer	http://dbpedia.org/ontology/CollegeCoach	
+kämpfen in	http://dbpedia.org/ontology/battle	
+Polyeder	http://dbpedia.org/ontology/Polyhedron	
+Mode	http://dbpedia.org/ontology/Fashion	
+Band von	http://dbpedia.org/ontology/Band	
+Band von	http://dbpedia.org/ontology/musicalBand	
+Einrichtungsausweis	http://dbpedia.org/ontology/facilityId	
+Musikstück	http://dbpedia.org/ontology/MusicalWork	
+vorherig Trainer	http://dbpedia.org/ontology/formerCoach	
+Wohnsitz	http://dbpedia.org/ontology/residence	
+Rugbyverein	http://dbpedia.org/ontology/RugbyClub	
+Bodybuilderin	http://dbpedia.org/ontology/BodyBuilder	
+Beach Volleyballspieler	http://dbpedia.org/ontology/BeachVolleyballPlayer	
+aufgenommen in	http://dbpedia.org/ontology/recordedIn	
+aufgenommen am	http://dbpedia.org/ontology/recordedIn	
+aufgenommen nach	http://dbpedia.org/ontology/recordedIn	
+aufgenommen vor	http://dbpedia.org/ontology/recordedIn	
+aufgenommen in	http://dbpedia.org/ontology/subsequentWork	
+aufgenommen am	http://dbpedia.org/ontology/subsequentWork	
+aufgenommen nach	http://dbpedia.org/ontology/subsequentWork	
+aufgenommen vor	http://dbpedia.org/ontology/subsequentWork	
+aufgenommen in	http://dbpedia.org/ontology/recordDate	
+aufgenommen am	http://dbpedia.org/ontology/recordDate	
+aufgenommen nach	http://dbpedia.org/ontology/recordDate	
+aufgenommen vor	http://dbpedia.org/ontology/recordDate	
+aufgenommen in	http://dbpedia.org/ontology/previousWork	
+aufgenommen am	http://dbpedia.org/ontology/previousWork	
+aufgenommen nach	http://dbpedia.org/ontology/previousWork	
+aufgenommen vor	http://dbpedia.org/ontology/previousWork	
+dazugehörig Musikerin	http://dbpedia.org/ontology/associatedMusicalArtist	
+Mädchen	http://dbpedia.org/ontology/child	
+vorangegangen Arbeit	http://dbpedia.org/ontology/previousWork	
+Örtlichkeit	http://dbpedia.org/ontology/Locality	
+Professor	http://dbpedia.org/ontology/Professor	
+Orden	http://dbpedia.org/ontology/ClericalOrder	
+abheben von	http://dbpedia.org/ontology/associatedRocket	
+voraussetzen	http://dbpedia.org/ontology/requirement	
+befinden in	http://dbpedia.org/ontology/city	
+befinden in	http://dbpedia.org/ontology/state	
+befinden in	http://dbpedia.org/ontology/country	
+befinden in	http://dbpedia.org/ontology/region	
+befinden in	http://dbpedia.org/ontology/locatedInArea	
+befinden in	http://dbpedia.org/ontology/district	
+befinden in	http://dbpedia.org/ontology/range	
+befinden in	http://dbpedia.org/ontology/county	
+befinden in	http://dbpedia.org/ontology/province	
+befinden in	http://dbpedia.org/ontology/conton	
+befinden in	http://dbpedia.org/ontology/arrondissement	
+befinden in	http://dbpedia.org/ontology/location	
+befinden in	http://dbpedia.org/ontology/department	
+Leuchtturm	http://dbpedia.org/ontology/Lighthouse	
+Abgeordnete	http://dbpedia.org/ontology/Congressman	
+Abgeordnete	http://dbpedia.org/ontology/Deputy	
+Abgeordnete	http://dbpedia.org/ontology/MemberOfParliament	
+Veröffentlichungsdatum von	http://dbpedia.org/ontology/releaseDate	
+Zeitraum	http://dbpedia.org/ontology/epoch	
+ausgestrahlt mit	http://dbpedia.org/ontology/frequency	
+Women's Tennis Assoziation Turnier	http://dbpedia.org/ontology/WomensTennisAssociationTournament	
+Heiliger	http://dbpedia.org/ontology/Saint	
+Aufnahmedatum	http://dbpedia.org/ontology/recordDate	
+Team	http://dbpedia.org/ontology/SportsTeam	
+Team	http://dbpedia.org/ontology/team	
+stattfinden in	http://dbpedia.org/ontology/place	
+Lage des Naturschutzes	http://dbpedia.org/ontology/conservationStatus	
+Bildungseinrichtung	http://dbpedia.org/ontology/EducationalInstitution	
+Basketballmannschaft	http://dbpedia.org/ontology/BasketballTeam	
+Person	http://dbpedia.org/ontology/Person	
+Spin-Off	http://dbpedia.org/ontology/related	
+Baseballspielerin	http://dbpedia.org/ontology/BaseballPlayer	
+Modeschöpfer	http://dbpedia.org/ontology/FashionDesigner	
+Ideologie	http://dbpedia.org/ontology/Ideology	
+Blaualge	http://dbpedia.org/ontology/GreenAlga	
+Höhenzug	http://dbpedia.org/ontology/MountainRange	
+Manga	http://dbpedia.org/ontology/Manga	
+beinhalten	http://dbpedia.org/ontology/phylum	
+beinhalten	http://dbpedia.org/ontology/kingdom	
+beinhalten	http://dbpedia.org/ontology/family	
+beinhalten	http://dbpedia.org/ontology/class	
+beinhalten	http://dbpedia.org/ontology/order	
+Volleyballspieler	http://dbpedia.org/ontology/VolleyballPlayer	
+Laufzeit von	http://dbpedia.org/ontology/runtime	
+Videospiele-Liga	http://dbpedia.org/ontology/VideoGamesLeague	
+funkferngesteuert Modellautorennen-Liga	http://dbpedia.org/ontology/RadioControlledRacingLeague	
+Farn	http://dbpedia.org/ontology/Fern	
+Ehegatte	http://dbpedia.org/ontology/spouse	
+Essen	http://dbpedia.org/ontology/Food	
+Anschrift	http://dbpedia.org/ontology/address	
+Maler	http://dbpedia.org/ontology/Painter	
+Datum der Veröffentlichung von	http://dbpedia.org/ontology/releaseDate	
+Premierminister	http://dbpedia.org/ontology/PrimeMinister	
+Anwaltsfirma	http://dbpedia.org/ontology/LawFirm	
+Baseballteam	http://dbpedia.org/ontology/BaseballTeam	
+Binnenschiffsverkehrstunnel	http://dbpedia.org/ontology/WaterwayTunnel	
+Kurzwort	http://dbpedia.org/ontology/abbreviation	
+Synonym	http://dbpedia.org/ontology/synonym	
+Schwesterkanal	http://dbpedia.org/ontology/sisterStation	
+gehören zu	http://dbpedia.org/ontology/family	
+gehören zu	http://dbpedia.org/ontology/class	
+gehören zu	http://dbpedia.org/ontology/phylum	
+gehören zu	http://dbpedia.org/ontology/genus	
+gehören zu	http://dbpedia.org/ontology/kingdom	
+gehören zu	http://dbpedia.org/ontology/order	
+Filmfestival	http://dbpedia.org/ontology/FilmFestival	
+aktiv seit	http://dbpedia.org/ontology/activeYearsStartDate	
+aktiv bis	http://dbpedia.org/ontology/activeYearsStartDate	
+aktiv seit	http://dbpedia.org/ontology/activeYearsEndDate	
+aktiv bis	http://dbpedia.org/ontology/activeYearsEndDate	
+aktiv seit	http://dbpedia.org/ontology/activeYearsStartYear	
+aktiv bis	http://dbpedia.org/ontology/activeYearsStartYear	
+aktiv seit	http://dbpedia.org/ontology/activeYearsEndYear	
+aktiv bis	http://dbpedia.org/ontology/activeYearsEndYear	
+höchstgelegen Gebiet	http://dbpedia.org/ontology/highestRegion	
+Asteroid	http://dbpedia.org/ontology/Asteroid	
+chemisch Substanz	http://dbpedia.org/ontology/ChemicalSubstance	
+Raumfähre	http://dbpedia.org/ontology/SpaceShuttle	
+besucht College	http://dbpedia.org/ontology/almaMater	
+aufnehmen	http://dbpedia.org/ontology/capacity	
+Palmfarn	http://dbpedia.org/ontology/Cycad	
+Basketballspieler	http://dbpedia.org/ontology/BasketballPlayer	
+Theaterstück	http://dbpedia.org/ontology/Play	
+Datum der Fertigstellung von	http://dbpedia.org/ontology/completionDate	
+Berg	http://dbpedia.org/ontology/Mountain	
+betragen auf	http://dbpedia.org/ontology/orbitalPeriod	
+betragen auf	http://dbpedia.org/ontology/meanTemperature	
+Baujahr von	http://dbpedia.org/ontology/yearOfConstruction	
+Nation	http://dbpedia.org/ontology/State	
+Nation	http://dbpedia.org/ontology/Country	
+Organisation	http://dbpedia.org/ontology/Organisation	
+gehen zu	http://dbpedia.org/ontology/education	
+Heimatstadt	http://dbpedia.org/ontology/hometown	
+Grotte	http://dbpedia.org/ontology/Cave	
+Durchschnittstemperatur auf	http://dbpedia.org/ontology/meanTemperature	
+Fußballmeisterschaft	http://dbpedia.org/ontology/SoccerTournament	
+Fußballturnier	http://dbpedia.org/ontology/SoccerTournament	
+Schriftsteller von	http://dbpedia.org/ontology/writer	
+Schriftsteller von	http://dbpedia.org/ontology/Writer	
+Beschäftigung	http://dbpedia.org/ontology/Activity	
+Schule	http://dbpedia.org/ontology/School	
+Bezugsgitter	http://dbpedia.org/ontology/gridReference	
+schreiben	http://dbpedia.org/ontology/musicalArtist	
+schreiben	http://dbpedia.org/ontology/composer	
+schreiben	http://dbpedia.org/ontology/literaryGenre	
+schreiben	http://dbpedia.org/ontology/writer	
+schreiben	http://dbpedia.org/ontology/musicalBand	
+schreiben	http://dbpedia.org/ontology/genre	
+Fahne	http://dbpedia.org/ontology/Flag	
+Fakultätsgröße	http://dbpedia.org/ontology/facultySize	
+machen	http://dbpedia.org/ontology/genre	
+Herstellerfirma	http://dbpedia.org/ontology/manufacturer	
+Motorradfahrer	http://dbpedia.org/ontology/MotorcycleRider	
+Großstadtbevölkerung	http://dbpedia.org/ontology/populationMetro	
+Kongress	http://dbpedia.org/ontology/Convention	
+Bienenschwarm	http://dbpedia.org/ontology/Swarm	
+dazugehören	http://dbpedia.org/ontology/related	
+Turnerin	http://dbpedia.org/ontology/Gymnast	
+Vorläufer von	http://dbpedia.org/ontology/precursor	
+lokalisiert in	http://dbpedia.org/ontology/locationCountry	
+lokalisiert in	http://dbpedia.org/ontology/locationCity	
+militärisch Konflikt	http://dbpedia.org/ontology/MilitaryConflict	
+CD	http://dbpedia.org/ontology/Album	
+Homepage	http://dbpedia.org/ontology/Webiste	
+Lacrossespielerin	http://dbpedia.org/ontology/LacrossePlayer	
+Absolutwert	http://dbpedia.org/ontology/madgnitude	
+Höhe	http://dbpedia.org/ontology/elevation	
+Beach Volleyballer	http://dbpedia.org/ontology/BeachVolleyballPlayer	
+Mörderin	http://dbpedia.org/ontology/Murderer	
+Handballspielerin	http://dbpedia.org/ontology/HandballPlayer	
+Sportler	http://dbpedia.org/ontology/Athlete	
+großzügig	http://dbpedia.org/ontology/Noble	
+versorgen	http://dbpedia.org/ontology/numberOfStudents	
+Shirtnummer	http://dbpedia.org/ontology/number	
+Shirtnummer	http://dbpedia.org/ontology/squadNumber	
+Gründerunternehmen	http://dbpedia.org/ontology/parentCompany	
+ethnisch Gruppe	http://dbpedia.org/ontology/EthnicGroup	
+Eishockeyspielerin	http://dbpedia.org/ontology/IceHockeyPlayer	
+Sohn	http://dbpedia.org/ontology/child	
+Sohn	http://dbpedia.org/ontology/parent	
+Canadian Football Liga	http://dbpedia.org/ontology/CanadianFootballLeague	
+Formel 1 Fahrerin	http://dbpedia.org/ontology/FormulaOneRacer	
+Schmelztemperatur	http://dbpedia.org/ontology/meltingPoint	
+Flughafen	http://dbpedia.org/ontology/Airport	
+Geburtsname	http://dbpedia.org/ontology/birthName	
+Geburtsname	http://dbpedia.org/ontology/formerName	
+Fertigstellungstermin von	http://dbpedia.org/ontology/completionDate	
+Quelle	http://dbpedia.org/ontology/source	
+Folge von	http://dbpedia.org/ontology/series	
+steuern	http://dbpedia.org/ontology/team	
+steuern	http://dbpedia.org/ontology/managerClub	
+steuern	http://dbpedia.org/ontology/manager	
+Sender	http://dbpedia.org/ontology/RadioStation	
+Sender	http://dbpedia.org/ontology/TelevisionStation	
+Mannschaftsnummer	http://dbpedia.org/ontology/squadNumber	
+Mannschaftsnummer	http://dbpedia.org/ontology/number	
+Medikament	http://dbpedia.org/ontology/Drug	
+Orden	http://dbpedia.org/ontology/Decoration	
+Verteilerin	http://dbpedia.org/ontology/distributor	
+Schneiden	http://dbpedia.org/ontology/editing	
+Elternteil	http://dbpedia.org/ontology/child	
+Elternteil	http://dbpedia.org/ontology/parent	
+Veranstalterin von	http://dbpedia.org/ontology/presenter	
+Nahrungsmittel	http://dbpedia.org/ontology/Food	
+Streitkräfte	http://dbpedia.org/ontology/militaryBranch	
+Baseballspieler	http://dbpedia.org/ontology/BaseballPlayer	
+natürlich Gegend	http://dbpedia.org/ontology/NaturalRegion	
+verbunden Rakete von	http://dbpedia.org/ontology/associatedRocket	
+Städtbevölkerungsdichte	http://dbpedia.org/ontology/populationUrbanDensity	
+Motto	http://dbpedia.org/ontology/motto	
+Episode von	http://dbpedia.org/ontology/TelevisionEpisode	
+Episode von	http://dbpedia.org/ontology/series	
+Gruppennummer	http://dbpedia.org/ontology/number	
+Gruppennummer	http://dbpedia.org/ontology/squadNumber	
+Tennisspielerin	http://dbpedia.org/ontology/TennisPlayer	
+Maskottchen	http://dbpedia.org/ontology/mascot	
+dienen in	http://dbpedia.org/ontology/militaryUnit	
+dienen in	http://dbpedia.org/ontology/militaryBranch	
+Musikband von	http://dbpedia.org/ontology/musicalBand	
+filmen	http://dbpedia.org/ontology/cinematographer	
+bleibend Sicherung	http://dbpedia.org/ontology/structuralSystem	
+Befehlsstruktur	http://dbpedia.org/ontology/commandStructure	
+städtisch Einwohnerdichte	http://dbpedia.org/ontology/populationUrbanDensity	
+Tunnel	http://dbpedia.org/ontology/Tunnel	
+Genlocus	http://dbpedia.org/ontology/GeneLocation	
+Mitglied	http://dbpedia.org/ontology/kingdom	
+Mitglied	http://dbpedia.org/ontology/order	
+Mitglied	http://dbpedia.org/ontology/genus	
+Mitglied	http://dbpedia.org/ontology/phylum	
+Mitglied	http://dbpedia.org/ontology/family	
+Mitglied	http://dbpedia.org/ontology/class	
+Schrein	http://dbpedia.org/ontology/Shrine	
+menschlich Gen	http://dbpedia.org/ontology/HumanGene	
+Skater	http://dbpedia.org/ontology/Skater	
+Urheberin von	http://dbpedia.org/ontology/writer	
+Urheberin von	http://dbpedia.org/ontology/creator	
+Golferin	http://dbpedia.org/ontology/GolfPlayer	
+Religion	http://dbpedia.org/ontology/religion	
+geschnitten	http://dbpedia.org/ontology/editing	
+Stadt	http://dbpedia.org/ontology/Town	
+Stadt	http://dbpedia.org/ontology/City	
+Vorsitzende	http://dbpedia.org/ontology/chairman	
+entstehen am	http://dbpedia.org/ontology/formationYear	
+entstehen in	http://dbpedia.org/ontology/formationYear	
+entstehen am	http://dbpedia.org/ontology/formationDate	
+entstehen in	http://dbpedia.org/ontology/formationDate	
+freigegeben am	http://dbpedia.org/ontology/computingMedia	
+Skiort	http://dbpedia.org/ontology/SkiResort	
+Provinz	http://dbpedia.org/ontology/Province	
+gasförmig ab	http://dbpedia.org/ontology/boilingPoint	
+gasförmig bei	http://dbpedia.org/ontology/boilingPoint	
+gasförmig ab	http://dbpedia.org/ontology/sublimationPoint	
+gasförmig bei	http://dbpedia.org/ontology/sublimationPoint	
+ICAO-Code	http://dbpedia.org/ontology/icaoLocationIdentifier	
+baustatisch Skizze	http://dbpedia.org/ontology/structuralSystem	
+Stationskennung der Internationalen Fernmeldeunion von	http://dbpedia.org/ontology/callsignMeaning	
+Pokerspieler	http://dbpedia.org/ontology/PokerPlayer	
+Airline	http://dbpedia.org/ontology/Airline	
+fiktiv Charakter	http://dbpedia.org/ontology/FictionalCharacter	
+Gründungsdatum	http://dbpedia.org/ontology/foundingDate	
+Bürgermeisterin	http://dbpedia.org/ontology/leader	
+Bürgermeisterin	http://dbpedia.org/ontology/Mayor	
+Weltraummission	http://dbpedia.org/ontology/SpaceMission	
+vorhergehend Arbeit	http://dbpedia.org/ontology/previousWork	
+Vorwahl	http://dbpedia.org/ontology/areaCode	
+Vizekandidatin	http://dbpedia.org/ontology/runningMate	
+Schiedsrichterin	http://dbpedia.org/ontology/Referee	
+Mitglied eines Sportteams	http://dbpedia.org/ontology/SportsTeamMember	
+Paintball-Liga	http://dbpedia.org/ontology/PaintballLeague	
+Produktionsleiter	http://dbpedia.org/ontology/executiveProducer	
+American Football Spielerin	http://dbpedia.org/ontology/AmericanFootballPlayer	
+vorangehen	http://dbpedia.org/ontology/predecessor	
+vorangehen	http://dbpedia.org/ontology/successor	
+Handballteam-Liga	http://dbpedia.org/ontology/HandballLeague	
+Eiskunstläufer	http://dbpedia.org/ontology/Skater	
+Eiskunstläufer	http://dbpedia.org/ontology/FigureSkater	
+Kürzel	http://dbpedia.org/ontology/abbreviation	
+Roman	http://dbpedia.org/ontology/Novel	
+Epoche	http://dbpedia.org/ontology/epoch	
+militärisch Auseinandersetzung	http://dbpedia.org/ontology/MilitaryConflict	
+ISSN	http://dbpedia.org/ontology/issn	
+Basketballteam	http://dbpedia.org/ontology/BasketballTeam	
+betreiben	http://dbpedia.org/ontology/operatedBy	
+betreiben	http://dbpedia.org/ontology/operator	
+Säuger	http://dbpedia.org/ontology/Mammal	
+Preis	http://dbpedia.org/ontology/award	
+Preis	http://dbpedia.org/ontology/Award	
+Steuer	http://dbpedia.org/ontology/Tax	
+Bruttoeinkommen	http://dbpedia.org/ontology/gross	
+Radsportturnier	http://dbpedia.org/ontology/CyclingCompetition	
+Library of Congress Classification	http://dbpedia.org/ontology/lcc	
+Präsidentin	http://dbpedia.org/ontology/President	
+Präsidentin	http://dbpedia.org/ontology/leader	
+Unterhaltungsroman	http://dbpedia.org/ontology/LightNovel	
+befehligen während	http://dbpedia.org/ontology/commander	
+befehligen während	http://dbpedia.org/ontology/militaryCommand	
+Apoapside	http://dbpedia.org/ontology/apoapsis	
+Sprache	http://dbpedia.org/ontology/Language	
+Sprache	http://dbpedia.org/ontology/spokenIn	
+Amtsträger	http://dbpedia.org/ontology/OfficeHolder	
+adelig	http://dbpedia.org/ontology/Noble	
+polnisch König	http://dbpedia.org/ontology/PolishKing	
+Musikerin von	http://dbpedia.org/ontology/MusicalArtist	
+Musikerin von	http://dbpedia.org/ontology/musicalArtist	
+Teil von	http://dbpedia.org/ontology/intercommunality	
+Teil von	http://dbpedia.org/ontology/mountainRange	
+Teil von	http://dbpedia.org/ontology/range	
+Wappenschild	http://dbpedia.org/ontology/Blazon	
+Jockey	http://dbpedia.org/ontology/Jockey	
+beerdigt in	http://dbpedia.org/ontology/restingPlace	
+Ligament	http://dbpedia.org/ontology/Ligament	
+städtisch Bevölkerung	http://dbpedia.org/ontology/populationUrban	
+mehrbändig Veröffentlichung	http://dbpedia.org/ontology/MultiVolumePublication	
+Agent	http://dbpedia.org/ontology/Agent	
+Entrez-ID	http://dbpedia.org/ontology/entrezgene	
+Filmbearbeitung	http://dbpedia.org/ontology/editing	
+Interpretin von	http://dbpedia.org/ontology/artist	
+Interpretin von	http://dbpedia.org/ontology/musicalBand	
+Interpretin von	http://dbpedia.org/ontology/musicalArtist	
+Platte	http://dbpedia.org/ontology/Album	
+Gesetzgebung	http://dbpedia.org/ontology/Legislature	
+gemischt Kampfkunstveranstaltung	http://dbpedia.org/ontology/MixedMartialArtsEvent	
+Muttergesellschaft	http://dbpedia.org/ontology/parentCompany	
+Dechantenamtshaus	http://dbpedia.org/ontology/Deanary	
+Tracklist	http://dbpedia.org/ontology/TrackList	
+Ort eines militärischen Konflikts	http://dbpedia.org/ontology/place	
+Fernsehsender	http://dbpedia.org/ontology/TelevisionStation	
+Windturbine	http://dbpedia.org/ontology/WindMotor	
+Erhöhung	http://dbpedia.org/ontology/elevation	
+Königin von Polen	http://dbpedia.org/ontology/PolishKing	
+Cricketspieler	http://dbpedia.org/ontology/Cricketer	
+liegen in	http://dbpedia.org/ontology/county	
+liegen bei	http://dbpedia.org/ontology/county	
+liegen in	http://dbpedia.org/ontology/elevation	
+liegen bei	http://dbpedia.org/ontology/elevation	
+liegen in	http://dbpedia.org/ontology/country	
+liegen bei	http://dbpedia.org/ontology/country	
+liegen in	http://dbpedia.org/ontology/province	
+liegen bei	http://dbpedia.org/ontology/province	
+liegen in	http://dbpedia.org/ontology/location	
+liegen bei	http://dbpedia.org/ontology/location	
+liegen in	http://dbpedia.org/ontology/conton	
+liegen bei	http://dbpedia.org/ontology/conton	
+liegen in	http://dbpedia.org/ontology/city	
+liegen bei	http://dbpedia.org/ontology/city	
+liegen in	http://dbpedia.org/ontology/state	
+liegen bei	http://dbpedia.org/ontology/state	
+liegen in	http://dbpedia.org/ontology/department	
+liegen bei	http://dbpedia.org/ontology/department	
+liegen in	http://dbpedia.org/ontology/maximumElevation	
+liegen bei	http://dbpedia.org/ontology/maximumElevation	
+liegen in	http://dbpedia.org/ontology/range	
+liegen bei	http://dbpedia.org/ontology/range	
+liegen in	http://dbpedia.org/ontology/locatedInArea	
+liegen bei	http://dbpedia.org/ontology/locatedInArea	
+liegen in	http://dbpedia.org/ontology/region	
+liegen bei	http://dbpedia.org/ontology/region	
+liegen in	http://dbpedia.org/ontology/district	
+liegen bei	http://dbpedia.org/ontology/district	
+liegen in	http://dbpedia.org/ontology/arrondissement	
+liegen bei	http://dbpedia.org/ontology/arrondissement	
+Herstellerin	http://dbpedia.org/ontology/manufacturer	
+gehören zu	http://dbpedia.org/ontology/related	
+Auto	http://dbpedia.org/ontology/Automobile	
+zusammengebaut in	http://dbpedia.org/ontology/assembly	
+Bach	http://dbpedia.org/ontology/Stream	
+Schwimmer	http://dbpedia.org/ontology/Swimmer	
+zugehörig Künstler	http://dbpedia.org/ontology/associatedMusicalArtist	
+Gridiron Football Spielerin	http://dbpedia.org/ontology/GridironFootballPlayer	
+Militärsangehörige	http://dbpedia.org/ontology/MilitaryPerson	
+Raumschiff	http://dbpedia.org/ontology/Spacecraft	
+Datum der Aufnahme von	http://dbpedia.org/ontology/recordDate	
+Künstlerin von	http://dbpedia.org/ontology/musicalArtist	
+Künstlerin von	http://dbpedia.org/ontology/Artist	
+geopolitisch Organisation	http://dbpedia.org/ontology/GeopoliticalOrganisation	
+Mannschaft	http://dbpedia.org/ontology/SportsTeam	
+entwickeln aus	http://dbpedia.org/ontology/precursor	
+Fabrik	http://dbpedia.org/ontology/Factory	
+Heim-Stadium	http://dbpedia.org/ontology/ground	
+Heim-Stadium	http://dbpedia.org/ontology/homeArena	
+Skigebiet	http://dbpedia.org/ontology/SkiArea	
+Gewicht	http://dbpedia.org/ontology/weight	
+Teil von	http://dbpedia.org/ontology/broadcastNetwork	
+Teil von	http://dbpedia.org/ontology/Installment	
+Phylum	http://dbpedia.org/ontology/phylum	
+Krieg	http://dbpedia.org/ontology/MilitaryConflict	
+Entwicklerin	http://dbpedia.org/ontology/developer	
+Titel von	http://dbpedia.org/ontology/album	
+Titel auf	http://dbpedia.org/ontology/album	
+Athletin	http://dbpedia.org/ontology/Athlete	
+Ringerin	http://dbpedia.org/ontology/Wrestler	
+Graduierter	http://dbpedia.org/ontology/almaMater	
+national Fußballverein	http://dbpedia.org/ontology/NationalSoccerClub	
+christlich Patriarch	http://dbpedia.org/ontology/ChristianPatriarch	
+Großstädtbevölkerungsdichte	http://dbpedia.org/ontology/populationMetroDensity	
+Devise	http://dbpedia.org/ontology/motto	
+Rundfunksender	http://dbpedia.org/ontology/Broadcaster	
+Erschaffer	http://dbpedia.org/ontology/creator	
+Format	http://dbpedia.org/ontology/format	
+zugehörig Musikerin	http://dbpedia.org/ontology/associatedMusicalArtist	
+Spielerin	http://dbpedia.org/ontology/team	
+darauffolgend Arbeit	http://dbpedia.org/ontology/subsequentWork	
+Musiker von	http://dbpedia.org/ontology/MusicalArtist	
+Musiker von	http://dbpedia.org/ontology/musicalArtist	
+Zeichentrickfilm	http://dbpedia.org/ontology/Cartoon	
+Flugzeug	http://dbpedia.org/ontology/Aircraft	
+Verwandte	http://dbpedia.org/ontology/relative	
+Delegierter	http://dbpedia.org/ontology/Deputy	
+Brief	http://dbpedia.org/ontology/Letter	
+Einkaufszentrum	http://dbpedia.org/ontology/ShoppingMall	
+erheben zu	http://dbpedia.org/ontology/maximumElevation	
+erheben zu	http://dbpedia.org/ontology/elevation	
+Sitz haben in	http://dbpedia.org/ontology/headquarter	
+Spieler	http://dbpedia.org/ontology/team	
+hoch	http://dbpedia.org/ontology/elevation	
+hoch	http://dbpedia.org/ontology/height	
+Siedepunkt	http://dbpedia.org/ontology/boilingPoint	
+Stadtbevölkerung	http://dbpedia.org/ontology/populationUrban	
+Werkverzeichnis	http://dbpedia.org/ontology/ArtistDiscography	
+ITU-Stationskennung von	http://dbpedia.org/ontology/callsignMeaning	
+Produkt	http://dbpedia.org/ontology/product	
+Station	http://dbpedia.org/ontology/Station	
+Sternsystem	http://dbpedia.org/ontology/Galaxy	
+Schöpferin	http://dbpedia.org/ontology/creator	
+Auslandsdienststelle	http://dbpedia.org/ontology/OverseasDepartment	
+Bandmitglied	http://dbpedia.org/ontology/bandMember	
+Vogel	http://dbpedia.org/ontology/Bird	
+Stationskennung der ITU von	http://dbpedia.org/ontology/callsignMeaning	
+ITU-Rufzeichen von	http://dbpedia.org/ontology/callsignMeaning	
+Wasserlauf	http://dbpedia.org/ontology/River	
+Oper	http://dbpedia.org/ontology/Opera	
+Rufname	http://dbpedia.org/ontology/commonName	
+Raumfahrerin	http://dbpedia.org/ontology/Astronaut	
+Angelegenheit	http://dbpedia.org/ontology/Case	
+Rennstrecke	http://dbpedia.org/ontology/RaceTrack	
+basieren auf	http://dbpedia.org/ontology/relatedMeanOfTransportation	
+heilig Ort	http://dbpedia.org/ontology/canonizedPlace	
+Mensch	http://dbpedia.org/ontology/Person	
+Mondkrater	http://dbpedia.org/ontology/LunarCrater	
+Klasse	http://dbpedia.org/ontology/class	
+Interpret von	http://dbpedia.org/ontology/musicalArtist	
+Interpret von	http://dbpedia.org/ontology/musicalBand	
+Interpret von	http://dbpedia.org/ontology/artist	
+Tischtennisspielerin	http://dbpedia.org/ontology/TableTennisPlayer	
+Klosterorden	http://dbpedia.org/ontology/ClericalOrder	
+Volkszugehörigkeit	http://dbpedia.org/ontology/ethnicity	
+hinüberführen	http://dbpedia.org/ontology/crosses	
+Aufenthaltsort	http://dbpedia.org/ontology/residence	
+Dartspieler	http://dbpedia.org/ontology/DartsPlayer	
+Herausgeber von	http://dbpedia.org/ontology/publisher	
+Athlet	http://dbpedia.org/ontology/Athlete	
+Gefängnis	http://dbpedia.org/ontology/Prison	
+Kreis	http://dbpedia.org/ontology/District	
+Rektor	http://dbpedia.org/ontology/rector	
+Fußballverein	http://dbpedia.org/ontology/SoccerClub	
+Fungus	http://dbpedia.org/ontology/Fungus	
+dicht an	http://dbpedia.org/ontology/closestCity	
+dicht an	http://dbpedia.org/ontology/nearestCity	
+Einwohnerdichte	http://dbpedia.org/ontology/populationDensity	
+Mutter	http://dbpedia.org/ontology/child	
+Mutter	http://dbpedia.org/ontology/parent	
+Fahrzeug	http://dbpedia.org/ontology/Automobile	
+Arachnide	http://dbpedia.org/ontology/Arachnid	
+Hubvolumen	http://dbpedia.org/ontology/displacement	
+beteiligt an	http://dbpedia.org/ontology/isPartOfMilitaryConflict	
+Film	http://dbpedia.org/ontology/Film	
+nobel	http://dbpedia.org/ontology/Noble	
+Farbname	http://dbpedia.org/ontology/colourName	
+Australian Football Spielerin	http://dbpedia.org/ontology/AustralianRulesFootballPlayer	
+Digitalkamera	http://dbpedia.org/ontology/DigitalCamera	
+moderieren	http://dbpedia.org/ontology/presenter	
+Schauspieler	http://dbpedia.org/ontology/Actor	
+zugehörig Musiker	http://dbpedia.org/ontology/associatedMusicalArtist	
+Adresse	http://dbpedia.org/ontology/address	
+Tierwelt	http://dbpedia.org/ontology/kingdom	
+Modeschöpferin	http://dbpedia.org/ontology/FashionDesigner	
+Kongressabgeordneter	http://dbpedia.org/ontology/Congressman	
+Ort der Aufnahme	http://dbpedia.org/ontology/recordedIn	
+geschrieben nach	http://dbpedia.org/ontology/previousWork	
+geschrieben vor	http://dbpedia.org/ontology/previousWork	
+geschrieben in	http://dbpedia.org/ontology/previousWork	
+geschrieben nach	http://dbpedia.org/ontology/subsequentWork	
+geschrieben vor	http://dbpedia.org/ontology/subsequentWork	
+geschrieben in	http://dbpedia.org/ontology/subsequentWork	
+geschrieben nach	http://dbpedia.org/ontology/language	
+geschrieben vor	http://dbpedia.org/ontology/language	
+geschrieben in	http://dbpedia.org/ontology/language	
+Datum	http://dbpedia.org/ontology/date	
+Album	http://dbpedia.org/ontology/album	
+Album	http://dbpedia.org/ontology/Album	
+abgenommen am	http://dbpedia.org/ontology/commissioningDate	
+Berühmtheit	http://dbpedia.org/ontology/Celebrity	
+Kommune	http://dbpedia.org/ontology/Municipality	
+Kommune	http://dbpedia.org/ontology/Settlement	
+Kleriker	http://dbpedia.org/ontology/Cleric	
+Ausschuss at	http://dbpedia.org/ontology/board	
+Weltraumfahrerin	http://dbpedia.org/ontology/Astronaut	
+Rundfunknetz	http://dbpedia.org/ontology/BroadcastNetwork	
+Rundfunknetz	http://dbpedia.org/ontology/broadcastNetwork	
+Botschafterin	http://dbpedia.org/ontology/Ambassador	
+Gründungsjahr	http://dbpedia.org/ontology/foundingYear	
+Tempel	http://dbpedia.org/ontology/Temple	
+Tal	http://dbpedia.org/ontology/Valley	
+Song von	http://dbpedia.org/ontology/album	
+Song auf	http://dbpedia.org/ontology/album	
+Song von	http://dbpedia.org/ontology/Song	
+Song auf	http://dbpedia.org/ontology/Song	
+Fernsehprogramm	http://dbpedia.org/ontology/completionDate	
+Formel 1 Fahrer	http://dbpedia.org/ontology/FormulaOneRacer	
+Astronaut	http://dbpedia.org/ontology/Astronaut	
+Bischof	http://dbpedia.org/ontology/ChristianBishop	
+Moos	http://dbpedia.org/ontology/Moss	
+Bahnstation	http://dbpedia.org/ontology/RailwayStation	
+vorangehend Arbeit	http://dbpedia.org/ontology/previousWork	
+fertigstellen am	http://dbpedia.org/ontology/completionDate	
+fertigstellen am	http://dbpedia.org/ontology/dateCompleted	
+Dachgesellschaft	http://dbpedia.org/ontology/parentCompany	
+aufteilen auf	http://dbpedia.org/ontology/division	
+fertig stellen am	http://dbpedia.org/ontology/dateCompleted	
+fertig stellen am	http://dbpedia.org/ontology/completionDate	
+Familienname	http://dbpedia.org/ontology/Surname	
+Käse	http://dbpedia.org/ontology/Cheese	
+Wissenschaftler	http://dbpedia.org/ontology/Scientist	
+Ehegattin	http://dbpedia.org/ontology/spouse	
+Dichte	http://dbpedia.org/ontology/density	
+höchst Gebiet	http://dbpedia.org/ontology/highestRegion	
+Protein	http://dbpedia.org/ontology/Protein	
+Parlamentsmitglied	http://dbpedia.org/ontology/MemberOfParliament	
+Kricket-Liga	http://dbpedia.org/ontology/CricketLeague	
+Stadtbezirk	http://dbpedia.org/ontology/CityDistrict	
+Stadtbezirk	http://dbpedia.org/ontology/Settlement	
+Stadtbezirk	http://dbpedia.org/ontology/Municipality	
+anfangen in	http://dbpedia.org/ontology/routeStart	
+anfangen bei	http://dbpedia.org/ontology/routeStart	
+anfangen an	http://dbpedia.org/ontology/routeStart	
+Musical	http://dbpedia.org/ontology/Musical	
+Instrument von	http://dbpedia.org/ontology/Instrument	
+Instrument von	http://dbpedia.org/ontology/instrument	
+Landschaft	http://dbpedia.org/ontology/Territory	
+Ergebnis des Sportwettkampfs	http://dbpedia.org/ontology/SportCompetitionResult	
+Volleyballtrainerin	http://dbpedia.org/ontology/VolleyballCoach	
+Community	http://dbpedia.org/ontology/Community	
+Gebirgszug	http://dbpedia.org/ontology/MountainRange	
+Schlacht	http://dbpedia.org/ontology/MilitaryConflict	
+Schlacht	http://dbpedia.org/ontology/battle	
+Kricketspieler	http://dbpedia.org/ontology/Cricketer	
+Quizmaster von	http://dbpedia.org/ontology/presenter	
+Farbe	http://dbpedia.org/ontology/Colour	
+Farbe	http://dbpedia.org/ontology/colourName	
+Australian Football Spieler	http://dbpedia.org/ontology/AustralianRulesFootballPlayer	
+Ableger	http://dbpedia.org/ontology/related	
+gesprochen in	http://dbpedia.org/ontology/spokenIn	
+ehemalig Trainer	http://dbpedia.org/ontology/formerCoach	
+Eishockeyspieler	http://dbpedia.org/ontology/IceHockeyPlayer	
+Eröffnungsfilm auf	http://dbpedia.org/ontology/openingFilm	
+beauftragt am	http://dbpedia.org/ontology/commissioningDate	
+verdampfen ab	http://dbpedia.org/ontology/boilingPoint	
+verdampfen bei	http://dbpedia.org/ontology/boilingPoint	
+Ort	http://dbpedia.org/ontology/place	
+Veranstalter von	http://dbpedia.org/ontology/presenter	
+Casino	http://dbpedia.org/ontology/Casino	
+Sporteinrichtung	http://dbpedia.org/ontology/SportFacility	
+Pornostar	http://dbpedia.org/ontology/Pornstar	
+Einkommen	http://dbpedia.org/ontology/revenue	
+Sublimationspunkt	http://dbpedia.org/ontology/sublimationPoint	
+Schlittschuhläufer	http://dbpedia.org/ontology/Skater	
+Gruppe	http://dbpedia.org/ontology/Group	
+Pharmazeutikum	http://dbpedia.org/ontology/Drug	
+PDA	http://dbpedia.org/ontology/InformationAppliance	
+Managerin	http://dbpedia.org/ontology/team	
+Managerin	http://dbpedia.org/ontology/manager	
+Managerin	http://dbpedia.org/ontology/managerClub	
+Managerin	http://dbpedia.org/ontology/SportsManager	
+Fortsetzungsarbeit	http://dbpedia.org/ontology/subsequentWork	
+heiraten	http://dbpedia.org/ontology/spouse	
+Gemeinde	http://dbpedia.org/ontology/Settlement	
+Gemeinde	http://dbpedia.org/ontology/Parish	
+Gemeinde	http://dbpedia.org/ontology/Municipality	
+Wasserfläche	http://dbpedia.org/ontology/areaWater	
+Stadtgebiet	http://dbpedia.org/ontology/areaUrban	
+Muskel	http://dbpedia.org/ontology/Muscle	
+Raumstation	http://dbpedia.org/ontology/SpaceStation	
+Snookerspieler	http://dbpedia.org/ontology/SnookerPlayer	
+Spielbank	http://dbpedia.org/ontology/Casino	
+Volleyball-Liga	http://dbpedia.org/ontology/VolleyballLeague	
+Wettbewerb	http://dbpedia.org/ontology/Tournament	
+Transportweg	http://dbpedia.org/ontology/RouteOfTransportation	
+Eishockey-Liga	http://dbpedia.org/ontology/IceHockeyLeague	
+gebaut im	http://dbpedia.org/ontology/yearOfConstruction	
+Kanal	http://dbpedia.org/ontology/completionDate	
+stationiert in	http://dbpedia.org/ontology/garrison	
+Geburtsdatum	http://dbpedia.org/ontology/birthDate	
+französisch Ort	http://dbpedia.org/ontology/FrenchLocality	
+Kardinal	http://dbpedia.org/ontology/Cardinal	
+Insekt	http://dbpedia.org/ontology/Insect	
+Behörde	http://dbpedia.org/ontology/office	
+groß Preis	http://dbpedia.org/ontology/GrandPrix	
+Name	http://dbpedia.org/ontology/Name	
+Land	http://dbpedia.org/ontology/locationCountry	
+benutzen	http://dbpedia.org/ontology/computingInput	
+Pflanze	http://dbpedia.org/ontology/Plant	
+Junge	http://dbpedia.org/ontology/child	
+Rennfahrerin	http://dbpedia.org/ontology/RacingDriver	
+lang	http://dbpedia.org/ontology/length	
+lang	http://dbpedia.org/ontology/runtime	
+Turnier der Women's Tennis Assoziation	http://dbpedia.org/ontology/WomensTennisAssociationTournament	
+Wettkampf	http://dbpedia.org/ontology/Tournament	
+Nachname	http://dbpedia.org/ontology/Surname	
+Anforderung	http://dbpedia.org/ontology/requirement	
+Stand des Naturschutzes	http://dbpedia.org/ontology/conservationStatus	
+Normalhöhennull	http://dbpedia.org/ontology/elevation	
+Lieferant	http://dbpedia.org/ontology/distributor	
+Fußballspieler	http://dbpedia.org/ontology/SoccerPlayer	
+Snookerweltrangliste	http://dbpedia.org/ontology/SnookerWorldRanking	
+Blütenpflanze	http://dbpedia.org/ontology/FloweringPlant	
+untergeordnet	http://dbpedia.org/ontology/commandStructure	
+entwickeln	http://dbpedia.org/ontology/designer	
+entwickeln	http://dbpedia.org/ontology/developer	
+öffentlich Dienst	http://dbpedia.org/ontology/PublicService	
+Radfahrteam	http://dbpedia.org/ontology/CyclingTeam	
+besiedelt Ort	http://dbpedia.org/ontology/PopulatedPlace	
+Gesamtfläche	http://dbpedia.org/ontology/areaTotal	
+Schlagader	http://dbpedia.org/ontology/Artery	
+besuchen	http://dbpedia.org/ontology/college	
+Nachfolger	http://dbpedia.org/ontology/predecessor	
+Nachfolger	http://dbpedia.org/ontology/successor	
+basierend auf	http://dbpedia.org/ontology/relatedMeanOfTransportation	
+Rechtsfall	http://dbpedia.org/ontology/LegalCase	
+Patriarch	http://dbpedia.org/ontology/ChristianPatriarch	
+Eigentümer	http://dbpedia.org/ontology/owner	
+haben	http://dbpedia.org/ontology/owner	
+Vizekandidat	http://dbpedia.org/ontology/runningMate	
+veröffentlichen am	http://dbpedia.org/ontology/releaseDate	
+veröffentlichen am	http://dbpedia.org/ontology/publisher	
+Nadelbaum	http://dbpedia.org/ontology/Conifer	
+Höhle	http://dbpedia.org/ontology/Cave	
+Convention	http://dbpedia.org/ontology/Convention	
+heiß Quelle	http://dbpedia.org/ontology/HotSpring	
+heiligsprechen in	http://dbpedia.org/ontology/canonizedPlace	
+christlich Glaubenssatz	http://dbpedia.org/ontology/ChristianDoctrine	
+chemisch Verbindung	http://dbpedia.org/ontology/ChemicalCompound	
+entwickelt für	http://dbpedia.org/ontology/computingPlatform	
+Rechtssache	http://dbpedia.org/ontology/LegalCase	
+Weltkulturdenkmal	http://dbpedia.org/ontology/WorldHeritageSite	
+Ausbau	http://dbpedia.org/ontology/structuralSystem	
+losschicken am	http://dbpedia.org/ontology/shipLaunch	
+angebunden Eisenbahnlinie	http://dbpedia.org/ontology/servingRailwayLine	
+errichtet im	http://dbpedia.org/ontology/yearOfConstruction	
+Kanzlerin	http://dbpedia.org/ontology/Chancellor	
+Format	http://dbpedia.org/ontology/programmeFormat	
+Hierarchie	http://dbpedia.org/ontology/commandStructure	
+Kongressabgeordnete	http://dbpedia.org/ontology/Congressman	
+Fisch	http://dbpedia.org/ontology/Fish	
+Knochen	http://dbpedia.org/ontology/Bone	
+religiös Gebäude	http://dbpedia.org/ontology/ReligiousBuilding	
+Curling-Liga	http://dbpedia.org/ontology/CurlingLeague	
+Feuerberg	http://dbpedia.org/ontology/Volcano	
+Releasedatum von	http://dbpedia.org/ontology/releaseDate	
+Sumoringerin	http://dbpedia.org/ontology/SumoWrestler	
+Standort von besondere wissenschaftlich Interesse	http://dbpedia.org/ontology/SiteOfSpecialScientificInterest	
+Kampfsport-Liga	http://dbpedia.org/ontology/MixedMartialArtsLeague	
+christlich Glaubenslehre	http://dbpedia.org/ontology/ChristianDoctrine	
+Bruttogehalt	http://dbpedia.org/ontology/gross	
+chemisch Element	http://dbpedia.org/ontology/ChemicalElement	
+ansagen	http://dbpedia.org/ontology/presenter	
+zum ersten Mal auftreten bei	http://dbpedia.org/ontology/debutTeam	
+Teil von	http://dbpedia.org/ontology/isPartOfMilitaryConflict	
+Feldhockey-Liga	http://dbpedia.org/ontology/FieldHockeyLeague	
+Ehefrau	http://dbpedia.org/ontology/spouse	
+Netballspieler	http://dbpedia.org/ontology/NetballPlayer	
+Kapazität	http://dbpedia.org/ontology/capacity	
+Bürgermeister	http://dbpedia.org/ontology/leader	
+Bürgermeister	http://dbpedia.org/ontology/Mayor	
+nah zu	http://dbpedia.org/ontology/closestCity	
+nah zu	http://dbpedia.org/ontology/nearestCity	
+ansässig in	http://dbpedia.org/ontology/address	
+EDV-Programm	http://dbpedia.org/ontology/Software	
+Werk	http://dbpedia.org/ontology/Work	
+Hochschule	http://dbpedia.org/ontology/University	
+Comicfigur	http://dbpedia.org/ontology/ComicsCharacter	
+graduieren an	http://dbpedia.org/ontology/almaMater	
+Datenbank	http://dbpedia.org/ontology/Database	
+öffentlich Verwaltung	http://dbpedia.org/ontology/PublicService	
+Kiellegung am	http://dbpedia.org/ontology/layingDown	
+Vizekanzlerin	http://dbpedia.org/ontology/viceChancellor	
+Eishockeymannschaft	http://dbpedia.org/ontology/HockeyTeam	
+Spielcasino	http://dbpedia.org/ontology/Casino	
+besucht Schule	http://dbpedia.org/ontology/almaMater	
+Sportlerin	http://dbpedia.org/ontology/Athlete	
+besucht Universität	http://dbpedia.org/ontology/almaMater	
+Tischtennisspieler	http://dbpedia.org/ontology/TableTennisPlayer	
+Vizepräsident	http://dbpedia.org/ontology/VicePresident	
+Baustil	http://dbpedia.org/ontology/architecturalStyle	
+Rat at	http://dbpedia.org/ontology/board	
+geistlich Orden	http://dbpedia.org/ontology/ClericalOrder	
+Animangafigure	http://dbpedia.org/ontology/AnimangaCharacter	
+American Football Mannschaft	http://dbpedia.org/ontology/AmericanFootballTeam	
+Pferdedresseur	http://dbpedia.org/ontology/HorseTrainer	
+Skaterin	http://dbpedia.org/ontology/Skater	
+Präfektur	http://dbpedia.org/ontology/Prefecture	
+Mäuse-Gen	http://dbpedia.org/ontology/MouseGene	
+Mühle	http://dbpedia.org/ontology/Mill	
+Schalentier	http://dbpedia.org/ontology/Crustacean	
+Schlittschuhläuferin	http://dbpedia.org/ontology/Skater	
+Snookerweltmeisterin	http://dbpedia.org/ontology/SnookerChamp	
+Raumfahrer	http://dbpedia.org/ontology/Astronaut	
+Veranstaltung mit verschieden Kampfsportarten	http://dbpedia.org/ontology/MixedMartialArtsEvent	
+Eiskunstläuferin	http://dbpedia.org/ontology/Skater	
+Eiskunstläuferin	http://dbpedia.org/ontology/FigureSkater	
+maximal Höhe	http://dbpedia.org/ontology/maximumElevation	
+Pfarrer	http://dbpedia.org/ontology/Priest	
+britisch Königtum	http://dbpedia.org/ontology/BritishRoyalty	
+Moderatorin von	http://dbpedia.org/ontology/Presenter	
+Moderatorin von	http://dbpedia.org/ontology/presenter	
+Moderatorin von	http://dbpedia.org/ontology/Host	
+Krustazee	http://dbpedia.org/ontology/Crustacean	
+Buch	http://dbpedia.org/ontology/Book	
+Straße	http://dbpedia.org/ontology/Road	
+Mutterfirma	http://dbpedia.org/ontology/parentCompany	
+alt Territorium	http://dbpedia.org/ontology/OldTerritory	
+bauen	http://dbpedia.org/ontology/company	
+Stadtverwaltung	http://dbpedia.org/ontology/Municipality	
+Komponistin	http://dbpedia.org/ontology/composer	
+Abschussrampe	http://dbpedia.org/ontology/LaunchPad	
+Bewertung	http://dbpedia.org/ontology/review	
+Urheber von	http://dbpedia.org/ontology/writer	
+Urheber von	http://dbpedia.org/ontology/creator	
+komponieren	http://dbpedia.org/ontology/composer	
+Firma	http://dbpedia.org/ontology/company	
+Schiffsbreite	http://dbpedia.org/ontology/shipBeam	
+Vorort von	http://dbpedia.org/ontology/intercommunality	
+Zug	http://dbpedia.org/ontology/Train	
+Gemeinde	http://dbpedia.org/ontology/Community	
+gemeindeübergreifend	http://dbpedia.org/ontology/Intercommunality	
+gemeindeübergreifend	http://dbpedia.org/ontology/intercommunality	
+Blutgruppe	http://dbpedia.org/ontology/BloodType	
+Zeitung	http://dbpedia.org/ontology/Newspaper	
+Formel 1 Liga	http://dbpedia.org/ontology/FormulaOneRacingLeague	
+Journalist	http://dbpedia.org/ontology/Journalist	
+Beschäftigung	http://dbpedia.org/ontology/occupation	
+fließen in	http://dbpedia.org/ontology/riverMouth	
+fließen in	http://dbpedia.org/ontology/mouthPlace	
+fließen in	http://dbpedia.org/ontology/mouthMountain	
+spinnenartig Tier	http://dbpedia.org/ontology/Arachnid	
+Schutzpatron	http://dbpedia.org/ontology/patron	
+Basketballspielerin	http://dbpedia.org/ontology/BasketballPlayer	
+angrenzend Gemeinde	http://dbpedia.org/ontology/neighboringMunicipality	
+militärisch Einheit	http://dbpedia.org/ontology/MilitaryUnit	
+militärisch Einheit	http://dbpedia.org/ontology/militaryUnit	
+Amtsnachfolgerin	http://dbpedia.org/ontology/predecessor	
+Amtsnachfolgerin	http://dbpedia.org/ontology/successor	
+Videokonsole	http://dbpedia.org/ontology/InformationAppliance	
+Programm	http://dbpedia.org/ontology/completionDate	
+Alma Mater	http://dbpedia.org/ontology/almaMater	
+Bergzug	http://dbpedia.org/ontology/MountainRange	
+Biomolekül	http://dbpedia.org/ontology/Biomolecule	
+Sumpf-Bärlapp	http://dbpedia.org/ontology/ClubMoss	
+Staat	http://dbpedia.org/ontology/State	
+nachfolgend Arbeit	http://dbpedia.org/ontology/subsequentWork	
+Zeitverschiebung	http://dbpedia.org/ontology/utcOffset	
+laufen unter	http://dbpedia.org/ontology/operatingSystem	
+Deckname	http://dbpedia.org/ontology/alias	
+Beachvolleyballspieler	http://dbpedia.org/ontology/BeachVolleyballPlayer	
+Anwaltskanzlei	http://dbpedia.org/ontology/LawFirm	
+Mineral	http://dbpedia.org/ontology/Mineral	
+Grand Prix	http://dbpedia.org/ontology/GrandPrix	
+Kausalität	http://dbpedia.org/ontology/causalties	
+aktuell Version	http://dbpedia.org/ontology/latestReleaseVersion	
+geologisch Zeitraum	http://dbpedia.org/ontology/GeologicalPeriod	
+Fall	http://dbpedia.org/ontology/Case	
+Kasino	http://dbpedia.org/ontology/Casino	
+Haltestelle	http://dbpedia.org/ontology/Station	
+Naturgebiet	http://dbpedia.org/ontology/ProtectedArea	
+National Register of Historical Places reference number	http://dbpedia.org/ontology/nrhpReferenceNumber	
+Flüsschen	http://dbpedia.org/ontology/Stream	
+Kriminelle	http://dbpedia.org/ontology/Criminal	
+Kampfsportlerin	http://dbpedia.org/ontology/MartialArtist	
+Herkunft	http://dbpedia.org/ontology/origin	
+spielen in	http://dbpedia.org/ontology/programmeFormat	
+spielen in	http://dbpedia.org/ontology/instrument	
+spielen in	http://dbpedia.org/ontology/starring	
+Synagoge	http://dbpedia.org/ontology/Synagogue	
+Motto	http://dbpedia.org/ontology/slogan	
+Organisationsmitglied	http://dbpedia.org/ontology/OrganisationMember	
+Präsident	http://dbpedia.org/ontology/President	
+Präsident	http://dbpedia.org/ontology/leader	
+Passstraße	http://dbpedia.org/ontology/MountainPass	
+verteilen	http://dbpedia.org/ontology/distributor	
+Bundesland	http://dbpedia.org/ontology/Country	
+College	http://dbpedia.org/ontology/College	
+Komiker	http://dbpedia.org/ontology/Comedian	
+Gouverneur	http://dbpedia.org/ontology/leader	
+Gouverneur	http://dbpedia.org/ontology/Governor	
+Arbeitsfeld	http://dbpedia.org/ontology/field	
+Kloster	http://dbpedia.org/ontology/Abbey	
+Kloster	http://dbpedia.org/ontology/Monastery	
+alt Hoheitsgebiet	http://dbpedia.org/ontology/OldTerritory	
+Umlaufzeit	http://dbpedia.org/ontology/orbitalPeriod	
+Stierkämpferin	http://dbpedia.org/ontology/BullFighter	
+Staatsangehörigkeit	http://dbpedia.org/ontology/nationality	
+Leutnant	http://dbpedia.org/ontology/Lieutenant	
+Rechtsangelegenheit	http://dbpedia.org/ontology/LegalCase	
+Politiker	http://dbpedia.org/ontology/Politician	
+Beach Volleyballerin	http://dbpedia.org/ontology/BeachVolleyballPlayer	
+lokalisiert in	http://dbpedia.org/ontology/address	
+Universität	http://dbpedia.org/ontology/University	
+kreuzen	http://dbpedia.org/ontology/routeJunction	
+besetzen	http://dbpedia.org/ontology/garrison	
+Slogan	http://dbpedia.org/ontology/slogan	
+Fächertanne	http://dbpedia.org/ontology/Ginkgo	
+Stätte	http://dbpedia.org/ontology/canonizedPlace	
+Baseballmannschaft	http://dbpedia.org/ontology/BaseballTeam	
+alt Landschaft	http://dbpedia.org/ontology/OldTerritory	
+geschrieben Erzeugnis	http://dbpedia.org/ontology/WrittenWork	
+Einschreibung	http://dbpedia.org/ontology/numberOfStudents	
+Familie	http://dbpedia.org/ontology/family	
+Position	http://dbpedia.org/ontology/position	
+Online Computer Library Center Nummer	http://dbpedia.org/ontology/oclc	
+Modedesignerin	http://dbpedia.org/ontology/FashionDesigner	
+Bahnhof	http://dbpedia.org/ontology/Station	
+Startplatz	http://dbpedia.org/ontology/LaunchPad	
+Gewässer	http://dbpedia.org/ontology/BodyOfWater	
+Spiel	http://dbpedia.org/ontology/Game	
+besitzen	http://dbpedia.org/ontology/owner	
+besitzen	http://dbpedia.org/ontology/owningCompany	
+besitzen	http://dbpedia.org/ontology/owningOrganization	
+Moschee	http://dbpedia.org/ontology/Mosque	
+Bodybuilder	http://dbpedia.org/ontology/BodyBuilder	
+Landstraße	http://dbpedia.org/ontology/Road	
+Erschafferin	http://dbpedia.org/ontology/creator	
+Dorf	http://dbpedia.org/ontology/Village	
+Fläche	http://dbpedia.org/ontology/area	
+Stadion	http://dbpedia.org/ontology/Stadium	
+Koch	http://dbpedia.org/ontology/Chef	
+Stätte von besondere wissenschaftlich Interesse	http://dbpedia.org/ontology/SiteOfSpecialScientificInterest	
+daraufaufbauend Arbeit	http://dbpedia.org/ontology/subsequentWork	
+Leichtathletin	http://dbpedia.org/ontology/Athlete	
+kommunenübergreifend	http://dbpedia.org/ontology/Intercommunality	
+Fußballspiel	http://dbpedia.org/ontology/FootballMatch	
+höchst Berg in	http://dbpedia.org/ontology/highestMountain	
+Baseball-Liga	http://dbpedia.org/ontology/BaseballLeague	
+Sportteam	http://dbpedia.org/ontology/SportsTeam	
+Archaebakterie	http://dbpedia.org/ontology/Archaea	
+Einwohnerzahl	http://dbpedia.org/ontology/populationTotal	
+Einwohnerzahl	http://dbpedia.org/ontology/totalPopulation	
+Manhua	http://dbpedia.org/ontology/Manhua	
+Bühnenwerk	http://dbpedia.org/ontology/Play	
+Voraussetzung	http://dbpedia.org/ontology/requirement	
+Elfmeterschießen	http://dbpedia.org/ontology/PenaltyShootout	
+bekannt als	http://dbpedia.org/ontology/title	
+erhalten	http://dbpedia.org/ontology/award	
+Sportmannschaft	http://dbpedia.org/ontology/SportsTeam	
+NASCAR Fahrerin	http://dbpedia.org/ontology/NascarDriver	
+Ausverkauf	http://dbpedia.org/ontology/Sales	
+Verleger von	http://dbpedia.org/ontology/Publisher	
+Verleger von	http://dbpedia.org/ontology/publisher	
+weit	http://dbpedia.org/ontology/width	
+Repräsentant	http://dbpedia.org/ontology/Ambassador	
+Rechtssystem	http://dbpedia.org/ontology/SystemOfLaw	
+Komikergruppe	http://dbpedia.org/ontology/ComedyGroup	
+gründen in	http://dbpedia.org/ontology/foundingDate	
+gründen am	http://dbpedia.org/ontology/foundingDate	
+gründen in	http://dbpedia.org/ontology/foundationPlace	
+gründen am	http://dbpedia.org/ontology/foundationPlace	
+gründen in	http://dbpedia.org/ontology/foundingYear	
+gründen am	http://dbpedia.org/ontology/foundingYear	
+gründen in	http://dbpedia.org/ontology/foundingPerson	
+gründen am	http://dbpedia.org/ontology/foundingPerson	
+Gemälde	http://dbpedia.org/ontology/Painting	
+Gastauftritt in	http://dbpedia.org/ontology/guest	
+göttlich Wesen	http://dbpedia.org/ontology/Deity	
+Universität	http://dbpedia.org/ontology/university	
+Strömung	http://dbpedia.org/ontology/Stream	
+Lage	http://dbpedia.org/ontology/position	
+ähnlich zu	http://dbpedia.org/ontology/similar	
+Planet	http://dbpedia.org/ontology/Planet	
+enden an	http://dbpedia.org/ontology/routeEnd	
+enden bei	http://dbpedia.org/ontology/routeEnd	
+enden in	http://dbpedia.org/ontology/routeEnd	
+Cricketspielerin	http://dbpedia.org/ontology/Cricketer	
+geschichtlich Gebäude	http://dbpedia.org/ontology/HistoricBuilding	
+bedienen in	http://dbpedia.org/ontology/regionServed	
+Bezugsraster	http://dbpedia.org/ontology/gridReference	
+Snookerspielerin	http://dbpedia.org/ontology/SnookerPlayer	
+Legislative	http://dbpedia.org/ontology/Legislature	
+gehören zu	http://dbpedia.org/ontology/affiliation	
+Getränk	http://dbpedia.org/ontology/Beverage	
+Ergebnis	http://dbpedia.org/ontology/result	
+Ereignis	http://dbpedia.org/ontology/Event	
+verkürzen	http://dbpedia.org/ontology/abbreviation	
+Abschlussdatum von	http://dbpedia.org/ontology/completionDate	
+heilig Stätte	http://dbpedia.org/ontology/canonizedPlace	
+dazugehörig Band	http://dbpedia.org/ontology/associatedBand	
+Tennisturnier	http://dbpedia.org/ontology/TennisTournament	
+Deputierte	http://dbpedia.org/ontology/Deputy	
+Stadium	http://dbpedia.org/ontology/Stadium	
+Gerät	http://dbpedia.org/ontology/Device	
+OCLC Nummer	http://dbpedia.org/ontology/oclc	
+Dienststelle in Übersee	http://dbpedia.org/ontology/OverseasDepartment	
+schauspielern	http://dbpedia.org/ontology/guest	
+schauspielern	http://dbpedia.org/ontology/starring	
+sublimieren bei	http://dbpedia.org/ontology/sublimationPoint	
+sublimieren ab	http://dbpedia.org/ontology/sublimationPoint	
+Künstlername	http://dbpedia.org/ontology/pseudonym	
+aufnehmen am	http://dbpedia.org/ontology/artist	
+aufnehmen in	http://dbpedia.org/ontology/artist	
+aufnehmen am	http://dbpedia.org/ontology/musicalBand	
+aufnehmen in	http://dbpedia.org/ontology/musicalBand	
+aufnehmen am	http://dbpedia.org/ontology/recordedIn	
+aufnehmen in	http://dbpedia.org/ontology/recordedIn	
+aufnehmen am	http://dbpedia.org/ontology/recordDate	
+aufnehmen in	http://dbpedia.org/ontology/recordDate	
+aufnehmen am	http://dbpedia.org/ontology/musicalArtist	
+aufnehmen in	http://dbpedia.org/ontology/musicalArtist	
+Golf-Liga	http://dbpedia.org/ontology/GolfLeague	
+Veranstaltung	http://dbpedia.org/ontology/Event	
+Sport	http://dbpedia.org/ontology/Sport	
+Vizekanzler	http://dbpedia.org/ontology/viceChancellor	
+veranstalten	http://dbpedia.org/ontology/tenant	
+gebräuchlich Name	http://dbpedia.org/ontology/commonName	
+Beruf	http://dbpedia.org/ontology/occupation	
+Beruf	http://dbpedia.org/ontology/profession	
+Genort	http://dbpedia.org/ontology/GeneLocation	
+erstellen	http://dbpedia.org/ontology/company	
+Informationsverarbeitungsgerät	http://dbpedia.org/ontology/InformationAppliance	
+Chlorophyzeen	http://dbpedia.org/ontology/GreenAlga	
+bewertet	http://dbpedia.org/ontology/review	
+Canadian Football Spieler	http://dbpedia.org/ontology/CanadianFootballPlayer	
+herausbringen am	http://dbpedia.org/ontology/releaseDate	
+Vorgängerin	http://dbpedia.org/ontology/predecessor	
+Vorgängerin	http://dbpedia.org/ontology/successor	
+Erbauer	http://dbpedia.org/ontology/architect	
+Ansagerin von	http://dbpedia.org/ontology/presenter	
+Arbeitsbereich	http://dbpedia.org/ontology/field	
+Land	http://dbpedia.org/ontology/Country	
+ethnisch Zugehörigkeit	http://dbpedia.org/ontology/ethnicity	
+Hauptsitz haben in	http://dbpedia.org/ontology/headquarter	
+Gattung	http://dbpedia.org/ontology/genus	
+Militärpersonal	http://dbpedia.org/ontology/MilitaryPerson	
+Oberbürgermeisterin	http://dbpedia.org/ontology/Mayor	
+Verlegerin von	http://dbpedia.org/ontology/publisher	
+Verlegerin von	http://dbpedia.org/ontology/Publisher	
+Fußballmanager	http://dbpedia.org/ontology/SoccerManager	
+Geistlicher	http://dbpedia.org/ontology/Cleric	
+Golfspieler	http://dbpedia.org/ontology/GolfPlayer	
+Skulptur	http://dbpedia.org/ontology/Sculpture	
+bisherig Arbeit	http://dbpedia.org/ontology/previousWork	
+bedeuten	http://dbpedia.org/ontology/callsignMeaning	
+Jahr	http://dbpedia.org/ontology/Year	
+König von Polen	http://dbpedia.org/ontology/PolishKing	
+Fluss	http://dbpedia.org/ontology/River	
+Fluss	http://dbpedia.org/ontology/Stream	
+Aufenthalt	http://dbpedia.org/ontology/residence	
+Ministerpräsident	http://dbpedia.org/ontology/PrimeMinister	
+britisch königlich Person	http://dbpedia.org/ontology/BritishRoyalty	
+MMA-Veranstaltung	http://dbpedia.org/ontology/MixedMartialArtsEvent	
+Tennis-Liga	http://dbpedia.org/ontology/TennisLeague	
+Regierungsform	http://dbpedia.org/ontology/GovernmentType	
+geschützt Bereich	http://dbpedia.org/ontology/ProtectedArea	
+Gen	http://dbpedia.org/ontology/Gene	
+Ausgestrahlung	http://dbpedia.org/ontology/Broadcast	
+Golfer	http://dbpedia.org/ontology/GolfPlayer	
+Synchronsprecher	http://dbpedia.org/ontology/VoiceActor	
+Handballspieler	http://dbpedia.org/ontology/HandballPlayer	
+kommandieren während	http://dbpedia.org/ontology/commander	
+kommandieren während	http://dbpedia.org/ontology/militaryCommand	
+Richter	http://dbpedia.org/ontology/Judge	
+Schloss	http://dbpedia.org/ontology/Castle	
+aufbereiten	http://dbpedia.org/ontology/editing	
+Gebirgspass	http://dbpedia.org/ontology/MountainPass	
+Skifahrer	http://dbpedia.org/ontology/Skier	
+Meisterschaft	http://dbpedia.org/ontology/Tournament	
+NASCAR Fahrer	http://dbpedia.org/ontology/NascarDriver	
+Genre	http://dbpedia.org/ontology/MovieGenre	
+Genre	http://dbpedia.org/ontology/genre	
+Genre	http://dbpedia.org/ontology/Genre	
+Sportmanagerin	http://dbpedia.org/ontology/SportsManager	
+IUPAC-Name	http://dbpedia.org/ontology/iupacName	
+Kongressmitglied	http://dbpedia.org/ontology/Congressman	
+Box-Liga	http://dbpedia.org/ontology/BoxingLeague	
+zugehörig zu	http://dbpedia.org/ontology/related	
+Delegierte	http://dbpedia.org/ontology/Deputy	
+Formel Eins Fahrer	http://dbpedia.org/ontology/FormulaOneRacer	
+Gebühr	http://dbpedia.org/ontology/Tax	
+Berufsstand	http://dbpedia.org/ontology/profession	
+Fluggesellschaft	http://dbpedia.org/ontology/Airline	
+Gruppe	http://dbpedia.org/ontology/Band	
+historisch Zeitraum	http://dbpedia.org/ontology/HistoricalPeriod	
+Gaelic Games Spielerin	http://dbpedia.org/ontology/GaelicGamesPlayer	
+Vizeministerpräsident	http://dbpedia.org/ontology/VicePrimeMinister	
+Autorin von	http://dbpedia.org/ontology/Writer	
+Autorin von	http://dbpedia.org/ontology/Author	
+Autorin von	http://dbpedia.org/ontology/writer	
+entgegennehmen	http://dbpedia.org/ontology/award	
+Entstehungsjahr	http://dbpedia.org/ontology/formationYear	
+Situation	http://dbpedia.org/ontology/position	
+Arterie	http://dbpedia.org/ontology/Artery	
+Fußballerin	http://dbpedia.org/ontology/SoccerPlayer	
+Kirchengemeinde	http://dbpedia.org/ontology/Parish	
+LP	http://dbpedia.org/ontology/Album	
+Theater	http://dbpedia.org/ontology/Theatre	
+Bibliothek	http://dbpedia.org/ontology/Library	
+Architektin	http://dbpedia.org/ontology/architect	
+Zeitspanne	http://dbpedia.org/ontology/TimePeriod	
+Krankenhaus	http://dbpedia.org/ontology/Hospital	
+Sportart	http://dbpedia.org/ontology/Sport	
+Ableger-Programm	http://dbpedia.org/ontology/sisterStation	
+Rufzeichen der ITU von	http://dbpedia.org/ontology/callsignMeaning	
+Rennreiterin	http://dbpedia.org/ontology/Jockey	
+Waffe	http://dbpedia.org/ontology/Weapon	
+Staffel	http://dbpedia.org/ontology/TelevisionSeason	
+Canadian Football Team	http://dbpedia.org/ontology/CanadianFootballTeam	
+bewohnen	http://dbpedia.org/ontology/residence	
+fertigstellen bis	http://dbpedia.org/ontology/completionDate	
+Reptil	http://dbpedia.org/ontology/Reptile	
+Anzahl Studenten	http://dbpedia.org/ontology/numberOfStudents	
+veröffentlicht am	http://dbpedia.org/ontology/computingMedia	
+Wrestlerin	http://dbpedia.org/ontology/Wrestler	
+ausgestrahlt auf	http://dbpedia.org/ontology/channel	
+ausgestrahlt in	http://dbpedia.org/ontology/channel	
+ausgestrahlt auf	http://dbpedia.org/ontology/broadcastArea	
+ausgestrahlt in	http://dbpedia.org/ontology/broadcastArea	
+studieren an	http://dbpedia.org/ontology/almaMater	
+studieren at	http://dbpedia.org/ontology/almaMater	
+studieren an	http://dbpedia.org/ontology/education	
+studieren at	http://dbpedia.org/ontology/education	
+studieren an	http://dbpedia.org/ontology/university	
+studieren at	http://dbpedia.org/ontology/university	
+tief	http://dbpedia.org/ontology/depth	
+Formel Eins Fahrerin	http://dbpedia.org/ontology/FormulaOneRacer	
+American Football Team	http://dbpedia.org/ontology/AmericanFootballTeam	
+Sportanlage	http://dbpedia.org/ontology/SportFacility	
+Gesellschaft	http://dbpedia.org/ontology/Company	
+Gestirn	http://dbpedia.org/ontology/CelestialBody	
+Gestirn	http://dbpedia.org/ontology/Star	
+Mitglied des Rates at	http://dbpedia.org/ontology/board	
+Weinregion	http://dbpedia.org/ontology/WineRegion	
+Verluste	http://dbpedia.org/ontology/causalties	
+Pfarrbezirk	http://dbpedia.org/ontology/Parish	
+Schutzpark	http://dbpedia.org/ontology/ProtectedArea	
+Alias	http://dbpedia.org/ontology/alias	
+Sendergruppe	http://dbpedia.org/ontology/broadcastNetwork	
+Herkunftsland	http://dbpedia.org/ontology/birthPlace	
+Galaxie	http://dbpedia.org/ontology/Galaxy	
+Schutzgebiet	http://dbpedia.org/ontology/ProtectedArea	
+montiert in	http://dbpedia.org/ontology/assembly	
+Bahnschiene	http://dbpedia.org/ontology/RailwayLine	
+spielen für	http://dbpedia.org/ontology/league	
+spielen in	http://dbpedia.org/ontology/league	
+spielen für	http://dbpedia.org/ontology/tenant	
+spielen in	http://dbpedia.org/ontology/tenant	
+spielen für	http://dbpedia.org/ontology/college	
+spielen in	http://dbpedia.org/ontology/college	
+spielen für	http://dbpedia.org/ontology/team	
+spielen in	http://dbpedia.org/ontology/team	
+Kriechtier	http://dbpedia.org/ontology/Reptile	
+gehören zu	http://dbpedia.org/ontology/languageFamily	
+gehören zu	http://dbpedia.org/ontology/division	
+polnisch Königin	http://dbpedia.org/ontology/PolishKing	
+Tretmühle	http://dbpedia.org/ontology/Treadmill	
+Eisenbahnstation	http://dbpedia.org/ontology/RailwayStation	
+Politikerin	http://dbpedia.org/ontology/Politician	
+entspringen in	http://dbpedia.org/ontology/origin	
+entspringen aus	http://dbpedia.org/ontology/origin	
+Farbenname	http://dbpedia.org/ontology/colourName	
+Park	http://dbpedia.org/ontology/Park	
+Boxerin	http://dbpedia.org/ontology/Boxer	
+Schiedsrichter	http://dbpedia.org/ontology/Referee	
+Tier	http://dbpedia.org/ontology/Animal	
+Programmformat	http://dbpedia.org/ontology/programmeFormat	
+Spaceshuttle	http://dbpedia.org/ontology/SpaceShuttle	
+Stadt	http://dbpedia.org/ontology/locationCity	
+Radfahrerin	http://dbpedia.org/ontology/Cyclist	
+aufeinandertreffen in	http://dbpedia.org/ontology/place	
+Besatzung	http://dbpedia.org/ontology/garrison	
+Bevölkerung	http://dbpedia.org/ontology/populationTotal	
+Bevölkerung	http://dbpedia.org/ontology/totalPopulation	
+verdienen	http://dbpedia.org/ontology/gross	
+stillgelegt am	http://dbpedia.org/ontology/decommissioningDate	
+Grünfläche	http://dbpedia.org/ontology/NaturalRegion	
+Begebenheit	http://dbpedia.org/ontology/Event	
+IATA-Code	http://dbpedia.org/ontology/iataLocationIdentifier	
+Art Deco Baustil	http://dbpedia.org/ontology/architecturalStyle	
+historisch Periode	http://dbpedia.org/ontology/HistoricalPeriod	
+Fußballspielerin	http://dbpedia.org/ontology/SoccerPlayer	
+vorherig Arbeit	http://dbpedia.org/ontology/previousWork	
+Wrestler	http://dbpedia.org/ontology/Wrestler	
+Arznei	http://dbpedia.org/ontology/Drug	
+Boot	http://dbpedia.org/ontology/Ship	
+stationieren	http://dbpedia.org/ontology/garrison	
+Amtsträgerin	http://dbpedia.org/ontology/OfficeHolder	
+Entstehungsort	http://dbpedia.org/ontology/foundationPlace	
+Geschehnis	http://dbpedia.org/ontology/Event	
+Regierungsbezirk	http://dbpedia.org/ontology/AdministrativeRegion	
+Amateurboxer	http://dbpedia.org/ontology/AmateurBoxer	
+bedienen	http://dbpedia.org/ontology/servingRailwayLine	
+Tagung	http://dbpedia.org/ontology/Convention	
+Pulsader	http://dbpedia.org/ontology/Artery	
+Vizepräsidentin	http://dbpedia.org/ontology/VicePresident	
+Wasserturm	http://dbpedia.org/ontology/WaterTower	
+religiös	http://dbpedia.org/ontology/Religious	
+Medizin	http://dbpedia.org/ontology/Drug	
+Serie	http://dbpedia.org/ontology/TelevisionShow	
+Lebensmittel	http://dbpedia.org/ontology/Food	
+Stellvertreterin	http://dbpedia.org/ontology/Deputy	
+Sonne	http://dbpedia.org/ontology/Star	
+Regentschaft	http://dbpedia.org/ontology/Regency	
+Arbeit	http://dbpedia.org/ontology/occupation	
+arbeiten für	http://dbpedia.org/ontology/militaryUnit	
+arbeiten für	http://dbpedia.org/ontology/militaryBranch	
+Turner	http://dbpedia.org/ontology/Gymnast	
+erfordern	http://dbpedia.org/ontology/requirement	
+Heilige	http://dbpedia.org/ontology/Saint	
+hergestellt in	http://dbpedia.org/ontology/origin	
+Beitrag zum Eurovision Song Contest	http://dbpedia.org/ontology/EurovisionSongContestEntry	
+Handballerin	http://dbpedia.org/ontology/HandballPlayer	
+Landfläche	http://dbpedia.org/ontology/areaLand	
+offiziell Schulfarbe	http://dbpedia.org/ontology/officialSchoolColour	
+Herrscherin	http://dbpedia.org/ontology/Monarch	
+Luftverkehrsgesellschaft	http://dbpedia.org/ontology/Airline	
+herstellen	http://dbpedia.org/ontology/company	
+Priester	http://dbpedia.org/ontology/Priest	
+Aufteilung	http://dbpedia.org/ontology/division	
+Graduierte	http://dbpedia.org/ontology/almaMater	
+gehören zu	http://dbpedia.org/ontology/associatedRocket	
+Amphibie	http://dbpedia.org/ontology/Amphibian	
+Außenbezirk von	http://dbpedia.org/ontology/intercommunality	
+Rugbyspieler	http://dbpedia.org/ontology/RugbyPlayer	
+Moderator von	http://dbpedia.org/ontology/presenter	
+Moderator von	http://dbpedia.org/ontology/Host	
+Moderator von	http://dbpedia.org/ontology/Presenter	
+Leistungsfähigkeit	http://dbpedia.org/ontology/capacity	
+abdecken	http://dbpedia.org/ontology/broadcastArea	
+fertiggestellt am	http://dbpedia.org/ontology/completionDate	
+Arachnoide	http://dbpedia.org/ontology/Arachnid	
+Gehirn	http://dbpedia.org/ontology/Brain	
+Kinematografie	http://dbpedia.org/ontology/cinematography	
+christlich Bischof	http://dbpedia.org/ontology/ChristianBishop	
+anschließend Arbeit	http://dbpedia.org/ontology/subsequentWork	
+Stilperiode	http://dbpedia.org/ontology/PeriodOfArtisticStyle	
+Motorsport-Liga	http://dbpedia.org/ontology/AutoRacingLeague	
+wiegen	http://dbpedia.org/ontology/weight	
+heiliggesprochen in	http://dbpedia.org/ontology/canonizedPlace	
+Geburtsort	http://dbpedia.org/ontology/birthPlace	
+Gründer	http://dbpedia.org/ontology/foundingPerson	
+Gründer	http://dbpedia.org/ontology/foundedBy	
+Teilgemeinde	http://dbpedia.org/ontology/SubMunicipality	
+Aufzeichnungsdatum	http://dbpedia.org/ontology/recordDate	
+anfertigen	http://dbpedia.org/ontology/manufacturer	
+Großstadtgebiet	http://dbpedia.org/ontology/areaMetro	
+Volksgruppe	http://dbpedia.org/ontology/EthnicGroup	
+eukaryot Mikroorganismus	http://dbpedia.org/ontology/Eukaryote	
+ISBN	http://dbpedia.org/ontology/isbn	
+flüssig bei	http://dbpedia.org/ontology/meltingPoint	
+flüssig ab	http://dbpedia.org/ontology/meltingPoint	
+Budget	http://dbpedia.org/ontology/budget	
+Programmiersprache	http://dbpedia.org/ontology/ProgrammingLanguage	
+Programmiersprache	http://dbpedia.org/ontology/programmingLanguage	
+Herrscher	http://dbpedia.org/ontology/Monarch	
+Verwandter	http://dbpedia.org/ontology/relative	
+Diözese	http://dbpedia.org/ontology/Diocese	
+Patronin	http://dbpedia.org/ontology/patron	
+Keim	http://dbpedia.org/ontology/Bacteria	
+NRHP Referenznummer	http://dbpedia.org/ontology/nrhpReferenceNumber	
+historisch Gebäude	http://dbpedia.org/ontology/HistoricBuilding	
+großstädtisch Einwohnerdichte	http://dbpedia.org/ontology/populationMetroDensity	
+Radiosender	http://dbpedia.org/ontology/RadioStation	
+non-profit Organisation	http://dbpedia.org/ontology/Non-ProfitOrganisation	
+Produzent	http://dbpedia.org/ontology/executiveProducer	
+Schwarm	http://dbpedia.org/ontology/Swarm	
+Schutzpatronin	http://dbpedia.org/ontology/patron	
+biologisch Datenbank	http://dbpedia.org/ontology/BiologicalDatabase	
+Videospiel	http://dbpedia.org/ontology/VideoGame	
+Architekt	http://dbpedia.org/ontology/Architect	
+Rektorin	http://dbpedia.org/ontology/rector	
+Abteilung	http://dbpedia.org/ontology/Department	
+Netzwerk	http://dbpedia.org/ontology/network	
+debütieren mit	http://dbpedia.org/ontology/debutTeam	
+National Register of Historical Places Referenznummer	http://dbpedia.org/ontology/nrhpReferenceNumber	
+Mitglied von	http://dbpedia.org/ontology/bandMember	
+Elektrizitätswerk	http://dbpedia.org/ontology/PowerStation	
+Fertigerin	http://dbpedia.org/ontology/manufacturer	
+Skifahrerin	http://dbpedia.org/ontology/Skier	
+Netz	http://dbpedia.org/ontology/network	
+Etat	http://dbpedia.org/ontology/budget	
+architektonisch Struktur	http://dbpedia.org/ontology/ArchitecturalStructure	
+Ingenieur	http://dbpedia.org/ontology/Engineer	
+Lok	http://dbpedia.org/ontology/Locomotive	
+Akademie	http://dbpedia.org/ontology/College	
+mitspielen in	http://dbpedia.org/ontology/guest	
+Vater	http://dbpedia.org/ontology/parent	
+Vater	http://dbpedia.org/ontology/child	
+Brücke	http://dbpedia.org/ontology/Bridge	
+Mediziner	http://dbpedia.org/ontology/Medician	
+Hirn	http://dbpedia.org/ontology/Brain	
+Speedway-Liga	http://dbpedia.org/ontology/SpeedwayLeague	
+früher Bandmitglied	http://dbpedia.org/ontology/formerBandMember	
+militärisch Person	http://dbpedia.org/ontology/MilitaryPerson	
+Ader	http://dbpedia.org/ontology/Vein	
+großherzig	http://dbpedia.org/ontology/Noble	
+Rennen	http://dbpedia.org/ontology/Race	
+Kricketspielerin	http://dbpedia.org/ontology/Cricketer	
+Spezies	http://dbpedia.org/ontology/Species	
+Denkmal	http://dbpedia.org/ontology/Monument	
+Arbeitseinheit	http://dbpedia.org/ontology/UnitOfWork	
+Territorium	http://dbpedia.org/ontology/Territory	
+höchst Region	http://dbpedia.org/ontology/highestRegion	
+Gnetophyte	http://dbpedia.org/ontology/Gnetophytes	
+Weg	http://dbpedia.org/ontology/Road	
+verwandt mit	http://dbpedia.org/ontology/relative	
+alt Gebiet	http://dbpedia.org/ontology/OldTerritory	
+großstädtisch Bevölkerung	http://dbpedia.org/ontology/populationMetro	
+brauchen	http://dbpedia.org/ontology/requirement	
+christlich Anführer	http://dbpedia.org/ontology/ChristianPatriarch	
+Rasterbezugspunkt	http://dbpedia.org/ontology/gridReference	
+Abkürzung	http://dbpedia.org/ontology/abbreviation	
+IATA-Ortserkennung	http://dbpedia.org/ontology/iataLocationIdentifier	
+Basketballer	http://dbpedia.org/ontology/BasketballPlayer	
+niedrigst Erhöhung	http://dbpedia.org/ontology/minimumElevation	
+Postleitzahl	http://dbpedia.org/ontology/postalCode	
+WTA-Turnier	http://dbpedia.org/ontology/WomensTennisAssociationTournament	
+Lage des Umweltschutzes	http://dbpedia.org/ontology/conservationStatus	
+Beach Volleyballspielerin	http://dbpedia.org/ontology/BeachVolleyballPlayer	
+Schöpfer	http://dbpedia.org/ontology/creator	
+Fernsehserie	http://dbpedia.org/ontology/TelevisionShow	
+Lieferantin	http://dbpedia.org/ontology/distributor	
+öffnen in	http://dbpedia.org/ontology/openingDate	
+öffnen am	http://dbpedia.org/ontology/openingDate	
+öffnen in	http://dbpedia.org/ontology/openingYear	
+öffnen am	http://dbpedia.org/ontology/openingYear	
+nachfolgen	http://dbpedia.org/ontology/predecessor	
+nachfolgen	http://dbpedia.org/ontology/successor	
+designen	http://dbpedia.org/ontology/designer	
+Atoll	http://dbpedia.org/ontology/Atoll	
+Hochschultrainerin	http://dbpedia.org/ontology/CollegeCoach	
+Mutterunternehmen	http://dbpedia.org/ontology/parentCompany	
+Premierministerin	http://dbpedia.org/ontology/PrimeMinister	
+Skiregion	http://dbpedia.org/ontology/SkiArea	
+Sternbild	http://dbpedia.org/ontology/Constellation	
+Stationsabkürzung	http://dbpedia.org/ontology/agencyStationCode	
+Ginkgobaum	http://dbpedia.org/ontology/Ginkgo	
+Ordnung	http://dbpedia.org/ontology/order	
+Rennfahrer	http://dbpedia.org/ontology/RacingDriver	
+Musikfestival	http://dbpedia.org/ontology/MusicFestival	
+Behörde	http://dbpedia.org/ontology/GovernmentAgency	
+betrieben von	http://dbpedia.org/ontology/operatedBy	
+abkürzen	http://dbpedia.org/ontology/abbreviation	
+Reiter	http://dbpedia.org/ontology/HorseRider	
+Streitkraft	http://dbpedia.org/ontology/militaryBranch	
+niedrigst Höhe	http://dbpedia.org/ontology/minimumElevation	
+Fachbereich	http://dbpedia.org/ontology/field	
+erstmals beschreiben	http://dbpedia.org/ontology/binomialAuthority	
+Entstehungstag	http://dbpedia.org/ontology/formationDate	
+Schwesterprogramm	http://dbpedia.org/ontology/sisterStation	
+Mann	http://dbpedia.org/ontology/spouse	
+Website	http://dbpedia.org/ontology/Website	
+editieren	http://dbpedia.org/ontology/editing	
+Arena	http://dbpedia.org/ontology/Arena	
+bewerten	http://dbpedia.org/ontology/review	
+vorherig Trainerin	http://dbpedia.org/ontology/formerCoach	
+thematisch Konzept	http://dbpedia.org/ontology/TopicalConcept	
+Kameramann	http://dbpedia.org/ontology/cinematographer	
+Weintraube	http://dbpedia.org/ontology/Grape	
+Komponist	http://dbpedia.org/ontology/composer	
+Lymphknoten	http://dbpedia.org/ontology/Lymph	
+Höchstgeschwindigkeit	http://dbpedia.org/ontology/topSpeed	
+städtisch Fläche	http://dbpedia.org/ontology/areaUrban	
+Tierreich	http://dbpedia.org/ontology/kingdom	
+Stern	http://dbpedia.org/ontology/Star	
+Teil von	http://dbpedia.org/ontology/isPartOf	
+Fernsehmoderatorin	http://dbpedia.org/ontology/TelevisionHost	
+Gouverneurin	http://dbpedia.org/ontology/leader	
+Gouverneurin	http://dbpedia.org/ontology/Governor	
+Aufzeichnungsort	http://dbpedia.org/ontology/recordedIn	
+Wein	http://dbpedia.org/ontology/Wine	
+gewinnen	http://dbpedia.org/ontology/award	
+Wolkenkratzer auf	http://dbpedia.org/ontology/Skyscraper	
+Datum der Aufzeichnung von	http://dbpedia.org/ontology/recordDate	
+Mitglied des Ausschusses at	http://dbpedia.org/ontology/board	
+gotisch Baustil	http://dbpedia.org/ontology/architecturalStyle	
+Bildungsstätte	http://dbpedia.org/ontology/EducationalInstitution	
+Eisenbahntunnel	http://dbpedia.org/ontology/RailwayTunnel	
+Befehlshaberin in	http://dbpedia.org/ontology/commander	
+MMA-Liga	http://dbpedia.org/ontology/MixedMartialArtsLeague	
+Amtsvorgänger	http://dbpedia.org/ontology/successor	
+Amtsvorgänger	http://dbpedia.org/ontology/predecessor	
+Ruhestätte	http://dbpedia.org/ontology/restingPlace	
+Gründerin	http://dbpedia.org/ontology/foundedBy	
+Gründerin	http://dbpedia.org/ontology/foundingPerson	
+ansässig in	http://dbpedia.org/ontology/locationCountry	
+ansässig in	http://dbpedia.org/ontology/locationCity	
+Drama	http://dbpedia.org/ontology/Drama	
+regieren	http://dbpedia.org/ontology/leader	
+großmütig	http://dbpedia.org/ontology/Noble	
+sterben in	http://dbpedia.org/ontology/deathYear	
+sterben am	http://dbpedia.org/ontology/deathYear	
+sterben in	http://dbpedia.org/ontology/deathDate	
+sterben am	http://dbpedia.org/ontology/deathDate	
+sterben in	http://dbpedia.org/ontology/deathPlace	
+sterben am	http://dbpedia.org/ontology/deathPlace	
+geboren in	http://dbpedia.org/ontology/birthPlace	
+geboren am	http://dbpedia.org/ontology/birthPlace	
+geboren in	http://dbpedia.org/ontology/birthYear	
+geboren am	http://dbpedia.org/ontology/birthYear	
+geboren in	http://dbpedia.org/ontology/birthDate	
+geboren am	http://dbpedia.org/ontology/birthDate	
+Abtei	http://dbpedia.org/ontology/Abbey	
+Spinnentier	http://dbpedia.org/ontology/Arachnid	
+Fernsehkanal	http://dbpedia.org/ontology/completionDate	
+Oberleutnant	http://dbpedia.org/ontology/Lieutenant	
+Rennreiter	http://dbpedia.org/ontology/Jockey	
+Verbrecher	http://dbpedia.org/ontology/Criminal	
+Vizepremierministerin	http://dbpedia.org/ontology/VicePrimeMinister	
+Techniker	http://dbpedia.org/ontology/Engineer	
+fließend Gewässer	http://dbpedia.org/ontology/River	
+Volleyballer	http://dbpedia.org/ontology/VolleyballPlayer	
+Software	http://dbpedia.org/ontology/Software	
+Währung	http://dbpedia.org/ontology/Currency	
+Herkunft	http://dbpedia.org/ontology/source	
+Aufnahmeort	http://dbpedia.org/ontology/recordedIn	
+schneiden	http://dbpedia.org/ontology/editing	
+Computerprogramm	http://dbpedia.org/ontology/Software	
+leben in	http://dbpedia.org/ontology/populationPlace	
+neo-gotisch Baustil	http://dbpedia.org/ontology/architecturalStyle	
+Kontinent	http://dbpedia.org/ontology/Continent	
+produziert von	http://dbpedia.org/ontology/executiveProducer	
+Individuum	http://dbpedia.org/ontology/Person	
+Sportmanager	http://dbpedia.org/ontology/SportsManager	
+Netballspielerin	http://dbpedia.org/ontology/NetballPlayer	
+Repräsentantin	http://dbpedia.org/ontology/Ambassador	
+Ursache	http://dbpedia.org/ontology/causalties	
+Lagunenriff	http://dbpedia.org/ontology/Atoll	
+Aristokrat	http://dbpedia.org/ontology/Aristocrat	
+Kiel legen am	http://dbpedia.org/ontology/layingDown	
+Nationalität	http://dbpedia.org/ontology/nationality	
+Pfarrerin	http://dbpedia.org/ontology/Priest	
+Cricket-Liga	http://dbpedia.org/ontology/CricketLeague	
+stammen aus	http://dbpedia.org/ontology/sourceCountry	
+stammen aus	http://dbpedia.org/ontology/origin	
+stammen aus	http://dbpedia.org/ontology/source	
+Reiterin	http://dbpedia.org/ontology/HorseRider	
+Electronic Organizer	http://dbpedia.org/ontology/InformationAppliance	
+Amt	http://dbpedia.org/ontology/office	
+Fahrzeugmotor	http://dbpedia.org/ontology/AutomobileEngine	
+zugehörig Künstlerin	http://dbpedia.org/ontology/associatedMusicalArtist	
+IATA-Ortsidentifikator	http://dbpedia.org/ontology/iataLocationIdentifier	
+Heim-Arena	http://dbpedia.org/ontology/homeArena	
+Fächerblattbaum	http://dbpedia.org/ontology/Ginkgo	
+Rechtsanwaltskanzlei	http://dbpedia.org/ontology/LawFirm	
+Gesellschaft	http://dbpedia.org/ontology/Community	
+anatomisch Struktur	http://dbpedia.org/ontology/AnatomicalStructure	
+Sammlung	http://dbpedia.org/ontology/CollectionOfValuables	
+Herstellungsbetrieb	http://dbpedia.org/ontology/manufacturer	
+Schmelzpunkt	http://dbpedia.org/ontology/meltingPoint	
+Zustand des Umweltschutzes	http://dbpedia.org/ontology/conservationStatus	
+ferngesteuert Modellautorennen-Liga	http://dbpedia.org/ontology/RadioControlledRacingLeague	
+Erkrankung	http://dbpedia.org/ontology/Disease	
+Band	http://dbpedia.org/ontology/Ligament	
+Squashspieler	http://dbpedia.org/ontology/SquashPlayer	
+christlich Oberhaupt	http://dbpedia.org/ontology/ChristianPatriarch	
+Familie	http://dbpedia.org/ontology/Family	
+Interkommunalität	http://dbpedia.org/ontology/Intercommunality	
+vorherig Bandmitglied	http://dbpedia.org/ontology/formerBandMember	
+Weltkulturerbegebiet	http://dbpedia.org/ontology/WorldHeritageSite	
+in Betrieb nehmen am	http://dbpedia.org/ontology/shipLaunch	
+grenzen an	http://dbpedia.org/ontology/border	
+Basketballerin	http://dbpedia.org/ontology/BasketballPlayer	
+Qualitätswein	http://dbpedia.org/ontology/ControlledDesignationOfOriginWine	
+Handballer	http://dbpedia.org/ontology/HandballPlayer	
+Mörder	http://dbpedia.org/ontology/Murderer	
+Angehörige	http://dbpedia.org/ontology/relative	
+Prominente	http://dbpedia.org/ontology/Celebrity	
+Gridiron Football Spieler	http://dbpedia.org/ontology/GridironFootballPlayer	
+Hoheitsgebiet	http://dbpedia.org/ontology/Territory	
+Fließgewässer	http://dbpedia.org/ontology/River	
+Zureiter	http://dbpedia.org/ontology/HorseTrainer	
+lizenziert unter	http://dbpedia.org/ontology/license	
+Naturpark	http://dbpedia.org/ontology/ProtectedArea	
+Geistliche	http://dbpedia.org/ontology/Cleric	
+Priesterin	http://dbpedia.org/ontology/Priest	
+Beachvolleyballer	http://dbpedia.org/ontology/BeachVolleyballPlayer	
+Pornodarsteller	http://dbpedia.org/ontology/AdultActor	
+Gebiet	http://dbpedia.org/ontology/Territory	
+Schachspieler	http://dbpedia.org/ontology/ChessPlayer	
+Brettspiel	http://dbpedia.org/ontology/BoardGame	
+arbeiten als	http://dbpedia.org/ontology/field	
+arbeiten auf	http://dbpedia.org/ontology/field	
+arbeiten als	http://dbpedia.org/ontology/occupation	
+arbeiten auf	http://dbpedia.org/ontology/occupation	
+arbeiten als	http://dbpedia.org/ontology/profession	
+arbeiten auf	http://dbpedia.org/ontology/profession	
+Badmintonspielerin	http://dbpedia.org/ontology/BadmintonPlayer	
+Genus	http://dbpedia.org/ontology/genus	
+gekürzt zu	http://dbpedia.org/ontology/abbreviation	
+Patron	http://dbpedia.org/ontology/patron	
+starten an	http://dbpedia.org/ontology/routeStart	
+starten in	http://dbpedia.org/ontology/routeStart	
+starten bei	http://dbpedia.org/ontology/routeStart	
+Single	http://dbpedia.org/ontology/Single	
+Gründungsort	http://dbpedia.org/ontology/foundationPlace	
+ausstrahlen mit	http://dbpedia.org/ontology/frequency	
+Basketball-Liga	http://dbpedia.org/ontology/BasketballLeague	
+Ministerpräsidentin	http://dbpedia.org/ontology/PrimeMinister	
+bearbeiten	http://dbpedia.org/ontology/editing	
+schmelzen ab	http://dbpedia.org/ontology/meltingPoint	
+schmelzen bei	http://dbpedia.org/ontology/meltingPoint	
+Kinematographie	http://dbpedia.org/ontology/cinematography	
+befehlen während	http://dbpedia.org/ontology/commander	
+befehlen während	http://dbpedia.org/ontology/militaryCommand	
+Amateurboxerin	http://dbpedia.org/ontology/AmateurBoxer	
+zugehörig Band	http://dbpedia.org/ontology/associatedBand	
+Straßentunnel	http://dbpedia.org/ontology/RoadTunnel	
+Manhwa	http://dbpedia.org/ontology/Manhwa	
+Handelsplatz	http://dbpedia.org/ontology/Venue	
+wohnhaft in	http://dbpedia.org/ontology/residence	
+Burg	http://dbpedia.org/ontology/Castle	
+geschrieben in	http://dbpedia.org/ontology/programmingLanguage	
+Papst	http://dbpedia.org/ontology/Pope	
+Comic	http://dbpedia.org/ontology/Comics	
+Weltraumfahrzeug	http://dbpedia.org/ontology/Spacecraft	
+Stellvertreter	http://dbpedia.org/ontology/Deputy	
+geologisch Periode	http://dbpedia.org/ontology/GeologicalPeriod	
+Gymnastin	http://dbpedia.org/ontology/Gymnast	
+Leichtathlet	http://dbpedia.org/ontology/Athlete	
+Bistum	http://dbpedia.org/ontology/Diocese	
+Nahrung	http://dbpedia.org/ontology/Food	
+Verdampfungspunkt	http://dbpedia.org/ontology/boilingPoint	
+Teammitglied	http://dbpedia.org/ontology/TeamMember	
+Präsentatorin von	http://dbpedia.org/ontology/presenter	
+Rugbyspielerin	http://dbpedia.org/ontology/RugbyPlayer	
+Straftäterin	http://dbpedia.org/ontology/Criminal	
+Stadtteil	http://dbpedia.org/ontology/District	
+Partei	http://dbpedia.org/ontology/PoliticalParty	
+Arzneimittel	http://dbpedia.org/ontology/Drug	
+Eigentümerin	http://dbpedia.org/ontology/owner	
+Einnahmen	http://dbpedia.org/ontology/revenue	
+politisch Partei	http://dbpedia.org/ontology/PoliticalParty	
+verheiratet mit	http://dbpedia.org/ontology/spouse	
+Status des Naturschutzes	http://dbpedia.org/ontology/conservationStatus	
+Herausgeberin von	http://dbpedia.org/ontology/publisher	
+verfassen	http://dbpedia.org/ontology/writer	
+Forscher	http://dbpedia.org/ontology/Scientist	
+berühmte Person	http://dbpedia.org/ontology/Celebrity	
+verbunden mit	http://dbpedia.org/ontology/affiliation	
+Fachgebiet	http://dbpedia.org/ontology/field	
+See	http://dbpedia.org/ontology/Lake	
+befahren	http://dbpedia.org/ontology/servingRailwayLine	
+benutzen seit	http://dbpedia.org/ontology/dateUse	
+Befehlshaber in	http://dbpedia.org/ontology/commander	
+Softball-Liga	http://dbpedia.org/ontology/SoftballLeague	
+Weltrangliste im Snooker	http://dbpedia.org/ontology/SnookerWorldRanking	
+Monarch	http://dbpedia.org/ontology/Monarch	
+Flagge	http://dbpedia.org/ontology/Flag	
+Projekt	http://dbpedia.org/ontology/Project	
+Schönheitskönigin	http://dbpedia.org/ontology/BeautyQueen	
+Säugetier	http://dbpedia.org/ontology/Mammal	
+Betriebseinkommen	http://dbpedia.org/ontology/revenue	
+Weltraumstation	http://dbpedia.org/ontology/SpaceStation	
+senden auf	http://dbpedia.org/ontology/network	
+Herstellungsfirma	http://dbpedia.org/ontology/manufacturer	
+Vorsitzender	http://dbpedia.org/ontology/chairman	
+Verfasser von	http://dbpedia.org/ontology/writer	
+fertigen	http://dbpedia.org/ontology/manufacturer	
+Bereich	http://dbpedia.org/ontology/division	
+Automobilsport-Liga	http://dbpedia.org/ontology/AutoRacingLeague	
+Ort	http://dbpedia.org/ontology/Venue	
+überbrücken	http://dbpedia.org/ontology/crosses	
+Radiomoderator	http://dbpedia.org/ontology/RadioHost	
+maximal Erhöhung	http://dbpedia.org/ontology/maximumElevation	
+Unternehmen	http://dbpedia.org/ontology/Company	
+Dewey-Dezimalklassifikation	http://dbpedia.org/ontology/dcc	
+musikalisch Werk	http://dbpedia.org/ontology/MusicalWork	
+Eisenbahnschiene	http://dbpedia.org/ontology/RailwayLine	
+Pseudonym	http://dbpedia.org/ontology/pseudonym	
+Ginkgo	http://dbpedia.org/ontology/Ginkgo	
+Rennbahn	http://dbpedia.org/ontology/Racecourse	
+Wohnort	http://dbpedia.org/ontology/City	
+Straftäter	http://dbpedia.org/ontology/Criminal	
+Vulkan	http://dbpedia.org/ontology/Volcano	
+Regierungsstelle	http://dbpedia.org/ontology/GovernmentAgency	
+Fernsehmoderator	http://dbpedia.org/ontology/TelevisionHost	
+städtisch Bevölkerungsdichte	http://dbpedia.org/ontology/populationUrbanDensity	
+Kommandant in	http://dbpedia.org/ontology/commander	
+Zeitdauer	http://dbpedia.org/ontology/TimePeriod	
+zugehörig zu	http://dbpedia.org/ontology/related	
+Periapside	http://dbpedia.org/ontology/periapsis	
+Siedetemperatur	http://dbpedia.org/ontology/boilingPoint	
+Abzweigung	http://dbpedia.org/ontology/routeJunction	
+Ableger-Kanal	http://dbpedia.org/ontology/sisterStation	
+prähistorisch Zeitraum	http://dbpedia.org/ontology/PrehistoricalPeriod	
+Sternensystem	http://dbpedia.org/ontology/Galaxy	
+Hauptrolle spielen	http://dbpedia.org/ontology/starring	
+bestehen aus	http://dbpedia.org/ontology/structuralSystem	
+Speedwayfahrer	http://dbpedia.org/ontology/SpeedwayRider	
+Bildhauer	http://dbpedia.org/ontology/Sculptor	
+natürlich Ort	http://dbpedia.org/ontology/NaturalPlace	
+Senatorin	http://dbpedia.org/ontology/Senator	
+Weltraumfahrer	http://dbpedia.org/ontology/Astronaut	
+französisch Ortschaft	http://dbpedia.org/ontology/FrenchLocality	
+Ort	http://dbpedia.org/ontology/Locality	
+Ort	http://dbpedia.org/ontology/Place	
+Tiefgang	http://dbpedia.org/ontology/shipDraft	
+verschmelzen zu	http://dbpedia.org/ontology/musicFusionGenre	
+Verteiler	http://dbpedia.org/ontology/distributor	
+Größe	http://dbpedia.org/ontology/madgnitude	
+Streifen	http://dbpedia.org/ontology/Film	
+Bahn	http://dbpedia.org/ontology/Train	
+Bier	http://dbpedia.org/ontology/Beer	
+Windmotor	http://dbpedia.org/ontology/WindMotor	
+Siedlung	http://dbpedia.org/ontology/Settlement	
+Eisenbahnzug	http://dbpedia.org/ontology/Train	
+erschaffen	http://dbpedia.org/ontology/designer	
+Sterbeort	http://dbpedia.org/ontology/deathPlace	
+Weichtier	http://dbpedia.org/ontology/Mollusca	
+Inlinehockey-Liga	http://dbpedia.org/ontology/InlineHockeyLeague	
+üblich Name	http://dbpedia.org/ontology/commonName	
+abzweigen	http://dbpedia.org/ontology/routeJunction	
+Gesamtprogramm	http://dbpedia.org/ontology/programmeFormat	
+designen	http://dbpedia.org/ontology/architect	
+Cartoon	http://dbpedia.org/ontology/Cartoon	
+erzeugen	http://dbpedia.org/ontology/manufacturer	
+Rugby-Liga	http://dbpedia.org/ontology/RugbyLeague	
+Kanal	http://dbpedia.org/ontology/Canal	
+Hubraum	http://dbpedia.org/ontology/displacement	
+fahren für	http://dbpedia.org/ontology/team	
+Plattenlabel	http://dbpedia.org/ontology/RecordLabel	
+Kanaltunnel	http://dbpedia.org/ontology/WaterwayTunnel	
+Sambaschule	http://dbpedia.org/ontology/SambaSchool	
+genießen	http://dbpedia.org/ontology/education	
+Krustentier	http://dbpedia.org/ontology/Crustacean	
+produzieren	http://dbpedia.org/ontology/manufacturer	
+produzieren	http://dbpedia.org/ontology/product	
+Architekt	http://dbpedia.org/ontology/architect	
+entwickeln	http://dbpedia.org/ontology/product	
+Heimatort	http://dbpedia.org/ontology/hometown	
+Windmühle	http://dbpedia.org/ontology/Windmill	
+Fachzeitschrift	http://dbpedia.org/ontology/AcademicJournal	
+Musikgruppe	http://dbpedia.org/ontology/Band	
+Musikrichtung	http://dbpedia.org/ontology/MusicGenre	
+Krimineller	http://dbpedia.org/ontology/Criminal	
+besteht aus	http://dbpedia.org/ontology/structuralSystem	
+Philosoph	http://dbpedia.org/ontology/Philosopher	
+Schwamm	http://dbpedia.org/ontology/Fungus	
+bauen	http://dbpedia.org/ontology/architect	
+Review	http://dbpedia.org/ontology/review	
+Deputierter	http://dbpedia.org/ontology/Deputy	
+Büro	http://dbpedia.org/ontology/office	
+Konifere	http://dbpedia.org/ontology/Conifer	
+Speedway-Team	http://dbpedia.org/ontology/SpeedwayTeam	
+Eishockeyteam	http://dbpedia.org/ontology/HockeyTeam	
+Aktivität	http://dbpedia.org/ontology/Activity	
+gemischt Kampfsportveranstaltung	http://dbpedia.org/ontology/MixedMartialArtsEvent	
+NRHP reference number	http://dbpedia.org/ontology/nrhpReferenceNumber	
+bauen	http://dbpedia.org/ontology/builder	
+Sprachefamilie	http://dbpedia.org/ontology/languageFamily	
+Kunstwerk	http://dbpedia.org/ontology/Artwork	
+Amtsinhaberin	http://dbpedia.org/ontology/OfficeHolder	
+Ringer	http://dbpedia.org/ontology/Wrestler	
+Motorradfahrerin	http://dbpedia.org/ontology/MotorcycleRider	
+Anzahl Sitzplätze	http://dbpedia.org/ontology/seatingCapacity	
+Nachfolgerin	http://dbpedia.org/ontology/predecessor	
+Nachfolgerin	http://dbpedia.org/ontology/successor	
+kommen aus	http://dbpedia.org/ontology/hometown	
+kommen aus	http://dbpedia.org/ontology/nationality	
+kommen aus	http://dbpedia.org/ontology/stateOfOrigin	
+erschaffen	http://dbpedia.org/ontology/creator	
+Bakterie	http://dbpedia.org/ontology/Bacteria	
+Blasonierung	http://dbpedia.org/ontology/Blazon	
+Botschafter	http://dbpedia.org/ontology/Ambassador	
+beeinflussen	http://dbpedia.org/ontology/influencedBy	
+kochen bei	http://dbpedia.org/ontology/boilingPoint	
+kochen ab	http://dbpedia.org/ontology/boilingPoint	
+wohnen in	http://dbpedia.org/ontology/residence	
+Archaeen	http://dbpedia.org/ontology/Archaea	
+Status	http://dbpedia.org/ontology/status	
+Bazillus	http://dbpedia.org/ontology/Bacteria	
+Spielekonsole	http://dbpedia.org/ontology/InformationAppliance	
+Anzahl Fakultätsbediensteter	http://dbpedia.org/ontology/facultySize	
+Gemeinschaft	http://dbpedia.org/ontology/Community	
+Naturschutzpark	http://dbpedia.org/ontology/ProtectedArea	
+Lokomotive	http://dbpedia.org/ontology/Locomotive	
+ICAO-Ortserkennung	http://dbpedia.org/ontology/icaoLocationIdentifier	
+spielen mit	http://dbpedia.org/ontology/computingInput	
+Immatrikulation	http://dbpedia.org/ontology/numberOfStudents	
+Vizepremierminister	http://dbpedia.org/ontology/VicePrimeMinister	
+gefilmt von	http://dbpedia.org/ontology/cinematography	
+Vorname	http://dbpedia.org/ontology/GivenName	
+Sport-Liga	http://dbpedia.org/ontology/SportsLeague	
+liefern	http://dbpedia.org/ontology/distributor	
+Speedwayfahrerin	http://dbpedia.org/ontology/SpeedwayRider	
+portiert zu	http://dbpedia.org/ontology/computingPlatform	
+hergestellt aus	http://dbpedia.org/ontology/structuralSystem	
+Forschungsprojekt	http://dbpedia.org/ontology/ResearchProject	
+Schlussverkauf	http://dbpedia.org/ontology/Sales	
+Karrierestation	http://dbpedia.org/ontology/CareerStation	
+Nachfolge antreten	http://dbpedia.org/ontology/successor	
+überqueren	http://dbpedia.org/ontology/crosses	
+beschäftigen	http://dbpedia.org/ontology/facultySize	
+beschützen	http://dbpedia.org/ontology/patron	
+Brücke über	http://dbpedia.org/ontology/crosses	
+Eiland	http://dbpedia.org/ontology/Island	
+Anime	http://dbpedia.org/ontology/Anime	
+Pilz	http://dbpedia.org/ontology/Fungus	
+Krebs	http://dbpedia.org/ontology/Crustacean	
